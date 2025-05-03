@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ex="http://example.com/ontology/" xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" xmlns:ns1="http://www.w3.org/2002/07/owl#" xmlns:core="https://spec.industrialontologies.org/ontology/core/Core/" xmlns:obo="http://purl.obolibrary.org/obo/" xmlns:ns2="http://qudt.org/vocab/unit/" xmlns:data="http://example.com/data/">
+  <ex:Machine rdf:about="http://example.com/data/Mazak">
+    <core:denotedBy>
+      <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-name">
+        <rdf:value>Mazak</rdf:value>
+      </core:DesignativeInformationContentEntity>
+    </core:denotedBy>
+    <obo:BFO_0000115>
+      <ex:LinearMotionSystem rdf:about="http://example.com/data/Mazak-x">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-x-name">
+            <rdf:value>X</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+        <core:prescribedBy>
+          <core:DesignSpecification rdf:about="http://example.com/data/Mazak-x-spec">
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-x-spec-LENGTH-Nominal">
+                <core:hasSimpleExpressionValue>650</core:hasSimpleExpressionValue>
+                <ns2:hasUnit>
+                  <ns2:Unit rdf:about="http://qudt.org/vocab/unit/MilliM">
+                  </ns2:Unit>
+                </ns2:hasUnit>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-x-spec-LINEAR_FORCE-Maximum">
+                <core:hasSimpleExpressionValue>5200</core:hasSimpleExpressionValue>
+                <ns2:hasUnit>
+                  <ns2:Unit rdf:about="http://qudt.org/vocab/unit/N">
+                  </ns2:Unit>
+                </ns2:hasUnit>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-x-spec-LINEAR_FORCE-Minimum">
+                <core:hasSimpleExpressionValue>0</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-x-spec-VELOCITY-RAPID-Maximum">
+                <core:hasSimpleExpressionValue>7000</core:hasSimpleExpressionValue>
+                <ns2:hasUnit>
+                  <ns2:Unit rdf:about="http://qudt.org/vocab/unit/MilliM-PER-SEC">
+                  </ns2:Unit>
+                </ns2:hasUnit>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-x-spec-VELOCITY-RAPID-Minimum">
+                <core:hasSimpleExpressionValue>1</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum">
+                <core:hasSimpleExpressionValue>7000</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum">
+                <core:hasSimpleExpressionValue>1</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+          </core:DesignSpecification>
+        </core:prescribedBy>
+        <obo:BFO_0000115>
+          <ex:Ballscrew rdf:about="http://example.com/data/Mazak-x-Xballscrew">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-x-Xballscrew-name">
+                <rdf:value>Xballscrew</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Ballscrew>
+        </obo:BFO_0000115>
+        <obo:BFO_0000115>
+          <ex:Motor rdf:about="http://example.com/data/Mazak-x-Xmotor">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-x-Xmotor-name">
+                <rdf:value>Xmotor</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Motor>
+        </obo:BFO_0000115>
+      </ex:LinearMotionSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:LinearMotionSystem rdf:about="http://example.com/data/Mazak-y">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-y-name">
+            <rdf:value>Y</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+        <core:prescribedBy>
+          <core:DesignSpecification rdf:about="http://example.com/data/Mazak-y-spec">
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-y-spec-LENGTH-Nominal">
+                <core:hasSimpleExpressionValue>550</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-y-spec-LINEAR_FORCE-Maximum">
+                <core:hasSimpleExpressionValue>5200</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-y-spec-LINEAR_FORCE-Minimum">
+                <core:hasSimpleExpressionValue>0</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-y-spec-VELOCITY-RAPID-Maximum">
+                <core:hasSimpleExpressionValue>7000</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-y-spec-VELOCITY-RAPID-Minimum">
+                <core:hasSimpleExpressionValue>1</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum">
+                <core:hasSimpleExpressionValue>7000</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum">
+                <core:hasSimpleExpressionValue>1</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+          </core:DesignSpecification>
+        </core:prescribedBy>
+        <obo:BFO_0000115>
+          <ex:Ballscrew rdf:about="http://example.com/data/Mazak-y-Yballscrew">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-y-Yballscrew-name">
+                <rdf:value>Yballscrew</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Ballscrew>
+        </obo:BFO_0000115>
+        <obo:BFO_0000115>
+          <ex:Motor rdf:about="http://example.com/data/Mazak-y-Ymotor">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-y-Ymotor-name">
+                <rdf:value>Ymotor</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Motor>
+        </obo:BFO_0000115>
+      </ex:LinearMotionSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:LinearMotionSystem rdf:about="http://example.com/data/Mazak-z">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-z-name">
+            <rdf:value>Z</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+        <core:prescribedBy>
+          <core:DesignSpecification rdf:about="http://example.com/data/Mazak-z-spec">
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-z-spec-LENGTH-Nominal">
+                <core:hasSimpleExpressionValue>530</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-z-spec-LINEAR_FORCE-Maximum">
+                <core:hasSimpleExpressionValue>9600</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-z-spec-LINEAR_FORCE-Minimum">
+                <core:hasSimpleExpressionValue>0</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-z-spec-VELOCITY-RAPID-Maximum">
+                <core:hasSimpleExpressionValue>7000</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-z-spec-VELOCITY-RAPID-Minimum">
+                <core:hasSimpleExpressionValue>1</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum">
+                <core:hasSimpleExpressionValue>7000</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum">
+                <core:hasSimpleExpressionValue>1</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+          </core:DesignSpecification>
+        </core:prescribedBy>
+        <obo:BFO_0000115>
+          <ex:Ballscrew rdf:about="http://example.com/data/Mazak-z-Zballscrew">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-z-Zballscrew-name">
+                <rdf:value>Zballscrew</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Ballscrew>
+        </obo:BFO_0000115>
+        <obo:BFO_0000115>
+          <ex:Motor rdf:about="http://example.com/data/Mazak-z-Zmotor">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-z-Zmotor-name">
+                <rdf:value>Zmotor</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Motor>
+        </obo:BFO_0000115>
+      </ex:LinearMotionSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:RotaryMotionSystem rdf:about="http://example.com/data/Mazak-c">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-c-name">
+            <rdf:value>C1</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+        <core:prescribedBy>
+          <core:DesignSpecification rdf:about="http://example.com/data/Mazak-c-spec">
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-c-spec-VELOCITY-Maximum">
+                <core:hasSimpleExpressionValue>12000</core:hasSimpleExpressionValue>
+                <ns2:hasUnit>
+                  <ns2:Unit rdf:about="http://qudt.org/vocab/unit/REV-PER-MIN">
+                  </ns2:Unit>
+                </ns2:hasUnit>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-c-spec-VELOCITY-Minimum">
+                <core:hasSimpleExpressionValue>0</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+          </core:DesignSpecification>
+        </core:prescribedBy>
+        <obo:BFO_0000115>
+          <ex:Motor rdf:about="http://example.com/data/Mazak-c-C2motor">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-c-C2motor-name">
+                <rdf:value>C2motor</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Motor>
+        </obo:BFO_0000115>
+      </ex:RotaryMotionSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:RotaryMotionSystem rdf:about="http://example.com/data/Mazak-br">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-br-name">
+            <rdf:value>B</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+        <core:prescribedBy>
+          <core:DesignSpecification rdf:about="http://example.com/data/Mazak-br-spec">
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-br-spec-ANGLE-Maximum">
+                <core:hasSimpleExpressionValue>120</core:hasSimpleExpressionValue>
+                <ns2:hasUnit>
+                  <ns2:Unit rdf:about="http://qudt.org/vocab/unit/DEG">
+                  </ns2:Unit>
+                </ns2:hasUnit>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-br-spec-ANGLE-Minimum">
+                <core:hasSimpleExpressionValue>-30</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/DEG"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-br-spec-TORQUE-Maximum">
+                <core:hasSimpleExpressionValue>400</core:hasSimpleExpressionValue>
+                <ns2:hasUnit>
+                  <ns2:Unit rdf:about="http://qudt.org/vocab/unit/N-M">
+                  </ns2:Unit>
+                </ns2:hasUnit>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-br-spec-TORQUE-Minimum">
+                <core:hasSimpleExpressionValue>0</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+          </core:DesignSpecification>
+        </core:prescribedBy>
+        <obo:BFO_0000115>
+          <ex:Motor rdf:about="http://example.com/data/Mazak-br-Bmotor">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-br-Bmotor-name">
+                <rdf:value>Bmotor</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Motor>
+        </obo:BFO_0000115>
+      </ex:RotaryMotionSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:RotaryMotionSystem rdf:about="http://example.com/data/Mazak-c2">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-c2-name">
+            <rdf:value>C2</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+        <core:prescribedBy>
+          <core:DesignSpecification rdf:about="http://example.com/data/Mazak-c2-spec">
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-c2-spec-ANGLE-Maximum">
+                <core:hasSimpleExpressionValue>360</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/DEG"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-c2-spec-ANGLE-Minimum">
+                <core:hasSimpleExpressionValue>-360</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/DEG"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-c2-spec-TORQUE-Maximum">
+                <core:hasSimpleExpressionValue>400</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+            <core:hasValueExpressionAtAllTimes>
+              <core:ValueExpression rdf:about="http://example.com/data/Mazak-c2-spec-TORQUE-Minimum">
+                <core:hasSimpleExpressionValue>0</core:hasSimpleExpressionValue>
+                <ns2:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
+              </core:ValueExpression>
+            </core:hasValueExpressionAtAllTimes>
+          </core:DesignSpecification>
+        </core:prescribedBy>
+        <obo:BFO_0000115>
+          <ex:Motor rdf:about="http://example.com/data/Mazak-c2-Cmotor">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-c2-Cmotor-name">
+                <rdf:value>Cmotor</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:Motor>
+        </obo:BFO_0000115>
+      </ex:RotaryMotionSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:ControlSystem rdf:about="http://example.com/data/Mazak-cont">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-cont-name">
+            <rdf:value>controller</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+        <obo:BFO_0000115>
+          <ex:ControlSystemPath rdf:about="http://example.com/data/Mazak-cont-path1">
+            <core:denotedBy>
+              <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-cont-path1-name">
+                <rdf:value>path</rdf:value>
+              </core:DesignativeInformationContentEntity>
+            </core:denotedBy>
+          </ex:ControlSystemPath>
+        </obo:BFO_0000115>
+      </ex:ControlSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <obo:BFO_0000030 rdf:about="http://example.com/data/Mazak-door1">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-door1-name">
+            <rdf:value>door</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </obo:BFO_0000030>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:Part rdf:about="http://example.com/data/Mazak-partocc">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-partocc-name">
+            <rdf:value>partocc</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </ex:Part>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:ElectricalSystem rdf:about="http://example.com/data/Mazak-elec">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-elec-name">
+            <rdf:value>electric</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </ex:ElectricalSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:HydraulicSystem rdf:about="http://example.com/data/Mazak-hydraulic">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-hydraulic-name">
+            <rdf:value>hydraulic</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </ex:HydraulicSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <obo:BFO_0000030 rdf:about="http://example.com/data/Mazak-coolant">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-coolant-name">
+            <rdf:value>coolant</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </obo:BFO_0000030>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:PneumaticSystem rdf:about="http://example.com/data/Mazak-pneumatic">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-pneumatic-name">
+            <rdf:value>pneumatic</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </ex:PneumaticSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:LubricationSystem rdf:about="http://example.com/data/Mazak-lubrication">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-lubrication-name">
+            <rdf:value>lubrication</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </ex:LubricationSystem>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <obo:BFO_0000030 rdf:about="http://example.com/data/Mazak-room">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-room-name">
+            <rdf:value>environmental</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </obo:BFO_0000030>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <core:Person rdf:about="http://example.com/data/Mazak-personnelm">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-personnelm-name">
+            <rdf:value>personnel</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </core:Person>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <ex:Stock rdf:about="http://example.com/data/Mazak-procstock">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-procstock-name">
+            <rdf:value>stock</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </ex:Stock>
+    </obo:BFO_0000115>
+    <obo:BFO_0000115>
+      <obo:BFO_0000030 rdf:about="http://example.com/data/Mazak-enclosurem">
+        <core:denotedBy>
+          <core:DesignativeInformationContentEntity rdf:about="http://example.com/data/Mazak-enclosurem-name">
+            <rdf:value>enclosure</rdf:value>
+          </core:DesignativeInformationContentEntity>
+        </core:denotedBy>
+      </obo:BFO_0000030>
+    </obo:BFO_0000115>
+  </ex:Machine>
+  <ns1:Ontology rdf:about="http://example.com/ontology/">
+    <ns0:label xml:lang="en-us">Machine Ontology</ns0:label>
+  </ns1:Ontology>
+  <ns1:Class rdf:about="http://example.com/ontology/Door">
+    <ns0:label xml:lang="en-us">door</ns0:label>
+    <ns0:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/LengthSpecification">
+    <ns0:label xml:lang="en-us">length specification</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/LinearForceSpecification">
+    <ns0:label xml:lang="en-us">linear force specification</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/MotionSystem">
+    <ns0:label xml:lang="en-us">motion system</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/VelocitySpecification">
+    <ns0:label xml:lang="en-us">velocity specification</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
+  </ns1:Class>
+  <ns2:Unit rdf:about="http://qudt.org/vocab/unit/REV-PER-SEC">
+  </ns2:Unit>
+  <ns1:Class rdf:about="http://example.com/ontology/ControlSystem">
+    <ns0:label xml:lang="en-us">control system</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/ControlSystemPath">
+    <ns0:label xml:lang="en-us">control system path</ns0:label>
+    <ns0:subClassOf rdf:resource="http://example.com/ControlSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/ElectricalSystem">
+    <ns0:label xml:lang="en-us">electrical system</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/HydraulicSystem">
+    <ns0:label xml:lang="en-us">hydraulic system</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/LubricationSystem">
+    <ns0:label xml:lang="en-us">lubrication system</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/Machine">
+    <ns0:label xml:lang="en-us">machine</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/Part">
+    <ns0:label xml:lang="en-us">part</ns0:label>
+    <ns0:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/PneumaticSystem">
+    <ns0:label xml:lang="en-us">pneumatic system</ns0:label>
+    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/Stock">
+    <ns0:label xml:lang="en-us">stock</ns0:label>
+    <ns0:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/Ballscrew">
+    <ns0:label xml:lang="en-us">ballscrew</ns0:label>
+    <ns0:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/LinearMotionSystem">
+    <ns0:label xml:lang="en-us">linear motion system</ns0:label>
+    <ns0:subClassOf rdf:resource="http://example.com/MotionSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/RotaryMotionSystem">
+    <ns0:label xml:lang="en-us">rotary motion system</ns0:label>
+    <ns0:subClassOf rdf:resource="http://example.com/MotionSystem"/>
+  </ns1:Class>
+  <ns1:Class rdf:about="http://example.com/ontology/Motor">
+    <ns0:label xml:lang="en-us">motor</ns0:label>
+    <ns0:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+  </ns1:Class>
+</rdf:RDF>

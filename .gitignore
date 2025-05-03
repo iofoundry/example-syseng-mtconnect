@@ -1,0 +1,7 @@
+*~
+vendor
+bin
+devices.xml
+Gemfile.lock
+.ruby-version
+.bundle
