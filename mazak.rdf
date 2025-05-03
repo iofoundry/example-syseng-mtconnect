@@ -494,21 +494,9 @@
     <ns0:label xml:lang="en-us">door</ns0:label>
     <ns0:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
   </ns1:Class>
-  <ns1:Class rdf:about="http://example.com/ontology/LengthSpecification">
-    <ns0:label xml:lang="en-us">length specification</ns0:label>
-    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
-  </ns1:Class>
-  <ns1:Class rdf:about="http://example.com/ontology/LinearForceSpecification">
-    <ns0:label xml:lang="en-us">linear force specification</ns0:label>
-    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
-  </ns1:Class>
   <ns1:Class rdf:about="http://example.com/ontology/MotionSystem">
     <ns0:label xml:lang="en-us">motion system</ns0:label>
     <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
-  </ns1:Class>
-  <ns1:Class rdf:about="http://example.com/ontology/VelocitySpecification">
-    <ns0:label xml:lang="en-us">velocity specification</ns0:label>
-    <ns0:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
   </ns1:Class>
   <ns2:Unit rdf:about="http://qudt.org/vocab/unit/REV-PER-SEC">
   </ns2:Unit>

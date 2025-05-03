@@ -107,21 +107,6 @@ module Example
          label: {"en-us": "part"},
          subClassOf: BFO::BFO.object,
          type: "http://www.w3.org/2002/07/owl#Class"
-
-    term :LengthSpecification,
-         label: {"en-us": 'length specification'},
-         subClassOf: IOF::Core.DesignSpecification,
-         type: RDF::OWL.Class
-    
-    term :LinearForceSpecification,
-         label: {"en-us": 'linear force specification'},
-         subClassOf: IOF::Core.DesignSpecification,
-         type: RDF::OWL.Class
-
-    term :VelocitySpecification,
-         label: {"en-us": 'velocity specification'},
-         subClassOf: IOF::Core.DesignSpecification,
-         type: RDF::OWL.Class
   end
 
   MachineMapping = {
