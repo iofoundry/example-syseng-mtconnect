@@ -37,7 +37,7 @@ module Example
         "http://purl.obolibrary.org/obo/bfo/2020/bfo.owl",
         "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/",
         "https://spec.industrialontologies.org/ontology/core/Core/",
-        "https://spec.industrialontologies.org/ontology/qualities/QualitiesPhysical/"],
+        "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"],
       type: "http://www.w3.org/2002/07/owl#Ontology"
 
     term :Machine,
