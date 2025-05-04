@@ -1,7 +1,7 @@
 # imports: http://purl.obolibrary.org/obo/bfo/2020/bfo.owl
 # imports: https://spec.industrialontologies.org/ontology/core/Core/
 # imports: https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/
-# imports: https://spec.industrialontologies.org/ontology/qualities/QualitiesPhysical/
+# imports: https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/
 
 @prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
 @prefix data: <http://example.com/data/> .
@@ -20,7 +20,7 @@
 		<http://purl.obolibrary.org/obo/bfo/2020/bfo.owl> ,
 		<https://spec.industrialontologies.org/ontology/core/Core/> ,
 		<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> ,
-		<https://spec.industrialontologies.org/ontology/qualities/QualitiesPhysical/>
+		<https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/>
 		;
 	.
 
