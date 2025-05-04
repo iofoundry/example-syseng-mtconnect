@@ -47,6 +47,8 @@ data:Mazak
 		data:Mazak-z
 		;
 	core:denotedBy data:Mazak-name ;
+	core:hasCapability data:Mazak-turning ;
+	core:hasFunction data:Mazak-milling ;
 	.
 
 data:Mazak-br
@@ -299,6 +301,10 @@ data:Mazak-lubrication-name
 	core:hasSimpleExpressionValue "lubrication"^^xs:string ;
 	.
 
+data:Mazak-milling
+	a ex:MillingCapability ;
+	.
+
 data:Mazak-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Mazak"^^xs:string ;
@@ -352,6 +358,10 @@ data:Mazak-room
 data:Mazak-room-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "environmental"^^xs:string ;
+	.
+
+data:Mazak-turning
+	a ex:TurningCapability ;
 	.
 
 data:Mazak-x
@@ -699,9 +709,15 @@ ex:Machine
 	rdfs:label "machine"@en-US ;
 	.
 
+ex:MillingCapability
+	a owl:Class ;
+	rdfs:subClassOf core:Capability ;
+	rdfs:label "motion capability"@en-US ;
+	.
+
 ex:MotionCapability
 	a owl:Class ;
-	rdfs:subClassOf <https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/MechanicalCapability> ;
+	rdfs:subClassOf core:Capability ;
 	rdfs:label "motion capability"@en-US ;
 	.
 
@@ -751,6 +767,12 @@ ex:Stock
 	a owl:Class ;
 	rdfs:subClassOf obo:BFO_0000030 ;
 	rdfs:label "stock"@en-US ;
+	.
+
+ex:TurningCapability
+	a owl:Class ;
+	rdfs:subClassOf core:Capability ;
+	rdfs:label "motion capability"@en-US ;
 	.
 
 units:DEG

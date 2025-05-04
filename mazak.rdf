@@ -49,6 +49,8 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-y"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z"/>
 		<core:denotedBy rdf:resource="&data;Mazak-name"/>
+		<core:hasCapability rdf:resource="&data;Mazak-turning"/>
+		<core:hasFunction rdf:resource="&data;Mazak-milling"/>
 	</ex:Machine>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-br">
@@ -251,6 +253,9 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">lubrication</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
+	<ex:MillingCapability rdf:about="&data;Mazak-milling">
+	</ex:MillingCapability>
+	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Mazak</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
@@ -294,6 +299,9 @@
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-room-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">environmental</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
+	
+	<ex:TurningCapability rdf:about="&data;Mazak-turning">
+	</ex:TurningCapability>
 	
 	<ex:LinearMotionSystem rdf:about="&data;Mazak-x">
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xballscrew"/>
@@ -573,8 +581,13 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">machine</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&ex;MillingCapability">
+		<rdfs:subClassOf rdf:resource="&core;Capability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">motion capability</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&ex;MotionCapability">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/MechanicalCapability"/>
+		<rdfs:subClassOf rdf:resource="&core;Capability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">motion capability</rdfs:label>
 	</owl:Class>
 	
@@ -616,6 +629,11 @@
 	<owl:Class rdf:about="&ex;Stock">
 		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">stock</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;TurningCapability">
+		<rdfs:subClassOf rdf:resource="&core;Capability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">motion capability</rdfs:label>
 	</owl:Class>
 	
 	<units:Unit rdf:about="&units;DEG">

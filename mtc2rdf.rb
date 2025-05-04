@@ -117,7 +117,7 @@ module Example
 
     term :MotionCapability,
          label: {'en-us': 'motion capability'},
-         subClassOf: IOF::QualitiesPhysical.MechanicalCapability,
+         subClassOf: IOF::Core.Capability,
          type: "http://www.w3.org/2002/07/owl#Class"        
 
     term :PrismaticMotionCapability,
@@ -135,6 +135,16 @@ module Example
          subClassOf: self.RevoluteMotionCapability,
          type: "http://www.w3.org/2002/07/owl#Class"        
     
+
+    term :MillingCapability,
+         label: {'en-us': 'motion capability'},
+         subClassOf: IOF::Core.Capability,
+         type: "http://www.w3.org/2002/07/owl#Class"        
+
+    term :TurningCapability,
+         label: {'en-us': 'motion capability'},
+         subClassOf: IOF::Core.Capability,
+         type: "http://www.w3.org/2002/07/owl#Class"        
   end
 
   MachineMapping = {
@@ -240,6 +250,14 @@ def add_component(graph, comp, names = [], level = 0)
         graph << (m = Statement.new(sub_iri(names, motion[:id]), RDF.type, cls))
         graph << [iri, IOF::Core.hasFunction, m.subject]
       end
+    end
+
+    if level == 0
+      graph << (m = Statement.new(sub_iri(names, 'milling'), RDF.type, Example::Machine.MillingCapability))
+      graph << [iri, IOF::Core.hasFunction, m.subject]
+
+      graph << (m = Statement.new(sub_iri(names, 'turning'), RDF.type, Example::Machine.TurningCapability))
+      graph << [iri, IOF::Core.hasCapability, m.subject]
     end
   end
 
