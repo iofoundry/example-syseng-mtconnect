@@ -1,0 +1,783 @@
+# imports: http://purl.obolibrary.org/obo/bfo/2020/bfo.owl
+# imports: https://spec.industrialontologies.org/ontology/core/Core/
+# imports: https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/
+# imports: https://spec.industrialontologies.org/ontology/qualities/QualitiesPhysical/
+
+@prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix data: <http://example.com/data/> .
+@prefix ex: <http://example.com/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfv: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix units: <http://qudt.org/vocab/unit/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/ontology/>
+	a owl:Ontology ;
+	rdfs:label "Machine Ontology"@en-US ;
+	owl:imports
+		<http://purl.obolibrary.org/obo/bfo/2020/bfo.owl> ,
+		<https://spec.industrialontologies.org/ontology/core/Core/> ,
+		<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> ,
+		<https://spec.industrialontologies.org/ontology/qualities/QualitiesPhysical/>
+		;
+	.
+
+data:Mazak
+	a ex:Machine ;
+	obo:BFO_0000115
+		data:Mazak-br ,
+		data:Mazak-c ,
+		data:Mazak-c2 ,
+		data:Mazak-cont ,
+		data:Mazak-coolant ,
+		data:Mazak-door1 ,
+		data:Mazak-elec ,
+		data:Mazak-enclosurem ,
+		data:Mazak-hydraulic ,
+		data:Mazak-lubrication ,
+		data:Mazak-partocc ,
+		data:Mazak-personnelm ,
+		data:Mazak-pneumatic ,
+		data:Mazak-procstock ,
+		data:Mazak-room ,
+		data:Mazak-x ,
+		data:Mazak-y ,
+		data:Mazak-z
+		;
+	core:denotedBy data:Mazak-name ;
+	.
+
+data:Mazak-br
+	a ex:RotaryMotionSystem ;
+	obo:BFO_0000115 data:Mazak-br-Bmotor ;
+	core:denotedBy data:Mazak-br-name ;
+	core:hasFunction data:Mazak-br-bmotionm ;
+	core:prescribedBy data:Mazak-br-spec ;
+	.
+
+data:Mazak-br-Bmotor
+	a ex:Motor ;
+	core:denotedBy data:Mazak-br-Bmotor-name ;
+	.
+
+data:Mazak-br-Bmotor-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Bmotor"^^xs:string ;
+	.
+
+data:Mazak-br-bmotionm
+	a ex:RevoluteMotionCapability ;
+	.
+
+data:Mazak-br-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "B"^^xs:string ;
+	.
+
+data:Mazak-br-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-br-spec-ANGLE-Maximum ,
+		data:Mazak-br-spec-ANGLE-Minimum ,
+		data:Mazak-br-spec-TORQUE-Maximum ,
+		data:Mazak-br-spec-TORQUE-Minimum
+		;
+	.
+
+data:Mazak-br-spec-ANGLE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:DEG ;
+	core:hasSimpleExpressionValue "120"^^xs:string ;
+	.
+
+data:Mazak-br-spec-ANGLE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:DEG ;
+	core:hasSimpleExpressionValue "-30"^^xs:string ;
+	.
+
+data:Mazak-br-spec-TORQUE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N-M ;
+	core:hasSimpleExpressionValue "400"^^xs:string ;
+	.
+
+data:Mazak-br-spec-TORQUE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N-M ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:Mazak-c
+	a ex:RotaryMotionSystem ;
+	obo:BFO_0000115 data:Mazak-c-C2motor ;
+	core:denotedBy data:Mazak-c-name ;
+	core:hasFunction data:Mazak-c-c1motion ;
+	core:prescribedBy data:Mazak-c-spec ;
+	.
+
+data:Mazak-c-C2motor
+	a ex:Motor ;
+	core:denotedBy data:Mazak-c-C2motor-name ;
+	.
+
+data:Mazak-c-C2motor-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "C2motor"^^xs:string ;
+	.
+
+data:Mazak-c-c1motion
+	a ex:ContinuousMotionCapability ;
+	.
+
+data:Mazak-c-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "C1"^^xs:string ;
+	.
+
+data:Mazak-c-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-c-spec-VELOCITY-Maximum ,
+		data:Mazak-c-spec-VELOCITY-Minimum
+		;
+	.
+
+data:Mazak-c-spec-VELOCITY-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:REV-PER-MIN ;
+	core:hasSimpleExpressionValue "12000"^^xs:string ;
+	.
+
+data:Mazak-c-spec-VELOCITY-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:REV-PER-MIN ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:Mazak-c2
+	a ex:RotaryMotionSystem ;
+	obo:BFO_0000115 data:Mazak-c2-Cmotor ;
+	core:denotedBy data:Mazak-c2-name ;
+	core:hasFunction data:Mazak-c2-c2motionm ;
+	core:prescribedBy data:Mazak-c2-spec ;
+	.
+
+data:Mazak-c2-Cmotor
+	a ex:Motor ;
+	core:denotedBy data:Mazak-c2-Cmotor-name ;
+	.
+
+data:Mazak-c2-Cmotor-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Cmotor"^^xs:string ;
+	.
+
+data:Mazak-c2-c2motionm
+	a ex:RevoluteMotionCapability ;
+	.
+
+data:Mazak-c2-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "C2"^^xs:string ;
+	.
+
+data:Mazak-c2-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-c2-spec-ANGLE-Maximum ,
+		data:Mazak-c2-spec-ANGLE-Minimum ,
+		data:Mazak-c2-spec-TORQUE-Maximum ,
+		data:Mazak-c2-spec-TORQUE-Minimum
+		;
+	.
+
+data:Mazak-c2-spec-ANGLE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:DEG ;
+	core:hasSimpleExpressionValue "360"^^xs:string ;
+	.
+
+data:Mazak-c2-spec-ANGLE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:DEG ;
+	core:hasSimpleExpressionValue "-360"^^xs:string ;
+	.
+
+data:Mazak-c2-spec-TORQUE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N-M ;
+	core:hasSimpleExpressionValue "400"^^xs:string ;
+	.
+
+data:Mazak-c2-spec-TORQUE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N-M ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:Mazak-cont
+	a ex:ControlSystem ;
+	obo:BFO_0000115 data:Mazak-cont-path1 ;
+	core:denotedBy data:Mazak-cont-name ;
+	.
+
+data:Mazak-cont-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "controller"^^xs:string ;
+	.
+
+data:Mazak-cont-path1
+	a ex:ControlSystemPath ;
+	core:denotedBy data:Mazak-cont-path1-name ;
+	.
+
+data:Mazak-cont-path1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "path"^^xs:string ;
+	.
+
+data:Mazak-coolant
+	a obo:BFO_0000030 ;
+	core:denotedBy data:Mazak-coolant-name ;
+	.
+
+data:Mazak-coolant-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "coolant"^^xs:string ;
+	.
+
+data:Mazak-door1
+	a obo:BFO_0000030 ;
+	core:denotedBy data:Mazak-door1-name ;
+	.
+
+data:Mazak-door1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "door"^^xs:string ;
+	.
+
+data:Mazak-elec
+	a ex:ElectricalSystem ;
+	core:denotedBy data:Mazak-elec-name ;
+	.
+
+data:Mazak-elec-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "electric"^^xs:string ;
+	.
+
+data:Mazak-enclosurem
+	a obo:BFO_0000030 ;
+	core:denotedBy data:Mazak-enclosurem-name ;
+	.
+
+data:Mazak-enclosurem-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "enclosure"^^xs:string ;
+	.
+
+data:Mazak-hydraulic
+	a ex:HydraulicSystem ;
+	core:denotedBy data:Mazak-hydraulic-name ;
+	.
+
+data:Mazak-hydraulic-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "hydraulic"^^xs:string ;
+	.
+
+data:Mazak-lubrication
+	a ex:LubricationSystem ;
+	core:denotedBy data:Mazak-lubrication-name ;
+	.
+
+data:Mazak-lubrication-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "lubrication"^^xs:string ;
+	.
+
+data:Mazak-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Mazak"^^xs:string ;
+	.
+
+data:Mazak-partocc
+	a ex:Part ;
+	core:denotedBy data:Mazak-partocc-name ;
+	.
+
+data:Mazak-partocc-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "partocc"^^xs:string ;
+	.
+
+data:Mazak-personnelm
+	a core:Person ;
+	core:denotedBy data:Mazak-personnelm-name ;
+	.
+
+data:Mazak-personnelm-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "personnel"^^xs:string ;
+	.
+
+data:Mazak-pneumatic
+	a ex:PneumaticSystem ;
+	core:denotedBy data:Mazak-pneumatic-name ;
+	.
+
+data:Mazak-pneumatic-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "pneumatic"^^xs:string ;
+	.
+
+data:Mazak-procstock
+	a ex:Stock ;
+	core:denotedBy data:Mazak-procstock-name ;
+	.
+
+data:Mazak-procstock-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "stock"^^xs:string ;
+	.
+
+data:Mazak-room
+	a obo:BFO_0000030 ;
+	core:denotedBy data:Mazak-room-name ;
+	.
+
+data:Mazak-room-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "environmental"^^xs:string ;
+	.
+
+data:Mazak-x
+	a ex:LinearMotionSystem ;
+	obo:BFO_0000115
+		data:Mazak-x-Xballscrew ,
+		data:Mazak-x-Xmotor
+		;
+	core:denotedBy data:Mazak-x-name ;
+	core:hasFunction data:Mazak-x-xmotion ;
+	core:prescribedBy data:Mazak-x-spec ;
+	.
+
+data:Mazak-x-Xballscrew
+	a ex:Ballscrew ;
+	core:denotedBy data:Mazak-x-Xballscrew-name ;
+	.
+
+data:Mazak-x-Xballscrew-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Xballscrew"^^xs:string ;
+	.
+
+data:Mazak-x-Xmotor
+	a ex:Motor ;
+	core:denotedBy data:Mazak-x-Xmotor-name ;
+	.
+
+data:Mazak-x-Xmotor-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Xmotor"^^xs:string ;
+	.
+
+data:Mazak-x-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "X"^^xs:string ;
+	.
+
+data:Mazak-x-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-x-spec-LENGTH-Nominal ,
+		data:Mazak-x-spec-LINEAR_FORCE-Maximum ,
+		data:Mazak-x-spec-LINEAR_FORCE-Minimum ,
+		data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:Mazak-x-spec-VELOCITY-RAPID-Maximum ,
+		data:Mazak-x-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:Mazak-x-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "650"^^xs:string ;
+	.
+
+data:Mazak-x-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	.
+
+data:Mazak-x-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:Mazak-x-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:Mazak-x-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:Mazak-x-xmotion
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:Mazak-y
+	a ex:LinearMotionSystem ;
+	obo:BFO_0000115
+		data:Mazak-y-Yballscrew ,
+		data:Mazak-y-Ymotor
+		;
+	core:denotedBy data:Mazak-y-name ;
+	core:hasFunction data:Mazak-y-ymotion ;
+	core:prescribedBy data:Mazak-y-spec ;
+	.
+
+data:Mazak-y-Yballscrew
+	a ex:Ballscrew ;
+	core:denotedBy data:Mazak-y-Yballscrew-name ;
+	.
+
+data:Mazak-y-Yballscrew-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Yballscrew"^^xs:string ;
+	.
+
+data:Mazak-y-Ymotor
+	a ex:Motor ;
+	core:denotedBy data:Mazak-y-Ymotor-name ;
+	.
+
+data:Mazak-y-Ymotor-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Ymotor"^^xs:string ;
+	.
+
+data:Mazak-y-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Y"^^xs:string ;
+	.
+
+data:Mazak-y-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-y-spec-LENGTH-Nominal ,
+		data:Mazak-y-spec-LINEAR_FORCE-Maximum ,
+		data:Mazak-y-spec-LINEAR_FORCE-Minimum ,
+		data:Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:Mazak-y-spec-VELOCITY-RAPID-Maximum ,
+		data:Mazak-y-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:Mazak-y-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "550"^^xs:string ;
+	.
+
+data:Mazak-y-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	.
+
+data:Mazak-y-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:Mazak-y-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:Mazak-y-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:Mazak-y-ymotion
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:Mazak-z
+	a ex:LinearMotionSystem ;
+	obo:BFO_0000115
+		data:Mazak-z-Zballscrew ,
+		data:Mazak-z-Zmotor
+		;
+	core:denotedBy data:Mazak-z-name ;
+	core:hasFunction data:Mazak-z-zmotion ;
+	core:prescribedBy data:Mazak-z-spec ;
+	.
+
+data:Mazak-z-Zballscrew
+	a ex:Ballscrew ;
+	core:denotedBy data:Mazak-z-Zballscrew-name ;
+	.
+
+data:Mazak-z-Zballscrew-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Zballscrew"^^xs:string ;
+	.
+
+data:Mazak-z-Zmotor
+	a ex:Motor ;
+	core:denotedBy data:Mazak-z-Zmotor-name ;
+	.
+
+data:Mazak-z-Zmotor-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Zmotor"^^xs:string ;
+	.
+
+data:Mazak-z-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Z"^^xs:string ;
+	.
+
+data:Mazak-z-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-z-spec-LENGTH-Nominal ,
+		data:Mazak-z-spec-LINEAR_FORCE-Maximum ,
+		data:Mazak-z-spec-LINEAR_FORCE-Minimum ,
+		data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:Mazak-z-spec-VELOCITY-RAPID-Maximum ,
+		data:Mazak-z-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:Mazak-z-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "530"^^xs:string ;
+	.
+
+data:Mazak-z-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "9600"^^xs:string ;
+	.
+
+data:Mazak-z-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:Mazak-z-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:Mazak-z-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:Mazak-z-zmotion
+	a ex:PrismaticMotionCapability ;
+	.
+
+ex:Ballscrew
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "ballscrew"@en-US ;
+	.
+
+ex:ContinuousMotionCapability
+	a owl:Class ;
+	rdfs:subClassOf ex:RevoluteMotionCapability ;
+	rdfs:label "continuous motion capability"@en-US ;
+	.
+
+ex:ControlSystem
+	a owl:Class ;
+	rdfs:subClassOf core:EngineeredSystem ;
+	rdfs:label "control system"@en-US ;
+	.
+
+ex:ControlSystemPath
+	a owl:Class ;
+	rdfs:subClassOf ex:ControlSystem ;
+	rdfs:label "control system path"@en-US ;
+	.
+
+ex:Door
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "door"@en-US ;
+	.
+
+ex:ElectricalSystem
+	a owl:Class ;
+	rdfs:subClassOf core:EngineeredSystem ;
+	rdfs:label "electrical system"@en-US ;
+	.
+
+ex:HydraulicSystem
+	a owl:Class ;
+	rdfs:subClassOf core:EngineeredSystem ;
+	rdfs:label "hydraulic system"@en-US ;
+	.
+
+ex:LinearMotionSystem
+	a owl:Class ;
+	rdfs:subClassOf ex:MotionSystem ;
+	rdfs:label "linear motion system"@en-US ;
+	.
+
+ex:LubricationSystem
+	a owl:Class ;
+	rdfs:subClassOf core:EngineeredSystem ;
+	rdfs:label "lubrication system"@en-US ;
+	.
+
+ex:Machine
+	a owl:Class ;
+	rdfs:subClassOf core:EngineeredSystem ;
+	rdfs:label "machine"@en-US ;
+	.
+
+ex:MotionCapability
+	a owl:Class ;
+	rdfs:subClassOf <https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/MechanicalCapability> ;
+	rdfs:label "motion capability"@en-US ;
+	.
+
+ex:MotionSystem
+	a owl:Class ;
+	rdfs:subClassOf core:EngineeredSystem ;
+	rdfs:label "motion system"@en-US ;
+	.
+
+ex:Motor
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "motor"@en-US ;
+	.
+
+ex:Part
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "part"@en-US ;
+	.
+
+ex:PneumaticSystem
+	a owl:Class ;
+	rdfs:subClassOf core:EngineeredSystem ;
+	rdfs:label "pneumatic system"@en-US ;
+	.
+
+ex:PrismaticMotionCapability
+	a owl:Class ;
+	rdfs:subClassOf ex:MotionCapability ;
+	rdfs:label "prismatic motion capability"@en-US ;
+	.
+
+ex:RevoluteMotionCapability
+	a owl:Class ;
+	rdfs:subClassOf ex:MotionCapability ;
+	rdfs:label "revolute motion capability"@en-US ;
+	.
+
+ex:RotaryMotionSystem
+	a owl:Class ;
+	rdfs:subClassOf ex:MotionSystem ;
+	rdfs:label "rotary motion system"@en-US ;
+	.
+
+ex:Stock
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "stock"@en-US ;
+	.
+
+units:DEG
+	a units:Unit ;
+	.
+
+units:MilliM
+	a units:Unit ;
+	.
+
+units:MilliM-PER-SEC
+	a units:Unit ;
+	.
+
+units:N
+	a units:Unit ;
+	.
+
+units:N-M
+	a units:Unit ;
+	.
+
+units:REV-PER-MIN
+	a units:Unit ;
+	.
+
+units:REV-PER-SEC
+	a units:Unit ;
+	.
+

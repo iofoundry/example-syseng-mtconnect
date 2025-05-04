@@ -5,6 +5,8 @@ require 'rdf'
 require 'rdf/vocab'
 require './BFO'
 require './Core'
+require './Qualities'
+require './QualitiesPhysical'
 require 'rdf/rdfxml'
 require 'rdf/turtle'
 
@@ -31,6 +33,11 @@ module Example
   Machine = Class.new(RDF::StrictVocabulary("http://example.com/ontology/")) do
     ontology :"http://example.com/ontology/",
       label: {"en-us": "Machine Ontology"},
+      "http://www.w3.org/2002/07/owl#imports": [
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo.owl",
+        "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/",
+        "https://spec.industrialontologies.org/ontology/core/Core/",
+        "https://spec.industrialontologies.org/ontology/qualities/QualitiesPhysical/"],
       type: "http://www.w3.org/2002/07/owl#Ontology"
 
     term :Machine,
@@ -45,12 +52,12 @@ module Example
                
     term :LinearMotionSystem,
          label: {"en-us": "linear motion system"},
-         subClassOf: "http://example.com/MotionSystem",
+         subClassOf: self.MotionSystem,
          type: "http://www.w3.org/2002/07/owl#Class"
 
     term :RotaryMotionSystem,
          label: {"en-us": "rotary motion system"},
-         subClassOf: "http://example.com/MotionSystem",
+         subClassOf: self.MotionSystem,
          type: "http://www.w3.org/2002/07/owl#Class"
 
     term :ControlSystem,
@@ -60,7 +67,7 @@ module Example
     
     term :ControlSystemPath,
          label: {"en-us": "control system path"},
-         subClassOf: "http://example.com/ControlSystem",
+         subClassOf: self.ControlSystem,
          type: "http://www.w3.org/2002/07/owl#Class"
 
     term :Motor, 
@@ -107,6 +114,27 @@ module Example
          label: {"en-us": "part"},
          subClassOf: BFO::BFO.object,
          type: "http://www.w3.org/2002/07/owl#Class"
+
+    term :MotionCapability,
+         label: {'en-us': 'motion capability'},
+         subClassOf: IOF::QualitiesPhysical.MechanicalCapability,
+         type: "http://www.w3.org/2002/07/owl#Class"        
+
+    term :PrismaticMotionCapability,
+         label: {'en-us': 'prismatic motion capability'},
+         subClassOf: self.MotionCapability,
+         type: "http://www.w3.org/2002/07/owl#Class"        
+    
+    term :RevoluteMotionCapability,
+         label: {'en-us': 'revolute motion capability'},
+         subClassOf: self.MotionCapability,
+         type: "http://www.w3.org/2002/07/owl#Class"        
+    
+    term :ContinuousMotionCapability,
+         label: {'en-us': 'continuous motion capability'},
+         subClassOf: self.RevoluteMotionCapability,
+         type: "http://www.w3.org/2002/07/owl#Class"        
+    
   end
 
   MachineMapping = {
@@ -125,6 +153,9 @@ module Example
     Stock: Machine.Stock,
     Personnel: IOF::Core.Person,
     PartOccurrence: Machine.Part,
+    PRISMATIC: Machine.PrismaticMotionCapability,
+    REVOLUTE: Machine.RevoluteMotionCapability,
+    CONTINUOUS: Machine.ContinuousMotionCapability,
 
     # Nil mapping
     Axes: false,
@@ -184,7 +215,7 @@ def add_component(graph, comp, names = [], level = 0)
     graph << [iri, RDF.type, cls]
     graph << [parent, BFO::BFO.has_member_part_at_some_time, iri] if parent
     graph << (s = Statement.new(sub_iri(names, "name"), RDF.type, IOF::Core.DesignativeInformationContentEntity))
-    graph << [s.subject, RDF::RDFV.value, "#{comp['name'] || comp['id']}"]
+    graph << [s.subject, IOF::Core.hasSimpleExpressionValue, "#{comp['name'] || comp['id']}"]
     graph << [iri, IOF::Core.denotedBy, s.subject]
 
     sp = nil
@@ -202,7 +233,14 @@ def add_component(graph, comp, names = [], level = 0)
         graph << [v.subject, QUDT.hasUnit, Units[spec[:units].to_sym]]
         graph << [sp.subject, IOF::Core.hasValueExpressionAtAllTimes, v.subject]
       end
-    end    
+    end
+
+    comp.each_element('./Configuration/Motion') do |motion|
+      if cls = Example::MachineMapping[motion[:type].to_sym]
+        graph << (m = Statement.new(sub_iri(names, motion[:id]), RDF.type, cls))
+        graph << [iri, IOF::Core.hasFunction, m.subject]
+      end
+    end
   end
 
   comp.each_element("./Compositions/*") do |cmp|
@@ -220,12 +258,21 @@ doc.each_element('//Device') do |dev|
   add_component(graph, dev)
 end
 
-RDF::Writer.open("mazak.rdf",
-                 prefixes: {
-                   "ex": "http://example.com/ontology/",
-                   "data": "http://example.com/data/",
-                   "obo": "http://purl.obolibrary.org/obo/",
-                   "core": "https://spec.industrialontologies.org/ontology/core/Core/"
-                 }) do |w|
+prefixes = {
+  ex: Example::Machine.to_uri,
+  data: Inst::Data.to_uri,
+  obo: BFO::BFO.to_uri,
+  core: IOF::Core.to_uri,
+  units: QUDT.to_uri,
+  rdfs: RDF::RDFS.to_uri,
+  rdfv: RDF::RDFV.to_uri,
+  owl: RDF::OWL.to_uri
+}
+
+RDF::Writer.open("mazak.rdf", prefixes: prefixes) do |w|
+  w << graph
+end
+
+RDF::Writer.open("mazak.ttl", prefixes: prefixes) do |w|
   w << graph
 end
