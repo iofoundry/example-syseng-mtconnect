@@ -137,12 +137,12 @@ module Example
     
 
     term :MillingCapability,
-         label: {'en-us': 'motion capability'},
+         label: {'en-us': 'milling capability'},
          subClassOf: IOF::Core.Capability,
          type: "http://www.w3.org/2002/07/owl#Class"        
 
     term :TurningCapability,
-         label: {'en-us': 'motion capability'},
+         label: {'en-us': 'turning capability'},
          subClassOf: IOF::Core.Capability,
          type: "http://www.w3.org/2002/07/owl#Class"        
   end

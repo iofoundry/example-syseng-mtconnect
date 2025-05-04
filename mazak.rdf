@@ -583,7 +583,7 @@
 	
 	<owl:Class rdf:about="&ex;MillingCapability">
 		<rdfs:subClassOf rdf:resource="&core;Capability"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">motion capability</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">milling capability</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&ex;MotionCapability">
@@ -633,7 +633,7 @@
 	
 	<owl:Class rdf:about="&ex;TurningCapability">
 		<rdfs:subClassOf rdf:resource="&core;Capability"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">motion capability</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">turning capability</rdfs:label>
 	</owl:Class>
 	
 	<units:Unit rdf:about="&units;DEG">

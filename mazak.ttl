@@ -712,7 +712,7 @@ ex:Machine
 ex:MillingCapability
 	a owl:Class ;
 	rdfs:subClassOf core:Capability ;
-	rdfs:label "motion capability"@en-US ;
+	rdfs:label "milling capability"@en-US ;
 	.
 
 ex:MotionCapability
@@ -772,7 +772,7 @@ ex:Stock
 ex:TurningCapability
 	a owl:Class ;
 	rdfs:subClassOf core:Capability ;
-	rdfs:label "motion capability"@en-US ;
+	rdfs:label "turning capability"@en-US ;
 	.
 
 units:DEG
