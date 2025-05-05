@@ -1,9 +1,5 @@
-# imports: http://purl.obolibrary.org/obo/bfo/2020/bfo.owl
-# imports: https://spec.industrialontologies.org/ontology/core/Core/
-# imports: https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/
-# imports: https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/
+# imports: http://example.com/ontology/
 
-@prefix av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
 @prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
 @prefix data: <http://example.com/data/> .
 @prefix ex: <http://example.com/ontology/> .
@@ -15,15 +11,10 @@
 @prefix units: <http://qudt.org/vocab/unit/> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.com/ontology/>
+<http://example.com/data/>
 	a owl:Ontology ;
 	rdfs:label "Machine Ontology"@en-US ;
-	owl:imports
-		<http://purl.obolibrary.org/obo/bfo/2020/bfo.owl> ,
-		<https://spec.industrialontologies.org/ontology/core/Core/> ,
-		<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> ,
-		<https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/>
-		;
+	owl:imports <http://example.com/ontology/> ;
 	.
 
 data:Mazak
@@ -831,199 +822,5 @@ data:Mazak-zaxis
 data:Mazak-zaxis-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Z_AXIS"^^xs:string ;
-	.
-
-ex:Ballscrew
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "ballscrew"@en-US ;
-	.
-
-ex:ContinuousMotionCapability
-	a owl:Class ;
-	rdfs:subClassOf ex:RevoluteMotionCapability ;
-	rdfs:label "continuous motion capability"@en-US ;
-	.
-
-ex:ControlSystem
-	a owl:Class ;
-	rdfs:subClassOf core:EngineeredSystem ;
-	rdfs:label "control system"@en-US ;
-	.
-
-ex:ControlSystemPath
-	a owl:Class ;
-	rdfs:subClassOf ex:ControlSystem ;
-	rdfs:label "control system path"@en-US ;
-	.
-
-ex:Door
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "door"@en-US ;
-	.
-
-ex:ElectricalSystem
-	a owl:Class ;
-	rdfs:subClassOf core:EngineeredSystem ;
-	rdfs:label "electrical system"@en-US ;
-	.
-
-ex:Enclosure
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000029 ;
-	rdfs:label "enclosure"@en-US ;
-	.
-
-ex:HydraulicSystem
-	a owl:Class ;
-	rdfs:subClassOf core:EngineeredSystem ;
-	rdfs:label "hydraulic system"@en-US ;
-	.
-
-ex:LinearMotionSystem
-	a owl:Class ;
-	rdfs:subClassOf ex:MotionSystem ;
-	rdfs:label "linear motion system"@en-US ;
-	.
-
-ex:Link
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "link"@en-US ;
-	.
-
-ex:LubricationSystem
-	a owl:Class ;
-	rdfs:subClassOf core:EngineeredSystem ;
-	rdfs:label "lubrication system"@en-US ;
-	.
-
-ex:Machine
-	a owl:Class ;
-	rdfs:subClassOf core:EngineeredSystem ;
-	rdfs:label "machine"@en-US ;
-	.
-
-ex:MillingCapability
-	a owl:Class ;
-	rdfs:subClassOf core:Capability ;
-	rdfs:label "milling capability"@en-US ;
-	.
-
-ex:MotionCapability
-	a owl:Class ;
-	rdfs:subClassOf core:Capability ;
-	rdfs:label "motion capability"@en-US ;
-	.
-
-ex:MotionSystem
-	a owl:Class ;
-	rdfs:subClassOf core:EngineeredSystem ;
-	rdfs:label "motion system"@en-US ;
-	.
-
-ex:Motor
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "motor"@en-US ;
-	.
-
-ex:Part
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "part"@en-US ;
-	.
-
-ex:PneumaticSystem
-	a owl:Class ;
-	rdfs:subClassOf core:EngineeredSystem ;
-	rdfs:label "pneumatic system"@en-US ;
-	.
-
-ex:PrismaticMotionCapability
-	a owl:Class ;
-	rdfs:subClassOf ex:MotionCapability ;
-	rdfs:label "prismatic motion capability"@en-US ;
-	.
-
-ex:RevoluteMotionCapability
-	a owl:Class ;
-	rdfs:subClassOf ex:MotionCapability ;
-	rdfs:label "revolute motion capability"@en-US ;
-	.
-
-ex:Room
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "room"@en-US ;
-	.
-
-ex:RotaryMotionSystem
-	a owl:Class ;
-	rdfs:subClassOf ex:MotionSystem ;
-	rdfs:label "rotary motion system"@en-US ;
-	.
-
-ex:Sensor
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "sensor"@en-US ;
-	.
-
-ex:Stock
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "stock"@en-US ;
-	.
-
-ex:Structure
-	a owl:Class ;
-	rdfs:subClassOf obo:BFO_0000030 ;
-	rdfs:label "enclosure"@en-US ;
-	.
-
-ex:TurningCapability
-	a owl:Class ;
-	rdfs:subClassOf core:Capability ;
-	rdfs:label "turning capability"@en-US ;
-	.
-
-ex:joinedTo
-	a
-		owl:ObjectProperty ,
-		owl:SymmetricProperty
-		;
-	rdfs:label "joined to"@en-US ;
-	rdfs:domain obo:BFO_0000040 ;
-	rdfs:range obo:BFO_0000040 ;
-	.
-
-units:DEG
-	a units:Unit ;
-	.
-
-units:MilliM
-	a units:Unit ;
-	.
-
-units:MilliM-PER-SEC
-	a units:Unit ;
-	.
-
-units:N
-	a units:Unit ;
-	.
-
-units:N-M
-	a units:Unit ;
-	.
-
-units:REV-PER-MIN
-	a units:Unit ;
-	.
-
-units:REV-PER-SEC
-	a units:Unit ;
 	.
 

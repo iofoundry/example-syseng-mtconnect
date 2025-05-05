@@ -1,0 +1,724 @@
+# imports: http://example.com/ontology/
+
+@prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix data: <http://example.com/data/> .
+@prefix ex: <http://example.com/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qp: <https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfv: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix units: <http://qudt.org/vocab/unit/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com/data/>
+	a owl:Ontology ;
+	rdfs:label "Machine Ontology"@en-US ;
+	owl:imports <http://example.com/ontology/> ;
+	.
+
+data:OKUMA.123456
+	a ex:Machine ;
+	obo:BFO_0000115
+		data:OKUMA.123456-LBarFeederSystem1 ,
+		data:OKUMA.123456-LCoolantSystem1 ,
+		data:OKUMA.123456-LElectricSystem1 ,
+		data:OKUMA.123456-LHydraulicSystem1 ,
+		data:OKUMA.123456-LLoaderSystem1 ,
+		data:OKUMA.123456-LLubricationSystem1 ,
+		data:OKUMA.123456-LPneumaticSystem1 ,
+		data:OKUMA.123456-LToolingDeliverySystem1 ,
+		data:OKUMA.123456-LWasteDisposalSystem1 ,
+		data:OKUMA.123456-LYI1 ,
+		data:OKUMA.123456-Lb1 ,
+		data:OKUMA.123456-Lc1 ,
+		data:OKUMA.123456-Lc2 ,
+		data:OKUMA.123456-Lc3 ,
+		data:OKUMA.123456-Lc6 ,
+		data:OKUMA.123456-Lct1 ,
+		data:OKUMA.123456-Lx1 ,
+		data:OKUMA.123456-Lz1 ,
+		data:OKUMA.123456-Lz4 ,
+		data:OKUMA.123456-b_axis ,
+		data:OKUMA.123456-c1_axis ,
+		data:OKUMA.123456-c2_axis ,
+		data:OKUMA.123456-enclosure ,
+		data:OKUMA.123456-personnel ,
+		data:OKUMA.123456-x_axis ,
+		data:OKUMA.123456-y_axis ,
+		data:OKUMA.123456-z1_axis ,
+		data:OKUMA.123456-z4_axis
+		;
+	core:denotedBy data:OKUMA.123456-name ;
+	core:hasCapability data:OKUMA.123456-capability ;
+	core:hasFunction data:OKUMA.123456-function ;
+	.
+
+data:OKUMA.123456-LBarFeederSystem1
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-LBarFeederSystem1-name ;
+	.
+
+data:OKUMA.123456-LBarFeederSystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "BarFeederSystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LCoolantSystem1
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-LCoolantSystem1-name ;
+	.
+
+data:OKUMA.123456-LCoolantSystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "CoolantSystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LElectricSystem1
+	a ex:ElectricalSystem ;
+	core:denotedBy data:OKUMA.123456-LElectricSystem1-name ;
+	.
+
+data:OKUMA.123456-LElectricSystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "ElectricSystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LHydraulicSystem1
+	a ex:HydraulicSystem ;
+	core:denotedBy data:OKUMA.123456-LHydraulicSystem1-name ;
+	.
+
+data:OKUMA.123456-LHydraulicSystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "HydraulicSystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LLoaderSystem1
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-LLoaderSystem1-name ;
+	.
+
+data:OKUMA.123456-LLoaderSystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "LoaderSystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LLubricationSystem1
+	a ex:LubricationSystem ;
+	core:denotedBy data:OKUMA.123456-LLubricationSystem1-name ;
+	.
+
+data:OKUMA.123456-LLubricationSystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "LubricationSystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LPneumaticSystem1
+	a ex:PneumaticSystem ;
+	core:denotedBy data:OKUMA.123456-LPneumaticSystem1-name ;
+	.
+
+data:OKUMA.123456-LPneumaticSystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "PneumaticSystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LToolingDeliverySystem1
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-LToolingDeliverySystem1-name ;
+	.
+
+data:OKUMA.123456-LToolingDeliverySystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "ToolingDeliverySystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LWasteDisposalSystem1
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-LWasteDisposalSystem1-name ;
+	.
+
+data:OKUMA.123456-LWasteDisposalSystem1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "WasteDisposalSystem1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LYI1
+	a ex:LinearMotionSystem ;
+	ex:joinedTo
+		data:OKUMA.123456-x_axis ,
+		data:OKUMA.123456-y_axis
+		;
+	core:denotedBy data:OKUMA.123456-LYI1-name ;
+	core:hasFunction data:OKUMA.123456-LYI1-function ;
+	core:measuresAtSomeTime data:OKUMA.123456-LYI1-position-actual ;
+	core:prescribedBy data:OKUMA.123456-LYI1-spec ;
+	.
+
+data:OKUMA.123456-LYI1-function
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:OKUMA.123456-LYI1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Y"^^xs:string ;
+	.
+
+data:OKUMA.123456-LYI1-position-actual
+	a qp:Displacement ;
+	.
+
+data:OKUMA.123456-LYI1-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:OKUMA.123456-LYI1-spec-LENGTH-Nominal ,
+		data:OKUMA.123456-LYI1-spec-LINEAR_FORCE-Maximum ,
+		data:OKUMA.123456-LYI1-spec-LINEAR_FORCE-Minimum ,
+		data:OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Maximum ,
+		data:OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:OKUMA.123456-LYI1-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "650"^^xs:string ;
+	.
+
+data:OKUMA.123456-LYI1-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	.
+
+data:OKUMA.123456-LYI1-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lb1
+	a ex:RotaryMotionSystem ;
+	ex:joinedTo
+		data:OKUMA.123456-b_axis ,
+		data:OKUMA.123456-y_axis
+		;
+	core:denotedBy data:OKUMA.123456-Lb1-name ;
+	core:hasFunction data:OKUMA.123456-Lb1-function ;
+	core:measuresAtSomeTime data:OKUMA.123456-Lb1-angle-actual ;
+	.
+
+data:OKUMA.123456-Lb1-angle-actual
+	a qp:Angle ;
+	.
+
+data:OKUMA.123456-Lb1-function
+	a ex:RevoluteMotionCapability ;
+	.
+
+data:OKUMA.123456-Lb1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "B"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lc1
+	a ex:RotaryMotionSystem ;
+	ex:joinedTo data:OKUMA.123456-enclosure ;
+	core:denotedBy data:OKUMA.123456-Lc1-name ;
+	core:hasFunction data:OKUMA.123456-Lc1-function ;
+	core:measuresAtSomeTime
+		data:OKUMA.123456-Lc1-rotary_velocity-actual ,
+		data:OKUMA.123456-Lc1-rotary_velocity-programmed
+		;
+	.
+
+data:OKUMA.123456-Lc1-function
+	a ex:ContinuousMotionCapability ;
+	.
+
+data:OKUMA.123456-Lc1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "C1"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lc1-rotary_velocity-actual
+	a qp:Speed ;
+	.
+
+data:OKUMA.123456-Lc1-rotary_velocity-programmed
+	a qp:Speed ;
+	.
+
+data:OKUMA.123456-Lc2
+	a ex:RotaryMotionSystem ;
+	ex:joinedTo
+		data:OKUMA.123456-c2_axis ,
+		data:OKUMA.123456-z4_axis
+		;
+	core:denotedBy data:OKUMA.123456-Lc2-name ;
+	core:hasFunction data:OKUMA.123456-Lc2-function ;
+	core:measuresAtSomeTime
+		data:OKUMA.123456-Lc2-rotary_velocity-actual ,
+		data:OKUMA.123456-Lc2-rotary_velocity-programmed
+		;
+	.
+
+data:OKUMA.123456-Lc2-function
+	a ex:RevoluteMotionCapability ;
+	.
+
+data:OKUMA.123456-Lc2-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "C2"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lc2-rotary_velocity-actual
+	a qp:Speed ;
+	.
+
+data:OKUMA.123456-Lc2-rotary_velocity-programmed
+	a qp:Speed ;
+	.
+
+data:OKUMA.123456-Lc3
+	a ex:RotaryMotionSystem ;
+	ex:joinedTo
+		data:OKUMA.123456-c2_axis ,
+		data:OKUMA.123456-z4_axis
+		;
+	core:denotedBy data:OKUMA.123456-Lc3-name ;
+	core:hasFunction data:OKUMA.123456-Lc3-function ;
+	core:measuresAtSomeTime data:OKUMA.123456-Lc3-angle-actual ;
+	.
+
+data:OKUMA.123456-Lc3-angle-actual
+	a qp:Angle ;
+	.
+
+data:OKUMA.123456-Lc3-function
+	a ex:RevoluteMotionCapability ;
+	.
+
+data:OKUMA.123456-Lc3-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "C3"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lc6
+	a ex:RotaryMotionSystem ;
+	core:denotedBy data:OKUMA.123456-Lc6-name ;
+	core:measuresAtSomeTime
+		data:OKUMA.123456-Lc6-rotary_velocity-actual ,
+		data:OKUMA.123456-Lc6-rotary_velocity-programmed
+		;
+	.
+
+data:OKUMA.123456-Lc6-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "C6"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lc6-rotary_velocity-actual
+	a qp:Speed ;
+	.
+
+data:OKUMA.123456-Lc6-rotary_velocity-programmed
+	a qp:Speed ;
+	.
+
+data:OKUMA.123456-Lct1
+	a ex:ControlSystem ;
+	obo:BFO_0000115 data:OKUMA.123456-Lct1-Lp1 ;
+	core:denotedBy data:OKUMA.123456-Lct1-name ;
+	.
+
+data:OKUMA.123456-Lct1-Lp1
+	a ex:ControlSystemPath ;
+	core:denotedBy data:OKUMA.123456-Lct1-Lp1-name ;
+	.
+
+data:OKUMA.123456-Lct1-Lp1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "path"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lct1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Controller"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lx1
+	a ex:LinearMotionSystem ;
+	ex:joinedTo
+		data:OKUMA.123456-x_axis ,
+		data:OKUMA.123456-z1_axis
+		;
+	core:denotedBy data:OKUMA.123456-Lx1-name ;
+	core:hasFunction data:OKUMA.123456-Lx1-function ;
+	core:measuresAtSomeTime data:OKUMA.123456-Lx1-position-actual ;
+	core:prescribedBy data:OKUMA.123456-Lx1-spec ;
+	.
+
+data:OKUMA.123456-Lx1-function
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:OKUMA.123456-Lx1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "X"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lx1-position-actual
+	a qp:Displacement ;
+	.
+
+data:OKUMA.123456-Lx1-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:OKUMA.123456-Lx1-spec-LENGTH-Nominal ,
+		data:OKUMA.123456-Lx1-spec-LINEAR_FORCE-Maximum ,
+		data:OKUMA.123456-Lx1-spec-LINEAR_FORCE-Minimum ,
+		data:OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Maximum ,
+		data:OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:OKUMA.123456-Lx1-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "650"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lx1-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lx1-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz1
+	a ex:LinearMotionSystem ;
+	ex:joinedTo
+		data:OKUMA.123456-enclosure ,
+		data:OKUMA.123456-z1_axis
+		;
+	core:denotedBy data:OKUMA.123456-Lz1-name ;
+	core:hasFunction data:OKUMA.123456-Lz1-function ;
+	core:measuresAtSomeTime data:OKUMA.123456-Lz1-position-actual ;
+	core:prescribedBy data:OKUMA.123456-Lz1-spec ;
+	.
+
+data:OKUMA.123456-Lz1-function
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:OKUMA.123456-Lz1-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Z1"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz1-position-actual
+	a qp:Displacement ;
+	.
+
+data:OKUMA.123456-Lz1-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:OKUMA.123456-Lz1-spec-LENGTH-Nominal ,
+		data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum ,
+		data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum ,
+		data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum ,
+		data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:OKUMA.123456-Lz1-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "650"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz4
+	a ex:LinearMotionSystem ;
+	ex:joinedTo
+		data:OKUMA.123456-enclosure ,
+		data:OKUMA.123456-z4_axis
+		;
+	core:denotedBy data:OKUMA.123456-Lz4-name ;
+	core:hasFunction data:OKUMA.123456-Lz4-function ;
+	core:measuresAtSomeTime data:OKUMA.123456-Lz4-position-actual ;
+	core:prescribedBy data:OKUMA.123456-Lz4-spec ;
+	.
+
+data:OKUMA.123456-Lz4-function
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:OKUMA.123456-Lz4-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Z4"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz4-position-actual
+	a qp:Displacement ;
+	.
+
+data:OKUMA.123456-Lz4-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:OKUMA.123456-Lz4-spec-LENGTH-Nominal ,
+		data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum ,
+		data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum ,
+		data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum ,
+		data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:OKUMA.123456-Lz4-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "650"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	.
+
+data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1"^^xs:string ;
+	.
+
+data:OKUMA.123456-b_axis
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-b_axis-name ;
+	.
+
+data:OKUMA.123456-b_axis-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "b_axis"^^xs:string ;
+	.
+
+data:OKUMA.123456-c1_axis
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-c1_axis-name ;
+	.
+
+data:OKUMA.123456-c1_axis-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "c1_axis"^^xs:string ;
+	.
+
+data:OKUMA.123456-c2_axis
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-c2_axis-name ;
+	.
+
+data:OKUMA.123456-c2_axis-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "c2_axis"^^xs:string ;
+	.
+
+data:OKUMA.123456-capability
+	a ex:TurningCapability ;
+	.
+
+data:OKUMA.123456-enclosure
+	a ex:Structure ;
+	core:denotedBy data:OKUMA.123456-enclosure-name ;
+	core:measuresAtSomeTime data:OKUMA.123456-enclosure-temperature ;
+	.
+
+data:OKUMA.123456-enclosure-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "enclosure"^^xs:string ;
+	.
+
+data:OKUMA.123456-enclosure-temperature
+	a qp:Temperature ;
+	.
+
+data:OKUMA.123456-function
+	a ex:MillingCapability ;
+	.
+
+data:OKUMA.123456-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "OKUMA"^^xs:string ;
+	.
+
+data:OKUMA.123456-personnel
+	a core:Person ;
+	core:denotedBy data:OKUMA.123456-personnel-name ;
+	.
+
+data:OKUMA.123456-personnel-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "personnel"^^xs:string ;
+	.
+
+data:OKUMA.123456-x_axis
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-x_axis-name ;
+	.
+
+data:OKUMA.123456-x_axis-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "x_axis"^^xs:string ;
+	.
+
+data:OKUMA.123456-y_axis
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-y_axis-name ;
+	.
+
+data:OKUMA.123456-y_axis-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "y_axis"^^xs:string ;
+	.
+
+data:OKUMA.123456-z1_axis
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-z1_axis-name ;
+	.
+
+data:OKUMA.123456-z1_axis-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "z1_axis"^^xs:string ;
+	.
+
+data:OKUMA.123456-z4_axis
+	a obo:BFO_0000030 ;
+	core:denotedBy data:OKUMA.123456-z4_axis-name ;
+	.
+
+data:OKUMA.123456-z4_axis-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "z4_axis"^^xs:string ;
+	.
+

@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY core "https://spec.industrialontologies.org/ontology/core/Core/">
+	<!ENTITY data "http://example.com/data/">
+	<!ENTITY ex "http://example.com/ontology/">
+	<!ENTITY obo "http://purl.obolibrary.org/obo/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY qp "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY units "http://qudt.org/vocab/unit/">
+	<!ENTITY xs "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF
+	xmlns:core="https://spec.industrialontologies.org/ontology/core/Core/"
+	xmlns:data="http://example.com/data/"
+	xmlns:ex="http://example.com/ontology/"
+	xmlns:obo="http://purl.obolibrary.org/obo/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:qp="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:units="http://qudt.org/vocab/unit/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="http://example.com/data/">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">Machine Ontology</rdfs:label>
+		<owl:imports rdf:resource="http://example.com/ontology/"/>
+	</owl:Ontology>
+	
+	<ex:Machine rdf:about="&data;OKUMA.123456">
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LBarFeederSystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LCoolantSystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LElectricSystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LHydraulicSystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LLoaderSystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LLubricationSystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LPneumaticSystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LToolingDeliverySystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LWasteDisposalSystem1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LYI1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lb1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lc1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lc2"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lc3"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lc6"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lct1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lx1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lz1"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lz4"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-b_axis"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-c1_axis"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-c2_axis"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-enclosure"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-personnel"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-x_axis"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-y_axis"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-z1_axis"/>
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-z4_axis"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-name"/>
+		<core:hasCapability rdf:resource="&data;OKUMA.123456-capability"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-function"/>
+	</ex:Machine>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LBarFeederSystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LBarFeederSystem1-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LBarFeederSystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">BarFeederSystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LCoolantSystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LCoolantSystem1-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LCoolantSystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">CoolantSystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:ElectricalSystem rdf:about="&data;OKUMA.123456-LElectricSystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LElectricSystem1-name"/>
+	</ex:ElectricalSystem>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LElectricSystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">ElectricSystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:HydraulicSystem rdf:about="&data;OKUMA.123456-LHydraulicSystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LHydraulicSystem1-name"/>
+	</ex:HydraulicSystem>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LHydraulicSystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">HydraulicSystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LLoaderSystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LLoaderSystem1-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LLoaderSystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">LoaderSystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:LubricationSystem rdf:about="&data;OKUMA.123456-LLubricationSystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LLubricationSystem1-name"/>
+	</ex:LubricationSystem>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LLubricationSystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">LubricationSystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:PneumaticSystem rdf:about="&data;OKUMA.123456-LPneumaticSystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LPneumaticSystem1-name"/>
+	</ex:PneumaticSystem>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LPneumaticSystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">PneumaticSystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LToolingDeliverySystem1-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">ToolingDeliverySystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LWasteDisposalSystem1-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">WasteDisposalSystem1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-LYI1">
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-x_axis"/>
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-LYI1-name"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-LYI1-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-LYI1-position-actual"/>
+		<core:prescribedBy rdf:resource="&data;OKUMA.123456-LYI1-spec"/>
+	</ex:LinearMotionSystem>
+	
+	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-LYI1-function">
+	</ex:PrismaticMotionCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LYI1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Y</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<qp:Displacement rdf:about="&data;OKUMA.123456-LYI1-position-actual">
+	</qp:Displacement>
+	
+	<core:DesignSpecification rdf:about="&data;OKUMA.123456-LYI1-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-LENGTH-Nominal"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LENGTH-Nominal">
+		<units:hasUnit rdf:resource="&units;MilliM"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Maximum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Minimum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lb1">
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-b_axis"/>
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lb1-name"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lb1-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lb1-angle-actual"/>
+	</ex:RotaryMotionSystem>
+	
+	<qp:Angle rdf:about="&data;OKUMA.123456-Lb1-angle-actual">
+	</qp:Angle>
+	
+	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lb1-function">
+	</ex:RevoluteMotionCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lb1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">B</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc1">
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lc1-name"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc1-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc1-rotary_velocity-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc1-rotary_velocity-programmed"/>
+	</ex:RotaryMotionSystem>
+	
+	<ex:ContinuousMotionCapability rdf:about="&data;OKUMA.123456-Lc1-function">
+	</ex:ContinuousMotionCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lc1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<qp:Speed rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-actual">
+	</qp:Speed>
+	
+	<qp:Speed rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-programmed">
+	</qp:Speed>
+	
+	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc2">
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-c2_axis"/>
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lc2-name"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc2-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc2-rotary_velocity-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc2-rotary_velocity-programmed"/>
+	</ex:RotaryMotionSystem>
+	
+	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lc2-function">
+	</ex:RevoluteMotionCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lc2-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C2</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<qp:Speed rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-actual">
+	</qp:Speed>
+	
+	<qp:Speed rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-programmed">
+	</qp:Speed>
+	
+	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc3">
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-c2_axis"/>
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lc3-name"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc3-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc3-angle-actual"/>
+	</ex:RotaryMotionSystem>
+	
+	<qp:Angle rdf:about="&data;OKUMA.123456-Lc3-angle-actual">
+	</qp:Angle>
+	
+	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lc3-function">
+	</ex:RevoluteMotionCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lc3-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C3</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc6">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lc6-name"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc6-rotary_velocity-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc6-rotary_velocity-programmed"/>
+	</ex:RotaryMotionSystem>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lc6-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C6</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<qp:Speed rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-actual">
+	</qp:Speed>
+	
+	<qp:Speed rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-programmed">
+	</qp:Speed>
+	
+	<ex:ControlSystem rdf:about="&data;OKUMA.123456-Lct1">
+		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lct1-Lp1"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lct1-name"/>
+	</ex:ControlSystem>
+	
+	<ex:ControlSystemPath rdf:about="&data;OKUMA.123456-Lct1-Lp1">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lct1-Lp1-name"/>
+	</ex:ControlSystemPath>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lct1-Lp1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">path</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lct1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Controller</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lx1">
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-x_axis"/>
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lx1-name"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lx1-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lx1-position-actual"/>
+		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lx1-spec"/>
+	</ex:LinearMotionSystem>
+	
+	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lx1-function">
+	</ex:PrismaticMotionCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lx1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">X</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<qp:Displacement rdf:about="&data;OKUMA.123456-Lx1-position-actual">
+	</qp:Displacement>
+	
+	<core:DesignSpecification rdf:about="&data;OKUMA.123456-Lx1-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-LENGTH-Nominal"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LENGTH-Nominal">
+		<units:hasUnit rdf:resource="&units;MilliM"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Maximum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Minimum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lz1">
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lz1-name"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz1-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lz1-position-actual"/>
+		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz1-spec"/>
+	</ex:LinearMotionSystem>
+	
+	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lz1-function">
+	</ex:PrismaticMotionCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lz1-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z1</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<qp:Displacement rdf:about="&data;OKUMA.123456-Lz1-position-actual">
+	</qp:Displacement>
+	
+	<core:DesignSpecification rdf:about="&data;OKUMA.123456-Lz1-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-LENGTH-Nominal"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LENGTH-Nominal">
+		<units:hasUnit rdf:resource="&units;MilliM"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lz4">
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
+		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lz4-name"/>
+		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz4-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lz4-position-actual"/>
+		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz4-spec"/>
+	</ex:LinearMotionSystem>
+	
+	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lz4-function">
+	</ex:PrismaticMotionCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lz4-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z4</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<qp:Displacement rdf:about="&data;OKUMA.123456-Lz4-position-actual">
+	</qp:Displacement>
+	
+	<core:DesignSpecification rdf:about="&data;OKUMA.123456-Lz4-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-LENGTH-Nominal"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LENGTH-Nominal">
+		<units:hasUnit rdf:resource="&units;MilliM"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-b_axis">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-b_axis-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-b_axis-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">b_axis</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-c1_axis">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-c1_axis-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-c1_axis-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">c1_axis</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-c2_axis">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-c2_axis-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-c2_axis-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">c2_axis</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:TurningCapability rdf:about="&data;OKUMA.123456-capability">
+	</ex:TurningCapability>
+	
+	<ex:Structure rdf:about="&data;OKUMA.123456-enclosure">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-enclosure-name"/>
+		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-enclosure-temperature"/>
+	</ex:Structure>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-enclosure-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">enclosure</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<qp:Temperature rdf:about="&data;OKUMA.123456-enclosure-temperature">
+	</qp:Temperature>
+	
+	<ex:MillingCapability rdf:about="&data;OKUMA.123456-function">
+	</ex:MillingCapability>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">OKUMA</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<core:Person rdf:about="&data;OKUMA.123456-personnel">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-personnel-name"/>
+	</core:Person>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-personnel-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">personnel</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-x_axis">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-x_axis-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-x_axis-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">x_axis</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-y_axis">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-y_axis-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-y_axis-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">y_axis</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-z1_axis">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-z1_axis-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-z1_axis-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">z1_axis</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-z4_axis">
+		<core:denotedBy rdf:resource="&data;OKUMA.123456-z4_axis-name"/>
+	</obo:BFO_0000030>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-z4_axis-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">z4_axis</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+
+</rdf:RDF>

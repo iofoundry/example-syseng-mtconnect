@@ -24,9 +24,13 @@ BFO::BFO.properties.each do |prop|
   end
 end
 
+machine = ARGV[0] 
+path = "/#{machine}/probe"
+puts "Getting https://demo.mtconnect.org#{path}"
+
 client = Net::HTTP.new("demo.mtconnect.org", 443)
 client.use_ssl = true
-resp = client.get("/Mazak")
+resp = client.get(path)
 unless resp.code == '200'
   puts "Response failed: #{resp.code}"
   exit
@@ -235,21 +239,39 @@ end
 RDF::Vocabulary.register(:ex, Example::Machine)
 
 module Inst
-  Data = RDF::Vocabulary.new("http://example.com/data/")
+  Data = Class.new(RDF::Vocabulary("http://example.com/data/")) do
+    ontology :"http://example.com/data/",
+      label: {"en-us": "Machine Ontology"},
+      "http://www.w3.org/2002/07/owl#imports": "http://example.com/ontology/",
+      type: "http://www.w3.org/2002/07/owl#Ontology"
+  end
 end
 
 QUDT = RDF::Vocabulary.new("http://qudt.org/vocab/unit/")
 
-graph = RDF::Graph.new
-graph << Example::Machine.to_enum
+prefixes = {
+  ex: Example::Machine.to_uri,
+  data: Inst::Data.to_uri,
+  obo: BFO::BFO.to_uri,
+  core: IOF::Core.to_uri,
+  av: IOF::AnnotationVocabulary.to_uri,
+  units: QUDT.to_uri,
+  rdfs: RDF::RDFS.to_uri,
+  rdfv: RDF::RDFV.to_uri,
+  owl: RDF::OWL.to_uri,
+  qp: IOF::QualitiesPhysical.to_uri
+}
 
-graph << [QUDT["MilliM-PER-SEC"], RDF.type, QUDT.Unit]
-graph << [QUDT["REV-PER-SEC"], RDF.type, QUDT.Unit]
-graph << [QUDT["MilliM"], RDF.type, QUDT.Unit]
-graph << [QUDT["N"], RDF.type, QUDT.Unit]
-graph << [QUDT["N-M"], RDF.type, QUDT.Unit]
-graph << [QUDT["DEG"], RDF.type, QUDT.Unit]
-graph << [QUDT["REV-PER-MIN"], RDF.type, QUDT.Unit]
+onto = RDF::Graph.new
+onto << Example::Machine.to_enum
+
+onto << [QUDT["MilliM-PER-SEC"], RDF.type, QUDT.Unit]
+onto << [QUDT["REV-PER-SEC"], RDF.type, QUDT.Unit]
+onto << [QUDT["MilliM"], RDF.type, QUDT.Unit]
+onto << [QUDT["N"], RDF.type, QUDT.Unit]
+onto << [QUDT["N-M"], RDF.type, QUDT.Unit]
+onto << [QUDT["DEG"], RDF.type, QUDT.Unit]
+onto << [QUDT["REV-PER-MIN"], RDF.type, QUDT.Unit]
 
 Units = {
   NEWTON: QUDT["N"],
@@ -259,6 +281,13 @@ Units = {
   "MILLIMETER/SECOND": QUDT["MilliM-PER-SEC"],
   "REVOLUTION/MINUTE": QUDT["REV-PER-MIN"]
 }
+
+RDF::Writer.open("example.rdf", prefixes: prefixes) do |w|
+  w << onto
+end
+
+graph = RDF::Graph.new
+graph << Inst::Data.to_enum
 
 def sub_iri(names, ext)
   sub = (names + Array(ext)).join('-')
@@ -348,23 +377,10 @@ doc.each_element('//Device') do |dev|
   add_component(graph, dev)
 end
 
-prefixes = {
-  ex: Example::Machine.to_uri,
-  data: Inst::Data.to_uri,
-  obo: BFO::BFO.to_uri,
-  core: IOF::Core.to_uri,
-  av: IOF::AnnotationVocabulary.to_uri,
-  units: QUDT.to_uri,
-  rdfs: RDF::RDFS.to_uri,
-  rdfv: RDF::RDFV.to_uri,
-  owl: RDF::OWL.to_uri,
-  qp: IOF::QualitiesPhysical.to_uri
-}
-
-RDF::Writer.open("mazak.rdf", prefixes: prefixes) do |w|
+RDF::Writer.open("#{machine}.rdf", prefixes: prefixes) do |w|
   w << graph
 end
 
-RDF::Writer.open("mazak.ttl", prefixes: prefixes) do |w|
+RDF::Writer.open("#{machine}.ttl", prefixes: prefixes) do |w|
   w << graph
 end

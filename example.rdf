@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY av "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+	<!ENTITY core "https://spec.industrialontologies.org/ontology/core/Core/">
+	<!ENTITY ex "http://example.com/ontology/">
+	<!ENTITY obo "http://purl.obolibrary.org/obo/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY qp "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY units "http://qudt.org/vocab/unit/">
+	<!ENTITY xs "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF
+	xmlns:av="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+	xmlns:core="https://spec.industrialontologies.org/ontology/core/Core/"
+	xmlns:ex="http://example.com/ontology/"
+	xmlns:obo="http://purl.obolibrary.org/obo/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:qp="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:units="http://qudt.org/vocab/unit/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="http://example.com/ontology/">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">Machine Ontology</rdfs:label>
+		<owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"/>
+	</owl:Ontology>
+	
+	<owl:Class rdf:about="&ex;Ballscrew">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">ballscrew</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;ContinuousMotionCapability">
+		<rdfs:subClassOf rdf:resource="&ex;RevoluteMotionCapability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">continuous motion capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;ControlSystem">
+		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">control system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;ControlSystemPath">
+		<rdfs:subClassOf rdf:resource="&ex;ControlSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">control system path</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Door">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">door</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;ElectricalSystem">
+		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">electrical system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Enclosure">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000029"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">enclosure</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;HydraulicSystem">
+		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">hydraulic system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;LinearMotionSystem">
+		<rdfs:subClassOf rdf:resource="&ex;MotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">linear motion system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Link">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">link</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;LubricationSystem">
+		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">lubrication system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Machine">
+		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">machine</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;MillingCapability">
+		<rdfs:subClassOf rdf:resource="&core;Capability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">milling capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;MotionCapability">
+		<rdfs:subClassOf rdf:resource="&core;Capability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">motion capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;MotionSystem">
+		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">motion system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Motor">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">motor</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Part">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">part</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;PneumaticSystem">
+		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">pneumatic system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;PrismaticMotionCapability">
+		<rdfs:subClassOf rdf:resource="&ex;MotionCapability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">prismatic motion capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;RevoluteMotionCapability">
+		<rdfs:subClassOf rdf:resource="&ex;MotionCapability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">revolute motion capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Room">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">room</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;RotaryMotionSystem">
+		<rdfs:subClassOf rdf:resource="&ex;MotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">rotary motion system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Sensor">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">sensor</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Stock">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">stock</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Structure">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">enclosure</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;TurningCapability">
+		<rdfs:subClassOf rdf:resource="&core;Capability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">turning capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="&ex;joinedTo">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">joined to</rdfs:label>
+		<rdfs:domain rdf:resource="&obo;BFO_0000040"/>
+		<rdfs:range rdf:resource="&obo;BFO_0000040"/>
+	</owl:ObjectProperty>
+	
+	<units:Unit rdf:about="&units;DEG">
+	</units:Unit>
+	
+	<units:Unit rdf:about="&units;MilliM">
+	</units:Unit>
+	
+	<units:Unit rdf:about="&units;MilliM-PER-SEC">
+	</units:Unit>
+	
+	<units:Unit rdf:about="&units;N">
+	</units:Unit>
+	
+	<units:Unit rdf:about="&units;N-M">
+	</units:Unit>
+	
+	<units:Unit rdf:about="&units;REV-PER-MIN">
+	</units:Unit>
+	
+	<units:Unit rdf:about="&units;REV-PER-SEC">
+	</units:Unit>
+
+</rdf:RDF>

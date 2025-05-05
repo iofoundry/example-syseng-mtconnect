@@ -5,4 +5,5 @@
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/Core/" uri="./Core.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/qualities/Qualities/" uri="./cache/IOF_Qualities.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/" uri="./cache/IOF_Qualities-Physical.rdf"/>
+    <uri id="User Entered Import Resolution" name="http://example.com/ontology/" uri="./example.rdf"/>
 </catalog>
