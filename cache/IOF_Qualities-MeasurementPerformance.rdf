@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY AnnotationVocabulary "https://www.omg.org/spec/Commons/AnnotationVocabulary/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dcterms "http://purl.org/dc/terms/">
+	<!ENTITY iof-av "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+	<!ENTITY iof-core "https://spec.industrialontologies.org/ontology/core/Core/">
+	<!ENTITY obo "http://purl.obolibrary.org/obo/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY prov "http://www.w3.org/ns/prov#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF
+	xmlns="https://spec.industrialontologies.org/ontology/qualities/"
+	xmlns:AnnotationVocabulary="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:iof-av="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+	xmlns:iof-core="https://spec.industrialontologies.org/ontology/core/Core/"
+	xmlns:obo="http://purl.obolibrary.org/obo/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">Measurement Performance Qualities Ontology</rdfs:label>
+		<dcterms:abstract rdf:datatype="&rdf;langString" xml:lang="en-US">This Submodule, Measurement Performance Qualities, of the IOF Qualities Ontology aims to represent the generic constructs (including classes and properties) related bfo qualities covering Measurement Performance.</dcterms:abstract>
+		<dcterms:contributor rdf:datatype="&rdf;langString" xml:lang="en-US">Thomas Hanke, Fraunhofer IWM</dcterms:contributor>
+		<dcterms:creator rdf:datatype="&rdf;langString" xml:lang="en-US">IOF Materials Working Group</dcterms:creator>
+		<dcterms:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dcterms:license>
+		<dcterms:publisher rdf:datatype="&xsd;string">Industrial Ontology Foundry</dcterms:publisher>
+		<dcterms:title rdf:datatype="&rdf;langString" xml:lang="en-US">Industrial Ontology Foundry (IOF) Process Qualities Ontology</dcterms:title>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/"/>
+		<iof-av:copyright rdf:datatype="&xsd;string">Industrial Ontology Foundry (IOF)</iof-av:copyright>
+		<iof-av:maturity rdf:resource="&iof-av;Provisional"/>
+	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&obo;IAO_0000114">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Has Curation Status</rdfs:label>
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&obo;IAO_0000116">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Editor Note</rdfs:label>
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&obo;IAO_0000117">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Term Editor</rdfs:label>
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&obo;IAO_0000119">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Definition Source</rdfs:label>
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&obo;IAO_0000412">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Imported From</rdfs:label>
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dcterms;bibliographicCitation">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dcterms;created">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dcterms;title">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&prov;editorialNote">
+	</owl:AnnotationProperty>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/CalibrationRange">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/DynamicRange"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">Kalibrierbereich</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">calibration range</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/co"/>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">Calibration range is the region between limits within which a quantity is measured, received, or transmitted, typically by a process node like a machine, expressed through lower and upper range values</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/DataAcquisitionRate">
+		<rdfs:subClassOf rdf:resource="&iof-core;ProcessCharacteristic"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">Datenerfassungsrate</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">data acquisition rate</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/co"/>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">Data acquisition rate is the number of measurements or queries per time period for a considered measurement of a parameter, representing sampling or query rate during data acquisition</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/MeasurementRelationalQuality">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000145"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">measurement relational quality</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">messungsrelationale Qualität</rdfs:label>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">measurement relational quality is a relational quality that pertains to the measurement attributes related to other entities, requiring another entity for its existence</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/PerformanceQuality">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">Leistungsqualität</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">performance quality</rdfs:label>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">Performance quality is an attribute related to the effectiveness or efficiency of an entity’s performance, typically evaluated in relation to a standard or requirement</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/Precision">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/MeasurementRelationalQuality"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">Genauigkeit</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">precision</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/co"/>
+		<iof-av:adaptedFrom rdf:datatype="&rdf;langString" xml:lang="en">“Precision.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/precision. Accessed 13 Jan. 2023.</iof-av:adaptedFrom>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">Precision is the degree of refinement with which an operation is performed or a measurement stated</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/WorkingRange">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/DynamicRange"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">Arbeitsbereich</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">working range</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://w3id.org/pmd/co"/>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">Working range is the region between limits within which a processing node, like a machine, is usable for its intended purpose, expressed through lower and upper range values of interest</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/DynamicRange">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-MeasurementPerformance/MeasurementRelationalQuality"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">Dynamikbereich</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">dynamic range</rdfs:label>
+		<iof-av:adaptedFrom rdf:datatype="&rdf;langString" xml:lang="en">https://en.wikipedia.org/wiki/Dynamic_range</iof-av:adaptedFrom>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">Dynamic range is the ratio between the largest and smallest values a quantity can assume, often used in signal contexts like sound and light, measured as a ratio or logarithmic value in base-10 or base-2</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+
+</rdf:RDF>

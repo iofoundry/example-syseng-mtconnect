@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY AnnotationVocabulary1 "https://www.omg.org/spec/Commons/AnnotationVocabulary/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dcterms "http://purl.org/dc/terms/">
+	<!ENTITY iof-av "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+	<!ENTITY iof-core "https://spec.industrialontologies.org/ontology/core/Core/">
+	<!ENTITY obo "http://purl.obolibrary.org/obo/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY prov "http://www.w3.org/ns/prov#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF
+	xmlns="https://spec.industrialontologies.org/ontology/qualities/Qualities/"
+	xmlns:AnnotationVocabulary1="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:iof-av="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+	xmlns:iof-core="https://spec.industrialontologies.org/ontology/core/Core/"
+	xmlns:obo="http://purl.obolibrary.org/obo/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities/">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Qualities Ontology (base)</rdfs:label>
+		<dcterms:abstract rdf:datatype="&rdf;langString" xml:lang="en">The IOF (common) Quality Ontology is an architectural construct allowing separate Quality ontologies for different domains e.g., Physical, Chemical, Biological, etc.
+        This ontology also contains those qualities that may be considered &apos;common&apos;.</dcterms:abstract>
+		<dcterms:contributor rdf:datatype="&rdf;langString" xml:lang="en-US">Thomas Hanke, Fraunhofer IWM</dcterms:contributor>
+		<dcterms:creator rdf:datatype="&rdf;langString" xml:lang="en-US">IOF Materials Working Group</dcterms:creator>
+		<dcterms:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dcterms:license>
+		<dcterms:publisher rdf:datatype="&xsd;string">Industrial Ontology Foundry</dcterms:publisher>
+		<dcterms:title rdf:datatype="&rdf;langString" xml:lang="en">Industrial Ontology Foundry (IOF) Qualities Ontology (Base)</dcterms:title>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/AboutIOFProd/"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/meta/AnnotationVocabulary/"/>
+		<owl:versionIRI rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/"/>
+		<iof-av:copyright rdf:datatype="&rdf;langString" xml:lang="en">Industrial Ontology Foundry (IOF)</iof-av:copyright>
+		<iof-av:maturity rdf:resource="&iof-av;Provisional"/>
+	</owl:Ontology>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities/Action">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">Aktion</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">action</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&obo;BFO_0000057"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&obo;BFO_0000040">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&iof-core;hasQuality"/>
+										<owl:someValuesFrom rdf:resource="&obo;BFO_0000145"/>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&iof-core;hasProcessCharacteristic"/>
+						<owl:someValuesFrom rdf:resource="&iof-core;ProcessCharacteristic"/>
+					</owl:Restriction>
+				</owl:unionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">Action is a process introducing a change as a response or interaction in a participating material entity</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities/DimensionQuality">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">dimension quality</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities/Reaction">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">Reaktion</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">reaction</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/isTriggeredBy"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/Action"/>
+			</owl:Restriction>
+		</owl:equivalentClass>
+		<skos:altLabel rdf:datatype="&rdf;langString" xml:lang="de">Antwort</skos:altLabel>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">Reaction represents a process resulting in a realizable entity being realized in response to an action</iof-av:naturalLanguageDefinition>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="de">Reaktion stellt einen Prozess dar, der zu einem realisierbaren Wesen führt, das als Antwort auf eine Aktion realisiert wird</iof-av:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities/SpatialRelationalQuality">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000145"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">spatial relational quality</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities/ToBeReviewed">
+		<skos:note rdf:datatype="&rdf;langString" xml:lang="en">This is a temporary class to hold those constructs that need additional review.</skos:note>
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities/isTriggeredBy">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">ausgelöst durch</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">is triggered by</rdfs:label>
+		<owl:inverseOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/triggers"/>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">inverse if triggers</iof-av:naturalLanguageDefinition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities/triggers">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">triggers</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="de">verursacht</rdfs:label>
+		<rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/Action"/>
+		<rdfs:range rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/Reaction"/>
+		<iof-av:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">A stimulus process X can trigger one or more response processes that realize a realizable entity.</iof-av:naturalLanguageDefinition>
+	</owl:ObjectProperty>
+
+</rdf:RDF>
