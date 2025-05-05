@@ -1,12 +1,14 @@
+$: << './vocab'
+
 require 'net/http'
 require 'rexml/document'
 require 'time'
 require 'rdf'
 require 'rdf/vocab'
-require './BFO'
-require './Core'
-require './Qualities'
-require './QualitiesPhysical'
+require 'BFO'
+require 'Core'
+require 'Qualities'
+require 'QualitiesPhysical'
 require 'rdf/rdfxml'
 require 'rdf/turtle'
 
