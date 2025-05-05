@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
+	<!ENTITY av "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
 	<!ENTITY core "https://spec.industrialontologies.org/ontology/core/Core/">
 	<!ENTITY data "http://example.com/data/">
 	<!ENTITY ex "http://example.com/ontology/">
 	<!ENTITY obo "http://purl.obolibrary.org/obo/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY qp "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
 	<!ENTITY units "http://qudt.org/vocab/unit/">
 	<!ENTITY xs "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF
+	xmlns:av="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
 	xmlns:core="https://spec.industrialontologies.org/ontology/core/Core/"
 	xmlns:data="http://example.com/data/"
 	xmlns:ex="http://example.com/ontology/"
 	xmlns:obo="http://purl.obolibrary.org/obo/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:qp="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:units="http://qudt.org/vocab/unit/"
@@ -44,19 +48,27 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-personnelm"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-pneumatic"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-procstock"/>
-		<obo:BFO_0000115 rdf:resource="&data;Mazak-room"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-table"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-trundle"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-x"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-xaxism"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-y"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-yaxism"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-zaxis"/>
 		<core:denotedBy rdf:resource="&data;Mazak-name"/>
 		<core:hasCapability rdf:resource="&data;Mazak-capability"/>
 		<core:hasFunction rdf:resource="&data;Mazak-function"/>
 	</ex:Machine>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-br">
+		<ex:joinedTo rdf:resource="&data;Mazak-enclosurem"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-br-Bmotor"/>
 		<core:denotedBy rdf:resource="&data;Mazak-br-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-br-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-br-angle"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-br-angle-actual"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-br-spec"/>
 	</ex:RotaryMotionSystem>
 	
@@ -67,6 +79,12 @@
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-br-Bmotor-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Bmotor</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
+	
+	<qp:Angle rdf:about="&data;Mazak-br-angle">
+	</qp:Angle>
+	
+	<qp:Angle rdf:about="&data;Mazak-br-angle-actual">
+	</qp:Angle>
 	
 	<ex:RevoluteMotionCapability rdf:about="&data;Mazak-br-function">
 	</ex:RevoluteMotionCapability>
@@ -103,9 +121,12 @@
 	</core:ValueExpression>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-c">
+		<ex:joinedTo rdf:resource="&data;Mazak-zaxis"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-c-C2motor"/>
 		<core:denotedBy rdf:resource="&data;Mazak-c-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-c-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-rotary_velocity-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-c-spec"/>
 	</ex:RotaryMotionSystem>
 	
@@ -124,6 +145,9 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C1</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
+	<qp:Speed rdf:about="&data;Mazak-c-rotary_velocity-actual">
+	</qp:Speed>
+	
 	<core:DesignSpecification rdf:about="&data;Mazak-c-spec">
 		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c-spec-VELOCITY-Maximum"/>
 		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c-spec-VELOCITY-Minimum"/>
@@ -139,10 +163,18 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
+	<qp:Temperature rdf:about="&data;Mazak-c-temperature">
+	</qp:Temperature>
+	
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-c2">
+		<ex:joinedTo rdf:resource="&data;Mazak-table"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-c2-Cmotor"/>
 		<core:denotedBy rdf:resource="&data;Mazak-c2-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-c2-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c2-angle"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c2-angle-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c2-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-c2-spec"/>
 	</ex:RotaryMotionSystem>
 	
@@ -153,6 +185,12 @@
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-c2-Cmotor-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Cmotor</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
+	
+	<qp:Angle rdf:about="&data;Mazak-c2-angle">
+	</qp:Angle>
+	
+	<qp:Angle rdf:about="&data;Mazak-c2-angle-actual">
+	</qp:Angle>
 	
 	<ex:RevoluteMotionCapability rdf:about="&data;Mazak-c2-function">
 	</ex:RevoluteMotionCapability>
@@ -188,6 +226,9 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
+	<qp:Temperature rdf:about="&data;Mazak-c2-temperature">
+	</qp:Temperature>
+	
 	<ex:TurningCapability rdf:about="&data;Mazak-capability">
 	</ex:TurningCapability>
 	
@@ -210,11 +251,15 @@
 	
 	<obo:BFO_0000030 rdf:about="&data;Mazak-coolant">
 		<core:denotedBy rdf:resource="&data;Mazak-coolant-name"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-coolant-temperature"/>
 	</obo:BFO_0000030>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-coolant-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">coolant</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
+	
+	<qp:Temperature rdf:about="&data;Mazak-coolant-temperature">
+	</qp:Temperature>
 	
 	<obo:BFO_0000030 rdf:about="&data;Mazak-door1">
 		<core:denotedBy rdf:resource="&data;Mazak-door1-name"/>
@@ -232,13 +277,17 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">electric</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<obo:BFO_0000030 rdf:about="&data;Mazak-enclosurem">
+	<ex:Structure rdf:about="&data;Mazak-enclosurem">
 		<core:denotedBy rdf:resource="&data;Mazak-enclosurem-name"/>
-	</obo:BFO_0000030>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-enclosurem-temperature"/>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-enclosurem-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">enclosure</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
+	
+	<qp:Temperature rdf:about="&data;Mazak-enclosurem-temperature">
+	</qp:Temperature>
 	
 	<ex:MillingCapability rdf:about="&data;Mazak-function">
 	</ex:MillingCapability>
@@ -295,19 +344,44 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">stock</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<obo:BFO_0000030 rdf:about="&data;Mazak-room">
+	<ex:Room rdf:about="&data;Mazak-room">
 		<core:denotedBy rdf:resource="&data;Mazak-room-name"/>
-	</obo:BFO_0000030>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-room-temperature"/>
+	</ex:Room>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-room-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">environmental</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
+	<qp:Temperature rdf:about="&data;Mazak-room-temperature">
+	</qp:Temperature>
+	
+	<ex:Link rdf:about="&data;Mazak-table">
+		<core:denotedBy rdf:resource="&data;Mazak-table-name"/>
+	</ex:Link>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-table-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">TABLE</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
+	<ex:Link rdf:about="&data;Mazak-trundle">
+		<core:denotedBy rdf:resource="&data;Mazak-trundle-name"/>
+	</ex:Link>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-trundle-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">TRUNDLE</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
 	<ex:LinearMotionSystem rdf:about="&data;Mazak-x">
+		<ex:joinedTo rdf:resource="&data;Mazak-enclosurem"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-xaxism"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xmotor"/>
 		<core:denotedBy rdf:resource="&data;Mazak-x-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-x-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-x-position"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-x-position-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-x-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-x-spec"/>
 	</ex:LinearMotionSystem>
 	
@@ -333,6 +407,12 @@
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-x-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">X</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
+	
+	<qp:Displacement rdf:about="&data;Mazak-x-position">
+	</qp:Displacement>
+	
+	<qp:Displacement rdf:about="&data;Mazak-x-position-actual">
+	</qp:Displacement>
 	
 	<core:DesignSpecification rdf:about="&data;Mazak-x-spec">
 		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-x-spec-LENGTH-Nominal"/>
@@ -379,11 +459,27 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
+	<qp:Temperature rdf:about="&data;Mazak-x-temperature">
+	</qp:Temperature>
+	
+	<ex:Link rdf:about="&data;Mazak-xaxism">
+		<core:denotedBy rdf:resource="&data;Mazak-xaxism-name"/>
+	</ex:Link>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-xaxism-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">X_AXIS</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
 	<ex:LinearMotionSystem rdf:about="&data;Mazak-y">
+		<ex:joinedTo rdf:resource="&data;Mazak-xaxism"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-yaxism"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-y-Yballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-y-Ymotor"/>
 		<core:denotedBy rdf:resource="&data;Mazak-y-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-y-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-y-position"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-y-position-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-y-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-y-spec"/>
 	</ex:LinearMotionSystem>
 	
@@ -409,6 +505,12 @@
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-y-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Y</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
+	
+	<qp:Displacement rdf:about="&data;Mazak-y-position">
+	</qp:Displacement>
+	
+	<qp:Displacement rdf:about="&data;Mazak-y-position-actual">
+	</qp:Displacement>
 	
 	<core:DesignSpecification rdf:about="&data;Mazak-y-spec">
 		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-y-spec-LENGTH-Nominal"/>
@@ -455,11 +557,27 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
+	<qp:Temperature rdf:about="&data;Mazak-y-temperature">
+	</qp:Temperature>
+	
+	<ex:Link rdf:about="&data;Mazak-yaxism">
+		<core:denotedBy rdf:resource="&data;Mazak-yaxism-name"/>
+	</ex:Link>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-yaxism-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Y_AXIS</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
 	<ex:LinearMotionSystem rdf:about="&data;Mazak-z">
+		<ex:joinedTo rdf:resource="&data;Mazak-yaxism"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-zaxis"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zmotor"/>
 		<core:denotedBy rdf:resource="&data;Mazak-z-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-z-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-position"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-position-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-z-spec"/>
 	</ex:LinearMotionSystem>
 	
@@ -485,6 +603,12 @@
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-z-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
+	
+	<qp:Displacement rdf:about="&data;Mazak-z-position">
+	</qp:Displacement>
+	
+	<qp:Displacement rdf:about="&data;Mazak-z-position-actual">
+	</qp:Displacement>
 	
 	<core:DesignSpecification rdf:about="&data;Mazak-z-spec">
 		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-z-spec-LENGTH-Nominal"/>
@@ -531,6 +655,17 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
+	<qp:Temperature rdf:about="&data;Mazak-z-temperature">
+	</qp:Temperature>
+	
+	<ex:Link rdf:about="&data;Mazak-zaxis">
+		<core:denotedBy rdf:resource="&data;Mazak-zaxis-name"/>
+	</ex:Link>
+	
+	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-zaxis-name">
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z_AXIS</core:hasSimpleExpressionValue>
+	</core:DesignativeInformationContentEntity>
+	
 	<owl:Class rdf:about="&ex;Ballscrew">
 		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">ballscrew</rdfs:label>
@@ -561,6 +696,11 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">electrical system</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&ex;Enclosure">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000029"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">enclosure</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&ex;HydraulicSystem">
 		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">hydraulic system</rdfs:label>
@@ -569,6 +709,11 @@
 	<owl:Class rdf:about="&ex;LinearMotionSystem">
 		<rdfs:subClassOf rdf:resource="&ex;MotionSystem"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">linear motion system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Link">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">link</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&ex;LubricationSystem">
@@ -621,9 +766,19 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">revolute motion capability</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&ex;Room">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">room</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&ex;RotaryMotionSystem">
 		<rdfs:subClassOf rdf:resource="&ex;MotionSystem"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">rotary motion system</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Sensor">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&ex;Stock">
@@ -631,10 +786,22 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">stock</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&ex;Structure">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">enclosure</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&ex;TurningCapability">
 		<rdfs:subClassOf rdf:resource="&core;Capability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">turning capability</rdfs:label>
 	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="&ex;joinedTo">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">joined to</rdfs:label>
+		<rdfs:domain rdf:resource="&obo;BFO_0000040"/>
+		<rdfs:range rdf:resource="&obo;BFO_0000040"/>
+	</owl:ObjectProperty>
 	
 	<units:Unit rdf:about="&units;DEG">
 	</units:Unit>

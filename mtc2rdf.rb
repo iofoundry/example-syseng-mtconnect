@@ -9,6 +9,7 @@ require 'BFO'
 require 'Core'
 require 'Qualities'
 require 'QualitiesPhysical'
+require 'AnnotationVocabulary'
 require 'rdf/rdfxml'
 require 'rdf/turtle'
 
@@ -147,9 +148,40 @@ module Example
          subClassOf: IOF::Core.Capability,
          type: "http://www.w3.org/2002/07/owl#Class"
 
+    term :Enclosure,
+         label: {'en-us': 'enclosure'},
+         subClassOf: BFO::BFO.site,
+         type: "http://www.w3.org/2002/07/owl#Class"
+
+    term :Structure,
+         label: {'en-us': 'enclosure'},
+         subClassOf: BFO::BFO.object,
+         type: "http://www.w3.org/2002/07/owl#Class"
+
+    term :Link,
+         label: {'en-us': 'link'},
+         subClassOf: BFO::BFO.object,
+         type: "http://www.w3.org/2002/07/owl#Class"
+
+    term :Room,
+         label: {'en-us': 'room'},
+         subClassOf: BFO::BFO.object,
+         type: "http://www.w3.org/2002/07/owl#Class"
+
+    term :Sensor,
+         label: {'en-us': 'sensor'},
+         subClassOf: BFO::BFO.object,
+         type: "http://www.w3.org/2002/07/owl#Class"         
+
+    property :joinedTo,
+             label: {'en-us': 'joined to'},
+             type: [RDF::OWL.ObjectProperty, RDF::OWL.SymmetricProperty],
+             domain: BFO::BFO.material_entity,
+             range: BFO::BFO.material_entity
+
   end
 
-  MachineMapping = {
+  Components = {
     Linear: Machine.LinearMotionSystem,
     Rotary: Machine.RotaryMotionSystem,
     Device: Machine.Machine,
@@ -165,6 +197,10 @@ module Example
     Stock: Machine.Stock,
     Personnel: IOF::Core.Person,
     PartOccurrence: Machine.Part,
+    Link: Machine.Link,
+    Enclosure: Machine.Structure,
+    Environmental: Machine.Room,
+    
 
     # Nil mapping
     Axes: false,
@@ -174,7 +210,6 @@ module Example
     Resources: false,
     Structures: false,
     Materials: false,
-    Link: false,
   }
 
   Functions = {
@@ -186,6 +221,14 @@ module Example
 
   Capabilities = {
     Device: Machine.TurningCapability
+  }
+
+  DataItems = {
+    TEMPERATURE: IOF::QualitiesPhysical.Temperature,
+    POSITION: IOF::QualitiesPhysical.Displacement,
+    ANGLE: IOF::QualitiesPhysical.Angle,
+    VELOCITY: IOF::QualitiesPhysical.Speed,
+    ROTARY_VELOCITY: IOF::QualitiesPhysical.Speed
   }
 end
 
@@ -240,11 +283,11 @@ end
 def add_component(graph, comp, names = [], level = 0)
   type = (comp[:type] || comp.name).to_sym
   puts "#{'  ' * level}#{comp.name} #{comp[:id]} #{type.inspect}"
-  cls = Example::MachineMapping[type]
+  cls = Example::Components[type]
   cls = BFO::BFO.object if cls.nil?
-  
+
   if cls
-    parent = Inst::Data[names.join('-')] unless names.empty?
+    parent = Inst::Data[names.join('-')] unless names.empty? or type == :Environmental
     names = names.dup << "#{comp[:uuid] || comp[:id]}"
     iri = Inst::Data[names.join('-')]
     graph << [iri, RDF.type, cls]
@@ -268,12 +311,26 @@ def add_component(graph, comp, names = [], level = 0)
       end
     end
 
+    comp.each_element('./Configuration/Relationships/ComponentRelationship') do |rel|
+      graph << [iri, Example::Machine.joinedTo, sub_iri(names[0...1], rel[:idRef])]
+    end
+
     key = comp.name
     comp.each_element('./Configuration/Motion') do |motion|
       key = motion[:type]
     end
 
     add_capability(graph, iri, names, key)
+
+    comp.each_element('./DataItems/DataItem') do |di|
+      puts "#{'  ' * (level + 1)}** #{di[:type]} #{di[:subType]} #{di[:units]}"
+      cls = Example::DataItems[di[:type].to_sym]
+      if cls
+        name = [di[:type], di[:subType]].compact.join('-').downcase
+        puts "#{'  ' * (level + 2)}** adding #{name}"
+        add_instance(graph, iri, sub_iri(names, name), IOF::Core.measuresAtSomeTime, cls)        
+      end
+    end
   end
 
   comp.each_element("./Compositions/*") do |cmp|
@@ -296,10 +353,12 @@ prefixes = {
   data: Inst::Data.to_uri,
   obo: BFO::BFO.to_uri,
   core: IOF::Core.to_uri,
+  av: IOF::AnnotationVocabulary.to_uri,
   units: QUDT.to_uri,
   rdfs: RDF::RDFS.to_uri,
   rdfv: RDF::RDFV.to_uri,
-  owl: RDF::OWL.to_uri
+  owl: RDF::OWL.to_uri,
+  qp: IOF::QualitiesPhysical.to_uri
 }
 
 RDF::Writer.open("mazak.rdf", prefixes: prefixes) do |w|

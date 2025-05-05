@@ -3,11 +3,13 @@
 # imports: https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/
 # imports: https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/
 
+@prefix av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
 @prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
 @prefix data: <http://example.com/data/> .
 @prefix ex: <http://example.com/ontology/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qp: <https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdfv: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix units: <http://qudt.org/vocab/unit/> .
@@ -41,10 +43,14 @@ data:Mazak
 		data:Mazak-personnelm ,
 		data:Mazak-pneumatic ,
 		data:Mazak-procstock ,
-		data:Mazak-room ,
+		data:Mazak-table ,
+		data:Mazak-trundle ,
 		data:Mazak-x ,
+		data:Mazak-xaxism ,
 		data:Mazak-y ,
-		data:Mazak-z
+		data:Mazak-yaxism ,
+		data:Mazak-z ,
+		data:Mazak-zaxis
 		;
 	core:denotedBy data:Mazak-name ;
 	core:hasCapability data:Mazak-capability ;
@@ -53,9 +59,17 @@ data:Mazak
 
 data:Mazak-br
 	a ex:RotaryMotionSystem ;
+	ex:joinedTo
+		data:Mazak-enclosurem ,
+		data:Mazak-trundle
+		;
 	obo:BFO_0000115 data:Mazak-br-Bmotor ;
 	core:denotedBy data:Mazak-br-name ;
 	core:hasFunction data:Mazak-br-function ;
+	core:measuresAtSomeTime
+		data:Mazak-br-angle ,
+		data:Mazak-br-angle-actual
+		;
 	core:prescribedBy data:Mazak-br-spec ;
 	.
 
@@ -67,6 +81,14 @@ data:Mazak-br-Bmotor
 data:Mazak-br-Bmotor-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Bmotor"^^xs:string ;
+	.
+
+data:Mazak-br-angle
+	a qp:Angle ;
+	.
+
+data:Mazak-br-angle-actual
+	a qp:Angle ;
 	.
 
 data:Mazak-br-function
@@ -114,9 +136,14 @@ data:Mazak-br-spec-TORQUE-Minimum
 
 data:Mazak-c
 	a ex:RotaryMotionSystem ;
+	ex:joinedTo data:Mazak-zaxis ;
 	obo:BFO_0000115 data:Mazak-c-C2motor ;
 	core:denotedBy data:Mazak-c-name ;
 	core:hasFunction data:Mazak-c-function ;
+	core:measuresAtSomeTime
+		data:Mazak-c-rotary_velocity-actual ,
+		data:Mazak-c-temperature
+		;
 	core:prescribedBy data:Mazak-c-spec ;
 	.
 
@@ -139,6 +166,10 @@ data:Mazak-c-name
 	core:hasSimpleExpressionValue "C1"^^xs:string ;
 	.
 
+data:Mazak-c-rotary_velocity-actual
+	a qp:Speed ;
+	.
+
 data:Mazak-c-spec
 	a core:DesignSpecification ;
 	core:hasValueExpressionAtAllTimes
@@ -159,11 +190,24 @@ data:Mazak-c-spec-VELOCITY-Minimum
 	core:hasSimpleExpressionValue "0"^^xs:string ;
 	.
 
+data:Mazak-c-temperature
+	a qp:Temperature ;
+	.
+
 data:Mazak-c2
 	a ex:RotaryMotionSystem ;
+	ex:joinedTo
+		data:Mazak-table ,
+		data:Mazak-trundle
+		;
 	obo:BFO_0000115 data:Mazak-c2-Cmotor ;
 	core:denotedBy data:Mazak-c2-name ;
 	core:hasFunction data:Mazak-c2-function ;
+	core:measuresAtSomeTime
+		data:Mazak-c2-angle ,
+		data:Mazak-c2-angle-actual ,
+		data:Mazak-c2-temperature
+		;
 	core:prescribedBy data:Mazak-c2-spec ;
 	.
 
@@ -175,6 +219,14 @@ data:Mazak-c2-Cmotor
 data:Mazak-c2-Cmotor-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Cmotor"^^xs:string ;
+	.
+
+data:Mazak-c2-angle
+	a qp:Angle ;
+	.
+
+data:Mazak-c2-angle-actual
+	a qp:Angle ;
 	.
 
 data:Mazak-c2-function
@@ -220,6 +272,10 @@ data:Mazak-c2-spec-TORQUE-Minimum
 	core:hasSimpleExpressionValue "0"^^xs:string ;
 	.
 
+data:Mazak-c2-temperature
+	a qp:Temperature ;
+	.
+
 data:Mazak-capability
 	a ex:TurningCapability ;
 	.
@@ -248,11 +304,16 @@ data:Mazak-cont-path1-name
 data:Mazak-coolant
 	a obo:BFO_0000030 ;
 	core:denotedBy data:Mazak-coolant-name ;
+	core:measuresAtSomeTime data:Mazak-coolant-temperature ;
 	.
 
 data:Mazak-coolant-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "coolant"^^xs:string ;
+	.
+
+data:Mazak-coolant-temperature
+	a qp:Temperature ;
 	.
 
 data:Mazak-door1
@@ -276,13 +337,18 @@ data:Mazak-elec-name
 	.
 
 data:Mazak-enclosurem
-	a obo:BFO_0000030 ;
+	a ex:Structure ;
 	core:denotedBy data:Mazak-enclosurem-name ;
+	core:measuresAtSomeTime data:Mazak-enclosurem-temperature ;
 	.
 
 data:Mazak-enclosurem-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "enclosure"^^xs:string ;
+	.
+
+data:Mazak-enclosurem-temperature
+	a qp:Temperature ;
 	.
 
 data:Mazak-function
@@ -355,8 +421,9 @@ data:Mazak-procstock-name
 	.
 
 data:Mazak-room
-	a obo:BFO_0000030 ;
+	a ex:Room ;
 	core:denotedBy data:Mazak-room-name ;
+	core:measuresAtSomeTime data:Mazak-room-temperature ;
 	.
 
 data:Mazak-room-name
@@ -364,14 +431,47 @@ data:Mazak-room-name
 	core:hasSimpleExpressionValue "environmental"^^xs:string ;
 	.
 
+data:Mazak-room-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-table
+	a ex:Link ;
+	core:denotedBy data:Mazak-table-name ;
+	.
+
+data:Mazak-table-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "TABLE"^^xs:string ;
+	.
+
+data:Mazak-trundle
+	a ex:Link ;
+	core:denotedBy data:Mazak-trundle-name ;
+	.
+
+data:Mazak-trundle-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "TRUNDLE"^^xs:string ;
+	.
+
 data:Mazak-x
 	a ex:LinearMotionSystem ;
+	ex:joinedTo
+		data:Mazak-enclosurem ,
+		data:Mazak-xaxism
+		;
 	obo:BFO_0000115
 		data:Mazak-x-Xballscrew ,
 		data:Mazak-x-Xmotor
 		;
 	core:denotedBy data:Mazak-x-name ;
 	core:hasFunction data:Mazak-x-function ;
+	core:measuresAtSomeTime
+		data:Mazak-x-position ,
+		data:Mazak-x-position-actual ,
+		data:Mazak-x-temperature
+		;
 	core:prescribedBy data:Mazak-x-spec ;
 	.
 
@@ -402,6 +502,14 @@ data:Mazak-x-function
 data:Mazak-x-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "X"^^xs:string ;
+	.
+
+data:Mazak-x-position
+	a qp:Displacement ;
+	.
+
+data:Mazak-x-position-actual
+	a qp:Displacement ;
 	.
 
 data:Mazak-x-spec
@@ -459,14 +567,37 @@ data:Mazak-x-spec-VELOCITY-RAPID-Minimum
 	core:hasSimpleExpressionValue "1"^^xs:string ;
 	.
 
+data:Mazak-x-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-xaxism
+	a ex:Link ;
+	core:denotedBy data:Mazak-xaxism-name ;
+	.
+
+data:Mazak-xaxism-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "X_AXIS"^^xs:string ;
+	.
+
 data:Mazak-y
 	a ex:LinearMotionSystem ;
+	ex:joinedTo
+		data:Mazak-xaxism ,
+		data:Mazak-yaxism
+		;
 	obo:BFO_0000115
 		data:Mazak-y-Yballscrew ,
 		data:Mazak-y-Ymotor
 		;
 	core:denotedBy data:Mazak-y-name ;
 	core:hasFunction data:Mazak-y-function ;
+	core:measuresAtSomeTime
+		data:Mazak-y-position ,
+		data:Mazak-y-position-actual ,
+		data:Mazak-y-temperature
+		;
 	core:prescribedBy data:Mazak-y-spec ;
 	.
 
@@ -497,6 +628,14 @@ data:Mazak-y-function
 data:Mazak-y-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Y"^^xs:string ;
+	.
+
+data:Mazak-y-position
+	a qp:Displacement ;
+	.
+
+data:Mazak-y-position-actual
+	a qp:Displacement ;
 	.
 
 data:Mazak-y-spec
@@ -554,14 +693,37 @@ data:Mazak-y-spec-VELOCITY-RAPID-Minimum
 	core:hasSimpleExpressionValue "1"^^xs:string ;
 	.
 
+data:Mazak-y-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-yaxism
+	a ex:Link ;
+	core:denotedBy data:Mazak-yaxism-name ;
+	.
+
+data:Mazak-yaxism-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Y_AXIS"^^xs:string ;
+	.
+
 data:Mazak-z
 	a ex:LinearMotionSystem ;
+	ex:joinedTo
+		data:Mazak-yaxism ,
+		data:Mazak-zaxis
+		;
 	obo:BFO_0000115
 		data:Mazak-z-Zballscrew ,
 		data:Mazak-z-Zmotor
 		;
 	core:denotedBy data:Mazak-z-name ;
 	core:hasFunction data:Mazak-z-function ;
+	core:measuresAtSomeTime
+		data:Mazak-z-position ,
+		data:Mazak-z-position-actual ,
+		data:Mazak-z-temperature
+		;
 	core:prescribedBy data:Mazak-z-spec ;
 	.
 
@@ -592,6 +754,14 @@ data:Mazak-z-function
 data:Mazak-z-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Z"^^xs:string ;
+	.
+
+data:Mazak-z-position
+	a qp:Displacement ;
+	.
+
+data:Mazak-z-position-actual
+	a qp:Displacement ;
 	.
 
 data:Mazak-z-spec
@@ -649,6 +819,20 @@ data:Mazak-z-spec-VELOCITY-RAPID-Minimum
 	core:hasSimpleExpressionValue "1"^^xs:string ;
 	.
 
+data:Mazak-z-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-zaxis
+	a ex:Link ;
+	core:denotedBy data:Mazak-zaxis-name ;
+	.
+
+data:Mazak-zaxis-name
+	a core:DesignativeInformationContentEntity ;
+	core:hasSimpleExpressionValue "Z_AXIS"^^xs:string ;
+	.
+
 ex:Ballscrew
 	a owl:Class ;
 	rdfs:subClassOf obo:BFO_0000030 ;
@@ -685,6 +869,12 @@ ex:ElectricalSystem
 	rdfs:label "electrical system"@en-US ;
 	.
 
+ex:Enclosure
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000029 ;
+	rdfs:label "enclosure"@en-US ;
+	.
+
 ex:HydraulicSystem
 	a owl:Class ;
 	rdfs:subClassOf core:EngineeredSystem ;
@@ -695,6 +885,12 @@ ex:LinearMotionSystem
 	a owl:Class ;
 	rdfs:subClassOf ex:MotionSystem ;
 	rdfs:label "linear motion system"@en-US ;
+	.
+
+ex:Link
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "link"@en-US ;
 	.
 
 ex:LubricationSystem
@@ -757,10 +953,22 @@ ex:RevoluteMotionCapability
 	rdfs:label "revolute motion capability"@en-US ;
 	.
 
+ex:Room
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "room"@en-US ;
+	.
+
 ex:RotaryMotionSystem
 	a owl:Class ;
 	rdfs:subClassOf ex:MotionSystem ;
 	rdfs:label "rotary motion system"@en-US ;
+	.
+
+ex:Sensor
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "sensor"@en-US ;
 	.
 
 ex:Stock
@@ -769,10 +977,26 @@ ex:Stock
 	rdfs:label "stock"@en-US ;
 	.
 
+ex:Structure
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	rdfs:label "enclosure"@en-US ;
+	.
+
 ex:TurningCapability
 	a owl:Class ;
 	rdfs:subClassOf core:Capability ;
 	rdfs:label "turning capability"@en-US ;
+	.
+
+ex:joinedTo
+	a
+		owl:ObjectProperty ,
+		owl:SymmetricProperty
+		;
+	rdfs:label "joined to"@en-US ;
+	rdfs:domain obo:BFO_0000040 ;
+	rdfs:range obo:BFO_0000040 ;
 	.
 
 units:DEG
