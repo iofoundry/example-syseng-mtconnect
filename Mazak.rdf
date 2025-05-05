@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
+	<!ENTITY cmns-dsg "https://www.omg.org/spec/Commons/Designators/">
 	<!ENTITY core "https://spec.industrialontologies.org/ontology/core/Core/">
 	<!ENTITY data "http://example.com/data/">
 	<!ENTITY ex "http://example.com/ontology/">
@@ -12,6 +13,7 @@
 	<!ENTITY xs "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF
+	xmlns:cmns-dsg="https://www.omg.org/spec/Commons/Designators/"
 	xmlns:core="https://spec.industrialontologies.org/ontology/core/Core/"
 	xmlns:data="http://example.com/data/"
 	xmlns:ex="http://example.com/ontology/"
@@ -51,29 +53,29 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-yaxism"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-zaxis"/>
-		<core:denotedBy rdf:resource="&data;Mazak-name"/>
 		<core:hasCapability rdf:resource="&data;Mazak-capability"/>
 		<core:hasFunction rdf:resource="&data;Mazak-function"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-name"/>
 	</ex:Machine>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-br">
 		<ex:joinedTo rdf:resource="&data;Mazak-enclosurem"/>
 		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-br-Bmotor"/>
-		<core:denotedBy rdf:resource="&data;Mazak-br-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-br-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-br-angle"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-br-angle-actual"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-br-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-br-name"/>
 	</ex:RotaryMotionSystem>
 	
 	<ex:Motor rdf:about="&data;Mazak-br-Bmotor">
-		<core:denotedBy rdf:resource="&data;Mazak-br-Bmotor-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-br-Bmotor-name"/>
 	</ex:Motor>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-br-Bmotor-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-br-Bmotor-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Bmotor</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Angle rdf:about="&data;Mazak-br-angle">
 	</qp:Angle>
@@ -84,9 +86,9 @@
 	<ex:RevoluteMotionCapability rdf:about="&data;Mazak-br-function">
 	</ex:RevoluteMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-br-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-br-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">B</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<core:DesignSpecification rdf:about="&data;Mazak-br-spec">
 		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-br-spec-ANGLE-Maximum"/>
@@ -118,27 +120,27 @@
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-c">
 		<ex:joinedTo rdf:resource="&data;Mazak-zaxis"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-c-C2motor"/>
-		<core:denotedBy rdf:resource="&data;Mazak-c-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-c-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-rotary_velocity-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-c-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c-name"/>
 	</ex:RotaryMotionSystem>
 	
 	<ex:Motor rdf:about="&data;Mazak-c-C2motor">
-		<core:denotedBy rdf:resource="&data;Mazak-c-C2motor-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c-C2motor-name"/>
 	</ex:Motor>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-c-C2motor-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-c-C2motor-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C2motor</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:ContinuousMotionCapability rdf:about="&data;Mazak-c-function">
 	</ex:ContinuousMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-c-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-c-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Speed rdf:about="&data;Mazak-c-rotary_velocity-actual">
 	</qp:Speed>
@@ -165,21 +167,21 @@
 		<ex:joinedTo rdf:resource="&data;Mazak-table"/>
 		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-c2-Cmotor"/>
-		<core:denotedBy rdf:resource="&data;Mazak-c2-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-c2-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c2-angle"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c2-angle-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c2-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-c2-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c2-name"/>
 	</ex:RotaryMotionSystem>
 	
 	<ex:Motor rdf:about="&data;Mazak-c2-Cmotor">
-		<core:denotedBy rdf:resource="&data;Mazak-c2-Cmotor-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c2-Cmotor-name"/>
 	</ex:Motor>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-c2-Cmotor-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-c2-Cmotor-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Cmotor</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Angle rdf:about="&data;Mazak-c2-angle">
 	</qp:Angle>
@@ -190,9 +192,9 @@
 	<ex:RevoluteMotionCapability rdf:about="&data;Mazak-c2-function">
 	</ex:RevoluteMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-c2-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-c2-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C2</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<core:DesignSpecification rdf:about="&data;Mazak-c2-spec">
 		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c2-spec-ANGLE-Maximum"/>
@@ -229,57 +231,57 @@
 	
 	<ex:ControlSystem rdf:about="&data;Mazak-cont">
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-cont-path1"/>
-		<core:denotedBy rdf:resource="&data;Mazak-cont-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-cont-name"/>
 	</ex:ControlSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-cont-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-cont-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">controller</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:ControlSystemPath rdf:about="&data;Mazak-cont-path1">
-		<core:denotedBy rdf:resource="&data;Mazak-cont-path1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-cont-path1-name"/>
 	</ex:ControlSystemPath>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-cont-path1-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-cont-path1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">path</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;Mazak-coolant">
-		<core:denotedBy rdf:resource="&data;Mazak-coolant-name"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-coolant-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-coolant-name"/>
 	</obo:BFO_0000030>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-coolant-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-coolant-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">coolant</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Temperature rdf:about="&data;Mazak-coolant-temperature">
 	</qp:Temperature>
 	
 	<obo:BFO_0000030 rdf:about="&data;Mazak-door1">
-		<core:denotedBy rdf:resource="&data;Mazak-door1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-door1-name"/>
 	</obo:BFO_0000030>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-door1-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-door1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">door</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:ElectricalSystem rdf:about="&data;Mazak-elec">
-		<core:denotedBy rdf:resource="&data;Mazak-elec-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-elec-name"/>
 	</ex:ElectricalSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-elec-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-elec-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">electric</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;Mazak-enclosurem">
-		<core:denotedBy rdf:resource="&data;Mazak-enclosurem-name"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-enclosurem-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-enclosurem-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-enclosurem-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-enclosurem-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">enclosure</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Temperature rdf:about="&data;Mazak-enclosurem-temperature">
 	</qp:Temperature>
@@ -288,120 +290,120 @@
 	</ex:MillingCapability>
 	
 	<ex:HydraulicSystem rdf:about="&data;Mazak-hydraulic">
-		<core:denotedBy rdf:resource="&data;Mazak-hydraulic-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-hydraulic-name"/>
 	</ex:HydraulicSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-hydraulic-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-hydraulic-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">hydraulic</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:LubricationSystem rdf:about="&data;Mazak-lubrication">
-		<core:denotedBy rdf:resource="&data;Mazak-lubrication-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-lubrication-name"/>
 	</ex:LubricationSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-lubrication-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-lubrication-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">lubrication</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Mazak</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Part rdf:about="&data;Mazak-partocc">
-		<core:denotedBy rdf:resource="&data;Mazak-partocc-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-partocc-name"/>
 	</ex:Part>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-partocc-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-partocc-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">partocc</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<core:Person rdf:about="&data;Mazak-personnelm">
-		<core:denotedBy rdf:resource="&data;Mazak-personnelm-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-personnelm-name"/>
 	</core:Person>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-personnelm-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-personnelm-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">personnel</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:PneumaticSystem rdf:about="&data;Mazak-pneumatic">
-		<core:denotedBy rdf:resource="&data;Mazak-pneumatic-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-pneumatic-name"/>
 	</ex:PneumaticSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-pneumatic-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-pneumatic-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">pneumatic</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Stock rdf:about="&data;Mazak-procstock">
-		<core:denotedBy rdf:resource="&data;Mazak-procstock-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-procstock-name"/>
 	</ex:Stock>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-procstock-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-procstock-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">stock</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Room rdf:about="&data;Mazak-room">
-		<core:denotedBy rdf:resource="&data;Mazak-room-name"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-room-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-room-name"/>
 	</ex:Room>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-room-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-room-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">environmental</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Temperature rdf:about="&data;Mazak-room-temperature">
 	</qp:Temperature>
 	
 	<ex:Structure rdf:about="&data;Mazak-table">
-		<core:denotedBy rdf:resource="&data;Mazak-table-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-table-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-table-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-table-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">TABLE</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;Mazak-trundle">
-		<core:denotedBy rdf:resource="&data;Mazak-trundle-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-trundle-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-trundle-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-trundle-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">TRUNDLE</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:LinearMotionSystem rdf:about="&data;Mazak-x">
 		<ex:joinedTo rdf:resource="&data;Mazak-enclosurem"/>
 		<ex:joinedTo rdf:resource="&data;Mazak-xaxism"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xmotor"/>
-		<core:denotedBy rdf:resource="&data;Mazak-x-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-x-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-x-position"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-x-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-x-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-x-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-x-name"/>
 	</ex:LinearMotionSystem>
 	
 	<ex:Ballscrew rdf:about="&data;Mazak-x-Xballscrew">
-		<core:denotedBy rdf:resource="&data;Mazak-x-Xballscrew-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-x-Xballscrew-name"/>
 	</ex:Ballscrew>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-x-Xballscrew-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-x-Xballscrew-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Xballscrew</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Motor rdf:about="&data;Mazak-x-Xmotor">
-		<core:denotedBy rdf:resource="&data;Mazak-x-Xmotor-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-x-Xmotor-name"/>
 	</ex:Motor>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-x-Xmotor-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-x-Xmotor-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Xmotor</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:PrismaticMotionCapability rdf:about="&data;Mazak-x-function">
 	</ex:PrismaticMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-x-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-x-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">X</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;Mazak-x-position">
 	</qp:Displacement>
@@ -458,48 +460,48 @@
 	</qp:Temperature>
 	
 	<ex:Structure rdf:about="&data;Mazak-xaxism">
-		<core:denotedBy rdf:resource="&data;Mazak-xaxism-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-xaxism-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-xaxism-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-xaxism-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">X_AXIS</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:LinearMotionSystem rdf:about="&data;Mazak-y">
 		<ex:joinedTo rdf:resource="&data;Mazak-xaxism"/>
 		<ex:joinedTo rdf:resource="&data;Mazak-yaxism"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-y-Yballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-y-Ymotor"/>
-		<core:denotedBy rdf:resource="&data;Mazak-y-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-y-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-y-position"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-y-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-y-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-y-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-y-name"/>
 	</ex:LinearMotionSystem>
 	
 	<ex:Ballscrew rdf:about="&data;Mazak-y-Yballscrew">
-		<core:denotedBy rdf:resource="&data;Mazak-y-Yballscrew-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-y-Yballscrew-name"/>
 	</ex:Ballscrew>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-y-Yballscrew-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-y-Yballscrew-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Yballscrew</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Motor rdf:about="&data;Mazak-y-Ymotor">
-		<core:denotedBy rdf:resource="&data;Mazak-y-Ymotor-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-y-Ymotor-name"/>
 	</ex:Motor>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-y-Ymotor-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-y-Ymotor-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Ymotor</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:PrismaticMotionCapability rdf:about="&data;Mazak-y-function">
 	</ex:PrismaticMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-y-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-y-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Y</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;Mazak-y-position">
 	</qp:Displacement>
@@ -556,48 +558,48 @@
 	</qp:Temperature>
 	
 	<ex:Structure rdf:about="&data;Mazak-yaxism">
-		<core:denotedBy rdf:resource="&data;Mazak-yaxism-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-yaxism-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-yaxism-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-yaxism-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Y_AXIS</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:LinearMotionSystem rdf:about="&data;Mazak-z">
 		<ex:joinedTo rdf:resource="&data;Mazak-yaxism"/>
 		<ex:joinedTo rdf:resource="&data;Mazak-zaxis"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zmotor"/>
-		<core:denotedBy rdf:resource="&data;Mazak-z-name"/>
 		<core:hasFunction rdf:resource="&data;Mazak-z-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-position"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-z-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-z-name"/>
 	</ex:LinearMotionSystem>
 	
 	<ex:Ballscrew rdf:about="&data;Mazak-z-Zballscrew">
-		<core:denotedBy rdf:resource="&data;Mazak-z-Zballscrew-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-z-Zballscrew-name"/>
 	</ex:Ballscrew>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-z-Zballscrew-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-z-Zballscrew-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Zballscrew</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Motor rdf:about="&data;Mazak-z-Zmotor">
-		<core:denotedBy rdf:resource="&data;Mazak-z-Zmotor-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-z-Zmotor-name"/>
 	</ex:Motor>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-z-Zmotor-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-z-Zmotor-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Zmotor</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:PrismaticMotionCapability rdf:about="&data;Mazak-z-function">
 	</ex:PrismaticMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-z-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-z-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;Mazak-z-position">
 	</qp:Displacement>
@@ -654,11 +656,11 @@
 	</qp:Temperature>
 	
 	<ex:Structure rdf:about="&data;Mazak-zaxis">
-		<core:denotedBy rdf:resource="&data;Mazak-zaxis-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-zaxis-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-zaxis-name">
+	<cmns-dsg:Name rdf:about="&data;Mazak-zaxis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z_AXIS</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 
 </rdf:RDF>

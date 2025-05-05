@@ -7,6 +7,7 @@ require 'Core'
 require 'Qualities'
 require 'QualitiesPhysical'
 require 'AnnotationVocabulary'
+require 'Designators'
 require 'rdf/rdfxml'
 require 'rdf/turtle'
 
@@ -243,7 +244,8 @@ Prefixes = {
   rdfs: RDF::RDFS.to_uri,
   rdfv: RDF::RDFV.to_uri,
   owl: RDF::OWL.to_uri,
-  qp: IOF::QualitiesPhysical.to_uri
+  qp: IOF::QualitiesPhysical.to_uri,
+  'cmns-dsg': OMG::Designators.to_uri
 }
 
 Units = {

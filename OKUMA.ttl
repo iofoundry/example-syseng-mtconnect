@@ -1,5 +1,6 @@
 # imports: http://example.com/ontology/
 
+@prefix cmns-dsg: <https://www.omg.org/spec/Commons/Designators/> .
 @prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
 @prefix data: <http://example.com/data/> .
 @prefix ex: <http://example.com/ontology/> .
@@ -49,98 +50,98 @@ data:OKUMA.123456
 		data:OKUMA.123456-z1_axis ,
 		data:OKUMA.123456-z4_axis
 		;
-	core:denotedBy data:OKUMA.123456-name ;
 	core:hasCapability data:OKUMA.123456-capability ;
 	core:hasFunction data:OKUMA.123456-function ;
+	cmns-dsg:hasName data:OKUMA.123456-name ;
 	.
 
 data:OKUMA.123456-LBarFeederSystem1
 	a obo:BFO_0000030 ;
-	core:denotedBy data:OKUMA.123456-LBarFeederSystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LBarFeederSystem1-name ;
 	.
 
 data:OKUMA.123456-LBarFeederSystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "BarFeederSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LCoolantSystem1
 	a obo:BFO_0000030 ;
-	core:denotedBy data:OKUMA.123456-LCoolantSystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LCoolantSystem1-name ;
 	.
 
 data:OKUMA.123456-LCoolantSystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "CoolantSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LElectricSystem1
 	a ex:ElectricalSystem ;
-	core:denotedBy data:OKUMA.123456-LElectricSystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LElectricSystem1-name ;
 	.
 
 data:OKUMA.123456-LElectricSystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "ElectricSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LHydraulicSystem1
 	a ex:HydraulicSystem ;
-	core:denotedBy data:OKUMA.123456-LHydraulicSystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LHydraulicSystem1-name ;
 	.
 
 data:OKUMA.123456-LHydraulicSystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "HydraulicSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LLoaderSystem1
 	a obo:BFO_0000030 ;
-	core:denotedBy data:OKUMA.123456-LLoaderSystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LLoaderSystem1-name ;
 	.
 
 data:OKUMA.123456-LLoaderSystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "LoaderSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LLubricationSystem1
 	a ex:LubricationSystem ;
-	core:denotedBy data:OKUMA.123456-LLubricationSystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LLubricationSystem1-name ;
 	.
 
 data:OKUMA.123456-LLubricationSystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "LubricationSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LPneumaticSystem1
 	a ex:PneumaticSystem ;
-	core:denotedBy data:OKUMA.123456-LPneumaticSystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LPneumaticSystem1-name ;
 	.
 
 data:OKUMA.123456-LPneumaticSystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "PneumaticSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LToolingDeliverySystem1
 	a obo:BFO_0000030 ;
-	core:denotedBy data:OKUMA.123456-LToolingDeliverySystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LToolingDeliverySystem1-name ;
 	.
 
 data:OKUMA.123456-LToolingDeliverySystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "ToolingDeliverySystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LWasteDisposalSystem1
 	a obo:BFO_0000030 ;
-	core:denotedBy data:OKUMA.123456-LWasteDisposalSystem1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-LWasteDisposalSystem1-name ;
 	.
 
 data:OKUMA.123456-LWasteDisposalSystem1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "WasteDisposalSystem1"^^xs:string ;
 	.
 
@@ -150,10 +151,10 @@ data:OKUMA.123456-LYI1
 		data:OKUMA.123456-x_axis ,
 		data:OKUMA.123456-y_axis
 		;
-	core:denotedBy data:OKUMA.123456-LYI1-name ;
 	core:hasFunction data:OKUMA.123456-LYI1-function ;
 	core:measuresAtSomeTime data:OKUMA.123456-LYI1-position-actual ;
 	core:prescribedBy data:OKUMA.123456-LYI1-spec ;
+	cmns-dsg:hasName data:OKUMA.123456-LYI1-name ;
 	.
 
 data:OKUMA.123456-LYI1-function
@@ -161,7 +162,7 @@ data:OKUMA.123456-LYI1-function
 	.
 
 data:OKUMA.123456-LYI1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Y"^^xs:string ;
 	.
 
@@ -230,9 +231,9 @@ data:OKUMA.123456-Lb1
 		data:OKUMA.123456-b_axis ,
 		data:OKUMA.123456-y_axis
 		;
-	core:denotedBy data:OKUMA.123456-Lb1-name ;
 	core:hasFunction data:OKUMA.123456-Lb1-function ;
 	core:measuresAtSomeTime data:OKUMA.123456-Lb1-angle-actual ;
+	cmns-dsg:hasName data:OKUMA.123456-Lb1-name ;
 	.
 
 data:OKUMA.123456-Lb1-angle-actual
@@ -244,19 +245,19 @@ data:OKUMA.123456-Lb1-function
 	.
 
 data:OKUMA.123456-Lb1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "B"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lc1
 	a ex:RotaryMotionSystem ;
 	ex:joinedTo data:OKUMA.123456-enclosure ;
-	core:denotedBy data:OKUMA.123456-Lc1-name ;
 	core:hasFunction data:OKUMA.123456-Lc1-function ;
 	core:measuresAtSomeTime
 		data:OKUMA.123456-Lc1-rotary_velocity-actual ,
 		data:OKUMA.123456-Lc1-rotary_velocity-programmed
 		;
+	cmns-dsg:hasName data:OKUMA.123456-Lc1-name ;
 	.
 
 data:OKUMA.123456-Lc1-function
@@ -264,7 +265,7 @@ data:OKUMA.123456-Lc1-function
 	.
 
 data:OKUMA.123456-Lc1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "C1"^^xs:string ;
 	.
 
@@ -282,12 +283,12 @@ data:OKUMA.123456-Lc2
 		data:OKUMA.123456-c2_axis ,
 		data:OKUMA.123456-z4_axis
 		;
-	core:denotedBy data:OKUMA.123456-Lc2-name ;
 	core:hasFunction data:OKUMA.123456-Lc2-function ;
 	core:measuresAtSomeTime
 		data:OKUMA.123456-Lc2-rotary_velocity-actual ,
 		data:OKUMA.123456-Lc2-rotary_velocity-programmed
 		;
+	cmns-dsg:hasName data:OKUMA.123456-Lc2-name ;
 	.
 
 data:OKUMA.123456-Lc2-function
@@ -295,7 +296,7 @@ data:OKUMA.123456-Lc2-function
 	.
 
 data:OKUMA.123456-Lc2-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "C2"^^xs:string ;
 	.
 
@@ -313,9 +314,9 @@ data:OKUMA.123456-Lc3
 		data:OKUMA.123456-c2_axis ,
 		data:OKUMA.123456-z4_axis
 		;
-	core:denotedBy data:OKUMA.123456-Lc3-name ;
 	core:hasFunction data:OKUMA.123456-Lc3-function ;
 	core:measuresAtSomeTime data:OKUMA.123456-Lc3-angle-actual ;
+	cmns-dsg:hasName data:OKUMA.123456-Lc3-name ;
 	.
 
 data:OKUMA.123456-Lc3-angle-actual
@@ -327,21 +328,21 @@ data:OKUMA.123456-Lc3-function
 	.
 
 data:OKUMA.123456-Lc3-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "C3"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lc6
 	a ex:RotaryMotionSystem ;
-	core:denotedBy data:OKUMA.123456-Lc6-name ;
 	core:measuresAtSomeTime
 		data:OKUMA.123456-Lc6-rotary_velocity-actual ,
 		data:OKUMA.123456-Lc6-rotary_velocity-programmed
 		;
+	cmns-dsg:hasName data:OKUMA.123456-Lc6-name ;
 	.
 
 data:OKUMA.123456-Lc6-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "C6"^^xs:string ;
 	.
 
@@ -356,21 +357,21 @@ data:OKUMA.123456-Lc6-rotary_velocity-programmed
 data:OKUMA.123456-Lct1
 	a ex:ControlSystem ;
 	obo:BFO_0000115 data:OKUMA.123456-Lct1-Lp1 ;
-	core:denotedBy data:OKUMA.123456-Lct1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-Lct1-name ;
 	.
 
 data:OKUMA.123456-Lct1-Lp1
 	a ex:ControlSystemPath ;
-	core:denotedBy data:OKUMA.123456-Lct1-Lp1-name ;
+	cmns-dsg:hasName data:OKUMA.123456-Lct1-Lp1-name ;
 	.
 
 data:OKUMA.123456-Lct1-Lp1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "path"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lct1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Controller"^^xs:string ;
 	.
 
@@ -380,10 +381,10 @@ data:OKUMA.123456-Lx1
 		data:OKUMA.123456-x_axis ,
 		data:OKUMA.123456-z1_axis
 		;
-	core:denotedBy data:OKUMA.123456-Lx1-name ;
 	core:hasFunction data:OKUMA.123456-Lx1-function ;
 	core:measuresAtSomeTime data:OKUMA.123456-Lx1-position-actual ;
 	core:prescribedBy data:OKUMA.123456-Lx1-spec ;
+	cmns-dsg:hasName data:OKUMA.123456-Lx1-name ;
 	.
 
 data:OKUMA.123456-Lx1-function
@@ -391,7 +392,7 @@ data:OKUMA.123456-Lx1-function
 	.
 
 data:OKUMA.123456-Lx1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "X"^^xs:string ;
 	.
 
@@ -460,10 +461,10 @@ data:OKUMA.123456-Lz1
 		data:OKUMA.123456-enclosure ,
 		data:OKUMA.123456-z1_axis
 		;
-	core:denotedBy data:OKUMA.123456-Lz1-name ;
 	core:hasFunction data:OKUMA.123456-Lz1-function ;
 	core:measuresAtSomeTime data:OKUMA.123456-Lz1-position-actual ;
 	core:prescribedBy data:OKUMA.123456-Lz1-spec ;
+	cmns-dsg:hasName data:OKUMA.123456-Lz1-name ;
 	.
 
 data:OKUMA.123456-Lz1-function
@@ -471,7 +472,7 @@ data:OKUMA.123456-Lz1-function
 	.
 
 data:OKUMA.123456-Lz1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Z1"^^xs:string ;
 	.
 
@@ -540,10 +541,10 @@ data:OKUMA.123456-Lz4
 		data:OKUMA.123456-enclosure ,
 		data:OKUMA.123456-z4_axis
 		;
-	core:denotedBy data:OKUMA.123456-Lz4-name ;
 	core:hasFunction data:OKUMA.123456-Lz4-function ;
 	core:measuresAtSomeTime data:OKUMA.123456-Lz4-position-actual ;
 	core:prescribedBy data:OKUMA.123456-Lz4-spec ;
+	cmns-dsg:hasName data:OKUMA.123456-Lz4-name ;
 	.
 
 data:OKUMA.123456-Lz4-function
@@ -551,7 +552,7 @@ data:OKUMA.123456-Lz4-function
 	.
 
 data:OKUMA.123456-Lz4-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Z4"^^xs:string ;
 	.
 
@@ -616,31 +617,31 @@ data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum
 
 data:OKUMA.123456-b_axis
 	a ex:Structure ;
-	core:denotedBy data:OKUMA.123456-b_axis-name ;
+	cmns-dsg:hasName data:OKUMA.123456-b_axis-name ;
 	.
 
 data:OKUMA.123456-b_axis-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "b_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-c1_axis
 	a ex:Structure ;
-	core:denotedBy data:OKUMA.123456-c1_axis-name ;
+	cmns-dsg:hasName data:OKUMA.123456-c1_axis-name ;
 	.
 
 data:OKUMA.123456-c1_axis-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "c1_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-c2_axis
 	a ex:Structure ;
-	core:denotedBy data:OKUMA.123456-c2_axis-name ;
+	cmns-dsg:hasName data:OKUMA.123456-c2_axis-name ;
 	.
 
 data:OKUMA.123456-c2_axis-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "c2_axis"^^xs:string ;
 	.
 
@@ -650,12 +651,12 @@ data:OKUMA.123456-capability
 
 data:OKUMA.123456-enclosure
 	a ex:Structure ;
-	core:denotedBy data:OKUMA.123456-enclosure-name ;
 	core:measuresAtSomeTime data:OKUMA.123456-enclosure-temperature ;
+	cmns-dsg:hasName data:OKUMA.123456-enclosure-name ;
 	.
 
 data:OKUMA.123456-enclosure-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "enclosure"^^xs:string ;
 	.
 
@@ -668,57 +669,57 @@ data:OKUMA.123456-function
 	.
 
 data:OKUMA.123456-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "OKUMA"^^xs:string ;
 	.
 
 data:OKUMA.123456-personnel
 	a core:Person ;
-	core:denotedBy data:OKUMA.123456-personnel-name ;
+	cmns-dsg:hasName data:OKUMA.123456-personnel-name ;
 	.
 
 data:OKUMA.123456-personnel-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "personnel"^^xs:string ;
 	.
 
 data:OKUMA.123456-x_axis
 	a ex:Structure ;
-	core:denotedBy data:OKUMA.123456-x_axis-name ;
+	cmns-dsg:hasName data:OKUMA.123456-x_axis-name ;
 	.
 
 data:OKUMA.123456-x_axis-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "x_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-y_axis
 	a ex:Structure ;
-	core:denotedBy data:OKUMA.123456-y_axis-name ;
+	cmns-dsg:hasName data:OKUMA.123456-y_axis-name ;
 	.
 
 data:OKUMA.123456-y_axis-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "y_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-z1_axis
 	a ex:Structure ;
-	core:denotedBy data:OKUMA.123456-z1_axis-name ;
+	cmns-dsg:hasName data:OKUMA.123456-z1_axis-name ;
 	.
 
 data:OKUMA.123456-z1_axis-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "z1_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-z4_axis
 	a ex:Structure ;
-	core:denotedBy data:OKUMA.123456-z4_axis-name ;
+	cmns-dsg:hasName data:OKUMA.123456-z4_axis-name ;
 	.
 
 data:OKUMA.123456-z4_axis-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "z4_axis"^^xs:string ;
 	.
 

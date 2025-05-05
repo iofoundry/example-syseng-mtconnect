@@ -10,6 +10,7 @@ require 'Core'
 require 'Qualities'
 require 'QualitiesPhysical'
 require 'AnnotationVocabulary'
+require 'Designators'
 require 'example'
 require 'rdf/rdfxml'
 require 'rdf/turtle'
@@ -64,7 +65,7 @@ def add_component(graph, comp, names = [], level = 0)
     graph << [iri, RDF.type, cls]
     graph << [parent, BFO::BFO.has_member_part_at_some_time, iri] if parent
     
-    s = add_instance(graph, iri, sub_iri(names, "name"), IOF::Core.denotedBy, IOF::Core.DesignativeInformationContentEntity)    
+    s = add_instance(graph, iri, sub_iri(names, "name"), OMG::Designators.hasName, OMG::Designators.Name)    
     graph << [s.subject, IOF::Core.hasSimpleExpressionValue, "#{comp['name'] || comp['id']}"]
 
     sp = nil

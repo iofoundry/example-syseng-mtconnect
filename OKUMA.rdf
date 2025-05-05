@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
+	<!ENTITY cmns-dsg "https://www.omg.org/spec/Commons/Designators/">
 	<!ENTITY core "https://spec.industrialontologies.org/ontology/core/Core/">
 	<!ENTITY data "http://example.com/data/">
 	<!ENTITY ex "http://example.com/ontology/">
@@ -12,6 +13,7 @@
 	<!ENTITY xs "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF
+	xmlns:cmns-dsg="https://www.omg.org/spec/Commons/Designators/"
 	xmlns:core="https://spec.industrialontologies.org/ontology/core/Core/"
 	xmlns:data="http://example.com/data/"
 	xmlns:ex="http://example.com/ontology/"
@@ -57,98 +59,98 @@
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-y_axis"/>
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-z1_axis"/>
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-z4_axis"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-name"/>
 		<core:hasCapability rdf:resource="&data;OKUMA.123456-capability"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-function"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-name"/>
 	</ex:Machine>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LBarFeederSystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LBarFeederSystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LBarFeederSystem1-name"/>
 	</obo:BFO_0000030>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LBarFeederSystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LBarFeederSystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">BarFeederSystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LCoolantSystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LCoolantSystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LCoolantSystem1-name"/>
 	</obo:BFO_0000030>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LCoolantSystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LCoolantSystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">CoolantSystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:ElectricalSystem rdf:about="&data;OKUMA.123456-LElectricSystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LElectricSystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LElectricSystem1-name"/>
 	</ex:ElectricalSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LElectricSystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LElectricSystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">ElectricSystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:HydraulicSystem rdf:about="&data;OKUMA.123456-LHydraulicSystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LHydraulicSystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LHydraulicSystem1-name"/>
 	</ex:HydraulicSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LHydraulicSystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LHydraulicSystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">HydraulicSystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LLoaderSystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LLoaderSystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LLoaderSystem1-name"/>
 	</obo:BFO_0000030>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LLoaderSystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LLoaderSystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">LoaderSystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:LubricationSystem rdf:about="&data;OKUMA.123456-LLubricationSystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LLubricationSystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LLubricationSystem1-name"/>
 	</ex:LubricationSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LLubricationSystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LLubricationSystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">LubricationSystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:PneumaticSystem rdf:about="&data;OKUMA.123456-LPneumaticSystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LPneumaticSystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LPneumaticSystem1-name"/>
 	</ex:PneumaticSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LPneumaticSystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LPneumaticSystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">PneumaticSystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LToolingDeliverySystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LToolingDeliverySystem1-name"/>
 	</obo:BFO_0000030>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">ToolingDeliverySystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LWasteDisposalSystem1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LWasteDisposalSystem1-name"/>
 	</obo:BFO_0000030>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">WasteDisposalSystem1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-LYI1">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-x_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-LYI1-name"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-LYI1-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-LYI1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-LYI1-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LYI1-name"/>
 	</ex:LinearMotionSystem>
 	
 	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-LYI1-function">
 	</ex:PrismaticMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-LYI1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LYI1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Y</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;OKUMA.123456-LYI1-position-actual">
 	</qp:Displacement>
@@ -201,9 +203,9 @@
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lb1">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-b_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lb1-name"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lb1-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lb1-angle-actual"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lb1-name"/>
 	</ex:RotaryMotionSystem>
 	
 	<qp:Angle rdf:about="&data;OKUMA.123456-Lb1-angle-actual">
@@ -212,24 +214,24 @@
 	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lb1-function">
 	</ex:RevoluteMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lb1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lb1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">B</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc1">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lc1-name"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc1-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc1-rotary_velocity-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc1-rotary_velocity-programmed"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc1-name"/>
 	</ex:RotaryMotionSystem>
 	
 	<ex:ContinuousMotionCapability rdf:about="&data;OKUMA.123456-Lc1-function">
 	</ex:ContinuousMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lc1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Speed rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-actual">
 	</qp:Speed>
@@ -240,18 +242,18 @@
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc2">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-c2_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lc2-name"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc2-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc2-rotary_velocity-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc2-rotary_velocity-programmed"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc2-name"/>
 	</ex:RotaryMotionSystem>
 	
 	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lc2-function">
 	</ex:RevoluteMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lc2-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc2-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C2</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Speed rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-actual">
 	</qp:Speed>
@@ -262,9 +264,9 @@
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc3">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-c2_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lc3-name"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc3-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc3-angle-actual"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc3-name"/>
 	</ex:RotaryMotionSystem>
 	
 	<qp:Angle rdf:about="&data;OKUMA.123456-Lc3-angle-actual">
@@ -273,19 +275,19 @@
 	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lc3-function">
 	</ex:RevoluteMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lc3-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc3-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C3</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc6">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lc6-name"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc6-rotary_velocity-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc6-rotary_velocity-programmed"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc6-name"/>
 	</ex:RotaryMotionSystem>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lc6-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc6-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C6</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Speed rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-actual">
 	</qp:Speed>
@@ -295,36 +297,36 @@
 	
 	<ex:ControlSystem rdf:about="&data;OKUMA.123456-Lct1">
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lct1-Lp1"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lct1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lct1-name"/>
 	</ex:ControlSystem>
 	
 	<ex:ControlSystemPath rdf:about="&data;OKUMA.123456-Lct1-Lp1">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lct1-Lp1-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lct1-Lp1-name"/>
 	</ex:ControlSystemPath>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lct1-Lp1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lct1-Lp1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">path</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lct1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lct1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Controller</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lx1">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-x_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lx1-name"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lx1-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lx1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lx1-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lx1-name"/>
 	</ex:LinearMotionSystem>
 	
 	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lx1-function">
 	</ex:PrismaticMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lx1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lx1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">X</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;OKUMA.123456-Lx1-position-actual">
 	</qp:Displacement>
@@ -377,18 +379,18 @@
 	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lz1">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lz1-name"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz1-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lz1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz1-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lz1-name"/>
 	</ex:LinearMotionSystem>
 	
 	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lz1-function">
 	</ex:PrismaticMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lz1-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lz1-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z1</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;OKUMA.123456-Lz1-position-actual">
 	</qp:Displacement>
@@ -441,18 +443,18 @@
 	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lz4">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-Lz4-name"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz4-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lz4-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz4-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lz4-name"/>
 	</ex:LinearMotionSystem>
 	
 	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lz4-function">
 	</ex:PrismaticMotionCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-Lz4-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lz4-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z4</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;OKUMA.123456-Lz4-position-actual">
 	</qp:Displacement>
@@ -503,40 +505,40 @@
 	</core:ValueExpression>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-b_axis">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-b_axis-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-b_axis-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-b_axis-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-b_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">b_axis</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-c1_axis">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-c1_axis-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-c1_axis-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-c1_axis-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-c1_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">c1_axis</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-c2_axis">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-c2_axis-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-c2_axis-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-c2_axis-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-c2_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">c2_axis</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:TurningCapability rdf:about="&data;OKUMA.123456-capability">
 	</ex:TurningCapability>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-enclosure">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-enclosure-name"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-enclosure-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-enclosure-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-enclosure-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-enclosure-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">enclosure</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<qp:Temperature rdf:about="&data;OKUMA.123456-enclosure-temperature">
 	</qp:Temperature>
@@ -544,48 +546,48 @@
 	<ex:MillingCapability rdf:about="&data;OKUMA.123456-function">
 	</ex:MillingCapability>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">OKUMA</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<core:Person rdf:about="&data;OKUMA.123456-personnel">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-personnel-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-personnel-name"/>
 	</core:Person>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-personnel-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-personnel-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">personnel</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-x_axis">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-x_axis-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-x_axis-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-x_axis-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-x_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">x_axis</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-y_axis">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-y_axis-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-y_axis-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-y_axis-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-y_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">y_axis</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-z1_axis">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-z1_axis-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-z1_axis-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-z1_axis-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-z1_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">z1_axis</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-z4_axis">
-		<core:denotedBy rdf:resource="&data;OKUMA.123456-z4_axis-name"/>
+		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-z4_axis-name"/>
 	</ex:Structure>
 	
-	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-z4_axis-name">
+	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-z4_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">z4_axis</core:hasSimpleExpressionValue>
-	</core:DesignativeInformationContentEntity>
+	</cmns-dsg:Name>
 
 </rdf:RDF>

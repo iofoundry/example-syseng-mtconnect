@@ -1,5 +1,6 @@
 # imports: http://example.com/ontology/
 
+@prefix cmns-dsg: <https://www.omg.org/spec/Commons/Designators/> .
 @prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
 @prefix data: <http://example.com/data/> .
 @prefix ex: <http://example.com/ontology/> .
@@ -43,9 +44,9 @@ data:Mazak
 		data:Mazak-z ,
 		data:Mazak-zaxis
 		;
-	core:denotedBy data:Mazak-name ;
 	core:hasCapability data:Mazak-capability ;
 	core:hasFunction data:Mazak-function ;
+	cmns-dsg:hasName data:Mazak-name ;
 	.
 
 data:Mazak-br
@@ -55,22 +56,22 @@ data:Mazak-br
 		data:Mazak-trundle
 		;
 	obo:BFO_0000115 data:Mazak-br-Bmotor ;
-	core:denotedBy data:Mazak-br-name ;
 	core:hasFunction data:Mazak-br-function ;
 	core:measuresAtSomeTime
 		data:Mazak-br-angle ,
 		data:Mazak-br-angle-actual
 		;
 	core:prescribedBy data:Mazak-br-spec ;
+	cmns-dsg:hasName data:Mazak-br-name ;
 	.
 
 data:Mazak-br-Bmotor
 	a ex:Motor ;
-	core:denotedBy data:Mazak-br-Bmotor-name ;
+	cmns-dsg:hasName data:Mazak-br-Bmotor-name ;
 	.
 
 data:Mazak-br-Bmotor-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Bmotor"^^xs:string ;
 	.
 
@@ -87,7 +88,7 @@ data:Mazak-br-function
 	.
 
 data:Mazak-br-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "B"^^xs:string ;
 	.
 
@@ -129,22 +130,22 @@ data:Mazak-c
 	a ex:RotaryMotionSystem ;
 	ex:joinedTo data:Mazak-zaxis ;
 	obo:BFO_0000115 data:Mazak-c-C2motor ;
-	core:denotedBy data:Mazak-c-name ;
 	core:hasFunction data:Mazak-c-function ;
 	core:measuresAtSomeTime
 		data:Mazak-c-rotary_velocity-actual ,
 		data:Mazak-c-temperature
 		;
 	core:prescribedBy data:Mazak-c-spec ;
+	cmns-dsg:hasName data:Mazak-c-name ;
 	.
 
 data:Mazak-c-C2motor
 	a ex:Motor ;
-	core:denotedBy data:Mazak-c-C2motor-name ;
+	cmns-dsg:hasName data:Mazak-c-C2motor-name ;
 	.
 
 data:Mazak-c-C2motor-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "C2motor"^^xs:string ;
 	.
 
@@ -153,7 +154,7 @@ data:Mazak-c-function
 	.
 
 data:Mazak-c-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "C1"^^xs:string ;
 	.
 
@@ -192,7 +193,6 @@ data:Mazak-c2
 		data:Mazak-trundle
 		;
 	obo:BFO_0000115 data:Mazak-c2-Cmotor ;
-	core:denotedBy data:Mazak-c2-name ;
 	core:hasFunction data:Mazak-c2-function ;
 	core:measuresAtSomeTime
 		data:Mazak-c2-angle ,
@@ -200,15 +200,16 @@ data:Mazak-c2
 		data:Mazak-c2-temperature
 		;
 	core:prescribedBy data:Mazak-c2-spec ;
+	cmns-dsg:hasName data:Mazak-c2-name ;
 	.
 
 data:Mazak-c2-Cmotor
 	a ex:Motor ;
-	core:denotedBy data:Mazak-c2-Cmotor-name ;
+	cmns-dsg:hasName data:Mazak-c2-Cmotor-name ;
 	.
 
 data:Mazak-c2-Cmotor-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Cmotor"^^xs:string ;
 	.
 
@@ -225,7 +226,7 @@ data:Mazak-c2-function
 	.
 
 data:Mazak-c2-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "C2"^^xs:string ;
 	.
 
@@ -274,32 +275,32 @@ data:Mazak-capability
 data:Mazak-cont
 	a ex:ControlSystem ;
 	obo:BFO_0000115 data:Mazak-cont-path1 ;
-	core:denotedBy data:Mazak-cont-name ;
+	cmns-dsg:hasName data:Mazak-cont-name ;
 	.
 
 data:Mazak-cont-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "controller"^^xs:string ;
 	.
 
 data:Mazak-cont-path1
 	a ex:ControlSystemPath ;
-	core:denotedBy data:Mazak-cont-path1-name ;
+	cmns-dsg:hasName data:Mazak-cont-path1-name ;
 	.
 
 data:Mazak-cont-path1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "path"^^xs:string ;
 	.
 
 data:Mazak-coolant
 	a obo:BFO_0000030 ;
-	core:denotedBy data:Mazak-coolant-name ;
 	core:measuresAtSomeTime data:Mazak-coolant-temperature ;
+	cmns-dsg:hasName data:Mazak-coolant-name ;
 	.
 
 data:Mazak-coolant-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "coolant"^^xs:string ;
 	.
 
@@ -309,32 +310,32 @@ data:Mazak-coolant-temperature
 
 data:Mazak-door1
 	a obo:BFO_0000030 ;
-	core:denotedBy data:Mazak-door1-name ;
+	cmns-dsg:hasName data:Mazak-door1-name ;
 	.
 
 data:Mazak-door1-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "door"^^xs:string ;
 	.
 
 data:Mazak-elec
 	a ex:ElectricalSystem ;
-	core:denotedBy data:Mazak-elec-name ;
+	cmns-dsg:hasName data:Mazak-elec-name ;
 	.
 
 data:Mazak-elec-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "electric"^^xs:string ;
 	.
 
 data:Mazak-enclosurem
 	a ex:Structure ;
-	core:denotedBy data:Mazak-enclosurem-name ;
 	core:measuresAtSomeTime data:Mazak-enclosurem-temperature ;
+	cmns-dsg:hasName data:Mazak-enclosurem-name ;
 	.
 
 data:Mazak-enclosurem-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "enclosure"^^xs:string ;
 	.
 
@@ -348,77 +349,77 @@ data:Mazak-function
 
 data:Mazak-hydraulic
 	a ex:HydraulicSystem ;
-	core:denotedBy data:Mazak-hydraulic-name ;
+	cmns-dsg:hasName data:Mazak-hydraulic-name ;
 	.
 
 data:Mazak-hydraulic-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "hydraulic"^^xs:string ;
 	.
 
 data:Mazak-lubrication
 	a ex:LubricationSystem ;
-	core:denotedBy data:Mazak-lubrication-name ;
+	cmns-dsg:hasName data:Mazak-lubrication-name ;
 	.
 
 data:Mazak-lubrication-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "lubrication"^^xs:string ;
 	.
 
 data:Mazak-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Mazak"^^xs:string ;
 	.
 
 data:Mazak-partocc
 	a ex:Part ;
-	core:denotedBy data:Mazak-partocc-name ;
+	cmns-dsg:hasName data:Mazak-partocc-name ;
 	.
 
 data:Mazak-partocc-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "partocc"^^xs:string ;
 	.
 
 data:Mazak-personnelm
 	a core:Person ;
-	core:denotedBy data:Mazak-personnelm-name ;
+	cmns-dsg:hasName data:Mazak-personnelm-name ;
 	.
 
 data:Mazak-personnelm-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "personnel"^^xs:string ;
 	.
 
 data:Mazak-pneumatic
 	a ex:PneumaticSystem ;
-	core:denotedBy data:Mazak-pneumatic-name ;
+	cmns-dsg:hasName data:Mazak-pneumatic-name ;
 	.
 
 data:Mazak-pneumatic-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "pneumatic"^^xs:string ;
 	.
 
 data:Mazak-procstock
 	a ex:Stock ;
-	core:denotedBy data:Mazak-procstock-name ;
+	cmns-dsg:hasName data:Mazak-procstock-name ;
 	.
 
 data:Mazak-procstock-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "stock"^^xs:string ;
 	.
 
 data:Mazak-room
 	a ex:Room ;
-	core:denotedBy data:Mazak-room-name ;
 	core:measuresAtSomeTime data:Mazak-room-temperature ;
+	cmns-dsg:hasName data:Mazak-room-name ;
 	.
 
 data:Mazak-room-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "environmental"^^xs:string ;
 	.
 
@@ -428,21 +429,21 @@ data:Mazak-room-temperature
 
 data:Mazak-table
 	a ex:Structure ;
-	core:denotedBy data:Mazak-table-name ;
+	cmns-dsg:hasName data:Mazak-table-name ;
 	.
 
 data:Mazak-table-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "TABLE"^^xs:string ;
 	.
 
 data:Mazak-trundle
 	a ex:Structure ;
-	core:denotedBy data:Mazak-trundle-name ;
+	cmns-dsg:hasName data:Mazak-trundle-name ;
 	.
 
 data:Mazak-trundle-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "TRUNDLE"^^xs:string ;
 	.
 
@@ -456,7 +457,6 @@ data:Mazak-x
 		data:Mazak-x-Xballscrew ,
 		data:Mazak-x-Xmotor
 		;
-	core:denotedBy data:Mazak-x-name ;
 	core:hasFunction data:Mazak-x-function ;
 	core:measuresAtSomeTime
 		data:Mazak-x-position ,
@@ -464,25 +464,26 @@ data:Mazak-x
 		data:Mazak-x-temperature
 		;
 	core:prescribedBy data:Mazak-x-spec ;
+	cmns-dsg:hasName data:Mazak-x-name ;
 	.
 
 data:Mazak-x-Xballscrew
 	a ex:Ballscrew ;
-	core:denotedBy data:Mazak-x-Xballscrew-name ;
+	cmns-dsg:hasName data:Mazak-x-Xballscrew-name ;
 	.
 
 data:Mazak-x-Xballscrew-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Xballscrew"^^xs:string ;
 	.
 
 data:Mazak-x-Xmotor
 	a ex:Motor ;
-	core:denotedBy data:Mazak-x-Xmotor-name ;
+	cmns-dsg:hasName data:Mazak-x-Xmotor-name ;
 	.
 
 data:Mazak-x-Xmotor-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Xmotor"^^xs:string ;
 	.
 
@@ -491,7 +492,7 @@ data:Mazak-x-function
 	.
 
 data:Mazak-x-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "X"^^xs:string ;
 	.
 
@@ -564,11 +565,11 @@ data:Mazak-x-temperature
 
 data:Mazak-xaxism
 	a ex:Structure ;
-	core:denotedBy data:Mazak-xaxism-name ;
+	cmns-dsg:hasName data:Mazak-xaxism-name ;
 	.
 
 data:Mazak-xaxism-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "X_AXIS"^^xs:string ;
 	.
 
@@ -582,7 +583,6 @@ data:Mazak-y
 		data:Mazak-y-Yballscrew ,
 		data:Mazak-y-Ymotor
 		;
-	core:denotedBy data:Mazak-y-name ;
 	core:hasFunction data:Mazak-y-function ;
 	core:measuresAtSomeTime
 		data:Mazak-y-position ,
@@ -590,25 +590,26 @@ data:Mazak-y
 		data:Mazak-y-temperature
 		;
 	core:prescribedBy data:Mazak-y-spec ;
+	cmns-dsg:hasName data:Mazak-y-name ;
 	.
 
 data:Mazak-y-Yballscrew
 	a ex:Ballscrew ;
-	core:denotedBy data:Mazak-y-Yballscrew-name ;
+	cmns-dsg:hasName data:Mazak-y-Yballscrew-name ;
 	.
 
 data:Mazak-y-Yballscrew-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Yballscrew"^^xs:string ;
 	.
 
 data:Mazak-y-Ymotor
 	a ex:Motor ;
-	core:denotedBy data:Mazak-y-Ymotor-name ;
+	cmns-dsg:hasName data:Mazak-y-Ymotor-name ;
 	.
 
 data:Mazak-y-Ymotor-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Ymotor"^^xs:string ;
 	.
 
@@ -617,7 +618,7 @@ data:Mazak-y-function
 	.
 
 data:Mazak-y-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Y"^^xs:string ;
 	.
 
@@ -690,11 +691,11 @@ data:Mazak-y-temperature
 
 data:Mazak-yaxism
 	a ex:Structure ;
-	core:denotedBy data:Mazak-yaxism-name ;
+	cmns-dsg:hasName data:Mazak-yaxism-name ;
 	.
 
 data:Mazak-yaxism-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Y_AXIS"^^xs:string ;
 	.
 
@@ -708,7 +709,6 @@ data:Mazak-z
 		data:Mazak-z-Zballscrew ,
 		data:Mazak-z-Zmotor
 		;
-	core:denotedBy data:Mazak-z-name ;
 	core:hasFunction data:Mazak-z-function ;
 	core:measuresAtSomeTime
 		data:Mazak-z-position ,
@@ -716,25 +716,26 @@ data:Mazak-z
 		data:Mazak-z-temperature
 		;
 	core:prescribedBy data:Mazak-z-spec ;
+	cmns-dsg:hasName data:Mazak-z-name ;
 	.
 
 data:Mazak-z-Zballscrew
 	a ex:Ballscrew ;
-	core:denotedBy data:Mazak-z-Zballscrew-name ;
+	cmns-dsg:hasName data:Mazak-z-Zballscrew-name ;
 	.
 
 data:Mazak-z-Zballscrew-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Zballscrew"^^xs:string ;
 	.
 
 data:Mazak-z-Zmotor
 	a ex:Motor ;
-	core:denotedBy data:Mazak-z-Zmotor-name ;
+	cmns-dsg:hasName data:Mazak-z-Zmotor-name ;
 	.
 
 data:Mazak-z-Zmotor-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Zmotor"^^xs:string ;
 	.
 
@@ -743,7 +744,7 @@ data:Mazak-z-function
 	.
 
 data:Mazak-z-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Z"^^xs:string ;
 	.
 
@@ -816,11 +817,11 @@ data:Mazak-z-temperature
 
 data:Mazak-zaxis
 	a ex:Structure ;
-	core:denotedBy data:Mazak-zaxis-name ;
+	cmns-dsg:hasName data:Mazak-zaxis-name ;
 	.
 
 data:Mazak-zaxis-name
-	a core:DesignativeInformationContentEntity ;
+	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "Z_AXIS"^^xs:string ;
 	.
 
