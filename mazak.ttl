@@ -47,15 +47,15 @@ data:Mazak
 		data:Mazak-z
 		;
 	core:denotedBy data:Mazak-name ;
-	core:hasCapability data:Mazak-turning ;
-	core:hasFunction data:Mazak-milling ;
+	core:hasCapability data:Mazak-capability ;
+	core:hasFunction data:Mazak-function ;
 	.
 
 data:Mazak-br
 	a ex:RotaryMotionSystem ;
 	obo:BFO_0000115 data:Mazak-br-Bmotor ;
 	core:denotedBy data:Mazak-br-name ;
-	core:hasFunction data:Mazak-br-bmotionm ;
+	core:hasFunction data:Mazak-br-function ;
 	core:prescribedBy data:Mazak-br-spec ;
 	.
 
@@ -69,7 +69,7 @@ data:Mazak-br-Bmotor-name
 	core:hasSimpleExpressionValue "Bmotor"^^xs:string ;
 	.
 
-data:Mazak-br-bmotionm
+data:Mazak-br-function
 	a ex:RevoluteMotionCapability ;
 	.
 
@@ -116,7 +116,7 @@ data:Mazak-c
 	a ex:RotaryMotionSystem ;
 	obo:BFO_0000115 data:Mazak-c-C2motor ;
 	core:denotedBy data:Mazak-c-name ;
-	core:hasFunction data:Mazak-c-c1motion ;
+	core:hasFunction data:Mazak-c-function ;
 	core:prescribedBy data:Mazak-c-spec ;
 	.
 
@@ -130,7 +130,7 @@ data:Mazak-c-C2motor-name
 	core:hasSimpleExpressionValue "C2motor"^^xs:string ;
 	.
 
-data:Mazak-c-c1motion
+data:Mazak-c-function
 	a ex:ContinuousMotionCapability ;
 	.
 
@@ -163,7 +163,7 @@ data:Mazak-c2
 	a ex:RotaryMotionSystem ;
 	obo:BFO_0000115 data:Mazak-c2-Cmotor ;
 	core:denotedBy data:Mazak-c2-name ;
-	core:hasFunction data:Mazak-c2-c2motionm ;
+	core:hasFunction data:Mazak-c2-function ;
 	core:prescribedBy data:Mazak-c2-spec ;
 	.
 
@@ -177,7 +177,7 @@ data:Mazak-c2-Cmotor-name
 	core:hasSimpleExpressionValue "Cmotor"^^xs:string ;
 	.
 
-data:Mazak-c2-c2motionm
+data:Mazak-c2-function
 	a ex:RevoluteMotionCapability ;
 	.
 
@@ -218,6 +218,10 @@ data:Mazak-c2-spec-TORQUE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N-M ;
 	core:hasSimpleExpressionValue "0"^^xs:string ;
+	.
+
+data:Mazak-capability
+	a ex:TurningCapability ;
 	.
 
 data:Mazak-cont
@@ -281,6 +285,10 @@ data:Mazak-enclosurem-name
 	core:hasSimpleExpressionValue "enclosure"^^xs:string ;
 	.
 
+data:Mazak-function
+	a ex:MillingCapability ;
+	.
+
 data:Mazak-hydraulic
 	a ex:HydraulicSystem ;
 	core:denotedBy data:Mazak-hydraulic-name ;
@@ -299,10 +307,6 @@ data:Mazak-lubrication
 data:Mazak-lubrication-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "lubrication"^^xs:string ;
-	.
-
-data:Mazak-milling
-	a ex:MillingCapability ;
 	.
 
 data:Mazak-name
@@ -360,10 +364,6 @@ data:Mazak-room-name
 	core:hasSimpleExpressionValue "environmental"^^xs:string ;
 	.
 
-data:Mazak-turning
-	a ex:TurningCapability ;
-	.
-
 data:Mazak-x
 	a ex:LinearMotionSystem ;
 	obo:BFO_0000115
@@ -371,7 +371,7 @@ data:Mazak-x
 		data:Mazak-x-Xmotor
 		;
 	core:denotedBy data:Mazak-x-name ;
-	core:hasFunction data:Mazak-x-xmotion ;
+	core:hasFunction data:Mazak-x-function ;
 	core:prescribedBy data:Mazak-x-spec ;
 	.
 
@@ -393,6 +393,10 @@ data:Mazak-x-Xmotor
 data:Mazak-x-Xmotor-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Xmotor"^^xs:string ;
+	.
+
+data:Mazak-x-function
+	a ex:PrismaticMotionCapability ;
 	.
 
 data:Mazak-x-name
@@ -455,10 +459,6 @@ data:Mazak-x-spec-VELOCITY-RAPID-Minimum
 	core:hasSimpleExpressionValue "1"^^xs:string ;
 	.
 
-data:Mazak-x-xmotion
-	a ex:PrismaticMotionCapability ;
-	.
-
 data:Mazak-y
 	a ex:LinearMotionSystem ;
 	obo:BFO_0000115
@@ -466,7 +466,7 @@ data:Mazak-y
 		data:Mazak-y-Ymotor
 		;
 	core:denotedBy data:Mazak-y-name ;
-	core:hasFunction data:Mazak-y-ymotion ;
+	core:hasFunction data:Mazak-y-function ;
 	core:prescribedBy data:Mazak-y-spec ;
 	.
 
@@ -488,6 +488,10 @@ data:Mazak-y-Ymotor
 data:Mazak-y-Ymotor-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Ymotor"^^xs:string ;
+	.
+
+data:Mazak-y-function
+	a ex:PrismaticMotionCapability ;
 	.
 
 data:Mazak-y-name
@@ -550,10 +554,6 @@ data:Mazak-y-spec-VELOCITY-RAPID-Minimum
 	core:hasSimpleExpressionValue "1"^^xs:string ;
 	.
 
-data:Mazak-y-ymotion
-	a ex:PrismaticMotionCapability ;
-	.
-
 data:Mazak-z
 	a ex:LinearMotionSystem ;
 	obo:BFO_0000115
@@ -561,7 +561,7 @@ data:Mazak-z
 		data:Mazak-z-Zmotor
 		;
 	core:denotedBy data:Mazak-z-name ;
-	core:hasFunction data:Mazak-z-zmotion ;
+	core:hasFunction data:Mazak-z-function ;
 	core:prescribedBy data:Mazak-z-spec ;
 	.
 
@@ -583,6 +583,10 @@ data:Mazak-z-Zmotor
 data:Mazak-z-Zmotor-name
 	a core:DesignativeInformationContentEntity ;
 	core:hasSimpleExpressionValue "Zmotor"^^xs:string ;
+	.
+
+data:Mazak-z-function
+	a ex:PrismaticMotionCapability ;
 	.
 
 data:Mazak-z-name
@@ -643,10 +647,6 @@ data:Mazak-z-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
 	core:hasSimpleExpressionValue "1"^^xs:string ;
-	.
-
-data:Mazak-z-zmotion
-	a ex:PrismaticMotionCapability ;
 	.
 
 ex:Ballscrew

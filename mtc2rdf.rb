@@ -137,7 +137,6 @@ module Example
          subClassOf: self.RevoluteMotionCapability,
          type: "http://www.w3.org/2002/07/owl#Class"        
     
-
     term :MillingCapability,
          label: {'en-us': 'milling capability'},
          subClassOf: IOF::Core.Capability,
@@ -146,7 +145,8 @@ module Example
     term :TurningCapability,
          label: {'en-us': 'turning capability'},
          subClassOf: IOF::Core.Capability,
-         type: "http://www.w3.org/2002/07/owl#Class"        
+         type: "http://www.w3.org/2002/07/owl#Class"
+
   end
 
   MachineMapping = {
@@ -165,9 +165,6 @@ module Example
     Stock: Machine.Stock,
     Personnel: IOF::Core.Person,
     PartOccurrence: Machine.Part,
-    PRISMATIC: Machine.PrismaticMotionCapability,
-    REVOLUTE: Machine.RevoluteMotionCapability,
-    CONTINUOUS: Machine.ContinuousMotionCapability,
 
     # Nil mapping
     Axes: false,
@@ -178,6 +175,17 @@ module Example
     Structures: false,
     Materials: false,
     Link: false,
+  }
+
+  Functions = {
+    Device: Machine.MillingCapability,
+    PRISMATIC: Machine.PrismaticMotionCapability,
+    REVOLUTE: Machine.RevoluteMotionCapability,
+    CONTINUOUS: Machine.ContinuousMotionCapability    
+  }
+
+  Capabilities = {
+    Device: Machine.TurningCapability
   }
 end
 
@@ -214,6 +222,21 @@ def sub_iri(names, ext)
   Inst::Data[sub]
 end
 
+def add_instance(graph, iri, name, relation, type)
+  graph << (s = Statement.new(name, RDF.type, type))
+  graph << [iri, relation, s.subject]
+  s
+end
+
+def add_capability(graph, iri, names, type)
+  if cls = Example::Functions[type.to_sym]
+    add_instance(graph, iri, sub_iri(names, 'function'), IOF::Core.hasFunction, cls)
+  end
+  if cls = Example::Capabilities[type.to_sym]    
+    add_instance(graph, iri, sub_iri(names, 'capability'), IOF::Core.hasCapability, cls)
+  end
+end
+
 def add_component(graph, comp, names = [], level = 0)
   type = (comp[:type] || comp.name).to_sym
   puts "#{'  ' * level}#{comp.name} #{comp[:id]} #{type.inspect}"
@@ -226,41 +249,31 @@ def add_component(graph, comp, names = [], level = 0)
     iri = Inst::Data[names.join('-')]
     graph << [iri, RDF.type, cls]
     graph << [parent, BFO::BFO.has_member_part_at_some_time, iri] if parent
-    graph << (s = Statement.new(sub_iri(names, "name"), RDF.type, IOF::Core.DesignativeInformationContentEntity))
+    
+    s = add_instance(graph, iri, sub_iri(names, "name"), IOF::Core.denotedBy, IOF::Core.DesignativeInformationContentEntity)    
     graph << [s.subject, IOF::Core.hasSimpleExpressionValue, "#{comp['name'] || comp['id']}"]
-    graph << [iri, IOF::Core.denotedBy, s.subject]
 
     sp = nil
     comp.each_element('./Configuration/Specifications/*') do |spec|
       puts "#{'  ' * (level + 1)}-> #{spec[:type]} #{spec[:units]}"
       unless sp
-        graph << (sp = Statement.new(sub_iri(names, "spec"), RDF.type, IOF::Core.DesignSpecification))
-        graph << [iri, IOF::Core.prescribedBy, sp.subject]
+        sp = add_instance(graph, iri, sub_iri(names, "spec"), IOF::Core.prescribedBy, IOF::Core.DesignSpecification)
       end
       spec.each_element do |des|
         puts "#{'  ' * (level + 2)}-> #{des.name}: #{des.text}"
         sn = ["spec", spec[:type], spec[:subType], des.name].compact
-        graph << (v = Statement.new(sub_iri(names, sn), RDF.type, IOF::Core.ValueExpression))
+        v = add_instance(graph, sp.subject, sub_iri(names, sn), IOF::Core.hasValueExpressionAtAllTimes, IOF::Core.ValueExpression)        
         graph << [v.subject, IOF::Core.hasSimpleExpressionValue, des.text]
         graph << [v.subject, QUDT.hasUnit, Units[spec[:units].to_sym]]
-        graph << [sp.subject, IOF::Core.hasValueExpressionAtAllTimes, v.subject]
       end
     end
 
+    key = comp.name
     comp.each_element('./Configuration/Motion') do |motion|
-      if cls = Example::MachineMapping[motion[:type].to_sym]
-        graph << (m = Statement.new(sub_iri(names, motion[:id]), RDF.type, cls))
-        graph << [iri, IOF::Core.hasFunction, m.subject]
-      end
+      key = motion[:type]
     end
 
-    if level == 0
-      graph << (m = Statement.new(sub_iri(names, 'milling'), RDF.type, Example::Machine.MillingCapability))
-      graph << [iri, IOF::Core.hasFunction, m.subject]
-
-      graph << (m = Statement.new(sub_iri(names, 'turning'), RDF.type, Example::Machine.TurningCapability))
-      graph << [iri, IOF::Core.hasCapability, m.subject]
-    end
+    add_capability(graph, iri, names, key)
   end
 
   comp.each_element("./Compositions/*") do |cmp|
