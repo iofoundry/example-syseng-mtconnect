@@ -351,17 +351,17 @@
 	<qp:Temperature rdf:about="&data;Mazak-room-temperature">
 	</qp:Temperature>
 	
-	<ex:Link rdf:about="&data;Mazak-table">
+	<ex:Structure rdf:about="&data;Mazak-table">
 		<core:denotedBy rdf:resource="&data;Mazak-table-name"/>
-	</ex:Link>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-table-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">TABLE</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<ex:Link rdf:about="&data;Mazak-trundle">
+	<ex:Structure rdf:about="&data;Mazak-trundle">
 		<core:denotedBy rdf:resource="&data;Mazak-trundle-name"/>
-	</ex:Link>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-trundle-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">TRUNDLE</core:hasSimpleExpressionValue>
@@ -457,9 +457,9 @@
 	<qp:Temperature rdf:about="&data;Mazak-x-temperature">
 	</qp:Temperature>
 	
-	<ex:Link rdf:about="&data;Mazak-xaxism">
+	<ex:Structure rdf:about="&data;Mazak-xaxism">
 		<core:denotedBy rdf:resource="&data;Mazak-xaxism-name"/>
-	</ex:Link>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-xaxism-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">X_AXIS</core:hasSimpleExpressionValue>
@@ -555,9 +555,9 @@
 	<qp:Temperature rdf:about="&data;Mazak-y-temperature">
 	</qp:Temperature>
 	
-	<ex:Link rdf:about="&data;Mazak-yaxism">
+	<ex:Structure rdf:about="&data;Mazak-yaxism">
 		<core:denotedBy rdf:resource="&data;Mazak-yaxism-name"/>
-	</ex:Link>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-yaxism-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Y_AXIS</core:hasSimpleExpressionValue>
@@ -653,9 +653,9 @@
 	<qp:Temperature rdf:about="&data;Mazak-z-temperature">
 	</qp:Temperature>
 	
-	<ex:Link rdf:about="&data;Mazak-zaxis">
+	<ex:Structure rdf:about="&data;Mazak-zaxis">
 		<core:denotedBy rdf:resource="&data;Mazak-zaxis-name"/>
-	</ex:Link>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;Mazak-zaxis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z_AXIS</core:hasSimpleExpressionValue>

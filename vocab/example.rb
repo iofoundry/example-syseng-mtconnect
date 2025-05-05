@@ -147,8 +147,8 @@ module Example
          subClassOf: BFO::BFO.object,
          type: "http://www.w3.org/2002/07/owl#Class"
 
-    term :Link,
-         label: {'en-us': 'link'},
+    term :Structure,
+         label: {'en-us': 'structure'},
          subClassOf: BFO::BFO.object,
          type: "http://www.w3.org/2002/07/owl#Class"
 
@@ -186,7 +186,8 @@ module Example
     Stock: Machine.Stock,
     Personnel: IOF::Core.Person,
     PartOccurrence: Machine.Part,
-    Link: Machine.Link,
+    Link: Machine.Structure,
+    Structure: Machine.Structure,
     Enclosure: Machine.Structure,
     Environmental: Machine.Room,
     

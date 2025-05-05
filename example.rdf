@@ -76,11 +76,6 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">linear motion system</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&ex;Link">
-		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">link</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&ex;LubricationSystem">
 		<rdfs:subClassOf rdf:resource="&core;EngineeredSystem"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">lubrication system</rdfs:label>
@@ -153,7 +148,7 @@
 	
 	<owl:Class rdf:about="&ex;Structure">
 		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">enclosure</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">structure</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&ex;TurningCapability">

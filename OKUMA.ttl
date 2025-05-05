@@ -615,7 +615,7 @@ data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum
 	.
 
 data:OKUMA.123456-b_axis
-	a obo:BFO_0000030 ;
+	a ex:Structure ;
 	core:denotedBy data:OKUMA.123456-b_axis-name ;
 	.
 
@@ -625,7 +625,7 @@ data:OKUMA.123456-b_axis-name
 	.
 
 data:OKUMA.123456-c1_axis
-	a obo:BFO_0000030 ;
+	a ex:Structure ;
 	core:denotedBy data:OKUMA.123456-c1_axis-name ;
 	.
 
@@ -635,7 +635,7 @@ data:OKUMA.123456-c1_axis-name
 	.
 
 data:OKUMA.123456-c2_axis
-	a obo:BFO_0000030 ;
+	a ex:Structure ;
 	core:denotedBy data:OKUMA.123456-c2_axis-name ;
 	.
 
@@ -683,7 +683,7 @@ data:OKUMA.123456-personnel-name
 	.
 
 data:OKUMA.123456-x_axis
-	a obo:BFO_0000030 ;
+	a ex:Structure ;
 	core:denotedBy data:OKUMA.123456-x_axis-name ;
 	.
 
@@ -693,7 +693,7 @@ data:OKUMA.123456-x_axis-name
 	.
 
 data:OKUMA.123456-y_axis
-	a obo:BFO_0000030 ;
+	a ex:Structure ;
 	core:denotedBy data:OKUMA.123456-y_axis-name ;
 	.
 
@@ -703,7 +703,7 @@ data:OKUMA.123456-y_axis-name
 	.
 
 data:OKUMA.123456-z1_axis
-	a obo:BFO_0000030 ;
+	a ex:Structure ;
 	core:denotedBy data:OKUMA.123456-z1_axis-name ;
 	.
 
@@ -713,7 +713,7 @@ data:OKUMA.123456-z1_axis-name
 	.
 
 data:OKUMA.123456-z4_axis
-	a obo:BFO_0000030 ;
+	a ex:Structure ;
 	core:denotedBy data:OKUMA.123456-z4_axis-name ;
 	.
 

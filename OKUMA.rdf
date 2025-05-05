@@ -502,25 +502,25 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-b_axis">
+	<ex:Structure rdf:about="&data;OKUMA.123456-b_axis">
 		<core:denotedBy rdf:resource="&data;OKUMA.123456-b_axis-name"/>
-	</obo:BFO_0000030>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-b_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">b_axis</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-c1_axis">
+	<ex:Structure rdf:about="&data;OKUMA.123456-c1_axis">
 		<core:denotedBy rdf:resource="&data;OKUMA.123456-c1_axis-name"/>
-	</obo:BFO_0000030>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-c1_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">c1_axis</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-c2_axis">
+	<ex:Structure rdf:about="&data;OKUMA.123456-c2_axis">
 		<core:denotedBy rdf:resource="&data;OKUMA.123456-c2_axis-name"/>
-	</obo:BFO_0000030>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-c2_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">c2_axis</core:hasSimpleExpressionValue>
@@ -556,33 +556,33 @@
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">personnel</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-x_axis">
+	<ex:Structure rdf:about="&data;OKUMA.123456-x_axis">
 		<core:denotedBy rdf:resource="&data;OKUMA.123456-x_axis-name"/>
-	</obo:BFO_0000030>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-x_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">x_axis</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-y_axis">
+	<ex:Structure rdf:about="&data;OKUMA.123456-y_axis">
 		<core:denotedBy rdf:resource="&data;OKUMA.123456-y_axis-name"/>
-	</obo:BFO_0000030>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-y_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">y_axis</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-z1_axis">
+	<ex:Structure rdf:about="&data;OKUMA.123456-z1_axis">
 		<core:denotedBy rdf:resource="&data;OKUMA.123456-z1_axis-name"/>
-	</obo:BFO_0000030>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-z1_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">z1_axis</core:hasSimpleExpressionValue>
 	</core:DesignativeInformationContentEntity>
 	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-z4_axis">
+	<ex:Structure rdf:about="&data;OKUMA.123456-z4_axis">
 		<core:denotedBy rdf:resource="&data;OKUMA.123456-z4_axis-name"/>
-	</obo:BFO_0000030>
+	</ex:Structure>
 	
 	<core:DesignativeInformationContentEntity rdf:about="&data;OKUMA.123456-z4_axis-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">z4_axis</core:hasSimpleExpressionValue>
