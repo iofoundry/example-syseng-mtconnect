@@ -165,37 +165,37 @@
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LENGTH-Nominal">
 		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Maximum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Minimum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lb1">
@@ -341,37 +341,37 @@
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LENGTH-Nominal">
 		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Maximum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Minimum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lz1">
@@ -405,37 +405,37 @@
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LENGTH-Nominal">
 		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lz4">
@@ -469,37 +469,37 @@
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LENGTH-Nominal">
 		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-b_axis">

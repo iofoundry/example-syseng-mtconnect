@@ -97,22 +97,22 @@
 	
 	<core:ValueExpression rdf:about="&data;Mazak-br-spec-ANGLE-Maximum">
 		<units:hasUnit rdf:resource="&units;DEG"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">120</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">120.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-br-spec-ANGLE-Minimum">
 		<units:hasUnit rdf:resource="&units;DEG"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">-30</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">-30.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-br-spec-TORQUE-Maximum">
 		<units:hasUnit rdf:resource="&units;N-M"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">400</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">400.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-br-spec-TORQUE-Minimum">
 		<units:hasUnit rdf:resource="&units;N-M"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-c">
@@ -150,12 +150,12 @@
 	
 	<core:ValueExpression rdf:about="&data;Mazak-c-spec-VELOCITY-Maximum">
 		<units:hasUnit rdf:resource="&units;REV-PER-MIN"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">12000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">12000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-c-spec-VELOCITY-Minimum">
 		<units:hasUnit rdf:resource="&units;REV-PER-MIN"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<qp:Temperature rdf:about="&data;Mazak-c-temperature">
@@ -203,22 +203,22 @@
 	
 	<core:ValueExpression rdf:about="&data;Mazak-c2-spec-ANGLE-Maximum">
 		<units:hasUnit rdf:resource="&units;DEG"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">360</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">360.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-c2-spec-ANGLE-Minimum">
 		<units:hasUnit rdf:resource="&units;DEG"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">-360</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">-360.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-c2-spec-TORQUE-Maximum">
 		<units:hasUnit rdf:resource="&units;N-M"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">400</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">400.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-c2-spec-TORQUE-Minimum">
 		<units:hasUnit rdf:resource="&units;N-M"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<qp:Temperature rdf:about="&data;Mazak-c2-temperature">
@@ -421,37 +421,37 @@
 	
 	<core:ValueExpression rdf:about="&data;Mazak-x-spec-LENGTH-Nominal">
 		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">650</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-x-spec-LINEAR_FORCE-Maximum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-x-spec-LINEAR_FORCE-Minimum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-x-spec-VELOCITY-RAPID-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-x-spec-VELOCITY-RAPID-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<qp:Temperature rdf:about="&data;Mazak-x-temperature">
@@ -519,37 +519,37 @@
 	
 	<core:ValueExpression rdf:about="&data;Mazak-y-spec-LENGTH-Nominal">
 		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">550</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">550.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-y-spec-LINEAR_FORCE-Maximum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">5200</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-y-spec-LINEAR_FORCE-Minimum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-y-spec-VELOCITY-RAPID-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-y-spec-VELOCITY-RAPID-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<qp:Temperature rdf:about="&data;Mazak-y-temperature">
@@ -617,37 +617,37 @@
 	
 	<core:ValueExpression rdf:about="&data;Mazak-z-spec-LENGTH-Nominal">
 		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">530</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">530.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-z-spec-LINEAR_FORCE-Maximum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">9600</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">9600.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-z-spec-LINEAR_FORCE-Minimum">
 		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">0</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-z-spec-VELOCITY-RAPID-Maximum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">7000</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<core:ValueExpression rdf:about="&data;Mazak-z-spec-VELOCITY-RAPID-Minimum">
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">1</core:hasSimpleExpressionValue>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
 	
 	<qp:Temperature rdf:about="&data;Mazak-z-temperature">

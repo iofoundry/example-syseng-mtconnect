@@ -185,43 +185,43 @@ data:OKUMA.123456-LYI1-spec
 data:OKUMA.123456-LYI1-spec-LENGTH-Nominal
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM ;
-	core:hasSimpleExpressionValue "650"^^xs:string ;
+	core:hasSimpleExpressionValue "6.5e2"^^xs:double ;
 	.
 
 data:OKUMA.123456-LYI1-spec-LINEAR_FORCE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	core:hasSimpleExpressionValue "5.2e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-LYI1-spec-LINEAR_FORCE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lb1
@@ -415,43 +415,43 @@ data:OKUMA.123456-Lx1-spec
 data:OKUMA.123456-Lx1-spec-LENGTH-Nominal
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM ;
-	core:hasSimpleExpressionValue "650"^^xs:string ;
+	core:hasSimpleExpressionValue "6.5e2"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lx1-spec-LINEAR_FORCE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	core:hasSimpleExpressionValue "5.2e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lx1-spec-LINEAR_FORCE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz1
@@ -495,43 +495,43 @@ data:OKUMA.123456-Lz1-spec
 data:OKUMA.123456-Lz1-spec-LENGTH-Nominal
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM ;
-	core:hasSimpleExpressionValue "650"^^xs:string ;
+	core:hasSimpleExpressionValue "6.5e2"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	core:hasSimpleExpressionValue "5.2e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz4
@@ -575,43 +575,43 @@ data:OKUMA.123456-Lz4-spec
 data:OKUMA.123456-Lz4-spec-LENGTH-Nominal
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM ;
-	core:hasSimpleExpressionValue "650"^^xs:string ;
+	core:hasSimpleExpressionValue "6.5e2"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	core:hasSimpleExpressionValue "5.2e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:OKUMA.123456-b_axis

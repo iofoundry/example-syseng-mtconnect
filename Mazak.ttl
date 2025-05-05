@@ -104,25 +104,25 @@ data:Mazak-br-spec
 data:Mazak-br-spec-ANGLE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:DEG ;
-	core:hasSimpleExpressionValue "120"^^xs:string ;
+	core:hasSimpleExpressionValue "1.2e2"^^xs:double ;
 	.
 
 data:Mazak-br-spec-ANGLE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:DEG ;
-	core:hasSimpleExpressionValue "-30"^^xs:string ;
+	core:hasSimpleExpressionValue "-3.0e1"^^xs:double ;
 	.
 
 data:Mazak-br-spec-TORQUE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N-M ;
-	core:hasSimpleExpressionValue "400"^^xs:string ;
+	core:hasSimpleExpressionValue "4.0e2"^^xs:double ;
 	.
 
 data:Mazak-br-spec-TORQUE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N-M ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:Mazak-c
@@ -172,13 +172,13 @@ data:Mazak-c-spec
 data:Mazak-c-spec-VELOCITY-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:REV-PER-MIN ;
-	core:hasSimpleExpressionValue "12000"^^xs:string ;
+	core:hasSimpleExpressionValue "1.2e4"^^xs:double ;
 	.
 
 data:Mazak-c-spec-VELOCITY-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:REV-PER-MIN ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:Mazak-c-temperature
@@ -242,25 +242,25 @@ data:Mazak-c2-spec
 data:Mazak-c2-spec-ANGLE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:DEG ;
-	core:hasSimpleExpressionValue "360"^^xs:string ;
+	core:hasSimpleExpressionValue "3.6e2"^^xs:double ;
 	.
 
 data:Mazak-c2-spec-ANGLE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:DEG ;
-	core:hasSimpleExpressionValue "-360"^^xs:string ;
+	core:hasSimpleExpressionValue "-3.6e2"^^xs:double ;
 	.
 
 data:Mazak-c2-spec-TORQUE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N-M ;
-	core:hasSimpleExpressionValue "400"^^xs:string ;
+	core:hasSimpleExpressionValue "4.0e2"^^xs:double ;
 	.
 
 data:Mazak-c2-spec-TORQUE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N-M ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:Mazak-c2-temperature
@@ -519,43 +519,43 @@ data:Mazak-x-spec
 data:Mazak-x-spec-LENGTH-Nominal
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM ;
-	core:hasSimpleExpressionValue "650"^^xs:string ;
+	core:hasSimpleExpressionValue "6.5e2"^^xs:double ;
 	.
 
 data:Mazak-x-spec-LINEAR_FORCE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	core:hasSimpleExpressionValue "5.2e3"^^xs:double ;
 	.
 
 data:Mazak-x-spec-LINEAR_FORCE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:Mazak-x-spec-VELOCITY-RAPID-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:Mazak-x-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:Mazak-x-temperature
@@ -645,43 +645,43 @@ data:Mazak-y-spec
 data:Mazak-y-spec-LENGTH-Nominal
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM ;
-	core:hasSimpleExpressionValue "550"^^xs:string ;
+	core:hasSimpleExpressionValue "5.5e2"^^xs:double ;
 	.
 
 data:Mazak-y-spec-LINEAR_FORCE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "5200"^^xs:string ;
+	core:hasSimpleExpressionValue "5.2e3"^^xs:double ;
 	.
 
 data:Mazak-y-spec-LINEAR_FORCE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:Mazak-y-spec-VELOCITY-RAPID-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:Mazak-y-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:Mazak-y-temperature
@@ -771,43 +771,43 @@ data:Mazak-z-spec
 data:Mazak-z-spec-LENGTH-Nominal
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM ;
-	core:hasSimpleExpressionValue "530"^^xs:string ;
+	core:hasSimpleExpressionValue "5.3e2"^^xs:double ;
 	.
 
 data:Mazak-z-spec-LINEAR_FORCE-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "9600"^^xs:string ;
+	core:hasSimpleExpressionValue "9.6e3"^^xs:double ;
 	.
 
 data:Mazak-z-spec-LINEAR_FORCE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N ;
-	core:hasSimpleExpressionValue "0"^^xs:string ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
 data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:Mazak-z-spec-VELOCITY-RAPID-Maximum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "7000"^^xs:string ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
 	.
 
 data:Mazak-z-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
-	core:hasSimpleExpressionValue "1"^^xs:string ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
 data:Mazak-z-temperature

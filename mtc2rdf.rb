@@ -335,7 +335,7 @@ def add_component(graph, comp, names = [], level = 0)
         puts "#{'  ' * (level + 2)}-> #{des.name}: #{des.text}"
         sn = ["spec", spec[:type], spec[:subType], des.name].compact
         v = add_instance(graph, sp.subject, sub_iri(names, sn), IOF::Core.hasValueExpressionAtAllTimes, IOF::Core.ValueExpression)        
-        graph << [v.subject, IOF::Core.hasSimpleExpressionValue, des.text]
+        graph << [v.subject, IOF::Core.hasSimpleExpressionValue, des.text.to_f]
         graph << [v.subject, QUDT.hasUnit, Units[spec[:units].to_sym]]
       end
     end
