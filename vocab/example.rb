@@ -245,17 +245,6 @@ Prefixes = {
   qp: IOF::QualitiesPhysical.to_uri
 }
 
-onto = RDF::Graph.new
-onto << Example::Machine.to_enum
-
-onto << [QUDT["MilliM-PER-SEC"], RDF.type, QUDT.Unit]
-onto << [QUDT["REV-PER-SEC"], RDF.type, QUDT.Unit]
-onto << [QUDT["MilliM"], RDF.type, QUDT.Unit]
-onto << [QUDT["N"], RDF.type, QUDT.Unit]
-onto << [QUDT["N-M"], RDF.type, QUDT.Unit]
-onto << [QUDT["DEG"], RDF.type, QUDT.Unit]
-onto << [QUDT["REV-PER-MIN"], RDF.type, QUDT.Unit]
-
 Units = {
   NEWTON: QUDT["N"],
   NEWTON_METER: QUDT["N-M"],
@@ -266,6 +255,17 @@ Units = {
 }
 
 if __FILE__ == $0
+  onto = RDF::Graph.new
+  onto << Example::Machine.to_enum
+  
+  onto << [QUDT["MilliM-PER-SEC"], RDF.type, QUDT.Unit]
+  onto << [QUDT["REV-PER-SEC"], RDF.type, QUDT.Unit]
+  onto << [QUDT["MilliM"], RDF.type, QUDT.Unit]
+  onto << [QUDT["N"], RDF.type, QUDT.Unit]
+  onto << [QUDT["N-M"], RDF.type, QUDT.Unit]
+  onto << [QUDT["DEG"], RDF.type, QUDT.Unit]
+  onto << [QUDT["REV-PER-MIN"], RDF.type, QUDT.Unit]
+  
   RDF::Writer.open("example.rdf", prefixes: Prefixes) do |w|
     w << onto
   end
