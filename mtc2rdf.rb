@@ -68,18 +68,18 @@ def add_component(graph, comp, names = [], level = 0)
     s = add_instance(graph, iri, sub_iri(names, "name"), OMG::Designators.hasName, OMG::Designators.Name)    
     graph << [s.subject, IOF::Core.hasSimpleExpressionValue, "#{comp['name'] || comp['id']}"]
 
-    sp = nil
-    comp.each_element('./Configuration/Specifications/*') do |spec|
-      puts "#{'  ' * (level + 1)}-> #{spec[:type]} #{spec[:units]}"
-      unless sp
-        sp = add_instance(graph, iri, sub_iri(names, "spec"), IOF::Core.prescribedBy, IOF::Core.DesignSpecification)
-      end
-      spec.each_element do |des|
-        puts "#{'  ' * (level + 2)}-> #{des.name}: #{des.text}"
-        sn = ["spec", spec[:type], spec[:subType], des.name].compact
-        v = add_instance(graph, sp.subject, sub_iri(names, sn), IOF::Core.hasValueExpressionAtAllTimes, IOF::Core.ValueExpression)        
-        graph << [v.subject, IOF::Core.hasSimpleExpressionValue, des.text.to_f]
-        graph << [v.subject, QUDT.hasUnit, Units[spec[:units].to_sym]]
+    specs = comp.get_elements('./Configuration/Specifications/*')
+    unless specs.empty?
+      sp = add_instance(graph, iri, sub_iri(names, "spec"), IOF::Core.prescribedBy, IOF::Core.DesignSpecification)
+      specs.each do |spec|
+        puts "#{'  ' * (level + 1)}-> #{spec[:type]} #{spec[:units]}"
+        spec.each_element do |des|
+          puts "#{'  ' * (level + 2)}-> #{des.name}: #{des.text}"
+          sn = ["spec", spec[:type], spec[:subType], des.name].compact
+          v = add_instance(graph, sp.subject, sub_iri(names, sn), IOF::Core.hasValueExpressionAtAllTimes, IOF::Core.ValueExpression)        
+          graph << [v.subject, IOF::Core.hasSimpleExpressionValue, des.text.to_f]
+          graph << [v.subject, QUDT.hasUnit, Units[spec[:units].to_sym]]
+        end
       end
     end
 
@@ -96,8 +96,7 @@ def add_component(graph, comp, names = [], level = 0)
 
     comp.each_element('./DataItems/DataItem') do |di|
       puts "#{'  ' * (level + 1)}** #{di[:type]} #{di[:subType]} #{di[:units]}"
-      cls = Example::DataItems[di[:type].to_sym]
-      if cls
+      if cls = Example::DataItems[di[:type].to_sym]
         name = [di[:type], di[:subType]].compact.join('-').downcase
         puts "#{'  ' * (level + 2)}** adding #{name}"
         add_instance(graph, iri, sub_iri(names, name), IOF::Core.measuresAtSomeTime, cls)        
