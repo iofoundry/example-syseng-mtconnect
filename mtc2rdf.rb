@@ -105,6 +105,10 @@ def add_component(graph, comp, names = [], level = 0)
     end
   end
 
+  if role = Example::Roles[type]
+    add_instance(graph, iri, sub_iri(names, 'role'), IOF::Core.hasRole, role)
+  end
+
   comp.each_element("./Compositions/*") do |cmp|
     add_component(graph, cmp, names, level + 1)    
   end

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/styles/styles.xsl"?>
+<MTConnectDevices xmlns:m="urn:mtconnect.org:MTConnectDevices:2.0" xmlns="urn:mtconnect.org:MTConnectDevices:2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mtconnect.org:MTConnectDevices:2.0 /schemas/MTConnectDevices_2.0.xsd">
+  <Header creationTime="2025-05-05T19:03:34Z" sender="IntelAgent" instanceId="1745950442" version="2.2.0.502" deviceModelChangeTime="2025-04-29T18:14:02.126456Z" assetBufferSize="1024" assetCount="67" bufferSize="131072"/>
+  <Devices>
+    <Device id="OKUMA.123456" name="OKUMA" uuid="OKUMA.123456">
+      <Description manufacturer="OKUMA" model="MULT_U3000" serialNumber="123456">Okuma MTConnect Adapter</Description>
+      <Configuration>
+        <CoordinateSystems>
+          <CoordinateSystem id="world" type="WORLD">
+            <Origin>0 0 0</Origin>
+          </CoordinateSystem>
+          <CoordinateSystem id="base" parentIdRef="world" type="BASE">
+            <Transformation>
+              <Rotation>0 0 0</Rotation>
+              <Translation>0 0 0</Translation>
+            </Transformation>
+          </CoordinateSystem>
+          <CoordinateSystem id="machine" parentIdRef="base" type="MACHINE">
+            <Transformation>
+              <Rotation>0 0 0</Rotation>
+              <Translation>4702.959 4773.5319 4304.9867</Translation>
+            </Transformation>
+          </CoordinateSystem>
+          <CoordinateSystem id="machine_r" parentIdRef="base" type="MACHINE">
+            <Transformation>
+              <Rotation>0 0 0</Rotation>
+              <Translation>0 0 3966.2</Translation>
+            </Transformation>
+          </CoordinateSystem>
+          <CoordinateSystem id="work" parentIdRef="machine" type="OBJECT">
+            <Transformation>
+              <Rotation>0 0 0</Rotation>
+              <Translation>0 0 0</Translation>
+            </Transformation>
+          </CoordinateSystem>
+        </CoordinateSystems>
+        <SolidModel coordinateSystemIdRef="base" href="/twin/objs/Okuma-F.obj" id="devicemodel" mediaType="OBJ" nativeUnits="x:METER" units="MILLIMETER">
+          <Transformation>
+            <Rotation>180 90 0</Rotation>
+            <Translation>0 0 2000</Translation>
+          </Transformation>
+        </SolidModel>
+      </Configuration>
+      <DataItems>
+        <DataItem category="EVENT" id="Lavail" name="avail" type="AVAILABILITY"/>
+        <DataItem category="EVENT" id="Lfmode" name="fmode" type="FUNCTIONAL_MODE"/>
+        <DataItem category="EVENT" id="OS" name="OperatingSystem" type="OPERATING_SYSTEM"/>
+        <DataItem category="EVENT" id="OSMan" name="OperatingSystemManufacture" subType="MANUFACTURER" type="OPERATING_SYSTEM"/>
+        <DataItem category="EVENT" id="OSVer" name="OperatingSystemVersion" subType="VERSION" type="OPERATING_SYSTEM"/>
+        <DataItem category="EVENT" id="OSAll" name="OperatingSystemAll" subType="ALL" type="OPERATING_SYSTEM"/>
+        <DataItem category="EVENT" id="OSInst" name="OperatingSystemInstallDate" subType="INSTALL_DATE" type="OPERATING_SYSTEM"/>
+        <DataItem category="EVENT" id="App" name="Application" type="APPLICATION"/>
+        <DataItem category="EVENT" id="AppInst" name="ApplicationInstallDate" subType="INSTALL_DATE" type="APPLICATION"/>
+        <DataItem category="EVENT" id="AppMan" name="ApplicationManufacture" subType="MANUFACTURER" type="APPLICATION"/>
+        <DataItem category="EVENT" id="AppVer" name="ApplicationVersion" subType="VERSION" type="APPLICATION"/>
+        <DataItem category="EVENT" id="AppRel" name="ApplicationReleaseDate" subType="RELEASE_DATE" type="APPLICATION"/>
+        <DataItem category="EVENT" id="AppAll" name="ApplicationAll" subType="ALL" type="APPLICATION"/>
+        <DataItem category="EVENT" discrete="true" id="OKUMA.123456_asset_chg" type="ASSET_CHANGED"/>
+        <DataItem category="EVENT" id="OKUMA.123456_asset_rem" type="ASSET_REMOVED"/>
+        <DataItem category="EVENT" id="OKUMA.123456_asset_count" representation="DATA_SET" type="ASSET_COUNT"/>
+      </DataItems>
+      <Components>
+        <Structures id="struct">
+          <Components>
+            <Structure id="x_axis">
+              <Configuration>
+                <SolidModel id="xaxis" itemRef="X_AXIS" mediaType="OBJ" solidModelIdRef="devicemodel"/>
+              </Configuration>
+            </Structure>
+            <Structure id="y_axis">
+              <Configuration>
+                <SolidModel id="yaxis" itemRef="Y_AXIS" mediaType="OBJ" solidModelIdRef="devicemodel"/>
+              </Configuration>
+            </Structure>
+            <Structure id="z1_axis">
+              <Configuration>
+                <SolidModel id="z1axis" itemRef="Z1_AXIS" mediaType="OBJ" solidModelIdRef="devicemodel"/>
+              </Configuration>
+            </Structure>
+            <Structure id="z4_axis">
+              <Configuration>
+                <SolidModel id="z2axis" itemRef="Z2_AXIS" mediaType="OBJ" solidModelIdRef="devicemodel"/>
+              </Configuration>
+            </Structure>
+            <Structure id="b_axis">
+              <Configuration>
+                <SolidModel id="baxis" itemRef="B_AXIS" mediaType="OBJ" solidModelIdRef="devicemodel"/>
+              </Configuration>
+            </Structure>
+            <Structure id="c1_axis">
+              <Configuration>
+                <SolidModel id="c1axis" itemRef="C1_AXIS" mediaType="OBJ" solidModelIdRef="devicemodel"/>
+              </Configuration>
+            </Structure>
+            <Structure id="c2_axis">
+              <Configuration>
+                <SolidModel id="c2axis" itemRef="C2_AXIS" mediaType="OBJ" solidModelIdRef="devicemodel"/>
+              </Configuration>
+            </Structure>
+          </Components>
+        </Structures>
+        <Axes id="Laxes1" name="Axes">
+          <Components>
+            <Linear id="Lx1" name="X">
+              <Configuration>
+                <Motion actuation="DIRECT" coordinateSystemIdRef="machine" id="x1motion" type="PRISMATIC">
+                  <Axis>0.5 0 0</Axis>
+                  <Transformation>
+                    <Rotation>0 0 0</Rotation>
+                    <Translation>0 0 0</Translation>
+                  </Transformation>
+                </Motion>
+                <Relationships>
+                  <ComponentRelationship id="x1ParentRel" idRef="z1_axis" type="PARENT"/>
+                  <ComponentRelationship id="x1ChildRel" idRef="x_axis" type="CHILD"/>
+                </Relationships>
+                <Specifications>
+                  <Specification id="x1LengthSpec" type="LENGTH" units="MILLIMETER">
+                    <Nominal>650</Nominal>
+                  </Specification>
+                  <Specification id="x1LinearForceSpec" type="LINEAR_FORCE" units="NEWTON">
+                    <Maximum>5200</Maximum>
+                    <Minimum>0</Minimum>
+                  </Specification>
+                  <Specification id="x1RapidVelSpec" subType="RAPID" type="VELOCITY" units="MILLIMETER/SECOND">
+                    <Maximum>7000</Maximum>
+                    <Minimum>1</Minimum>
+                  </Specification>
+                  <Specification id="x1ProgrammedVelSpec" subType="PROGRAMMED" type="VELOCITY" units="MILLIMETER/SECOND">
+                    <Maximum>7000</Maximum>
+                    <Minimum>1</Minimum>
+                  </Specification>
+                </Specifications>
+              </Configuration>
+              <DataItems>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="machine" id="LX1actm" name="X1actm" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="work" id="LX1actw" name="X1actw" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                <DataItem category="SAMPLE" id="LX1load" name="X1load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+              </DataItems>
+            </Linear>
+            <Linear id="LYI1" name="Y" nativeName="Y">
+              <Configuration>
+                <Motion actuation="DIRECT" coordinateSystemIdRef="machine" id="yi1motion" type="PRISMATIC">
+                  <Axis>0 1 0</Axis>
+                  <Transformation>
+                    <Rotation>0 0 0</Rotation>
+                    <Translation>0 0 0</Translation>
+                  </Transformation>
+                </Motion>
+                <Relationships>
+                  <ComponentRelationship id="yi1ParentRel" idRef="x_axis" type="PARENT"/>
+                  <ComponentRelationship id="yi1ChildRel" idRef="y_axis" type="CHILD"/>
+                </Relationships>
+                <Specifications>
+                  <Specification id="yi1LengthSpec" type="LENGTH" units="MILLIMETER">
+                    <Nominal>650</Nominal>
+                  </Specification>
+                  <Specification id="yi1LinearForceSpec" type="LINEAR_FORCE" units="NEWTON">
+                    <Maximum>5200</Maximum>
+                    <Minimum>0</Minimum>
+                  </Specification>
+                  <Specification id="yi1RapidVelSpec" subType="RAPID" type="VELOCITY" units="MILLIMETER/SECOND">
+                    <Maximum>7000</Maximum>
+                    <Minimum>1</Minimum>
+                  </Specification>
+                  <Specification id="yi1ProgrammedVelSpec" subType="PROGRAMMED" type="VELOCITY" units="MILLIMETER/SECOND">
+                    <Maximum>7000</Maximum>
+                    <Minimum>1</Minimum>
+                  </Specification>
+                </Specifications>
+              </Configuration>
+              <DataItems>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="machine" id="LYI1actm" name="YI1actm" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="work" id="LYI1actw" name="YI1actw" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                <DataItem category="SAMPLE" id="LYS1load" name="YS1load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+              </DataItems>
+            </Linear>
+            <Linear id="Lz1" name="Z1">
+              <Configuration>
+                <Motion actuation="DIRECT" coordinateSystemIdRef="machine" id="z1motion" type="PRISMATIC">
+                  <Axis>0 0 1</Axis>
+                  <Transformation>
+                    <Rotation>0 0 0</Rotation>
+                    <Translation>0 0 0</Translation>
+                  </Transformation>
+                </Motion>
+                <Relationships>
+                  <ComponentRelationship id="z1ParentRel" idRef="enclosure" type="PARENT"/>
+                  <ComponentRelationship id="z1ChildRel" idRef="z1_axis" type="CHILD"/>
+                </Relationships>
+                <Specifications>
+                  <Specification id="z1LengthSpec" type="LENGTH" units="MILLIMETER">
+                    <Nominal>650</Nominal>
+                  </Specification>
+                  <Specification id="z1LinearForceSpec" type="LINEAR_FORCE" units="NEWTON">
+                    <Maximum>5200</Maximum>
+                    <Minimum>0</Minimum>
+                  </Specification>
+                  <Specification id="z1RapidVelSpec" subType="RAPID" type="VELOCITY" units="MILLIMETER/SECOND">
+                    <Maximum>7000</Maximum>
+                    <Minimum>1</Minimum>
+                  </Specification>
+                  <Specification id="z1ProgrammedVelSpec" subType="PROGRAMMED" type="VELOCITY" units="MILLIMETER/SECOND">
+                    <Maximum>7000</Maximum>
+                    <Minimum>1</Minimum>
+                  </Specification>
+                </Specifications>
+              </Configuration>
+              <DataItems>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="machine" id="LZ1actm" name="Z1actm" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="work" id="LZ1actw" name="Z1actw" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                <DataItem category="SAMPLE" id="LZ1load" name="Z1load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+              </DataItems>
+            </Linear>
+            <Rotary id="Lb1" name="B" nativeName="BA">
+              <Configuration>
+                <Motion actuation="DIRECT" coordinateSystemIdRef="machine" id="bmotion" type="REVOLUTE">
+                  <Axis>0 1 0</Axis>
+                  <Transformation>
+                    <Rotation>0 0 0</Rotation>
+                    <Translation>-623.423 1027.32 -993.652</Translation>
+                  </Transformation>
+                </Motion>
+                <Relationships>
+                  <ComponentRelationship id="lb1axp" idRef="y_axis" type="PARENT"/>
+                  <ComponentRelationship id="lb1axc" idRef="b_axis" type="CHILD"/>
+                </Relationships>
+              </Configuration>
+              <DataItems>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="machine" id="LB1actw" name="B1actw" nativeUnits="DEGREE" subType="ACTUAL" type="ANGLE" units="DEGREE"/>
+                <DataItem category="SAMPLE" id="LB1load" name="B1load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+                <DataItem category="EVENT" id="LB1Mode" name="B1Mode" type="ROTARY_MODE">
+                  <Constraints>
+                    <Value>INDEX</Value>
+                  </Constraints>
+                </DataItem>
+              </DataItems>
+            </Rotary>
+            <Rotary id="Lc1" name="C1" nativeName="S">
+              <Configuration>
+                <Motion actuation="DIRECT" coordinateSystemIdRef="machine" id="cmotion" type="CONTINUOUS">
+                  <Axis>0 0 1</Axis>
+                  <Transformation>
+                    <Rotation>0 0 0</Rotation>
+                    <Translation>0 0 0</Translation>
+                  </Transformation>
+                </Motion>
+                <Relationships>
+                  <ComponentRelationship id="lc1axp" idRef="enclosure" type="PARENT"/>
+                </Relationships>
+              </Configuration>
+              <DataItems>
+                <DataItem category="SAMPLE" id="LS1speed" name="S1speed" nativeUnits="REVOLUTION/MINUTE" subType="ACTUAL" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
+                <DataItem category="SAMPLE" id="LS1cmd" name="S1cmd" nativeUnits="REVOLUTION/MINUTE" subType="PROGRAMMED" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
+                <DataItem category="EVENT" id="LS1ovr" name="S1ovr" nativeUnits="PERCENT" subType="PROGRAMMED" type="ROTARY_VELOCITY_OVERRIDE" units="PERCENT"/>
+                <DataItem category="SAMPLE" id="LS1load" name="S1load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+                <DataItem category="EVENT" id="LS1Mode" name="S1Mode" type="ROTARY_MODE">
+                  <Constraints>
+                    <Value>SPINDLE</Value>
+                  </Constraints>
+                </DataItem>
+                <DataItem category="EVENT" id="LS1ChuckState" name="S1ChuckState" type="CHUCK_STATE"/>
+                <DataItem category="SAMPLE" id="LS1SurfaceSpeedA" name="S1SurfaceSpeedA" subType="x:PATH_1" type="e:SURFACE_SPEED" units="MILLIMETER/SECOND"/>
+              </DataItems>
+            </Rotary>
+            <Linear id="Lz4" name="Z4" nativeName="WA">
+              <Configuration>
+                <Motion actuation="DIRECT" coordinateSystemIdRef="machine_r" id="z4motion" type="PRISMATIC">
+                  <Axis>0 0 1</Axis>
+                  <Transformation>
+                    <Rotation>0 0 0</Rotation>
+                    <Translation>0 0 0</Translation>
+                  </Transformation>
+                </Motion>
+                <Relationships>
+                  <ComponentRelationship id="z4ParentRel" idRef="enclosure" type="PARENT"/>
+                  <ComponentRelationship id="z4ChildRel" idRef="z4_axis" type="CHILD"/>
+                </Relationships>
+                <Specifications>
+                  <Specification id="z4LengthSpec" type="LENGTH" units="MILLIMETER">
+                    <Nominal>650</Nominal>
+                  </Specification>
+                  <Specification id="z4LinearForceSpec" type="LINEAR_FORCE" units="NEWTON">
+                    <Maximum>5200</Maximum>
+                    <Minimum>0</Minimum>
+                  </Specification>
+                  <Specification id="z4RapidVelSpec" subType="RAPID" type="VELOCITY" units="MILLIMETER/SECOND">
+                    <Maximum>7000</Maximum>
+                    <Minimum>1</Minimum>
+                  </Specification>
+                  <Specification id="z4ProgrammedVelSpec" subType="PROGRAMMED" type="VELOCITY" units="MILLIMETER/SECOND">
+                    <Maximum>7000</Maximum>
+                    <Minimum>1</Minimum>
+                  </Specification>
+                </Specifications>
+              </Configuration>
+              <DataItems>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="machine" id="LZ4actm" name="Z4actm" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="work" id="LZ4actw" name="Z4actw" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+                <DataItem category="SAMPLE" id="LZ4load" name="Z4load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+              </DataItems>
+            </Linear>
+            <Rotary id="Lc2" name="C2" nativeName="S">
+              <Configuration>
+                <Motion actuation="DIRECT" coordinateSystemIdRef="machine_r" id="c2motion" type="REVOLUTE">
+                  <Axis>0 0 1</Axis>
+                  <Transformation>
+                    <Rotation>0 0 0</Rotation>
+                    <Translation>0 0 0</Translation>
+                  </Transformation>
+                </Motion>
+                <Relationships>
+                  <ComponentRelationship id="c2ParentRel" idRef="z4_axis" type="PARENT"/>
+                  <ComponentRelationship id="c2ChildRel" idRef="c2_axis" type="CHILD"/>
+                </Relationships>
+              </Configuration>
+              <DataItems>
+                <DataItem category="SAMPLE" id="LS2speed" name="S2speed" nativeUnits="REVOLUTION/MINUTE" subType="ACTUAL" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
+                <DataItem category="SAMPLE" id="LS2cmd" name="S2cmd" nativeUnits="REVOLUTION/MINUTE" subType="PROGRAMMED" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
+                <DataItem category="SAMPLE" id="LS2load" name="S2load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+                <DataItem category="EVENT" id="LS2ovr" name="S2ovr" nativeUnits="PERCENT" subType="PROGRAMMED" type="ROTARY_VELOCITY_OVERRIDE" units="PERCENT"/>
+                <DataItem category="EVENT" id="LS2Mode" name="S2Mode" type="ROTARY_MODE">
+                  <Constraints>
+                    <Value>SPINDLE</Value>
+                  </Constraints>
+                </DataItem>
+                <DataItem category="EVENT" id="LS2ChuckState" name="S2ChuckState" type="CHUCK_STATE"/>
+                <DataItem category="SAMPLE" id="LS2SurfaceSpeedA" name="S2SurfaceSpeedA" subType="x:PATH_1" type="e:SURFACE_SPEED" units="MILLIMETER/SECOND"/>
+              </DataItems>
+            </Rotary>
+            <Rotary id="Lc3" name="C3" nativeName="CA">
+              <Configuration>
+                <Motion actuation="DIRECT" coordinateSystemIdRef="machine" id="c3motion" type="REVOLUTE">
+                  <Axis>0 0 1</Axis>
+                  <Transformation>
+                    <Rotation>0 0 0</Rotation>
+                    <Translation>0 0 0</Translation>
+                  </Transformation>
+                </Motion>
+                <Relationships>
+                  <ComponentRelationship id="c2parent" idRef="z4_axis" type="PARENT"/>
+                  <ComponentRelationship id="c2child" idRef="c2_axis" type="PARENT"/>
+                </Relationships>
+              </Configuration>
+              <DataItems>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="machine" id="LC3actm" name="C3actm" nativeUnits="DEGREE" subType="ACTUAL" type="ANGLE" units="DEGREE"/>
+                <DataItem category="SAMPLE" coordinateSystemIdRef="work" id="LC3actw" name="C3actw" nativeUnits="DEGREE" subType="ACTUAL" type="ANGLE" units="DEGREE"/>
+                <DataItem category="SAMPLE" id="LC3load" name="C3load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+                <DataItem category="EVENT" id="LC3Mode" name="C3Mode" type="ROTARY_MODE">
+                  <Constraints>
+                    <Value>INDEX</Value>
+                  </Constraints>
+                </DataItem>
+              </DataItems>
+            </Rotary>
+            <Rotary id="Lc6" name="C6" nativeName="SA">
+              <DataItems>
+                <DataItem category="SAMPLE" id="LS6speed" name="S6speed" nativeUnits="REVOLUTION/MINUTE" subType="ACTUAL" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
+                <DataItem category="SAMPLE" id="LS6cmd" name="S6cmd" nativeUnits="REVOLUTION/MINUTE" subType="PROGRAMMED" type="ROTARY_VELOCITY" units="REVOLUTION/MINUTE"/>
+                <DataItem category="EVENT" id="LS6ovr" name="S6ovr" nativeUnits="PERCENT" subType="PROGRAMMED" type="ROTARY_VELOCITY_OVERRIDE" units="PERCENT"/>
+                <DataItem category="SAMPLE" id="LS6load" name="S6load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
+                <DataItem category="EVENT" id="LS6Mode" name="S6Mode" type="ROTARY_MODE">
+                  <Constraints>
+                    <Value>SPINDLE</Value>
+                  </Constraints>
+                </DataItem>
+              </DataItems>
+            </Rotary>
+          </Components>
+        </Axes>
+        <Controller id="Lct1" name="Controller">
+          <DataItems>
+            <DataItem category="EVENT" id="Lestop" name="estop" type="EMERGENCY_STOP"/>
+            <DataItem category="CONDITION" id="Lsystem" name="system" type="SYSTEM"/>
+            <DataItem category="EVENT" id="Lpmode" name="pmode" type="CONTROLLER_MODE"/>
+            <DataItem category="EVENT" id="Lpprogram" name="pprogram" type="PROGRAM"/>
+            <DataItem category="EVENT" id="Lpprogramoperation" name="pprogramoperation" subType="OPERATION" type="PROGRAM"/>
+            <DataItem category="EVENT" id="Lpexecution" name="pexecution" type="EXECUTION"/>
+            <DataItem category="EVENT" id="LpFovr" name="pFovr" nativeUnits="PERCENT" subType="PROGRAMMED" type="PATH_FEEDRATE_OVERRIDE" units="PERCENT"/>
+            <DataItem category="EVENT" id="Lppartcount" name="ppartcount" type="PART_COUNT"/>
+            <DataItem category="SAMPLE" id="Lp1ETWorking" name="p1ETWorking" nativeUnits="SECOND" subType="WORKING" type="EQUIPMENT_TIMER" units="SECOND"/>
+            <DataItem category="SAMPLE" id="Lp1ETOperating" name="p1ETOperating" nativeUnits="SECOND" subType="OPERATING" type="EQUIPMENT_TIMER" units="SECOND"/>
+            <DataItem category="SAMPLE" id="Lp1ETLoaded" name="p1ETLoaded" nativeUnits="SECOND" subType="LOADED" type="EQUIPMENT_TIMER" units="SECOND"/>
+            <DataItem category="SAMPLE" id="LpTotalOperatingTime" name="pTotalOperatingTime" subType="x:TOTAL_OPERATING_TIME" type="ACCUMULATED_TIME"/>
+            <DataItem category="SAMPLE" id="LpTotalRunningTime" name="pTotalRunningTime" subType="x:TOTAL_RUNNING_TIME" type="ACCUMULATED_TIME"/>
+            <DataItem category="SAMPLE" id="LpTotalCuttingTime" name="pTotalCuttingTime" subType="x:TOTAL_CUTTING_TIME" type="ACCUMULATED_TIME"/>
+            <DataItem category="SAMPLE" id="LpTotalSpindleRunTime" name="pTotalSpindleRunTime" subType="x:TOTAL_SPINDLE_RUN_TIME" type="ACCUMULATED_TIME"/>
+            <DataItem category="SAMPLE" id="LpOperatingTime" name="pOperatingTime" subType="x:OPERATING_TIME" type="ACCUMULATED_TIME"/>
+            <DataItem category="SAMPLE" id="LpRunningTime" name="pRunningTime" subType="x:RUNNING_TIME" type="ACCUMULATED_TIME"/>
+            <DataItem category="SAMPLE" id="LpCuttingTime" name="pCuttingTime" subType="x:CUTTING_TIME" type="ACCUMULATED_TIME"/>
+            <DataItem category="SAMPLE" id="LpSpindleRunTime" name="pSpindleRunTime" subType="x:SPINDLE_RUN_TIME" type="ACCUMULATED_TIME"/>
+            <DataItem category="EVENT" id="Lp1CommonVariable" name="p1CommonVariable" subType="x:COMMON" type="e:VARIABLES"/>
+            <DataItem category="EVENT" id="Lp1MacManPanelHistory" name="p1MacManPanelHistory" subType="x:PANEL_HISTORY" type="e:MACMAN"/>
+            <DataItem category="EVENT" id="Lp1MachineOperationPanelOutputDryRun" name="p1MachineOperationPanelOutputDryRun" subType="x:DRY_RUN" type="e:OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="Lp1MachineOperationPanelOutputMachineLock" name="p1MachineOperationPanelOutputMachineLock" subType="x:MACHINE_LOCK" type="e:OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_1" name="PlcMonitorIO_1" subType="x:PLC_MONITOR_IO_1" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_2" name="PlcMonitorIO_2" subType="x:PLC_MONITOR_IO_2" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_3" name="PlcMonitorIO_3" subType="x:PLC_MONITOR_IO_3" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_4" name="PlcMonitorIO_4" subType="x:PLC_MONITOR_IO_4" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_5" name="PlcMonitorIO_5" subType="x:PLC_MONITOR_IO_5" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_6" name="PlcMonitorIO_6" subType="x:PLC_MONITOR_IO_6" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_7" name="PlcMonitorIO_7" subType="x:PLC_MONITOR_IO_7" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_8" name="PlcMonitorIO_8" subType="x:PLC_MONITOR_IO_8" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_9" name="PlcMonitorIO_9" subType="x:PLC_MONITOR_IO_9" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="LPlcMonitorIO_10" name="PlcMonitorIO_10" subType="x:PLC_MONITOR_IO_10" type="e:INPUT_OUTPUT_SIGNAL"/>
+            <DataItem category="EVENT" id="Lp1ProgramHeader" name="p1ProgramHeader" type="PROGRAM_HEADER"/>
+            <DataItem category="EVENT" id="Lp1PalletID" name="p1PalletID" type="PALLET_ID"/>
+            <DataItem category="EVENT" id="Lp1CMOMachineAxisLock" name="p1CMOMachineAxisLock" subType="MACHINE_AXIS_LOCK" type="CONTROLLER_MODE_OVERRIDE"/>
+            <DataItem category="EVENT" id="Lp1CMOSinglBlock" name="p1CMOSinglBlock" subType="SINGLE_BLOCK" type="CONTROLLER_MODE_OVERRIDE"/>
+            <DataItem category="EVENT" id="Lp1CMODryRun" name="p1CMODryRun" subType="DRY_RUN" type="CONTROLLER_MODE_OVERRIDE"/>
+            <DataItem category="EVENT" id="Lp1CMOOptionalStop" name="p1CMOOptionalStop" subType="OPTIONAL_STOP" type="CONTROLLER_MODE_OVERRIDE"/>
+            <DataItem category="EVENT" id="Lp1FixtureId" name="p1FixtureId" type="FIXTURE_ID"/>
+          </DataItems>
+          <Components>
+            <Path id="Lp1" name="path">
+              <DataItems>
+                <DataItem category="SAMPLE" id="Lp1Fact" name="p1Fact" nativeUnits="MILLIMETER/MINUTE" subType="ACTUAL" type="PATH_FEEDRATE" units="MILLIMETER/SECOND"/>
+                <DataItem category="EVENT" id="Lp1block" name="p1block" type="BLOCK"/>
+                <DataItem category="EVENT" id="Lp1linelabel" name="p1linelabel" type="LINE_LABEL"/>
+                <DataItem category="EVENT" id="Lp1linenumber" name="p1linenumber" subType="ABSOLUTE" type="LINE_NUMBER"/>
+                <DataItem category="SAMPLE" id="Lp1Fcmd" name="p1Fcmd" nativeUnits="MILLIMETER/MINUTE" subType="PROGRAMMED" type="PATH_FEEDRATE" units="MILLIMETER/SECOND"/>
+                <DataItem category="SAMPLE" coordinateSystem="WORK" id="Lp1LPathPos" name="p1LPathPos" nativeUnits="MILLIMETER_3D" subType="ACTUAL" type="PATH_POSITION" units="MILLIMETER_3D"/>
+                <DataItem category="EVENT" id="Lp1CurrentTool" name="p1CurrentTool" type="TOOL_NUMBER"/>
+                <DataItem category="EVENT" id="Lp1ToolAssetId" name="p1ToolAssetId" type="TOOL_ASSET_ID"/>
+                <DataItem category="EVENT" id="Lp1BlockNumber" name="p1BlockNumber" type="e:BLOCK_NUMBER"/>
+                <DataItem category="SAMPLE" id="Lp1Fract" name="p1Fract" subType="ACTUAL" type="e:PATH_FEEDRATE_PER_REV"/>
+                <DataItem category="SAMPLE" id="Lp1Frcmd" name="p1Frcmd" subType="PROGRAMMED" type="e:PATH_FEEDRATE_PER_REV"/>
+                <DataItem category="SAMPLE" id="LS1CuttingSpeedA" name="S1CuttingSpeedA" subType="ACTUAL" type="CUTTING_SPEED" units="MILLIMETER/SECOND"/>
+              </DataItems>
+            </Path>
+          </Components>
+        </Controller>
+        <Systems id="LSystems1" name="Systems1">
+          <Components>
+            <Coolant id="LCoolantSystem1" name="CoolantSystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LCoolantSystem1_cond" name="CoolantSystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </Coolant>
+            <Electric id="LElectricSystem1" name="ElectricSystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LElectricSystem1_cond" name="ElectricSystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </Electric>
+            <Hydraulic id="LHydraulicSystem1" name="HydraulicSystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LHydraulicSystem1_cond" name="HydraulicSystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </Hydraulic>
+            <Lubrication id="LLubricationSystem1" name="LubricationSystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LLubricationSystem_cond" name="LubricationSystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </Lubrication>
+            <Pneumatic id="LPneumaticSystem1" name="PneumaticSystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LPneumaticSystem1_cond" name="PneumaticSystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </Pneumatic>
+          </Components>
+        </Systems>
+        <Auxiliaries id="LAux1">
+          <Components>
+            <Loader id="LLoaderSystem1" name="LoaderSystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LLoaderSystem1_cond" name="LoaderSystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </Loader>
+            <WasteDisposal id="LWasteDisposalSystem1" name="WasteDisposalSystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LWasteDisposalSystem1_cond" name="WasteDisposalSystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </WasteDisposal>
+            <ToolingDelivery id="LToolingDeliverySystem1" name="ToolingDeliverySystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LToolingDeliverySystem1_cond" name="ToolingDeliverySystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </ToolingDelivery>
+            <BarFeeder id="LBarFeederSystem1" name="BarFeederSystem1">
+              <DataItems>
+                <DataItem category="CONDITION" id="LBarFeederSystem1_cond" name="BarFeederSystem1_cond" type="SYSTEM"/>
+              </DataItems>
+            </BarFeeder>
+          </Components>
+        </Auxiliaries>
+        <Resources id="resources" name="resources">
+          <Components>
+            <Personnel id="personnel" name="personnel">
+              <DataItems>
+                <DataItem category="EVENT" id="MachineOperator" name="MachineOperator" subType="OPERATOR" type="USER"/>
+                <DataItem category="EVENT" id="MachineMaintenance" name="MachineMaintenance" subType="MAINTENANCE" type="USER"/>
+                <DataItem category="EVENT" id="MachineSetup" name="MachineSetup" subType="SET_UP" type="USER"/>
+              </DataItems>
+            </Personnel>
+          </Components>
+        </Resources>
+        <Enclosure id="enclosure" name="enclosure">
+          <Configuration>
+            <SolidModel coordinateSystemIdRef="machine" id="MachineEnclosure" itemRef="FLOOR" mediaType="OBJ" solidModelIdRef="devicemodel"/>
+          </Configuration>
+          <DataItems>
+            <DataItem category="SAMPLE" id="insidetemp" name="cabinettemp" type="TEMPERATURE" units="CELSIUS"/>
+          </DataItems>
+        </Enclosure>
+      </Components>
+    </Device>
+  </Devices>
+</MTConnectDevices>

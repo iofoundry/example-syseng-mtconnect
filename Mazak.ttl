@@ -46,6 +46,7 @@ data:Mazak
 		;
 	core:hasCapability data:Mazak-capability ;
 	core:hasFunction data:Mazak-function ;
+	core:hasRole data:Mazak-role ;
 	cmns-dsg:hasName data:Mazak-name ;
 	.
 
@@ -410,6 +411,10 @@ data:Mazak-procstock
 data:Mazak-procstock-name
 	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "stock"^^xs:string ;
+	.
+
+data:Mazak-role
+	a core:EquipmentRole ;
 	.
 
 data:Mazak-room

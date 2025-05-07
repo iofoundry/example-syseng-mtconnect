@@ -221,6 +221,10 @@ module Example
     VELOCITY: IOF::QualitiesPhysical.Speed,
     ROTARY_VELOCITY: IOF::QualitiesPhysical.Speed
   }
+
+  Roles = {
+    Device: IOF::Core.EquipmentRole
+  }
 end
 
 module Inst

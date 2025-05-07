@@ -61,6 +61,7 @@
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-z4_axis"/>
 		<core:hasCapability rdf:resource="&data;OKUMA.123456-capability"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-function"/>
+		<core:hasRole rdf:resource="&data;OKUMA.123456-role"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-name"/>
 	</ex:Machine>
 	
@@ -557,6 +558,9 @@
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-personnel-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">personnel</core:hasSimpleExpressionValue>
 	</cmns-dsg:Name>
+	
+	<core:EquipmentRole rdf:about="&data;OKUMA.123456-role">
+	</core:EquipmentRole>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-x_axis">
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-x_axis-name"/>

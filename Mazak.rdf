@@ -55,6 +55,7 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-zaxis"/>
 		<core:hasCapability rdf:resource="&data;Mazak-capability"/>
 		<core:hasFunction rdf:resource="&data;Mazak-function"/>
+		<core:hasRole rdf:resource="&data;Mazak-role"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-name"/>
 	</ex:Machine>
 	
@@ -340,6 +341,9 @@
 	<cmns-dsg:Name rdf:about="&data;Mazak-procstock-name">
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">stock</core:hasSimpleExpressionValue>
 	</cmns-dsg:Name>
+	
+	<core:EquipmentRole rdf:about="&data;Mazak-role">
+	</core:EquipmentRole>
 	
 	<ex:Room rdf:about="&data;Mazak-room">
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-room-temperature"/>

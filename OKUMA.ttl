@@ -52,6 +52,7 @@ data:OKUMA.123456
 		;
 	core:hasCapability data:OKUMA.123456-capability ;
 	core:hasFunction data:OKUMA.123456-function ;
+	core:hasRole data:OKUMA.123456-role ;
 	cmns-dsg:hasName data:OKUMA.123456-name ;
 	.
 
@@ -681,6 +682,10 @@ data:OKUMA.123456-personnel
 data:OKUMA.123456-personnel-name
 	a cmns-dsg:Name ;
 	core:hasSimpleExpressionValue "personnel"^^xs:string ;
+	.
+
+data:OKUMA.123456-role
+	a core:EquipmentRole ;
 	.
 
 data:OKUMA.123456-x_axis
