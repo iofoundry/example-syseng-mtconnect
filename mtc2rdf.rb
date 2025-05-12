@@ -223,66 +223,22 @@ end
 gen = GenerateGraph.new("#{machine}.puml", stmts)
 gen.generate
 
-=begin
-
-File.open("#{machine}.puml", 'w') do |f|
-  f.puts "@startuml"
-  f.puts "skinparam linetype polyline"
-  f.puts "left to right direction"
-  
-  objects.each do |k, v|
-    print_object(f, k, objects, types)
-  end
-
-  graph.each_statement do |stmt|
-    print_stmt(f, objects, stmt)
-  end
-
-  f.puts("@enduml")
+stmts = RDF::Query.execute(graph) do
+  pattern [:s, BFO::BFO.has_member_part_at_some_time, :o]           
+end.map do |s|
+  Statement.new(s.s, BFO::BFO.has_member_part_at_some_time, s.o)
 end
+gen = GenerateGraph.new("#{machine}Mere.puml", stmts)
+gen.generate
 
-File.open("#{machine}Mere.puml", 'w') do |f|
-  f.puts "@startuml"
-  f.puts "skinparam linetype polyline"
-  f.puts "left to right direction"
-
-  stmts = RDF::Query.execute(graph) do
-    pattern [:parent, BFO::BFO.has_member_part_at_some_time, :child]           
-  end
-
-  stmts.each do |stmt|
-    print_object(f, uml_name(stmt.parent), objects, types)
-    print_object(f, uml_name(stmt.child), objects, types)
-  end
-
-  stmts.each do |stmt|
-    print_stmt(f, objects, Statement.new(stmt.parent, BFO::BFO.has_member_part_at_some_time, stmt.child))
-  end
-
-  f.puts("@enduml")
+stmts = RDF::Query.execute(graph) do
+  pattern [:s, Example::Machine.joinedTo, :o]           
+end.map do |s|
+  Statement.new(s.s, Example::Machine.joinedTo, s.o)
 end
+gen = GenerateGraph.new("#{machine}Topo.puml", stmts)
+gen.generate
 
-File.open("#{machine}Topo.puml", 'w') do |f|
-  f.puts "@startuml"
-  f.puts "skinparam linetype polyline"
-  f.puts "left to right direction"
-
-  stmts = RDF::Query.execute(graph) do
-    pattern [:parent, Example::Machine.joinedTo, :child]           
-  end
-
-  stmts.each do |stmt|
-    print_object(f, uml_name(stmt.parent), objects, types)
-    print_object(f, uml_name(stmt.child), objects, types)
-  end
-
-  stmts.each do |stmt|
-    print_stmt(f, objects, Statement.new(stmt.parent, Example::Machine.joinedTo, stmt.child))
-  end
-
-  f.puts("@enduml")
-end
-=end
 
 RDF::Writer.open("#{machine}.rdf", prefixes: Prefixes) do |w|
   w << graph

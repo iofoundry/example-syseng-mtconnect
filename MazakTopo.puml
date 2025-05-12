@@ -1,0 +1,51 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "data:Mazak-x" as o1 {
+ type = ex:LinearMotionSystem
+ }
+object "data:Mazak-enclosurem" as o2 {
+ type = ex:Structure
+ }
+object "data:Mazak-xaxism" as o3 {
+ type = ex:Structure
+ }
+object "data:Mazak-y" as o4 {
+ type = ex:LinearMotionSystem
+ }
+object "data:Mazak-yaxism" as o5 {
+ type = ex:Structure
+ }
+object "data:Mazak-z" as o6 {
+ type = ex:LinearMotionSystem
+ }
+object "data:Mazak-zaxis" as o7 {
+ type = ex:Structure
+ }
+object "data:Mazak-c" as o8 {
+ type = ex:RotaryMotionSystem
+ }
+object "data:Mazak-br" as o9 {
+ type = ex:RotaryMotionSystem
+ }
+object "data:Mazak-trundle" as o10 {
+ type = ex:Structure
+ }
+object "data:Mazak-c2" as o11 {
+ type = ex:RotaryMotionSystem
+ }
+object "data:Mazak-table" as o12 {
+ type = ex:Structure
+ }
+o1 --> o2 : ex:joinedTo
+o1 --> o3 : ex:joinedTo
+o4 --> o3 : ex:joinedTo
+o4 --> o5 : ex:joinedTo
+o6 --> o5 : ex:joinedTo
+o6 --> o7 : ex:joinedTo
+o8 --> o7 : ex:joinedTo
+o9 --> o2 : ex:joinedTo
+o9 --> o10 : ex:joinedTo
+o11 --> o10 : ex:joinedTo
+o11 --> o12 : ex:joinedTo
+@enduml
