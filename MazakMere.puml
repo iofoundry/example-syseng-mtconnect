@@ -101,6 +101,7 @@ object "data:Mazak-cont-path1" as o33 {
  type = ex:ControlSystemPath
  }
 o1 --> o2 : obo:has member part at some time
+o1 : cmns-dsg:hasName = Mazak
 o1 --> o3 : obo:has member part at some time
 o1 --> o4 : obo:has member part at some time
 o1 --> o5 : obo:has member part at some time
@@ -123,13 +124,20 @@ o1 --> o21 : obo:has member part at some time
 o1 --> o22 : obo:has member part at some time
 o1 --> o23 : obo:has member part at some time
 o7 --> o24 : obo:has member part at some time
+o7 : cmns-dsg:hasName = X
 o7 --> o25 : obo:has member part at some time
 o8 --> o26 : obo:has member part at some time
+o8 : cmns-dsg:hasName = Y
 o8 --> o27 : obo:has member part at some time
 o9 --> o28 : obo:has member part at some time
+o9 : cmns-dsg:hasName = Z
 o9 --> o29 : obo:has member part at some time
 o10 --> o30 : obo:has member part at some time
+o10 : cmns-dsg:hasName = C1
 o11 --> o31 : obo:has member part at some time
+o11 : cmns-dsg:hasName = B
 o12 --> o32 : obo:has member part at some time
+o12 : cmns-dsg:hasName = C2
 o13 --> o33 : obo:has member part at some time
+o13 : cmns-dsg:hasName = controller
 @enduml

@@ -212,6 +212,13 @@ class GenerateGraph
       f.puts("@enduml")
     end
     @f = nil
+
+    puts "Exec: plantuml -tsvg #{@filename}"
+    `plantuml -tsvg #{@filename}`
+    puts "Done"
+
+  rescue
+    puts "Error occurred during wriing of file: #{$!}"    
   end
 end
 
@@ -223,22 +230,37 @@ end
 gen = GenerateGraph.new("#{machine}.puml", stmts)
 gen.generate
 
+once = Set.new
 stmts = RDF::Query.execute(graph) do
   pattern [:s, BFO::BFO.has_member_part_at_some_time, :o]           
+  pattern [:s, OMG::Designators.hasName, :d]
+  pattern [:d, IOF::Core.hasSimpleExpressionValue, :n]  
 end.map do |s|
-  Statement.new(s.s, BFO::BFO.has_member_part_at_some_time, s.o)
-end
+  v = [Statement.new(s.s, BFO::BFO.has_member_part_at_some_time, s.o)]
+  unless once.include?(s.s)
+    v << Statement.new(s.s, OMG::Designators.hasName, s.n)
+    once << s.s
+  end
+  v  
+end.flatten
 gen = GenerateGraph.new("#{machine}Mere.puml", stmts)
 gen.generate
 
+once = Set.new
 stmts = RDF::Query.execute(graph) do
-  pattern [:s, Example::Machine.joinedTo, :o]           
+  pattern [:s, Example::Machine.joinedTo, :o]
+  pattern [:s, OMG::Designators.hasName, :d]
+  pattern [:d, IOF::Core.hasSimpleExpressionValue, :n]  
 end.map do |s|
-  Statement.new(s.s, Example::Machine.joinedTo, s.o)
-end
+  v = [Statement.new(s.s, Example::Machine.joinedTo, s.o)]
+  unless once.include?(s.s)
+    v << Statement.new(s.s, OMG::Designators.hasName, s.n)
+    once << s.s
+  end
+  v
+end.flatten
 gen = GenerateGraph.new("#{machine}Topo.puml", stmts)
 gen.generate
-
 
 RDF::Writer.open("#{machine}.rdf", prefixes: Prefixes) do |w|
   w << graph
