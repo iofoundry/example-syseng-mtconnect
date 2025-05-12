@@ -1,413 +1,413 @@
 @startuml
 skinparam linetype polyline
 left to right direction
-object "data:" as o1{
+object "data:" as o1 {
  type = owl:Ontology
  }
-object "ex:" as o2
-object "data:Mazak" as o3{
+object "ex:" as o2 
+object "data:Mazak" as o3 {
  type = ex:Machine
  }
-object "data:Mazak-name" as o4{
+object "data:Mazak-name" as o4 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-function" as o5{
+object "data:Mazak-function" as o5 {
  type = ex:MillingCapability
  }
-object "data:Mazak-capability" as o6{
+object "data:Mazak-capability" as o6 {
  type = ex:TurningCapability
  }
-object "data:Mazak-role" as o7{
+object "data:Mazak-role" as o7 {
  type = core:EquipmentRole
  }
-object "data:Mazak-xaxism" as o8{
+object "data:Mazak-xaxism" as o8 {
  type = ex:Structure
  }
-object "data:Mazak-yaxism" as o9{
+object "data:Mazak-yaxism" as o9 {
  type = ex:Structure
  }
-object "data:Mazak-zaxis" as o10{
+object "data:Mazak-zaxis" as o10 {
  type = ex:Structure
  }
-object "data:Mazak-table" as o11{
+object "data:Mazak-table" as o11 {
  type = ex:Structure
  }
-object "data:Mazak-trundle" as o12{
+object "data:Mazak-trundle" as o12 {
  type = ex:Structure
  }
-object "data:Mazak-x" as o13{
+object "data:Mazak-x" as o13 {
  type = ex:LinearMotionSystem
  }
-object "data:Mazak-y" as o14{
+object "data:Mazak-y" as o14 {
  type = ex:LinearMotionSystem
  }
-object "data:Mazak-z" as o15{
+object "data:Mazak-z" as o15 {
  type = ex:LinearMotionSystem
  }
-object "data:Mazak-c" as o16{
+object "data:Mazak-c" as o16 {
  type = ex:RotaryMotionSystem
  }
-object "data:Mazak-br" as o17{
+object "data:Mazak-br" as o17 {
  type = ex:RotaryMotionSystem
  }
-object "data:Mazak-c2" as o18{
+object "data:Mazak-c2" as o18 {
  type = ex:RotaryMotionSystem
  }
-object "data:Mazak-cont" as o19{
+object "data:Mazak-cont" as o19 {
  type = ex:ControlSystem
  }
-object "data:Mazak-door1" as o20{
+object "data:Mazak-door1" as o20 {
  type = obo:object
  }
-object "data:Mazak-partocc" as o21{
+object "data:Mazak-partocc" as o21 {
  type = ex:Part
  }
-object "data:Mazak-elec" as o22{
+object "data:Mazak-elec" as o22 {
  type = ex:ElectricalSystem
  }
-object "data:Mazak-hydraulic" as o23{
+object "data:Mazak-hydraulic" as o23 {
  type = ex:HydraulicSystem
  }
-object "data:Mazak-coolant" as o24{
+object "data:Mazak-coolant" as o24 {
  type = obo:object
  }
-object "data:Mazak-pneumatic" as o25{
+object "data:Mazak-pneumatic" as o25 {
  type = ex:PneumaticSystem
  }
-object "data:Mazak-lubrication" as o26{
+object "data:Mazak-lubrication" as o26 {
  type = ex:LubricationSystem
  }
-object "data:Mazak-personnelm" as o27{
+object "data:Mazak-personnelm" as o27 {
  type = core:Person
  }
-object "data:Mazak-procstock" as o28{
+object "data:Mazak-procstock" as o28 {
  type = ex:Stock
  }
-object "data:Mazak-enclosurem" as o29{
+object "data:Mazak-enclosurem" as o29 {
  type = ex:Structure
  }
-object "data:Mazak-xaxism-name" as o30{
+object "data:Mazak-xaxism-name" as o30 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-yaxism-name" as o31{
+object "data:Mazak-yaxism-name" as o31 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-zaxis-name" as o32{
+object "data:Mazak-zaxis-name" as o32 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-table-name" as o33{
+object "data:Mazak-table-name" as o33 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-trundle-name" as o34{
+object "data:Mazak-trundle-name" as o34 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-x-name" as o35{
+object "data:Mazak-x-name" as o35 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-x-spec" as o36{
+object "data:Mazak-x-spec" as o36 {
  type = core:DesignSpecification
  }
-object "data:Mazak-x-function" as o37{
+object "data:Mazak-x-function" as o37 {
  type = ex:PrismaticMotionCapability
  }
-object "data:Mazak-x-position-actual" as o38{
+object "data:Mazak-x-position-actual" as o38 {
  type = qp:Displacement
  }
-object "data:Mazak-x-position" as o39{
+object "data:Mazak-x-position" as o39 {
  type = qp:Displacement
  }
-object "data:Mazak-x-temperature" as o40{
+object "data:Mazak-x-temperature" as o40 {
  type = qp:Temperature
  }
-object "data:Mazak-x-Xballscrew" as o41{
+object "data:Mazak-x-Xballscrew" as o41 {
  type = ex:Ballscrew
  }
-object "data:Mazak-x-Xmotor" as o42{
+object "data:Mazak-x-Xmotor" as o42 {
  type = ex:Motor
  }
-object "data:Mazak-x-spec-LENGTH-Nominal" as o43{
+object "data:Mazak-x-spec-LENGTH-Nominal" as o43 {
  type = core:ValueExpression
  }
-object "data:Mazak-x-spec-LINEAR_FORCE-Maximum" as o44{
+object "data:Mazak-x-spec-LINEAR_FORCE-Maximum" as o44 {
  type = core:ValueExpression
  }
-object "data:Mazak-x-spec-LINEAR_FORCE-Minimum" as o45{
+object "data:Mazak-x-spec-LINEAR_FORCE-Minimum" as o45 {
  type = core:ValueExpression
  }
-object "data:Mazak-x-spec-VELOCITY-RAPID-Maximum" as o46{
+object "data:Mazak-x-spec-VELOCITY-RAPID-Maximum" as o46 {
  type = core:ValueExpression
  }
-object "data:Mazak-x-spec-VELOCITY-RAPID-Minimum" as o47{
+object "data:Mazak-x-spec-VELOCITY-RAPID-Minimum" as o47 {
  type = core:ValueExpression
  }
-object "data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum" as o48{
+object "data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum" as o48 {
  type = core:ValueExpression
  }
-object "data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum" as o49{
+object "data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum" as o49 {
  type = core:ValueExpression
  }
-object "units:MilliM" as o50
-object "units:N" as o51
-object "units:MilliM-PER-SEC" as o52
-object "data:Mazak-x-Xballscrew-name" as o53{
+object "units:MilliM" as o50 
+object "units:N" as o51 
+object "units:MilliM-PER-SEC" as o52 
+object "data:Mazak-x-Xballscrew-name" as o53 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-x-Xmotor-name" as o54{
+object "data:Mazak-x-Xmotor-name" as o54 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-y-name" as o55{
+object "data:Mazak-y-name" as o55 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-y-spec" as o56{
+object "data:Mazak-y-spec" as o56 {
  type = core:DesignSpecification
  }
-object "data:Mazak-y-function" as o57{
+object "data:Mazak-y-function" as o57 {
  type = ex:PrismaticMotionCapability
  }
-object "data:Mazak-y-position-actual" as o58{
+object "data:Mazak-y-position-actual" as o58 {
  type = qp:Displacement
  }
-object "data:Mazak-y-position" as o59{
+object "data:Mazak-y-position" as o59 {
  type = qp:Displacement
  }
-object "data:Mazak-y-temperature" as o60{
+object "data:Mazak-y-temperature" as o60 {
  type = qp:Temperature
  }
-object "data:Mazak-y-Yballscrew" as o61{
+object "data:Mazak-y-Yballscrew" as o61 {
  type = ex:Ballscrew
  }
-object "data:Mazak-y-Ymotor" as o62{
+object "data:Mazak-y-Ymotor" as o62 {
  type = ex:Motor
  }
-object "data:Mazak-y-spec-LENGTH-Nominal" as o63{
+object "data:Mazak-y-spec-LENGTH-Nominal" as o63 {
  type = core:ValueExpression
  }
-object "data:Mazak-y-spec-LINEAR_FORCE-Maximum" as o64{
+object "data:Mazak-y-spec-LINEAR_FORCE-Maximum" as o64 {
  type = core:ValueExpression
  }
-object "data:Mazak-y-spec-LINEAR_FORCE-Minimum" as o65{
+object "data:Mazak-y-spec-LINEAR_FORCE-Minimum" as o65 {
  type = core:ValueExpression
  }
-object "data:Mazak-y-spec-VELOCITY-RAPID-Maximum" as o66{
+object "data:Mazak-y-spec-VELOCITY-RAPID-Maximum" as o66 {
  type = core:ValueExpression
  }
-object "data:Mazak-y-spec-VELOCITY-RAPID-Minimum" as o67{
+object "data:Mazak-y-spec-VELOCITY-RAPID-Minimum" as o67 {
  type = core:ValueExpression
  }
-object "data:Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum" as o68{
+object "data:Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum" as o68 {
  type = core:ValueExpression
  }
-object "data:Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum" as o69{
+object "data:Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum" as o69 {
  type = core:ValueExpression
  }
-object "data:Mazak-y-Yballscrew-name" as o70{
+object "data:Mazak-y-Yballscrew-name" as o70 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-y-Ymotor-name" as o71{
+object "data:Mazak-y-Ymotor-name" as o71 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-z-name" as o72{
+object "data:Mazak-z-name" as o72 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-z-spec" as o73{
+object "data:Mazak-z-spec" as o73 {
  type = core:DesignSpecification
  }
-object "data:Mazak-z-function" as o74{
+object "data:Mazak-z-function" as o74 {
  type = ex:PrismaticMotionCapability
  }
-object "data:Mazak-z-position-actual" as o75{
+object "data:Mazak-z-position-actual" as o75 {
  type = qp:Displacement
  }
-object "data:Mazak-z-position" as o76{
+object "data:Mazak-z-position" as o76 {
  type = qp:Displacement
  }
-object "data:Mazak-z-temperature" as o77{
+object "data:Mazak-z-temperature" as o77 {
  type = qp:Temperature
  }
-object "data:Mazak-z-Zballscrew" as o78{
+object "data:Mazak-z-Zballscrew" as o78 {
  type = ex:Ballscrew
  }
-object "data:Mazak-z-Zmotor" as o79{
+object "data:Mazak-z-Zmotor" as o79 {
  type = ex:Motor
  }
-object "data:Mazak-z-spec-LENGTH-Nominal" as o80{
+object "data:Mazak-z-spec-LENGTH-Nominal" as o80 {
  type = core:ValueExpression
  }
-object "data:Mazak-z-spec-LINEAR_FORCE-Maximum" as o81{
+object "data:Mazak-z-spec-LINEAR_FORCE-Maximum" as o81 {
  type = core:ValueExpression
  }
-object "data:Mazak-z-spec-LINEAR_FORCE-Minimum" as o82{
+object "data:Mazak-z-spec-LINEAR_FORCE-Minimum" as o82 {
  type = core:ValueExpression
  }
-object "data:Mazak-z-spec-VELOCITY-RAPID-Maximum" as o83{
+object "data:Mazak-z-spec-VELOCITY-RAPID-Maximum" as o83 {
  type = core:ValueExpression
  }
-object "data:Mazak-z-spec-VELOCITY-RAPID-Minimum" as o84{
+object "data:Mazak-z-spec-VELOCITY-RAPID-Minimum" as o84 {
  type = core:ValueExpression
  }
-object "data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum" as o85{
+object "data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum" as o85 {
  type = core:ValueExpression
  }
-object "data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum" as o86{
+object "data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum" as o86 {
  type = core:ValueExpression
  }
-object "data:Mazak-z-Zballscrew-name" as o87{
+object "data:Mazak-z-Zballscrew-name" as o87 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-z-Zmotor-name" as o88{
+object "data:Mazak-z-Zmotor-name" as o88 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-c-name" as o89{
+object "data:Mazak-c-name" as o89 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-c-spec" as o90{
+object "data:Mazak-c-spec" as o90 {
  type = core:DesignSpecification
  }
-object "data:Mazak-c-function" as o91{
+object "data:Mazak-c-function" as o91 {
  type = ex:ContinuousMotionCapability
  }
-object "data:Mazak-c-rotary_velocity-actual" as o92{
+object "data:Mazak-c-rotary_velocity-actual" as o92 {
  type = qp:Speed
  }
-object "data:Mazak-c-temperature" as o93{
+object "data:Mazak-c-temperature" as o93 {
  type = qp:Temperature
  }
-object "data:Mazak-c-C2motor" as o94{
+object "data:Mazak-c-C2motor" as o94 {
  type = ex:Motor
  }
-object "data:Mazak-c-spec-VELOCITY-Maximum" as o95{
+object "data:Mazak-c-spec-VELOCITY-Maximum" as o95 {
  type = core:ValueExpression
  }
-object "data:Mazak-c-spec-VELOCITY-Minimum" as o96{
+object "data:Mazak-c-spec-VELOCITY-Minimum" as o96 {
  type = core:ValueExpression
  }
-object "units:REV-PER-MIN" as o97
-object "data:Mazak-c-C2motor-name" as o98{
+object "units:REV-PER-MIN" as o97 
+object "data:Mazak-c-C2motor-name" as o98 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-br-name" as o99{
+object "data:Mazak-br-name" as o99 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-br-spec" as o100{
+object "data:Mazak-br-spec" as o100 {
  type = core:DesignSpecification
  }
-object "data:Mazak-br-function" as o101{
+object "data:Mazak-br-function" as o101 {
  type = ex:RevoluteMotionCapability
  }
-object "data:Mazak-br-angle" as o102{
+object "data:Mazak-br-angle" as o102 {
  type = qp:Angle
  }
-object "data:Mazak-br-angle-actual" as o103{
+object "data:Mazak-br-angle-actual" as o103 {
  type = qp:Angle
  }
-object "data:Mazak-br-Bmotor" as o104{
+object "data:Mazak-br-Bmotor" as o104 {
  type = ex:Motor
  }
-object "data:Mazak-br-spec-ANGLE-Maximum" as o105{
+object "data:Mazak-br-spec-ANGLE-Maximum" as o105 {
  type = core:ValueExpression
  }
-object "data:Mazak-br-spec-ANGLE-Minimum" as o106{
+object "data:Mazak-br-spec-ANGLE-Minimum" as o106 {
  type = core:ValueExpression
  }
-object "data:Mazak-br-spec-TORQUE-Maximum" as o107{
+object "data:Mazak-br-spec-TORQUE-Maximum" as o107 {
  type = core:ValueExpression
  }
-object "data:Mazak-br-spec-TORQUE-Minimum" as o108{
+object "data:Mazak-br-spec-TORQUE-Minimum" as o108 {
  type = core:ValueExpression
  }
-object "units:DEG" as o109
-object "units:N-M" as o110
-object "data:Mazak-br-Bmotor-name" as o111{
+object "units:DEG" as o109 
+object "units:N-M" as o110 
+object "data:Mazak-br-Bmotor-name" as o111 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-c2-name" as o112{
+object "data:Mazak-c2-name" as o112 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-c2-spec" as o113{
+object "data:Mazak-c2-spec" as o113 {
  type = core:DesignSpecification
  }
-object "data:Mazak-c2-function" as o114{
+object "data:Mazak-c2-function" as o114 {
  type = ex:RevoluteMotionCapability
  }
-object "data:Mazak-c2-angle" as o115{
+object "data:Mazak-c2-angle" as o115 {
  type = qp:Angle
  }
-object "data:Mazak-c2-angle-actual" as o116{
+object "data:Mazak-c2-angle-actual" as o116 {
  type = qp:Angle
  }
-object "data:Mazak-c2-temperature" as o117{
+object "data:Mazak-c2-temperature" as o117 {
  type = qp:Temperature
  }
-object "data:Mazak-c2-Cmotor" as o118{
+object "data:Mazak-c2-Cmotor" as o118 {
  type = ex:Motor
  }
-object "data:Mazak-c2-spec-ANGLE-Maximum" as o119{
+object "data:Mazak-c2-spec-ANGLE-Maximum" as o119 {
  type = core:ValueExpression
  }
-object "data:Mazak-c2-spec-ANGLE-Minimum" as o120{
+object "data:Mazak-c2-spec-ANGLE-Minimum" as o120 {
  type = core:ValueExpression
  }
-object "data:Mazak-c2-spec-TORQUE-Maximum" as o121{
+object "data:Mazak-c2-spec-TORQUE-Maximum" as o121 {
  type = core:ValueExpression
  }
-object "data:Mazak-c2-spec-TORQUE-Minimum" as o122{
+object "data:Mazak-c2-spec-TORQUE-Minimum" as o122 {
  type = core:ValueExpression
  }
-object "data:Mazak-c2-Cmotor-name" as o123{
+object "data:Mazak-c2-Cmotor-name" as o123 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-cont-name" as o124{
+object "data:Mazak-cont-name" as o124 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-cont-path1" as o125{
+object "data:Mazak-cont-path1" as o125 {
  type = ex:ControlSystemPath
  }
-object "data:Mazak-cont-path1-name" as o126{
+object "data:Mazak-cont-path1-name" as o126 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-door1-name" as o127{
+object "data:Mazak-door1-name" as o127 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-partocc-name" as o128{
+object "data:Mazak-partocc-name" as o128 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-elec-name" as o129{
+object "data:Mazak-elec-name" as o129 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-hydraulic-name" as o130{
+object "data:Mazak-hydraulic-name" as o130 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-coolant-name" as o131{
+object "data:Mazak-coolant-name" as o131 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-coolant-temperature" as o132{
+object "data:Mazak-coolant-temperature" as o132 {
  type = qp:Temperature
  }
-object "data:Mazak-pneumatic-name" as o133{
+object "data:Mazak-pneumatic-name" as o133 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-lubrication-name" as o134{
+object "data:Mazak-lubrication-name" as o134 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-room" as o135{
+object "data:Mazak-room" as o135 {
  type = ex:Room
  }
-object "data:Mazak-room-name" as o136{
+object "data:Mazak-room-name" as o136 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-room-temperature" as o137{
+object "data:Mazak-room-temperature" as o137 {
  type = qp:Temperature
  }
-object "data:Mazak-personnelm-name" as o138{
+object "data:Mazak-personnelm-name" as o138 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-procstock-name" as o139{
+object "data:Mazak-procstock-name" as o139 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-enclosurem-name" as o140{
+object "data:Mazak-enclosurem-name" as o140 {
  type = cmns-dsg:Name
  }
-object "data:Mazak-enclosurem-temperature" as o141{
+object "data:Mazak-enclosurem-temperature" as o141 {
  type = qp:Temperature
  }
 o1 : rdfs:label = Machine Ontology

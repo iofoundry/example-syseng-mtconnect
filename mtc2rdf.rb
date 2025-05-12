@@ -124,76 +124,165 @@ doc.each_element('//Device') do |dev|
   add_component(graph, dev)
 end
 
-def uml_name(iri)
-  qn = iri.qname(prefixes: Prefixes)
-  if qn[0] == :obo
-    "obo:#{iri.attributes[:label][:en]}"
-  else
-    qn.join(':')
+class GenerateGraph
+  def self.uml_name(iri)
+    qn = iri.qname(prefixes: Prefixes)
+    if qn[0] == :obo
+      "obo:#{iri.attributes[:label][:en]}"
+    else
+      qn.join(':')
+    end
+  end  
+  
+  def self.add_type(iri, type)
+    @@types[uml_name(iri)] = uml_name(type)
+  end
+
+  def self.get_types(graph)
+    @@types = Hash.new
+    stmts = RDF::Query.execute(graph) do
+      pattern [:o, RDF::RDFV.type, :type]  
+    end
+    stmts.each do |s|
+      add_type(s.o, s.type)
+    end
+  end
+  
+  def initialize(filename, statements)
+    @filename = filename
+    @statements = statements
+    @objects = Hash.new
+
+    @statements.each do |stmt|
+      unless stmt.predicate == RDF::RDFV.type
+        add_object(stmt.subject)
+        unless RDF::Literal === stmt.object
+          add_object(stmt.object)
+        end
+      end
+    end
+  end
+
+  def add_object(iri)
+    name = self.class.uml_name(iri)
+    unless @objects[name]
+      @objects[name] = "o#{@objects.size + 1}"
+    end
+  end
+  
+  def print_object(name)
+    @f.print "object \"#{name}\" as #{@objects[name]} "
+    if @@types[name]
+      @f.puts "{\n type = #{@@types[name]}\n }"
+    else
+      @f.puts
+    end
+  end
+
+  def obj(iri)
+    @objects[self.class.uml_name(iri)]
+  end
+  
+  def print_stmt(stmt)
+    unless stmt.predicate == RDF::RDFV.type
+      if RDF::Literal === stmt.object
+        @f.puts "#{obj(stmt.subject)} : #{self.class.uml_name(stmt.predicate)} = #{stmt.object.value}"
+      else
+        @f.puts "#{obj(stmt.subject)} --> #{obj(stmt.object)} : #{self.class.uml_name(stmt.predicate)}"
+      end
+    end  
+  end
+
+  def generate
+    File.open(@filename, 'w') do |f|
+      @f = f
+      
+      f.puts "@startuml"
+      f.puts "skinparam linetype polyline"
+      f.puts "left to right direction"
+
+      @objects.each do |k, v|
+        print_object(k)
+      end
+      
+      @statements.each do |stmt|
+        print_stmt(stmt)
+      end
+      
+      f.puts("@enduml")
+    end
+    @f = nil
   end
 end
 
-def add_object(objects, iri)
-  name = uml_name(iri)
-  unless objects[name]
-    objects[name] = objects.size + 1
-  end
-end
+GenerateGraph.get_types(graph)
 
-def add_type(types, iri, type)
-  types[uml_name(iri)] = uml_name(type)
+stmts = RDF::Query.execute(graph) do
+  pattern [:subject, :predicate, :object]  
 end
+gen = GenerateGraph.new("#{machine}.puml", stmts)
+gen.generate
 
+=begin
 
 File.open("#{machine}.puml", 'w') do |f|
   f.puts "@startuml"
   f.puts "skinparam linetype polyline"
   f.puts "left to right direction"
-  objects = Hash.new
-  types = Hash.new
-  graph.each_statement do |stmt|
-    unless uml_name(stmt.predicate) == 'rdfv:type'      
-      add_object(objects, stmt.subject)
-      unless RDF::Literal === stmt.object
-        add_object(objects, stmt.object)
-      end
-    else
-      add_type(types, stmt.subject, stmt.object)
-    end
-    
-  end
-
+  
   objects.each do |k, v|
-    f.print "object \"#{k}\" as o#{v}"
-    if types[k]
-      f.puts "{\n type = #{types[k]}\n }"
-    else
-      f.puts
-    end
+    print_object(f, k, objects, types)
   end
 
   graph.each_statement do |stmt|
-    unless uml_name(stmt.predicate) == 'rdfv:type'      
-      if RDF::Literal === stmt.object
-        f.puts "o#{objects[uml_name(stmt.subject)]} : #{uml_name(stmt.predicate)} = #{stmt.object.value}"
-      else
-        f.puts "o#{objects[uml_name(stmt.subject)]} --> o#{objects[uml_name(stmt.object)]} : #{uml_name(stmt.predicate)}"
-      end
-    end
+    print_stmt(f, objects, stmt)
   end
 
-#    f.puts "object #{stmt.subject.qname(prefixes: Prefixes).join(':')}"
-#    if RDF::Literal === stmt.object
-#      p stmt.object.value
-#    else
-#      p stmt.object.qname(prefixes: Prefixes).join(':')
-#    end
-#    p stmt.subject.qname(prefixes: Prefixes).join(':')
-#    p stmt.predicate.qname(prefixes: Prefixes).join(':')
-#    puts '======'
-#  end
   f.puts("@enduml")
 end
+
+File.open("#{machine}Mere.puml", 'w') do |f|
+  f.puts "@startuml"
+  f.puts "skinparam linetype polyline"
+  f.puts "left to right direction"
+
+  stmts = RDF::Query.execute(graph) do
+    pattern [:parent, BFO::BFO.has_member_part_at_some_time, :child]           
+  end
+
+  stmts.each do |stmt|
+    print_object(f, uml_name(stmt.parent), objects, types)
+    print_object(f, uml_name(stmt.child), objects, types)
+  end
+
+  stmts.each do |stmt|
+    print_stmt(f, objects, Statement.new(stmt.parent, BFO::BFO.has_member_part_at_some_time, stmt.child))
+  end
+
+  f.puts("@enduml")
+end
+
+File.open("#{machine}Topo.puml", 'w') do |f|
+  f.puts "@startuml"
+  f.puts "skinparam linetype polyline"
+  f.puts "left to right direction"
+
+  stmts = RDF::Query.execute(graph) do
+    pattern [:parent, Example::Machine.joinedTo, :child]           
+  end
+
+  stmts.each do |stmt|
+    print_object(f, uml_name(stmt.parent), objects, types)
+    print_object(f, uml_name(stmt.child), objects, types)
+  end
+
+  stmts.each do |stmt|
+    print_stmt(f, objects, Statement.new(stmt.parent, Example::Machine.joinedTo, stmt.child))
+  end
+
+  f.puts("@enduml")
+end
+=end
 
 RDF::Writer.open("#{machine}.rdf", prefixes: Prefixes) do |w|
   w << graph
