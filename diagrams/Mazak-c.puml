@@ -10,31 +10,47 @@ object "data:Mazak-c-name" as o2 {
 object "data:Mazak-c-spec" as o3 {
  type = core:DesignSpecification
  }
-object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o4 {
+object "data:Mazak-c-spec-VELOCITY-Maximum" as o4 {
+ type = core:ValueExpression
+ }
+object "data:Mazak-c-spec-VELOCITY-Minimum" as o5 {
+ type = core:ValueExpression
+ }
+object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o6 {
  type = ex:Structure
  }
-object "data:Mazak-c-function" as o5 {
+object "data:Mazak-zaxis-name" as o7 {
+ type = cmns-dsg:Name
+ }
+object "data:Mazak-c-function" as o8 {
  type = ex:ContinuousMotionCapability
  }
-object "data:Mazak-c-rotary_velocity-actual" as o6 {
+object "data:Mazak-c-rotary_velocity-actual" as o9 {
  type = qp:Speed
  }
-object "data:Mazak-c-temperature" as o7 {
+object "data:Mazak-c-temperature" as o10 {
  type = qp:Temperature
  }
-object "[[./Mazak-c-C2motor.html data:Mazak-c-C2motor]]" as o8 {
+object "[[./Mazak-c-C2motor.html data:Mazak-c-C2motor]]" as o11 {
  type = ex:Motor
  }
-object "[[./Mazak.html data:Mazak]]" as o9 {
+object "data:Mazak-c-C2motor-name" as o12 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak.html data:Mazak]]" as o13 {
  type = ex:Machine
  }
 o1 --> o2 : cmns-dsg:hasName
 o2 : core:hasSimpleExpressionValue = C1
 o1 --> o3 : core:prescribedBy
-o1 --> o4 : ex:joinedTo
-o1 --> o5 : core:hasFunction
-o1 --> o6 : core:measuresAtSomeTime
-o1 --> o7 : core:measuresAtSomeTime
-o1 --> o8 : obo:has member part at some time
-o9 --> o1 : obo:has member part at some time
+o3 --> o4 : core:hasValueExpressionAtAllTimes
+o3 --> o5 : core:hasValueExpressionAtAllTimes
+o1 --> o6 : ex:joinedTo
+o6 --> o7 : cmns-dsg:hasName
+o1 --> o8 : core:hasFunction
+o1 --> o9 : core:measuresAtSomeTime
+o1 --> o10 : core:measuresAtSomeTime
+o1 --> o11 : obo:has member part at some time
+o11 --> o12 : cmns-dsg:hasName
+o13 --> o1 : obo:has member part at some time
 @enduml

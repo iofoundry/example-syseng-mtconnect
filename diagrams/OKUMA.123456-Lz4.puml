@@ -1,0 +1,76 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./OKUMA.123456-Lz4.html data:OKUMA.123456-Lz4]]" as o1 {
+ type = ex:LinearMotionSystem
+ }
+object "data:OKUMA.123456-Lz4-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "data:OKUMA.123456-Lz4-spec" as o3 {
+ type = core:DesignSpecification
+ }
+object "data:OKUMA.123456-Lz4-spec-LENGTH-Nominal" as o4 {
+ type = core:ValueExpression
+ }
+object "data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum" as o5 {
+ type = core:ValueExpression
+ }
+object "data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum" as o6 {
+ type = core:ValueExpression
+ }
+object "data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum" as o7 {
+ type = core:ValueExpression
+ }
+object "data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum" as o8 {
+ type = core:ValueExpression
+ }
+object "data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum" as o9 {
+ type = core:ValueExpression
+ }
+object "data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum" as o10 {
+ type = core:ValueExpression
+ }
+object "[[./OKUMA.123456-enclosure.html data:OKUMA.123456-enclosure]]" as o11 {
+ type = ex:Structure
+ }
+object "data:OKUMA.123456-enclosure-name" as o12 {
+ type = cmns-dsg:Name
+ }
+object "data:OKUMA.123456-enclosure-temperature" as o13 {
+ type = qp:Temperature
+ }
+object "[[./OKUMA.123456-z4_axis.html data:OKUMA.123456-z4_axis]]" as o14 {
+ type = ex:Structure
+ }
+object "data:OKUMA.123456-z4_axis-name" as o15 {
+ type = cmns-dsg:Name
+ }
+object "data:OKUMA.123456-Lz4-function" as o16 {
+ type = ex:PrismaticMotionCapability
+ }
+object "data:OKUMA.123456-Lz4-position-actual" as o17 {
+ type = qp:Displacement
+ }
+object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o18 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = Z4
+o1 --> o3 : core:prescribedBy
+o3 --> o4 : core:hasValueExpressionAtAllTimes
+o3 --> o5 : core:hasValueExpressionAtAllTimes
+o3 --> o6 : core:hasValueExpressionAtAllTimes
+o3 --> o7 : core:hasValueExpressionAtAllTimes
+o3 --> o8 : core:hasValueExpressionAtAllTimes
+o3 --> o9 : core:hasValueExpressionAtAllTimes
+o3 --> o10 : core:hasValueExpressionAtAllTimes
+o1 --> o11 : ex:joinedTo
+o11 --> o12 : cmns-dsg:hasName
+o11 --> o13 : core:measuresAtSomeTime
+o1 --> o14 : ex:joinedTo
+o14 --> o15 : cmns-dsg:hasName
+o1 --> o16 : core:hasFunction
+o1 --> o17 : core:measuresAtSomeTime
+o18 --> o1 : obo:has member part at some time
+@enduml

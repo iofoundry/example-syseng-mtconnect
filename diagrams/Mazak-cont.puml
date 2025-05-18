@@ -10,11 +10,15 @@ object "data:Mazak-cont-name" as o2 {
 object "[[./Mazak-cont-path1.html data:Mazak-cont-path1]]" as o3 {
  type = ex:ControlSystemPath
  }
-object "[[./Mazak.html data:Mazak]]" as o4 {
+object "data:Mazak-cont-path1-name" as o4 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak.html data:Mazak]]" as o5 {
  type = ex:Machine
  }
 o1 --> o2 : cmns-dsg:hasName
 o2 : core:hasSimpleExpressionValue = controller
 o1 --> o3 : obo:has member part at some time
-o4 --> o1 : obo:has member part at some time
+o3 --> o4 : cmns-dsg:hasName
+o5 --> o1 : obo:has member part at some time
 @enduml

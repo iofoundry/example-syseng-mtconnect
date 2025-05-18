@@ -221,7 +221,7 @@ class GenerateGraph
 <html>
   <head>
     <meta charset="utf-8"/>
-    <title>#{File.basename @filename}"</title>
+    <title>#{File.basename @filename}</title>
   </head>
   <body>
     <object data="./#{File.basename @filename}.svg"/>
@@ -302,12 +302,21 @@ end.each do |st|
 end
 
 GenerateGraph.linked_terms.each do |st|
+  once = Set.new
   stmts1 = RDF::Query.execute(iof.graph) do
     pattern [st, :p, :o]
-    pattern [:o, IOF::Core.hasSimpleExpressionValue, :n], optional: true
+    pattern [:o, :p2, :o2], optional: true
   end.map do |sl|
-    r = [Statement.new(st, sl.p, sl.o)]
-    r << Statement.new(sl.o, IOF::Core.hasSimpleExpressionValue, sl.n) if sl.bound?(:n)
+    unless once.include?([st, sl.p, sl.o])
+      r = [Statement.new(st, sl.p, sl.o)]
+      once << [st, sl.p, sl.o]
+    else
+      r = []
+    end
+    if sl.bound?(:p2) and sl.bound?(:o2) and not (once.include?([sl.o, sl.p2, sl.o2]))
+      r << Statement.new(sl.o, sl.p2, sl.o2) 
+      once << [sl.o, sl.p2, sl.o2]
+    end
     r
   end.flatten
   stmts2 = RDF::Query.execute(iof.graph) do
@@ -334,8 +343,11 @@ File.open("#{machine}.html", 'w') do |f|
     <ul>
 EOT
     GenerateGraph.linked_terms.each do |st|
-      f.puts "      <li><a href='diagrams/#{st.qname[1]}.html'>#{st.qname.join(':')}</a></li>"
+       f.puts "      <li><a href='diagrams/#{st.qname[1]}.html'>#{st.qname.join(':')}</a></li>"
     end
+    f.puts "      <li><a href='diagrams/#{machine}Full.html'>#{machine} Complete</a></li>"
+    f.puts "      <li><a href='diagrams/#{machine}Mere.html'>#{machine} Mereology</a></li>"
+    f.puts "      <li><a href='diagrams/#{machine}Topo.html'>#{machine} Topography</a></li>"
 
     f.puts <<EOT    
     </ul>
@@ -347,7 +359,7 @@ end
 stmts = RDF::Query.execute(iof.graph) do
   pattern [:subject, :predicate, :object]  
 end
-gen = GenerateGraph.new("diagrams/#{machine}", stmts)
+gen = GenerateGraph.new("diagrams/#{machine}Full", stmts)
 gen.generate
 
 once = Set.new

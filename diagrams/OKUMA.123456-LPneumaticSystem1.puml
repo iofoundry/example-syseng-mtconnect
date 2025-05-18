@@ -1,0 +1,16 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./OKUMA.123456-LPneumaticSystem1.html data:OKUMA.123456-LPneumaticSystem1]]" as o1 {
+ type = ex:PneumaticSystem
+ }
+object "data:OKUMA.123456-LPneumaticSystem1-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o3 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = PneumaticSystem1
+o3 --> o1 : obo:has member part at some time
+@enduml

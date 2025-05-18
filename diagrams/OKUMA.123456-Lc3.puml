@@ -1,0 +1,40 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./OKUMA.123456-Lc3.html data:OKUMA.123456-Lc3]]" as o1 {
+ type = ex:RotaryMotionSystem
+ }
+object "data:OKUMA.123456-Lc3-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "[[./OKUMA.123456-z4_axis.html data:OKUMA.123456-z4_axis]]" as o3 {
+ type = ex:Structure
+ }
+object "data:OKUMA.123456-z4_axis-name" as o4 {
+ type = cmns-dsg:Name
+ }
+object "[[./OKUMA.123456-c2_axis.html data:OKUMA.123456-c2_axis]]" as o5 {
+ type = ex:Structure
+ }
+object "data:OKUMA.123456-c2_axis-name" as o6 {
+ type = cmns-dsg:Name
+ }
+object "data:OKUMA.123456-Lc3-function" as o7 {
+ type = ex:RevoluteMotionCapability
+ }
+object "data:OKUMA.123456-Lc3-angle-actual" as o8 {
+ type = qp:Angle
+ }
+object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o9 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = C3
+o1 --> o3 : ex:joinedTo
+o3 --> o4 : cmns-dsg:hasName
+o1 --> o5 : ex:joinedTo
+o5 --> o6 : cmns-dsg:hasName
+o1 --> o7 : core:hasFunction
+o1 --> o8 : core:measuresAtSomeTime
+o9 --> o1 : obo:has member part at some time
+@enduml

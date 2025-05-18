@@ -10,39 +10,67 @@ object "data:Mazak-c2-name" as o2 {
 object "data:Mazak-c2-spec" as o3 {
  type = core:DesignSpecification
  }
-object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o4 {
+object "data:Mazak-c2-spec-ANGLE-Maximum" as o4 {
+ type = core:ValueExpression
+ }
+object "data:Mazak-c2-spec-ANGLE-Minimum" as o5 {
+ type = core:ValueExpression
+ }
+object "data:Mazak-c2-spec-TORQUE-Maximum" as o6 {
+ type = core:ValueExpression
+ }
+object "data:Mazak-c2-spec-TORQUE-Minimum" as o7 {
+ type = core:ValueExpression
+ }
+object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o8 {
  type = ex:Structure
  }
-object "[[./Mazak-table.html data:Mazak-table]]" as o5 {
+object "data:Mazak-trundle-name" as o9 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak-table.html data:Mazak-table]]" as o10 {
  type = ex:Structure
  }
-object "data:Mazak-c2-function" as o6 {
+object "data:Mazak-table-name" as o11 {
+ type = cmns-dsg:Name
+ }
+object "data:Mazak-c2-function" as o12 {
  type = ex:RevoluteMotionCapability
  }
-object "data:Mazak-c2-angle" as o7 {
+object "data:Mazak-c2-angle" as o13 {
  type = qp:Angle
  }
-object "data:Mazak-c2-angle-actual" as o8 {
+object "data:Mazak-c2-angle-actual" as o14 {
  type = qp:Angle
  }
-object "data:Mazak-c2-temperature" as o9 {
+object "data:Mazak-c2-temperature" as o15 {
  type = qp:Temperature
  }
-object "[[./Mazak-c2-Cmotor.html data:Mazak-c2-Cmotor]]" as o10 {
+object "[[./Mazak-c2-Cmotor.html data:Mazak-c2-Cmotor]]" as o16 {
  type = ex:Motor
  }
-object "[[./Mazak.html data:Mazak]]" as o11 {
+object "data:Mazak-c2-Cmotor-name" as o17 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak.html data:Mazak]]" as o18 {
  type = ex:Machine
  }
 o1 --> o2 : cmns-dsg:hasName
 o2 : core:hasSimpleExpressionValue = C2
 o1 --> o3 : core:prescribedBy
-o1 --> o4 : ex:joinedTo
-o1 --> o5 : ex:joinedTo
-o1 --> o6 : core:hasFunction
-o1 --> o7 : core:measuresAtSomeTime
-o1 --> o8 : core:measuresAtSomeTime
-o1 --> o9 : core:measuresAtSomeTime
-o1 --> o10 : obo:has member part at some time
-o11 --> o1 : obo:has member part at some time
+o3 --> o4 : core:hasValueExpressionAtAllTimes
+o3 --> o5 : core:hasValueExpressionAtAllTimes
+o3 --> o6 : core:hasValueExpressionAtAllTimes
+o3 --> o7 : core:hasValueExpressionAtAllTimes
+o1 --> o8 : ex:joinedTo
+o8 --> o9 : cmns-dsg:hasName
+o1 --> o10 : ex:joinedTo
+o10 --> o11 : cmns-dsg:hasName
+o1 --> o12 : core:hasFunction
+o1 --> o13 : core:measuresAtSomeTime
+o1 --> o14 : core:measuresAtSomeTime
+o1 --> o15 : core:measuresAtSomeTime
+o1 --> o16 : obo:has member part at some time
+o16 --> o17 : cmns-dsg:hasName
+o18 --> o1 : obo:has member part at some time
 @enduml
