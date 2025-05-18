@@ -1,0 +1,16 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-room.html data:Mazak-room]]" as o1 {
+ type = ex:Room
+ }
+object "data:Mazak-room-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "data:Mazak-room-temperature" as o3 {
+ type = qp:Temperature
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = environmental
+o1 --> o3 : core:measuresAtSomeTime
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o1 {
+ type = ex:Structure
+ }
+object "data:Mazak-zaxis-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak.html data:Mazak]]" as o3 {
+ type = ex:Machine
+ }
+object "[[./Mazak-z.html data:Mazak-z]]" as o4 {
+ type = ex:LinearMotionSystem
+ }
+object "[[./Mazak-c.html data:Mazak-c]]" as o5 {
+ type = ex:RotaryMotionSystem
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = Z_AXIS
+o3 --> o1 : obo:has member part at some time
+o4 --> o1 : ex:joinedTo
+o5 --> o1 : ex:joinedTo
+@enduml

@@ -1,0 +1,48 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-c2.html data:Mazak-c2]]" as o1 {
+ type = ex:RotaryMotionSystem
+ }
+object "data:Mazak-c2-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "data:Mazak-c2-spec" as o3 {
+ type = core:DesignSpecification
+ }
+object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o4 {
+ type = ex:Structure
+ }
+object "[[./Mazak-table.html data:Mazak-table]]" as o5 {
+ type = ex:Structure
+ }
+object "data:Mazak-c2-function" as o6 {
+ type = ex:RevoluteMotionCapability
+ }
+object "data:Mazak-c2-angle" as o7 {
+ type = qp:Angle
+ }
+object "data:Mazak-c2-angle-actual" as o8 {
+ type = qp:Angle
+ }
+object "data:Mazak-c2-temperature" as o9 {
+ type = qp:Temperature
+ }
+object "[[./Mazak-c2-Cmotor.html data:Mazak-c2-Cmotor]]" as o10 {
+ type = ex:Motor
+ }
+object "[[./Mazak.html data:Mazak]]" as o11 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = C2
+o1 --> o3 : core:prescribedBy
+o1 --> o4 : ex:joinedTo
+o1 --> o5 : ex:joinedTo
+o1 --> o6 : core:hasFunction
+o1 --> o7 : core:measuresAtSomeTime
+o1 --> o8 : core:measuresAtSomeTime
+o1 --> o9 : core:measuresAtSomeTime
+o1 --> o10 : obo:has member part at some time
+o11 --> o1 : obo:has member part at some time
+@enduml

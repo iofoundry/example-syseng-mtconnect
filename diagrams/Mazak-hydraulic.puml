@@ -1,0 +1,16 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-hydraulic.html data:Mazak-hydraulic]]" as o1 {
+ type = ex:HydraulicSystem
+ }
+object "data:Mazak-hydraulic-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak.html data:Mazak]]" as o3 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = hydraulic
+o3 --> o1 : obo:has member part at some time
+@enduml

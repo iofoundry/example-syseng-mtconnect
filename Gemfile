@@ -8,3 +8,4 @@ gem "sparql-client"
 gem "nokogiri"
 gem "equivalent-xml"
 gem 'uuidtools'
+gem 'rdf-reasoner'

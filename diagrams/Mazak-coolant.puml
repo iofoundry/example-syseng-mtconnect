@@ -1,0 +1,20 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-coolant.html data:Mazak-coolant]]" as o1 {
+ type = obo:object
+ }
+object "data:Mazak-coolant-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "data:Mazak-coolant-temperature" as o3 {
+ type = qp:Temperature
+ }
+object "[[./Mazak.html data:Mazak]]" as o4 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = coolant
+o1 --> o3 : core:measuresAtSomeTime
+o4 --> o1 : obo:has member part at some time
+@enduml

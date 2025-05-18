@@ -1,0 +1,44 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-br.html data:Mazak-br]]" as o1 {
+ type = ex:RotaryMotionSystem
+ }
+object "data:Mazak-br-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "data:Mazak-br-spec" as o3 {
+ type = core:DesignSpecification
+ }
+object "[[./Mazak-enclosurem.html data:Mazak-enclosurem]]" as o4 {
+ type = ex:Structure
+ }
+object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o5 {
+ type = ex:Structure
+ }
+object "data:Mazak-br-function" as o6 {
+ type = ex:RevoluteMotionCapability
+ }
+object "data:Mazak-br-angle" as o7 {
+ type = qp:Angle
+ }
+object "data:Mazak-br-angle-actual" as o8 {
+ type = qp:Angle
+ }
+object "[[./Mazak-br-Bmotor.html data:Mazak-br-Bmotor]]" as o9 {
+ type = ex:Motor
+ }
+object "[[./Mazak.html data:Mazak]]" as o10 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = B
+o1 --> o3 : core:prescribedBy
+o1 --> o4 : ex:joinedTo
+o1 --> o5 : ex:joinedTo
+o1 --> o6 : core:hasFunction
+o1 --> o7 : core:measuresAtSomeTime
+o1 --> o8 : core:measuresAtSomeTime
+o1 --> o9 : obo:has member part at some time
+o10 --> o1 : obo:has member part at some time
+@enduml

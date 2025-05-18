@@ -1,0 +1,16 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-br-Bmotor.html data:Mazak-br-Bmotor]]" as o1 {
+ type = ex:Motor
+ }
+object "data:Mazak-br-Bmotor-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak-br.html data:Mazak-br]]" as o3 {
+ type = ex:RotaryMotionSystem
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = Bmotor
+o3 --> o1 : obo:has member part at some time
+@enduml

@@ -1,0 +1,52 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-z.html data:Mazak-z]]" as o1 {
+ type = ex:LinearMotionSystem
+ }
+object "data:Mazak-z-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "data:Mazak-z-spec" as o3 {
+ type = core:DesignSpecification
+ }
+object "[[./Mazak-yaxism.html data:Mazak-yaxism]]" as o4 {
+ type = ex:Structure
+ }
+object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o5 {
+ type = ex:Structure
+ }
+object "data:Mazak-z-function" as o6 {
+ type = ex:PrismaticMotionCapability
+ }
+object "data:Mazak-z-position-actual" as o7 {
+ type = qp:Displacement
+ }
+object "data:Mazak-z-position" as o8 {
+ type = qp:Displacement
+ }
+object "data:Mazak-z-temperature" as o9 {
+ type = qp:Temperature
+ }
+object "[[./Mazak-z-Zballscrew.html data:Mazak-z-Zballscrew]]" as o10 {
+ type = ex:Ballscrew
+ }
+object "[[./Mazak-z-Zmotor.html data:Mazak-z-Zmotor]]" as o11 {
+ type = ex:Motor
+ }
+object "[[./Mazak.html data:Mazak]]" as o12 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = Z
+o1 --> o3 : core:prescribedBy
+o1 --> o4 : ex:joinedTo
+o1 --> o5 : ex:joinedTo
+o1 --> o6 : core:hasFunction
+o1 --> o7 : core:measuresAtSomeTime
+o1 --> o8 : core:measuresAtSomeTime
+o1 --> o9 : core:measuresAtSomeTime
+o1 --> o10 : obo:has member part at some time
+o1 --> o11 : obo:has member part at some time
+o12 --> o1 : obo:has member part at some time
+@enduml

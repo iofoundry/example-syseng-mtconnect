@@ -1,0 +1,20 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-cont.html data:Mazak-cont]]" as o1 {
+ type = ex:ControlSystem
+ }
+object "data:Mazak-cont-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak-cont-path1.html data:Mazak-cont-path1]]" as o3 {
+ type = ex:ControlSystemPath
+ }
+object "[[./Mazak.html data:Mazak]]" as o4 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = controller
+o1 --> o3 : obo:has member part at some time
+o4 --> o1 : obo:has member part at some time
+@enduml

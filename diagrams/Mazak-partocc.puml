@@ -1,0 +1,16 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+object "[[./Mazak-partocc.html data:Mazak-partocc]]" as o1 {
+ type = ex:Part
+ }
+object "data:Mazak-partocc-name" as o2 {
+ type = cmns-dsg:Name
+ }
+object "[[./Mazak.html data:Mazak]]" as o3 {
+ type = ex:Machine
+ }
+o1 --> o2 : cmns-dsg:hasName
+o2 : core:hasSimpleExpressionValue = partocc
+o3 --> o1 : obo:has member part at some time
+@enduml
