@@ -1,6 +1,7 @@
 @startuml
 skinparam linetype polyline
 left to right direction
+title Mazak-room
 object "[[./Mazak-room.html data:Mazak-room]]" as o1 {
  type = ex:Room
  }

@@ -1,6 +1,7 @@
 @startuml
 skinparam linetype polyline
 left to right direction
+title Mazak-c
 object "[[./Mazak-c.html data:Mazak-c]]" as o1 {
  type = ex:RotaryMotionSystem
  }

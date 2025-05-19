@@ -1,6 +1,7 @@
 @startuml
 skinparam linetype polyline
 left to right direction
+title OKUMA.123456-z4_axis
 object "[[./OKUMA.123456-z4_axis.html data:OKUMA.123456-z4_axis]]" as o1 {
  type = ex:Structure
  }

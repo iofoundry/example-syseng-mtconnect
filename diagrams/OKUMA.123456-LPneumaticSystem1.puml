@@ -1,6 +1,7 @@
 @startuml
 skinparam linetype polyline
 left to right direction
+title OKUMA.123456-LPneumaticSystem1
 object "[[./OKUMA.123456-LPneumaticSystem1.html data:OKUMA.123456-LPneumaticSystem1]]" as o1 {
  type = ex:PneumaticSystem
  }

@@ -1,6 +1,7 @@
 @startuml
 skinparam linetype polyline
 left to right direction
+title Mazak-table
 object "[[./Mazak-table.html data:Mazak-table]]" as o1 {
  type = ex:Structure
  }

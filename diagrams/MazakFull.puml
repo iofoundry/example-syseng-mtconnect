@@ -1,6 +1,7 @@
 @startuml
 skinparam linetype polyline
 left to right direction
+title MazakFull
 object "data:" as o1 {
  type = owl:Ontology
  }

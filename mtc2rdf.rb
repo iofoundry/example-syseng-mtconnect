@@ -256,6 +256,7 @@ EOT
       f.puts "@startuml"
       f.puts "skinparam linetype polyline"
       f.puts "left to right direction"
+      f.puts "title #{File.basename @filename}"
 
       @objects.each do |k, v|
         print_object(k)
