@@ -101,24 +101,30 @@ end
 GenerateDiagram.linked_terms.each do |st|
   once = Set.new
   stmts1 = RDF::Query.execute(iof.graph) do
-    pattern [st, :p, :o]
-    pattern [:o, :p2, :o2], optional: true
+    pattern [st, :p1, :o1]
+    pattern [:o1, :p2, :o2], optional: true
   end.map do |sl|
-    unless once.include?([st, sl.p, sl.o])
-      r = [Statement.new(st, sl.p, sl.o)]
-      once << [st, sl.p, sl.o]
-    else
-      r = []
+    r = []
+    unless once.include?([st, sl.p1, sl.o1])
+      r << Statement.new(st, sl.p1, sl.o1)
+      once << [st, sl.p1, sl.o1]
     end
-    if sl.bound?(:p2) and sl.bound?(:o2) and not (once.include?([sl.o, sl.p2, sl.o2]))
-      r << Statement.new(sl.o, sl.p2, sl.o2) 
-      once << [sl.o, sl.p2, sl.o2]
+    if sl.bound?(:p2) and sl.bound?(:o2) and not (once.include?([sl.o1, sl.p2, sl.o2]))
+      r << Statement.new(sl.o1, sl.p2, sl.o2) 
+      once << [sl.o1, sl.p2, sl.o2]
+
+      o2v = RDF::Query.execute(iof.graph) do
+        pattern [sl.o2, IOF::Core.hasSimpleExpressionValue, :v]
+      end
+      o2v.each do |sv|
+        r << Statement.new(sl.o2, IOF::Core.hasSimpleExpressionValue, sv.v)
+      end
     end
     r
   end.flatten
   stmts2 = RDF::Query.execute(iof.graph) do
-    pattern [:s, :p, st]
-    pattern [:s, IOF::Core.hasSimpleExpressionValue, :n], optional: true
+     pattern [:s, :p, st]
+     pattern [:s, IOF::Core.hasSimpleExpressionValue, :n], optional: true
   end.map do |sl|
     r = [Statement.new(sl.s, sl.p, st)]
     r << Statement.new(sl.o, IOF::Core.hasSimpleExpressionValue, sl.n) if sl.bound?(:n)

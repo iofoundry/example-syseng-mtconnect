@@ -33,6 +33,7 @@ o1 --> o2 : cmns-dsg:hasName
 o2 : core:hasSimpleExpressionValue = C1
 o1 --> o3 : ex:joinedTo
 o3 --> o4 : cmns-dsg:hasName
+o4 : core:hasSimpleExpressionValue = enclosure
 o3 --> o5 : core:measuresAtSomeTime
 o1 --> o6 : core:hasFunction
 o1 --> o7 : core:measuresAtSomeTime

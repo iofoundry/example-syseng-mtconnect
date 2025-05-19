@@ -60,17 +60,26 @@ o1 --> o2 : cmns-dsg:hasName
 o2 : core:hasSimpleExpressionValue = Z1
 o1 --> o3 : core:prescribedBy
 o3 --> o4 : core:hasValueExpressionAtAllTimes
+o4 : core:hasSimpleExpressionValue = 650.0
 o3 --> o5 : core:hasValueExpressionAtAllTimes
+o5 : core:hasSimpleExpressionValue = 5200.0
 o3 --> o6 : core:hasValueExpressionAtAllTimes
+o6 : core:hasSimpleExpressionValue = 0.0
 o3 --> o7 : core:hasValueExpressionAtAllTimes
+o7 : core:hasSimpleExpressionValue = 7000.0
 o3 --> o8 : core:hasValueExpressionAtAllTimes
+o8 : core:hasSimpleExpressionValue = 1.0
 o3 --> o9 : core:hasValueExpressionAtAllTimes
+o9 : core:hasSimpleExpressionValue = 7000.0
 o3 --> o10 : core:hasValueExpressionAtAllTimes
+o10 : core:hasSimpleExpressionValue = 1.0
 o1 --> o11 : ex:joinedTo
 o11 --> o12 : cmns-dsg:hasName
+o12 : core:hasSimpleExpressionValue = enclosure
 o11 --> o13 : core:measuresAtSomeTime
 o1 --> o14 : ex:joinedTo
 o14 --> o15 : cmns-dsg:hasName
+o15 : core:hasSimpleExpressionValue = z1_axis
 o1 --> o16 : core:hasFunction
 o1 --> o17 : core:measuresAtSomeTime
 o18 --> o1 : obo:has member part at some time

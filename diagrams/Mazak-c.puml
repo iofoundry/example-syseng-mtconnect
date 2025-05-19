@@ -45,13 +45,17 @@ o1 --> o2 : cmns-dsg:hasName
 o2 : core:hasSimpleExpressionValue = C1
 o1 --> o3 : core:prescribedBy
 o3 --> o4 : core:hasValueExpressionAtAllTimes
+o4 : core:hasSimpleExpressionValue = 12000.0
 o3 --> o5 : core:hasValueExpressionAtAllTimes
+o5 : core:hasSimpleExpressionValue = 0.0
 o1 --> o6 : ex:joinedTo
 o6 --> o7 : cmns-dsg:hasName
+o7 : core:hasSimpleExpressionValue = Z_AXIS
 o1 --> o8 : core:hasFunction
 o1 --> o9 : core:measuresAtSomeTime
 o1 --> o10 : core:measuresAtSomeTime
 o1 --> o11 : obo:has member part at some time
 o11 --> o12 : cmns-dsg:hasName
+o12 : core:hasSimpleExpressionValue = C2motor
 o13 --> o1 : obo:has member part at some time
 @enduml

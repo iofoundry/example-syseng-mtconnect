@@ -21,5 +21,6 @@ o1 --> o2 : cmns-dsg:hasName
 o2 : core:hasSimpleExpressionValue = Controller
 o1 --> o3 : obo:has member part at some time
 o3 --> o4 : cmns-dsg:hasName
+o4 : core:hasSimpleExpressionValue = path
 o5 --> o1 : obo:has member part at some time
 @enduml

@@ -57,16 +57,25 @@ o1 --> o2 : cmns-dsg:hasName
 o2 : core:hasSimpleExpressionValue = Y
 o1 --> o3 : core:prescribedBy
 o3 --> o4 : core:hasValueExpressionAtAllTimes
+o4 : core:hasSimpleExpressionValue = 650.0
 o3 --> o5 : core:hasValueExpressionAtAllTimes
+o5 : core:hasSimpleExpressionValue = 5200.0
 o3 --> o6 : core:hasValueExpressionAtAllTimes
+o6 : core:hasSimpleExpressionValue = 0.0
 o3 --> o7 : core:hasValueExpressionAtAllTimes
+o7 : core:hasSimpleExpressionValue = 7000.0
 o3 --> o8 : core:hasValueExpressionAtAllTimes
+o8 : core:hasSimpleExpressionValue = 1.0
 o3 --> o9 : core:hasValueExpressionAtAllTimes
+o9 : core:hasSimpleExpressionValue = 7000.0
 o3 --> o10 : core:hasValueExpressionAtAllTimes
+o10 : core:hasSimpleExpressionValue = 1.0
 o1 --> o11 : ex:joinedTo
 o11 --> o12 : cmns-dsg:hasName
+o12 : core:hasSimpleExpressionValue = x_axis
 o1 --> o13 : ex:joinedTo
 o13 --> o14 : cmns-dsg:hasName
+o14 : core:hasSimpleExpressionValue = y_axis
 o1 --> o15 : core:hasFunction
 o1 --> o16 : core:measuresAtSomeTime
 o17 --> o1 : obo:has member part at some time
