@@ -19,9 +19,13 @@ require 'set'
 
 include RDF
 
+# The class that converts the MTConnect information model to an IOF compatible
+# ontology.
+
 class MTConnectToIOF
   attr_reader :graph
-  
+
+  # Parse the XML to find the components and create a graph of individuals
   def initialize(xml)
     @doc = REXML::Document.new(xml)
 
@@ -33,17 +37,20 @@ class MTConnectToIOF
     end
   end
 
+  # Create a sub-entity IRI
   def sub_iri(names, ext)
     sub = (names + Array(ext)).join('-')
     Inst::Data[sub]
   end
 
+  # Add an instance of a type to the parent using a relation
   def add_instance(iri, name, relation, type)
     @graph << (s = Statement.new(name, RDF.type, type))
     @graph << [iri, relation, s.subject]
     s
   end
 
+  # Add a capability to an entity
   def add_capability(iri, names, type)
     if cls = Example::Functions[type.to_sym]
       add_instance(iri, sub_iri(names, 'function'), IOF::Core.hasFunction, cls)
@@ -53,6 +60,7 @@ class MTConnectToIOF
     end
   end
 
+  # Recursively add components
   def add_component(comp, names = [], level = 0)
     type = (comp[:type] || comp.name).to_sym
     puts "#{'  ' * level}#{comp.name} #{comp[:id]} #{type.inspect}"
@@ -108,18 +116,20 @@ class MTConnectToIOF
         add_instance(iri, sub_iri(names, 'role'), IOF::Core.hasRole, role)
       end
     end
-    
+
+    # Recurse each composition
     comp.each_element("./Compositions/*") do |cmp|
       add_component(cmp, names, level + 1)
     end
 
+    # Recurse each components
     comp.each_element('./Components/*') do |child|
       add_component(child, names, level + 1)
     end
   end
 
   def generate(machine)
-    # Write out the individuals for the machine
+    # Write out the individuals for the machine in rdfxml and turtle formats
     RDF::Writer.open("#{machine}.rdf", prefixes: Prefixes) do |w|
       w << @graph
     end
@@ -133,6 +143,7 @@ end
 # Generate some visualizations
 
 class GenerateGraph
+  # Convert an iri to a text label
   def self.uml_name(iri)
     qn = iri.qname(prefixes: Prefixes)
     if qn[0] == :obo
@@ -141,11 +152,13 @@ class GenerateGraph
       qn.join(':')
     end
   end  
-  
+
+  # Add a type associated with an iri.
   def self.add_type(iri, type)
     @@types[iri] = type
   end
 
+  # Get the types associated with each individual
   def self.get_types(graph)
     @@types = Hash.new
     stmts = RDF::Query.execute(graph) do
@@ -156,6 +169,7 @@ class GenerateGraph
     end
   end
 
+  # Add a list of terms that will have html links
   def self.add_linked_terms(terms)
     @@linked_terms ||= Set.new
     Array(terms).each { |term| @@linked_terms << term }
@@ -164,7 +178,8 @@ class GenerateGraph
   def self.linked_terms
     @@linked_terms
   end
-  
+
+  # Initialize the object with the output filename and an array of statements
   def initialize(filename, statements)
     @filename = filename
     @statements = statements
@@ -180,12 +195,14 @@ class GenerateGraph
     end
   end
 
+  # Add an object associated of a short 'o<n>' where n is a monotonically increasing number
   def add_object(iri)
     unless @objects[iri]
       @objects[iri] = "o#{@objects.size + 1}"
     end
   end
-  
+
+  # Print an object with its type
   def print_object(iri)
     if @@linked_terms.include?(iri)
       title = "[[./#{iri.qname.last}.html #{self.class.uml_name(iri)}]]"
@@ -200,10 +217,12 @@ class GenerateGraph
     end
   end
 
+  # Get an object for an iri
   def obj(iri)
     @objects[iri]
   end
-  
+
+  # Print a statment with a subject, predicate, and object. If this is a literal, print it as part of the individual.
   def print_stmt(stmt)
     unless stmt.predicate == RDF::RDFV.type
       if RDF::Literal === stmt.object
@@ -214,6 +233,7 @@ class GenerateGraph
     end  
   end
 
+  # Generate the html and puml files. Then run plantuml app on the file.
   def generate
     File.open("#{@filename}.html", 'w') do |f|
       f.puts <<EOT
@@ -279,8 +299,11 @@ iof.generate(machine)
 
 # Generate some diagrams
 
+# Provide all the type associations with each individual in the graph. This allows for each objec
+# to be annotated
 GenerateGraph.get_types(iof.graph)
 
+# Prime he reasoner to do rdf schema and owl reasoning. The reasoning is limited
 RDF::Reasoner.apply(:rdfs, :owl)
 
 graph = RDF::Graph.new
@@ -293,13 +316,61 @@ graph << Example::Machine.to_enum
 
 graph << iof.graph.to_enum
 
+# Entail the local graph
 graph.entail!
+
+# Using the entailed ontology, find all the material entities and add them
+# as the set of linked terms in the diagrams.
 
 RDF::Query.execute(graph) do
   pattern [:s, RDF.type, BFO::BFO.material_entity]
 end.each do |st|
   GenerateGraph.add_linked_terms(st.s) if st.s.qname[0] == :data
 end
+
+# Generate a top level HTML file with links
+
+File.open("#{machine}.html", 'w') do |f|
+    f.puts <<EOT
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>#{machine}</title>
+    <style>
+h1 {
+  font-size: 1.25em;  
+}
+
+html {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+    </style>
+  </head>
+  <body>
+    <ul>
+EOT
+    f.puts <<EOT
+      <h1>Complete Diagrams</h1>
+      <li><a href='diagrams/#{machine}Full.html'>Complete #{machine} Diagram</a></li>
+      <h1>Special Views</h1>
+      <li><a href='diagrams/#{machine}Mere.html'>#{machine} Mereology</a></li>
+      <li><a href='diagrams/#{machine}Topo.html'>#{machine} Topography</a></li>
+      <h1>Component Diagrams</h1>
+EOT
+    
+    GenerateGraph.linked_terms.each do |st|
+       f.puts "      <li><a href='diagrams/#{st.qname[1]}.html'>#{st.qname.join(':')}</a></li>"
+    end
+
+    f.puts <<EOT    
+    </ul>
+  </body>
+</html>
+EOT
+end
+
+# Generate each partial diagram
 
 GenerateGraph.linked_terms.each do |st|
   once = Set.new
@@ -331,36 +402,15 @@ GenerateGraph.linked_terms.each do |st|
   gen.generate  
 end
 
-File.open("#{machine}.html", 'w') do |f|
-    f.puts <<EOT
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>#{machine}</title>
-  </head>
-  <body>
-    <ul>
-EOT
-    GenerateGraph.linked_terms.each do |st|
-       f.puts "      <li><a href='diagrams/#{st.qname[1]}.html'>#{st.qname.join(':')}</a></li>"
-    end
-    f.puts "      <li><a href='diagrams/#{machine}Full.html'>#{machine} Complete</a></li>"
-    f.puts "      <li><a href='diagrams/#{machine}Mere.html'>#{machine} Mereology</a></li>"
-    f.puts "      <li><a href='diagrams/#{machine}Topo.html'>#{machine} Topography</a></li>"
-
-    f.puts <<EOT    
-    </ul>
-  </body>
-</html>
-EOT
-end
+# Generate the complete model
 
 stmts = RDF::Query.execute(iof.graph) do
   pattern [:subject, :predicate, :object]  
 end
 gen = GenerateGraph.new("diagrams/#{machine}Full", stmts)
 gen.generate
+
+# Generate a mereological diagram
 
 once = Set.new
 stmts = RDF::Query.execute(iof.graph) do
@@ -377,6 +427,8 @@ end.map do |s|
 end.flatten
 gen = GenerateGraph.new("diagrams/#{machine}Mere", stmts)
 gen.generate
+
+# Generate a topological diagram
 
 once = Set.new
 stmts = RDF::Query.execute(iof.graph) do
