@@ -74,15 +74,19 @@ html {
     </style>
   </head>
   <body>
-    <ul>
 EOT
     f.puts <<EOT
-      <h1>Complete Diagrams</h1>
+    <h1>Complete Diagrams</h1>
+    <ul>
       <li><a href='diagrams/#{machine}Full.html'>Complete #{machine} Diagram</a></li>
-      <h1>Special Views</h1>
+    </ul>
+    <h1>Special Views</h1>
+    <ul>
       <li><a href='diagrams/#{machine}Mere.html'>#{machine} Mereology</a></li>
       <li><a href='diagrams/#{machine}Topo.html'>#{machine} Topography</a></li>
-      <h1>Component Diagrams</h1>
+    </ul>
+    <h1>Component Diagrams</h1>
+    <ul>
 EOT
     
     GenerateDiagram.linked_terms.each do |st|

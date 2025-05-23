@@ -3,71 +3,71 @@ skinparam linetype polyline
 left to right direction
 title OKUMATopo
 object "[[./OKUMA.123456-Lx1.html data:OKUMA.123456-Lx1]]" as o1 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "[[./OKUMA.123456-z1_axis.html data:OKUMA.123456-z1_axis]]" as o2 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./OKUMA.123456-x_axis.html data:OKUMA.123456-x_axis]]" as o3 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./OKUMA.123456-LYI1.html data:OKUMA.123456-LYI1]]" as o4 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "[[./OKUMA.123456-y_axis.html data:OKUMA.123456-y_axis]]" as o5 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./OKUMA.123456-Lz1.html data:OKUMA.123456-Lz1]]" as o6 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "[[./OKUMA.123456-enclosure.html data:OKUMA.123456-enclosure]]" as o7 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./OKUMA.123456-Lb1.html data:OKUMA.123456-Lb1]]" as o8 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "[[./OKUMA.123456-b_axis.html data:OKUMA.123456-b_axis]]" as o9 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./OKUMA.123456-Lc1.html data:OKUMA.123456-Lc1]]" as o10 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "[[./OKUMA.123456-Lz4.html data:OKUMA.123456-Lz4]]" as o11 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "[[./OKUMA.123456-z4_axis.html data:OKUMA.123456-z4_axis]]" as o12 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./OKUMA.123456-Lc2.html data:OKUMA.123456-Lc2]]" as o13 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "[[./OKUMA.123456-c2_axis.html data:OKUMA.123456-c2_axis]]" as o14 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./OKUMA.123456-Lc3.html data:OKUMA.123456-Lc3]]" as o15 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 o1 --> o2 : ex:joinedTo
-o1 : cmns-dsg:hasName = X
+o1 : cmns-dsg:hasName: X
 o1 --> o3 : ex:joinedTo
 o4 --> o3 : ex:joinedTo
-o4 : cmns-dsg:hasName = Y
+o4 : cmns-dsg:hasName: Y
 o4 --> o5 : ex:joinedTo
 o6 --> o7 : ex:joinedTo
-o6 : cmns-dsg:hasName = Z1
+o6 : cmns-dsg:hasName: Z1
 o6 --> o2 : ex:joinedTo
 o8 --> o5 : ex:joinedTo
-o8 : cmns-dsg:hasName = B
+o8 : cmns-dsg:hasName: B
 o8 --> o9 : ex:joinedTo
 o10 --> o7 : ex:joinedTo
-o10 : cmns-dsg:hasName = C1
+o10 : cmns-dsg:hasName: C1
 o11 --> o7 : ex:joinedTo
-o11 : cmns-dsg:hasName = Z4
+o11 : cmns-dsg:hasName: Z4
 o11 --> o12 : ex:joinedTo
 o13 --> o12 : ex:joinedTo
-o13 : cmns-dsg:hasName = C2
+o13 : cmns-dsg:hasName: C2
 o13 --> o14 : ex:joinedTo
 o15 --> o12 : ex:joinedTo
-o15 : cmns-dsg:hasName = C3
+o15 : cmns-dsg:hasName: C3
 o15 --> o14 : ex:joinedTo
 @enduml

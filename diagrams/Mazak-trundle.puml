@@ -3,22 +3,22 @@ skinparam linetype polyline
 left to right direction
 title Mazak-trundle
 object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o1 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-trundle-name" as o2 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak.html data:Mazak]]" as o3 {
- type = ex:Machine
- }
+ type: ex:Machine 
+}
 object "[[./Mazak-br.html data:Mazak-br]]" as o4 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "[[./Mazak-c2.html data:Mazak-c2]]" as o5 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 o1 --> o2 : cmns-dsg:hasName
-o2 : core:hasSimpleExpressionValue = TRUNDLE
+o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: TRUNDLE
 o3 --> o1 : obo:has member part at some time
 o4 --> o1 : ex:joinedTo
 o5 --> o1 : ex:joinedTo

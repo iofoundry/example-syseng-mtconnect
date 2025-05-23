@@ -3,15 +3,15 @@ skinparam linetype polyline
 left to right direction
 title Mazak-elec
 object "[[./Mazak-elec.html data:Mazak-elec]]" as o1 {
- type = ex:ElectricalSystem
- }
+ type: ex:ElectricalSystem 
+}
 object "data:Mazak-elec-name" as o2 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak.html data:Mazak]]" as o3 {
- type = ex:Machine
- }
+ type: ex:Machine 
+}
 o1 --> o2 : cmns-dsg:hasName
-o2 : core:hasSimpleExpressionValue = electric
+o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: electric
 o3 --> o1 : obo:has member part at some time
 @enduml

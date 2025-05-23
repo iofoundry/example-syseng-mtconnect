@@ -3,22 +3,22 @@ skinparam linetype polyline
 left to right direction
 title Mazak-xaxism
 object "[[./Mazak-xaxism.html data:Mazak-xaxism]]" as o1 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-xaxism-name" as o2 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak.html data:Mazak]]" as o3 {
- type = ex:Machine
- }
+ type: ex:Machine 
+}
 object "[[./Mazak-x.html data:Mazak-x]]" as o4 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "[[./Mazak-y.html data:Mazak-y]]" as o5 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 o1 --> o2 : cmns-dsg:hasName
-o2 : core:hasSimpleExpressionValue = X_AXIS
+o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: X_AXIS
 o3 --> o1 : obo:has member part at some time
 o4 --> o1 : ex:joinedTo
 o5 --> o1 : ex:joinedTo

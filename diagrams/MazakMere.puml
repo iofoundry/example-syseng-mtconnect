@@ -3,106 +3,106 @@ skinparam linetype polyline
 left to right direction
 title MazakMere
 object "[[./Mazak.html data:Mazak]]" as o1 {
- type = ex:Machine
- }
+ type: ex:Machine 
+}
 object "[[./Mazak-xaxism.html data:Mazak-xaxism]]" as o2 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./Mazak-yaxism.html data:Mazak-yaxism]]" as o3 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o4 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./Mazak-table.html data:Mazak-table]]" as o5 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o6 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./Mazak-x.html data:Mazak-x]]" as o7 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "[[./Mazak-y.html data:Mazak-y]]" as o8 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "[[./Mazak-z.html data:Mazak-z]]" as o9 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "[[./Mazak-c.html data:Mazak-c]]" as o10 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "[[./Mazak-br.html data:Mazak-br]]" as o11 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "[[./Mazak-c2.html data:Mazak-c2]]" as o12 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "[[./Mazak-cont.html data:Mazak-cont]]" as o13 {
- type = ex:ControlSystem
- }
+ type: ex:ControlSystem 
+}
 object "[[./Mazak-door1.html data:Mazak-door1]]" as o14 {
- type = obo:object
- }
+ type: obo:object 
+}
 object "[[./Mazak-partocc.html data:Mazak-partocc]]" as o15 {
- type = ex:Part
- }
+ type: ex:Part 
+}
 object "[[./Mazak-elec.html data:Mazak-elec]]" as o16 {
- type = ex:ElectricalSystem
- }
+ type: ex:ElectricalSystem 
+}
 object "[[./Mazak-hydraulic.html data:Mazak-hydraulic]]" as o17 {
- type = ex:HydraulicSystem
- }
+ type: ex:HydraulicSystem 
+}
 object "[[./Mazak-coolant.html data:Mazak-coolant]]" as o18 {
- type = obo:object
- }
+ type: obo:object 
+}
 object "[[./Mazak-pneumatic.html data:Mazak-pneumatic]]" as o19 {
- type = ex:PneumaticSystem
- }
+ type: ex:PneumaticSystem 
+}
 object "[[./Mazak-lubrication.html data:Mazak-lubrication]]" as o20 {
- type = ex:LubricationSystem
- }
+ type: ex:LubricationSystem 
+}
 object "[[./Mazak-personnelm.html data:Mazak-personnelm]]" as o21 {
- type = core:Person
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]] 
+}
 object "[[./Mazak-procstock.html data:Mazak-procstock]]" as o22 {
- type = ex:Stock
- }
+ type: ex:Stock 
+}
 object "[[./Mazak-enclosurem.html data:Mazak-enclosurem]]" as o23 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "[[./Mazak-x-Xballscrew.html data:Mazak-x-Xballscrew]]" as o24 {
- type = ex:Ballscrew
- }
+ type: ex:Ballscrew 
+}
 object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o25 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-y-Yballscrew.html data:Mazak-y-Yballscrew]]" as o26 {
- type = ex:Ballscrew
- }
+ type: ex:Ballscrew 
+}
 object "[[./Mazak-y-Ymotor.html data:Mazak-y-Ymotor]]" as o27 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-z-Zballscrew.html data:Mazak-z-Zballscrew]]" as o28 {
- type = ex:Ballscrew
- }
+ type: ex:Ballscrew 
+}
 object "[[./Mazak-z-Zmotor.html data:Mazak-z-Zmotor]]" as o29 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-c-C2motor.html data:Mazak-c-C2motor]]" as o30 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-br-Bmotor.html data:Mazak-br-Bmotor]]" as o31 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-c2-Cmotor.html data:Mazak-c2-Cmotor]]" as o32 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-cont-path1.html data:Mazak-cont-path1]]" as o33 {
- type = ex:ControlSystemPath
- }
+ type: ex:ControlSystemPath 
+}
 o1 --> o2 : obo:has member part at some time
-o1 : cmns-dsg:hasName = Mazak
+o1 : cmns-dsg:hasName: Mazak
 o1 --> o3 : obo:has member part at some time
 o1 --> o4 : obo:has member part at some time
 o1 --> o5 : obo:has member part at some time
@@ -125,20 +125,20 @@ o1 --> o21 : obo:has member part at some time
 o1 --> o22 : obo:has member part at some time
 o1 --> o23 : obo:has member part at some time
 o7 --> o24 : obo:has member part at some time
-o7 : cmns-dsg:hasName = X
+o7 : cmns-dsg:hasName: X
 o7 --> o25 : obo:has member part at some time
 o8 --> o26 : obo:has member part at some time
-o8 : cmns-dsg:hasName = Y
+o8 : cmns-dsg:hasName: Y
 o8 --> o27 : obo:has member part at some time
 o9 --> o28 : obo:has member part at some time
-o9 : cmns-dsg:hasName = Z
+o9 : cmns-dsg:hasName: Z
 o9 --> o29 : obo:has member part at some time
 o10 --> o30 : obo:has member part at some time
-o10 : cmns-dsg:hasName = C1
+o10 : cmns-dsg:hasName: C1
 o11 --> o31 : obo:has member part at some time
-o11 : cmns-dsg:hasName = B
+o11 : cmns-dsg:hasName: B
 o12 --> o32 : obo:has member part at some time
-o12 : cmns-dsg:hasName = C2
+o12 : cmns-dsg:hasName: C2
 o13 --> o33 : obo:has member part at some time
-o13 : cmns-dsg:hasName = controller
+o13 : cmns-dsg:hasName: controller
 @enduml

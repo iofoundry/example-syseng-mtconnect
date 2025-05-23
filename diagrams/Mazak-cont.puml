@@ -3,24 +3,24 @@ skinparam linetype polyline
 left to right direction
 title Mazak-cont
 object "[[./Mazak-cont.html data:Mazak-cont]]" as o1 {
- type = ex:ControlSystem
- }
+ type: ex:ControlSystem 
+}
 object "data:Mazak-cont-name" as o2 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-cont-path1.html data:Mazak-cont-path1]]" as o3 {
- type = ex:ControlSystemPath
- }
+ type: ex:ControlSystemPath 
+}
 object "data:Mazak-cont-path1-name" as o4 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak.html data:Mazak]]" as o5 {
- type = ex:Machine
- }
+ type: ex:Machine 
+}
 o1 --> o2 : cmns-dsg:hasName
-o2 : core:hasSimpleExpressionValue = controller
+o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: controller
 o1 --> o3 : obo:has member part at some time
 o3 --> o4 : cmns-dsg:hasName
-o4 : core:hasSimpleExpressionValue = path
+o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: path
 o5 --> o1 : obo:has member part at some time
 @enduml

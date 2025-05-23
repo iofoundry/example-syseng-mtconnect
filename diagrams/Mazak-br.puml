@@ -3,82 +3,82 @@ skinparam linetype polyline
 left to right direction
 title Mazak-br
 object "[[./Mazak-br.html data:Mazak-br]]" as o1 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "data:Mazak-br-name" as o2 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-br-spec" as o3 {
- type = core:DesignSpecification
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
+}
 object "data:Mazak-br-spec-ANGLE-Maximum" as o4 {
- type = core:ValueExpression
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
+}
 object "data:Mazak-br-spec-ANGLE-Minimum" as o5 {
- type = core:ValueExpression
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
+}
 object "data:Mazak-br-spec-TORQUE-Maximum" as o6 {
- type = core:ValueExpression
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
+}
 object "data:Mazak-br-spec-TORQUE-Minimum" as o7 {
- type = core:ValueExpression
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
+}
 object "[[./Mazak-enclosurem.html data:Mazak-enclosurem]]" as o8 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-enclosurem-name" as o9 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-enclosurem-temperature" as o10 {
- type = qp:Temperature
- }
+ type: qp:Temperature 
+}
 object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o11 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-trundle-name" as o12 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-br-function" as o13 {
- type = ex:RevoluteMotionCapability
- }
+ type: ex:RevoluteMotionCapability 
+}
 object "data:Mazak-br-angle" as o14 {
- type = qp:Angle
- }
+ type: qp:Angle 
+}
 object "data:Mazak-br-angle-actual" as o15 {
- type = qp:Angle
- }
+ type: qp:Angle 
+}
 object "[[./Mazak-br-Bmotor.html data:Mazak-br-Bmotor]]" as o16 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "data:Mazak-br-Bmotor-name" as o17 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak.html data:Mazak]]" as o18 {
- type = ex:Machine
- }
+ type: ex:Machine 
+}
 o1 --> o2 : cmns-dsg:hasName
-o2 : core:hasSimpleExpressionValue = B
-o1 --> o3 : core:prescribedBy
-o3 --> o4 : core:hasValueExpressionAtAllTimes
-o4 : core:hasSimpleExpressionValue = 120.0
-o3 --> o5 : core:hasValueExpressionAtAllTimes
-o5 : core:hasSimpleExpressionValue = -30.0
-o3 --> o6 : core:hasValueExpressionAtAllTimes
-o6 : core:hasSimpleExpressionValue = 400.0
-o3 --> o7 : core:hasValueExpressionAtAllTimes
-o7 : core:hasSimpleExpressionValue = 0.0
+o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: B
+o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
+o3 --> o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
+o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 120.0
+o3 --> o5 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
+o5 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: -30.0
+o3 --> o6 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
+o6 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 400.0
+o3 --> o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
+o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 0.0
 o1 --> o8 : ex:joinedTo
 o8 --> o9 : cmns-dsg:hasName
-o9 : core:hasSimpleExpressionValue = enclosure
-o8 --> o10 : core:measuresAtSomeTime
+o9 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: enclosure
+o8 --> o10 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o11 : ex:joinedTo
 o11 --> o12 : cmns-dsg:hasName
-o12 : core:hasSimpleExpressionValue = TRUNDLE
-o1 --> o13 : core:hasFunction
-o1 --> o14 : core:measuresAtSomeTime
-o1 --> o15 : core:measuresAtSomeTime
+o12 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: TRUNDLE
+o1 --> o13 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o1 --> o14 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o1 --> o15 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o16 : obo:has member part at some time
 o16 --> o17 : cmns-dsg:hasName
-o17 : core:hasSimpleExpressionValue = Bmotor
+o17 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Bmotor
 o18 --> o1 : obo:has member part at some time
 @enduml

@@ -11,10 +11,15 @@ class GenerateDiagram
   # Convert an iri to a text label
   def self.uml_name(iri)
     qn = iri.qname(prefixes: Prefixes)
-    if qn[0] == :obo
-      "obo:#{iri.attributes[:label][:en]}"
+    v = if qn[0] == :obo
+          "obo:#{iri.attributes[:label][:en]}"
+        else
+          qn.join(':')
+        end
+    if qn.first == :core
+      "[[#{iri} #{v}]]"
     else
-      qn.join(':')
+      v
     end
   end  
 
@@ -75,8 +80,8 @@ class GenerateDiagram
       title = self.class.uml_name(iri)
     end
     @f.print "object \"#{title}\" as #{@objects[iri]} "
-    if @@types[iri]
-      @f.puts "{\n type = #{self.class.uml_name(@@types[iri])}\n }"
+    if t = @@types[iri]
+      @f.puts "{\n type: #{self.class.uml_name(t)} \n}"
     else
       @f.puts
     end
@@ -91,7 +96,7 @@ class GenerateDiagram
   def print_stmt(stmt)
     unless stmt.predicate == RDF::RDFV.type
       if RDF::Literal === stmt.object
-        @f.puts "#{obj(stmt.subject)} : #{self.class.uml_name(stmt.predicate)} = #{stmt.object.value}"
+        @f.puts "#{obj(stmt.subject)} : #{self.class.uml_name(stmt.predicate)}: #{stmt.object.value}"
       else
         @f.puts "#{obj(stmt.subject)} --> #{obj(stmt.object)} : #{self.class.uml_name(stmt.predicate)}"
       end

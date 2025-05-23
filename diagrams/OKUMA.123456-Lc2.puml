@@ -3,45 +3,45 @@ skinparam linetype polyline
 left to right direction
 title OKUMA.123456-Lc2
 object "[[./OKUMA.123456-Lc2.html data:OKUMA.123456-Lc2]]" as o1 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "data:OKUMA.123456-Lc2-name" as o2 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./OKUMA.123456-z4_axis.html data:OKUMA.123456-z4_axis]]" as o3 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:OKUMA.123456-z4_axis-name" as o4 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./OKUMA.123456-c2_axis.html data:OKUMA.123456-c2_axis]]" as o5 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:OKUMA.123456-c2_axis-name" as o6 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:OKUMA.123456-Lc2-function" as o7 {
- type = ex:RevoluteMotionCapability
- }
+ type: ex:RevoluteMotionCapability 
+}
 object "data:OKUMA.123456-Lc2-rotary_velocity-actual" as o8 {
- type = qp:Speed
- }
+ type: qp:Speed 
+}
 object "data:OKUMA.123456-Lc2-rotary_velocity-programmed" as o9 {
- type = qp:Speed
- }
+ type: qp:Speed 
+}
 object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o10 {
- type = ex:Machine
- }
+ type: ex:Machine 
+}
 o1 --> o2 : cmns-dsg:hasName
-o2 : core:hasSimpleExpressionValue = C2
+o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: C2
 o1 --> o3 : ex:joinedTo
 o3 --> o4 : cmns-dsg:hasName
-o4 : core:hasSimpleExpressionValue = z4_axis
+o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: z4_axis
 o1 --> o5 : ex:joinedTo
 o5 --> o6 : cmns-dsg:hasName
-o6 : core:hasSimpleExpressionValue = c2_axis
-o1 --> o7 : core:hasFunction
-o1 --> o8 : core:measuresAtSomeTime
-o1 --> o9 : core:measuresAtSomeTime
+o6 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: c2_axis
+o1 --> o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o1 --> o8 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o1 --> o9 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o10 --> o1 : obo:has member part at some time
 @enduml

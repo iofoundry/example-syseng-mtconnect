@@ -3,392 +3,392 @@ skinparam linetype polyline
 left to right direction
 title Mazak
 object "[[./Mazak.html data:Mazak]]" as o1 {
- type = ex:Machine
- }
+ type: ex:Machine 
+}
 object "data:Mazak-name" as o2 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-function" as o3 {
- type = ex:MillingCapability
- }
+ type: ex:MillingCapability 
+}
 object "data:Mazak-capability" as o4 {
- type = ex:TurningCapability
- }
+ type: ex:TurningCapability 
+}
 object "data:Mazak-role" as o5 {
- type = core:EquipmentRole
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/EquipmentRole core:EquipmentRole]] 
+}
 object "[[./Mazak-xaxism.html data:Mazak-xaxism]]" as o6 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-xaxism-name" as o7 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-yaxism.html data:Mazak-yaxism]]" as o8 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-yaxism-name" as o9 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o10 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-zaxis-name" as o11 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-table.html data:Mazak-table]]" as o12 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-table-name" as o13 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o14 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-trundle-name" as o15 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-x.html data:Mazak-x]]" as o16 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "data:Mazak-x-name" as o17 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-x-spec" as o18 {
- type = core:DesignSpecification
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
+}
 object "[[./Mazak-enclosurem.html data:Mazak-enclosurem]]" as o19 {
- type = ex:Structure
- }
+ type: ex:Structure 
+}
 object "data:Mazak-x-function" as o20 {
- type = ex:PrismaticMotionCapability
- }
+ type: ex:PrismaticMotionCapability 
+}
 object "data:Mazak-x-position-actual" as o21 {
- type = qp:Displacement
- }
+ type: qp:Displacement 
+}
 object "data:Mazak-x-position" as o22 {
- type = qp:Displacement
- }
+ type: qp:Displacement 
+}
 object "data:Mazak-x-temperature" as o23 {
- type = qp:Temperature
- }
+ type: qp:Temperature 
+}
 object "[[./Mazak-x-Xballscrew.html data:Mazak-x-Xballscrew]]" as o24 {
- type = ex:Ballscrew
- }
+ type: ex:Ballscrew 
+}
 object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o25 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-y.html data:Mazak-y]]" as o26 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "data:Mazak-y-name" as o27 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-y-spec" as o28 {
- type = core:DesignSpecification
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
+}
 object "data:Mazak-y-function" as o29 {
- type = ex:PrismaticMotionCapability
- }
+ type: ex:PrismaticMotionCapability 
+}
 object "data:Mazak-y-position-actual" as o30 {
- type = qp:Displacement
- }
+ type: qp:Displacement 
+}
 object "data:Mazak-y-position" as o31 {
- type = qp:Displacement
- }
+ type: qp:Displacement 
+}
 object "data:Mazak-y-temperature" as o32 {
- type = qp:Temperature
- }
+ type: qp:Temperature 
+}
 object "[[./Mazak-y-Yballscrew.html data:Mazak-y-Yballscrew]]" as o33 {
- type = ex:Ballscrew
- }
+ type: ex:Ballscrew 
+}
 object "[[./Mazak-y-Ymotor.html data:Mazak-y-Ymotor]]" as o34 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-z.html data:Mazak-z]]" as o35 {
- type = ex:LinearMotionSystem
- }
+ type: ex:LinearMotionSystem 
+}
 object "data:Mazak-z-name" as o36 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-z-spec" as o37 {
- type = core:DesignSpecification
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
+}
 object "data:Mazak-z-function" as o38 {
- type = ex:PrismaticMotionCapability
- }
+ type: ex:PrismaticMotionCapability 
+}
 object "data:Mazak-z-position-actual" as o39 {
- type = qp:Displacement
- }
+ type: qp:Displacement 
+}
 object "data:Mazak-z-position" as o40 {
- type = qp:Displacement
- }
+ type: qp:Displacement 
+}
 object "data:Mazak-z-temperature" as o41 {
- type = qp:Temperature
- }
+ type: qp:Temperature 
+}
 object "[[./Mazak-z-Zballscrew.html data:Mazak-z-Zballscrew]]" as o42 {
- type = ex:Ballscrew
- }
+ type: ex:Ballscrew 
+}
 object "[[./Mazak-z-Zmotor.html data:Mazak-z-Zmotor]]" as o43 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-c.html data:Mazak-c]]" as o44 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "data:Mazak-c-name" as o45 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-c-spec" as o46 {
- type = core:DesignSpecification
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
+}
 object "data:Mazak-c-function" as o47 {
- type = ex:ContinuousMotionCapability
- }
+ type: ex:ContinuousMotionCapability 
+}
 object "data:Mazak-c-rotary_velocity-actual" as o48 {
- type = qp:Speed
- }
+ type: qp:Speed 
+}
 object "data:Mazak-c-temperature" as o49 {
- type = qp:Temperature
- }
+ type: qp:Temperature 
+}
 object "[[./Mazak-c-C2motor.html data:Mazak-c-C2motor]]" as o50 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-br.html data:Mazak-br]]" as o51 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "data:Mazak-br-name" as o52 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-br-spec" as o53 {
- type = core:DesignSpecification
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
+}
 object "data:Mazak-br-function" as o54 {
- type = ex:RevoluteMotionCapability
- }
+ type: ex:RevoluteMotionCapability 
+}
 object "data:Mazak-br-angle" as o55 {
- type = qp:Angle
- }
+ type: qp:Angle 
+}
 object "data:Mazak-br-angle-actual" as o56 {
- type = qp:Angle
- }
+ type: qp:Angle 
+}
 object "[[./Mazak-br-Bmotor.html data:Mazak-br-Bmotor]]" as o57 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-c2.html data:Mazak-c2]]" as o58 {
- type = ex:RotaryMotionSystem
- }
+ type: ex:RotaryMotionSystem 
+}
 object "data:Mazak-c2-name" as o59 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-c2-spec" as o60 {
- type = core:DesignSpecification
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
+}
 object "data:Mazak-c2-function" as o61 {
- type = ex:RevoluteMotionCapability
- }
+ type: ex:RevoluteMotionCapability 
+}
 object "data:Mazak-c2-angle" as o62 {
- type = qp:Angle
- }
+ type: qp:Angle 
+}
 object "data:Mazak-c2-angle-actual" as o63 {
- type = qp:Angle
- }
+ type: qp:Angle 
+}
 object "data:Mazak-c2-temperature" as o64 {
- type = qp:Temperature
- }
+ type: qp:Temperature 
+}
 object "[[./Mazak-c2-Cmotor.html data:Mazak-c2-Cmotor]]" as o65 {
- type = ex:Motor
- }
+ type: ex:Motor 
+}
 object "[[./Mazak-cont.html data:Mazak-cont]]" as o66 {
- type = ex:ControlSystem
- }
+ type: ex:ControlSystem 
+}
 object "data:Mazak-cont-name" as o67 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-cont-path1.html data:Mazak-cont-path1]]" as o68 {
- type = ex:ControlSystemPath
- }
+ type: ex:ControlSystemPath 
+}
 object "[[./Mazak-door1.html data:Mazak-door1]]" as o69 {
- type = obo:object
- }
+ type: obo:object 
+}
 object "data:Mazak-door1-name" as o70 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-partocc.html data:Mazak-partocc]]" as o71 {
- type = ex:Part
- }
+ type: ex:Part 
+}
 object "data:Mazak-partocc-name" as o72 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-elec.html data:Mazak-elec]]" as o73 {
- type = ex:ElectricalSystem
- }
+ type: ex:ElectricalSystem 
+}
 object "data:Mazak-elec-name" as o74 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-hydraulic.html data:Mazak-hydraulic]]" as o75 {
- type = ex:HydraulicSystem
- }
+ type: ex:HydraulicSystem 
+}
 object "data:Mazak-hydraulic-name" as o76 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-coolant.html data:Mazak-coolant]]" as o77 {
- type = obo:object
- }
+ type: obo:object 
+}
 object "data:Mazak-coolant-name" as o78 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-coolant-temperature" as o79 {
- type = qp:Temperature
- }
+ type: qp:Temperature 
+}
 object "[[./Mazak-pneumatic.html data:Mazak-pneumatic]]" as o80 {
- type = ex:PneumaticSystem
- }
+ type: ex:PneumaticSystem 
+}
 object "data:Mazak-pneumatic-name" as o81 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-lubrication.html data:Mazak-lubrication]]" as o82 {
- type = ex:LubricationSystem
- }
+ type: ex:LubricationSystem 
+}
 object "data:Mazak-lubrication-name" as o83 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-personnelm.html data:Mazak-personnelm]]" as o84 {
- type = core:Person
- }
+ type: [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]] 
+}
 object "data:Mazak-personnelm-name" as o85 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "[[./Mazak-procstock.html data:Mazak-procstock]]" as o86 {
- type = ex:Stock
- }
+ type: ex:Stock 
+}
 object "data:Mazak-procstock-name" as o87 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-enclosurem-name" as o88 {
- type = cmns-dsg:Name
- }
+ type: cmns-dsg:Name 
+}
 object "data:Mazak-enclosurem-temperature" as o89 {
- type = qp:Temperature
- }
+ type: qp:Temperature 
+}
 o1 --> o2 : cmns-dsg:hasName
-o2 : core:hasSimpleExpressionValue = Mazak
-o1 --> o3 : core:hasFunction
-o1 --> o4 : core:hasCapability
-o1 --> o5 : core:hasRole
+o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Mazak
+o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o1 --> o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasCapability core:hasCapability]]
+o1 --> o5 : [[https://spec.industrialontologies.org/ontology/core/Core/hasRole core:hasRole]]
 o1 --> o6 : obo:has member part at some time
 o6 --> o7 : cmns-dsg:hasName
-o7 : core:hasSimpleExpressionValue = X_AXIS
+o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: X_AXIS
 o1 --> o8 : obo:has member part at some time
 o8 --> o9 : cmns-dsg:hasName
-o9 : core:hasSimpleExpressionValue = Y_AXIS
+o9 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Y_AXIS
 o1 --> o10 : obo:has member part at some time
 o10 --> o11 : cmns-dsg:hasName
-o11 : core:hasSimpleExpressionValue = Z_AXIS
+o11 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Z_AXIS
 o1 --> o12 : obo:has member part at some time
 o12 --> o13 : cmns-dsg:hasName
-o13 : core:hasSimpleExpressionValue = TABLE
+o13 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: TABLE
 o1 --> o14 : obo:has member part at some time
 o14 --> o15 : cmns-dsg:hasName
-o15 : core:hasSimpleExpressionValue = TRUNDLE
+o15 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: TRUNDLE
 o1 --> o16 : obo:has member part at some time
 o16 --> o17 : cmns-dsg:hasName
-o17 : core:hasSimpleExpressionValue = X
-o16 --> o18 : core:prescribedBy
+o17 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: X
+o16 --> o18 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o16 --> o19 : ex:joinedTo
 o16 --> o6 : ex:joinedTo
-o16 --> o20 : core:hasFunction
-o16 --> o21 : core:measuresAtSomeTime
-o16 --> o22 : core:measuresAtSomeTime
-o16 --> o23 : core:measuresAtSomeTime
+o16 --> o20 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o16 --> o21 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o16 --> o22 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o16 --> o23 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o16 --> o24 : obo:has member part at some time
 o16 --> o25 : obo:has member part at some time
 o1 --> o26 : obo:has member part at some time
 o26 --> o27 : cmns-dsg:hasName
-o27 : core:hasSimpleExpressionValue = Y
-o26 --> o28 : core:prescribedBy
+o27 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Y
+o26 --> o28 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o26 --> o6 : ex:joinedTo
 o26 --> o8 : ex:joinedTo
-o26 --> o29 : core:hasFunction
-o26 --> o30 : core:measuresAtSomeTime
-o26 --> o31 : core:measuresAtSomeTime
-o26 --> o32 : core:measuresAtSomeTime
+o26 --> o29 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o26 --> o30 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o26 --> o31 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o26 --> o32 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o26 --> o33 : obo:has member part at some time
 o26 --> o34 : obo:has member part at some time
 o1 --> o35 : obo:has member part at some time
 o35 --> o36 : cmns-dsg:hasName
-o36 : core:hasSimpleExpressionValue = Z
-o35 --> o37 : core:prescribedBy
+o36 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Z
+o35 --> o37 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o35 --> o8 : ex:joinedTo
 o35 --> o10 : ex:joinedTo
-o35 --> o38 : core:hasFunction
-o35 --> o39 : core:measuresAtSomeTime
-o35 --> o40 : core:measuresAtSomeTime
-o35 --> o41 : core:measuresAtSomeTime
+o35 --> o38 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o35 --> o39 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o35 --> o40 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o35 --> o41 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o35 --> o42 : obo:has member part at some time
 o35 --> o43 : obo:has member part at some time
 o1 --> o44 : obo:has member part at some time
 o44 --> o45 : cmns-dsg:hasName
-o45 : core:hasSimpleExpressionValue = C1
-o44 --> o46 : core:prescribedBy
+o45 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: C1
+o44 --> o46 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o44 --> o10 : ex:joinedTo
-o44 --> o47 : core:hasFunction
-o44 --> o48 : core:measuresAtSomeTime
-o44 --> o49 : core:measuresAtSomeTime
+o44 --> o47 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o44 --> o48 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o44 --> o49 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o44 --> o50 : obo:has member part at some time
 o1 --> o51 : obo:has member part at some time
 o51 --> o52 : cmns-dsg:hasName
-o52 : core:hasSimpleExpressionValue = B
-o51 --> o53 : core:prescribedBy
+o52 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: B
+o51 --> o53 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o51 --> o19 : ex:joinedTo
 o51 --> o14 : ex:joinedTo
-o51 --> o54 : core:hasFunction
-o51 --> o55 : core:measuresAtSomeTime
-o51 --> o56 : core:measuresAtSomeTime
+o51 --> o54 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o51 --> o55 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o51 --> o56 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o51 --> o57 : obo:has member part at some time
 o1 --> o58 : obo:has member part at some time
 o58 --> o59 : cmns-dsg:hasName
-o59 : core:hasSimpleExpressionValue = C2
-o58 --> o60 : core:prescribedBy
+o59 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: C2
+o58 --> o60 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o58 --> o14 : ex:joinedTo
 o58 --> o12 : ex:joinedTo
-o58 --> o61 : core:hasFunction
-o58 --> o62 : core:measuresAtSomeTime
-o58 --> o63 : core:measuresAtSomeTime
-o58 --> o64 : core:measuresAtSomeTime
+o58 --> o61 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
+o58 --> o62 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o58 --> o63 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o58 --> o64 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o58 --> o65 : obo:has member part at some time
 o1 --> o66 : obo:has member part at some time
 o66 --> o67 : cmns-dsg:hasName
-o67 : core:hasSimpleExpressionValue = controller
+o67 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: controller
 o66 --> o68 : obo:has member part at some time
 o1 --> o69 : obo:has member part at some time
 o69 --> o70 : cmns-dsg:hasName
-o70 : core:hasSimpleExpressionValue = door
+o70 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: door
 o1 --> o71 : obo:has member part at some time
 o71 --> o72 : cmns-dsg:hasName
-o72 : core:hasSimpleExpressionValue = partocc
+o72 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: partocc
 o1 --> o73 : obo:has member part at some time
 o73 --> o74 : cmns-dsg:hasName
-o74 : core:hasSimpleExpressionValue = electric
+o74 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: electric
 o1 --> o75 : obo:has member part at some time
 o75 --> o76 : cmns-dsg:hasName
-o76 : core:hasSimpleExpressionValue = hydraulic
+o76 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: hydraulic
 o1 --> o77 : obo:has member part at some time
 o77 --> o78 : cmns-dsg:hasName
-o78 : core:hasSimpleExpressionValue = coolant
-o77 --> o79 : core:measuresAtSomeTime
+o78 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: coolant
+o77 --> o79 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o80 : obo:has member part at some time
 o80 --> o81 : cmns-dsg:hasName
-o81 : core:hasSimpleExpressionValue = pneumatic
+o81 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: pneumatic
 o1 --> o82 : obo:has member part at some time
 o82 --> o83 : cmns-dsg:hasName
-o83 : core:hasSimpleExpressionValue = lubrication
+o83 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: lubrication
 o1 --> o84 : obo:has member part at some time
 o84 --> o85 : cmns-dsg:hasName
-o85 : core:hasSimpleExpressionValue = personnel
+o85 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: personnel
 o1 --> o86 : obo:has member part at some time
 o86 --> o87 : cmns-dsg:hasName
-o87 : core:hasSimpleExpressionValue = stock
+o87 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: stock
 o1 --> o19 : obo:has member part at some time
 o19 --> o88 : cmns-dsg:hasName
-o88 : core:hasSimpleExpressionValue = enclosure
-o19 --> o89 : core:measuresAtSomeTime
+o88 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: enclosure
+o19 --> o89 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 @enduml
