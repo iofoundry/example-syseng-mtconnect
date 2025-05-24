@@ -12,6 +12,6 @@ object "data:Mazak-room-temperature" as o3 {
  type: qp:Temperature 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: environmental
+o2 : cmns-dsg:hasTextualName: environmental
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 @enduml

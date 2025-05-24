@@ -439,17 +439,17 @@ o3 --> o26 : obo:has member part at some time
 o3 --> o27 : obo:has member part at some time
 o3 --> o28 : obo:has member part at some time
 o3 --> o29 : obo:has member part at some time
-o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Mazak
+o4 : cmns-dsg:hasTextualName: Mazak
 o8 --> o30 : cmns-dsg:hasName
-o30 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: X_AXIS
+o30 : cmns-dsg:hasTextualName: X_AXIS
 o9 --> o31 : cmns-dsg:hasName
-o31 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Y_AXIS
+o31 : cmns-dsg:hasTextualName: Y_AXIS
 o10 --> o32 : cmns-dsg:hasName
-o32 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Z_AXIS
+o32 : cmns-dsg:hasTextualName: Z_AXIS
 o11 --> o33 : cmns-dsg:hasName
-o33 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: TABLE
+o33 : cmns-dsg:hasTextualName: TABLE
 o12 --> o34 : cmns-dsg:hasName
-o34 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: TRUNDLE
+o34 : cmns-dsg:hasTextualName: TRUNDLE
 o13 --> o35 : cmns-dsg:hasName
 o13 --> o36 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o13 --> o29 : ex:joinedTo
@@ -460,7 +460,7 @@ o13 --> o39 : [[https://spec.industrialontologies.org/ontology/core/Core/measure
 o13 --> o40 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o13 --> o41 : obo:has member part at some time
 o13 --> o42 : obo:has member part at some time
-o35 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: X
+o35 : cmns-dsg:hasTextualName: X
 o36 --> o43 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o36 --> o44 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o36 --> o45 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
@@ -483,9 +483,9 @@ o48 --> o52 : units:hasUnit
 o49 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 1.0
 o49 --> o52 : units:hasUnit
 o41 --> o53 : cmns-dsg:hasName
-o53 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Xballscrew
+o53 : cmns-dsg:hasTextualName: Xballscrew
 o42 --> o54 : cmns-dsg:hasName
-o54 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Xmotor
+o54 : cmns-dsg:hasTextualName: Xmotor
 o14 --> o55 : cmns-dsg:hasName
 o14 --> o56 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o14 --> o8 : ex:joinedTo
@@ -496,7 +496,7 @@ o14 --> o59 : [[https://spec.industrialontologies.org/ontology/core/Core/measure
 o14 --> o60 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o14 --> o61 : obo:has member part at some time
 o14 --> o62 : obo:has member part at some time
-o55 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Y
+o55 : cmns-dsg:hasTextualName: Y
 o56 --> o63 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o56 --> o64 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o56 --> o65 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
@@ -519,9 +519,9 @@ o68 --> o52 : units:hasUnit
 o69 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 1.0
 o69 --> o52 : units:hasUnit
 o61 --> o70 : cmns-dsg:hasName
-o70 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Yballscrew
+o70 : cmns-dsg:hasTextualName: Yballscrew
 o62 --> o71 : cmns-dsg:hasName
-o71 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Ymotor
+o71 : cmns-dsg:hasTextualName: Ymotor
 o15 --> o72 : cmns-dsg:hasName
 o15 --> o73 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o15 --> o9 : ex:joinedTo
@@ -532,7 +532,7 @@ o15 --> o76 : [[https://spec.industrialontologies.org/ontology/core/Core/measure
 o15 --> o77 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o15 --> o78 : obo:has member part at some time
 o15 --> o79 : obo:has member part at some time
-o72 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Z
+o72 : cmns-dsg:hasTextualName: Z
 o73 --> o80 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o73 --> o81 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o73 --> o82 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
@@ -555,9 +555,9 @@ o85 --> o52 : units:hasUnit
 o86 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 1.0
 o86 --> o52 : units:hasUnit
 o78 --> o87 : cmns-dsg:hasName
-o87 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Zballscrew
+o87 : cmns-dsg:hasTextualName: Zballscrew
 o79 --> o88 : cmns-dsg:hasName
-o88 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Zmotor
+o88 : cmns-dsg:hasTextualName: Zmotor
 o16 --> o89 : cmns-dsg:hasName
 o16 --> o90 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o16 --> o10 : ex:joinedTo
@@ -565,7 +565,7 @@ o16 --> o91 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunc
 o16 --> o92 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o16 --> o93 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o16 --> o94 : obo:has member part at some time
-o89 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: C1
+o89 : cmns-dsg:hasTextualName: C1
 o90 --> o95 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o90 --> o96 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o95 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 12000.0
@@ -573,7 +573,7 @@ o95 --> o97 : units:hasUnit
 o96 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 0.0
 o96 --> o97 : units:hasUnit
 o94 --> o98 : cmns-dsg:hasName
-o98 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: C2motor
+o98 : cmns-dsg:hasTextualName: C2motor
 o17 --> o99 : cmns-dsg:hasName
 o17 --> o100 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o17 --> o29 : ex:joinedTo
@@ -582,7 +582,7 @@ o17 --> o101 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFun
 o17 --> o102 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o17 --> o103 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o17 --> o104 : obo:has member part at some time
-o99 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: B
+o99 : cmns-dsg:hasTextualName: B
 o100 --> o105 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o100 --> o106 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o100 --> o107 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
@@ -596,7 +596,7 @@ o107 --> o110 : units:hasUnit
 o108 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 0.0
 o108 --> o110 : units:hasUnit
 o104 --> o111 : cmns-dsg:hasName
-o111 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Bmotor
+o111 : cmns-dsg:hasTextualName: Bmotor
 o18 --> o112 : cmns-dsg:hasName
 o18 --> o113 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o18 --> o12 : ex:joinedTo
@@ -606,7 +606,7 @@ o18 --> o115 : [[https://spec.industrialontologies.org/ontology/core/Core/measur
 o18 --> o116 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o18 --> o117 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o18 --> o118 : obo:has member part at some time
-o112 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: C2
+o112 : cmns-dsg:hasTextualName: C2
 o113 --> o119 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o113 --> o120 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o113 --> o121 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
@@ -620,35 +620,35 @@ o121 --> o110 : units:hasUnit
 o122 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 0.0
 o122 --> o110 : units:hasUnit
 o118 --> o123 : cmns-dsg:hasName
-o123 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Cmotor
+o123 : cmns-dsg:hasTextualName: Cmotor
 o19 --> o124 : cmns-dsg:hasName
 o19 --> o125 : obo:has member part at some time
-o124 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: controller
+o124 : cmns-dsg:hasTextualName: controller
 o125 --> o126 : cmns-dsg:hasName
-o126 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: path
+o126 : cmns-dsg:hasTextualName: path
 o20 --> o127 : cmns-dsg:hasName
-o127 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: door
+o127 : cmns-dsg:hasTextualName: door
 o21 --> o128 : cmns-dsg:hasName
-o128 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: partocc
+o128 : cmns-dsg:hasTextualName: partocc
 o22 --> o129 : cmns-dsg:hasName
-o129 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: electric
+o129 : cmns-dsg:hasTextualName: electric
 o23 --> o130 : cmns-dsg:hasName
-o130 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: hydraulic
+o130 : cmns-dsg:hasTextualName: hydraulic
 o24 --> o131 : cmns-dsg:hasName
 o24 --> o132 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o131 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: coolant
+o131 : cmns-dsg:hasTextualName: coolant
 o25 --> o133 : cmns-dsg:hasName
-o133 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: pneumatic
+o133 : cmns-dsg:hasTextualName: pneumatic
 o26 --> o134 : cmns-dsg:hasName
-o134 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: lubrication
+o134 : cmns-dsg:hasTextualName: lubrication
 o135 --> o136 : cmns-dsg:hasName
 o135 --> o137 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o136 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: environmental
+o136 : cmns-dsg:hasTextualName: environmental
 o27 --> o138 : cmns-dsg:hasName
-o138 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: personnel
+o138 : cmns-dsg:hasTextualName: personnel
 o28 --> o139 : cmns-dsg:hasName
-o139 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: stock
+o139 : cmns-dsg:hasTextualName: stock
 o29 --> o140 : cmns-dsg:hasName
 o29 --> o141 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o140 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: enclosure
+o140 : cmns-dsg:hasTextualName: enclosure
 @enduml

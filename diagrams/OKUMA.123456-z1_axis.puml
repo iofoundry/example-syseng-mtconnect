@@ -18,7 +18,7 @@ object "[[./OKUMA.123456-Lz1.html data:OKUMA.123456-Lz1]]" as o5 {
  type: ex:LinearMotionSystem 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: z1_axis
+o2 : cmns-dsg:hasTextualName: z1_axis
 o3 --> o1 : obo:has member part at some time
 o4 --> o1 : ex:joinedTo
 o5 --> o1 : ex:joinedTo

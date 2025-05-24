@@ -21,7 +21,7 @@ object "[[./Mazak-br.html data:Mazak-br]]" as o6 {
  type: ex:RotaryMotionSystem 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: enclosure
+o2 : cmns-dsg:hasTextualName: enclosure
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o4 --> o1 : obo:has member part at some time
 o5 --> o1 : ex:joinedTo

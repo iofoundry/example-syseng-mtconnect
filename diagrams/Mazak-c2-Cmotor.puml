@@ -12,6 +12,6 @@ object "[[./Mazak-c2.html data:Mazak-c2]]" as o3 {
  type: ex:RotaryMotionSystem 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Cmotor
+o2 : cmns-dsg:hasTextualName: Cmotor
 o3 --> o1 : obo:has member part at some time
 @enduml

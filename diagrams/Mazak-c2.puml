@@ -57,7 +57,7 @@ object "[[./Mazak.html data:Mazak]]" as o18 {
  type: ex:Machine 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: C2
+o2 : cmns-dsg:hasTextualName: C2
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o3 --> o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 360.0
@@ -69,16 +69,13 @@ o3 --> o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueE
 o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 0.0
 o1 --> o8 : ex:joinedTo
 o8 --> o9 : cmns-dsg:hasName
-o9 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: TRUNDLE
 o1 --> o10 : ex:joinedTo
 o10 --> o11 : cmns-dsg:hasName
-o11 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: TABLE
 o1 --> o12 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
 o1 --> o13 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o14 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o15 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o16 : obo:has member part at some time
 o16 --> o17 : cmns-dsg:hasName
-o17 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Cmotor
 o18 --> o1 : obo:has member part at some time
 @enduml

@@ -54,7 +54,7 @@ object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o17 {
  type: ex:Machine 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: X
+o2 : cmns-dsg:hasTextualName: X
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o3 --> o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 650.0
@@ -72,10 +72,8 @@ o3 --> o10 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValue
 o10 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 1.0
 o1 --> o11 : ex:joinedTo
 o11 --> o12 : cmns-dsg:hasName
-o12 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: z1_axis
 o1 --> o13 : ex:joinedTo
 o13 --> o14 : cmns-dsg:hasName
-o14 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: x_axis
 o1 --> o15 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
 o1 --> o16 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o17 --> o1 : obo:has member part at some time

@@ -75,7 +75,7 @@ object "[[./Mazak.html data:Mazak]]" as o24 {
  type: ex:Machine 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: X
+o2 : cmns-dsg:hasTextualName: X
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
 o3 --> o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
 o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 650.0
@@ -93,20 +93,16 @@ o3 --> o10 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValue
 o10 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 1.0
 o1 --> o11 : ex:joinedTo
 o11 --> o12 : cmns-dsg:hasName
-o12 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: enclosure
 o11 --> o13 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o14 : ex:joinedTo
 o14 --> o15 : cmns-dsg:hasName
-o15 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: X_AXIS
 o1 --> o16 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
 o1 --> o17 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o18 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o19 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o20 : obo:has member part at some time
 o20 --> o21 : cmns-dsg:hasName
-o21 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Xballscrew
 o1 --> o22 : obo:has member part at some time
 o22 --> o23 : cmns-dsg:hasName
-o23 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: Xmotor
 o24 --> o1 : obo:has member part at some time
 @enduml

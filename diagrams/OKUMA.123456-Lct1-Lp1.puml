@@ -12,6 +12,6 @@ object "[[./OKUMA.123456-Lct1.html data:OKUMA.123456-Lct1]]" as o3 {
  type: ex:ControlSystem 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: path
+o2 : cmns-dsg:hasTextualName: path
 o3 --> o1 : obo:has member part at some time
 @enduml

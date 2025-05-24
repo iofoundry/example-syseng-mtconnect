@@ -73,7 +73,7 @@ data:Mazak-br-Bmotor
 
 data:Mazak-br-Bmotor-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Bmotor"^^xs:string ;
+	cmns-dsg:hasTextualName "Bmotor"^^xs:string ;
 	.
 
 data:Mazak-br-angle
@@ -90,7 +90,7 @@ data:Mazak-br-function
 
 data:Mazak-br-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "B"^^xs:string ;
+	cmns-dsg:hasTextualName "B"^^xs:string ;
 	.
 
 data:Mazak-br-spec
@@ -147,7 +147,7 @@ data:Mazak-c-C2motor
 
 data:Mazak-c-C2motor-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "C2motor"^^xs:string ;
+	cmns-dsg:hasTextualName "C2motor"^^xs:string ;
 	.
 
 data:Mazak-c-function
@@ -156,7 +156,7 @@ data:Mazak-c-function
 
 data:Mazak-c-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "C1"^^xs:string ;
+	cmns-dsg:hasTextualName "C1"^^xs:string ;
 	.
 
 data:Mazak-c-rotary_velocity-actual
@@ -211,7 +211,7 @@ data:Mazak-c2-Cmotor
 
 data:Mazak-c2-Cmotor-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Cmotor"^^xs:string ;
+	cmns-dsg:hasTextualName "Cmotor"^^xs:string ;
 	.
 
 data:Mazak-c2-angle
@@ -228,7 +228,7 @@ data:Mazak-c2-function
 
 data:Mazak-c2-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "C2"^^xs:string ;
+	cmns-dsg:hasTextualName "C2"^^xs:string ;
 	.
 
 data:Mazak-c2-spec
@@ -281,7 +281,7 @@ data:Mazak-cont
 
 data:Mazak-cont-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "controller"^^xs:string ;
+	cmns-dsg:hasTextualName "controller"^^xs:string ;
 	.
 
 data:Mazak-cont-path1
@@ -291,7 +291,7 @@ data:Mazak-cont-path1
 
 data:Mazak-cont-path1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "path"^^xs:string ;
+	cmns-dsg:hasTextualName "path"^^xs:string ;
 	.
 
 data:Mazak-coolant
@@ -302,7 +302,7 @@ data:Mazak-coolant
 
 data:Mazak-coolant-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "coolant"^^xs:string ;
+	cmns-dsg:hasTextualName "coolant"^^xs:string ;
 	.
 
 data:Mazak-coolant-temperature
@@ -316,7 +316,7 @@ data:Mazak-door1
 
 data:Mazak-door1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "door"^^xs:string ;
+	cmns-dsg:hasTextualName "door"^^xs:string ;
 	.
 
 data:Mazak-elec
@@ -326,7 +326,7 @@ data:Mazak-elec
 
 data:Mazak-elec-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "electric"^^xs:string ;
+	cmns-dsg:hasTextualName "electric"^^xs:string ;
 	.
 
 data:Mazak-enclosurem
@@ -337,7 +337,7 @@ data:Mazak-enclosurem
 
 data:Mazak-enclosurem-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "enclosure"^^xs:string ;
+	cmns-dsg:hasTextualName "enclosure"^^xs:string ;
 	.
 
 data:Mazak-enclosurem-temperature
@@ -355,7 +355,7 @@ data:Mazak-hydraulic
 
 data:Mazak-hydraulic-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "hydraulic"^^xs:string ;
+	cmns-dsg:hasTextualName "hydraulic"^^xs:string ;
 	.
 
 data:Mazak-lubrication
@@ -365,12 +365,12 @@ data:Mazak-lubrication
 
 data:Mazak-lubrication-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "lubrication"^^xs:string ;
+	cmns-dsg:hasTextualName "lubrication"^^xs:string ;
 	.
 
 data:Mazak-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Mazak"^^xs:string ;
+	cmns-dsg:hasTextualName "Mazak"^^xs:string ;
 	.
 
 data:Mazak-partocc
@@ -380,7 +380,7 @@ data:Mazak-partocc
 
 data:Mazak-partocc-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "partocc"^^xs:string ;
+	cmns-dsg:hasTextualName "partocc"^^xs:string ;
 	.
 
 data:Mazak-personnelm
@@ -390,7 +390,7 @@ data:Mazak-personnelm
 
 data:Mazak-personnelm-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "personnel"^^xs:string ;
+	cmns-dsg:hasTextualName "personnel"^^xs:string ;
 	.
 
 data:Mazak-pneumatic
@@ -400,7 +400,7 @@ data:Mazak-pneumatic
 
 data:Mazak-pneumatic-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "pneumatic"^^xs:string ;
+	cmns-dsg:hasTextualName "pneumatic"^^xs:string ;
 	.
 
 data:Mazak-procstock
@@ -410,7 +410,7 @@ data:Mazak-procstock
 
 data:Mazak-procstock-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "stock"^^xs:string ;
+	cmns-dsg:hasTextualName "stock"^^xs:string ;
 	.
 
 data:Mazak-role
@@ -425,7 +425,7 @@ data:Mazak-room
 
 data:Mazak-room-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "environmental"^^xs:string ;
+	cmns-dsg:hasTextualName "environmental"^^xs:string ;
 	.
 
 data:Mazak-room-temperature
@@ -439,7 +439,7 @@ data:Mazak-table
 
 data:Mazak-table-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "TABLE"^^xs:string ;
+	cmns-dsg:hasTextualName "TABLE"^^xs:string ;
 	.
 
 data:Mazak-trundle
@@ -449,7 +449,7 @@ data:Mazak-trundle
 
 data:Mazak-trundle-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "TRUNDLE"^^xs:string ;
+	cmns-dsg:hasTextualName "TRUNDLE"^^xs:string ;
 	.
 
 data:Mazak-x
@@ -479,7 +479,7 @@ data:Mazak-x-Xballscrew
 
 data:Mazak-x-Xballscrew-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Xballscrew"^^xs:string ;
+	cmns-dsg:hasTextualName "Xballscrew"^^xs:string ;
 	.
 
 data:Mazak-x-Xmotor
@@ -489,7 +489,7 @@ data:Mazak-x-Xmotor
 
 data:Mazak-x-Xmotor-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Xmotor"^^xs:string ;
+	cmns-dsg:hasTextualName "Xmotor"^^xs:string ;
 	.
 
 data:Mazak-x-function
@@ -498,7 +498,7 @@ data:Mazak-x-function
 
 data:Mazak-x-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "X"^^xs:string ;
+	cmns-dsg:hasTextualName "X"^^xs:string ;
 	.
 
 data:Mazak-x-position
@@ -575,7 +575,7 @@ data:Mazak-xaxism
 
 data:Mazak-xaxism-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "X_AXIS"^^xs:string ;
+	cmns-dsg:hasTextualName "X_AXIS"^^xs:string ;
 	.
 
 data:Mazak-y
@@ -605,7 +605,7 @@ data:Mazak-y-Yballscrew
 
 data:Mazak-y-Yballscrew-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Yballscrew"^^xs:string ;
+	cmns-dsg:hasTextualName "Yballscrew"^^xs:string ;
 	.
 
 data:Mazak-y-Ymotor
@@ -615,7 +615,7 @@ data:Mazak-y-Ymotor
 
 data:Mazak-y-Ymotor-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Ymotor"^^xs:string ;
+	cmns-dsg:hasTextualName "Ymotor"^^xs:string ;
 	.
 
 data:Mazak-y-function
@@ -624,7 +624,7 @@ data:Mazak-y-function
 
 data:Mazak-y-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Y"^^xs:string ;
+	cmns-dsg:hasTextualName "Y"^^xs:string ;
 	.
 
 data:Mazak-y-position
@@ -701,7 +701,7 @@ data:Mazak-yaxism
 
 data:Mazak-yaxism-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Y_AXIS"^^xs:string ;
+	cmns-dsg:hasTextualName "Y_AXIS"^^xs:string ;
 	.
 
 data:Mazak-z
@@ -731,7 +731,7 @@ data:Mazak-z-Zballscrew
 
 data:Mazak-z-Zballscrew-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Zballscrew"^^xs:string ;
+	cmns-dsg:hasTextualName "Zballscrew"^^xs:string ;
 	.
 
 data:Mazak-z-Zmotor
@@ -741,7 +741,7 @@ data:Mazak-z-Zmotor
 
 data:Mazak-z-Zmotor-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Zmotor"^^xs:string ;
+	cmns-dsg:hasTextualName "Zmotor"^^xs:string ;
 	.
 
 data:Mazak-z-function
@@ -750,7 +750,7 @@ data:Mazak-z-function
 
 data:Mazak-z-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Z"^^xs:string ;
+	cmns-dsg:hasTextualName "Z"^^xs:string ;
 	.
 
 data:Mazak-z-position
@@ -827,6 +827,6 @@ data:Mazak-zaxis
 
 data:Mazak-zaxis-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Z_AXIS"^^xs:string ;
+	cmns-dsg:hasTextualName "Z_AXIS"^^xs:string ;
 	.
 

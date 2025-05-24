@@ -15,7 +15,7 @@ object "[[./Mazak.html data:Mazak]]" as o4 {
  type: ex:Machine 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: coolant
+o2 : cmns-dsg:hasTextualName: coolant
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o4 --> o1 : obo:has member part at some time
 @enduml

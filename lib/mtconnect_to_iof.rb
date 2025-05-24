@@ -68,7 +68,7 @@ class MTConnectToIOF
       @graph << [parent, BFO::BFO.has_member_part_at_some_time, iri] if parent
 
       s = add_instance(iri, sub_iri(names, "name"), OMG::Designators.hasName, OMG::Designators.Name)
-      @graph << [s.subject, IOF::Core.hasSimpleExpressionValue, "#{comp['name'] || comp['id']}"]
+      @graph << [s.subject, OMG::Designators.hasTextualName, "#{comp['name'] || comp['id']}"]
 
       specs = comp.get_elements('./Configuration/Specifications/*')
       unless specs.empty?

@@ -63,7 +63,7 @@ data:OKUMA.123456-LBarFeederSystem1
 
 data:OKUMA.123456-LBarFeederSystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "BarFeederSystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "BarFeederSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LCoolantSystem1
@@ -73,7 +73,7 @@ data:OKUMA.123456-LCoolantSystem1
 
 data:OKUMA.123456-LCoolantSystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "CoolantSystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "CoolantSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LElectricSystem1
@@ -83,7 +83,7 @@ data:OKUMA.123456-LElectricSystem1
 
 data:OKUMA.123456-LElectricSystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "ElectricSystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "ElectricSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LHydraulicSystem1
@@ -93,7 +93,7 @@ data:OKUMA.123456-LHydraulicSystem1
 
 data:OKUMA.123456-LHydraulicSystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "HydraulicSystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "HydraulicSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LLoaderSystem1
@@ -103,7 +103,7 @@ data:OKUMA.123456-LLoaderSystem1
 
 data:OKUMA.123456-LLoaderSystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "LoaderSystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "LoaderSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LLubricationSystem1
@@ -113,7 +113,7 @@ data:OKUMA.123456-LLubricationSystem1
 
 data:OKUMA.123456-LLubricationSystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "LubricationSystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "LubricationSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LPneumaticSystem1
@@ -123,7 +123,7 @@ data:OKUMA.123456-LPneumaticSystem1
 
 data:OKUMA.123456-LPneumaticSystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "PneumaticSystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "PneumaticSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LToolingDeliverySystem1
@@ -133,7 +133,7 @@ data:OKUMA.123456-LToolingDeliverySystem1
 
 data:OKUMA.123456-LToolingDeliverySystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "ToolingDeliverySystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "ToolingDeliverySystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LWasteDisposalSystem1
@@ -143,7 +143,7 @@ data:OKUMA.123456-LWasteDisposalSystem1
 
 data:OKUMA.123456-LWasteDisposalSystem1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "WasteDisposalSystem1"^^xs:string ;
+	cmns-dsg:hasTextualName "WasteDisposalSystem1"^^xs:string ;
 	.
 
 data:OKUMA.123456-LYI1
@@ -164,7 +164,7 @@ data:OKUMA.123456-LYI1-function
 
 data:OKUMA.123456-LYI1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Y"^^xs:string ;
+	cmns-dsg:hasTextualName "Y"^^xs:string ;
 	.
 
 data:OKUMA.123456-LYI1-position-actual
@@ -247,7 +247,7 @@ data:OKUMA.123456-Lb1-function
 
 data:OKUMA.123456-Lb1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "B"^^xs:string ;
+	cmns-dsg:hasTextualName "B"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lc1
@@ -267,7 +267,7 @@ data:OKUMA.123456-Lc1-function
 
 data:OKUMA.123456-Lc1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "C1"^^xs:string ;
+	cmns-dsg:hasTextualName "C1"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lc1-rotary_velocity-actual
@@ -298,7 +298,7 @@ data:OKUMA.123456-Lc2-function
 
 data:OKUMA.123456-Lc2-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "C2"^^xs:string ;
+	cmns-dsg:hasTextualName "C2"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lc2-rotary_velocity-actual
@@ -330,7 +330,7 @@ data:OKUMA.123456-Lc3-function
 
 data:OKUMA.123456-Lc3-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "C3"^^xs:string ;
+	cmns-dsg:hasTextualName "C3"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lc6
@@ -344,7 +344,7 @@ data:OKUMA.123456-Lc6
 
 data:OKUMA.123456-Lc6-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "C6"^^xs:string ;
+	cmns-dsg:hasTextualName "C6"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lc6-rotary_velocity-actual
@@ -368,12 +368,12 @@ data:OKUMA.123456-Lct1-Lp1
 
 data:OKUMA.123456-Lct1-Lp1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "path"^^xs:string ;
+	cmns-dsg:hasTextualName "path"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lct1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Controller"^^xs:string ;
+	cmns-dsg:hasTextualName "Controller"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lx1
@@ -394,7 +394,7 @@ data:OKUMA.123456-Lx1-function
 
 data:OKUMA.123456-Lx1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "X"^^xs:string ;
+	cmns-dsg:hasTextualName "X"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lx1-position-actual
@@ -474,7 +474,7 @@ data:OKUMA.123456-Lz1-function
 
 data:OKUMA.123456-Lz1-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Z1"^^xs:string ;
+	cmns-dsg:hasTextualName "Z1"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lz1-position-actual
@@ -554,7 +554,7 @@ data:OKUMA.123456-Lz4-function
 
 data:OKUMA.123456-Lz4-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "Z4"^^xs:string ;
+	cmns-dsg:hasTextualName "Z4"^^xs:string ;
 	.
 
 data:OKUMA.123456-Lz4-position-actual
@@ -623,7 +623,7 @@ data:OKUMA.123456-b_axis
 
 data:OKUMA.123456-b_axis-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "b_axis"^^xs:string ;
+	cmns-dsg:hasTextualName "b_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-c1_axis
@@ -633,7 +633,7 @@ data:OKUMA.123456-c1_axis
 
 data:OKUMA.123456-c1_axis-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "c1_axis"^^xs:string ;
+	cmns-dsg:hasTextualName "c1_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-c2_axis
@@ -643,7 +643,7 @@ data:OKUMA.123456-c2_axis
 
 data:OKUMA.123456-c2_axis-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "c2_axis"^^xs:string ;
+	cmns-dsg:hasTextualName "c2_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-capability
@@ -658,7 +658,7 @@ data:OKUMA.123456-enclosure
 
 data:OKUMA.123456-enclosure-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "enclosure"^^xs:string ;
+	cmns-dsg:hasTextualName "enclosure"^^xs:string ;
 	.
 
 data:OKUMA.123456-enclosure-temperature
@@ -671,7 +671,7 @@ data:OKUMA.123456-function
 
 data:OKUMA.123456-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "OKUMA"^^xs:string ;
+	cmns-dsg:hasTextualName "OKUMA"^^xs:string ;
 	.
 
 data:OKUMA.123456-personnel
@@ -681,7 +681,7 @@ data:OKUMA.123456-personnel
 
 data:OKUMA.123456-personnel-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "personnel"^^xs:string ;
+	cmns-dsg:hasTextualName "personnel"^^xs:string ;
 	.
 
 data:OKUMA.123456-role
@@ -695,7 +695,7 @@ data:OKUMA.123456-x_axis
 
 data:OKUMA.123456-x_axis-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "x_axis"^^xs:string ;
+	cmns-dsg:hasTextualName "x_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-y_axis
@@ -705,7 +705,7 @@ data:OKUMA.123456-y_axis
 
 data:OKUMA.123456-y_axis-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "y_axis"^^xs:string ;
+	cmns-dsg:hasTextualName "y_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-z1_axis
@@ -715,7 +715,7 @@ data:OKUMA.123456-z1_axis
 
 data:OKUMA.123456-z1_axis-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "z1_axis"^^xs:string ;
+	cmns-dsg:hasTextualName "z1_axis"^^xs:string ;
 	.
 
 data:OKUMA.123456-z4_axis
@@ -725,6 +725,6 @@ data:OKUMA.123456-z4_axis
 
 data:OKUMA.123456-z4_axis-name
 	a cmns-dsg:Name ;
-	core:hasSimpleExpressionValue "z4_axis"^^xs:string ;
+	cmns-dsg:hasTextualName "z4_axis"^^xs:string ;
 	.
 

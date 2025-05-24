@@ -70,7 +70,7 @@
 	</obo:BFO_0000030>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LBarFeederSystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">BarFeederSystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">BarFeederSystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LCoolantSystem1">
@@ -78,7 +78,7 @@
 	</obo:BFO_0000030>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LCoolantSystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">CoolantSystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">CoolantSystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:ElectricalSystem rdf:about="&data;OKUMA.123456-LElectricSystem1">
@@ -86,7 +86,7 @@
 	</ex:ElectricalSystem>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LElectricSystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">ElectricSystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">ElectricSystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:HydraulicSystem rdf:about="&data;OKUMA.123456-LHydraulicSystem1">
@@ -94,7 +94,7 @@
 	</ex:HydraulicSystem>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LHydraulicSystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">HydraulicSystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">HydraulicSystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LLoaderSystem1">
@@ -102,7 +102,7 @@
 	</obo:BFO_0000030>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LLoaderSystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">LoaderSystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">LoaderSystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:LubricationSystem rdf:about="&data;OKUMA.123456-LLubricationSystem1">
@@ -110,7 +110,7 @@
 	</ex:LubricationSystem>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LLubricationSystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">LubricationSystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">LubricationSystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:PneumaticSystem rdf:about="&data;OKUMA.123456-LPneumaticSystem1">
@@ -118,7 +118,7 @@
 	</ex:PneumaticSystem>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LPneumaticSystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">PneumaticSystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">PneumaticSystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1">
@@ -126,7 +126,7 @@
 	</obo:BFO_0000030>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">ToolingDeliverySystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">ToolingDeliverySystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1">
@@ -134,7 +134,7 @@
 	</obo:BFO_0000030>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">WasteDisposalSystem1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">WasteDisposalSystem1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-LYI1">
@@ -150,7 +150,7 @@
 	</ex:PrismaticMotionCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LYI1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Y</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Y</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;OKUMA.123456-LYI1-position-actual">
@@ -216,7 +216,7 @@
 	</ex:RevoluteMotionCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lb1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">B</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">B</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc1">
@@ -231,7 +231,7 @@
 	</ex:ContinuousMotionCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Speed rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-actual">
@@ -253,7 +253,7 @@
 	</ex:RevoluteMotionCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc2-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C2</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C2</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Speed rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-actual">
@@ -277,7 +277,7 @@
 	</ex:RevoluteMotionCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc3-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C3</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C3</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc6">
@@ -287,7 +287,7 @@
 	</ex:RotaryMotionSystem>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc6-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">C6</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C6</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Speed rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-actual">
@@ -306,11 +306,11 @@
 	</ex:ControlSystemPath>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lct1-Lp1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">path</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">path</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lct1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Controller</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Controller</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lx1">
@@ -326,7 +326,7 @@
 	</ex:PrismaticMotionCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lx1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">X</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">X</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;OKUMA.123456-Lx1-position-actual">
@@ -390,7 +390,7 @@
 	</ex:PrismaticMotionCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lz1-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z1</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Z1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;OKUMA.123456-Lz1-position-actual">
@@ -454,7 +454,7 @@
 	</ex:PrismaticMotionCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lz4-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">Z4</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Z4</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Displacement rdf:about="&data;OKUMA.123456-Lz4-position-actual">
@@ -510,7 +510,7 @@
 	</ex:Structure>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-b_axis-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">b_axis</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">b_axis</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-c1_axis">
@@ -518,7 +518,7 @@
 	</ex:Structure>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-c1_axis-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">c1_axis</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">c1_axis</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-c2_axis">
@@ -526,7 +526,7 @@
 	</ex:Structure>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-c2_axis-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">c2_axis</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">c2_axis</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:TurningCapability rdf:about="&data;OKUMA.123456-capability">
@@ -538,7 +538,7 @@
 	</ex:Structure>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-enclosure-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">enclosure</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">enclosure</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Temperature rdf:about="&data;OKUMA.123456-enclosure-temperature">
@@ -548,7 +548,7 @@
 	</ex:MillingCapability>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">OKUMA</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">OKUMA</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<core:Person rdf:about="&data;OKUMA.123456-personnel">
@@ -556,7 +556,7 @@
 	</core:Person>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-personnel-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">personnel</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">personnel</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<core:EquipmentRole rdf:about="&data;OKUMA.123456-role">
@@ -567,7 +567,7 @@
 	</ex:Structure>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-x_axis-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">x_axis</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">x_axis</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-y_axis">
@@ -575,7 +575,7 @@
 	</ex:Structure>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-y_axis-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">y_axis</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">y_axis</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-z1_axis">
@@ -583,7 +583,7 @@
 	</ex:Structure>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-z1_axis-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">z1_axis</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">z1_axis</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-z4_axis">
@@ -591,7 +591,7 @@
 	</ex:Structure>
 	
 	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-z4_axis-name">
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;string">z4_axis</core:hasSimpleExpressionValue>
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">z4_axis</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 
 </rdf:RDF>

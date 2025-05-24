@@ -30,13 +30,11 @@ object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o9 {
  type: ex:Machine 
 }
 o1 --> o2 : cmns-dsg:hasName
-o2 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: B
+o2 : cmns-dsg:hasTextualName: B
 o1 --> o3 : ex:joinedTo
 o3 --> o4 : cmns-dsg:hasName
-o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: y_axis
 o1 --> o5 : ex:joinedTo
 o5 --> o6 : cmns-dsg:hasName
-o6 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: b_axis
 o1 --> o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
 o1 --> o8 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o9 --> o1 : obo:has member part at some time
