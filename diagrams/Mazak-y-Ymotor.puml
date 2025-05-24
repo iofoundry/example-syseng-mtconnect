@@ -5,13 +5,17 @@ title Mazak-y-Ymotor
 object "[[./Mazak-y-Ymotor.html data:Mazak-y-Ymotor]]" as o1 {
  type: ex:Motor 
 }
-object "data:Mazak-y-Ymotor-name" as o2 {
+object "data:Mazak-y-Ymotor-temperature" as o2 {
+ type: qp:Temperature 
+}
+object "data:Mazak-y-Ymotor-name" as o3 {
  type: cmns-dsg:Name 
 }
-object "[[./Mazak-y.html data:Mazak-y]]" as o3 {
+object "[[./Mazak-y.html data:Mazak-y]]" as o4 {
  type: ex:LinearMotionSystem 
 }
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: Ymotor
-o3 --> o1 : obo:has member part at some time
+o1 --> o2 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o1 --> o3 : cmns-dsg:hasName
+o3 : cmns-dsg:hasTextualName: Ymotor
+o4 --> o1 : obo:has member part at some time
 @enduml

@@ -29,16 +29,13 @@ object "data:Mazak-c-function" as o8 {
 object "data:Mazak-c-rotary_velocity-actual" as o9 {
  type: qp:Speed 
 }
-object "data:Mazak-c-temperature" as o10 {
- type: qp:Temperature 
-}
-object "[[./Mazak-c-C2motor.html data:Mazak-c-C2motor]]" as o11 {
+object "[[./Mazak-c-C2motor.html data:Mazak-c-C2motor]]" as o10 {
  type: ex:Motor 
 }
-object "data:Mazak-c-C2motor-name" as o12 {
+object "data:Mazak-c-C2motor-name" as o11 {
  type: cmns-dsg:Name 
 }
-object "[[./Mazak.html data:Mazak]]" as o13 {
+object "[[./Mazak.html data:Mazak]]" as o12 {
  type: ex:Machine 
 }
 o1 --> o2 : cmns-dsg:hasName
@@ -52,8 +49,7 @@ o1 --> o6 : ex:joinedTo
 o6 --> o7 : cmns-dsg:hasName
 o1 --> o8 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
 o1 --> o9 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o10 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o11 : obo:has member part at some time
-o11 --> o12 : cmns-dsg:hasName
-o13 --> o1 : obo:has member part at some time
+o1 --> o10 : obo:has member part at some time
+o10 --> o11 : cmns-dsg:hasName
+o12 --> o1 : obo:has member part at some time
 @enduml

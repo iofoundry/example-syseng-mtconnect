@@ -58,10 +58,7 @@ data:Mazak-br
 		;
 	obo:BFO_0000115 data:Mazak-br-Bmotor ;
 	core:hasFunction data:Mazak-br-function ;
-	core:measuresAtSomeTime
-		data:Mazak-br-angle ,
-		data:Mazak-br-angle-actual
-		;
+	core:measuresAtSomeTime data:Mazak-br-angle-actual ;
 	core:prescribedBy data:Mazak-br-spec ;
 	cmns-dsg:hasName data:Mazak-br-name ;
 	.
@@ -74,10 +71,6 @@ data:Mazak-br-Bmotor
 data:Mazak-br-Bmotor-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "Bmotor"^^xs:string ;
-	.
-
-data:Mazak-br-angle
-	a qp:Angle ;
 	.
 
 data:Mazak-br-angle-actual
@@ -132,10 +125,7 @@ data:Mazak-c
 	ex:joinedTo data:Mazak-zaxis ;
 	obo:BFO_0000115 data:Mazak-c-C2motor ;
 	core:hasFunction data:Mazak-c-function ;
-	core:measuresAtSomeTime
-		data:Mazak-c-rotary_velocity-actual ,
-		data:Mazak-c-temperature
-		;
+	core:measuresAtSomeTime data:Mazak-c-rotary_velocity-actual ;
 	core:prescribedBy data:Mazak-c-spec ;
 	cmns-dsg:hasName data:Mazak-c-name ;
 	.
@@ -148,6 +138,14 @@ data:Mazak-c-C2motor
 data:Mazak-c-C2motor-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "C2motor"^^xs:string ;
+	.
+
+data:Mazak-c-Cmotor
+	core:measuresAtSomeTime data:Mazak-c-Cmotor-temperature ;
+	.
+
+data:Mazak-c-Cmotor-temperature
+	a qp:Temperature ;
 	.
 
 data:Mazak-c-function
@@ -183,10 +181,6 @@ data:Mazak-c-spec-VELOCITY-Minimum
 	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
 	.
 
-data:Mazak-c-temperature
-	a qp:Temperature ;
-	.
-
 data:Mazak-c2
 	a ex:RotaryMotionSystem ;
 	ex:joinedTo
@@ -195,11 +189,7 @@ data:Mazak-c2
 		;
 	obo:BFO_0000115 data:Mazak-c2-Cmotor ;
 	core:hasFunction data:Mazak-c2-function ;
-	core:measuresAtSomeTime
-		data:Mazak-c2-angle ,
-		data:Mazak-c2-angle-actual ,
-		data:Mazak-c2-temperature
-		;
+	core:measuresAtSomeTime data:Mazak-c2-angle-actual ;
 	core:prescribedBy data:Mazak-c2-spec ;
 	cmns-dsg:hasName data:Mazak-c2-name ;
 	.
@@ -212,10 +202,6 @@ data:Mazak-c2-Cmotor
 data:Mazak-c2-Cmotor-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "Cmotor"^^xs:string ;
-	.
-
-data:Mazak-c2-angle
-	a qp:Angle ;
 	.
 
 data:Mazak-c2-angle-actual
@@ -263,10 +249,6 @@ data:Mazak-c2-spec-TORQUE-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:N-M ;
 	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
-	.
-
-data:Mazak-c2-temperature
-	a qp:Temperature ;
 	.
 
 data:Mazak-capability
@@ -463,11 +445,7 @@ data:Mazak-x
 		data:Mazak-x-Xmotor
 		;
 	core:hasFunction data:Mazak-x-function ;
-	core:measuresAtSomeTime
-		data:Mazak-x-position ,
-		data:Mazak-x-position-actual ,
-		data:Mazak-x-temperature
-		;
+	core:measuresAtSomeTime data:Mazak-x-position-actual ;
 	core:prescribedBy data:Mazak-x-spec ;
 	cmns-dsg:hasName data:Mazak-x-name ;
 	.
@@ -484,12 +462,17 @@ data:Mazak-x-Xballscrew-name
 
 data:Mazak-x-Xmotor
 	a ex:Motor ;
+	core:measuresAtSomeTime data:Mazak-x-Xmotor-temperature ;
 	cmns-dsg:hasName data:Mazak-x-Xmotor-name ;
 	.
 
 data:Mazak-x-Xmotor-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "Xmotor"^^xs:string ;
+	.
+
+data:Mazak-x-Xmotor-temperature
+	a qp:Temperature ;
 	.
 
 data:Mazak-x-function
@@ -499,10 +482,6 @@ data:Mazak-x-function
 data:Mazak-x-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "X"^^xs:string ;
-	.
-
-data:Mazak-x-position
-	a qp:Displacement ;
 	.
 
 data:Mazak-x-position-actual
@@ -564,10 +543,6 @@ data:Mazak-x-spec-VELOCITY-RAPID-Minimum
 	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
-data:Mazak-x-temperature
-	a qp:Temperature ;
-	.
-
 data:Mazak-xaxism
 	a ex:Structure ;
 	cmns-dsg:hasName data:Mazak-xaxism-name ;
@@ -589,11 +564,7 @@ data:Mazak-y
 		data:Mazak-y-Ymotor
 		;
 	core:hasFunction data:Mazak-y-function ;
-	core:measuresAtSomeTime
-		data:Mazak-y-position ,
-		data:Mazak-y-position-actual ,
-		data:Mazak-y-temperature
-		;
+	core:measuresAtSomeTime data:Mazak-y-position-actual ;
 	core:prescribedBy data:Mazak-y-spec ;
 	cmns-dsg:hasName data:Mazak-y-name ;
 	.
@@ -610,12 +581,17 @@ data:Mazak-y-Yballscrew-name
 
 data:Mazak-y-Ymotor
 	a ex:Motor ;
+	core:measuresAtSomeTime data:Mazak-y-Ymotor-temperature ;
 	cmns-dsg:hasName data:Mazak-y-Ymotor-name ;
 	.
 
 data:Mazak-y-Ymotor-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "Ymotor"^^xs:string ;
+	.
+
+data:Mazak-y-Ymotor-temperature
+	a qp:Temperature ;
 	.
 
 data:Mazak-y-function
@@ -625,10 +601,6 @@ data:Mazak-y-function
 data:Mazak-y-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "Y"^^xs:string ;
-	.
-
-data:Mazak-y-position
-	a qp:Displacement ;
 	.
 
 data:Mazak-y-position-actual
@@ -690,10 +662,6 @@ data:Mazak-y-spec-VELOCITY-RAPID-Minimum
 	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
 	.
 
-data:Mazak-y-temperature
-	a qp:Temperature ;
-	.
-
 data:Mazak-yaxism
 	a ex:Structure ;
 	cmns-dsg:hasName data:Mazak-yaxism-name ;
@@ -715,11 +683,7 @@ data:Mazak-z
 		data:Mazak-z-Zmotor
 		;
 	core:hasFunction data:Mazak-z-function ;
-	core:measuresAtSomeTime
-		data:Mazak-z-position ,
-		data:Mazak-z-position-actual ,
-		data:Mazak-z-temperature
-		;
+	core:measuresAtSomeTime data:Mazak-z-position-actual ;
 	core:prescribedBy data:Mazak-z-spec ;
 	cmns-dsg:hasName data:Mazak-z-name ;
 	.
@@ -736,12 +700,17 @@ data:Mazak-z-Zballscrew-name
 
 data:Mazak-z-Zmotor
 	a ex:Motor ;
+	core:measuresAtSomeTime data:Mazak-z-Zmotor-temperature ;
 	cmns-dsg:hasName data:Mazak-z-Zmotor-name ;
 	.
 
 data:Mazak-z-Zmotor-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "Zmotor"^^xs:string ;
+	.
+
+data:Mazak-z-Zmotor-temperature
+	a qp:Temperature ;
 	.
 
 data:Mazak-z-function
@@ -751,10 +720,6 @@ data:Mazak-z-function
 data:Mazak-z-name
 	a cmns-dsg:Name ;
 	cmns-dsg:hasTextualName "Z"^^xs:string ;
-	.
-
-data:Mazak-z-position
-	a qp:Displacement ;
 	.
 
 data:Mazak-z-position-actual
@@ -814,10 +779,6 @@ data:Mazak-z-spec-VELOCITY-RAPID-Minimum
 	a core:ValueExpression ;
 	units:hasUnit units:MilliM-PER-SEC ;
 	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
-	.
-
-data:Mazak-z-temperature
-	a qp:Temperature ;
 	.
 
 data:Mazak-zaxis

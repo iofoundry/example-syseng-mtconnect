@@ -41,19 +41,16 @@ object "data:Mazak-trundle-name" as o12 {
 object "data:Mazak-br-function" as o13 {
  type: ex:RevoluteMotionCapability 
 }
-object "data:Mazak-br-angle" as o14 {
+object "data:Mazak-br-angle-actual" as o14 {
  type: qp:Angle 
 }
-object "data:Mazak-br-angle-actual" as o15 {
- type: qp:Angle 
-}
-object "[[./Mazak-br-Bmotor.html data:Mazak-br-Bmotor]]" as o16 {
+object "[[./Mazak-br-Bmotor.html data:Mazak-br-Bmotor]]" as o15 {
  type: ex:Motor 
 }
-object "data:Mazak-br-Bmotor-name" as o17 {
+object "data:Mazak-br-Bmotor-name" as o16 {
  type: cmns-dsg:Name 
 }
-object "[[./Mazak.html data:Mazak]]" as o18 {
+object "[[./Mazak.html data:Mazak]]" as o17 {
  type: ex:Machine 
 }
 o1 --> o2 : cmns-dsg:hasName
@@ -74,8 +71,7 @@ o1 --> o11 : ex:joinedTo
 o11 --> o12 : cmns-dsg:hasName
 o1 --> o13 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
 o1 --> o14 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o15 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o16 : obo:has member part at some time
-o16 --> o17 : cmns-dsg:hasName
-o18 --> o1 : obo:has member part at some time
+o1 --> o15 : obo:has member part at some time
+o15 --> o16 : cmns-dsg:hasName
+o17 --> o1 : obo:has member part at some time
 @enduml

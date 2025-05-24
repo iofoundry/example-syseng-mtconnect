@@ -53,25 +53,22 @@ object "data:Mazak-x-function" as o16 {
 object "data:Mazak-x-position-actual" as o17 {
  type: qp:Displacement 
 }
-object "data:Mazak-x-position" as o18 {
- type: qp:Displacement 
-}
-object "data:Mazak-x-temperature" as o19 {
- type: qp:Temperature 
-}
-object "[[./Mazak-x-Xballscrew.html data:Mazak-x-Xballscrew]]" as o20 {
+object "[[./Mazak-x-Xballscrew.html data:Mazak-x-Xballscrew]]" as o18 {
  type: ex:Ballscrew 
 }
-object "data:Mazak-x-Xballscrew-name" as o21 {
+object "data:Mazak-x-Xballscrew-name" as o19 {
  type: cmns-dsg:Name 
 }
-object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o22 {
+object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o20 {
  type: ex:Motor 
 }
-object "data:Mazak-x-Xmotor-name" as o23 {
+object "data:Mazak-x-Xmotor-temperature" as o21 {
+ type: qp:Temperature 
+}
+object "data:Mazak-x-Xmotor-name" as o22 {
  type: cmns-dsg:Name 
 }
-object "[[./Mazak.html data:Mazak]]" as o24 {
+object "[[./Mazak.html data:Mazak]]" as o23 {
  type: ex:Machine 
 }
 o1 --> o2 : cmns-dsg:hasName
@@ -98,11 +95,10 @@ o1 --> o14 : ex:joinedTo
 o14 --> o15 : cmns-dsg:hasName
 o1 --> o16 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
 o1 --> o17 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o18 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o19 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o1 --> o18 : obo:has member part at some time
+o18 --> o19 : cmns-dsg:hasName
 o1 --> o20 : obo:has member part at some time
-o20 --> o21 : cmns-dsg:hasName
-o1 --> o22 : obo:has member part at some time
-o22 --> o23 : cmns-dsg:hasName
-o24 --> o1 : obo:has member part at some time
+o20 --> o21 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+o20 --> o22 : cmns-dsg:hasName
+o23 --> o1 : obo:has member part at some time
 @enduml

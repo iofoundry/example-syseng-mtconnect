@@ -97,11 +97,20 @@ class MTConnectToIOF
       add_capability(iri, names, key)
 
       comp.each_element('./DataItems/DataItem') do |di|
-        puts "#{'  ' * (level + 1)}** #{di[:type]} #{di[:subType]} #{di[:units]}"
-        if cls = Example::DataItems[di[:type].to_sym]
+        if di[:category] != 'CONDITION' and cls = Example::DataItems[di[:type].to_sym]
+          puts "#{'  ' * (level + 1)}** #{di[:category]} #{di[:type]} #{di[:subType]} #{di[:units]}"
           name = [di[:type], di[:subType]].compact.join('-').downcase
-          puts "#{'  ' * (level + 2)}** adding #{name}"
-          add_instance(iri, sub_iri(names, name), IOF::Core.measuresAtSomeTime, cls)
+          if di[:compositionId]
+            comp_names = names.dup << di[:compositionId]
+            comp_iri = Inst::Data[comp_names.join('-')]
+          else
+            comp_names = names
+            comp_iri = iri
+          end
+          di_iri = sub_iri(comp_names, name)
+          
+          puts "#{'  ' * (level + 2)}** adding #{name} for #{comp_iri}"
+          add_instance(comp_iri, di_iri, IOF::Core.measuresAtSomeTime, cls)
         end
       end
       
