@@ -44,7 +44,6 @@ data:OKUMA.123456
 		data:OKUMA.123456-c1_axis ,
 		data:OKUMA.123456-c2_axis ,
 		data:OKUMA.123456-enclosure ,
-		data:OKUMA.123456-personnel ,
 		data:OKUMA.123456-x_axis ,
 		data:OKUMA.123456-y_axis ,
 		data:OKUMA.123456-z1_axis ,

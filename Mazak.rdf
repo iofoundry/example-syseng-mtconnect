@@ -42,7 +42,6 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-hydraulic"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-lubrication"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-partocc"/>
-		<obo:BFO_0000115 rdf:resource="&data;Mazak-personnelm"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-pneumatic"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-procstock"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-table"/>

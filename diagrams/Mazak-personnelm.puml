@@ -16,8 +16,6 @@ title Mazak-personnelm
 }
 individual(o1, data:Mazak-personnelm, [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]])
 individual(o2, data:Mazak-personnelm-name, cmns-dsg:Name)
-individual(o3, data:Mazak, ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, personnel)
-property(o3, "bfo:has member part at some time", o1)
 @enduml

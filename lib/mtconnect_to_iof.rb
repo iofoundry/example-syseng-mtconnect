@@ -61,7 +61,7 @@ class MTConnectToIOF
     cls = BFO::BFO.object if cls.nil?
     
     if cls
-      parent = Inst::Data[names.join('-')] unless names.empty? or type == :Environmental
+      parent = Inst::Data[names.join('-')] unless names.empty? or Example::Independent.include?(type)
       names = names.dup << "#{comp[:uuid] || comp[:id]}"
       iri = Inst::Data[names.join('-')]
       @graph << [iri, RDF.type, cls]

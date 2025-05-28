@@ -152,7 +152,7 @@ once = Set.new
 stmts = RDF::Query.execute(iof.graph) do
   pattern [:s, BFO::BFO.has_member_part_at_some_time, :o]           
   pattern [:s, OMG::Designators.hasName, :d]
-  pattern [:d, IOF::Core.hasSimpleExpressionValue, :n]  
+  pattern [:d, OMG::Designators.hasTextualName, :n]  
 end.map do |s|
   v = [Statement.new(s.s, BFO::BFO.has_member_part_at_some_time, s.o)]
   unless once.include?(s.s)
@@ -170,7 +170,7 @@ once = Set.new
 stmts = RDF::Query.execute(iof.graph) do
   pattern [:s, Example::Machine.joinedTo, :o]
   pattern [:s, OMG::Designators.hasName, :d]
-  pattern [:d, IOF::Core.hasSimpleExpressionValue, :n]  
+  pattern [:d, OMG::Designators.hasTextualName, :n]  
 end.map do |s|
   v = [Statement.new(s.s, Example::Machine.joinedTo, s.o)]
   unless once.include?(s.s)

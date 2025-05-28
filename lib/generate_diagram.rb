@@ -148,9 +148,7 @@ EOT
       }
 
       f.puts Prefixes.map { |k, v|
-        if color[k]
-          "\"#{k}\":\"#{color[k]}\""
-        end
+        "\"#{k}\":\"#{color[k]}\"" if color[k]
       }.compact.join(',')
       f.puts "}"
       

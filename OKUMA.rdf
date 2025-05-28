@@ -54,7 +54,6 @@
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-c1_axis"/>
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-c2_axis"/>
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-enclosure"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-personnel"/>
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-x_axis"/>
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-y_axis"/>
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-z1_axis"/>
