@@ -2,15 +2,35 @@
 skinparam linetype polyline
 left to right direction
 title OKUMA.123456-personnel
-object "[[./OKUMA.123456-personnel.html data:OKUMA.123456-personnel]]" as o1 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]] 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:OKUMA.123456-personnel-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o3 {
- type: ex:Machine 
-}
+
+object "[[./OKUMA.123456-personnel.html data:OKUMA.123456-personnel]]" as o1 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]]</back> 
+---
+ }
+object "data:OKUMA.123456-personnel-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o3 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: personnel
 o3 --> o1 : obo:has member part at some time

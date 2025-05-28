@@ -2,42 +2,71 @@
 skinparam linetype polyline
 left to right direction
 title Mazak-c
-object "[[./Mazak-c.html data:Mazak-c]]" as o1 {
- type: ex:RotaryMotionSystem 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:Mazak-c-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "data:Mazak-c-spec" as o3 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
-}
-object "data:Mazak-c-spec-VELOCITY-Maximum" as o4 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-c-spec-VELOCITY-Minimum" as o5 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o6 {
- type: ex:Structure 
-}
-object "data:Mazak-zaxis-name" as o7 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-c-function" as o8 {
- type: ex:ContinuousMotionCapability 
-}
-object "data:Mazak-c-rotary_velocity-actual" as o9 {
- type: qp:Speed 
-}
-object "[[./Mazak-c-C2motor.html data:Mazak-c-C2motor]]" as o10 {
- type: ex:Motor 
-}
-object "data:Mazak-c-C2motor-name" as o11 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o12 {
- type: ex:Machine 
-}
+
+object "[[./Mazak-c.html data:Mazak-c]]" as o1 #76608A {
+ <back:#Green>type: ex:RotaryMotionSystem</back> 
+---
+ }
+object "data:Mazak-c-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:Mazak-c-spec" as o3 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]]</back> 
+---
+ }
+object "data:Mazak-c-spec-VELOCITY-Maximum" as o4 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-c-spec-VELOCITY-Minimum" as o5 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o6 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:Mazak-zaxis-name" as o7 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:Mazak-c-function" as o8 #76608A {
+ <back:#Green>type: ex:ContinuousMotionCapability</back> 
+---
+ }
+object "data:Mazak-c-rotary_velocity-actual" as o9 #76608A {
+ <back:#1E90FF>type: qp:Speed</back> 
+---
+ }
+object "[[./Mazak-c-C2motor.html data:Mazak-c-C2motor]]" as o10 #76608A {
+ <back:#Green>type: ex:Motor</back> 
+---
+ }
+object "data:Mazak-c-C2motor-name" as o11 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak.html data:Mazak]]" as o12 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: C1
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]

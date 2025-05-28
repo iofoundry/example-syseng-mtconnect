@@ -2,54 +2,87 @@
 skinparam linetype polyline
 left to right direction
 title Mazak-c2
-object "[[./Mazak-c2.html data:Mazak-c2]]" as o1 {
- type: ex:RotaryMotionSystem 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:Mazak-c2-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "data:Mazak-c2-spec" as o3 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
-}
-object "data:Mazak-c2-spec-ANGLE-Maximum" as o4 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-c2-spec-ANGLE-Minimum" as o5 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-c2-spec-TORQUE-Maximum" as o6 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-c2-spec-TORQUE-Minimum" as o7 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o8 {
- type: ex:Structure 
-}
-object "data:Mazak-trundle-name" as o9 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-table.html data:Mazak-table]]" as o10 {
- type: ex:Structure 
-}
-object "data:Mazak-table-name" as o11 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-c2-function" as o12 {
- type: ex:RevoluteMotionCapability 
-}
-object "data:Mazak-c2-angle-actual" as o13 {
- type: qp:Angle 
-}
-object "[[./Mazak-c2-Cmotor.html data:Mazak-c2-Cmotor]]" as o14 {
- type: ex:Motor 
-}
-object "data:Mazak-c2-Cmotor-name" as o15 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o16 {
- type: ex:Machine 
-}
+
+object "[[./Mazak-c2.html data:Mazak-c2]]" as o1 #76608A {
+ <back:#Green>type: ex:RotaryMotionSystem</back> 
+---
+ }
+object "data:Mazak-c2-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:Mazak-c2-spec" as o3 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]]</back> 
+---
+ }
+object "data:Mazak-c2-spec-ANGLE-Maximum" as o4 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-c2-spec-ANGLE-Minimum" as o5 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-c2-spec-TORQUE-Maximum" as o6 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-c2-spec-TORQUE-Minimum" as o7 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o8 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:Mazak-trundle-name" as o9 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak-table.html data:Mazak-table]]" as o10 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:Mazak-table-name" as o11 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:Mazak-c2-function" as o12 #76608A {
+ <back:#Green>type: ex:RevoluteMotionCapability</back> 
+---
+ }
+object "data:Mazak-c2-angle-actual" as o13 #76608A {
+ <back:#1E90FF>type: qp:Angle</back> 
+---
+ }
+object "[[./Mazak-c2-Cmotor.html data:Mazak-c2-Cmotor]]" as o14 #76608A {
+ <back:#Green>type: ex:Motor</back> 
+---
+ }
+object "data:Mazak-c2-Cmotor-name" as o15 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak.html data:Mazak]]" as o16 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: C2
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]

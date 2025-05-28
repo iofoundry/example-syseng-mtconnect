@@ -2,36 +2,63 @@
 skinparam linetype polyline
 left to right direction
 title OKUMA.123456-Lc2
-object "[[./OKUMA.123456-Lc2.html data:OKUMA.123456-Lc2]]" as o1 {
- type: ex:RotaryMotionSystem 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:OKUMA.123456-Lc2-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "[[./OKUMA.123456-z4_axis.html data:OKUMA.123456-z4_axis]]" as o3 {
- type: ex:Structure 
-}
-object "data:OKUMA.123456-z4_axis-name" as o4 {
- type: cmns-dsg:Name 
-}
-object "[[./OKUMA.123456-c2_axis.html data:OKUMA.123456-c2_axis]]" as o5 {
- type: ex:Structure 
-}
-object "data:OKUMA.123456-c2_axis-name" as o6 {
- type: cmns-dsg:Name 
-}
-object "data:OKUMA.123456-Lc2-function" as o7 {
- type: ex:RevoluteMotionCapability 
-}
-object "data:OKUMA.123456-Lc2-rotary_velocity-actual" as o8 {
- type: qp:Speed 
-}
-object "data:OKUMA.123456-Lc2-rotary_velocity-programmed" as o9 {
- type: qp:Speed 
-}
-object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o10 {
- type: ex:Machine 
-}
+
+object "[[./OKUMA.123456-Lc2.html data:OKUMA.123456-Lc2]]" as o1 #76608A {
+ <back:#Green>type: ex:RotaryMotionSystem</back> 
+---
+ }
+object "data:OKUMA.123456-Lc2-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./OKUMA.123456-z4_axis.html data:OKUMA.123456-z4_axis]]" as o3 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:OKUMA.123456-z4_axis-name" as o4 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./OKUMA.123456-c2_axis.html data:OKUMA.123456-c2_axis]]" as o5 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:OKUMA.123456-c2_axis-name" as o6 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:OKUMA.123456-Lc2-function" as o7 #76608A {
+ <back:#Green>type: ex:RevoluteMotionCapability</back> 
+---
+ }
+object "data:OKUMA.123456-Lc2-rotary_velocity-actual" as o8 #76608A {
+ <back:#1E90FF>type: qp:Speed</back> 
+---
+ }
+object "data:OKUMA.123456-Lc2-rotary_velocity-programmed" as o9 #76608A {
+ <back:#1E90FF>type: qp:Speed</back> 
+---
+ }
+object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o10 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: C2
 o1 --> o3 : ex:joinedTo

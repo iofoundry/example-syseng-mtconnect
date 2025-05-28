@@ -1,0 +1,28 @@
+@startuml
+skinparam linetype polyline
+left to right direction
+title Mazak-c-Cmotor
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
+}
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
+}
+
+object "[[./Mazak-c-Cmotor.html data:Mazak-c-Cmotor]]" as o1 #76608A 
+object "data:Mazak-c-Cmotor-temperature" as o2 #76608A {
+ <back:#1E90FF>type: qp:Temperature</back> 
+---
+ }
+o1 --> o2 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
+@enduml

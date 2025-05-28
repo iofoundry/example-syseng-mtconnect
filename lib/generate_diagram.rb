@@ -21,7 +21,16 @@ class GenerateDiagram
     else
       v
     end
-  end  
+  end
+
+  def color(iri)
+    prefix = iri.qname(prefixes: Prefixes).first
+    if c = Colors[prefix]
+      "##{c}"
+    else
+      '#DarkGrey'
+    end
+  end
 
   # Add a type associated with an iri.
   def self.add_type(iri, type)
@@ -79,9 +88,9 @@ class GenerateDiagram
     else
       title = self.class.uml_name(iri)
     end
-    @f.print "object \"#{title}\" as #{@objects[iri]} "
+    @f.print "object \"#{title}\" as #{@objects[iri]} #{color(iri)} "
     if t = @@types[iri]
-      @f.puts "{\n type: #{self.class.uml_name(t)} \n}"
+      @f.puts "{\n <back:#{color(t)}>type: #{self.class.uml_name(t)}</back> \n---\n }"
     else
       @f.puts
     end
@@ -123,11 +132,29 @@ EOT
     File.open("#{@filename}.puml", 'w') do |f|
       @f = f
       
-      f.puts "@startuml"
-      f.puts "skinparam linetype polyline"
-      f.puts "left to right direction"
-      f.puts "title #{File.basename @filename}"
+      f.puts <<EOT
+@startuml
+skinparam linetype polyline
+left to right direction
+title #{File.basename @filename}
 
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
+}
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
+}
+
+EOT
       @objects.each do |k, v|
         print_object(k)
       end

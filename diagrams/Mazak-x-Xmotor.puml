@@ -2,18 +2,39 @@
 skinparam linetype polyline
 left to right direction
 title Mazak-x-Xmotor
-object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o1 {
- type: ex:Motor 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:Mazak-x-Xmotor-temperature" as o2 {
- type: qp:Temperature 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "data:Mazak-x-Xmotor-name" as o3 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-x.html data:Mazak-x]]" as o4 {
- type: ex:LinearMotionSystem 
-}
+
+object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o1 #76608A {
+ <back:#Green>type: ex:Motor</back> 
+---
+ }
+object "data:Mazak-x-Xmotor-temperature" as o2 #76608A {
+ <back:#1E90FF>type: qp:Temperature</back> 
+---
+ }
+object "data:Mazak-x-Xmotor-name" as o3 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak-x.html data:Mazak-x]]" as o4 #76608A {
+ <back:#Green>type: ex:LinearMotionSystem</back> 
+---
+ }
 o1 --> o2 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o3 : cmns-dsg:hasName
 o3 : cmns-dsg:hasTextualName: Xmotor

@@ -2,33 +2,59 @@
 skinparam linetype polyline
 left to right direction
 title OKUMA.123456-Lb1
-object "[[./OKUMA.123456-Lb1.html data:OKUMA.123456-Lb1]]" as o1 {
- type: ex:RotaryMotionSystem 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:OKUMA.123456-Lb1-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "[[./OKUMA.123456-y_axis.html data:OKUMA.123456-y_axis]]" as o3 {
- type: ex:Structure 
-}
-object "data:OKUMA.123456-y_axis-name" as o4 {
- type: cmns-dsg:Name 
-}
-object "[[./OKUMA.123456-b_axis.html data:OKUMA.123456-b_axis]]" as o5 {
- type: ex:Structure 
-}
-object "data:OKUMA.123456-b_axis-name" as o6 {
- type: cmns-dsg:Name 
-}
-object "data:OKUMA.123456-Lb1-function" as o7 {
- type: ex:RevoluteMotionCapability 
-}
-object "data:OKUMA.123456-Lb1-angle-actual" as o8 {
- type: qp:Angle 
-}
-object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o9 {
- type: ex:Machine 
-}
+
+object "[[./OKUMA.123456-Lb1.html data:OKUMA.123456-Lb1]]" as o1 #76608A {
+ <back:#Green>type: ex:RotaryMotionSystem</back> 
+---
+ }
+object "data:OKUMA.123456-Lb1-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./OKUMA.123456-y_axis.html data:OKUMA.123456-y_axis]]" as o3 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:OKUMA.123456-y_axis-name" as o4 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./OKUMA.123456-b_axis.html data:OKUMA.123456-b_axis]]" as o5 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:OKUMA.123456-b_axis-name" as o6 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:OKUMA.123456-Lb1-function" as o7 #76608A {
+ <back:#Green>type: ex:RevoluteMotionCapability</back> 
+---
+ }
+object "data:OKUMA.123456-Lb1-angle-actual" as o8 #76608A {
+ <back:#1E90FF>type: qp:Angle</back> 
+---
+ }
+object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o9 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: B
 o1 --> o3 : ex:joinedTo

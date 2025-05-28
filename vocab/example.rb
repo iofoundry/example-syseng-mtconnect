@@ -252,6 +252,15 @@ Prefixes = {
   'cmns-dsg': OMG::Designators.to_uri
 }
 
+Colors = {
+  obo: "DFA702",
+  core: "1E90FF",
+  qp: "1E90FF",
+  av: "1E90FF",
+  ex: "Green",
+  data: "76608A"
+}
+
 Units = {
   NEWTON: QUDT["N"],
   NEWTON_METER: QUDT["N-M"],

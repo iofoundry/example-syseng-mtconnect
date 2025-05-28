@@ -2,18 +2,39 @@
 skinparam linetype polyline
 left to right direction
 title OKUMA.123456-b_axis
-object "[[./OKUMA.123456-b_axis.html data:OKUMA.123456-b_axis]]" as o1 {
- type: ex:Structure 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:OKUMA.123456-b_axis-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o3 {
- type: ex:Machine 
-}
-object "[[./OKUMA.123456-Lb1.html data:OKUMA.123456-Lb1]]" as o4 {
- type: ex:RotaryMotionSystem 
-}
+
+object "[[./OKUMA.123456-b_axis.html data:OKUMA.123456-b_axis]]" as o1 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:OKUMA.123456-b_axis-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o3 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
+object "[[./OKUMA.123456-Lb1.html data:OKUMA.123456-Lb1]]" as o4 #76608A {
+ <back:#Green>type: ex:RotaryMotionSystem</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: b_axis
 o3 --> o1 : obo:has member part at some time

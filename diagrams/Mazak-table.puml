@@ -2,18 +2,39 @@
 skinparam linetype polyline
 left to right direction
 title Mazak-table
-object "[[./Mazak-table.html data:Mazak-table]]" as o1 {
- type: ex:Structure 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:Mazak-table-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "[[./Mazak.html data:Mazak]]" as o3 {
- type: ex:Machine 
-}
-object "[[./Mazak-c2.html data:Mazak-c2]]" as o4 {
- type: ex:RotaryMotionSystem 
-}
+
+object "[[./Mazak-table.html data:Mazak-table]]" as o1 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:Mazak-table-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak.html data:Mazak]]" as o3 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
+object "[[./Mazak-c2.html data:Mazak-c2]]" as o4 #76608A {
+ <back:#Green>type: ex:RotaryMotionSystem</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: TABLE
 o3 --> o1 : obo:has member part at some time

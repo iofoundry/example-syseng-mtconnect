@@ -2,60 +2,95 @@
 skinparam linetype polyline
 left to right direction
 title OKUMA.123456-Lz1
-object "[[./OKUMA.123456-Lz1.html data:OKUMA.123456-Lz1]]" as o1 {
- type: ex:LinearMotionSystem 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:OKUMA.123456-Lz1-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "data:OKUMA.123456-Lz1-spec" as o3 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
-}
-object "data:OKUMA.123456-Lz1-spec-LENGTH-Nominal" as o4 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum" as o5 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum" as o6 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum" as o7 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum" as o8 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum" as o9 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum" as o10 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "[[./OKUMA.123456-enclosure.html data:OKUMA.123456-enclosure]]" as o11 {
- type: ex:Structure 
-}
-object "data:OKUMA.123456-enclosure-name" as o12 {
- type: cmns-dsg:Name 
-}
-object "data:OKUMA.123456-enclosure-temperature" as o13 {
- type: qp:Temperature 
-}
-object "[[./OKUMA.123456-z1_axis.html data:OKUMA.123456-z1_axis]]" as o14 {
- type: ex:Structure 
-}
-object "data:OKUMA.123456-z1_axis-name" as o15 {
- type: cmns-dsg:Name 
-}
-object "data:OKUMA.123456-Lz1-function" as o16 {
- type: ex:PrismaticMotionCapability 
-}
-object "data:OKUMA.123456-Lz1-position-actual" as o17 {
- type: qp:Displacement 
-}
-object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o18 {
- type: ex:Machine 
-}
+
+object "[[./OKUMA.123456-Lz1.html data:OKUMA.123456-Lz1]]" as o1 #76608A {
+ <back:#Green>type: ex:LinearMotionSystem</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-spec" as o3 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]]</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-spec-LENGTH-Nominal" as o4 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum" as o5 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum" as o6 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum" as o7 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum" as o8 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum" as o9 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum" as o10 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "[[./OKUMA.123456-enclosure.html data:OKUMA.123456-enclosure]]" as o11 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:OKUMA.123456-enclosure-name" as o12 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:OKUMA.123456-enclosure-temperature" as o13 #76608A {
+ <back:#1E90FF>type: qp:Temperature</back> 
+---
+ }
+object "[[./OKUMA.123456-z1_axis.html data:OKUMA.123456-z1_axis]]" as o14 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:OKUMA.123456-z1_axis-name" as o15 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-function" as o16 #76608A {
+ <back:#Green>type: ex:PrismaticMotionCapability</back> 
+---
+ }
+object "data:OKUMA.123456-Lz1-position-actual" as o17 #76608A {
+ <back:#1E90FF>type: qp:Displacement</back> 
+---
+ }
+object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o18 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: Z1
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]

@@ -2,72 +2,111 @@
 skinparam linetype polyline
 left to right direction
 title Mazak-z
-object "[[./Mazak-z.html data:Mazak-z]]" as o1 {
- type: ex:LinearMotionSystem 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:Mazak-z-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "data:Mazak-z-spec" as o3 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
-}
-object "data:Mazak-z-spec-LENGTH-Nominal" as o4 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-z-spec-LINEAR_FORCE-Maximum" as o5 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-z-spec-LINEAR_FORCE-Minimum" as o6 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-z-spec-VELOCITY-RAPID-Maximum" as o7 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-z-spec-VELOCITY-RAPID-Minimum" as o8 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum" as o9 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum" as o10 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "[[./Mazak-yaxism.html data:Mazak-yaxism]]" as o11 {
- type: ex:Structure 
-}
-object "data:Mazak-yaxism-name" as o12 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o13 {
- type: ex:Structure 
-}
-object "data:Mazak-zaxis-name" as o14 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-z-function" as o15 {
- type: ex:PrismaticMotionCapability 
-}
-object "data:Mazak-z-position-actual" as o16 {
- type: qp:Displacement 
-}
-object "[[./Mazak-z-Zballscrew.html data:Mazak-z-Zballscrew]]" as o17 {
- type: ex:Ballscrew 
-}
-object "data:Mazak-z-Zballscrew-name" as o18 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-z-Zmotor.html data:Mazak-z-Zmotor]]" as o19 {
- type: ex:Motor 
-}
-object "data:Mazak-z-Zmotor-temperature" as o20 {
- type: qp:Temperature 
-}
-object "data:Mazak-z-Zmotor-name" as o21 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o22 {
- type: ex:Machine 
-}
+
+object "[[./Mazak-z.html data:Mazak-z]]" as o1 #76608A {
+ <back:#Green>type: ex:LinearMotionSystem</back> 
+---
+ }
+object "data:Mazak-z-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:Mazak-z-spec" as o3 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]]</back> 
+---
+ }
+object "data:Mazak-z-spec-LENGTH-Nominal" as o4 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-z-spec-LINEAR_FORCE-Maximum" as o5 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-z-spec-LINEAR_FORCE-Minimum" as o6 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-z-spec-VELOCITY-RAPID-Maximum" as o7 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-z-spec-VELOCITY-RAPID-Minimum" as o8 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum" as o9 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum" as o10 #76608A {
+ <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]]</back> 
+---
+ }
+object "[[./Mazak-yaxism.html data:Mazak-yaxism]]" as o11 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:Mazak-yaxism-name" as o12 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak-zaxis.html data:Mazak-zaxis]]" as o13 #76608A {
+ <back:#Green>type: ex:Structure</back> 
+---
+ }
+object "data:Mazak-zaxis-name" as o14 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "data:Mazak-z-function" as o15 #76608A {
+ <back:#Green>type: ex:PrismaticMotionCapability</back> 
+---
+ }
+object "data:Mazak-z-position-actual" as o16 #76608A {
+ <back:#1E90FF>type: qp:Displacement</back> 
+---
+ }
+object "[[./Mazak-z-Zballscrew.html data:Mazak-z-Zballscrew]]" as o17 #76608A {
+ <back:#Green>type: ex:Ballscrew</back> 
+---
+ }
+object "data:Mazak-z-Zballscrew-name" as o18 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak-z-Zmotor.html data:Mazak-z-Zmotor]]" as o19 #76608A {
+ <back:#Green>type: ex:Motor</back> 
+---
+ }
+object "data:Mazak-z-Zmotor-temperature" as o20 #76608A {
+ <back:#1E90FF>type: qp:Temperature</back> 
+---
+ }
+object "data:Mazak-z-Zmotor-name" as o21 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak.html data:Mazak]]" as o22 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: Z
 o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]

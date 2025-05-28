@@ -2,18 +2,39 @@
 skinparam linetype polyline
 left to right direction
 title Mazak-y-Ymotor
-object "[[./Mazak-y-Ymotor.html data:Mazak-y-Ymotor]]" as o1 {
- type: ex:Motor 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:Mazak-y-Ymotor-temperature" as o2 {
- type: qp:Temperature 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "data:Mazak-y-Ymotor-name" as o3 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-y.html data:Mazak-y]]" as o4 {
- type: ex:LinearMotionSystem 
-}
+
+object "[[./Mazak-y-Ymotor.html data:Mazak-y-Ymotor]]" as o1 #76608A {
+ <back:#Green>type: ex:Motor</back> 
+---
+ }
+object "data:Mazak-y-Ymotor-temperature" as o2 #76608A {
+ <back:#1E90FF>type: qp:Temperature</back> 
+---
+ }
+object "data:Mazak-y-Ymotor-name" as o3 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak-y.html data:Mazak-y]]" as o4 #76608A {
+ <back:#Green>type: ex:LinearMotionSystem</back> 
+---
+ }
 o1 --> o2 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
 o1 --> o3 : cmns-dsg:hasName
 o3 : cmns-dsg:hasTextualName: Ymotor

@@ -2,15 +2,35 @@
 skinparam linetype polyline
 left to right direction
 title Mazak-procstock
-object "[[./Mazak-procstock.html data:Mazak-procstock]]" as o1 {
- type: ex:Stock 
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
 }
-object "data:Mazak-procstock-name" as o2 {
- type: cmns-dsg:Name 
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
 }
-object "[[./Mazak.html data:Mazak]]" as o3 {
- type: ex:Machine 
-}
+
+object "[[./Mazak-procstock.html data:Mazak-procstock]]" as o1 #76608A {
+ <back:#Green>type: ex:Stock</back> 
+---
+ }
+object "data:Mazak-procstock-name" as o2 #76608A {
+ <back:#DarkGrey>type: cmns-dsg:Name</back> 
+---
+ }
+object "[[./Mazak.html data:Mazak]]" as o3 #76608A {
+ <back:#Green>type: ex:Machine</back> 
+---
+ }
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: stock
 o3 --> o1 : obo:has member part at some time

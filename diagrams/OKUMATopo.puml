@@ -2,4 +2,21 @@
 skinparam linetype polyline
 left to right direction
 title OKUMATopo
+
+skinparam roundCorner 10
+
+skinparam object {
+  BackgroundColor 76608A
+  fontColor White
+  BorderColor White 
+  FontName Helvetica   
+}
+
+skinparam class{
+   BackgroundColor White
+   fontColor black
+   FontStyle bold
+   FontName Helvetica
+}
+
 @enduml
