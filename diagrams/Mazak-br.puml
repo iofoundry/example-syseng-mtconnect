@@ -1,77 +1,52 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-br
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-br
-object "[[./Mazak-br.html data:Mazak-br]]" as o1 {
- type: ex:RotaryMotionSystem 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-br-name" as o2 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-br-spec" as o3 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
-}
-object "data:Mazak-br-spec-ANGLE-Maximum" as o4 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-br-spec-ANGLE-Minimum" as o5 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-br-spec-TORQUE-Maximum" as o6 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-br-spec-TORQUE-Minimum" as o7 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "[[./Mazak-enclosurem.html data:Mazak-enclosurem]]" as o8 {
- type: ex:Structure 
-}
-object "data:Mazak-enclosurem-name" as o9 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-enclosurem-temperature" as o10 {
- type: qp:Temperature 
-}
-object "[[./Mazak-trundle.html data:Mazak-trundle]]" as o11 {
- type: ex:Structure 
-}
-object "data:Mazak-trundle-name" as o12 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-br-function" as o13 {
- type: ex:RevoluteMotionCapability 
-}
-object "data:Mazak-br-angle-actual" as o14 {
- type: qp:Angle 
-}
-object "[[./Mazak-br-Bmotor.html data:Mazak-br-Bmotor]]" as o15 {
- type: ex:Motor 
-}
-object "data:Mazak-br-Bmotor-name" as o16 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o17 {
- type: ex:Machine 
-}
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: B
-o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
-o3 --> o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 120.0
-o3 --> o5 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o5 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: -30.0
-o3 --> o6 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o6 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 400.0
-o3 --> o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 0.0
-o1 --> o8 : ex:joinedTo
-o8 --> o9 : cmns-dsg:hasName
-o8 --> o10 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o11 : ex:joinedTo
-o11 --> o12 : cmns-dsg:hasName
-o1 --> o13 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
-o1 --> o14 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o15 : obo:has member part at some time
-o15 --> o16 : cmns-dsg:hasName
-o17 --> o1 : obo:has member part at some time
+oIndividual(data:Mazak-br, ex:RotaryMotionSystem)
+oIndividual(data:Mazak-br-name, cmns-dsg:Name)
+oIndividual(data:Mazak-br-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
+oIndividual(data:Mazak-br-spec-ANGLE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-br-spec-ANGLE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-br-spec-TORQUE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-br-spec-TORQUE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-enclosurem, ex:Structure)
+oIndividual(data:Mazak-enclosurem-name, cmns-dsg:Name)
+oIndividual(data:Mazak-enclosurem-temperature, qp:Temperature)
+oIndividual(data:Mazak-trundle, ex:Structure)
+oIndividual(data:Mazak-trundle-name, cmns-dsg:Name)
+oIndividual(data:Mazak-br-function, ex:RevoluteMotionCapability)
+oIndividual(data:Mazak-br-angle-actual, qp:Angle)
+oIndividual(data:Mazak-br-Bmotor, ex:Motor)
+oIndividual(data:Mazak-br-Bmotor-name, cmns-dsg:Name)
+oIndividual(data:Mazak, ex:Machine)
+property(data:Mazak-br, cmns-dsg:hasName, data:Mazak-br-name, down)
+data(data:Mazak-br-name, cmns-dsg:hasTextualName, B)
+property(data:Mazak-br, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], data:Mazak-br-spec, down)
+property(data:Mazak-br-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-br-spec-ANGLE-Maximum, down)
+data(data:Mazak-br-spec-ANGLE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 120.0)
+property(data:Mazak-br-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-br-spec-ANGLE-Minimum, down)
+data(data:Mazak-br-spec-ANGLE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], -30.0)
+property(data:Mazak-br-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-br-spec-TORQUE-Maximum, down)
+data(data:Mazak-br-spec-TORQUE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 400.0)
+property(data:Mazak-br-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-br-spec-TORQUE-Minimum, down)
+data(data:Mazak-br-spec-TORQUE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 0.0)
+property(data:Mazak-br, ex:joinedTo, data:Mazak-enclosurem, down)
+property(data:Mazak-enclosurem, cmns-dsg:hasName, data:Mazak-enclosurem-name, down)
+property(data:Mazak-enclosurem, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-enclosurem-temperature, down)
+property(data:Mazak-br, ex:joinedTo, data:Mazak-trundle, down)
+property(data:Mazak-trundle, cmns-dsg:hasName, data:Mazak-trundle-name, down)
+property(data:Mazak-br, [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]], data:Mazak-br-function, down)
+property(data:Mazak-br, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-br-angle-actual, down)
+property(data:Mazak-br, "bfo:has member part at some time", data:Mazak-br-Bmotor, down)
+property(data:Mazak-br-Bmotor, cmns-dsg:hasName, data:Mazak-br-Bmotor-name, down)
+property(data:Mazak, "bfo:has member part at some time", data:Mazak-br, down)
 @enduml

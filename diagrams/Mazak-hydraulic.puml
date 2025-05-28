@@ -1,17 +1,20 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-hydraulic
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-hydraulic
-object "[[./Mazak-hydraulic.html data:Mazak-hydraulic]]" as o1 {
- type: ex:HydraulicSystem 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-hydraulic-name" as o2 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o3 {
- type: ex:Machine 
-}
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: hydraulic
-o3 --> o1 : obo:has member part at some time
+oIndividual(data:Mazak-hydraulic, ex:HydraulicSystem)
+oIndividual(data:Mazak-hydraulic-name, cmns-dsg:Name)
+oIndividual(data:Mazak, ex:Machine)
+property(data:Mazak-hydraulic, cmns-dsg:hasName, data:Mazak-hydraulic-name, down)
+data(data:Mazak-hydraulic-name, cmns-dsg:hasTextualName, hydraulic)
+property(data:Mazak, "bfo:has member part at some time", data:Mazak-hydraulic, down)
 @enduml

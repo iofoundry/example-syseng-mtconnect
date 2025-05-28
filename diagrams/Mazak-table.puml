@@ -1,21 +1,22 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-table
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-table
-object "[[./Mazak-table.html data:Mazak-table]]" as o1 {
- type: ex:Structure 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-table-name" as o2 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o3 {
- type: ex:Machine 
-}
-object "[[./Mazak-c2.html data:Mazak-c2]]" as o4 {
- type: ex:RotaryMotionSystem 
-}
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: TABLE
-o3 --> o1 : obo:has member part at some time
-o4 --> o1 : ex:joinedTo
+oIndividual(data:Mazak-table, ex:Structure)
+oIndividual(data:Mazak-table-name, cmns-dsg:Name)
+oIndividual(data:Mazak, ex:Machine)
+oIndividual(data:Mazak-c2, ex:RotaryMotionSystem)
+property(data:Mazak-table, cmns-dsg:hasName, data:Mazak-table-name, down)
+data(data:Mazak-table-name, cmns-dsg:hasTextualName, TABLE)
+property(data:Mazak, "bfo:has member part at some time", data:Mazak-table, down)
+property(data:Mazak-c2, ex:joinedTo, data:Mazak-table, down)
 @enduml

@@ -12,7 +12,7 @@ class GenerateDiagram
   def self.uml_name(iri)
     qn = iri.qname(prefixes: Prefixes)
     v = if qn[0] == :obo
-          "obo:#{iri.attributes[:label][:en]}"
+          "\"bfo:#{iri.attributes[:label][:en]}\""
         else
           qn.join(':')
         end
@@ -74,16 +74,16 @@ class GenerateDiagram
 
   # Print an object with its type
   def print_object(iri)
-    if @@linked_terms.include?(iri)
-      title = "[[./#{iri.qname.last}.html #{self.class.uml_name(iri)}]]"
-    else
-      title = self.class.uml_name(iri)
-    end
-    @f.print "object \"#{title}\" as #{@objects[iri]} "
+    # if @@linked_terms.include?(iri)
+    #   title = "[[./#{iri.qname.last}.html #{self.class.uml_name(iri)}]]"
+    # else
+    #   title = self.class.uml_name(iri)
+    # end
+    title = self.class.uml_name(iri)
     if t = @@types[iri]
-      @f.puts "{\n type: #{self.class.uml_name(t)} \n}"
+      @f.puts "oIndividual(#{title}, #{self.class.uml_name(t)})"
     else
-      @f.puts
+      @f.puts "oIndividual(#{title})"
     end
   end
 
@@ -96,9 +96,9 @@ class GenerateDiagram
   def print_stmt(stmt)
     unless stmt.predicate == RDF::RDFV.type
       if RDF::Literal === stmt.object
-        @f.puts "#{obj(stmt.subject)} : #{self.class.uml_name(stmt.predicate)}: #{stmt.object.value}"
+        @f.puts "data(#{self.class.uml_name(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{stmt.object.value})"
       else
-        @f.puts "#{obj(stmt.subject)} --> #{obj(stmt.object)} : #{self.class.uml_name(stmt.predicate)}"
+        @f.puts "property(#{self.class.uml_name(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{self.class.uml_name(stmt.object)}, down)"
       end
     end  
   end
@@ -122,12 +122,35 @@ EOT
     
     File.open("#{@filename}.puml", 'w') do |f|
       @f = f
-      
-      f.puts "@startuml"
-      f.puts "skinparam linetype polyline"
-      f.puts "left to right direction"
-      f.puts "title #{File.basename @filename}"
 
+
+      f.puts <<EOT
+@startuml #{File.basename @filename}
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
+left to right direction
+skinparam linetype polyline
+title #{File.basename @filename}
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+EOT
+      color = {
+        core: "1E90FF",
+        ex: "Green",
+        data: "76608A",
+        units: "Blue",
+      }
+
+      f.puts Prefixes.map { |k, v|
+        if color[k]
+          "\"#{k}\":\"#{color[k]}\""
+        end
+      }.compact.join(',')
+      f.puts "}"
+      
       @objects.each do |k, v|
         print_object(k)
       end

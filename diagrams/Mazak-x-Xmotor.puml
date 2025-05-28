@@ -1,21 +1,22 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-x-Xmotor
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-x-Xmotor
-object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o1 {
- type: ex:Motor 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-x-Xmotor-temperature" as o2 {
- type: qp:Temperature 
-}
-object "data:Mazak-x-Xmotor-name" as o3 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-x.html data:Mazak-x]]" as o4 {
- type: ex:LinearMotionSystem 
-}
-o1 --> o2 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o3 : cmns-dsg:hasName
-o3 : cmns-dsg:hasTextualName: Xmotor
-o4 --> o1 : obo:has member part at some time
+oIndividual(data:Mazak-x-Xmotor, ex:Motor)
+oIndividual(data:Mazak-x-Xmotor-temperature, qp:Temperature)
+oIndividual(data:Mazak-x-Xmotor-name, cmns-dsg:Name)
+oIndividual(data:Mazak-x, ex:LinearMotionSystem)
+property(data:Mazak-x-Xmotor, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-x-Xmotor-temperature, down)
+property(data:Mazak-x-Xmotor, cmns-dsg:hasName, data:Mazak-x-Xmotor-name, down)
+data(data:Mazak-x-Xmotor-name, cmns-dsg:hasTextualName, Xmotor)
+property(data:Mazak-x, "bfo:has member part at some time", data:Mazak-x-Xmotor, down)
 @enduml

@@ -1,17 +1,20 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-y-Yballscrew
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-y-Yballscrew
-object "[[./Mazak-y-Yballscrew.html data:Mazak-y-Yballscrew]]" as o1 {
- type: ex:Ballscrew 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-y-Yballscrew-name" as o2 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-y.html data:Mazak-y]]" as o3 {
- type: ex:LinearMotionSystem 
-}
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: Yballscrew
-o3 --> o1 : obo:has member part at some time
+oIndividual(data:Mazak-y-Yballscrew, ex:Ballscrew)
+oIndividual(data:Mazak-y-Yballscrew-name, cmns-dsg:Name)
+oIndividual(data:Mazak-y, ex:LinearMotionSystem)
+property(data:Mazak-y-Yballscrew, cmns-dsg:hasName, data:Mazak-y-Yballscrew-name, down)
+data(data:Mazak-y-Yballscrew-name, cmns-dsg:hasTextualName, Yballscrew)
+property(data:Mazak-y, "bfo:has member part at some time", data:Mazak-y-Yballscrew, down)
 @enduml

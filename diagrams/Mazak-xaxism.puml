@@ -1,25 +1,24 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-xaxism
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-xaxism
-object "[[./Mazak-xaxism.html data:Mazak-xaxism]]" as o1 {
- type: ex:Structure 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-xaxism-name" as o2 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o3 {
- type: ex:Machine 
-}
-object "[[./Mazak-x.html data:Mazak-x]]" as o4 {
- type: ex:LinearMotionSystem 
-}
-object "[[./Mazak-y.html data:Mazak-y]]" as o5 {
- type: ex:LinearMotionSystem 
-}
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: X_AXIS
-o3 --> o1 : obo:has member part at some time
-o4 --> o1 : ex:joinedTo
-o5 --> o1 : ex:joinedTo
+oIndividual(data:Mazak-xaxism, ex:Structure)
+oIndividual(data:Mazak-xaxism-name, cmns-dsg:Name)
+oIndividual(data:Mazak, ex:Machine)
+oIndividual(data:Mazak-x, ex:LinearMotionSystem)
+oIndividual(data:Mazak-y, ex:LinearMotionSystem)
+property(data:Mazak-xaxism, cmns-dsg:hasName, data:Mazak-xaxism-name, down)
+data(data:Mazak-xaxism-name, cmns-dsg:hasTextualName, X_AXIS)
+property(data:Mazak, "bfo:has member part at some time", data:Mazak-xaxism, down)
+property(data:Mazak-x, ex:joinedTo, data:Mazak-xaxism, down)
+property(data:Mazak-y, ex:joinedTo, data:Mazak-xaxism, down)
 @enduml

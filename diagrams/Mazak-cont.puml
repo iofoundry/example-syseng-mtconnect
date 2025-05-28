@@ -1,25 +1,24 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-cont
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-cont
-object "[[./Mazak-cont.html data:Mazak-cont]]" as o1 {
- type: ex:ControlSystem 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-cont-name" as o2 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-cont-path1.html data:Mazak-cont-path1]]" as o3 {
- type: ex:ControlSystemPath 
-}
-object "data:Mazak-cont-path1-name" as o4 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o5 {
- type: ex:Machine 
-}
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: controller
-o1 --> o3 : obo:has member part at some time
-o3 --> o4 : cmns-dsg:hasName
-o5 --> o1 : obo:has member part at some time
+oIndividual(data:Mazak-cont, ex:ControlSystem)
+oIndividual(data:Mazak-cont-name, cmns-dsg:Name)
+oIndividual(data:Mazak-cont-path1, ex:ControlSystemPath)
+oIndividual(data:Mazak-cont-path1-name, cmns-dsg:Name)
+oIndividual(data:Mazak, ex:Machine)
+property(data:Mazak-cont, cmns-dsg:hasName, data:Mazak-cont-name, down)
+data(data:Mazak-cont-name, cmns-dsg:hasTextualName, controller)
+property(data:Mazak-cont, "bfo:has member part at some time", data:Mazak-cont-path1, down)
+property(data:Mazak-cont-path1, cmns-dsg:hasName, data:Mazak-cont-path1-name, down)
+property(data:Mazak, "bfo:has member part at some time", data:Mazak-cont, down)
 @enduml

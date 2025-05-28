@@ -1,104 +1,67 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-x
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-x
-object "[[./Mazak-x.html data:Mazak-x]]" as o1 {
- type: ex:LinearMotionSystem 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-x-name" as o2 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-x-spec" as o3 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]] 
-}
-object "data:Mazak-x-spec-LENGTH-Nominal" as o4 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-x-spec-LINEAR_FORCE-Maximum" as o5 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-x-spec-LINEAR_FORCE-Minimum" as o6 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-x-spec-VELOCITY-RAPID-Maximum" as o7 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-x-spec-VELOCITY-RAPID-Minimum" as o8 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum" as o9 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum" as o10 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]] 
-}
-object "[[./Mazak-enclosurem.html data:Mazak-enclosurem]]" as o11 {
- type: ex:Structure 
-}
-object "data:Mazak-enclosurem-name" as o12 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-enclosurem-temperature" as o13 {
- type: qp:Temperature 
-}
-object "[[./Mazak-xaxism.html data:Mazak-xaxism]]" as o14 {
- type: ex:Structure 
-}
-object "data:Mazak-xaxism-name" as o15 {
- type: cmns-dsg:Name 
-}
-object "data:Mazak-x-function" as o16 {
- type: ex:PrismaticMotionCapability 
-}
-object "data:Mazak-x-position-actual" as o17 {
- type: qp:Displacement 
-}
-object "[[./Mazak-x-Xballscrew.html data:Mazak-x-Xballscrew]]" as o18 {
- type: ex:Ballscrew 
-}
-object "data:Mazak-x-Xballscrew-name" as o19 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o20 {
- type: ex:Motor 
-}
-object "data:Mazak-x-Xmotor-temperature" as o21 {
- type: qp:Temperature 
-}
-object "data:Mazak-x-Xmotor-name" as o22 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o23 {
- type: ex:Machine 
-}
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: X
-o1 --> o3 : [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]]
-o3 --> o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o4 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 650.0
-o3 --> o5 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o5 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 5200.0
-o3 --> o6 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o6 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 0.0
-o3 --> o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 7000.0
-o3 --> o8 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o8 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 1.0
-o3 --> o9 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o9 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 7000.0
-o3 --> o10 : [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]]
-o10 : [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]]: 1.0
-o1 --> o11 : ex:joinedTo
-o11 --> o12 : cmns-dsg:hasName
-o11 --> o13 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o14 : ex:joinedTo
-o14 --> o15 : cmns-dsg:hasName
-o1 --> o16 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
-o1 --> o17 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o18 : obo:has member part at some time
-o18 --> o19 : cmns-dsg:hasName
-o1 --> o20 : obo:has member part at some time
-o20 --> o21 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o20 --> o22 : cmns-dsg:hasName
-o23 --> o1 : obo:has member part at some time
+oIndividual(data:Mazak-x, ex:LinearMotionSystem)
+oIndividual(data:Mazak-x-name, cmns-dsg:Name)
+oIndividual(data:Mazak-x-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
+oIndividual(data:Mazak-x-spec-LENGTH-Nominal, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-x-spec-LINEAR_FORCE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-x-spec-LINEAR_FORCE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-x-spec-VELOCITY-RAPID-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-x-spec-VELOCITY-RAPID-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+oIndividual(data:Mazak-enclosurem, ex:Structure)
+oIndividual(data:Mazak-enclosurem-name, cmns-dsg:Name)
+oIndividual(data:Mazak-enclosurem-temperature, qp:Temperature)
+oIndividual(data:Mazak-xaxism, ex:Structure)
+oIndividual(data:Mazak-xaxism-name, cmns-dsg:Name)
+oIndividual(data:Mazak-x-function, ex:PrismaticMotionCapability)
+oIndividual(data:Mazak-x-position-actual, qp:Displacement)
+oIndividual(data:Mazak-x-Xballscrew, ex:Ballscrew)
+oIndividual(data:Mazak-x-Xballscrew-name, cmns-dsg:Name)
+oIndividual(data:Mazak-x-Xmotor, ex:Motor)
+oIndividual(data:Mazak-x-Xmotor-temperature, qp:Temperature)
+oIndividual(data:Mazak-x-Xmotor-name, cmns-dsg:Name)
+oIndividual(data:Mazak, ex:Machine)
+property(data:Mazak-x, cmns-dsg:hasName, data:Mazak-x-name, down)
+data(data:Mazak-x-name, cmns-dsg:hasTextualName, X)
+property(data:Mazak-x, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], data:Mazak-x-spec, down)
+property(data:Mazak-x-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-x-spec-LENGTH-Nominal, down)
+data(data:Mazak-x-spec-LENGTH-Nominal, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 650.0)
+property(data:Mazak-x-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-x-spec-LINEAR_FORCE-Maximum, down)
+data(data:Mazak-x-spec-LINEAR_FORCE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 5200.0)
+property(data:Mazak-x-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-x-spec-LINEAR_FORCE-Minimum, down)
+data(data:Mazak-x-spec-LINEAR_FORCE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 0.0)
+property(data:Mazak-x-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-x-spec-VELOCITY-RAPID-Maximum, down)
+data(data:Mazak-x-spec-VELOCITY-RAPID-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 7000.0)
+property(data:Mazak-x-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-x-spec-VELOCITY-RAPID-Minimum, down)
+data(data:Mazak-x-spec-VELOCITY-RAPID-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 1.0)
+property(data:Mazak-x-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum, down)
+data(data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 7000.0)
+property(data:Mazak-x-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum, down)
+data(data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 1.0)
+property(data:Mazak-x, ex:joinedTo, data:Mazak-enclosurem, down)
+property(data:Mazak-enclosurem, cmns-dsg:hasName, data:Mazak-enclosurem-name, down)
+property(data:Mazak-enclosurem, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-enclosurem-temperature, down)
+property(data:Mazak-x, ex:joinedTo, data:Mazak-xaxism, down)
+property(data:Mazak-xaxism, cmns-dsg:hasName, data:Mazak-xaxism-name, down)
+property(data:Mazak-x, [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]], data:Mazak-x-function, down)
+property(data:Mazak-x, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-x-position-actual, down)
+property(data:Mazak-x, "bfo:has member part at some time", data:Mazak-x-Xballscrew, down)
+property(data:Mazak-x-Xballscrew, cmns-dsg:hasName, data:Mazak-x-Xballscrew-name, down)
+property(data:Mazak-x, "bfo:has member part at some time", data:Mazak-x-Xmotor, down)
+property(data:Mazak-x-Xmotor, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-x-Xmotor-temperature, down)
+property(data:Mazak-x-Xmotor, cmns-dsg:hasName, data:Mazak-x-Xmotor-name, down)
+property(data:Mazak, "bfo:has member part at some time", data:Mazak-x, down)
 @enduml

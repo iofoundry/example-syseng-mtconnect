@@ -1,17 +1,20 @@
-@startuml
-skinparam linetype polyline
+@startuml Mazak-personnelm
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
 left to right direction
+skinparam linetype polyline
 title Mazak-personnelm
-object "[[./Mazak-personnelm.html data:Mazak-personnelm]]" as o1 {
- type: [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]] 
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-object "data:Mazak-personnelm-name" as o2 {
- type: cmns-dsg:Name 
-}
-object "[[./Mazak.html data:Mazak]]" as o3 {
- type: ex:Machine 
-}
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: personnel
-o3 --> o1 : obo:has member part at some time
+oIndividual(data:Mazak-personnelm, [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]])
+oIndividual(data:Mazak-personnelm-name, cmns-dsg:Name)
+oIndividual(data:Mazak, ex:Machine)
+property(data:Mazak-personnelm, cmns-dsg:hasName, data:Mazak-personnelm-name, down)
+data(data:Mazak-personnelm-name, cmns-dsg:hasTextualName, personnel)
+property(data:Mazak, "bfo:has member part at some time", data:Mazak-personnelm, down)
 @enduml
