@@ -5,22 +5,24 @@ left to right direction
 skinparam linetype polyline
 title Mazak-enclosurem
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-oIndividual(data:Mazak-enclosurem, ex:Structure)
-oIndividual(data:Mazak-enclosurem-name, cmns-dsg:Name)
-oIndividual(data:Mazak-enclosurem-temperature, qp:Temperature)
-oIndividual(data:Mazak, ex:Machine)
-oIndividual(data:Mazak-x, ex:LinearMotionSystem)
-oIndividual(data:Mazak-br, ex:RotaryMotionSystem)
-property(data:Mazak-enclosurem, cmns-dsg:hasName, data:Mazak-enclosurem-name, down)
-data(data:Mazak-enclosurem-name, cmns-dsg:hasTextualName, enclosure)
-property(data:Mazak-enclosurem, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-enclosurem-temperature, down)
-property(data:Mazak, "bfo:has member part at some time", data:Mazak-enclosurem, down)
-property(data:Mazak-x, ex:joinedTo, data:Mazak-enclosurem, down)
-property(data:Mazak-br, ex:joinedTo, data:Mazak-enclosurem, down)
+individual(o1, data:Mazak-enclosurem, ex:Structure)
+individual(o2, data:Mazak-enclosurem-name, cmns-dsg:Name)
+individual(o3, data:Mazak-enclosurem-temperature, qp:Temperature)
+individual(o4, data:Mazak, ex:Machine)
+individual(o5, data:Mazak-x, ex:LinearMotionSystem)
+individual(o6, data:Mazak-br, ex:RotaryMotionSystem)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, enclosure)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o3)
+property(o4, "bfo:has member part at some time", o1)
+property(o5, ex:joinedTo, o1)
+property(o6, ex:joinedTo, o1)
 @enduml

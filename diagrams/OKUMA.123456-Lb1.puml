@@ -1,0 +1,34 @@
+@startuml OKUMA.123456-Lb1
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
+left to right direction
+skinparam linetype polyline
+title OKUMA.123456-Lb1
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+}
+individual(o1, data:OKUMA.123456-Lb1, ex:RotaryMotionSystem)
+individual(o2, data:OKUMA.123456-Lb1-name, cmns-dsg:Name)
+individual(o3, data:OKUMA.123456-y_axis, ex:Structure)
+individual(o4, data:OKUMA.123456-y_axis-name, cmns-dsg:Name)
+individual(o5, data:OKUMA.123456-b_axis, ex:Structure)
+individual(o6, data:OKUMA.123456-b_axis-name, cmns-dsg:Name)
+individual(o7, data:OKUMA.123456-Lb1-function, ex:RevoluteMotionCapability)
+individual(o8, data:OKUMA.123456-Lb1-angle-actual, qp:Angle)
+individual(o9, data:OKUMA.123456, ex:Machine)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, B)
+property(o1, ex:joinedTo, o3)
+property(o3, cmns-dsg:hasName, o4)
+property(o1, ex:joinedTo, o5)
+property(o5, cmns-dsg:hasName, o6)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]], o7)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o8)
+property(o9, "bfo:has member part at some time", o1)
+@enduml

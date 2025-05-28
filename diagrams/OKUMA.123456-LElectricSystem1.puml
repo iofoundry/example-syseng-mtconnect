@@ -1,0 +1,22 @@
+@startuml OKUMA.123456-LElectricSystem1
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
+left to right direction
+skinparam linetype polyline
+title OKUMA.123456-LElectricSystem1
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+}
+individual(o1, data:OKUMA.123456-LElectricSystem1, ex:ElectricalSystem)
+individual(o2, data:OKUMA.123456-LElectricSystem1-name, cmns-dsg:Name)
+individual(o3, data:OKUMA.123456, ex:Machine)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, ElectricSystem1)
+property(o3, "bfo:has member part at some time", o1)
+@enduml

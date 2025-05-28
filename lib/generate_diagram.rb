@@ -81,9 +81,9 @@ class GenerateDiagram
     # end
     title = self.class.uml_name(iri)
     if t = @@types[iri]
-      @f.puts "oIndividual(#{title}, #{self.class.uml_name(t)})"
+      @f.puts "individual(#{obj(iri)}, #{title}, #{self.class.uml_name(t)})"
     else
-      @f.puts "oIndividual(#{title})"
+      @f.puts "individual(#{obj(iri)}, #{title})"
     end
   end
 
@@ -96,9 +96,9 @@ class GenerateDiagram
   def print_stmt(stmt)
     unless stmt.predicate == RDF::RDFV.type
       if RDF::Literal === stmt.object
-        @f.puts "data(#{self.class.uml_name(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{stmt.object.value})"
+        @f.puts "data(#{obj(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{stmt.object.value})"
       else
-        @f.puts "property(#{self.class.uml_name(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{self.class.uml_name(stmt.object)}, down)"
+        @f.puts "property(#{obj(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{obj(stmt.object)})"
       end
     end  
   end
@@ -131,6 +131,8 @@ EOT
 left to right direction
 skinparam linetype polyline
 title #{File.basename @filename}
+
+!$default_direction = down
 
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 

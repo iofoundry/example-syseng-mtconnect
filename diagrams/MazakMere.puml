@@ -5,6 +5,8 @@ left to right direction
 skinparam linetype polyline
 title MazakMere
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 

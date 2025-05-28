@@ -5,36 +5,38 @@ left to right direction
 skinparam linetype polyline
 title Mazak-c
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-oIndividual(data:Mazak-c, ex:RotaryMotionSystem)
-oIndividual(data:Mazak-c-name, cmns-dsg:Name)
-oIndividual(data:Mazak-c-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
-oIndividual(data:Mazak-c-spec-VELOCITY-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-oIndividual(data:Mazak-c-spec-VELOCITY-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-oIndividual(data:Mazak-zaxis, ex:Structure)
-oIndividual(data:Mazak-zaxis-name, cmns-dsg:Name)
-oIndividual(data:Mazak-c-function, ex:ContinuousMotionCapability)
-oIndividual(data:Mazak-c-rotary_velocity-actual, qp:Speed)
-oIndividual(data:Mazak-c-C2motor, ex:Motor)
-oIndividual(data:Mazak-c-C2motor-name, cmns-dsg:Name)
-oIndividual(data:Mazak, ex:Machine)
-property(data:Mazak-c, cmns-dsg:hasName, data:Mazak-c-name, down)
-data(data:Mazak-c-name, cmns-dsg:hasTextualName, C1)
-property(data:Mazak-c, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], data:Mazak-c-spec, down)
-property(data:Mazak-c-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-c-spec-VELOCITY-Maximum, down)
-data(data:Mazak-c-spec-VELOCITY-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 12000.0)
-property(data:Mazak-c-spec, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], data:Mazak-c-spec-VELOCITY-Minimum, down)
-data(data:Mazak-c-spec-VELOCITY-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 0.0)
-property(data:Mazak-c, ex:joinedTo, data:Mazak-zaxis, down)
-property(data:Mazak-zaxis, cmns-dsg:hasName, data:Mazak-zaxis-name, down)
-property(data:Mazak-c, [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]], data:Mazak-c-function, down)
-property(data:Mazak-c, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-c-rotary_velocity-actual, down)
-property(data:Mazak-c, "bfo:has member part at some time", data:Mazak-c-C2motor, down)
-property(data:Mazak-c-C2motor, cmns-dsg:hasName, data:Mazak-c-C2motor-name, down)
-property(data:Mazak, "bfo:has member part at some time", data:Mazak-c, down)
+individual(o1, data:Mazak-c, ex:RotaryMotionSystem)
+individual(o2, data:Mazak-c-name, cmns-dsg:Name)
+individual(o3, data:Mazak-c-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
+individual(o4, data:Mazak-c-spec-VELOCITY-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o5, data:Mazak-c-spec-VELOCITY-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o6, data:Mazak-zaxis, ex:Structure)
+individual(o7, data:Mazak-zaxis-name, cmns-dsg:Name)
+individual(o8, data:Mazak-c-function, ex:ContinuousMotionCapability)
+individual(o9, data:Mazak-c-rotary_velocity-actual, qp:Speed)
+individual(o10, data:Mazak-c-C2motor, ex:Motor)
+individual(o11, data:Mazak-c-C2motor-name, cmns-dsg:Name)
+individual(o12, data:Mazak, ex:Machine)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, C1)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], o3)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o4)
+data(o4, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 12000.0)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o5)
+data(o5, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 0.0)
+property(o1, ex:joinedTo, o6)
+property(o6, cmns-dsg:hasName, o7)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]], o8)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o9)
+property(o1, "bfo:has member part at some time", o10)
+property(o10, cmns-dsg:hasName, o11)
+property(o12, "bfo:has member part at some time", o1)
 @enduml

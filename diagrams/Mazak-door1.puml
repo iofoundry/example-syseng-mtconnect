@@ -5,16 +5,18 @@ left to right direction
 skinparam linetype polyline
 title Mazak-door1
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-oIndividual(data:Mazak-door1, "bfo:object")
-oIndividual(data:Mazak-door1-name, cmns-dsg:Name)
-oIndividual(data:Mazak, ex:Machine)
-property(data:Mazak-door1, cmns-dsg:hasName, data:Mazak-door1-name, down)
-data(data:Mazak-door1-name, cmns-dsg:hasTextualName, door)
-property(data:Mazak, "bfo:has member part at some time", data:Mazak-door1, down)
+individual(o1, data:Mazak-door1, "bfo:object")
+individual(o2, data:Mazak-door1-name, cmns-dsg:Name)
+individual(o3, data:Mazak, ex:Machine)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, door)
+property(o3, "bfo:has member part at some time", o1)
 @enduml

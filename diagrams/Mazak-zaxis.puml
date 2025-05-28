@@ -5,20 +5,22 @@ left to right direction
 skinparam linetype polyline
 title Mazak-zaxis
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-oIndividual(data:Mazak-zaxis, ex:Structure)
-oIndividual(data:Mazak-zaxis-name, cmns-dsg:Name)
-oIndividual(data:Mazak, ex:Machine)
-oIndividual(data:Mazak-z, ex:LinearMotionSystem)
-oIndividual(data:Mazak-c, ex:RotaryMotionSystem)
-property(data:Mazak-zaxis, cmns-dsg:hasName, data:Mazak-zaxis-name, down)
-data(data:Mazak-zaxis-name, cmns-dsg:hasTextualName, Z_AXIS)
-property(data:Mazak, "bfo:has member part at some time", data:Mazak-zaxis, down)
-property(data:Mazak-z, ex:joinedTo, data:Mazak-zaxis, down)
-property(data:Mazak-c, ex:joinedTo, data:Mazak-zaxis, down)
+individual(o1, data:Mazak-zaxis, ex:Structure)
+individual(o2, data:Mazak-zaxis-name, cmns-dsg:Name)
+individual(o3, data:Mazak, ex:Machine)
+individual(o4, data:Mazak-z, ex:LinearMotionSystem)
+individual(o5, data:Mazak-c, ex:RotaryMotionSystem)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, Z_AXIS)
+property(o3, "bfo:has member part at some time", o1)
+property(o4, ex:joinedTo, o1)
+property(o5, ex:joinedTo, o1)
 @enduml

@@ -5,16 +5,18 @@ left to right direction
 skinparam linetype polyline
 title Mazak-x-Xballscrew
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-oIndividual(data:Mazak-x-Xballscrew, ex:Ballscrew)
-oIndividual(data:Mazak-x-Xballscrew-name, cmns-dsg:Name)
-oIndividual(data:Mazak-x, ex:LinearMotionSystem)
-property(data:Mazak-x-Xballscrew, cmns-dsg:hasName, data:Mazak-x-Xballscrew-name, down)
-data(data:Mazak-x-Xballscrew-name, cmns-dsg:hasTextualName, Xballscrew)
-property(data:Mazak-x, "bfo:has member part at some time", data:Mazak-x-Xballscrew, down)
+individual(o1, data:Mazak-x-Xballscrew, ex:Ballscrew)
+individual(o2, data:Mazak-x-Xballscrew-name, cmns-dsg:Name)
+individual(o3, data:Mazak-x, ex:LinearMotionSystem)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, Xballscrew)
+property(o3, "bfo:has member part at some time", o1)
 @enduml

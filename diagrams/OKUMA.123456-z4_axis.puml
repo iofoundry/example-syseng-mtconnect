@@ -1,0 +1,28 @@
+@startuml OKUMA.123456-z4_axis
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
+left to right direction
+skinparam linetype polyline
+title OKUMA.123456-z4_axis
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+}
+individual(o1, data:OKUMA.123456-z4_axis, ex:Structure)
+individual(o2, data:OKUMA.123456-z4_axis-name, cmns-dsg:Name)
+individual(o3, data:OKUMA.123456, ex:Machine)
+individual(o4, data:OKUMA.123456-Lz4, ex:LinearMotionSystem)
+individual(o5, data:OKUMA.123456-Lc2, ex:RotaryMotionSystem)
+individual(o6, data:OKUMA.123456-Lc3, ex:RotaryMotionSystem)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, z4_axis)
+property(o3, "bfo:has member part at some time", o1)
+property(o4, ex:joinedTo, o1)
+property(o5, ex:joinedTo, o1)
+property(o6, ex:joinedTo, o1)
+@enduml

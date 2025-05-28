@@ -1,0 +1,59 @@
+@startuml OKUMA.123456-Lz4
+!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+
+left to right direction
+skinparam linetype polyline
+title OKUMA.123456-Lz4
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+}
+individual(o1, data:OKUMA.123456-Lz4, ex:LinearMotionSystem)
+individual(o2, data:OKUMA.123456-Lz4-name, cmns-dsg:Name)
+individual(o3, data:OKUMA.123456-Lz4-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
+individual(o4, data:OKUMA.123456-Lz4-spec-LENGTH-Nominal, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o5, data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o6, data:OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o7, data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o8, data:OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o9, data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o10, data:OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o11, data:OKUMA.123456-enclosure, ex:Structure)
+individual(o12, data:OKUMA.123456-enclosure-name, cmns-dsg:Name)
+individual(o13, data:OKUMA.123456-enclosure-temperature, qp:Temperature)
+individual(o14, data:OKUMA.123456-z4_axis, ex:Structure)
+individual(o15, data:OKUMA.123456-z4_axis-name, cmns-dsg:Name)
+individual(o16, data:OKUMA.123456-Lz4-function, ex:PrismaticMotionCapability)
+individual(o17, data:OKUMA.123456-Lz4-position-actual, qp:Displacement)
+individual(o18, data:OKUMA.123456, ex:Machine)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, Z4)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], o3)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o4)
+data(o4, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 650.0)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o5)
+data(o5, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 5200.0)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o6)
+data(o6, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 0.0)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o7)
+data(o7, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 7000.0)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o8)
+data(o8, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 1.0)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o9)
+data(o9, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 7000.0)
+property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o10)
+data(o10, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 1.0)
+property(o1, ex:joinedTo, o11)
+property(o11, cmns-dsg:hasName, o12)
+property(o11, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o13)
+property(o1, ex:joinedTo, o14)
+property(o14, cmns-dsg:hasName, o15)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]], o16)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o17)
+property(o18, "bfo:has member part at some time", o1)
+@enduml

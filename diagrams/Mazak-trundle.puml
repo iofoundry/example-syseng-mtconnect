@@ -5,20 +5,22 @@ left to right direction
 skinparam linetype polyline
 title Mazak-trundle
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-oIndividual(data:Mazak-trundle, ex:Structure)
-oIndividual(data:Mazak-trundle-name, cmns-dsg:Name)
-oIndividual(data:Mazak, ex:Machine)
-oIndividual(data:Mazak-br, ex:RotaryMotionSystem)
-oIndividual(data:Mazak-c2, ex:RotaryMotionSystem)
-property(data:Mazak-trundle, cmns-dsg:hasName, data:Mazak-trundle-name, down)
-data(data:Mazak-trundle-name, cmns-dsg:hasTextualName, TRUNDLE)
-property(data:Mazak, "bfo:has member part at some time", data:Mazak-trundle, down)
-property(data:Mazak-br, ex:joinedTo, data:Mazak-trundle, down)
-property(data:Mazak-c2, ex:joinedTo, data:Mazak-trundle, down)
+individual(o1, data:Mazak-trundle, ex:Structure)
+individual(o2, data:Mazak-trundle-name, cmns-dsg:Name)
+individual(o3, data:Mazak, ex:Machine)
+individual(o4, data:Mazak-br, ex:RotaryMotionSystem)
+individual(o5, data:Mazak-c2, ex:RotaryMotionSystem)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, TRUNDLE)
+property(o3, "bfo:has member part at some time", o1)
+property(o4, ex:joinedTo, o1)
+property(o5, ex:joinedTo, o1)
 @enduml

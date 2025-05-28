@@ -5,18 +5,20 @@ left to right direction
 skinparam linetype polyline
 title Mazak-y-Ymotor
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-oIndividual(data:Mazak-y-Ymotor, ex:Motor)
-oIndividual(data:Mazak-y-Ymotor-temperature, qp:Temperature)
-oIndividual(data:Mazak-y-Ymotor-name, cmns-dsg:Name)
-oIndividual(data:Mazak-y, ex:LinearMotionSystem)
-property(data:Mazak-y-Ymotor, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], data:Mazak-y-Ymotor-temperature, down)
-property(data:Mazak-y-Ymotor, cmns-dsg:hasName, data:Mazak-y-Ymotor-name, down)
-data(data:Mazak-y-Ymotor-name, cmns-dsg:hasTextualName, Ymotor)
-property(data:Mazak-y, "bfo:has member part at some time", data:Mazak-y-Ymotor, down)
+individual(o1, data:Mazak-y-Ymotor, ex:Motor)
+individual(o2, data:Mazak-y-Ymotor-temperature, qp:Temperature)
+individual(o3, data:Mazak-y-Ymotor-name, cmns-dsg:Name)
+individual(o4, data:Mazak-y, ex:LinearMotionSystem)
+property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o2)
+property(o1, cmns-dsg:hasName, o3)
+data(o3, cmns-dsg:hasTextualName, Ymotor)
+property(o4, "bfo:has member part at some time", o1)
 @enduml

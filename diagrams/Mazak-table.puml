@@ -5,18 +5,20 @@ left to right direction
 skinparam linetype polyline
 title Mazak-table
 
+!$default_direction = down
+
 !$namespace_colors = { "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-oIndividual(data:Mazak-table, ex:Structure)
-oIndividual(data:Mazak-table-name, cmns-dsg:Name)
-oIndividual(data:Mazak, ex:Machine)
-oIndividual(data:Mazak-c2, ex:RotaryMotionSystem)
-property(data:Mazak-table, cmns-dsg:hasName, data:Mazak-table-name, down)
-data(data:Mazak-table-name, cmns-dsg:hasTextualName, TABLE)
-property(data:Mazak, "bfo:has member part at some time", data:Mazak-table, down)
-property(data:Mazak-c2, ex:joinedTo, data:Mazak-table, down)
+individual(o1, data:Mazak-table, ex:Structure)
+individual(o2, data:Mazak-table-name, cmns-dsg:Name)
+individual(o3, data:Mazak, ex:Machine)
+individual(o4, data:Mazak-c2, ex:RotaryMotionSystem)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, TABLE)
+property(o3, "bfo:has member part at some time", o1)
+property(o4, ex:joinedTo, o1)
 @enduml
