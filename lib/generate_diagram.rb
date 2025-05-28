@@ -126,7 +126,8 @@ EOT
 
       f.puts <<EOT
 @startuml #{File.basename @filename}
-!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
 
 left to right direction
 skinparam linetype polyline

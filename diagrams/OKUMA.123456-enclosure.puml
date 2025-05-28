@@ -1,5 +1,6 @@
 @startuml OKUMA.123456-enclosure
-!include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
 
 left to right direction
 skinparam linetype polyline
