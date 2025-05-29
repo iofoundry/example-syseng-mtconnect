@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title Mazak-pneumatic
@@ -14,9 +20,9 @@ title Mazak-pneumatic
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:Mazak-pneumatic, ex:PneumaticSystem)
+individual(o1, data:[[./Mazak-pneumatic.html Mazak-pneumatic]], ex:PneumaticSystem)
 individual(o2, data:Mazak-pneumatic-name, cmns-dsg:Name)
-individual(o3, data:Mazak, ex:Machine)
+individual(o3, data:[[./Mazak.html Mazak]], ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, pneumatic)
 property(o3, "bfo:has member part at some time", o1)

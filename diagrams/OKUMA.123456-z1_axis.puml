@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title OKUMA.123456-z1_axis
@@ -14,11 +20,11 @@ title OKUMA.123456-z1_axis
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:OKUMA.123456-z1_axis, ex:Structure)
+individual(o1, data:[[./OKUMA.123456-z1_axis.html OKUMA.123456-z1_axis]], ex:Structure)
 individual(o2, data:OKUMA.123456-z1_axis-name, cmns-dsg:Name)
-individual(o3, data:OKUMA.123456, ex:Machine)
-individual(o4, data:OKUMA.123456-Lx1, ex:LinearMotionSystem)
-individual(o5, data:OKUMA.123456-Lz1, ex:LinearMotionSystem)
+individual(o3, data:[[./OKUMA.123456.html OKUMA.123456]], ex:Machine)
+individual(o4, data:[[./OKUMA.123456-Lx1.html OKUMA.123456-Lx1]], ex:LinearMotionSystem)
+individual(o5, data:[[./OKUMA.123456-Lz1.html OKUMA.123456-Lz1]], ex:LinearMotionSystem)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, z1_axis)
 property(o3, "bfo:has member part at some time", o1)

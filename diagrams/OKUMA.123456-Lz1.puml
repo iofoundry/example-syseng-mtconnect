@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title OKUMA.123456-Lz1
@@ -14,7 +20,7 @@ title OKUMA.123456-Lz1
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:OKUMA.123456-Lz1, ex:LinearMotionSystem)
+individual(o1, data:[[./OKUMA.123456-Lz1.html OKUMA.123456-Lz1]], ex:LinearMotionSystem)
 individual(o2, data:OKUMA.123456-Lz1-name, cmns-dsg:Name)
 individual(o3, data:OKUMA.123456-Lz1-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
 individual(o4, data:OKUMA.123456-Lz1-spec-LENGTH-Nominal, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
@@ -24,14 +30,14 @@ individual(o7, data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum, [[https://spec
 individual(o8, data:OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
 individual(o9, data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
 individual(o10, data:OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-individual(o11, data:OKUMA.123456-enclosure, ex:Structure)
+individual(o11, data:[[./OKUMA.123456-enclosure.html OKUMA.123456-enclosure]], ex:Structure)
 individual(o12, data:OKUMA.123456-enclosure-name, cmns-dsg:Name)
 individual(o13, data:OKUMA.123456-enclosure-temperature, qp:Temperature)
-individual(o14, data:OKUMA.123456-z1_axis, ex:Structure)
+individual(o14, data:[[./OKUMA.123456-z1_axis.html OKUMA.123456-z1_axis]], ex:Structure)
 individual(o15, data:OKUMA.123456-z1_axis-name, cmns-dsg:Name)
 individual(o16, data:OKUMA.123456-Lz1-function, ex:PrismaticMotionCapability)
 individual(o17, data:OKUMA.123456-Lz1-position-actual, qp:Displacement)
-individual(o18, data:OKUMA.123456, ex:Machine)
+individual(o18, data:[[./OKUMA.123456.html OKUMA.123456]], ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, Z1)
 property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], o3)

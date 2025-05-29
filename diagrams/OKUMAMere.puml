@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title OKUMAMere
@@ -14,35 +20,35 @@ title OKUMAMere
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:OKUMA.123456, ex:Machine)
-individual(o2, data:OKUMA.123456-x_axis, ex:Structure)
-individual(o3, data:OKUMA.123456-y_axis, ex:Structure)
-individual(o4, data:OKUMA.123456-z1_axis, ex:Structure)
-individual(o5, data:OKUMA.123456-z4_axis, ex:Structure)
-individual(o6, data:OKUMA.123456-b_axis, ex:Structure)
-individual(o7, data:OKUMA.123456-c1_axis, ex:Structure)
-individual(o8, data:OKUMA.123456-c2_axis, ex:Structure)
-individual(o9, data:OKUMA.123456-Lx1, ex:LinearMotionSystem)
-individual(o10, data:OKUMA.123456-LYI1, ex:LinearMotionSystem)
-individual(o11, data:OKUMA.123456-Lz1, ex:LinearMotionSystem)
-individual(o12, data:OKUMA.123456-Lb1, ex:RotaryMotionSystem)
-individual(o13, data:OKUMA.123456-Lc1, ex:RotaryMotionSystem)
-individual(o14, data:OKUMA.123456-Lz4, ex:LinearMotionSystem)
-individual(o15, data:OKUMA.123456-Lc2, ex:RotaryMotionSystem)
-individual(o16, data:OKUMA.123456-Lc3, ex:RotaryMotionSystem)
-individual(o17, data:OKUMA.123456-Lc6, ex:RotaryMotionSystem)
-individual(o18, data:OKUMA.123456-Lct1, ex:ControlSystem)
-individual(o19, data:OKUMA.123456-LCoolantSystem1, "bfo:object")
-individual(o20, data:OKUMA.123456-LElectricSystem1, ex:ElectricalSystem)
-individual(o21, data:OKUMA.123456-LHydraulicSystem1, ex:HydraulicSystem)
-individual(o22, data:OKUMA.123456-LLubricationSystem1, ex:LubricationSystem)
-individual(o23, data:OKUMA.123456-LPneumaticSystem1, ex:PneumaticSystem)
-individual(o24, data:OKUMA.123456-LLoaderSystem1, "bfo:object")
-individual(o25, data:OKUMA.123456-LWasteDisposalSystem1, "bfo:object")
-individual(o26, data:OKUMA.123456-LToolingDeliverySystem1, "bfo:object")
-individual(o27, data:OKUMA.123456-LBarFeederSystem1, "bfo:object")
-individual(o28, data:OKUMA.123456-enclosure, ex:Structure)
-individual(o29, data:OKUMA.123456-Lct1-Lp1, ex:ControlSystemPath)
+individual(o1, data:[[./OKUMA.123456.html OKUMA.123456]], ex:Machine)
+individual(o2, data:[[./OKUMA.123456-x_axis.html OKUMA.123456-x_axis]], ex:Structure)
+individual(o3, data:[[./OKUMA.123456-y_axis.html OKUMA.123456-y_axis]], ex:Structure)
+individual(o4, data:[[./OKUMA.123456-z1_axis.html OKUMA.123456-z1_axis]], ex:Structure)
+individual(o5, data:[[./OKUMA.123456-z4_axis.html OKUMA.123456-z4_axis]], ex:Structure)
+individual(o6, data:[[./OKUMA.123456-b_axis.html OKUMA.123456-b_axis]], ex:Structure)
+individual(o7, data:[[./OKUMA.123456-c1_axis.html OKUMA.123456-c1_axis]], ex:Structure)
+individual(o8, data:[[./OKUMA.123456-c2_axis.html OKUMA.123456-c2_axis]], ex:Structure)
+individual(o9, data:[[./OKUMA.123456-Lx1.html OKUMA.123456-Lx1]], ex:LinearMotionSystem)
+individual(o10, data:[[./OKUMA.123456-LYI1.html OKUMA.123456-LYI1]], ex:LinearMotionSystem)
+individual(o11, data:[[./OKUMA.123456-Lz1.html OKUMA.123456-Lz1]], ex:LinearMotionSystem)
+individual(o12, data:[[./OKUMA.123456-Lb1.html OKUMA.123456-Lb1]], ex:RotaryMotionSystem)
+individual(o13, data:[[./OKUMA.123456-Lc1.html OKUMA.123456-Lc1]], ex:RotaryMotionSystem)
+individual(o14, data:[[./OKUMA.123456-Lz4.html OKUMA.123456-Lz4]], ex:LinearMotionSystem)
+individual(o15, data:[[./OKUMA.123456-Lc2.html OKUMA.123456-Lc2]], ex:RotaryMotionSystem)
+individual(o16, data:[[./OKUMA.123456-Lc3.html OKUMA.123456-Lc3]], ex:RotaryMotionSystem)
+individual(o17, data:[[./OKUMA.123456-Lc6.html OKUMA.123456-Lc6]], ex:RotaryMotionSystem)
+individual(o18, data:[[./OKUMA.123456-Lct1.html OKUMA.123456-Lct1]], ex:ControlSystem)
+individual(o19, data:[[./OKUMA.123456-LCoolantSystem1.html OKUMA.123456-LCoolantSystem1]], "bfo:object")
+individual(o20, data:[[./OKUMA.123456-LElectricSystem1.html OKUMA.123456-LElectricSystem1]], ex:ElectricalSystem)
+individual(o21, data:[[./OKUMA.123456-LHydraulicSystem1.html OKUMA.123456-LHydraulicSystem1]], ex:HydraulicSystem)
+individual(o22, data:[[./OKUMA.123456-LLubricationSystem1.html OKUMA.123456-LLubricationSystem1]], ex:LubricationSystem)
+individual(o23, data:[[./OKUMA.123456-LPneumaticSystem1.html OKUMA.123456-LPneumaticSystem1]], ex:PneumaticSystem)
+individual(o24, data:[[./OKUMA.123456-LLoaderSystem1.html OKUMA.123456-LLoaderSystem1]], "bfo:object")
+individual(o25, data:[[./OKUMA.123456-LWasteDisposalSystem1.html OKUMA.123456-LWasteDisposalSystem1]], "bfo:object")
+individual(o26, data:[[./OKUMA.123456-LToolingDeliverySystem1.html OKUMA.123456-LToolingDeliverySystem1]], "bfo:object")
+individual(o27, data:[[./OKUMA.123456-LBarFeederSystem1.html OKUMA.123456-LBarFeederSystem1]], "bfo:object")
+individual(o28, data:[[./OKUMA.123456-enclosure.html OKUMA.123456-enclosure]], ex:Structure)
+individual(o29, data:[[./OKUMA.123456-Lct1-Lp1.html OKUMA.123456-Lct1-Lp1]], ex:ControlSystemPath)
 property(o1, "bfo:has member part at some time", o2)
 data(o1, cmns-dsg:hasName, OKUMA)
 property(o1, "bfo:has member part at some time", o3)

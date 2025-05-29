@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title Mazak-c2
@@ -14,22 +20,22 @@ title Mazak-c2
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:Mazak-c2, ex:RotaryMotionSystem)
+individual(o1, data:[[./Mazak-c2.html Mazak-c2]], ex:RotaryMotionSystem)
 individual(o2, data:Mazak-c2-name, cmns-dsg:Name)
 individual(o3, data:Mazak-c2-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
 individual(o4, data:Mazak-c2-spec-ANGLE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
 individual(o5, data:Mazak-c2-spec-ANGLE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
 individual(o6, data:Mazak-c2-spec-TORQUE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
 individual(o7, data:Mazak-c2-spec-TORQUE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-individual(o8, data:Mazak-trundle, ex:Structure)
+individual(o8, data:[[./Mazak-trundle.html Mazak-trundle]], ex:Structure)
 individual(o9, data:Mazak-trundle-name, cmns-dsg:Name)
-individual(o10, data:Mazak-table, ex:Structure)
+individual(o10, data:[[./Mazak-table.html Mazak-table]], ex:Structure)
 individual(o11, data:Mazak-table-name, cmns-dsg:Name)
 individual(o12, data:Mazak-c2-function, ex:RevoluteMotionCapability)
 individual(o13, data:Mazak-c2-angle-actual, qp:Angle)
-individual(o14, data:Mazak-c2-Cmotor, ex:Motor)
+individual(o14, data:[[./Mazak-c2-Cmotor.html Mazak-c2-Cmotor]], ex:Motor)
 individual(o15, data:Mazak-c2-Cmotor-name, cmns-dsg:Name)
-individual(o16, data:Mazak, ex:Machine)
+individual(o16, data:[[./Mazak.html Mazak]], ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, C2)
 property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], o3)

@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title Mazak-z
@@ -14,7 +20,7 @@ title Mazak-z
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:Mazak-z, ex:LinearMotionSystem)
+individual(o1, data:[[./Mazak-z.html Mazak-z]], ex:LinearMotionSystem)
 individual(o2, data:Mazak-z-name, cmns-dsg:Name)
 individual(o3, data:Mazak-z-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
 individual(o4, data:Mazak-z-spec-LENGTH-Nominal, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
@@ -24,18 +30,18 @@ individual(o7, data:Mazak-z-spec-VELOCITY-RAPID-Maximum, [[https://spec.industri
 individual(o8, data:Mazak-z-spec-VELOCITY-RAPID-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
 individual(o9, data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
 individual(o10, data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-individual(o11, data:Mazak-yaxism, ex:Structure)
+individual(o11, data:[[./Mazak-yaxism.html Mazak-yaxism]], ex:Structure)
 individual(o12, data:Mazak-yaxism-name, cmns-dsg:Name)
-individual(o13, data:Mazak-zaxis, ex:Structure)
+individual(o13, data:[[./Mazak-zaxis.html Mazak-zaxis]], ex:Structure)
 individual(o14, data:Mazak-zaxis-name, cmns-dsg:Name)
 individual(o15, data:Mazak-z-function, ex:PrismaticMotionCapability)
 individual(o16, data:Mazak-z-position-actual, qp:Displacement)
-individual(o17, data:Mazak-z-Zballscrew, ex:Ballscrew)
+individual(o17, data:[[./Mazak-z-Zballscrew.html Mazak-z-Zballscrew]], ex:Ballscrew)
 individual(o18, data:Mazak-z-Zballscrew-name, cmns-dsg:Name)
-individual(o19, data:Mazak-z-Zmotor, ex:Motor)
+individual(o19, data:[[./Mazak-z-Zmotor.html Mazak-z-Zmotor]], ex:Motor)
 individual(o20, data:Mazak-z-Zmotor-temperature, qp:Temperature)
 individual(o21, data:Mazak-z-Zmotor-name, cmns-dsg:Name)
-individual(o22, data:Mazak, ex:Machine)
+individual(o22, data:[[./Mazak.html Mazak]], ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, Z)
 property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], o3)

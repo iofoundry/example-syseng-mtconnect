@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title Mazak-c-C2motor
@@ -14,9 +20,9 @@ title Mazak-c-C2motor
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:Mazak-c-C2motor, ex:Motor)
+individual(o1, data:[[./Mazak-c-C2motor.html Mazak-c-C2motor]], ex:Motor)
 individual(o2, data:Mazak-c-C2motor-name, cmns-dsg:Name)
-individual(o3, data:Mazak-c, ex:RotaryMotionSystem)
+individual(o3, data:[[./Mazak-c.html Mazak-c]], ex:RotaryMotionSystem)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, C2motor)
 property(o3, "bfo:has member part at some time", o1)

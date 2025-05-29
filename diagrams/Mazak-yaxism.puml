@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title Mazak-yaxism
@@ -14,11 +20,11 @@ title Mazak-yaxism
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:Mazak-yaxism, ex:Structure)
+individual(o1, data:[[./Mazak-yaxism.html Mazak-yaxism]], ex:Structure)
 individual(o2, data:Mazak-yaxism-name, cmns-dsg:Name)
-individual(o3, data:Mazak, ex:Machine)
-individual(o4, data:Mazak-y, ex:LinearMotionSystem)
-individual(o5, data:Mazak-z, ex:LinearMotionSystem)
+individual(o3, data:[[./Mazak.html Mazak]], ex:Machine)
+individual(o4, data:[[./Mazak-y.html Mazak-y]], ex:LinearMotionSystem)
+individual(o5, data:[[./Mazak-z.html Mazak-z]], ex:LinearMotionSystem)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, Y_AXIS)
 property(o3, "bfo:has member part at some time", o1)

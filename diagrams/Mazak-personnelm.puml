@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title Mazak-personnelm
@@ -14,7 +20,7 @@ title Mazak-personnelm
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:Mazak-personnelm, [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]])
+individual(o1, data:[[./Mazak-personnelm.html Mazak-personnelm]], [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]])
 individual(o2, data:Mazak-personnelm-name, cmns-dsg:Name)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, personnel)

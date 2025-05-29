@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title Mazak-enclosurem
@@ -14,12 +20,12 @@ title Mazak-enclosurem
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:Mazak-enclosurem, ex:Structure)
+individual(o1, data:[[./Mazak-enclosurem.html Mazak-enclosurem]], ex:Structure)
 individual(o2, data:Mazak-enclosurem-name, cmns-dsg:Name)
 individual(o3, data:Mazak-enclosurem-temperature, qp:Temperature)
-individual(o4, data:Mazak, ex:Machine)
-individual(o5, data:Mazak-x, ex:LinearMotionSystem)
-individual(o6, data:Mazak-br, ex:RotaryMotionSystem)
+individual(o4, data:[[./Mazak.html Mazak]], ex:Machine)
+individual(o5, data:[[./Mazak-x.html Mazak-x]], ex:LinearMotionSystem)
+individual(o6, data:[[./Mazak-br.html Mazak-br]], ex:RotaryMotionSystem)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, enclosure)
 property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o3)

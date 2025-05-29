@@ -74,12 +74,11 @@ class GenerateDiagram
 
   # Print an object with its type
   def print_object(iri)
-    # if @@linked_terms.include?(iri)
-    #   title = "[[./#{iri.qname.last}.html #{self.class.uml_name(iri)}]]"
-    # else
-    #   title = self.class.uml_name(iri)
-    # end
-    title = self.class.uml_name(iri)
+    if @@linked_terms.include?(iri)
+      title = "#{iri.qname.first}:[[./#{iri.qname.last}.html #{iri.qname.last}]]"
+    else
+      title = self.class.uml_name(iri)
+    end
     if t = @@types[iri]
       @f.puts "individual(#{obj(iri)}, #{title}, #{self.class.uml_name(t)})"
     else
@@ -128,6 +127,12 @@ EOT
 @startuml #{File.basename @filename}
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
 
 left to right direction
 skinparam linetype polyline

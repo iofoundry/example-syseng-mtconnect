@@ -2,6 +2,12 @@
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
+<style>
+object {
+  HyperlinkColor LightBlue
+}
+</style>
+
 left to right direction
 skinparam linetype polyline
 title Mazak-c
@@ -14,18 +20,18 @@ title Mazak-c
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
 }
-individual(o1, data:Mazak-c, ex:RotaryMotionSystem)
+individual(o1, data:[[./Mazak-c.html Mazak-c]], ex:RotaryMotionSystem)
 individual(o2, data:Mazak-c-name, cmns-dsg:Name)
 individual(o3, data:Mazak-c-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
 individual(o4, data:Mazak-c-spec-VELOCITY-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
 individual(o5, data:Mazak-c-spec-VELOCITY-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-individual(o6, data:Mazak-zaxis, ex:Structure)
+individual(o6, data:[[./Mazak-zaxis.html Mazak-zaxis]], ex:Structure)
 individual(o7, data:Mazak-zaxis-name, cmns-dsg:Name)
 individual(o8, data:Mazak-c-function, ex:ContinuousMotionCapability)
 individual(o9, data:Mazak-c-rotary_velocity-actual, qp:Speed)
-individual(o10, data:Mazak-c-C2motor, ex:Motor)
+individual(o10, data:[[./Mazak-c-C2motor.html Mazak-c-C2motor]], ex:Motor)
 individual(o11, data:Mazak-c-C2motor-name, cmns-dsg:Name)
-individual(o12, data:Mazak, ex:Machine)
+individual(o12, data:[[./Mazak.html Mazak]], ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, C1)
 property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], o3)
