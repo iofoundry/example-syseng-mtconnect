@@ -124,7 +124,7 @@ EOT
 
 
       f.puts <<EOT
-@startuml #{File.basename @filename}
+@startuml
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 

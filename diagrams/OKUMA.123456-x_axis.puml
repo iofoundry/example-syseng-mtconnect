@@ -1,4 +1,4 @@
-@startuml OKUMA.123456-x_axis
+@startuml
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 

@@ -1,4 +1,4 @@
-@startuml OKUMAMere
+@startuml
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 

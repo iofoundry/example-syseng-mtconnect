@@ -1,4 +1,4 @@
-@startuml Mazak-lubrication
+@startuml
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
 
