@@ -17,7 +17,7 @@ class GenerateDiagram
           qn.join(':')
         end
     if qn.first == :core
-      "[[#{iri} #{v}]]"
+      "core:[[#{iri} #{qn.last}]]"
     else
       v
     end
@@ -130,7 +130,7 @@ EOT
 
 <style>
 object {
-  HyperlinkColor LightBlue
+  HyperlinkColor #C4E1E6
 }
 </style>
 
@@ -146,10 +146,12 @@ title #{File.basename @filename}
                       "ns1":"76608A",
 EOT
       color = {
-        core: "1E90FF",
+        core: "000000",
         ex: "Green",
         data: "76608A",
-        units: "Blue",
+        units: "8A2D3B",
+        "cmns-dsg": "3A0519",
+        qp: "641B2E"
       }
 
       f.puts Prefixes.map { |k, v|

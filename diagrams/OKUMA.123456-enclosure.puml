@@ -4,7 +4,7 @@
 
 <style>
 object {
-  HyperlinkColor LightBlue
+  HyperlinkColor #C4E1E6
 }
 </style>
 
@@ -18,7 +18,7 @@ title OKUMA.123456-enclosure
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
-"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
 individual(o1, data:[[./OKUMA.123456-enclosure.html OKUMA.123456-enclosure]], ex:Structure)
 individual(o2, data:OKUMA.123456-enclosure-name, cmns-dsg:Name)
@@ -29,7 +29,7 @@ individual(o6, data:[[./OKUMA.123456-Lc1.html OKUMA.123456-Lc1]], ex:RotaryMotio
 individual(o7, data:[[./OKUMA.123456-Lz4.html OKUMA.123456-Lz4]], ex:LinearMotionSystem)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, enclosure)
-property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o3)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o3)
 property(o4, "bfo:has member part at some time", o1)
 property(o5, ex:joinedTo, o1)
 property(o6, ex:joinedTo, o1)

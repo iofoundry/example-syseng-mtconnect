@@ -4,7 +4,7 @@
 
 <style>
 object {
-  HyperlinkColor LightBlue
+  HyperlinkColor #C4E1E6
 }
 </style>
 
@@ -18,7 +18,7 @@ title Mazak-pneumatic
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
-"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
 individual(o1, data:[[./Mazak-pneumatic.html Mazak-pneumatic]], ex:PneumaticSystem)
 individual(o2, data:Mazak-pneumatic-name, cmns-dsg:Name)

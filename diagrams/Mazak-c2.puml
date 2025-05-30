@@ -4,7 +4,7 @@
 
 <style>
 object {
-  HyperlinkColor LightBlue
+  HyperlinkColor #C4E1E6
 }
 </style>
 
@@ -18,15 +18,15 @@ title Mazak-c2
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
-"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
 individual(o1, data:[[./Mazak-c2.html Mazak-c2]], ex:RotaryMotionSystem)
 individual(o2, data:Mazak-c2-name, cmns-dsg:Name)
-individual(o3, data:Mazak-c2-spec, [[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification core:DesignSpecification]])
-individual(o4, data:Mazak-c2-spec-ANGLE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-individual(o5, data:Mazak-c2-spec-ANGLE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-individual(o6, data:Mazak-c2-spec-TORQUE-Maximum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
-individual(o7, data:Mazak-c2-spec-TORQUE-Minimum, [[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression core:ValueExpression]])
+individual(o3, data:Mazak-c2-spec, core:[[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification DesignSpecification]])
+individual(o4, data:Mazak-c2-spec-ANGLE-Maximum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
+individual(o5, data:Mazak-c2-spec-ANGLE-Minimum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
+individual(o6, data:Mazak-c2-spec-TORQUE-Maximum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
+individual(o7, data:Mazak-c2-spec-TORQUE-Minimum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
 individual(o8, data:[[./Mazak-trundle.html Mazak-trundle]], ex:Structure)
 individual(o9, data:Mazak-trundle-name, cmns-dsg:Name)
 individual(o10, data:[[./Mazak-table.html Mazak-table]], ex:Structure)
@@ -38,21 +38,21 @@ individual(o15, data:Mazak-c2-Cmotor-name, cmns-dsg:Name)
 individual(o16, data:[[./Mazak.html Mazak]], ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, C2)
-property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy core:prescribedBy]], o3)
-property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o4)
-data(o4, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 360.0)
-property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o5)
-data(o5, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], -360.0)
-property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o6)
-data(o6, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 400.0)
-property(o3, [[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes core:hasValueExpressionAtAllTimes]], o7)
-data(o7, [[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue core:hasSimpleExpressionValue]], 0.0)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy prescribedBy]], o3)
+property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes hasValueExpressionAtAllTimes]], o4)
+data(o4, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue hasSimpleExpressionValue]], 360.0)
+property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes hasValueExpressionAtAllTimes]], o5)
+data(o5, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue hasSimpleExpressionValue]], -360.0)
+property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes hasValueExpressionAtAllTimes]], o6)
+data(o6, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue hasSimpleExpressionValue]], 400.0)
+property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes hasValueExpressionAtAllTimes]], o7)
+data(o7, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue hasSimpleExpressionValue]], 0.0)
 property(o1, ex:joinedTo, o8)
 property(o8, cmns-dsg:hasName, o9)
 property(o1, ex:joinedTo, o10)
 property(o10, cmns-dsg:hasName, o11)
-property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]], o12)
-property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o13)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasFunction hasFunction]], o12)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o13)
 property(o1, "bfo:has member part at some time", o14)
 property(o14, cmns-dsg:hasName, o15)
 property(o16, "bfo:has member part at some time", o1)

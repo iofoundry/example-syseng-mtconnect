@@ -4,7 +4,7 @@
 
 <style>
 object {
-  HyperlinkColor LightBlue
+  HyperlinkColor #C4E1E6
 }
 </style>
 
@@ -18,9 +18,9 @@ title Mazak-personnelm
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
-"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-individual(o1, data:[[./Mazak-personnelm.html Mazak-personnelm]], [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]])
+individual(o1, data:[[./Mazak-personnelm.html Mazak-personnelm]], core:[[https://spec.industrialontologies.org/ontology/core/Core/Person Person]])
 individual(o2, data:Mazak-personnelm-name, cmns-dsg:Name)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, personnel)

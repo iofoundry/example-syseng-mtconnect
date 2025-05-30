@@ -4,7 +4,7 @@
 
 <style>
 object {
-  HyperlinkColor LightBlue
+  HyperlinkColor #C4E1E6
 }
 </style>
 
@@ -18,7 +18,7 @@ title OKUMA.123456-Lc2
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
-"ex":"Green","data":"76608A","core":"1E90FF","units":"Blue"
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
 individual(o1, data:[[./OKUMA.123456-Lc2.html OKUMA.123456-Lc2]], ex:RotaryMotionSystem)
 individual(o2, data:OKUMA.123456-Lc2-name, cmns-dsg:Name)
@@ -36,8 +36,8 @@ property(o1, ex:joinedTo, o3)
 property(o3, cmns-dsg:hasName, o4)
 property(o1, ex:joinedTo, o5)
 property(o5, cmns-dsg:hasName, o6)
-property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]], o7)
-property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o8)
-property(o1, [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]], o9)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasFunction hasFunction]], o7)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o8)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o9)
 property(o10, "bfo:has member part at some time", o1)
 @enduml
