@@ -28,7 +28,7 @@ individual(o5, data:Mazak-c-spec-VELOCITY-Minimum, core:[[https://spec.industria
 individual(o6, data:[[./Mazak-zaxis.html Mazak-zaxis]], ex:Structure)
 individual(o7, data:Mazak-zaxis-name, cmns-dsg:Name)
 individual(o8, data:Mazak-c-function, ex:ContinuousMotionCapability)
-individual(o9, data:Mazak-c-rotary_velocity-actual, qp:Speed)
+individual(o9, data:Mazak-c-rotary_velocity-actual, ex:RevoluteVelocity)
 individual(o10, data:[[./Mazak-c-Cmotor.html Mazak-c-Cmotor]], ex:Motor)
 individual(o11, data:Mazak-c-Cmotor-temperature, qp:Temperature)
 individual(o12, data:Mazak-c-Cmotor-name, cmns-dsg:Name)
@@ -46,6 +46,7 @@ property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/has
 property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o9)
 property(o1, "bfo:has member part at some time", o10)
 property(o10, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o11)
+property(o10, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o11)
 property(o10, cmns-dsg:hasName, o12)
 property(o13, "bfo:has member part at some time", o1)
 @enduml

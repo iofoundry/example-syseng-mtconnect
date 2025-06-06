@@ -121,9 +121,21 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">prismatic motion capability</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&ex;PrismaticVelocity">
+		<rdfs:subClassOf rdf:resource="&ex;Velocity"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">prismatic velocity</rdfs:label>
+		<av:naturalLanguageDefinition rdf:datatype="&xs;string">rate of change of location having one translational degree of freedom only</av:naturalLanguageDefinition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&ex;RevoluteMotionCapability">
 		<rdfs:subClassOf rdf:resource="&ex;MotionCapability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">revolute motion capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;RevoluteVelocity">
+		<rdfs:subClassOf rdf:resource="&ex;Velocity"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">revolute velocity</rdfs:label>
+		<av:naturalLanguageDefinition rdf:datatype="&xs;string">rate of change in angle having one rotational degree of freedom only</av:naturalLanguageDefinition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&ex;Room">
@@ -151,9 +163,20 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">structure</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&ex;TranslationalVelocity">
+		<rdfs:subClassOf rdf:resource="&ex;Velocity"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">translational velocity</rdfs:label>
+		<av:naturalLanguageDefinition rdf:datatype="&xs;string">rate of change in location having three translational degrees of freedom</av:naturalLanguageDefinition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&ex;TurningCapability">
 		<rdfs:subClassOf rdf:resource="&core;Capability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">turning capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&ex;Velocity">
+		<rdfs:subClassOf rdf:resource="&qp;PhysicalProcessCharacteristic"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">velocity</rdfs:label>
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&ex;joinedTo">

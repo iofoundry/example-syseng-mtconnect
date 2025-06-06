@@ -22,8 +22,8 @@ title OKUMA.123456-Lc6
 }
 individual(o1, data:[[./OKUMA.123456-Lc6.html OKUMA.123456-Lc6]], ex:RotaryMotionSystem)
 individual(o2, data:OKUMA.123456-Lc6-name, cmns-dsg:Name)
-individual(o3, data:OKUMA.123456-Lc6-rotary_velocity-actual, qp:Speed)
-individual(o4, data:OKUMA.123456-Lc6-rotary_velocity-programmed, qp:Speed)
+individual(o3, data:OKUMA.123456-Lc6-rotary_velocity-actual, ex:RevoluteVelocity)
+individual(o4, data:OKUMA.123456-Lc6-rotary_velocity-programmed, ex:RevoluteVelocity)
 individual(o5, data:[[./OKUMA.123456.html OKUMA.123456]], ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, C6)

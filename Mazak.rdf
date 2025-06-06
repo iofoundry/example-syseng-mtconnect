@@ -63,6 +63,7 @@
 		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-br-Bmotor"/>
 		<core:hasFunction rdf:resource="&data;Mazak-br-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-br-angle-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-br-angle-actual"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-br-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-br-name"/>
@@ -123,6 +124,7 @@
 	</ex:RotaryMotionSystem>
 	
 	<ex:Motor rdf:about="&data;Mazak-c-Cmotor">
+		<core:hasQuality rdf:resource="&data;Mazak-c-Cmotor-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-Cmotor-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-c-Cmotor-name"/>
 	</ex:Motor>
@@ -141,8 +143,8 @@
 		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
-	<qp:Speed rdf:about="&data;Mazak-c-rotary_velocity-actual">
-	</qp:Speed>
+	<ex:RevoluteVelocity rdf:about="&data;Mazak-c-rotary_velocity-actual">
+	</ex:RevoluteVelocity>
 	
 	<core:DesignSpecification rdf:about="&data;Mazak-c-spec">
 		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c-spec-VELOCITY-Maximum"/>
@@ -164,6 +166,7 @@
 		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-c2-C2motor"/>
 		<core:hasFunction rdf:resource="&data;Mazak-c2-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-c2-angle-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c2-angle-actual"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-c2-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-c2-name"/>
@@ -235,6 +238,7 @@
 	</cmns-dsg:Name>
 	
 	<obo:BFO_0000030 rdf:about="&data;Mazak-coolant">
+		<core:hasQuality rdf:resource="&data;Mazak-coolant-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-coolant-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-coolant-name"/>
 	</obo:BFO_0000030>
@@ -263,6 +267,7 @@
 	</cmns-dsg:Name>
 	
 	<ex:Structure rdf:about="&data;Mazak-enclosurem">
+		<core:hasQuality rdf:resource="&data;Mazak-enclosurem-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-enclosurem-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-enclosurem-name"/>
 	</ex:Structure>
@@ -333,6 +338,7 @@
 	</core:EquipmentRole>
 	
 	<ex:Room rdf:about="&data;Mazak-room">
+		<core:hasQuality rdf:resource="&data;Mazak-room-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-room-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-room-name"/>
 	</ex:Room>
@@ -366,6 +372,7 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xmotor"/>
 		<core:hasFunction rdf:resource="&data;Mazak-x-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-x-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-x-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-x-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-x-name"/>
@@ -380,6 +387,7 @@
 	</cmns-dsg:Name>
 	
 	<ex:Motor rdf:about="&data;Mazak-x-Xmotor">
+		<core:hasQuality rdf:resource="&data;Mazak-x-Xmotor-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-x-Xmotor-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-x-Xmotor-name"/>
 	</ex:Motor>
@@ -460,6 +468,7 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-y-Yballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-y-Ymotor"/>
 		<core:hasFunction rdf:resource="&data;Mazak-y-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-y-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-y-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-y-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-y-name"/>
@@ -474,6 +483,7 @@
 	</cmns-dsg:Name>
 	
 	<ex:Motor rdf:about="&data;Mazak-y-Ymotor">
+		<core:hasQuality rdf:resource="&data;Mazak-y-Ymotor-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-y-Ymotor-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-y-Ymotor-name"/>
 	</ex:Motor>
@@ -554,6 +564,8 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zballscrew"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zmotor"/>
 		<core:hasFunction rdf:resource="&data;Mazak-z-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-z-position-actual"/>
+		<core:hasQuality rdf:resource="&data;Mazak-z-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-z-spec"/>
@@ -569,6 +581,7 @@
 	</cmns-dsg:Name>
 	
 	<ex:Motor rdf:about="&data;Mazak-z-Zmotor">
+		<core:hasQuality rdf:resource="&data;Mazak-z-Zmotor-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-Zmotor-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-z-Zmotor-name"/>
 	</ex:Motor>

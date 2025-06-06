@@ -18,12 +18,43 @@ require 'rdf/turtle'
 class MTConnectToIOF
   attr_reader :graph
 
+  def is_subclass_of(cls, base)
+    #puts cls
+    stmts = RDF::Query.execute(@ontology) do
+      pattern [cls, RDFS.subClassOf, :parent]
+    end.each do |s|
+      if s.parent == base
+        #puts "    !!! found #{s.parent} == #{base}"
+        return true
+      else
+        #puts "    !!! recursing #{s.parent} == #{base}"
+        return is_subclass_of(s.parent, base)
+      end
+    end
+
+    return false
+  rescue
+    puts "!!!! no sub class of for #{cls}: #{$!}"
+    #puts $!.backtrace.join("\n")
+    return false
+  end
+
   # Parse the XML to find the components and create a graph of individuals
   def initialize(xml)
     @doc = REXML::Document.new(xml)
 
     @graph = RDF::Graph.new
     @graph << Inst::Data.to_enum
+
+    RDF::Reasoner.apply(:rdfs, :owl)
+    @ontology = RDF::Graph.new
+    @ontology << BFO::BFO.to_enum
+    @ontology << IOF::Core.to_enum
+    @ontology << OMG::Designators.to_enum
+    @ontology << IOF::Qualities.to_enum
+    @ontology << IOF::QualitiesPhysical.to_enum
+    @ontology << Example::Machine.to_enum
+    @ontology.entail!
 
     @doc.each_element('//Device') do |dev|
       add_component(dev)
@@ -111,6 +142,9 @@ class MTConnectToIOF
           
           puts "#{'  ' * (level + 2)}** adding #{name} for #{comp_iri}"
           add_instance(comp_iri, di_iri, IOF::Core.measuresAtSomeTime, cls)
+          if is_subclass_of(cls, BFO::BFO.quality)
+            add_instance(comp_iri, di_iri, IOF::Core.hasQuality, cls)
+          end
         end
       end
       

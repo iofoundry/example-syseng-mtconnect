@@ -161,7 +161,30 @@ module Example
     term :Sensor,
          label: {'en-us': 'sensor'},
          subClassOf: BFO::BFO.object,
-         type: "http://www.w3.org/2002/07/owl#Class"         
+         type: "http://www.w3.org/2002/07/owl#Class"
+
+    term :Velocity,
+         label: {'en-us': 'velocity'},
+         subClassOf: IOF::QualitiesPhysical.PhysicalProcessCharacteristic,
+         type: "http://www.w3.org/2002/07/owl#Class"
+
+    term :RevoluteVelocity,
+         label: {'en-us': ' revolute velocity'},
+         subClassOf: self.Velocity,
+         type: "http://www.w3.org/2002/07/owl#Class",
+         IOF::AnnotationVocabulary.naturalLanguageDefinition => "rate of change in angle having one rotational degree of freedom only"
+
+    term :PrismaticVelocity,
+         label: {'en-us': 'prismatic velocity'},
+         subClassOf: self.Velocity,
+         type: "http://www.w3.org/2002/07/owl#Class",
+         IOF::AnnotationVocabulary.naturalLanguageDefinition => "rate of change of location having one translational degree of freedom only"
+
+    term :TranslationalVelocity,
+         label: {'en-us': 'translational velocity'},
+         subClassOf: self.Velocity,
+         type: "http://www.w3.org/2002/07/owl#Class",
+         IOF::AnnotationVocabulary.naturalLanguageDefinition => "rate of change in location having three translational degrees of freedom"
 
     property :joinedTo,
              label: {'en-us': 'joined to'},
@@ -220,8 +243,9 @@ module Example
     TEMPERATURE: IOF::QualitiesPhysical.Temperature,
     POSITION: IOF::QualitiesPhysical.Displacement,
     ANGLE: IOF::QualitiesPhysical.Angle,
-    VELOCITY: IOF::QualitiesPhysical.Speed,
-    ROTARY_VELOCITY: IOF::QualitiesPhysical.Speed
+    VELOCITY: Machine.PrismaticVelocity,
+    ROTARY_VELOCITY: Machine.RevoluteVelocity,
+    PATH_FEED_RATE: Machine.TranslationalVelocity
   }
 
   Roles = {

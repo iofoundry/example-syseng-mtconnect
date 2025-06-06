@@ -140,6 +140,7 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-x_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-LYI1-function"/>
+		<core:hasQuality rdf:resource="&data;OKUMA.123456-LYI1-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-LYI1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-LYI1-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LYI1-name"/>
@@ -204,6 +205,7 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-b_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lb1-function"/>
+		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lb1-angle-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lb1-angle-actual"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lb1-name"/>
 	</ex:RotaryMotionSystem>
@@ -233,11 +235,11 @@
 		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C1</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
-	<qp:Speed rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-actual">
-	</qp:Speed>
+	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-actual">
+	</ex:RevoluteVelocity>
 	
-	<qp:Speed rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-programmed">
-	</qp:Speed>
+	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-programmed">
+	</ex:RevoluteVelocity>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc2">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-c2_axis"/>
@@ -255,16 +257,17 @@
 		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C2</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
-	<qp:Speed rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-actual">
-	</qp:Speed>
+	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-actual">
+	</ex:RevoluteVelocity>
 	
-	<qp:Speed rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-programmed">
-	</qp:Speed>
+	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-programmed">
+	</ex:RevoluteVelocity>
 	
 	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc3">
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-c2_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc3-function"/>
+		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lc3-angle-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc3-angle-actual"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc3-name"/>
 	</ex:RotaryMotionSystem>
@@ -289,11 +292,11 @@
 		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C6</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
-	<qp:Speed rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-actual">
-	</qp:Speed>
+	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-actual">
+	</ex:RevoluteVelocity>
 	
-	<qp:Speed rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-programmed">
-	</qp:Speed>
+	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-programmed">
+	</ex:RevoluteVelocity>
 	
 	<ex:ControlSystem rdf:about="&data;OKUMA.123456-Lct1">
 		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lct1-Lp1"/>
@@ -316,6 +319,7 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-x_axis"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lx1-function"/>
+		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lx1-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lx1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lx1-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lx1-name"/>
@@ -380,6 +384,7 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz1-function"/>
+		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lz1-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lz1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz1-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lz1-name"/>
@@ -444,6 +449,7 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz4-function"/>
+		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lz4-position-actual"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lz4-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz4-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lz4-name"/>
@@ -532,6 +538,7 @@
 	</ex:TurningCapability>
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-enclosure">
+		<core:hasQuality rdf:resource="&data;OKUMA.123456-enclosure-temperature"/>
 		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-enclosure-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-enclosure-name"/>
 	</ex:Structure>
