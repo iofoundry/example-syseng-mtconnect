@@ -26,7 +26,6 @@ individual(o3, data:Mazak-coolant-temperature, qp:Temperature)
 individual(o4, data:[[./Mazak.html Mazak]], ex:Machine)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, coolant)
-property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o3)
 property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o3)
 property(o4, "bfo:has member part at some time", o1)
 @enduml

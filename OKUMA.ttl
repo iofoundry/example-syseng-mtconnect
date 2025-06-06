@@ -153,7 +153,6 @@ data:OKUMA.123456-LYI1
 		;
 	core:hasFunction data:OKUMA.123456-LYI1-function ;
 	core:hasQuality data:OKUMA.123456-LYI1-position-actual ;
-	core:measuresAtSomeTime data:OKUMA.123456-LYI1-position-actual ;
 	core:prescribedBy data:OKUMA.123456-LYI1-spec ;
 	cmns-dsg:hasName data:OKUMA.123456-LYI1-name ;
 	.
@@ -234,7 +233,6 @@ data:OKUMA.123456-Lb1
 		;
 	core:hasFunction data:OKUMA.123456-Lb1-function ;
 	core:hasQuality data:OKUMA.123456-Lb1-angle-actual ;
-	core:measuresAtSomeTime data:OKUMA.123456-Lb1-angle-actual ;
 	cmns-dsg:hasName data:OKUMA.123456-Lb1-name ;
 	.
 
@@ -318,7 +316,6 @@ data:OKUMA.123456-Lc3
 		;
 	core:hasFunction data:OKUMA.123456-Lc3-function ;
 	core:hasQuality data:OKUMA.123456-Lc3-angle-actual ;
-	core:measuresAtSomeTime data:OKUMA.123456-Lc3-angle-actual ;
 	cmns-dsg:hasName data:OKUMA.123456-Lc3-name ;
 	.
 
@@ -386,7 +383,6 @@ data:OKUMA.123456-Lx1
 		;
 	core:hasFunction data:OKUMA.123456-Lx1-function ;
 	core:hasQuality data:OKUMA.123456-Lx1-position-actual ;
-	core:measuresAtSomeTime data:OKUMA.123456-Lx1-position-actual ;
 	core:prescribedBy data:OKUMA.123456-Lx1-spec ;
 	cmns-dsg:hasName data:OKUMA.123456-Lx1-name ;
 	.
@@ -467,7 +463,6 @@ data:OKUMA.123456-Lz1
 		;
 	core:hasFunction data:OKUMA.123456-Lz1-function ;
 	core:hasQuality data:OKUMA.123456-Lz1-position-actual ;
-	core:measuresAtSomeTime data:OKUMA.123456-Lz1-position-actual ;
 	core:prescribedBy data:OKUMA.123456-Lz1-spec ;
 	cmns-dsg:hasName data:OKUMA.123456-Lz1-name ;
 	.
@@ -548,7 +543,6 @@ data:OKUMA.123456-Lz4
 		;
 	core:hasFunction data:OKUMA.123456-Lz4-function ;
 	core:hasQuality data:OKUMA.123456-Lz4-position-actual ;
-	core:measuresAtSomeTime data:OKUMA.123456-Lz4-position-actual ;
 	core:prescribedBy data:OKUMA.123456-Lz4-spec ;
 	cmns-dsg:hasName data:OKUMA.123456-Lz4-name ;
 	.
@@ -658,7 +652,6 @@ data:OKUMA.123456-capability
 data:OKUMA.123456-enclosure
 	a ex:Structure ;
 	core:hasQuality data:OKUMA.123456-enclosure-temperature ;
-	core:measuresAtSomeTime data:OKUMA.123456-enclosure-temperature ;
 	cmns-dsg:hasName data:OKUMA.123456-enclosure-name ;
 	.
 

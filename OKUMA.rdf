@@ -141,7 +141,6 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-LYI1-function"/>
 		<core:hasQuality rdf:resource="&data;OKUMA.123456-LYI1-position-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-LYI1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-LYI1-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LYI1-name"/>
 	</ex:LinearMotionSystem>
@@ -206,7 +205,6 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lb1-function"/>
 		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lb1-angle-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lb1-angle-actual"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lb1-name"/>
 	</ex:RotaryMotionSystem>
 	
@@ -268,7 +266,6 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc3-function"/>
 		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lc3-angle-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc3-angle-actual"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc3-name"/>
 	</ex:RotaryMotionSystem>
 	
@@ -320,7 +317,6 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lx1-function"/>
 		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lx1-position-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lx1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lx1-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lx1-name"/>
 	</ex:LinearMotionSystem>
@@ -385,7 +381,6 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz1-function"/>
 		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lz1-position-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lz1-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz1-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lz1-name"/>
 	</ex:LinearMotionSystem>
@@ -450,7 +445,6 @@
 		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
 		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz4-function"/>
 		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lz4-position-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lz4-position-actual"/>
 		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz4-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lz4-name"/>
 	</ex:LinearMotionSystem>
@@ -539,7 +533,6 @@
 	
 	<ex:Structure rdf:about="&data;OKUMA.123456-enclosure">
 		<core:hasQuality rdf:resource="&data;OKUMA.123456-enclosure-temperature"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-enclosure-temperature"/>
 		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-enclosure-name"/>
 	</ex:Structure>
 	

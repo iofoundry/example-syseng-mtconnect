@@ -29,7 +29,6 @@ individual(o6, data:[[./OKUMA.123456-Lc1.html OKUMA.123456-Lc1]], ex:RotaryMotio
 individual(o7, data:[[./OKUMA.123456-Lz4.html OKUMA.123456-Lz4]], ex:LinearMotionSystem)
 property(o1, cmns-dsg:hasName, o2)
 data(o2, cmns-dsg:hasTextualName, enclosure)
-property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o3)
 property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o3)
 property(o4, "bfo:has member part at some time", o1)
 property(o5, ex:joinedTo, o1)

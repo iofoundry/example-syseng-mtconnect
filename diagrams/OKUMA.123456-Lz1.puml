@@ -57,12 +57,10 @@ property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/has
 data(o10, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue hasSimpleExpressionValue]], 1.0)
 property(o1, ex:joinedTo, o11)
 property(o11, cmns-dsg:hasName, o12)
-property(o11, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o13)
 property(o11, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o13)
 property(o1, ex:joinedTo, o14)
 property(o14, cmns-dsg:hasName, o15)
 property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasFunction hasFunction]], o16)
-property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o17)
 property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o17)
 property(o18, "bfo:has member part at some time", o1)
 @enduml

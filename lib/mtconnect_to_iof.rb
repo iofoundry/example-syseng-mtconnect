@@ -141,9 +141,10 @@ class MTConnectToIOF
           di_iri = sub_iri(comp_names, name)
           
           puts "#{'  ' * (level + 2)}** adding #{name} for #{comp_iri}"
-          add_instance(comp_iri, di_iri, IOF::Core.measuresAtSomeTime, cls)
           if is_subclass_of(cls, BFO::BFO.quality)
             add_instance(comp_iri, di_iri, IOF::Core.hasQuality, cls)
+          else
+            add_instance(comp_iri, di_iri, IOF::Core.measuresAtSomeTime, cls)            
           end
         end
       end

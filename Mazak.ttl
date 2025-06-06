@@ -58,7 +58,6 @@ data:Mazak-br
 	obo:BFO_0000115 data:Mazak-br-Bmotor ;
 	core:hasFunction data:Mazak-br-function ;
 	core:hasQuality data:Mazak-br-angle-actual ;
-	core:measuresAtSomeTime data:Mazak-br-angle-actual ;
 	core:prescribedBy data:Mazak-br-spec ;
 	cmns-dsg:hasName data:Mazak-br-name ;
 	.
@@ -133,7 +132,6 @@ data:Mazak-c
 data:Mazak-c-Cmotor
 	a ex:Motor ;
 	core:hasQuality data:Mazak-c-Cmotor-temperature ;
-	core:measuresAtSomeTime data:Mazak-c-Cmotor-temperature ;
 	cmns-dsg:hasName data:Mazak-c-Cmotor-name ;
 	.
 
@@ -188,7 +186,6 @@ data:Mazak-c2
 	obo:BFO_0000115 data:Mazak-c2-C2motor ;
 	core:hasFunction data:Mazak-c2-function ;
 	core:hasQuality data:Mazak-c2-angle-actual ;
-	core:measuresAtSomeTime data:Mazak-c2-angle-actual ;
 	core:prescribedBy data:Mazak-c2-spec ;
 	cmns-dsg:hasName data:Mazak-c2-name ;
 	.
@@ -278,7 +275,6 @@ data:Mazak-cont-path1-name
 data:Mazak-coolant
 	a obo:BFO_0000030 ;
 	core:hasQuality data:Mazak-coolant-temperature ;
-	core:measuresAtSomeTime data:Mazak-coolant-temperature ;
 	cmns-dsg:hasName data:Mazak-coolant-name ;
 	.
 
@@ -314,7 +310,6 @@ data:Mazak-elec-name
 data:Mazak-enclosurem
 	a ex:Structure ;
 	core:hasQuality data:Mazak-enclosurem-temperature ;
-	core:measuresAtSomeTime data:Mazak-enclosurem-temperature ;
 	cmns-dsg:hasName data:Mazak-enclosurem-name ;
 	.
 
@@ -403,7 +398,6 @@ data:Mazak-role
 data:Mazak-room
 	a ex:Room ;
 	core:hasQuality data:Mazak-room-temperature ;
-	core:measuresAtSomeTime data:Mazak-room-temperature ;
 	cmns-dsg:hasName data:Mazak-room-name ;
 	.
 
@@ -448,7 +442,6 @@ data:Mazak-x
 		;
 	core:hasFunction data:Mazak-x-function ;
 	core:hasQuality data:Mazak-x-position-actual ;
-	core:measuresAtSomeTime data:Mazak-x-position-actual ;
 	core:prescribedBy data:Mazak-x-spec ;
 	cmns-dsg:hasName data:Mazak-x-name ;
 	.
@@ -466,7 +459,6 @@ data:Mazak-x-Xballscrew-name
 data:Mazak-x-Xmotor
 	a ex:Motor ;
 	core:hasQuality data:Mazak-x-Xmotor-temperature ;
-	core:measuresAtSomeTime data:Mazak-x-Xmotor-temperature ;
 	cmns-dsg:hasName data:Mazak-x-Xmotor-name ;
 	.
 
@@ -569,7 +561,6 @@ data:Mazak-y
 		;
 	core:hasFunction data:Mazak-y-function ;
 	core:hasQuality data:Mazak-y-position-actual ;
-	core:measuresAtSomeTime data:Mazak-y-position-actual ;
 	core:prescribedBy data:Mazak-y-spec ;
 	cmns-dsg:hasName data:Mazak-y-name ;
 	.
@@ -587,7 +578,6 @@ data:Mazak-y-Yballscrew-name
 data:Mazak-y-Ymotor
 	a ex:Motor ;
 	core:hasQuality data:Mazak-y-Ymotor-temperature ;
-	core:measuresAtSomeTime data:Mazak-y-Ymotor-temperature ;
 	cmns-dsg:hasName data:Mazak-y-Ymotor-name ;
 	.
 
@@ -693,10 +683,6 @@ data:Mazak-z
 		data:Mazak-z-position-actual ,
 		data:Mazak-z-temperature
 		;
-	core:measuresAtSomeTime
-		data:Mazak-z-position-actual ,
-		data:Mazak-z-temperature
-		;
 	core:prescribedBy data:Mazak-z-spec ;
 	cmns-dsg:hasName data:Mazak-z-name ;
 	.
@@ -714,7 +700,6 @@ data:Mazak-z-Zballscrew-name
 data:Mazak-z-Zmotor
 	a ex:Motor ;
 	core:hasQuality data:Mazak-z-Zmotor-temperature ;
-	core:measuresAtSomeTime data:Mazak-z-Zmotor-temperature ;
 	cmns-dsg:hasName data:Mazak-z-Zmotor-name ;
 	.
 

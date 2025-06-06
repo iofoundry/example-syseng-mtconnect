@@ -59,7 +59,6 @@ property(o11, cmns-dsg:hasName, o12)
 property(o1, ex:joinedTo, o13)
 property(o13, cmns-dsg:hasName, o14)
 property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasFunction hasFunction]], o15)
-property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o16)
 property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o16)
 property(o17, "bfo:has member part at some time", o1)
 @enduml
