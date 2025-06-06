@@ -20,7 +20,7 @@ class MTConnectToIOF
 
   def is_subclass_of(cls, base)
     #puts cls
-    stmts = RDF::Query.execute(@ontology) do
+    RDF::Query.execute(@ontology) do
       pattern [cls, RDFS.subClassOf, :parent]
     end.each do |s|
       if s.parent == base
