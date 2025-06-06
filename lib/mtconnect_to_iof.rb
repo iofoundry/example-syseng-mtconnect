@@ -19,7 +19,7 @@ class MTConnectToIOF
   attr_reader :graph
 
   def is_subclass_of(cls, base)
-    return !cls.entail(:subClassOf).select { |t| t == base }.empty?
+    !cls.entail(:subClassOf).find { |t| t == base }.nil?
   end
 
   # Parse the XML to find the components and create a graph of individuals
