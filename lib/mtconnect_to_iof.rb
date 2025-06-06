@@ -19,24 +19,7 @@ class MTConnectToIOF
   attr_reader :graph
 
   def is_subclass_of(cls, base)
-    #puts cls
-    RDF::Query.execute(@ontology) do
-      pattern [cls, RDFS.subClassOf, :parent]
-    end.each do |s|
-      if s.parent == base
-        #puts "    !!! found #{s.parent} == #{base}"
-        return true
-      else
-        #puts "    !!! recursing #{s.parent} == #{base}"
-        return is_subclass_of(s.parent, base)
-      end
-    end
-
-    return false
-  rescue
-    puts "!!!! no sub class of for #{cls}: #{$!}"
-    #puts $!.backtrace.join("\n")
-    return false
+    return !cls.entail(:subClassOf).select { |t| t == base }.empty?
   end
 
   # Parse the XML to find the components and create a graph of individuals
@@ -47,15 +30,7 @@ class MTConnectToIOF
     @graph << Inst::Data.to_enum
 
     RDF::Reasoner.apply(:rdfs, :owl)
-    @ontology = RDF::Graph.new
-    @ontology << BFO::BFO.to_enum
-    @ontology << IOF::Core.to_enum
-    @ontology << OMG::Designators.to_enum
-    @ontology << IOF::Qualities.to_enum
-    @ontology << IOF::QualitiesPhysical.to_enum
-    @ontology << Example::Machine.to_enum
-    @ontology.entail!
-
+    
     @doc.each_element('//Device') do |dev|
       add_component(dev)
     end
