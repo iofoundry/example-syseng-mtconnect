@@ -1,72 +1,43 @@
 @startuml
-skinparam linetype polyline
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
 left to right direction
+skinparam linetype polyline
 title OKUMA.123456-Lc2
 
-skinparam roundCorner 10
+!$default_direction = down
 
-skinparam object {
-  BackgroundColor 76608A
-  fontColor White
-  BorderColor White 
-  FontName Helvetica   
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-
-skinparam class{
-   BackgroundColor White
-   fontColor black
-   FontStyle bold
-   FontName Helvetica
-}
-
-object "[[./OKUMA.123456-Lc2.html data:OKUMA.123456-Lc2]]" as o1 #76608A {
- <back:#Green>type: ex:RotaryMotionSystem</back> 
----
- }
-object "data:OKUMA.123456-Lc2-name" as o2 #76608A {
- <back:#DarkGrey>type: cmns-dsg:Name</back> 
----
- }
-object "[[./OKUMA.123456-z4_axis.html data:OKUMA.123456-z4_axis]]" as o3 #76608A {
- <back:#Green>type: ex:Structure</back> 
----
- }
-object "data:OKUMA.123456-z4_axis-name" as o4 #76608A {
- <back:#DarkGrey>type: cmns-dsg:Name</back> 
----
- }
-object "[[./OKUMA.123456-c2_axis.html data:OKUMA.123456-c2_axis]]" as o5 #76608A {
- <back:#Green>type: ex:Structure</back> 
----
- }
-object "data:OKUMA.123456-c2_axis-name" as o6 #76608A {
- <back:#DarkGrey>type: cmns-dsg:Name</back> 
----
- }
-object "data:OKUMA.123456-Lc2-function" as o7 #76608A {
- <back:#Green>type: ex:RevoluteMotionCapability</back> 
----
- }
-object "data:OKUMA.123456-Lc2-rotary_velocity-actual" as o8 #76608A {
- <back:#1E90FF>type: qp:Speed</back> 
----
- }
-object "data:OKUMA.123456-Lc2-rotary_velocity-programmed" as o9 #76608A {
- <back:#1E90FF>type: qp:Speed</back> 
----
- }
-object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o10 #76608A {
- <back:#Green>type: ex:Machine</back> 
----
- }
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: C2
-o1 --> o3 : ex:joinedTo
-o3 --> o4 : cmns-dsg:hasName
-o1 --> o5 : ex:joinedTo
-o5 --> o6 : cmns-dsg:hasName
-o1 --> o7 : [[https://spec.industrialontologies.org/ontology/core/Core/hasFunction core:hasFunction]]
-o1 --> o8 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o9 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o10 --> o1 : obo:has member part at some time
+individual(o1, data:[[./OKUMA.123456-Lc2.html OKUMA.123456-Lc2]], ex:RotaryMotionSystem)
+individual(o2, data:OKUMA.123456-Lc2-name, cmns-dsg:Name)
+individual(o3, data:[[./OKUMA.123456-z4_axis.html OKUMA.123456-z4_axis]], ex:Structure)
+individual(o4, data:OKUMA.123456-z4_axis-name, cmns-dsg:Name)
+individual(o5, data:[[./OKUMA.123456-c2_axis.html OKUMA.123456-c2_axis]], ex:Structure)
+individual(o6, data:OKUMA.123456-c2_axis-name, cmns-dsg:Name)
+individual(o7, data:OKUMA.123456-Lc2-function, ex:RevoluteMotionCapability)
+individual(o8, data:OKUMA.123456-Lc2-rotary_velocity-actual, qp:Speed)
+individual(o9, data:OKUMA.123456-Lc2-rotary_velocity-programmed, qp:Speed)
+individual(o10, data:[[./OKUMA.123456.html OKUMA.123456]], ex:Machine)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, C2)
+property(o1, ex:joinedTo, o3)
+property(o3, cmns-dsg:hasName, o4)
+property(o1, ex:joinedTo, o5)
+property(o5, cmns-dsg:hasName, o6)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasFunction hasFunction]], o7)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o8)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o9)
+property(o10, "bfo:has member part at some time", o1)
 @enduml

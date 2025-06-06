@@ -1,37 +1,29 @@
 @startuml
-skinparam linetype polyline
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
 left to right direction
+skinparam linetype polyline
 title Mazak-pneumatic
 
-skinparam roundCorner 10
+!$default_direction = down
 
-skinparam object {
-  BackgroundColor 76608A
-  fontColor White
-  BorderColor White 
-  FontName Helvetica   
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-
-skinparam class{
-   BackgroundColor White
-   fontColor black
-   FontStyle bold
-   FontName Helvetica
-}
-
-object "[[./Mazak-pneumatic.html data:Mazak-pneumatic]]" as o1 #76608A {
- <back:#Green>type: ex:PneumaticSystem</back> 
----
- }
-object "data:Mazak-pneumatic-name" as o2 #76608A {
- <back:#DarkGrey>type: cmns-dsg:Name</back> 
----
- }
-object "[[./Mazak.html data:Mazak]]" as o3 #76608A {
- <back:#Green>type: ex:Machine</back> 
----
- }
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: pneumatic
-o3 --> o1 : obo:has member part at some time
+individual(o1, data:[[./Mazak-pneumatic.html Mazak-pneumatic]], ex:PneumaticSystem)
+individual(o2, data:Mazak-pneumatic-name, cmns-dsg:Name)
+individual(o3, data:[[./Mazak.html Mazak]], ex:Machine)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, pneumatic)
+property(o3, "bfo:has member part at some time", o1)
 @enduml

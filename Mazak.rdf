@@ -42,7 +42,6 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-hydraulic"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-lubrication"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-partocc"/>
-		<obo:BFO_0000115 rdf:resource="&data;Mazak-personnelm"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-pneumatic"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-procstock"/>
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-table"/>
@@ -116,24 +115,21 @@
 	
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-c">
 		<ex:joinedTo rdf:resource="&data;Mazak-zaxis"/>
-		<obo:BFO_0000115 rdf:resource="&data;Mazak-c-C2motor"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-c-Cmotor"/>
 		<core:hasFunction rdf:resource="&data;Mazak-c-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-rotary_velocity-actual"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-c-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-c-name"/>
 	</ex:RotaryMotionSystem>
 	
-	<ex:Motor rdf:about="&data;Mazak-c-C2motor">
-		<cmns-dsg:hasName rdf:resource="&data;Mazak-c-C2motor-name"/>
+	<ex:Motor rdf:about="&data;Mazak-c-Cmotor">
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-Cmotor-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c-Cmotor-name"/>
 	</ex:Motor>
 	
-	<cmns-dsg:Name rdf:about="&data;Mazak-c-C2motor-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C2motor</cmns-dsg:hasTextualName>
+	<cmns-dsg:Name rdf:about="&data;Mazak-c-Cmotor-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Cmotor</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
-	
-	<rdf:Description rdf:about="&data;Mazak-c-Cmotor">
-		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-Cmotor-temperature"/>
-	</rdf:Description>
 	
 	<qp:Temperature rdf:about="&data;Mazak-c-Cmotor-temperature">
 	</qp:Temperature>
@@ -166,19 +162,19 @@
 	<ex:RotaryMotionSystem rdf:about="&data;Mazak-c2">
 		<ex:joinedTo rdf:resource="&data;Mazak-table"/>
 		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
-		<obo:BFO_0000115 rdf:resource="&data;Mazak-c2-Cmotor"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-c2-C2motor"/>
 		<core:hasFunction rdf:resource="&data;Mazak-c2-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c2-angle-actual"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-c2-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-c2-name"/>
 	</ex:RotaryMotionSystem>
 	
-	<ex:Motor rdf:about="&data;Mazak-c2-Cmotor">
-		<cmns-dsg:hasName rdf:resource="&data;Mazak-c2-Cmotor-name"/>
+	<ex:Motor rdf:about="&data;Mazak-c2-C2motor">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c2-C2motor-name"/>
 	</ex:Motor>
 	
-	<cmns-dsg:Name rdf:about="&data;Mazak-c2-Cmotor-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Cmotor</cmns-dsg:hasTextualName>
+	<cmns-dsg:Name rdf:about="&data;Mazak-c2-C2motor-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C2motor</cmns-dsg:hasTextualName>
 	</cmns-dsg:Name>
 	
 	<qp:Angle rdf:about="&data;Mazak-c2-angle-actual">
@@ -559,6 +555,7 @@
 		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zmotor"/>
 		<core:hasFunction rdf:resource="&data;Mazak-z-function"/>
 		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-position-actual"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-z-temperature"/>
 		<core:prescribedBy rdf:resource="&data;Mazak-z-spec"/>
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-z-name"/>
 	</ex:LinearMotionSystem>
@@ -637,6 +634,9 @@
 		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
 		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
 	</core:ValueExpression>
+	
+	<qp:Temperature rdf:about="&data;Mazak-z-temperature">
+	</qp:Temperature>
 	
 	<ex:Structure rdf:about="&data;Mazak-zaxis">
 		<cmns-dsg:hasName rdf:resource="&data;Mazak-zaxis-name"/>

@@ -1,22 +1,94 @@
 @startuml
-skinparam linetype polyline
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
 left to right direction
+skinparam linetype polyline
 title MazakMere
 
-skinparam roundCorner 10
+!$default_direction = down
 
-skinparam object {
-  BackgroundColor 76608A
-  fontColor White
-  BorderColor White 
-  FontName Helvetica   
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-
-skinparam class{
-   BackgroundColor White
-   fontColor black
-   FontStyle bold
-   FontName Helvetica
-}
-
+individual(o1, data:[[./Mazak.html Mazak]], ex:Machine)
+individual(o2, data:[[./Mazak-xaxism.html Mazak-xaxism]], ex:Structure)
+individual(o3, data:[[./Mazak-yaxism.html Mazak-yaxism]], ex:Structure)
+individual(o4, data:[[./Mazak-zaxis.html Mazak-zaxis]], ex:Structure)
+individual(o5, data:[[./Mazak-table.html Mazak-table]], ex:Structure)
+individual(o6, data:[[./Mazak-trundle.html Mazak-trundle]], ex:Structure)
+individual(o7, data:[[./Mazak-x.html Mazak-x]], ex:LinearMotionSystem)
+individual(o8, data:[[./Mazak-y.html Mazak-y]], ex:LinearMotionSystem)
+individual(o9, data:[[./Mazak-z.html Mazak-z]], ex:LinearMotionSystem)
+individual(o10, data:[[./Mazak-c.html Mazak-c]], ex:RotaryMotionSystem)
+individual(o11, data:[[./Mazak-br.html Mazak-br]], ex:RotaryMotionSystem)
+individual(o12, data:[[./Mazak-c2.html Mazak-c2]], ex:RotaryMotionSystem)
+individual(o13, data:[[./Mazak-cont.html Mazak-cont]], ex:ControlSystem)
+individual(o14, data:[[./Mazak-door1.html Mazak-door1]], "bfo:object")
+individual(o15, data:[[./Mazak-partocc.html Mazak-partocc]], ex:Part)
+individual(o16, data:[[./Mazak-elec.html Mazak-elec]], ex:ElectricalSystem)
+individual(o17, data:[[./Mazak-hydraulic.html Mazak-hydraulic]], ex:HydraulicSystem)
+individual(o18, data:[[./Mazak-coolant.html Mazak-coolant]], "bfo:object")
+individual(o19, data:[[./Mazak-pneumatic.html Mazak-pneumatic]], ex:PneumaticSystem)
+individual(o20, data:[[./Mazak-lubrication.html Mazak-lubrication]], ex:LubricationSystem)
+individual(o21, data:[[./Mazak-procstock.html Mazak-procstock]], ex:Stock)
+individual(o22, data:[[./Mazak-enclosurem.html Mazak-enclosurem]], ex:Structure)
+individual(o23, data:[[./Mazak-x-Xballscrew.html Mazak-x-Xballscrew]], ex:Ballscrew)
+individual(o24, data:[[./Mazak-x-Xmotor.html Mazak-x-Xmotor]], ex:Motor)
+individual(o25, data:[[./Mazak-y-Yballscrew.html Mazak-y-Yballscrew]], ex:Ballscrew)
+individual(o26, data:[[./Mazak-y-Ymotor.html Mazak-y-Ymotor]], ex:Motor)
+individual(o27, data:[[./Mazak-z-Zballscrew.html Mazak-z-Zballscrew]], ex:Ballscrew)
+individual(o28, data:[[./Mazak-z-Zmotor.html Mazak-z-Zmotor]], ex:Motor)
+individual(o29, data:[[./Mazak-c-Cmotor.html Mazak-c-Cmotor]], ex:Motor)
+individual(o30, data:[[./Mazak-br-Bmotor.html Mazak-br-Bmotor]], ex:Motor)
+individual(o31, data:[[./Mazak-c2-C2motor.html Mazak-c2-C2motor]], ex:Motor)
+individual(o32, data:[[./Mazak-cont-path1.html Mazak-cont-path1]], ex:ControlSystemPath)
+property(o1, "bfo:has member part at some time", o2)
+data(o1, cmns-dsg:hasName, Mazak)
+property(o1, "bfo:has member part at some time", o3)
+property(o1, "bfo:has member part at some time", o4)
+property(o1, "bfo:has member part at some time", o5)
+property(o1, "bfo:has member part at some time", o6)
+property(o1, "bfo:has member part at some time", o7)
+property(o1, "bfo:has member part at some time", o8)
+property(o1, "bfo:has member part at some time", o9)
+property(o1, "bfo:has member part at some time", o10)
+property(o1, "bfo:has member part at some time", o11)
+property(o1, "bfo:has member part at some time", o12)
+property(o1, "bfo:has member part at some time", o13)
+property(o1, "bfo:has member part at some time", o14)
+property(o1, "bfo:has member part at some time", o15)
+property(o1, "bfo:has member part at some time", o16)
+property(o1, "bfo:has member part at some time", o17)
+property(o1, "bfo:has member part at some time", o18)
+property(o1, "bfo:has member part at some time", o19)
+property(o1, "bfo:has member part at some time", o20)
+property(o1, "bfo:has member part at some time", o21)
+property(o1, "bfo:has member part at some time", o22)
+property(o7, "bfo:has member part at some time", o23)
+data(o7, cmns-dsg:hasName, X)
+property(o7, "bfo:has member part at some time", o24)
+property(o8, "bfo:has member part at some time", o25)
+data(o8, cmns-dsg:hasName, Y)
+property(o8, "bfo:has member part at some time", o26)
+property(o9, "bfo:has member part at some time", o27)
+data(o9, cmns-dsg:hasName, Z)
+property(o9, "bfo:has member part at some time", o28)
+property(o10, "bfo:has member part at some time", o29)
+data(o10, cmns-dsg:hasName, C1)
+property(o11, "bfo:has member part at some time", o30)
+data(o11, cmns-dsg:hasName, B)
+property(o12, "bfo:has member part at some time", o31)
+data(o12, cmns-dsg:hasName, C2)
+property(o13, "bfo:has member part at some time", o32)
+data(o13, cmns-dsg:hasName, controller)
 @enduml

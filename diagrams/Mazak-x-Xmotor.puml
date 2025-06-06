@@ -1,42 +1,31 @@
 @startuml
-skinparam linetype polyline
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
 left to right direction
+skinparam linetype polyline
 title Mazak-x-Xmotor
 
-skinparam roundCorner 10
+!$default_direction = down
 
-skinparam object {
-  BackgroundColor 76608A
-  fontColor White
-  BorderColor White 
-  FontName Helvetica   
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-
-skinparam class{
-   BackgroundColor White
-   fontColor black
-   FontStyle bold
-   FontName Helvetica
-}
-
-object "[[./Mazak-x-Xmotor.html data:Mazak-x-Xmotor]]" as o1 #76608A {
- <back:#Green>type: ex:Motor</back> 
----
- }
-object "data:Mazak-x-Xmotor-temperature" as o2 #76608A {
- <back:#1E90FF>type: qp:Temperature</back> 
----
- }
-object "data:Mazak-x-Xmotor-name" as o3 #76608A {
- <back:#DarkGrey>type: cmns-dsg:Name</back> 
----
- }
-object "[[./Mazak-x.html data:Mazak-x]]" as o4 #76608A {
- <back:#Green>type: ex:LinearMotionSystem</back> 
----
- }
-o1 --> o2 : [[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime core:measuresAtSomeTime]]
-o1 --> o3 : cmns-dsg:hasName
-o3 : cmns-dsg:hasTextualName: Xmotor
-o4 --> o1 : obo:has member part at some time
+individual(o1, data:[[./Mazak-x-Xmotor.html Mazak-x-Xmotor]], ex:Motor)
+individual(o2, data:Mazak-x-Xmotor-temperature, qp:Temperature)
+individual(o3, data:Mazak-x-Xmotor-name, cmns-dsg:Name)
+individual(o4, data:[[./Mazak-x.html Mazak-x]], ex:LinearMotionSystem)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o2)
+property(o1, cmns-dsg:hasName, o3)
+data(o3, cmns-dsg:hasTextualName, Xmotor)
+property(o4, "bfo:has member part at some time", o1)
 @enduml

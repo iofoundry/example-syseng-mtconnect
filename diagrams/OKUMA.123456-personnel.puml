@@ -1,37 +1,27 @@
 @startuml
-skinparam linetype polyline
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
 left to right direction
+skinparam linetype polyline
 title OKUMA.123456-personnel
 
-skinparam roundCorner 10
+!$default_direction = down
 
-skinparam object {
-  BackgroundColor 76608A
-  fontColor White
-  BorderColor White 
-  FontName Helvetica   
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-
-skinparam class{
-   BackgroundColor White
-   fontColor black
-   FontStyle bold
-   FontName Helvetica
-}
-
-object "[[./OKUMA.123456-personnel.html data:OKUMA.123456-personnel]]" as o1 #76608A {
- <back:#1E90FF>type: [[https://spec.industrialontologies.org/ontology/core/Core/Person core:Person]]</back> 
----
- }
-object "data:OKUMA.123456-personnel-name" as o2 #76608A {
- <back:#DarkGrey>type: cmns-dsg:Name</back> 
----
- }
-object "[[./OKUMA.123456.html data:OKUMA.123456]]" as o3 #76608A {
- <back:#Green>type: ex:Machine</back> 
----
- }
-o1 --> o2 : cmns-dsg:hasName
-o2 : cmns-dsg:hasTextualName: personnel
-o3 --> o1 : obo:has member part at some time
+individual(o1, data:[[./OKUMA.123456-personnel.html OKUMA.123456-personnel]], core:[[https://spec.industrialontologies.org/ontology/core/Core/Person Person]])
+individual(o2, data:OKUMA.123456-personnel-name, cmns-dsg:Name)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, personnel)
 @enduml

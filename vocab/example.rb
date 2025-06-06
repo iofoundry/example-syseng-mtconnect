@@ -203,6 +203,8 @@ module Example
     Materials: false,
   }
 
+  Independent = Set.new([:Environmental, :Personnel])
+
   Functions = {
     Device: Machine.MillingCapability,
     PRISMATIC: Machine.PrismaticMotionCapability,

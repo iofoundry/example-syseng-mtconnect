@@ -1,8 +1,18 @@
 @startuml
-skinparam linetype polyline
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
 left to right direction
+skinparam linetype polyline
 title Mazak-c2-Cmotor
 
+<<<<<<< HEAD
 skinparam roundCorner 10
 
 skinparam object {
@@ -34,4 +44,20 @@ object "[[./Mazak-c2.html data:Mazak-c2]]" as o3 #76608A {
 o1 --> o2 : cmns-dsg:hasName
 o2 : cmns-dsg:hasTextualName: Cmotor
 o3 --> o1 : obo:has member part at some time
+=======
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
+}
+individual(o1, data:[[./Mazak-c2-Cmotor.html Mazak-c2-Cmotor]], ex:Motor)
+individual(o2, data:Mazak-c2-Cmotor-name, cmns-dsg:Name)
+individual(o3, data:[[./Mazak-c2.html Mazak-c2]], ex:RotaryMotionSystem)
+property(o1, cmns-dsg:hasName, o2)
+data(o2, cmns-dsg:hasTextualName, Cmotor)
+property(o3, "bfo:has member part at some time", o1)
+>>>>>>> nowl
 @enduml

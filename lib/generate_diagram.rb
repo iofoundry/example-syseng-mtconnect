@@ -12,12 +12,12 @@ class GenerateDiagram
   def self.uml_name(iri)
     qn = iri.qname(prefixes: Prefixes)
     v = if qn[0] == :obo
-          "obo:#{iri.attributes[:label][:en]}"
+          "\"bfo:#{iri.attributes[:label][:en]}\""
         else
           qn.join(':')
         end
     if qn.first == :core
-      "[[#{iri} #{v}]]"
+      "core:[[#{iri} #{qn.last}]]"
     else
       v
     end
@@ -84,15 +84,14 @@ class GenerateDiagram
   # Print an object with its type
   def print_object(iri)
     if @@linked_terms.include?(iri)
-      title = "[[./#{iri.qname.last}.html #{self.class.uml_name(iri)}]]"
+      title = "#{iri.qname.first}:[[./#{iri.qname.last}.html #{iri.qname.last}]]"
     else
       title = self.class.uml_name(iri)
     end
-    @f.print "object \"#{title}\" as #{@objects[iri]} #{color(iri)} "
     if t = @@types[iri]
-      @f.puts "{\n <back:#{color(t)}>type: #{self.class.uml_name(t)}</back> \n---\n }"
+      @f.puts "individual(#{obj(iri)}, #{title}, #{self.class.uml_name(t)})"
     else
-      @f.puts
+      @f.puts "individual(#{obj(iri)}, #{title})"
     end
   end
 
@@ -105,9 +104,9 @@ class GenerateDiagram
   def print_stmt(stmt)
     unless stmt.predicate == RDF::RDFV.type
       if RDF::Literal === stmt.object
-        @f.puts "#{obj(stmt.subject)} : #{self.class.uml_name(stmt.predicate)}: #{stmt.object.value}"
+        @f.puts "data(#{obj(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{stmt.object.value})"
       else
-        @f.puts "#{obj(stmt.subject)} --> #{obj(stmt.object)} : #{self.class.uml_name(stmt.predicate)}"
+        @f.puts "property(#{obj(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{obj(stmt.object)})"
       end
     end  
   end
@@ -131,30 +130,42 @@ EOT
     
     File.open("#{@filename}.puml", 'w') do |f|
       @f = f
-      
       f.puts <<EOT
 @startuml
-skinparam linetype polyline
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
 left to right direction
+skinparam linetype polyline
 title #{File.basename @filename}
 
-skinparam roundCorner 10
+!$default_direction = down
 
-skinparam object {
-  BackgroundColor 76608A
-  fontColor White
-  BorderColor White 
-  FontName Helvetica   
-}
-
-skinparam class{
-   BackgroundColor White
-   fontColor black
-   FontStyle bold
-   FontName Helvetica
-}
-
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
 EOT
+      color = {
+        core: "000000",
+        ex: "Green",
+        data: "76608A",
+        units: "8A2D3B",
+        "cmns-dsg": "3A0519",
+        qp: "641B2E"
+      }
+
+      f.puts Prefixes.map { |k, v|
+        "\"#{k}\":\"#{color[k]}\"" if color[k]
+      }.compact.join(',')
+      f.puts "}"
+      
       @objects.each do |k, v|
         print_object(k)
       end

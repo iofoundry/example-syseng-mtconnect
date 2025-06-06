@@ -10,7 +10,7 @@ object {
 
 left to right direction
 skinparam linetype polyline
-title Mazak-xaxism
+title Mazak-c2-C2motor
 
 !$default_direction = down
 
@@ -20,14 +20,10 @@ title Mazak-xaxism
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-individual(o1, data:[[./Mazak-xaxism.html Mazak-xaxism]], ex:Structure)
-individual(o2, data:Mazak-xaxism-name, cmns-dsg:Name)
-individual(o3, data:[[./Mazak.html Mazak]], ex:Machine)
-individual(o4, data:[[./Mazak-x.html Mazak-x]], ex:LinearMotionSystem)
-individual(o5, data:[[./Mazak-y.html Mazak-y]], ex:LinearMotionSystem)
+individual(o1, data:[[./Mazak-c2-C2motor.html Mazak-c2-C2motor]], ex:Motor)
+individual(o2, data:Mazak-c2-C2motor-name, cmns-dsg:Name)
+individual(o3, data:[[./Mazak-c2.html Mazak-c2]], ex:RotaryMotionSystem)
 property(o1, cmns-dsg:hasName, o2)
-data(o2, cmns-dsg:hasTextualName, X_AXIS)
+data(o2, cmns-dsg:hasTextualName, C2motor)
 property(o3, "bfo:has member part at some time", o1)
-property(o4, ex:joinedTo, o1)
-property(o5, ex:joinedTo, o1)
 @enduml
