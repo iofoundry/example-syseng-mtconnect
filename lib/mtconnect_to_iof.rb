@@ -75,11 +75,11 @@ class MTConnectToIOF
     node
   end
 
-  def intersection_of(parent, description)
+  def intersection_of(parent, description, restriction = nil)
     desc = RDF::Statement.new(RDF::URI.new(description), RDF::RDFV.type, RDF::RDFV.Description)
     @graph << desc
     
-    restriction = add_type(RDF::OWL.Restriction)
+    restriction = add_type(RDF::OWL.Restriction) unless restriction
     @graph << [parent, RDF::OWL.intersectionOf, RDF::List.new(subject: nil,
                                                               graph: @graph,
                                                               values: [desc.subject, restriction])]
