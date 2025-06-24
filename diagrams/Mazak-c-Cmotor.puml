@@ -20,12 +20,15 @@ title Mazak-c-Cmotor
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-individual(o1, data:[[./Mazak-c-Cmotor.html Mazak-c-Cmotor]], ex:Motor)
+individual(o1, data:[[./Mazak-c-Cmotor.html Mazak-c-Cmotor]], vendor:MazakMOTORCmotor)
 individual(o2, data:Mazak-c-Cmotor-temperature, qp:Temperature)
-individual(o3, data:Mazak-c-Cmotor-name, cmns-dsg:Name)
-individual(o4, data:[[./Mazak-c.html Mazak-c]], ex:RotaryMotionSystem)
+individual(o3, vendor:MazakMOTORCmotor, owl:Class)
+individual(o4, ex:Motor)
+individual(o5, data:Mazak-c-Cmotor-name, cmns-dsg:Name)
+individual(o6, data:[[./Mazak-c.html Mazak-c]], vendor:MazakRotaryC1)
 property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o2)
-property(o1, cmns-dsg:hasName, o3)
-data(o3, cmns-dsg:hasTextualName, Cmotor)
-property(o4, "bfo:has member part at some time", o1)
+property(o3, rdfs:subClassOf, o4)
+property(o1, cmns-dsg:hasName, o5)
+data(o5, cmns-dsg:hasTextualName, Cmotor)
+property(o6, "bfo:has member part at some time", o1)
 @enduml

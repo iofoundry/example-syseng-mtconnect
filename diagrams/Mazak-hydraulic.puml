@@ -20,10 +20,13 @@ title Mazak-hydraulic
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-individual(o1, data:[[./Mazak-hydraulic.html Mazak-hydraulic]], ex:HydraulicSystem)
-individual(o2, data:Mazak-hydraulic-name, cmns-dsg:Name)
-individual(o3, data:[[./Mazak.html Mazak]], ex:Machine)
-property(o1, cmns-dsg:hasName, o2)
-data(o2, cmns-dsg:hasTextualName, hydraulic)
-property(o3, "bfo:has member part at some time", o1)
+individual(o1, vendor:MazakHydraulichydraulic, owl:Class)
+individual(o2, ex:HydraulicSystem)
+individual(o3, data:[[./Mazak-hydraulic.html Mazak-hydraulic]], vendor:MazakHydraulichydraulic)
+individual(o4, data:Mazak-hydraulic-name, cmns-dsg:Name)
+individual(o5, data:[[./Mazak.html Mazak]], vendor:MazakDeviceMazak)
+property(o1, rdfs:subClassOf, o2)
+property(o3, cmns-dsg:hasName, o4)
+data(o4, cmns-dsg:hasTextualName, hydraulic)
+property(o5, "bfo:has member part at some time", o3)
 @enduml

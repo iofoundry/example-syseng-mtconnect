@@ -10,17 +10,26 @@ include RDF
 class GenerateDiagram
   # Convert an iri to a text label
   def self.uml_name(iri)
-    qn = iri.qname(prefixes: Prefixes)
-    v = if qn[0] == :obo
-          "\"bfo:#{iri.attributes[:label][:en]}\""
-        else
-          qn.join(':')
-        end
-    if qn.first == :core
-      "core:[[#{iri} #{qn.last}]]"
+    case iri
+    when Node
+      iri.to_s
+
     else
-      v
+      qn = iri.qname(prefixes: Prefixes)
+      v = if qn[0] == :obo
+            "\"bfo:#{iri.attributes[:label][:en]}\""
+          else
+            qn.join(':')
+          end
+      if qn.first == :core
+        "core:[[#{iri} #{qn.last}]]"
+      else
+        v
+      end
     end
+  rescue
+    puts "Error: #{$!}\n#{iri.inspect}"
+    raise
   end
 
   def color(iri)
@@ -83,6 +92,8 @@ class GenerateDiagram
 
   # Print an object with its type
   def print_object(iri)
+    return if iri == RDF::RDFV.nil
+    
     if @@linked_terms.include?(iri)
       title = "#{iri.qname.first}:[[./#{iri.qname.last}.html #{iri.qname.last}]]"
     else
@@ -102,7 +113,7 @@ class GenerateDiagram
 
   # Print a statment with a subject, predicate, and object. If this is a literal, print it as part of the individual.
   def print_stmt(stmt)
-    unless stmt.predicate == RDF::RDFV.type
+    unless stmt.predicate == RDF::RDFV.type or stmt.object == RDF::RDFV.nil
       if RDF::Literal === stmt.object
         @f.puts "data(#{obj(stmt.subject)}, #{self.class.uml_name(stmt.predicate)}, #{stmt.object.value})"
       else

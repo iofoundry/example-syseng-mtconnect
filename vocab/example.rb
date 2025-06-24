@@ -192,6 +192,12 @@ module Example
              domain: BFO::BFO.material_entity,
              range: BFO::BFO.material_entity
 
+    property :satisfiedBy, label: { 'en-us': 'satisfied by' },
+             type: RDF::OWL.ObjectProperty
+    property :conformsTo, label: { 'en-us': 'conforms to' },
+             inverseOf: self.satisfiedBy,
+             type: RDF::OWL.ObjectProperty
+
   end
 
   Components = {
@@ -275,7 +281,8 @@ Prefixes = {
   rdfv: RDF::RDFV.to_uri,
   owl: RDF::OWL.to_uri,
   qp: IOF::QualitiesPhysical.to_uri,
-  'cmns-dsg': OMG::Designators.to_uri
+  'cmns-dsg': OMG::Designators.to_uri,
+  xs: RDF::XSD.to_uri
 }
 
 Colors = {

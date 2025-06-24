@@ -20,14 +20,17 @@ title Mazak-zaxis
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-individual(o1, data:[[./Mazak-zaxis.html Mazak-zaxis]], ex:Structure)
-individual(o2, data:Mazak-zaxis-name, cmns-dsg:Name)
-individual(o3, data:[[./Mazak.html Mazak]], ex:Machine)
-individual(o4, data:[[./Mazak-z.html Mazak-z]], ex:LinearMotionSystem)
-individual(o5, data:[[./Mazak-c.html Mazak-c]], ex:RotaryMotionSystem)
-property(o1, cmns-dsg:hasName, o2)
-data(o2, cmns-dsg:hasTextualName, Z_AXIS)
-property(o3, "bfo:has member part at some time", o1)
-property(o4, ex:joinedTo, o1)
-property(o5, ex:joinedTo, o1)
+individual(o1, vendor:MazakLinkZ_AXIS, owl:Class)
+individual(o2, ex:Structure)
+individual(o3, data:[[./Mazak-zaxis.html Mazak-zaxis]], vendor:MazakLinkZ_AXIS)
+individual(o4, data:Mazak-zaxis-name, cmns-dsg:Name)
+individual(o5, data:[[./Mazak.html Mazak]], vendor:MazakDeviceMazak)
+individual(o6, data:[[./Mazak-z.html Mazak-z]], vendor:MazakLinearZ)
+individual(o7, data:[[./Mazak-c.html Mazak-c]], vendor:MazakRotaryC1)
+property(o1, rdfs:subClassOf, o2)
+property(o3, cmns-dsg:hasName, o4)
+data(o4, cmns-dsg:hasTextualName, Z_AXIS)
+property(o5, "bfo:has member part at some time", o3)
+property(o6, ex:joinedTo, o3)
+property(o7, ex:joinedTo, o3)
 @enduml

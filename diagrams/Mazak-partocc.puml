@@ -20,10 +20,13 @@ title Mazak-partocc
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-individual(o1, data:[[./Mazak-partocc.html Mazak-partocc]], ex:Part)
-individual(o2, data:Mazak-partocc-name, cmns-dsg:Name)
-individual(o3, data:[[./Mazak.html Mazak]], ex:Machine)
-property(o1, cmns-dsg:hasName, o2)
-data(o2, cmns-dsg:hasTextualName, partocc)
-property(o3, "bfo:has member part at some time", o1)
+individual(o1, vendor:MazakPartOccurrencepartocc, owl:Class)
+individual(o2, ex:Part)
+individual(o3, data:[[./Mazak-partocc.html Mazak-partocc]], vendor:MazakPartOccurrencepartocc)
+individual(o4, data:Mazak-partocc-name, cmns-dsg:Name)
+individual(o5, data:[[./Mazak.html Mazak]], vendor:MazakDeviceMazak)
+property(o1, rdfs:subClassOf, o2)
+property(o3, cmns-dsg:hasName, o4)
+data(o4, cmns-dsg:hasTextualName, partocc)
+property(o5, "bfo:has member part at some time", o3)
 @enduml

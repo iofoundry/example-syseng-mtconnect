@@ -20,14 +20,17 @@ title Mazak-cont
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-individual(o1, data:[[./Mazak-cont.html Mazak-cont]], ex:ControlSystem)
-individual(o2, data:Mazak-cont-name, cmns-dsg:Name)
-individual(o3, data:[[./Mazak-cont-path1.html Mazak-cont-path1]], ex:ControlSystemPath)
-individual(o4, data:Mazak-cont-path1-name, cmns-dsg:Name)
-individual(o5, data:[[./Mazak.html Mazak]], ex:Machine)
-property(o1, cmns-dsg:hasName, o2)
-data(o2, cmns-dsg:hasTextualName, controller)
-property(o1, "bfo:has member part at some time", o3)
+individual(o1, vendor:MazakControllercontroller, owl:Class)
+individual(o2, ex:ControlSystem)
+individual(o3, data:[[./Mazak-cont.html Mazak-cont]], vendor:MazakControllercontroller)
+individual(o4, data:Mazak-cont-name, cmns-dsg:Name)
+individual(o5, data:[[./Mazak-cont-path1.html Mazak-cont-path1]], vendor:MazakPathpath)
+individual(o6, data:Mazak-cont-path1-name, cmns-dsg:Name)
+individual(o7, data:[[./Mazak.html Mazak]], vendor:MazakDeviceMazak)
+property(o1, rdfs:subClassOf, o2)
 property(o3, cmns-dsg:hasName, o4)
-property(o5, "bfo:has member part at some time", o1)
+data(o4, cmns-dsg:hasTextualName, controller)
+property(o3, "bfo:has member part at some time", o5)
+property(o5, cmns-dsg:hasName, o6)
+property(o7, "bfo:has member part at some time", o3)
 @enduml

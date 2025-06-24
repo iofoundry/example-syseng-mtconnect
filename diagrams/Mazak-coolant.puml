@@ -20,12 +20,15 @@ title Mazak-coolant
                       "ns1":"76608A",
 "ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
 }
-individual(o1, data:[[./Mazak-coolant.html Mazak-coolant]], "bfo:object")
-individual(o2, data:Mazak-coolant-name, cmns-dsg:Name)
-individual(o3, data:Mazak-coolant-temperature, qp:Temperature)
-individual(o4, data:[[./Mazak.html Mazak]], ex:Machine)
-property(o1, cmns-dsg:hasName, o2)
-data(o2, cmns-dsg:hasTextualName, coolant)
-property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o3)
-property(o4, "bfo:has member part at some time", o1)
+individual(o1, vendor:MazakCoolantcoolant, owl:Class)
+individual(o2, "bfo:object")
+individual(o3, data:[[./Mazak-coolant.html Mazak-coolant]], vendor:MazakCoolantcoolant)
+individual(o4, data:Mazak-coolant-name, cmns-dsg:Name)
+individual(o5, data:Mazak-coolant-temperature, qp:Temperature)
+individual(o6, data:[[./Mazak.html Mazak]], vendor:MazakDeviceMazak)
+property(o1, rdfs:subClassOf, o2)
+property(o3, cmns-dsg:hasName, o4)
+data(o4, cmns-dsg:hasTextualName, coolant)
+property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o5)
+property(o6, "bfo:has member part at some time", o3)
 @enduml
