@@ -45,7 +45,7 @@ class MTConnectToIOF:
     
   @log_indent
   def _translate_class_specifications(self, element, type_cls, parent):
-    """Translate specifications from MTConnect to IOF."""
+    """Translate specifications from MTConnect to class axioms."""
     specifications = element.findall("./m:Configuration/m:Specifications/*", self.ns)
     if specifications:
       logger.info(f"{type_cls}: Adding specifications")
@@ -69,15 +69,17 @@ class MTConnectToIOF:
             if min or max or nominal:
               logger.info(f"> {type_cls}: Adding specification {title} for {di_cls} with min={min}, max={max}, nominal={nominal}")
               const = None
-              if min and max:
-                const = owl.ConstrainedDatatype(float, min_inclusive=min, max_inclusive=max)
-              elif min:
-                const = owl.ConstrainedDatatype(float, min_inclusive=min)
-              elif max:
-                const = owl.ConstrainedDatatype(float, max_inclusive=max)
-              elif nominal:
-                const = owl.ConstrainedDatatype(float, min_inclusive=nominal, max_inclusive=nominal)
-                
+              args = dict()
+              if nominal:
+                args['min_inclusive'] = nominal
+                args['max_inclusive'] = nominal
+              if min:
+                args['min_inclusive'] = min
+              if max:
+                args['max_inclusive'] = max
+              
+              const = owl.ConstrainedDatatype(float, **args)
+                              
               if issubclass(di_cls, BFO.quality):
                 type_cls.is_a.append(parent & Core.hasQuality.some(di_cls & \
                   Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
@@ -151,9 +153,7 @@ class MTConnectToIOF:
           node = None
           comp_id = di.get("compositionId", None)
           if comp_id:
-            nd = names.copy()
-            nd.append(comp_id)
-            node = Data["_".join(nd)]
+            node = self.particulars[comp_id]
           else:
             node = partic
             

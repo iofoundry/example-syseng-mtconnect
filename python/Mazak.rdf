@@ -383,7 +383,7 @@
 										<owl:someValuesFrom>
 											<owl:Class>
 												<owl:intersectionOf rdf:parseType="Collection">
-													<rdf:Description rdf:about="http://example.org/ontology/PrismaticVelocity">
+													<rdf:Description rdf:about="http://example.org/ontology/RevoluteVelocity">
 													</rdf:Description>
 													<owl:Restriction>
 														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
