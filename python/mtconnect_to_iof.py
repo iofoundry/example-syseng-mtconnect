@@ -25,9 +25,10 @@ class MTConnectToIOF:
   def convert(self):
     """Convert the MTConnect XML to IOF OWL format.""" 
     for device in self.root.findall(".//m:Device", self.ns):
+      self.VendorName = device.get('name')
       self.VendorFileName = f"{device.get('name')}.rdf"
-      self.Vendor = owl.get_ontology(f"http://example.org/{device.get('name')}/")
-      self.Vendor.base_iri = f"http://example.org/{device.get('name')}/"
+      self.Vendor = owl.get_ontology(f"http://example.org/{self.VendorName}/")
+      self.Vendor.base_iri = f"http://example.org/{self.VendorName}/"
       self.Vendor.imported_ontologies = [BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example]
       Data.imported_ontologies.append(self.Vendor)
 
@@ -40,7 +41,7 @@ class MTConnectToIOF:
     """Write the ontology to a file."""
     logger.info(f"Writing ontology to {self.VendorFileName}")
     self.Vendor.save(file = self.VendorFileName, format = "rdfxml")    
-    Data.save(file = f"{self.VendorFileName}-data.rdf", format = "rdfxml")
+    Data.save(file = f"{self.VendorName}-data.rdf", format = "rdfxml")
     
   @log_indent
   def _translate_class_specifications(self, element, type_cls, parent):
