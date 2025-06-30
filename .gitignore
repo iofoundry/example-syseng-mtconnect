@@ -6,3 +6,5 @@ Gemfile.lock
 .bundle
 \#*
 \.#*
+__pycache__
+.vscode
