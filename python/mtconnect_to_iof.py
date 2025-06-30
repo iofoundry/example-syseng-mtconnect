@@ -221,8 +221,9 @@ class MTConnectToIOF:
     name = element.get("name", id)
     uuid = element.get("uuid")
     type = element.get("type", element.tag.split('}')[-1])
+    path_part = uuid or name or id
     
-    names.append(id)
+    names.append(path_part)
     
     type_cls = None
     cls = Components.get(type, BFO.object)
