@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/qualities/Qualities/" uri="file:/Users/will/projects/IOF/systemeng/mtconnect/cache/IOF_Qualities.rdf"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl" uri="../cache/bfo.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/" uri="../cache/AnnotationVocabulary.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/Core/" uri="../cache/Core.rdf"/>
