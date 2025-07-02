@@ -2,6 +2,8 @@ import owlready2 as owl
 import os
 import re
 
+# owl.default_world.set_backend(filename = "./ontologies.sqlite3")
+
 path = os.path.dirname(os.path.abspath(__file__))
 cache = f"{path}/../cache"
 
