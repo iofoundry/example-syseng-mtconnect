@@ -29,7 +29,7 @@ class MTConnectToIOF:
       self.VendorFileName = f"{device.get('name')}.rdf"
       self.Vendor = owl.get_ontology(f"http://example.org/{self.VendorName}/")
       self.Vendor.base_iri = f"http://example.org/{self.VendorName}/"
-      self.Vendor.imported_ontologies = [BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example]
+      self.Vendor.imported_ontologies = [Example]
       Data.imported_ontologies.append(self.Vendor)
 
       logger.info(f"Converting device: {device.get('name')} creating ontology {self.Vendor.base_iri}")
@@ -50,12 +50,12 @@ class MTConnectToIOF:
     if specifications:
       logger.info(f"{type_cls}: Adding specifications")
 
-      for spec in specifications:
-        spec_name = spec.get("type")
-        title = '_'.join([r for r in [spec_name, spec.get('subType', None)] if r])
-        di_cls = DataItems.get(title, None)
+      with self.Vendor:
+        for spec in specifications:
+          spec_name = spec.get("type")
+          title = '_'.join([r for r in [spec_name, spec.get('subType', None)] if r])
+          di_cls = DataItems.get(title, None)
         
-        with self.Vendor:
           if di_cls:
             min = max = nominal = None
             for const in spec:
@@ -82,14 +82,13 @@ class MTConnectToIOF:
                               
               if issubclass(di_cls, BFO.quality):
                 type_cls.is_a.append(parent & Core.hasQuality.some(di_cls & \
-                  Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
+                  Core.hasMeasuredValueAtSomeTime.only(Core.MeasuredValueExpression & \
                     Core.hasSimpleExpressionValue.some(const))))
               else:
                 type_cls.is_a.append(parent & \
-                  BFO.participates_in_at_some_time.some(BFO.process & \
-                    (BFO.has_occurrent_part.some(di_cls & \
+                  BFO.participates_in_at_some_time.only(di_cls & \
                       Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
-                        Core.hasSimpleExpressionValue.some(const))))))
+                        Core.hasSimpleExpressionValue.some(const))))
   
   @log_indent
   def _create_particular_specifications(self, element, partic, name):
@@ -119,21 +118,24 @@ class MTConnectToIOF:
   @log_indent
   def _add_capability(self, partic, type):
     """Add capability to the component."""
-    logger.info(f"Adding capability for {partic} of type {type}")
     
     with Data:
       if type in Capabilities:
         cap_cls = Capabilities[type]
-        cap = cap_cls(partic.name + type)
+        name = partic.name + cap_cls.name
+        logger.info(f"Creating capbility {name} for {cap_cls}")
+        cap = cap_cls(name)
         partic.hasCapability.append(cap)
         
       if type in Functions:
         func_cls = Functions[type]
-        func = func_cls(partic.name + type)
+        name = partic.name + func_cls.name
+        logger.info(f"Creating function {name} for {func_cls}")
+        func = func_cls(name)
         partic.hasFunction.append(func)
         
   @log_indent
-  def _add_data_items(self, element, partic, names):
+  def _add_data_items(self, element, partic):
     """Add data items to the component."""
     logger.info(f"Adding data items for {partic}")
     
@@ -191,10 +193,10 @@ class MTConnectToIOF:
         key = motion[0].get("type", type)
         
       self._add_capability(partic, key)
-      self._add_data_items(element, partic, names.copy())
+      self._add_data_items(element, partic)
       
-      if type in Roles:
-        partic.hasRole.append(Roles[type]())
+      #if type in Roles:
+      #  partic.hasRole.append(Roles[type]())
       
     return partic
 

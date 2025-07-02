@@ -4,7 +4,7 @@ import re
 
 from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example
 
-Example.imported_ontologies = [BFO, Core, AnnVocab, Des, Qual, QualPhysical]
+Example.imported_ontologies = [Core, Des, Qual, QualPhysical]
 Example.label = [owl.locstr("Machine Ontology", "en")]
 
 with Example:

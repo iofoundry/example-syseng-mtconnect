@@ -2,7 +2,9 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl" uri="./cache/bfo.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/Core/meta/AnnotationVocabulary/" uri="./cache/AnnotationVocabulary.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/" uri="./cache/AnnotationVocabulary.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/Core/" uri="./Core.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/202401/core/Core/" uri="./Core.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/qualities/Qualities/" uri="./cache/IOF_Qualities.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/" uri="./cache/IOF_Qualities-Physical.rdf"/>
     <uri id="User Entered Import Resolution" name="http://example.com/ontology/" uri="./example.rdf"/>

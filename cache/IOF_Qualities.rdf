@@ -37,8 +37,8 @@
 		<dcterms:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dcterms:license>
 		<dcterms:publisher rdf:datatype="&xsd;string">Industrial Ontology Foundry</dcterms:publisher>
 		<dcterms:title rdf:datatype="&rdf;langString" xml:lang="en">Industrial Ontology Foundry (IOF) Qualities Ontology (Base)</dcterms:title>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/AboutIOFProd/"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/meta/AnnotationVocabulary/"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202401/core/Core/"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/"/>
 		<owl:versionIRI rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/"/>
 		<iof-av:copyright rdf:datatype="&rdf;langString" xml:lang="en">Industrial Ontology Foundry (IOF)</iof-av:copyright>
 		<iof-av:maturity rdf:resource="&iof-av;Provisional"/>

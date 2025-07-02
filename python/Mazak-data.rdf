@@ -22,13 +22,6 @@
 	
 	<owl:Ontology rdf:about="http://example.org/data/">
 		<owl:imports rdf:resource="http://example.org/Mazak/"/>
-		<owl:imports rdf:resource="http://example.org/ontology/"/>
-		<owl:imports rdf:resource="&obo;bfo.owl"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/"/>
-		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators/"/>
 	</owl:Ontology>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak">
@@ -65,14 +58,16 @@
 		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_systems_hydraulic"/>
 		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_systems_lubrication"/>
 		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_systems_pneumatic"/>
-		<Core:hasCapability rdf:resource="http://example.org/data/MazakDevice"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/MazakDevice"/>
-		<Core:hasRole rdf:resource="http://example.org/data/equipmentrole1"/>
+		<Core:hasCapability rdf:resource="http://example.org/data/MazakTurningCapability"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/MazakMillingCapability"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name1"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/MazakDevice">
+	<owl:NamedIndividual rdf:about="http://example.org/data/MazakMillingCapability">
 		<rdf:type rdf:resource="&onto;MillingCapability"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/MazakTurningCapability">
 		<rdf:type rdf:resource="&onto;TurningCapability"/>
 	</owl:NamedIndividual>
 	
@@ -92,7 +87,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base B particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_enclosure"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_BREVOLUTE"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_BRevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_BANGLE_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/designspecification5"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name19"/>
@@ -112,7 +107,7 @@
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BREVOLUTE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BRevoluteMotionCapability">
 		<rdf:type rdf:resource="&onto;RevoluteMotionCapability"/>
 	</owl:NamedIndividual>
 	
@@ -136,13 +131,13 @@
 		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseC1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C1 particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_C1CONTINUOUS"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_C1ContinuousMotionCapability"/>
 		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/Mazak_base_C1ROTARY_VELOCITY_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/designspecification4"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name17"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1CONTINUOUS">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1ContinuousMotionCapability">
 		<rdf:type rdf:resource="&onto;ContinuousMotionCapability"/>
 	</owl:NamedIndividual>
 	
@@ -176,7 +171,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C2 particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TABLE"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_C2REVOLUTE"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_C2RevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_C2ANGLE_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/designspecification6"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name21"/>
@@ -196,7 +191,7 @@
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2REVOLUTE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2RevoluteMotionCapability">
 		<rdf:type rdf:resource="&onto;RevoluteMotionCapability"/>
 	</owl:NamedIndividual>
 	
@@ -221,7 +216,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base X particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_enclosure"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_XPRISMATIC"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_XPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_XPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/designspecification1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name9"/>
@@ -246,7 +241,7 @@
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XPRISMATIC">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
@@ -292,7 +287,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Y particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_YPRISMATIC"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_YPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_YPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/designspecification2"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name12"/>
@@ -317,7 +312,7 @@
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YPRISMATIC">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
@@ -363,7 +358,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Z particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_ZPRISMATIC"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_ZPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_ZPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/designspecification3"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name15"/>
@@ -388,7 +383,7 @@
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZPRISMATIC">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
@@ -589,10 +584,6 @@
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2ANGLEMinimum"/>
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2TORQUEMaximum"/>
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2TORQUEMinimum"/>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="http://example.org/data/equipmentrole1">
-		<rdf:type rdf:resource="&Core;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/name1">

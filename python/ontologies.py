@@ -42,7 +42,6 @@ if os.path.exists(f"{path}/example.rdf"):
   Example.load(only_local= True)
 
 Data = owl.get_ontology("http://example.org/data/")
-Data.imported_ontologies = [BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example]
 Data.base_iri = "http://example.org/data/"
 
 
