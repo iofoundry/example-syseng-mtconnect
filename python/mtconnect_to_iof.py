@@ -51,6 +51,10 @@ class MTConnectToIOF:
       logger.info(f"{type_cls}: Adding specifications")
 
       with self.Vendor:
+        design_type = f"{type_cls.name}Design"
+        design = owl.types.new_class(design_type, (Core.DesignSpecification,))
+        type_cls.is_a.append(parent & Example.conformsTo.some(design))
+        
         for spec in specifications:
           spec_name = spec.get("type")
           title = '_'.join([r for r in [spec_name, spec.get('subType', None)] if r])
@@ -98,7 +102,10 @@ class MTConnectToIOF:
       logger.info(f"Creating particular specifications")
 
       with Data:
-        ds = Core.DesignSpecification()
+        design_type = self.Vendor.search(iri = partic.is_instance_of[0].iri + "Design")[0]
+        ds = design_type()
+        ds.label = owl.locstr(f"{design_type.name} particular", "en")
+            
         partic.prescribedBy.append(ds)
 
         for spec in specifications:
