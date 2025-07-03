@@ -102,7 +102,7 @@ class MTConnectToIOF:
       logger.info(f"Creating particular specifications")
 
       with Data:
-        design_type = self.Vendor.search(iri = partic.is_instance_of[0].iri + "Design")[0]
+        design_type = self.Vendor.search_one(iri = partic.is_instance_of[0].iri + "Design")
         ds = design_type()
         ds.label = owl.locstr(f"{design_type.name} particular", "en")
             
