@@ -45,5 +45,5 @@ property(o0, "ex:joinedTo", o5)
 data(o5, "rdfs:label", "OKUMA.123456 enclosure particular")
 property(o5, "core:hasQuality", o6)
 property(o5, "des:hasName", o7)
-property(o8, "bfo:has_member_part_at_some_time", o0)
+property(o8, "core:hasComponentPartAtAllTimes", o0)
 @enduml

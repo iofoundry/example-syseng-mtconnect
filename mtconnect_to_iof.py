@@ -185,7 +185,7 @@ class MTConnectToIOF:
       partic.label = owl.locstr(' '.join(names) + ' particular', "en")
       
       if parent:
-        parent.has_member_part_at_some_time.append(partic)
+        parent.hasComponentPartAtAllTimes.append(partic)
         
       text_name = element.get("name", id)
 

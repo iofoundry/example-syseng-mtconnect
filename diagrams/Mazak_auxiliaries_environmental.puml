@@ -34,5 +34,5 @@ individual(o3, data:[[./Mazak.html Mazak]], vendor:[[../Mazak.html#Mazak Mazak]]
 property(o0, "core:hasQuality", o1)
 property(o0, "des:hasName", o2)
 data(o2, "des:hasTextualName", "environmental")
-property(o3, "bfo:has_member_part_at_some_time", o0)
+property(o3, "core:hasComponentPartAtAllTimes", o0)
 @enduml

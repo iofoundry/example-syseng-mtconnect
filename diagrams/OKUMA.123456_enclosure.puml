@@ -37,7 +37,7 @@ individual(o6, data:[[./OKUMA.123456_Axes_Z4.html OKUMA.123456_Axes_Z4]], vendor
 property(o0, "core:hasQuality", o1)
 property(o0, "des:hasName", o2)
 data(o2, "des:hasTextualName", "enclosure")
-property(o3, "bfo:has_member_part_at_some_time", o0)
+property(o3, "core:hasComponentPartAtAllTimes", o0)
 property(o4, "ex:joinedTo", o0)
 property(o5, "ex:joinedTo", o0)
 property(o6, "ex:joinedTo", o0)

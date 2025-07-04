@@ -65,5 +65,5 @@ property(o12, "des:hasName", o14)
 property(o0, "ex:joinedTo", o15)
 data(o15, "rdfs:label", "OKUMA.123456 struct z1_axis particular")
 property(o15, "des:hasName", o16)
-property(o17, "bfo:has_member_part_at_some_time", o0)
+property(o17, "core:hasComponentPartAtAllTimes", o0)
 @enduml

@@ -34,7 +34,7 @@ individual(o3, data:[[./OKUMA.123456_Axes_X.html OKUMA.123456_Axes_X]], vendor:[
 individual(o4, data:[[./OKUMA.123456_Axes_Z1.html OKUMA.123456_Axes_Z1]], vendor:[[../OKUMA.html#OKUMA.123456AxesZ1 OKUMA.123456AxesZ1]])
 property(o0, "des:hasName", o1)
 data(o1, "des:hasTextualName", "z1_axis")
-property(o2, "bfo:has_member_part_at_some_time", o0)
+property(o2, "core:hasComponentPartAtAllTimes", o0)
 property(o3, "ex:joinedTo", o0)
 property(o4, "ex:joinedTo", o0)
 @enduml

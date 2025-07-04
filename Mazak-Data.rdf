@@ -2,7 +2,6 @@
 <!DOCTYPE rdf:RDF [
 	<!ENTITY Core "https://spec.industrialontologies.org/ontology/core/Core/">
 	<!ENTITY Desi "https://www.omg.org/spec/Commons/Designators/">
-	<!ENTITY obo "http://purl.obolibrary.org/obo/">
 	<!ENTITY onto "http://example.org/ontology/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -13,7 +12,6 @@
 	xmlns="http://example.org/data/"
 	xmlns:Core="https://spec.industrialontologies.org/ontology/core/Core/"
 	xmlns:Desi="https://www.omg.org/spec/Commons/Designators/"
-	xmlns:obo="http://purl.obolibrary.org/obo/"
 	xmlns:onto="http://example.org/ontology/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -27,29 +25,29 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak particular</rdfs:label>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_auxiliaries_environmental"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_B"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_C1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_C2"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_X"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_Y"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_Z"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_controller"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_door"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_enclosure"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_mstruct_TABLE"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_parts_partocc"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_resources_materials_stock"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_systems_coolant"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_systems_electric"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_systems_hydraulic"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_systems_lubrication"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_systems_pneumatic"/>
 		<Core:hasCapability rdf:resource="http://example.org/data/MazakTurningCapability"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_auxiliaries_environmental"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_B"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_X"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Y"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Z"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_controller"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_door"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_enclosure"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_TABLE"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_parts_partocc"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_resources_materials_stock"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_coolant"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_electric"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_hydraulic"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_lubrication"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_pneumatic"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/MazakMillingCapability"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name1"/>
 	</owl:NamedIndividual>
@@ -78,7 +76,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base B particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_enclosure"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_B_Bmotor"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_B_Bmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_BRevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_BANGLE_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasebdesign1"/>
@@ -125,7 +123,7 @@
 		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseC1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C1 particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_C1_Cmotor"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C1_Cmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_C1ContinuousMotionCapability"/>
 		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/Mazak_base_C1ROTARY_VELOCITY_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasec1design1"/>
@@ -168,7 +166,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C2 particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TABLE"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_C2_C2motor"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2_C2motor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_C2RevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_C2ANGLE_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasec2design1"/>
@@ -216,8 +214,8 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base X particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_enclosure"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_X_Xballscrew"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_X_Xmotor"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_X_Xballscrew"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_X_Xmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_XPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_XPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasexdesign1"/>
@@ -296,8 +294,8 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Y particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_Y_Yballscrew"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_Y_Ymotor"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Y_Yballscrew"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Y_Ymotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_YPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_YPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbaseydesign1"/>
@@ -376,8 +374,8 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Z particular</rdfs:label>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
 		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_Z_Zballscrew"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_base_Z_Zmotor"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Z_Zballscrew"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Z_Zmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_ZPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_ZPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasezdesign1"/>
@@ -454,7 +452,7 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_controller">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazakcontroller"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak controller particular</rdfs:label>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/Mazak_controller_path"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_controller_path"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name22"/>
 	</owl:NamedIndividual>
 	

@@ -2,7 +2,6 @@
 <!DOCTYPE rdf:RDF [
 	<!ENTITY Core "https://spec.industrialontologies.org/ontology/core/Core/">
 	<!ENTITY Desi "https://www.omg.org/spec/Commons/Designators/">
-	<!ENTITY obo "http://purl.obolibrary.org/obo/">
 	<!ENTITY onto "http://example.org/ontology/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -13,7 +12,6 @@
 	xmlns="http://example.org/data/"
 	xmlns:Core="https://spec.industrialontologies.org/ontology/core/Core/"
 	xmlns:Desi="https://www.omg.org/spec/Commons/Designators/"
-	xmlns:obo="http://purl.obolibrary.org/obo/"
 	xmlns:onto="http://example.org/ontology/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -27,34 +25,34 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMA.123456"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 particular</rdfs:label>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_B"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_C1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_C2"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_C3"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_C6"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_X"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_Y"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Controller"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_LAux1_BarFeederSystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_LAux1_LoaderSystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_LAux1_ToolingDeliverySystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_LAux1_WasteDisposalSystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Systems1_CoolantSystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Systems1_ElectricSystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Systems1_HydraulicSystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Systems1_LubricationSystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Systems1_PneumaticSystem1"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_enclosure"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_struct_b_axis"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_struct_c1_axis"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_struct_c2_axis"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_struct_x_axis"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_struct_y_axis"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_struct_z1_axis"/>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_struct_z4_axis"/>
 		<Core:hasCapability rdf:resource="http://example.org/data/OKUMA.123456TurningCapability"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_B"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_C1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_C2"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_C3"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_C6"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_X"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Y"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Controller"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_LAux1_BarFeederSystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_LAux1_LoaderSystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_LAux1_ToolingDeliverySystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_LAux1_WasteDisposalSystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Systems1_CoolantSystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Systems1_ElectricSystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Systems1_HydraulicSystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Systems1_LubricationSystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Systems1_PneumaticSystem1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_enclosure"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_struct_b_axis"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_struct_c1_axis"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_struct_c2_axis"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_struct_x_axis"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_struct_y_axis"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_struct_z1_axis"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_struct_z4_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA.123456MillingCapability"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name1"/>
 	</owl:NamedIndividual>
@@ -411,7 +409,7 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Controller">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMA.123456Controller"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Controller particular</rdfs:label>
-		<obo:BFO_0000115 rdf:resource="http://example.org/data/OKUMA.123456_Controller_path"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Controller_path"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name18"/>
 	</owl:NamedIndividual>
 	
