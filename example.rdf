@@ -6,19 +6,11 @@
 	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF
-	xmlns="http://example.org/ontology/"
+	xmlns="file:////Users/will/projects/IOF/systemeng/mtconnect/example.rdf#"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-	
-	<owl:Ontology rdf:about="http://example.org/ontology">
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical"/>
-		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators"/>
-	</owl:Ontology>
 	
 	<owl:Ontology rdf:about="http://example.org/ontology/">
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
@@ -127,6 +119,11 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Prismatic Velocity</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="http://example.org/ontology/ProcessProfile">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Process Profile</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/RevoluteMotionCapability">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/MotionCapability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Revoluted Motion Capability</rdfs:label>
@@ -173,7 +170,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Velocity">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/PhysicalProcessCharacteristic"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ProcessProfile"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Velocity</rdfs:label>
 	</owl:Class>
 	

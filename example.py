@@ -109,7 +109,11 @@ with Example:
     """A sensor in the IOF ontology."""
     label = owl.locstr("Sensor", "en")
     
-  class Velocity(QualPhysical.PhysicalProcessCharacteristic):
+  class ProcessProfile(BFO.process):
+    """A process profile not currently in BFO or Core"""
+    label = owl.locstr("Process Profile", "en")
+    
+  class Velocity(ProcessProfile):
     """A velocity in the IOF ontology."""
     label = owl.locstr("Velocity", "en")    
     
