@@ -41,7 +41,7 @@ class MTConnectToIOF:
     """Write the ontology to a file."""
     logger.info(f"Writing ontology to {self.VendorFileName}")
     self.Vendor.save(file = self.VendorFileName, format = "rdfxml")    
-    Data.save(file = f"{self.VendorName}-data.rdf", format = "rdfxml")
+    Data.save(file = f"{self.VendorName}-Data.rdf", format = "rdfxml")
     
   @log_indent
   def _translate_class_specifications(self, element, type_cls, parent):

@@ -1,0 +1,40 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title OKUMA.123456_struct_y_axis
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./OKUMA.123456_struct_y_axis.html OKUMA.123456_struct_y_axis]], vendor:[[../OKUMA.html#OKUMA.123456structy_axis OKUMA.123456structy_axis]])
+individual(o1, data:name3, des:Name)
+individual(o2, data:[[./OKUMA.123456.html OKUMA.123456]], vendor:[[../OKUMA.html#OKUMA.123456 OKUMA.123456]])
+individual(o3, data:[[./OKUMA.123456_Axes_Y.html OKUMA.123456_Axes_Y]], vendor:[[../OKUMA.html#OKUMA.123456AxesY OKUMA.123456AxesY]])
+individual(o4, data:[[./OKUMA.123456_Axes_B.html OKUMA.123456_Axes_B]], vendor:[[../OKUMA.html#OKUMA.123456AxesB OKUMA.123456AxesB]])
+property(o0, "des:hasName", o1)
+data(o1, "des:hasTextualName", "y_axis")
+property(o2, "bfo:has_member_part_at_some_time", o0)
+property(o3, "ex:joinedTo", o0)
+property(o4, "ex:joinedTo", o0)
+@enduml

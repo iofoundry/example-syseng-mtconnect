@@ -1,0 +1,87 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title OKUMAMere
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./OKUMA.123456.html OKUMA.123456]], vendor:[[../OKUMA.html#OKUMA.123456 OKUMA.123456]])
+individual(o1, data:[[./OKUMA.123456_struct_x_axis.html OKUMA.123456_struct_x_axis]], vendor:[[../OKUMA.html#OKUMA.123456structx_axis OKUMA.123456structx_axis]])
+individual(o2, data:[[./OKUMA.123456_struct_y_axis.html OKUMA.123456_struct_y_axis]], vendor:[[../OKUMA.html#OKUMA.123456structy_axis OKUMA.123456structy_axis]])
+individual(o3, data:[[./OKUMA.123456_struct_z1_axis.html OKUMA.123456_struct_z1_axis]], vendor:[[../OKUMA.html#OKUMA.123456structz1_axis OKUMA.123456structz1_axis]])
+individual(o4, data:[[./OKUMA.123456_struct_z4_axis.html OKUMA.123456_struct_z4_axis]], vendor:[[../OKUMA.html#OKUMA.123456structz4_axis OKUMA.123456structz4_axis]])
+individual(o5, data:[[./OKUMA.123456_struct_b_axis.html OKUMA.123456_struct_b_axis]], vendor:[[../OKUMA.html#OKUMA.123456structb_axis OKUMA.123456structb_axis]])
+individual(o6, data:[[./OKUMA.123456_struct_c1_axis.html OKUMA.123456_struct_c1_axis]], vendor:[[../OKUMA.html#OKUMA.123456structc1_axis OKUMA.123456structc1_axis]])
+individual(o7, data:[[./OKUMA.123456_struct_c2_axis.html OKUMA.123456_struct_c2_axis]], vendor:[[../OKUMA.html#OKUMA.123456structc2_axis OKUMA.123456structc2_axis]])
+individual(o8, data:[[./OKUMA.123456_Axes_X.html OKUMA.123456_Axes_X]], vendor:[[../OKUMA.html#OKUMA.123456AxesX OKUMA.123456AxesX]])
+individual(o9, data:[[./OKUMA.123456_Axes_Y.html OKUMA.123456_Axes_Y]], vendor:[[../OKUMA.html#OKUMA.123456AxesY OKUMA.123456AxesY]])
+individual(o10, data:[[./OKUMA.123456_Axes_Z1.html OKUMA.123456_Axes_Z1]], vendor:[[../OKUMA.html#OKUMA.123456AxesZ1 OKUMA.123456AxesZ1]])
+individual(o11, data:[[./OKUMA.123456_Axes_B.html OKUMA.123456_Axes_B]], vendor:[[../OKUMA.html#OKUMA.123456AxesB OKUMA.123456AxesB]])
+individual(o12, data:[[./OKUMA.123456_Axes_C1.html OKUMA.123456_Axes_C1]], vendor:[[../OKUMA.html#OKUMA.123456AxesC1 OKUMA.123456AxesC1]])
+individual(o13, data:[[./OKUMA.123456_Axes_Z4.html OKUMA.123456_Axes_Z4]], vendor:[[../OKUMA.html#OKUMA.123456AxesZ4 OKUMA.123456AxesZ4]])
+individual(o14, data:[[./OKUMA.123456_Axes_C2.html OKUMA.123456_Axes_C2]], vendor:[[../OKUMA.html#OKUMA.123456AxesC2 OKUMA.123456AxesC2]])
+individual(o15, data:[[./OKUMA.123456_Axes_C3.html OKUMA.123456_Axes_C3]], vendor:[[../OKUMA.html#OKUMA.123456AxesC3 OKUMA.123456AxesC3]])
+individual(o16, data:[[./OKUMA.123456_Axes_C6.html OKUMA.123456_Axes_C6]], vendor:[[../OKUMA.html#OKUMA.123456AxesC6 OKUMA.123456AxesC6]])
+individual(o17, data:[[./OKUMA.123456_Controller.html OKUMA.123456_Controller]], vendor:[[../OKUMA.html#OKUMA.123456Controller OKUMA.123456Controller]])
+individual(o18, data:[[./OKUMA.123456_Controller_path.html OKUMA.123456_Controller_path]], vendor:[[../OKUMA.html#OKUMA.123456Controllerpath OKUMA.123456Controllerpath]])
+individual(o19, data:[[./OKUMA.123456_Systems1_CoolantSystem1.html OKUMA.123456_Systems1_CoolantSystem1]], vendor:[[../OKUMA.html#OKUMA.123456Systems1CoolantSystem1 OKUMA.123456Systems1CoolantSystem1]])
+individual(o20, data:[[./OKUMA.123456_Systems1_ElectricSystem1.html OKUMA.123456_Systems1_ElectricSystem1]], vendor:[[../OKUMA.html#OKUMA.123456Systems1ElectricSystem1 OKUMA.123456Systems1ElectricSystem1]])
+individual(o21, data:[[./OKUMA.123456_Systems1_HydraulicSystem1.html OKUMA.123456_Systems1_HydraulicSystem1]], vendor:[[../OKUMA.html#OKUMA.123456Systems1HydraulicSystem1 OKUMA.123456Systems1HydraulicSystem1]])
+individual(o22, data:[[./OKUMA.123456_Systems1_LubricationSystem1.html OKUMA.123456_Systems1_LubricationSystem1]], vendor:[[../OKUMA.html#OKUMA.123456Systems1LubricationSystem1 OKUMA.123456Systems1LubricationSystem1]])
+individual(o23, data:[[./OKUMA.123456_Systems1_PneumaticSystem1.html OKUMA.123456_Systems1_PneumaticSystem1]], vendor:[[../OKUMA.html#OKUMA.123456Systems1PneumaticSystem1 OKUMA.123456Systems1PneumaticSystem1]])
+individual(o24, data:[[./OKUMA.123456_LAux1_LoaderSystem1.html OKUMA.123456_LAux1_LoaderSystem1]], vendor:[[../OKUMA.html#OKUMA.123456LAux1LoaderSystem1 OKUMA.123456LAux1LoaderSystem1]])
+individual(o25, data:[[./OKUMA.123456_LAux1_WasteDisposalSystem1.html OKUMA.123456_LAux1_WasteDisposalSystem1]], vendor:[[../OKUMA.html#OKUMA.123456LAux1WasteDisposalSystem1 OKUMA.123456LAux1WasteDisposalSystem1]])
+individual(o26, data:[[./OKUMA.123456_LAux1_ToolingDeliverySystem1.html OKUMA.123456_LAux1_ToolingDeliverySystem1]], vendor:[[../OKUMA.html#OKUMA.123456LAux1ToolingDeliverySystem1 OKUMA.123456LAux1ToolingDeliverySystem1]])
+individual(o27, data:[[./OKUMA.123456_LAux1_BarFeederSystem1.html OKUMA.123456_LAux1_BarFeederSystem1]], vendor:[[../OKUMA.html#OKUMA.123456LAux1BarFeederSystem1 OKUMA.123456LAux1BarFeederSystem1]])
+individual(o28, data:[[./OKUMA.123456_enclosure.html OKUMA.123456_enclosure]], vendor:[[../OKUMA.html#OKUMA.123456enclosure OKUMA.123456enclosure]])
+property(o0, "bfo:has_member_part_at_some_time", o1)
+property(o0, "bfo:has_member_part_at_some_time", o2)
+property(o0, "bfo:has_member_part_at_some_time", o3)
+property(o0, "bfo:has_member_part_at_some_time", o4)
+property(o0, "bfo:has_member_part_at_some_time", o5)
+property(o0, "bfo:has_member_part_at_some_time", o6)
+property(o0, "bfo:has_member_part_at_some_time", o7)
+property(o0, "bfo:has_member_part_at_some_time", o8)
+property(o0, "bfo:has_member_part_at_some_time", o9)
+property(o0, "bfo:has_member_part_at_some_time", o10)
+property(o0, "bfo:has_member_part_at_some_time", o11)
+property(o0, "bfo:has_member_part_at_some_time", o12)
+property(o0, "bfo:has_member_part_at_some_time", o13)
+property(o0, "bfo:has_member_part_at_some_time", o14)
+property(o0, "bfo:has_member_part_at_some_time", o15)
+property(o0, "bfo:has_member_part_at_some_time", o16)
+property(o0, "bfo:has_member_part_at_some_time", o17)
+property(o17, "bfo:has_member_part_at_some_time", o18)
+property(o0, "bfo:has_member_part_at_some_time", o19)
+property(o0, "bfo:has_member_part_at_some_time", o20)
+property(o0, "bfo:has_member_part_at_some_time", o21)
+property(o0, "bfo:has_member_part_at_some_time", o22)
+property(o0, "bfo:has_member_part_at_some_time", o23)
+property(o0, "bfo:has_member_part_at_some_time", o24)
+property(o0, "bfo:has_member_part_at_some_time", o25)
+property(o0, "bfo:has_member_part_at_some_time", o26)
+property(o0, "bfo:has_member_part_at_some_time", o27)
+property(o0, "bfo:has_member_part_at_some_time", o28)
+@enduml
