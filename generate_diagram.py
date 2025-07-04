@@ -28,7 +28,11 @@ class GenerateDiagram:
       'https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/': 'qualphys',
       'http://example.org/data/': 'data',
       f"http://example.org/{vendor}/": 'vendor',
-      "http://example.org/ontology/": 'ex'
+      "http://example.org/ontology/": 'ex',
+      "http://www.w3.org/2002/07/owl#": 'owl',
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#": 'rdf',
+      "http://www.w3.org/2001/XMLSchema#": 'xsd',
+      "http://www.w3.org/2000/01/rdf-schema#": 'rdfs'
     }
     
     for s, p, o in statements:
@@ -37,19 +41,28 @@ class GenerateDiagram:
         if not isinstance(o, (str, int, float, owl.locstr)): self._add_object(o)
         
   def _name(self, o):
+    if isinstance(o, (float, str, owl.locstr)):
+      return o
+    
     name = None
     ns = None
     if isinstance(o, (int)):
       iri = owl.default_world._unabbreviate(o)
+      if not iri:
+        return o
+      
       if '#' in iri:
-        ns, name = iri.split('#')
+        ns, name = iri.rsplit('#', 1)
+        ns += '#'
       else:
-        parts = iri.split('/')
-        ns = '/'.join(parts[:-1]) + '/'
-        name = parts[-1]
-    else:
+        ns, name = iri.rsplit('/', 1)
+        ns += '/'
+    else:      
       ns = o.namespace.base_iri
-      name = o.name
+      if o.namespace.base_iri == BFO.base_iri:
+        name = o._python_name
+      else:
+        name = o.name
 
     pre = self.namespaces.get(ns, "uns")
         
@@ -74,9 +87,9 @@ class GenerateDiagram:
   def _print_statement(self, f, s, p, o):
     if p != ob.rdf_type and o != ob.rdf_nil:
       if isinstance(o, (int, str, float)):
-        f.write(f"data({self._obj(s)}, \"{p}\", \"{o}\")\n")
+        f.write(f"data({self._obj(s)}, \"{self._name(p)}\", \"{self._name(o)}\")\n")
       else:
-        f.write(f"property({self._obj(s)}, \"{p}\", {self._obj(o)})\n")
+        f.write(f"property({self._obj(s)}, \"{self._name(p)}\", {self._obj(o)})\n")
   
   def _generate_html(self):
     with open(f"diagrams/{self.filename}.html", 'w') as f:

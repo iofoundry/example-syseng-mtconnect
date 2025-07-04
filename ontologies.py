@@ -5,14 +5,14 @@ import re
 # owl.default_world.set_backend(filename = "./ontologies.sqlite3")
 
 path = os.path.dirname(os.path.abspath(__file__))
-cache = f"{path}/../cache"
+cache = f"{path}/cache"
 
 print("Loading ontologies")
 owl.onto_path.append(f"file:///{cache}")
 owl.onto_path.append(f"file:///{path}")
 
 BFO = owl.get_ontology(f"file:///{cache}/bfo.rdf").load(only_local = True)
-BFO.base_iri = "http://purl.obolibrary.org/obo/bfo.owl"
+BFO.base_iri = "http://purl.obolibrary.org/obo/"
 Core = owl.get_ontology(f"file:///{cache}/Core.rdf").load(only_local = True)
 Core.base_iri = "https://spec.industrialontologies.org/ontology/core/Core/"
 AnnVocab = owl.get_ontology(f"file:///{cache}/AnnotationVocabulary.rdf").load(only_local = True)
