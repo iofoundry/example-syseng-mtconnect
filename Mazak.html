@@ -35,171 +35,254 @@ h2 {
     </style>
   </head>
   <body>
-<h1 class='section-divider'>Complete Diagram</h1>
-<ul><li><a href='diagrams/MazakFull.html'>Mazak</a></li></ul><h1 class='section-divider'>Topology Diagram</h1>
-<ul><li><a href='diagrams/MazakTopo.html'>Mazak Topology</a></li></ul><h1 class='section-divider'>Mereology Diagram</h1>
-<ul><li><a href='diagrams/MazakMere.html'>Mazak Mereology</a></li></ul><h1 class='section-divider'>Part Diagrams</h1>
-<ul><li><a href='diagrams/Mazak.html'>Mazak</a></li>
-<li><a href='diagrams/Mazak_mstruct_X_AXIS.html'>Mazak_mstruct_X_AXIS</a></li>
-<li><a href='diagrams/Mazak_mstruct_Y_AXIS.html'>Mazak_mstruct_Y_AXIS</a></li>
-<li><a href='diagrams/Mazak_mstruct_Z_AXIS.html'>Mazak_mstruct_Z_AXIS</a></li>
-<li><a href='diagrams/Mazak_mstruct_TABLE.html'>Mazak_mstruct_TABLE</a></li>
-<li><a href='diagrams/Mazak_mstruct_TRUNDLE.html'>Mazak_mstruct_TRUNDLE</a></li>
-<li><a href='diagrams/Mazak_base_X.html'>Mazak_base_X</a></li>
-<li><a href='diagrams/Mazak_base_X_Xballscrew.html'>Mazak_base_X_Xballscrew</a></li>
-<li><a href='diagrams/Mazak_base_X_Xmotor.html'>Mazak_base_X_Xmotor</a></li>
-<li><a href='diagrams/Mazak_base_Y.html'>Mazak_base_Y</a></li>
-<li><a href='diagrams/Mazak_base_Y_Yballscrew.html'>Mazak_base_Y_Yballscrew</a></li>
-<li><a href='diagrams/Mazak_base_Y_Ymotor.html'>Mazak_base_Y_Ymotor</a></li>
-<li><a href='diagrams/Mazak_base_Z.html'>Mazak_base_Z</a></li>
-<li><a href='diagrams/Mazak_base_Z_Zballscrew.html'>Mazak_base_Z_Zballscrew</a></li>
-<li><a href='diagrams/Mazak_base_Z_Zmotor.html'>Mazak_base_Z_Zmotor</a></li>
-<li><a href='diagrams/Mazak_base_C1.html'>Mazak_base_C1</a></li>
-<li><a href='diagrams/Mazak_base_C1_Cmotor.html'>Mazak_base_C1_Cmotor</a></li>
-<li><a href='diagrams/Mazak_base_B.html'>Mazak_base_B</a></li>
-<li><a href='diagrams/Mazak_base_B_Bmotor.html'>Mazak_base_B_Bmotor</a></li>
-<li><a href='diagrams/Mazak_base_C2.html'>Mazak_base_C2</a></li>
-<li><a href='diagrams/Mazak_base_C2_C2motor.html'>Mazak_base_C2_C2motor</a></li>
-<li><a href='diagrams/Mazak_controller.html'>Mazak_controller</a></li>
-<li><a href='diagrams/Mazak_controller_path.html'>Mazak_controller_path</a></li>
-<li><a href='diagrams/Mazak_door.html'>Mazak_door</a></li>
-<li><a href='diagrams/Mazak_parts_partocc.html'>Mazak_parts_partocc</a></li>
-<li><a href='diagrams/Mazak_systems_electric.html'>Mazak_systems_electric</a></li>
-<li><a href='diagrams/Mazak_systems_hydraulic.html'>Mazak_systems_hydraulic</a></li>
-<li><a href='diagrams/Mazak_systems_coolant.html'>Mazak_systems_coolant</a></li>
-<li><a href='diagrams/Mazak_systems_pneumatic.html'>Mazak_systems_pneumatic</a></li>
-<li><a href='diagrams/Mazak_systems_lubrication.html'>Mazak_systems_lubrication</a></li>
-<li><a href='diagrams/Mazak_auxiliaries_environmental.html'>Mazak_auxiliaries_environmental</a></li>
-<li><a href='diagrams/Mazak_resources_materials_stock.html'>Mazak_resources_materials_stock</a></li>
-<li><a href='diagrams/Mazak_enclosure.html'>Mazak_enclosure</a></li>
-</ul>
-<h1 class='section-divider'>Classes</h1>
-<div class='indent'><h2 id=Mazak>Mazak</h2><ul><li class='axiom'>
-Mazak ⊑ Machine</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructX_AXIS</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructY_AXIS</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructZ_AXIS</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructTABLE</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructTRUNDLE</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseX</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseY</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseZ</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseC1</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseB</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseC2</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakcontroller</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakdoor</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakpartspartocc</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemselectric</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemshydraulic</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemscoolant</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemspneumatic</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemslubrication</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakauxiliariesenvironmental</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakresourcesmaterialsstock</li>
-<li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakenclosure</li></ul>
-<h2 id=MazakmstructX_AXIS>MazakmstructX_AXIS</h2><ul><li class='axiom'>
-MazakmstructX_AXIS ⊑ Structure</li></ul>
-<h2 id=MazakmstructY_AXIS>MazakmstructY_AXIS</h2><ul><li class='axiom'>
-MazakmstructY_AXIS ⊑ Structure</li></ul>
-<h2 id=MazakmstructZ_AXIS>MazakmstructZ_AXIS</h2><ul><li class='axiom'>
-MazakmstructZ_AXIS ⊑ Structure</li></ul>
-<h2 id=MazakmstructTABLE>MazakmstructTABLE</h2><ul><li class='axiom'>
-MazakmstructTABLE ⊑ Structure</li></ul>
-<h2 id=MazakmstructTRUNDLE>MazakmstructTRUNDLE</h2><ul><li class='axiom'>
-MazakmstructTRUNDLE ⊑ Structure</li></ul>
-<h2 id=MazakbaseX>MazakbaseX</h2><ul><li class='axiom'>
-MazakbaseX ⊑ LinearMotionSystem</li>
-<li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∃ conformsTo .MazakbaseXDesign</li>
-<li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∃ hasQuality .Length ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 650.0 , ≥ 650.0]</li>
-<li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∀ BFO_0000056 .PrismaticRapidVelocity ⊓ ∃ hasSpecifiedOutput .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 7000.0 , ≥ 1.0]</li>
-<li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseXXballscrew</li>
-<li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseXXmotor</li></ul>
-<h2 id=MazakbaseXXballscrew>MazakbaseXXballscrew</h2><ul><li class='axiom'>
-MazakbaseXXballscrew ⊑ Ballscrew</li></ul>
-<h2 id=MazakbaseXXmotor>MazakbaseXXmotor</h2><ul><li class='axiom'>
-MazakbaseXXmotor ⊑ Motor</li></ul>
-<h2 id=MazakbaseXDesign>MazakbaseXDesign</h2><ul><li class='axiom'>
-MazakbaseXDesign ⊑ DesignSpecification</li></ul>
-<h2 id=MazakbaseY>MazakbaseY</h2><ul><li class='axiom'>
-MazakbaseY ⊑ LinearMotionSystem</li>
-<li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∃ conformsTo .MazakbaseYDesign</li>
-<li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∃ hasQuality .Length ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 550.0 , ≥ 550.0]</li>
-<li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∀ BFO_0000056 .PrismaticRapidVelocity ⊓ ∃ hasSpecifiedOutput .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 7000.0 , ≥ 1.0]</li>
-<li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseYYballscrew</li>
-<li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseYYmotor</li></ul>
-<h2 id=MazakbaseYYballscrew>MazakbaseYYballscrew</h2><ul><li class='axiom'>
-MazakbaseYYballscrew ⊑ Ballscrew</li></ul>
-<h2 id=MazakbaseYYmotor>MazakbaseYYmotor</h2><ul><li class='axiom'>
-MazakbaseYYmotor ⊑ Motor</li></ul>
-<h2 id=MazakbaseYDesign>MazakbaseYDesign</h2><ul><li class='axiom'>
-MazakbaseYDesign ⊑ DesignSpecification</li></ul>
-<h2 id=MazakbaseZ>MazakbaseZ</h2><ul><li class='axiom'>
-MazakbaseZ ⊑ LinearMotionSystem</li>
-<li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∃ conformsTo .MazakbaseZDesign</li>
-<li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∃ hasQuality .Length ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 530.0 , ≥ 530.0]</li>
-<li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∀ BFO_0000056 .PrismaticRapidVelocity ⊓ ∃ hasSpecifiedOutput .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 7000.0 , ≥ 1.0]</li>
-<li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseZZballscrew</li>
-<li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseZZmotor</li></ul>
-<h2 id=MazakbaseZZballscrew>MazakbaseZZballscrew</h2><ul><li class='axiom'>
-MazakbaseZZballscrew ⊑ Ballscrew</li></ul>
-<h2 id=MazakbaseZZmotor>MazakbaseZZmotor</h2><ul><li class='axiom'>
-MazakbaseZZmotor ⊑ Motor</li></ul>
-<h2 id=MazakbaseZDesign>MazakbaseZDesign</h2><ul><li class='axiom'>
-MazakbaseZDesign ⊑ DesignSpecification</li></ul>
-<h2 id=MazakbaseC1>MazakbaseC1</h2><ul><li class='axiom'>
-MazakbaseC1 ⊑ RotaryMotionSystem</li>
-<li class='axiom'>MazakbaseC1 ⊑ RotaryMotionSystem ⊓ ∃ conformsTo .MazakbaseC1Design</li>
-<li class='axiom'>MazakbaseC1 ⊑ RotaryMotionSystem ⊓ ∀ BFO_0000056 .RevoluteVelocity ⊓ ∃ hasSpecifiedOutput .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 12000.0]</li>
-<li class='axiom'>MazakbaseC1 ⊑ RotaryMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseC1Cmotor</li></ul>
-<h2 id=MazakbaseC1Cmotor>MazakbaseC1Cmotor</h2><ul><li class='axiom'>
-MazakbaseC1Cmotor ⊑ Motor</li></ul>
-<h2 id=MazakbaseC1Design>MazakbaseC1Design</h2><ul><li class='axiom'>
-MazakbaseC1Design ⊑ DesignSpecification</li></ul>
-<h2 id=MazakbaseB>MazakbaseB</h2><ul><li class='axiom'>
-MazakbaseB ⊑ RotaryMotionSystem</li>
-<li class='axiom'>MazakbaseB ⊑ RotaryMotionSystem ⊓ ∃ conformsTo .MazakbaseBDesign</li>
-<li class='axiom'>MazakbaseB ⊑ RotaryMotionSystem ⊓ ∃ hasQuality .Angle ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 120.0 , ≥ -30.0]</li>
-<li class='axiom'>MazakbaseB ⊑ RotaryMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseBBmotor</li></ul>
-<h2 id=MazakbaseBBmotor>MazakbaseBBmotor</h2><ul><li class='axiom'>
-MazakbaseBBmotor ⊑ Motor</li></ul>
-<h2 id=MazakbaseBDesign>MazakbaseBDesign</h2><ul><li class='axiom'>
-MazakbaseBDesign ⊑ DesignSpecification</li></ul>
-<h2 id=MazakbaseC2>MazakbaseC2</h2><ul><li class='axiom'>
-MazakbaseC2 ⊑ RotaryMotionSystem</li>
-<li class='axiom'>MazakbaseC2 ⊑ RotaryMotionSystem ⊓ ∃ conformsTo .MazakbaseC2Design</li>
-<li class='axiom'>MazakbaseC2 ⊑ RotaryMotionSystem ⊓ ∃ hasQuality .Angle ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 360.0 , ≥ -360.0]</li>
-<li class='axiom'>MazakbaseC2 ⊑ RotaryMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseC2C2motor</li></ul>
-<h2 id=MazakbaseC2C2motor>MazakbaseC2C2motor</h2><ul><li class='axiom'>
-MazakbaseC2C2motor ⊑ Motor</li></ul>
-<h2 id=MazakbaseC2Design>MazakbaseC2Design</h2><ul><li class='axiom'>
-MazakbaseC2Design ⊑ DesignSpecification</li></ul>
-<h2 id=Mazakcontroller>Mazakcontroller</h2><ul><li class='axiom'>
-Mazakcontroller ⊑ ControlSystem</li>
-<li class='axiom'>Mazakcontroller ⊑ ControlSystem ⊓ ∃ hasComponentPartAtAllTimes .Mazakcontrollerpath</li></ul>
-<h2 id=Mazakcontrollerpath>Mazakcontrollerpath</h2><ul><li class='axiom'>
-Mazakcontrollerpath ⊑ ControlSystemPath</li></ul>
-<h2 id=Mazakdoor>Mazakdoor</h2><ul><li class='axiom'>
-Mazakdoor ⊑ BFO_0000030</li></ul>
-<h2 id=Mazakpartspartocc>Mazakpartspartocc</h2><ul><li class='axiom'>
-Mazakpartspartocc ⊑ Part</li></ul>
-<h2 id=Mazaksystemselectric>Mazaksystemselectric</h2><ul><li class='axiom'>
-Mazaksystemselectric ⊑ ElectricalSystem</li></ul>
-<h2 id=Mazaksystemshydraulic>Mazaksystemshydraulic</h2><ul><li class='axiom'>
-Mazaksystemshydraulic ⊑ HydraulicSystem</li></ul>
-<h2 id=Mazaksystemscoolant>Mazaksystemscoolant</h2><ul><li class='axiom'>
-Mazaksystemscoolant ⊑ BFO_0000030</li></ul>
-<h2 id=Mazaksystemspneumatic>Mazaksystemspneumatic</h2><ul><li class='axiom'>
-Mazaksystemspneumatic ⊑ PneumaticSystem</li></ul>
-<h2 id=Mazaksystemslubrication>Mazaksystemslubrication</h2><ul><li class='axiom'>
-Mazaksystemslubrication ⊑ LubricationSystem</li></ul>
-<h2 id=Mazakauxiliariesenvironmental>Mazakauxiliariesenvironmental</h2><ul><li class='axiom'>
-Mazakauxiliariesenvironmental ⊑ Room</li></ul>
-<h2 id=Mazakresourcesmaterialsstock>Mazakresourcesmaterialsstock</h2><ul><li class='axiom'>
-Mazakresourcesmaterialsstock ⊑ Stock</li></ul>
-<h2 id=Mazakenclosure>Mazakenclosure</h2><ul><li class='axiom'>
-Mazakenclosure ⊑ Structure</li></ul>
-</div>
+    <h1 class='section-divider'>Complete Diagram</h1>
+    <ul><li><a href='diagrams/MazakFull.html'>Mazak</a></li></ul>
+    <h1 class='section-divider'>Topology Diagram</h1>
+    <ul><li><a href='diagrams/MazakTopo.html'>Mazak Topology</a></li></ul>
+    <h1 class='section-divider'>Mereology Diagram</h1>
+    <ul><li><a href='diagrams/MazakMere.html'>Mazak Mereology</a></li></ul>
+    <h1 class='section-divider'>Part Diagrams</h1>
+    <ul>
+      <li><a href='diagrams/Mazak.html'>Mazak</a></li>
+      <li><a href='diagrams/Mazak_mstruct_X_AXIS.html'>Mazak_mstruct_X_AXIS</a></li>
+      <li><a href='diagrams/Mazak_mstruct_Y_AXIS.html'>Mazak_mstruct_Y_AXIS</a></li>
+      <li><a href='diagrams/Mazak_mstruct_Z_AXIS.html'>Mazak_mstruct_Z_AXIS</a></li>
+      <li><a href='diagrams/Mazak_mstruct_TABLE.html'>Mazak_mstruct_TABLE</a></li>
+      <li><a href='diagrams/Mazak_mstruct_TRUNDLE.html'>Mazak_mstruct_TRUNDLE</a></li>
+      <li><a href='diagrams/Mazak_base_X.html'>Mazak_base_X</a></li>
+      <li><a href='diagrams/Mazak_base_X_Xballscrew.html'>Mazak_base_X_Xballscrew</a></li>
+      <li><a href='diagrams/Mazak_base_X_Xmotor.html'>Mazak_base_X_Xmotor</a></li>
+      <li><a href='diagrams/Mazak_base_Y.html'>Mazak_base_Y</a></li>
+      <li><a href='diagrams/Mazak_base_Y_Yballscrew.html'>Mazak_base_Y_Yballscrew</a></li>
+      <li><a href='diagrams/Mazak_base_Y_Ymotor.html'>Mazak_base_Y_Ymotor</a></li>
+      <li><a href='diagrams/Mazak_base_Z.html'>Mazak_base_Z</a></li>
+      <li><a href='diagrams/Mazak_base_Z_Zballscrew.html'>Mazak_base_Z_Zballscrew</a></li>
+      <li><a href='diagrams/Mazak_base_Z_Zmotor.html'>Mazak_base_Z_Zmotor</a></li>
+      <li><a href='diagrams/Mazak_base_C1.html'>Mazak_base_C1</a></li>
+      <li><a href='diagrams/Mazak_base_C1_Cmotor.html'>Mazak_base_C1_Cmotor</a></li>
+      <li><a href='diagrams/Mazak_base_B.html'>Mazak_base_B</a></li>
+      <li><a href='diagrams/Mazak_base_B_Bmotor.html'>Mazak_base_B_Bmotor</a></li>
+      <li><a href='diagrams/Mazak_base_C2.html'>Mazak_base_C2</a></li>
+      <li><a href='diagrams/Mazak_base_C2_C2motor.html'>Mazak_base_C2_C2motor</a></li>
+      <li><a href='diagrams/Mazak_controller.html'>Mazak_controller</a></li>
+      <li><a href='diagrams/Mazak_controller_path.html'>Mazak_controller_path</a></li>
+      <li><a href='diagrams/Mazak_door.html'>Mazak_door</a></li>
+      <li><a href='diagrams/Mazak_parts_partocc.html'>Mazak_parts_partocc</a></li>
+      <li><a href='diagrams/Mazak_systems_electric.html'>Mazak_systems_electric</a></li>
+      <li><a href='diagrams/Mazak_systems_hydraulic.html'>Mazak_systems_hydraulic</a></li>
+      <li><a href='diagrams/Mazak_systems_coolant.html'>Mazak_systems_coolant</a></li>
+      <li><a href='diagrams/Mazak_systems_pneumatic.html'>Mazak_systems_pneumatic</a></li>
+      <li><a href='diagrams/Mazak_systems_lubrication.html'>Mazak_systems_lubrication</a></li>
+      <li><a href='diagrams/Mazak_auxiliaries_environmental.html'>Mazak_auxiliaries_environmental</a></li>
+      <li><a href='diagrams/Mazak_resources_materials_stock.html'>Mazak_resources_materials_stock</a></li>
+      <li><a href='diagrams/Mazak_enclosure.html'>Mazak_enclosure</a></li>
+    </ul>
+    <h1 class='section-divider'>Classes</h1>
+    <div class='indent'>
+      <h2 id=Mazak>Mazak</h2>
+      <ul>
+        <li class='axiom'>Mazak ⊑ Machine</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructX_AXIS</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructY_AXIS</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructZ_AXIS</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructTABLE</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakmstructTRUNDLE</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseX</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseY</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseZ</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseC1</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseB</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseC2</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakcontroller</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakdoor</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakpartspartocc</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemselectric</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemshydraulic</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemscoolant</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemspneumatic</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazaksystemslubrication</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakauxiliariesenvironmental</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakresourcesmaterialsstock</li>
+        <li class='axiom'>Mazak ⊑ Machine ⊓ ∃ hasComponentPartAtAllTimes .Mazakenclosure</li>
+      </ul>
+      <h2 id=MazakmstructX_AXIS>MazakmstructX_AXIS</h2>
+      <ul>
+        <li class='axiom'>MazakmstructX_AXIS ⊑ Structure</li>
+      </ul>
+      <h2 id=MazakmstructY_AXIS>MazakmstructY_AXIS</h2>
+      <ul>
+        <li class='axiom'>MazakmstructY_AXIS ⊑ Structure</li>
+      </ul>
+      <h2 id=MazakmstructZ_AXIS>MazakmstructZ_AXIS</h2>
+      <ul>
+        <li class='axiom'>MazakmstructZ_AXIS ⊑ Structure</li>
+      </ul>
+      <h2 id=MazakmstructTABLE>MazakmstructTABLE</h2>
+      <ul>
+        <li class='axiom'>MazakmstructTABLE ⊑ Structure</li>
+      </ul>
+      <h2 id=MazakmstructTRUNDLE>MazakmstructTRUNDLE</h2>
+      <ul>
+        <li class='axiom'>MazakmstructTRUNDLE ⊑ Structure</li>
+      </ul>
+      <h2 id=MazakbaseX>MazakbaseX</h2>
+      <ul>
+        <li class='axiom'>MazakbaseX ⊑ LinearMotionSystem</li>
+        <li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∃ conformsTo .MazakbaseXDesign</li>
+        <li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∃ hasQuality .Length ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 650.0 , ≥ 650.0]</li>
+        <li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∀ BFO_0000056 .PrismaticRapidVelocity ⊓ ∃ hasSpecifiedOutput .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 7000.0 , ≥ 1.0]</li>
+        <li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseXXballscrew</li>
+        <li class='axiom'>MazakbaseX ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseXXmotor</li>
+      </ul>
+      <h2 id=MazakbaseXXballscrew>MazakbaseXXballscrew</h2>
+      <ul>
+        <li class='axiom'>MazakbaseXXballscrew ⊑ Ballscrew</li>
+      </ul>
+      <h2 id=MazakbaseXXmotor>MazakbaseXXmotor</h2>
+      <ul>
+        <li class='axiom'>MazakbaseXXmotor ⊑ Motor</li>
+      </ul>
+      <h2 id=MazakbaseXDesign>MazakbaseXDesign</h2>
+      <ul>
+        <li class='axiom'>MazakbaseXDesign ⊑ DesignSpecification</li>
+      </ul>
+      <h2 id=MazakbaseY>MazakbaseY</h2>
+      <ul>
+        <li class='axiom'>MazakbaseY ⊑ LinearMotionSystem</li>
+        <li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∃ conformsTo .MazakbaseYDesign</li>
+        <li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∃ hasQuality .Length ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 550.0 , ≥ 550.0]</li>
+        <li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∀ BFO_0000056 .PrismaticRapidVelocity ⊓ ∃ hasSpecifiedOutput .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 7000.0 , ≥ 1.0]</li>
+        <li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseYYballscrew</li>
+        <li class='axiom'>MazakbaseY ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseYYmotor</li>
+      </ul>
+      <h2 id=MazakbaseYYballscrew>MazakbaseYYballscrew</h2>
+      <ul>
+        <li class='axiom'>MazakbaseYYballscrew ⊑ Ballscrew</li>
+      </ul>
+      <h2 id=MazakbaseYYmotor>MazakbaseYYmotor</h2>
+      <ul>
+        <li class='axiom'>MazakbaseYYmotor ⊑ Motor</li>
+      </ul>
+      <h2 id=MazakbaseYDesign>MazakbaseYDesign</h2>
+      <ul>
+        <li class='axiom'>MazakbaseYDesign ⊑ DesignSpecification</li>
+      </ul>
+      <h2 id=MazakbaseZ>MazakbaseZ</h2>
+      <ul>
+        <li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem</li>
+        <li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∃ conformsTo .MazakbaseZDesign</li>
+        <li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∃ hasQuality .Length ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 530.0 , ≥ 530.0]</li>
+        <li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∀ BFO_0000056 .PrismaticRapidVelocity ⊓ ∃ hasSpecifiedOutput .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 7000.0 , ≥ 1.0]</li>
+        <li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseZZballscrew</li>
+        <li class='axiom'>MazakbaseZ ⊑ LinearMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseZZmotor</li>
+      </ul>
+      <h2 id=MazakbaseZZballscrew>MazakbaseZZballscrew</h2>
+      <ul>
+        <li class='axiom'>MazakbaseZZballscrew ⊑ Ballscrew</li>
+      </ul>
+      <h2 id=MazakbaseZZmotor>MazakbaseZZmotor</h2>
+      <ul>
+        <li class='axiom'>MazakbaseZZmotor ⊑ Motor</li>
+      </ul>
+      <h2 id=MazakbaseZDesign>MazakbaseZDesign</h2>
+      <ul>
+        <li class='axiom'>MazakbaseZDesign ⊑ DesignSpecification</li>
+      </ul>
+      <h2 id=MazakbaseC1>MazakbaseC1</h2>
+      <ul>
+        <li class='axiom'>MazakbaseC1 ⊑ RotaryMotionSystem</li>
+        <li class='axiom'>MazakbaseC1 ⊑ RotaryMotionSystem ⊓ ∃ conformsTo .MazakbaseC1Design</li>
+        <li class='axiom'>MazakbaseC1 ⊑ RotaryMotionSystem ⊓ ∀ BFO_0000056 .RevoluteVelocity ⊓ ∃ hasSpecifiedOutput .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 12000.0]</li>
+        <li class='axiom'>MazakbaseC1 ⊑ RotaryMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseC1Cmotor</li>
+      </ul>
+      <h2 id=MazakbaseC1Cmotor>MazakbaseC1Cmotor</h2>
+      <ul>
+        <li class='axiom'>MazakbaseC1Cmotor ⊑ Motor</li>
+      </ul>
+      <h2 id=MazakbaseC1Design>MazakbaseC1Design</h2>
+      <ul>
+        <li class='axiom'>MazakbaseC1Design ⊑ DesignSpecification</li>
+      </ul>
+      <h2 id=MazakbaseB>MazakbaseB</h2>
+      <ul>
+        <li class='axiom'>MazakbaseB ⊑ RotaryMotionSystem</li>
+        <li class='axiom'>MazakbaseB ⊑ RotaryMotionSystem ⊓ ∃ conformsTo .MazakbaseBDesign</li>
+        <li class='axiom'>MazakbaseB ⊑ RotaryMotionSystem ⊓ ∃ hasQuality .Angle ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 120.0 , ≥ -30.0]</li>
+        <li class='axiom'>MazakbaseB ⊑ RotaryMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseBBmotor</li>
+      </ul>
+      <h2 id=MazakbaseBBmotor>MazakbaseBBmotor</h2>
+      <ul>
+        <li class='axiom'>MazakbaseBBmotor ⊑ Motor</li>
+      </ul>
+      <h2 id=MazakbaseBDesign>MazakbaseBDesign</h2>
+      <ul>
+        <li class='axiom'>MazakbaseBDesign ⊑ DesignSpecification</li>
+      </ul>
+      <h2 id=MazakbaseC2>MazakbaseC2</h2>
+      <ul>
+        <li class='axiom'>MazakbaseC2 ⊑ RotaryMotionSystem</li>
+        <li class='axiom'>MazakbaseC2 ⊑ RotaryMotionSystem ⊓ ∃ conformsTo .MazakbaseC2Design</li>
+        <li class='axiom'>MazakbaseC2 ⊑ RotaryMotionSystem ⊓ ∃ hasQuality .Angle ⊓ ∀ hasMeasuredValueAtSomeTime .MeasuredValueExpression ⊓ ∃ hasSimpleExpressionValue .float[≤ 360.0 , ≥ -360.0]</li>
+        <li class='axiom'>MazakbaseC2 ⊑ RotaryMotionSystem ⊓ ∃ hasComponentPartAtAllTimes .MazakbaseC2C2motor</li>
+      </ul>
+      <h2 id=MazakbaseC2C2motor>MazakbaseC2C2motor</h2>
+      <ul>
+        <li class='axiom'>MazakbaseC2C2motor ⊑ Motor</li>
+      </ul>
+      <h2 id=MazakbaseC2Design>MazakbaseC2Design</h2>
+      <ul>
+        <li class='axiom'>MazakbaseC2Design ⊑ DesignSpecification</li>
+      </ul>
+      <h2 id=Mazakcontroller>Mazakcontroller</h2>
+      <ul>
+        <li class='axiom'>Mazakcontroller ⊑ ControlSystem</li>
+        <li class='axiom'>Mazakcontroller ⊑ ControlSystem ⊓ ∃ hasComponentPartAtAllTimes .Mazakcontrollerpath</li>
+      </ul>
+      <h2 id=Mazakcontrollerpath>Mazakcontrollerpath</h2>
+      <ul>
+        <li class='axiom'>Mazakcontrollerpath ⊑ ControlSystemPath</li>
+      </ul>
+      <h2 id=Mazakdoor>Mazakdoor</h2>
+      <ul>
+        <li class='axiom'>Mazakdoor ⊑ BFO_0000030</li>
+      </ul>
+      <h2 id=Mazakpartspartocc>Mazakpartspartocc</h2>
+      <ul>
+        <li class='axiom'>Mazakpartspartocc ⊑ Part</li>
+      </ul>
+      <h2 id=Mazaksystemselectric>Mazaksystemselectric</h2>
+      <ul>
+        <li class='axiom'>Mazaksystemselectric ⊑ ElectricalSystem</li>
+      </ul>
+      <h2 id=Mazaksystemshydraulic>Mazaksystemshydraulic</h2>
+      <ul>
+        <li class='axiom'>Mazaksystemshydraulic ⊑ HydraulicSystem</li>
+      </ul>
+      <h2 id=Mazaksystemscoolant>Mazaksystemscoolant</h2>
+      <ul>
+        <li class='axiom'>Mazaksystemscoolant ⊑ BFO_0000030</li>
+      </ul>
+      <h2 id=Mazaksystemspneumatic>Mazaksystemspneumatic</h2>
+      <ul>
+        <li class='axiom'>Mazaksystemspneumatic ⊑ PneumaticSystem</li>
+      </ul>
+      <h2 id=Mazaksystemslubrication>Mazaksystemslubrication</h2>
+      <ul>
+        <li class='axiom'>Mazaksystemslubrication ⊑ LubricationSystem</li>
+      </ul>
+      <h2 id=Mazakauxiliariesenvironmental>Mazakauxiliariesenvironmental</h2>
+      <ul>
+        <li class='axiom'>Mazakauxiliariesenvironmental ⊑ Room</li>
+      </ul>
+      <h2 id=Mazakresourcesmaterialsstock>Mazakresourcesmaterialsstock</h2>
+      <ul>
+        <li class='axiom'>Mazakresourcesmaterialsstock ⊑ Stock</li>
+      </ul>
+      <h2 id=Mazakenclosure>Mazakenclosure</h2>
+      <ul>
+        <li class='axiom'>Mazakenclosure ⊑ Structure</li>
+      </ul>
 
+    </div>
   </body>
 </html>

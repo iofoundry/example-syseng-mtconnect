@@ -112,27 +112,29 @@ h2 {{
     </style>
   </head>
   <body>
+    <h1 class='section-divider'>Complete Diagram</h1>
+    <ul><li><a href='diagrams/{Vendor.name}Full.html'>{Vendor.name}</a></li></ul>
+    <h1 class='section-divider'>Topology Diagram</h1>
+    <ul><li><a href='diagrams/{Vendor.name}Topo.html'>{Vendor.name} Topology</a></li></ul>
+    <h1 class='section-divider'>Mereology Diagram</h1>
+    <ul><li><a href='diagrams/{Vendor.name}Mere.html'>{Vendor.name} Mereology</a></li></ul>
+    <h1 class='section-divider'>Part Diagrams</h1>
+    <ul>
 """)
-    f.write("<h1 class='section-divider'>Complete Diagram</h1>\n")
-    f.write(f"<ul><li><a href='diagrams/{Vendor.name}Full.html'>{Vendor.name}</a></li></ul>")
-    f.write("<h1 class='section-divider'>Topology Diagram</h1>\n")
-    f.write(f"<ul><li><a href='diagrams/{Vendor.name}Topo.html'>{Vendor.name} Topology</a></li></ul>")
-    f.write("<h1 class='section-divider'>Mereology Diagram</h1>\n")
-    f.write(f"<ul><li><a href='diagrams/{Vendor.name}Mere.html'>{Vendor.name} Mereology</a></li></ul>")
-    f.write("<h1 class='section-divider'>Part Diagrams</h1>\n<ul>")
     for e in entities:
-        f.write(f"<li><a href='diagrams/{e.name}.html'>{e.name}</a></li>\n")
-    f.write("</ul>\n")
-    f.write("<h1 class='section-divider'>Classes</h1>\n")
-    f.write("<div class='indent'>")
+        f.write(f"      <li><a href='diagrams/{e.name}.html'>{e.name}</a></li>\n")
+    f.write("""    </ul>
+    <h1 class='section-divider'>Classes</h1>
+    <div class='indent'>
+""")
     for cls in Vendor.classes():
-        f.write(f"<h2 id={cls.name}>{cls.name}</h2>")
-        f.write("<ul><li class='axiom'>\n")
+        f.write(f"      <h2 id={cls.name}>{cls.name}</h2>\n")
+        f.write("      <ul>\n        <li class='axiom'>")
         axioms = dl_render_class_str(cls)
-        f.write("</li>\n<li class='axiom'>".join([x for x in axioms.splitlines()]))
-        f.write("</li></ul>\n")
-    f.write("</div>\n")
+        f.write("</li>\n        <li class='axiom'>".join([x for x in axioms.splitlines()]))
+        f.write("</li>\n      </ul>\n")
     f.write("""
+    </div>
   </body>
 </html>
 """)
