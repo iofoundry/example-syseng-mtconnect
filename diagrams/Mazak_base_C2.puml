@@ -1,0 +1,61 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak_base_C2
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak_base_C2.html Mazak_base_C2]], vendor:[[../Mazak.html#MazakbaseC2 MazakbaseC2]])
+individual(o1, data:mazakbasec2design1, vendor:[[../Mazak.html#MazakbaseC2Design MazakbaseC2Design]])
+individual(o2, data:Mazak_base_C2ANGLEMaximum, core:ValueExpression)
+individual(o3, data:Mazak_base_C2ANGLEMinimum, core:ValueExpression)
+individual(o4, data:Mazak_base_C2TORQUEMaximum, core:ValueExpression)
+individual(o5, data:Mazak_base_C2TORQUEMinimum, core:ValueExpression)
+individual(o6, data:Mazak_base_C2RevoluteMotionCapability, ex:RevoluteMotionCapability)
+individual(o7, data:Mazak_base_C2ANGLE_ACTUAL, qualphys:Angle)
+individual(o8, data:name21, des:Name)
+individual(o9, data:[[./Mazak_mstruct_TRUNDLE.html Mazak_mstruct_TRUNDLE]], vendor:[[../Mazak.html#MazakmstructTRUNDLE MazakmstructTRUNDLE]])
+individual(o10, data:name6, des:Name)
+individual(o11, data:[[./Mazak_mstruct_TABLE.html Mazak_mstruct_TABLE]], vendor:[[../Mazak.html#MazakmstructTABLE MazakmstructTABLE]])
+individual(o12, data:name5, des:Name)
+individual(o13, data:[[./Mazak.html Mazak]], vendor:[[../Mazak.html#Mazak Mazak]])
+property(o0, "core:prescribedBy", o1)
+data(o1, "rdfs:label", "MazakbaseC2Design particular")
+property(o1, "core:hasValueExpressionAtAllTimes", o2)
+property(o1, "core:hasValueExpressionAtAllTimes", o3)
+property(o1, "core:hasValueExpressionAtAllTimes", o4)
+property(o1, "core:hasValueExpressionAtAllTimes", o5)
+property(o0, "core:hasFunction", o6)
+property(o0, "core:hasQuality", o7)
+property(o0, "des:hasName", o8)
+data(o8, "des:hasTextualName", "C2")
+property(o0, "ex:joinedTo", o9)
+data(o9, "rdfs:label", "Mazak mstruct TRUNDLE particular")
+property(o9, "des:hasName", o10)
+property(o0, "ex:joinedTo", o11)
+data(o11, "rdfs:label", "Mazak mstruct TABLE particular")
+property(o11, "des:hasName", o12)
+property(o13, "bfo:has_member_part_at_some_time", o0)
+@enduml

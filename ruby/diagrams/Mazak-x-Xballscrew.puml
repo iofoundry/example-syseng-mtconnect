@@ -1,0 +1,32 @@
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak-x-Xballscrew
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
+}
+individual(o1, vendor:MazakBALLSCREWXballscrew, owl:Class)
+individual(o2, ex:Ballscrew)
+individual(o3, data:[[./Mazak-x-Xballscrew.html Mazak-x-Xballscrew]], vendor:MazakBALLSCREWXballscrew)
+individual(o4, data:Mazak-x-Xballscrew-name, cmns-dsg:Name)
+individual(o5, data:[[./Mazak-x.html Mazak-x]], vendor:MazakLinearX)
+property(o1, rdfs:subClassOf, o2)
+property(o3, cmns-dsg:hasName, o4)
+data(o4, cmns-dsg:hasTextualName, Xballscrew)
+property(o5, "bfo:has member part at some time", o3)
+@enduml

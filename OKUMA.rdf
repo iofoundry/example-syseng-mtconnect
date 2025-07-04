@@ -1,596 +1,932 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
-	<!ENTITY cmns-dsg "https://www.omg.org/spec/Commons/Designators/">
-	<!ENTITY core "https://spec.industrialontologies.org/ontology/core/Core/">
-	<!ENTITY data "http://example.com/data/">
-	<!ENTITY ex "http://example.com/ontology/">
-	<!ENTITY obo "http://purl.obolibrary.org/obo/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
-	<!ENTITY qp "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
-	<!ENTITY units "http://qudt.org/vocab/unit/">
-	<!ENTITY xs "http://www.w3.org/2001/XMLSchema#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF
-	xmlns:cmns-dsg="https://www.omg.org/spec/Commons/Designators/"
-	xmlns:core="https://spec.industrialontologies.org/ontology/core/Core/"
-	xmlns:data="http://example.com/data/"
-	xmlns:ex="http://example.com/ontology/"
-	xmlns:obo="http://purl.obolibrary.org/obo/"
+	xmlns="http://example.org/OKUMA/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
-	xmlns:qp="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-	xmlns:units="http://qudt.org/vocab/unit/"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
-	<owl:Ontology rdf:about="http://example.com/data/">
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">Machine Ontology</rdfs:label>
-		<owl:imports rdf:resource="http://example.com/ontology/"/>
+	<owl:Ontology rdf:about="http://example.org/OKUMA/">
+		<owl:imports rdf:resource="http://example.org/ontology/"/>
 	</owl:Ontology>
 	
-	<ex:Machine rdf:about="&data;OKUMA.123456">
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LBarFeederSystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LCoolantSystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LElectricSystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LHydraulicSystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LLoaderSystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LLubricationSystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LPneumaticSystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LToolingDeliverySystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LWasteDisposalSystem1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-LYI1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lb1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lc1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lc2"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lc3"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lc6"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lct1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lx1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lz1"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lz4"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-b_axis"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-c1_axis"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-c2_axis"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-enclosure"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-x_axis"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-y_axis"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-z1_axis"/>
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-z4_axis"/>
-		<core:hasCapability rdf:resource="&data;OKUMA.123456-capability"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-function"/>
-		<core:hasRole rdf:resource="&data;OKUMA.123456-role"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-name"/>
-	</ex:Machine>
-	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LBarFeederSystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LBarFeederSystem1-name"/>
-	</obo:BFO_0000030>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LBarFeederSystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">BarFeederSystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LCoolantSystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LCoolantSystem1-name"/>
-	</obo:BFO_0000030>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LCoolantSystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">CoolantSystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:ElectricalSystem rdf:about="&data;OKUMA.123456-LElectricSystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LElectricSystem1-name"/>
-	</ex:ElectricalSystem>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LElectricSystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">ElectricSystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:HydraulicSystem rdf:about="&data;OKUMA.123456-LHydraulicSystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LHydraulicSystem1-name"/>
-	</ex:HydraulicSystem>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LHydraulicSystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">HydraulicSystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LLoaderSystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LLoaderSystem1-name"/>
-	</obo:BFO_0000030>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LLoaderSystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">LoaderSystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:LubricationSystem rdf:about="&data;OKUMA.123456-LLubricationSystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LLubricationSystem1-name"/>
-	</ex:LubricationSystem>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LLubricationSystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">LubricationSystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:PneumaticSystem rdf:about="&data;OKUMA.123456-LPneumaticSystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LPneumaticSystem1-name"/>
-	</ex:PneumaticSystem>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LPneumaticSystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">PneumaticSystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LToolingDeliverySystem1-name"/>
-	</obo:BFO_0000030>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LToolingDeliverySystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">ToolingDeliverySystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<obo:BFO_0000030 rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LWasteDisposalSystem1-name"/>
-	</obo:BFO_0000030>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LWasteDisposalSystem1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">WasteDisposalSystem1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-LYI1">
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-x_axis"/>
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-LYI1-function"/>
-		<core:hasQuality rdf:resource="&data;OKUMA.123456-LYI1-position-actual"/>
-		<core:prescribedBy rdf:resource="&data;OKUMA.123456-LYI1-spec"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-LYI1-name"/>
-	</ex:LinearMotionSystem>
-	
-	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-LYI1-function">
-	</ex:PrismaticMotionCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-LYI1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Y</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<qp:Displacement rdf:about="&data;OKUMA.123456-LYI1-position-actual">
-	</qp:Displacement>
-	
-	<core:DesignSpecification rdf:about="&data;OKUMA.123456-LYI1-spec">
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-LENGTH-Nominal"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Minimum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Minimum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Minimum"/>
-	</core:DesignSpecification>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LENGTH-Nominal">
-		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Maximum">
-		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-LINEAR_FORCE-Minimum">
-		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Maximum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-PROGRAMMED-Minimum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Maximum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-LYI1-spec-VELOCITY-RAPID-Minimum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lb1">
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-b_axis"/>
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-y_axis"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lb1-function"/>
-		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lb1-angle-actual"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lb1-name"/>
-	</ex:RotaryMotionSystem>
-	
-	<qp:Angle rdf:about="&data;OKUMA.123456-Lb1-angle-actual">
-	</qp:Angle>
-	
-	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lb1-function">
-	</ex:RevoluteMotionCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lb1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">B</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc1">
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc1-function"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc1-rotary_velocity-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc1-rotary_velocity-programmed"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc1-name"/>
-	</ex:RotaryMotionSystem>
-	
-	<ex:ContinuousMotionCapability rdf:about="&data;OKUMA.123456-Lc1-function">
-	</ex:ContinuousMotionCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-actual">
-	</ex:RevoluteVelocity>
-	
-	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc1-rotary_velocity-programmed">
-	</ex:RevoluteVelocity>
-	
-	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc2">
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-c2_axis"/>
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc2-function"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc2-rotary_velocity-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc2-rotary_velocity-programmed"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc2-name"/>
-	</ex:RotaryMotionSystem>
-	
-	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lc2-function">
-	</ex:RevoluteMotionCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc2-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C2</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-actual">
-	</ex:RevoluteVelocity>
-	
-	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc2-rotary_velocity-programmed">
-	</ex:RevoluteVelocity>
-	
-	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc3">
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-c2_axis"/>
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lc3-function"/>
-		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lc3-angle-actual"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc3-name"/>
-	</ex:RotaryMotionSystem>
-	
-	<qp:Angle rdf:about="&data;OKUMA.123456-Lc3-angle-actual">
-	</qp:Angle>
-	
-	<ex:RevoluteMotionCapability rdf:about="&data;OKUMA.123456-Lc3-function">
-	</ex:RevoluteMotionCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc3-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C3</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:RotaryMotionSystem rdf:about="&data;OKUMA.123456-Lc6">
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc6-rotary_velocity-actual"/>
-		<core:measuresAtSomeTime rdf:resource="&data;OKUMA.123456-Lc6-rotary_velocity-programmed"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lc6-name"/>
-	</ex:RotaryMotionSystem>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lc6-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C6</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-actual">
-	</ex:RevoluteVelocity>
-	
-	<ex:RevoluteVelocity rdf:about="&data;OKUMA.123456-Lc6-rotary_velocity-programmed">
-	</ex:RevoluteVelocity>
-	
-	<ex:ControlSystem rdf:about="&data;OKUMA.123456-Lct1">
-		<obo:BFO_0000115 rdf:resource="&data;OKUMA.123456-Lct1-Lp1"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lct1-name"/>
-	</ex:ControlSystem>
-	
-	<ex:ControlSystemPath rdf:about="&data;OKUMA.123456-Lct1-Lp1">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lct1-Lp1-name"/>
-	</ex:ControlSystemPath>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lct1-Lp1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">path</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lct1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Controller</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lx1">
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-x_axis"/>
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lx1-function"/>
-		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lx1-position-actual"/>
-		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lx1-spec"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lx1-name"/>
-	</ex:LinearMotionSystem>
-	
-	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lx1-function">
-	</ex:PrismaticMotionCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lx1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">X</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<qp:Displacement rdf:about="&data;OKUMA.123456-Lx1-position-actual">
-	</qp:Displacement>
-	
-	<core:DesignSpecification rdf:about="&data;OKUMA.123456-Lx1-spec">
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-LENGTH-Nominal"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Minimum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Minimum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Minimum"/>
-	</core:DesignSpecification>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LENGTH-Nominal">
-		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Maximum">
-		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-LINEAR_FORCE-Minimum">
-		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Maximum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-PROGRAMMED-Minimum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Maximum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lx1-spec-VELOCITY-RAPID-Minimum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lz1">
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z1_axis"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz1-function"/>
-		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lz1-position-actual"/>
-		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz1-spec"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lz1-name"/>
-	</ex:LinearMotionSystem>
-	
-	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lz1-function">
-	</ex:PrismaticMotionCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lz1-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Z1</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<qp:Displacement rdf:about="&data;OKUMA.123456-Lz1-position-actual">
-	</qp:Displacement>
-	
-	<core:DesignSpecification rdf:about="&data;OKUMA.123456-Lz1-spec">
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-LENGTH-Nominal"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum"/>
-	</core:DesignSpecification>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LENGTH-Nominal">
-		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Maximum">
-		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-LINEAR_FORCE-Minimum">
-		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Maximum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-PROGRAMMED-Minimum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Maximum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz1-spec-VELOCITY-RAPID-Minimum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<ex:LinearMotionSystem rdf:about="&data;OKUMA.123456-Lz4">
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-enclosure"/>
-		<ex:joinedTo rdf:resource="&data;OKUMA.123456-z4_axis"/>
-		<core:hasFunction rdf:resource="&data;OKUMA.123456-Lz4-function"/>
-		<core:hasQuality rdf:resource="&data;OKUMA.123456-Lz4-position-actual"/>
-		<core:prescribedBy rdf:resource="&data;OKUMA.123456-Lz4-spec"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-Lz4-name"/>
-	</ex:LinearMotionSystem>
-	
-	<ex:PrismaticMotionCapability rdf:about="&data;OKUMA.123456-Lz4-function">
-	</ex:PrismaticMotionCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-Lz4-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Z4</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<qp:Displacement rdf:about="&data;OKUMA.123456-Lz4-position-actual">
-	</qp:Displacement>
-	
-	<core:DesignSpecification rdf:about="&data;OKUMA.123456-Lz4-spec">
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-LENGTH-Nominal"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum"/>
-		<core:hasValueExpressionAtAllTimes rdf:resource="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum"/>
-	</core:DesignSpecification>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LENGTH-Nominal">
-		<units:hasUnit rdf:resource="&units;MilliM"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Maximum">
-		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-LINEAR_FORCE-Minimum">
-		<units:hasUnit rdf:resource="&units;N"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Maximum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-PROGRAMMED-Minimum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Maximum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<core:ValueExpression rdf:about="&data;OKUMA.123456-Lz4-spec-VELOCITY-RAPID-Minimum">
-		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
-		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
-	</core:ValueExpression>
-	
-	<ex:Structure rdf:about="&data;OKUMA.123456-b_axis">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-b_axis-name"/>
-	</ex:Structure>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-b_axis-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">b_axis</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:Structure rdf:about="&data;OKUMA.123456-c1_axis">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-c1_axis-name"/>
-	</ex:Structure>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-c1_axis-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">c1_axis</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:Structure rdf:about="&data;OKUMA.123456-c2_axis">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-c2_axis-name"/>
-	</ex:Structure>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-c2_axis-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">c2_axis</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:TurningCapability rdf:about="&data;OKUMA.123456-capability">
-	</ex:TurningCapability>
-	
-	<ex:Structure rdf:about="&data;OKUMA.123456-enclosure">
-		<core:hasQuality rdf:resource="&data;OKUMA.123456-enclosure-temperature"/>
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-enclosure-name"/>
-	</ex:Structure>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-enclosure-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">enclosure</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<qp:Temperature rdf:about="&data;OKUMA.123456-enclosure-temperature">
-	</qp:Temperature>
-	
-	<ex:MillingCapability rdf:about="&data;OKUMA.123456-function">
-	</ex:MillingCapability>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">OKUMA</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<core:Person rdf:about="&data;OKUMA.123456-personnel">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-personnel-name"/>
-	</core:Person>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-personnel-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">personnel</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<core:EquipmentRole rdf:about="&data;OKUMA.123456-role">
-	</core:EquipmentRole>
-	
-	<ex:Structure rdf:about="&data;OKUMA.123456-x_axis">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-x_axis-name"/>
-	</ex:Structure>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-x_axis-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">x_axis</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:Structure rdf:about="&data;OKUMA.123456-y_axis">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-y_axis-name"/>
-	</ex:Structure>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-y_axis-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">y_axis</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:Structure rdf:about="&data;OKUMA.123456-z1_axis">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-z1_axis-name"/>
-	</ex:Structure>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-z1_axis-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">z1_axis</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
-	
-	<ex:Structure rdf:about="&data;OKUMA.123456-z4_axis">
-		<cmns-dsg:hasName rdf:resource="&data;OKUMA.123456-z4_axis-name"/>
-	</ex:Structure>
-	
-	<cmns-dsg:Name rdf:about="&data;OKUMA.123456-z4_axis-name">
-		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">z4_axis</cmns-dsg:hasTextualName>
-	</cmns-dsg:Name>
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Machine"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesB"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesC1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesC2"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesC3"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesC6"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesX"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesY"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ4"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456Controller"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456LAux1BarFeederSystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456LAux1LoaderSystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456LAux1ToolingDeliverySystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456LAux1WasteDisposalSystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456Systems1CoolantSystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456Systems1ElectricSystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456Systems1HydraulicSystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456Systems1LubricationSystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456Systems1PneumaticSystem1"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456enclosure"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456structb_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456structc1_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456structc2_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456structx_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456structy_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456structz1_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/Machine">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456structz4_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesB">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes B</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesC1">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes C1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesC2">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes C2</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesC3">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes C3</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesC6">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes C6</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesX">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+						<owl:allValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="http://example.org/ontology/PrismaticRapidVelocity">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+										<owl:someValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+														<owl:someValuesFrom>
+															<rdfs:Datatype>
+																<owl:onDatatype rdf:resource="&xsd;decimal"/>
+																<owl:withRestrictions rdf:parseType="Collection">
+																	<rdf:Description>
+																		<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+																	</rdf:Description>
+																	<rdf:Description>
+																		<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+																	</rdf:Description>
+																</owl:withRestrictions>
+															</rdfs:Datatype>
+														</owl:someValuesFrom>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:allValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesXDesign"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+										<owl:allValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+														<owl:someValuesFrom>
+															<rdfs:Datatype>
+																<owl:onDatatype rdf:resource="&xsd;decimal"/>
+																<owl:withRestrictions rdf:parseType="Collection">
+																	<rdf:Description>
+																		<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
+																	</rdf:Description>
+																	<rdf:Description>
+																		<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+																	</rdf:Description>
+																</owl:withRestrictions>
+															</rdfs:Datatype>
+														</owl:someValuesFrom>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:allValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes X</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesXDesign">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesY">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+						<owl:allValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="http://example.org/ontology/PrismaticRapidVelocity">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+										<owl:someValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+														<owl:someValuesFrom>
+															<rdfs:Datatype>
+																<owl:onDatatype rdf:resource="&xsd;decimal"/>
+																<owl:withRestrictions rdf:parseType="Collection">
+																	<rdf:Description>
+																		<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+																	</rdf:Description>
+																	<rdf:Description>
+																		<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+																	</rdf:Description>
+																</owl:withRestrictions>
+															</rdfs:Datatype>
+														</owl:someValuesFrom>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:allValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesYDesign"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+										<owl:allValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+														<owl:someValuesFrom>
+															<rdfs:Datatype>
+																<owl:onDatatype rdf:resource="&xsd;decimal"/>
+																<owl:withRestrictions rdf:parseType="Collection">
+																	<rdf:Description>
+																		<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
+																	</rdf:Description>
+																	<rdf:Description>
+																		<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+																	</rdf:Description>
+																</owl:withRestrictions>
+															</rdfs:Datatype>
+														</owl:someValuesFrom>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:allValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes Y</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesYDesign">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ1">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+						<owl:allValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="http://example.org/ontology/PrismaticRapidVelocity">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+										<owl:someValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+														<owl:someValuesFrom>
+															<rdfs:Datatype>
+																<owl:onDatatype rdf:resource="&xsd;decimal"/>
+																<owl:withRestrictions rdf:parseType="Collection">
+																	<rdf:Description>
+																		<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+																	</rdf:Description>
+																	<rdf:Description>
+																		<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+																	</rdf:Description>
+																</owl:withRestrictions>
+															</rdfs:Datatype>
+														</owl:someValuesFrom>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:allValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ1Design"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+										<owl:allValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+														<owl:someValuesFrom>
+															<rdfs:Datatype>
+																<owl:onDatatype rdf:resource="&xsd;decimal"/>
+																<owl:withRestrictions rdf:parseType="Collection">
+																	<rdf:Description>
+																		<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
+																	</rdf:Description>
+																	<rdf:Description>
+																		<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+																	</rdf:Description>
+																</owl:withRestrictions>
+															</rdfs:Datatype>
+														</owl:someValuesFrom>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:allValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes Z1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ1Design">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ4">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+						<owl:allValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="http://example.org/ontology/PrismaticRapidVelocity">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+										<owl:someValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+														<owl:someValuesFrom>
+															<rdfs:Datatype>
+																<owl:onDatatype rdf:resource="&xsd;decimal"/>
+																<owl:withRestrictions rdf:parseType="Collection">
+																	<rdf:Description>
+																		<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+																	</rdf:Description>
+																	<rdf:Description>
+																		<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+																	</rdf:Description>
+																</owl:withRestrictions>
+															</rdfs:Datatype>
+														</owl:someValuesFrom>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:allValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ4Design"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+										<owl:allValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+														<owl:someValuesFrom>
+															<rdfs:Datatype>
+																<owl:onDatatype rdf:resource="&xsd;decimal"/>
+																<owl:withRestrictions rdf:parseType="Collection">
+																	<rdf:Description>
+																		<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
+																	</rdf:Description>
+																	<rdf:Description>
+																		<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+																	</rdf:Description>
+																</owl:withRestrictions>
+															</rdfs:Datatype>
+														</owl:someValuesFrom>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:allValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes Z4</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ4Design">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456Controller">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/ControlSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456Controllerpath"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Controller</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456Controllerpath">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystemPath"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Controller path</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456LAux1BarFeederSystem1">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 LAux1 BarFeederSystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456LAux1LoaderSystem1">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 LAux1 LoaderSystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456LAux1ToolingDeliverySystem1">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 LAux1 ToolingDeliverySystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456LAux1WasteDisposalSystem1">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 LAux1 WasteDisposalSystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456Systems1CoolantSystem1">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Systems1 CoolantSystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456Systems1ElectricSystem1">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ElectricalSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Systems1 ElectricSystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456Systems1HydraulicSystem1">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/HydraulicSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Systems1 HydraulicSystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456Systems1LubricationSystem1">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LubricationSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Systems1 LubricationSystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456Systems1PneumaticSystem1">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PneumaticSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Systems1 PneumaticSystem1</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456enclosure">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 enclosure</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456structb_axis">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 struct b_axis</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456structc1_axis">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 struct c1_axis</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456structc2_axis">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 struct c2_axis</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456structx_axis">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 struct x_axis</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456structy_axis">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 struct y_axis</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456structz1_axis">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 struct z1_axis</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456structz4_axis">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 struct z4_axis</rdfs:label>
+	</owl:Class>
 
 </rdf:RDF>

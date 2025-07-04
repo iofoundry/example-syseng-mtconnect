@@ -1,3 +1,4 @@
+
 @startuml
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
@@ -18,35 +19,35 @@ title MazakTopo
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
-"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
-}
-individual(o1, data:[[./Mazak-x.html Mazak-x]], ex:LinearMotionSystem)
-individual(o2, data:[[./Mazak-enclosurem.html Mazak-enclosurem]], ex:Structure)
-individual(o3, data:[[./Mazak-xaxism.html Mazak-xaxism]], ex:Structure)
-individual(o4, data:[[./Mazak-y.html Mazak-y]], ex:LinearMotionSystem)
-individual(o5, data:[[./Mazak-yaxism.html Mazak-yaxism]], ex:Structure)
-individual(o6, data:[[./Mazak-z.html Mazak-z]], ex:LinearMotionSystem)
-individual(o7, data:[[./Mazak-zaxis.html Mazak-zaxis]], ex:Structure)
-individual(o8, data:[[./Mazak-c.html Mazak-c]], ex:RotaryMotionSystem)
-individual(o9, data:[[./Mazak-br.html Mazak-br]], ex:RotaryMotionSystem)
-individual(o10, data:[[./Mazak-trundle.html Mazak-trundle]], ex:Structure)
-individual(o11, data:[[./Mazak-c2.html Mazak-c2]], ex:RotaryMotionSystem)
-individual(o12, data:[[./Mazak-table.html Mazak-table]], ex:Structure)
-property(o1, ex:joinedTo, o2)
-data(o1, cmns-dsg:hasName, X)
-property(o1, ex:joinedTo, o3)
-property(o4, ex:joinedTo, o3)
-data(o4, cmns-dsg:hasName, Y)
-property(o4, ex:joinedTo, o5)
-property(o6, ex:joinedTo, o5)
-data(o6, cmns-dsg:hasName, Z)
-property(o6, ex:joinedTo, o7)
-property(o8, ex:joinedTo, o7)
-data(o8, cmns-dsg:hasName, C1)
-property(o9, ex:joinedTo, o2)
-data(o9, cmns-dsg:hasName, B)
-property(o9, ex:joinedTo, o10)
-property(o11, ex:joinedTo, o10)
-data(o11, cmns-dsg:hasName, C2)
-property(o11, ex:joinedTo, o12)
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak_base_X.html Mazak_base_X]], vendor:[[../Mazak.html#MazakbaseX MazakbaseX]])
+individual(o1, data:[[./Mazak_enclosure.html Mazak_enclosure]], vendor:[[../Mazak.html#Mazakenclosure Mazakenclosure]])
+individual(o2, data:[[./Mazak_mstruct_X_AXIS.html Mazak_mstruct_X_AXIS]], vendor:[[../Mazak.html#MazakmstructX_AXIS MazakmstructX_AXIS]])
+individual(o3, data:[[./Mazak_base_Y.html Mazak_base_Y]], vendor:[[../Mazak.html#MazakbaseY MazakbaseY]])
+individual(o4, data:[[./Mazak_mstruct_Y_AXIS.html Mazak_mstruct_Y_AXIS]], vendor:[[../Mazak.html#MazakmstructY_AXIS MazakmstructY_AXIS]])
+individual(o5, data:[[./Mazak_base_Z.html Mazak_base_Z]], vendor:[[../Mazak.html#MazakbaseZ MazakbaseZ]])
+individual(o6, data:[[./Mazak_mstruct_Z_AXIS.html Mazak_mstruct_Z_AXIS]], vendor:[[../Mazak.html#MazakmstructZ_AXIS MazakmstructZ_AXIS]])
+individual(o7, data:[[./Mazak_base_C1.html Mazak_base_C1]], vendor:[[../Mazak.html#MazakbaseC1 MazakbaseC1]])
+individual(o8, data:[[./Mazak_base_B.html Mazak_base_B]], vendor:[[../Mazak.html#MazakbaseB MazakbaseB]])
+individual(o9, data:[[./Mazak_mstruct_TRUNDLE.html Mazak_mstruct_TRUNDLE]], vendor:[[../Mazak.html#MazakmstructTRUNDLE MazakmstructTRUNDLE]])
+individual(o10, data:[[./Mazak_base_C2.html Mazak_base_C2]], vendor:[[../Mazak.html#MazakbaseC2 MazakbaseC2]])
+individual(o11, data:[[./Mazak_mstruct_TABLE.html Mazak_mstruct_TABLE]], vendor:[[../Mazak.html#MazakmstructTABLE MazakmstructTABLE]])
+property(o0, "ex:joinedTo", o1)
+property(o0, "ex:joinedTo", o2)
+property(o3, "ex:joinedTo", o2)
+property(o3, "ex:joinedTo", o4)
+property(o5, "ex:joinedTo", o4)
+property(o5, "ex:joinedTo", o6)
+property(o7, "ex:joinedTo", o6)
+property(o8, "ex:joinedTo", o1)
+property(o8, "ex:joinedTo", o9)
+property(o10, "ex:joinedTo", o9)
+property(o10, "ex:joinedTo", o11)
 @enduml

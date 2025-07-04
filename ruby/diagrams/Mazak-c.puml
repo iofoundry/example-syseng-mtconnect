@@ -1,0 +1,54 @@
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak-c
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
+}
+individual(o1, vendor:MazakRotaryC1, owl:Class)
+individual(o2, ex:RotaryMotionSystem)
+individual(o3, data:[[./Mazak-c.html Mazak-c]], vendor:MazakRotaryC1)
+individual(o4, data:Mazak-c-name, cmns-dsg:Name)
+individual(o5, data:Mazak-c-spec, core:[[https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification DesignSpecification]])
+individual(o6, data:Mazak-c-spec-VELOCITY-Maximum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
+individual(o7, data:Mazak-c-spec-VELOCITY-Minimum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
+individual(o8, data:[[./Mazak-zaxis.html Mazak-zaxis]], vendor:MazakLinkZ_AXIS)
+individual(o9, data:Mazak-zaxis-name, cmns-dsg:Name)
+individual(o10, data:Mazak-c-function, ex:ContinuousMotionCapability)
+individual(o11, data:Mazak-c-rotary_velocity-actual, ex:RevoluteVelocity)
+individual(o12, data:[[./Mazak-c-Cmotor.html Mazak-c-Cmotor]], vendor:MazakMOTORCmotor)
+individual(o13, data:Mazak-c-Cmotor-temperature, qp:Temperature)
+individual(o14, data:Mazak-c-Cmotor-name, cmns-dsg:Name)
+individual(o15, data:[[./Mazak.html Mazak]], vendor:MazakDeviceMazak)
+property(o1, rdfs:subClassOf, o2)
+property(o3, cmns-dsg:hasName, o4)
+data(o4, cmns-dsg:hasTextualName, C1)
+property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/prescribedBy prescribedBy]], o5)
+property(o5, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes hasValueExpressionAtAllTimes]], o6)
+data(o6, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue hasSimpleExpressionValue]], 12000.0)
+property(o5, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasValueExpressionAtAllTimes hasValueExpressionAtAllTimes]], o7)
+data(o7, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue hasSimpleExpressionValue]], 0.0)
+property(o3, ex:joinedTo, o8)
+property(o8, cmns-dsg:hasName, o9)
+property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasFunction hasFunction]], o10)
+property(o3, core:[[https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime measuresAtSomeTime]], o11)
+property(o3, "bfo:has member part at some time", o12)
+property(o12, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o13)
+property(o12, cmns-dsg:hasName, o14)
+property(o15, "bfo:has member part at some time", o3)
+@enduml

@@ -1,3 +1,4 @@
+
 @startuml
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
 !include ../iof.iuml
@@ -18,44 +19,42 @@ title OKUMATopo
                       "iof":"1E90FF", 
                       "ns":"Green", 
                       "ns1":"76608A",
-"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
-}
-individual(o1, data:[[./OKUMA.123456-Lx1.html OKUMA.123456-Lx1]], ex:LinearMotionSystem)
-individual(o2, data:[[./OKUMA.123456-z1_axis.html OKUMA.123456-z1_axis]], ex:Structure)
-individual(o3, data:[[./OKUMA.123456-x_axis.html OKUMA.123456-x_axis]], ex:Structure)
-individual(o4, data:[[./OKUMA.123456-LYI1.html OKUMA.123456-LYI1]], ex:LinearMotionSystem)
-individual(o5, data:[[./OKUMA.123456-y_axis.html OKUMA.123456-y_axis]], ex:Structure)
-individual(o6, data:[[./OKUMA.123456-Lz1.html OKUMA.123456-Lz1]], ex:LinearMotionSystem)
-individual(o7, data:[[./OKUMA.123456-enclosure.html OKUMA.123456-enclosure]], ex:Structure)
-individual(o8, data:[[./OKUMA.123456-Lb1.html OKUMA.123456-Lb1]], ex:RotaryMotionSystem)
-individual(o9, data:[[./OKUMA.123456-b_axis.html OKUMA.123456-b_axis]], ex:Structure)
-individual(o10, data:[[./OKUMA.123456-Lc1.html OKUMA.123456-Lc1]], ex:RotaryMotionSystem)
-individual(o11, data:[[./OKUMA.123456-Lz4.html OKUMA.123456-Lz4]], ex:LinearMotionSystem)
-individual(o12, data:[[./OKUMA.123456-z4_axis.html OKUMA.123456-z4_axis]], ex:Structure)
-individual(o13, data:[[./OKUMA.123456-Lc2.html OKUMA.123456-Lc2]], ex:RotaryMotionSystem)
-individual(o14, data:[[./OKUMA.123456-c2_axis.html OKUMA.123456-c2_axis]], ex:Structure)
-individual(o15, data:[[./OKUMA.123456-Lc3.html OKUMA.123456-Lc3]], ex:RotaryMotionSystem)
-property(o1, ex:joinedTo, o2)
-data(o1, cmns-dsg:hasName, X)
-property(o1, ex:joinedTo, o3)
-property(o4, ex:joinedTo, o3)
-data(o4, cmns-dsg:hasName, Y)
-property(o4, ex:joinedTo, o5)
-property(o6, ex:joinedTo, o7)
-data(o6, cmns-dsg:hasName, Z1)
-property(o6, ex:joinedTo, o2)
-property(o8, ex:joinedTo, o5)
-data(o8, cmns-dsg:hasName, B)
-property(o8, ex:joinedTo, o9)
-property(o10, ex:joinedTo, o7)
-data(o10, cmns-dsg:hasName, C1)
-property(o11, ex:joinedTo, o7)
-data(o11, cmns-dsg:hasName, Z4)
-property(o11, ex:joinedTo, o12)
-property(o13, ex:joinedTo, o12)
-data(o13, cmns-dsg:hasName, C2)
-property(o13, ex:joinedTo, o14)
-property(o15, ex:joinedTo, o12)
-data(o15, cmns-dsg:hasName, C3)
-property(o15, ex:joinedTo, o14)
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./OKUMA.123456_Axes_X.html OKUMA.123456_Axes_X]], vendor:[[../OKUMA.html#OKUMA.123456AxesX OKUMA.123456AxesX]])
+individual(o1, data:[[./OKUMA.123456_struct_z1_axis.html OKUMA.123456_struct_z1_axis]], vendor:[[../OKUMA.html#OKUMA.123456structz1_axis OKUMA.123456structz1_axis]])
+individual(o2, data:[[./OKUMA.123456_struct_x_axis.html OKUMA.123456_struct_x_axis]], vendor:[[../OKUMA.html#OKUMA.123456structx_axis OKUMA.123456structx_axis]])
+individual(o3, data:[[./OKUMA.123456_Axes_Y.html OKUMA.123456_Axes_Y]], vendor:[[../OKUMA.html#OKUMA.123456AxesY OKUMA.123456AxesY]])
+individual(o4, data:[[./OKUMA.123456_struct_y_axis.html OKUMA.123456_struct_y_axis]], vendor:[[../OKUMA.html#OKUMA.123456structy_axis OKUMA.123456structy_axis]])
+individual(o5, data:[[./OKUMA.123456_Axes_Z1.html OKUMA.123456_Axes_Z1]], vendor:[[../OKUMA.html#OKUMA.123456AxesZ1 OKUMA.123456AxesZ1]])
+individual(o6, data:[[./OKUMA.123456_enclosure.html OKUMA.123456_enclosure]], vendor:[[../OKUMA.html#OKUMA.123456enclosure OKUMA.123456enclosure]])
+individual(o7, data:[[./OKUMA.123456_Axes_B.html OKUMA.123456_Axes_B]], vendor:[[../OKUMA.html#OKUMA.123456AxesB OKUMA.123456AxesB]])
+individual(o8, data:[[./OKUMA.123456_struct_b_axis.html OKUMA.123456_struct_b_axis]], vendor:[[../OKUMA.html#OKUMA.123456structb_axis OKUMA.123456structb_axis]])
+individual(o9, data:[[./OKUMA.123456_Axes_C1.html OKUMA.123456_Axes_C1]], vendor:[[../OKUMA.html#OKUMA.123456AxesC1 OKUMA.123456AxesC1]])
+individual(o10, data:[[./OKUMA.123456_Axes_Z4.html OKUMA.123456_Axes_Z4]], vendor:[[../OKUMA.html#OKUMA.123456AxesZ4 OKUMA.123456AxesZ4]])
+individual(o11, data:[[./OKUMA.123456_struct_z4_axis.html OKUMA.123456_struct_z4_axis]], vendor:[[../OKUMA.html#OKUMA.123456structz4_axis OKUMA.123456structz4_axis]])
+individual(o12, data:[[./OKUMA.123456_Axes_C2.html OKUMA.123456_Axes_C2]], vendor:[[../OKUMA.html#OKUMA.123456AxesC2 OKUMA.123456AxesC2]])
+individual(o13, data:[[./OKUMA.123456_struct_c2_axis.html OKUMA.123456_struct_c2_axis]], vendor:[[../OKUMA.html#OKUMA.123456structc2_axis OKUMA.123456structc2_axis]])
+individual(o14, data:[[./OKUMA.123456_Axes_C3.html OKUMA.123456_Axes_C3]], vendor:[[../OKUMA.html#OKUMA.123456AxesC3 OKUMA.123456AxesC3]])
+property(o0, "ex:joinedTo", o1)
+property(o0, "ex:joinedTo", o2)
+property(o3, "ex:joinedTo", o2)
+property(o3, "ex:joinedTo", o4)
+property(o5, "ex:joinedTo", o6)
+property(o5, "ex:joinedTo", o1)
+property(o7, "ex:joinedTo", o4)
+property(o7, "ex:joinedTo", o8)
+property(o9, "ex:joinedTo", o6)
+property(o10, "ex:joinedTo", o6)
+property(o10, "ex:joinedTo", o11)
+property(o12, "ex:joinedTo", o11)
+property(o12, "ex:joinedTo", o13)
+property(o14, "ex:joinedTo", o11)
+property(o14, "ex:joinedTo", o13)
 @enduml

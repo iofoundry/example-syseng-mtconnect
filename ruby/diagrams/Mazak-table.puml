@@ -1,0 +1,34 @@
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak-table
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
+}
+individual(o1, vendor:MazakLinkTABLE, owl:Class)
+individual(o2, ex:Structure)
+individual(o3, data:[[./Mazak-table.html Mazak-table]], vendor:MazakLinkTABLE)
+individual(o4, data:Mazak-table-name, cmns-dsg:Name)
+individual(o5, data:[[./Mazak.html Mazak]], vendor:MazakDeviceMazak)
+individual(o6, data:[[./Mazak-c2.html Mazak-c2]], vendor:MazakRotaryC2)
+property(o1, rdfs:subClassOf, o2)
+property(o3, cmns-dsg:hasName, o4)
+data(o4, cmns-dsg:hasTextualName, TABLE)
+property(o5, "bfo:has member part at some time", o3)
+property(o6, ex:joinedTo, o3)
+@enduml

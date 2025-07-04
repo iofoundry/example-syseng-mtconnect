@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY cmns-dsg "https://www.omg.org/spec/Commons/Designators/">
+	<!ENTITY core "https://spec.industrialontologies.org/ontology/core/Core/">
+	<!ENTITY data "http://example.com/data/">
+	<!ENTITY ex "http://example.com/ontology/">
+	<!ENTITY obo "http://purl.obolibrary.org/obo/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY qp "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY units "http://qudt.org/vocab/unit/">
+	<!ENTITY vendor "http://example.com/Mazak/">
+	<!ENTITY xs "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF
+	xmlns:cmns-dsg="https://www.omg.org/spec/Commons/Designators/"
+	xmlns:core="https://spec.industrialontologies.org/ontology/core/Core/"
+	xmlns:data="http://example.com/data/"
+	xmlns:ex="http://example.com/ontology/"
+	xmlns:obo="http://purl.obolibrary.org/obo/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:qp="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:units="http://qudt.org/vocab/unit/"
+	xmlns:vendor="http://example.com/Mazak/"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="http://example.com//">
+	</owl:Ontology>
+	
+	<owl:Ontology rdf:about="http://example.com/data/">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en-US">Machine Ontology</rdfs:label>
+		<owl:imports rdf:resource="http://example.com/ontology/"/>
+	</owl:Ontology>
+	
+	<owl:Class rdf:about="&vendor;Mazak-br-Constr">
+		<rdfs:subClassOf rdf:resource="&qp;Angle"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&qp;Angle">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">120.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">-30.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;Mazak-c-Constr">
+		<rdfs:subClassOf rdf:resource="&ex;PrismaticVelocity"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&ex;PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">12000.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">0.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;Mazak-c2-Constr">
+		<rdfs:subClassOf rdf:resource="&qp;Angle"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&qp;Angle">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">360.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">-360.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;Mazak-x-Constr">
+		<rdfs:subClassOf rdf:resource="&ex;PrismaticVelocity"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&ex;PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">7000.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">1.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&ex;PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">7000.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">1.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;Mazak-y-Constr">
+		<rdfs:subClassOf rdf:resource="&ex;PrismaticVelocity"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&ex;PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">7000.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">1.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&ex;PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">7000.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">1.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;Mazak-z-Constr">
+		<rdfs:subClassOf rdf:resource="&ex;PrismaticVelocity"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&ex;PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">7000.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">1.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&ex;PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&core;hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="&core;MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="&core;hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xs;float"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xs:maxInclusive rdf:datatype="&xs;float">7000.0</xs:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xs:minInclusive rdf:datatype="&xs;float">1.0</xs:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakBALLSCREWXballscrew">
+		<rdfs:subClassOf rdf:resource="&ex;Ballscrew"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakBALLSCREWYballscrew">
+		<rdfs:subClassOf rdf:resource="&ex;Ballscrew"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakBALLSCREWZballscrew">
+		<rdfs:subClassOf rdf:resource="&ex;Ballscrew"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakControllercontroller">
+		<rdfs:subClassOf rdf:resource="&ex;ControlSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakCoolantcoolant">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakDeviceMazak">
+		<rdfs:subClassOf rdf:resource="&ex;Machine"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakDoordoor">
+		<rdfs:subClassOf rdf:resource="&obo;BFO_0000030"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakElectricelectric">
+		<rdfs:subClassOf rdf:resource="&ex;ElectricalSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakEnclosureenclosure">
+		<rdfs:subClassOf rdf:resource="&ex;Structure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakEnvironmentalenvironmental">
+		<rdfs:subClassOf rdf:resource="&ex;Room"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakHydraulichydraulic">
+		<rdfs:subClassOf rdf:resource="&ex;HydraulicSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLinearX">
+		<rdfs:subClassOf rdf:resource="&ex;LinearMotionSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLinearY">
+		<rdfs:subClassOf rdf:resource="&ex;LinearMotionSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLinearZ">
+		<rdfs:subClassOf rdf:resource="&ex;LinearMotionSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLinkTABLE">
+		<rdfs:subClassOf rdf:resource="&ex;Structure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLinkTRUNDLE">
+		<rdfs:subClassOf rdf:resource="&ex;Structure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLinkX_AXIS">
+		<rdfs:subClassOf rdf:resource="&ex;Structure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLinkY_AXIS">
+		<rdfs:subClassOf rdf:resource="&ex;Structure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLinkZ_AXIS">
+		<rdfs:subClassOf rdf:resource="&ex;Structure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakLubricationlubrication">
+		<rdfs:subClassOf rdf:resource="&ex;LubricationSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakMOTORBmotor">
+		<rdfs:subClassOf rdf:resource="&ex;Motor"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakMOTORC2motor">
+		<rdfs:subClassOf rdf:resource="&ex;Motor"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakMOTORCmotor">
+		<rdfs:subClassOf rdf:resource="&ex;Motor"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakMOTORXmotor">
+		<rdfs:subClassOf rdf:resource="&ex;Motor"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakMOTORYmotor">
+		<rdfs:subClassOf rdf:resource="&ex;Motor"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakMOTORZmotor">
+		<rdfs:subClassOf rdf:resource="&ex;Motor"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakPartOccurrencepartocc">
+		<rdfs:subClassOf rdf:resource="&ex;Part"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakPathpath">
+		<rdfs:subClassOf rdf:resource="&ex;ControlSystemPath"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakPersonnelpersonnel">
+		<rdfs:subClassOf rdf:resource="&core;Person"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakPneumaticpneumatic">
+		<rdfs:subClassOf rdf:resource="&ex;PneumaticSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakRotaryB">
+		<rdfs:subClassOf rdf:resource="&ex;RotaryMotionSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakRotaryC1">
+		<rdfs:subClassOf rdf:resource="&ex;RotaryMotionSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakRotaryC2">
+		<rdfs:subClassOf rdf:resource="&ex;RotaryMotionSystem"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&vendor;MazakStockstock">
+		<rdfs:subClassOf rdf:resource="&ex;Stock"/>
+	</owl:Class>
+	
+	<vendor:MazakDeviceMazak rdf:about="&data;Mazak">
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-br"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-c"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-c2"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-cont"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-coolant"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-door1"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-elec"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-enclosurem"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-hydraulic"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-lubrication"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-partocc"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-pneumatic"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-procstock"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-table"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-trundle"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-x"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-xaxism"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-y"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-yaxism"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-z"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-zaxis"/>
+		<core:hasCapability rdf:resource="&data;Mazak-capability"/>
+		<core:hasFunction rdf:resource="&data;Mazak-function"/>
+		<core:hasRole rdf:resource="&data;Mazak-role"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-name"/>
+	</vendor:MazakDeviceMazak>
+	
+	<vendor:MazakRotaryB rdf:about="&data;Mazak-br">
+		<ex:joinedTo rdf:resource="&data;Mazak-enclosurem"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-br-Bmotor"/>
+		<core:hasFunction rdf:resource="&data;Mazak-br-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-br-angle-actual"/>
+		<core:prescribedBy rdf:resource="&data;Mazak-br-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-br-name"/>
+	</vendor:MazakRotaryB>
+	
+	<vendor:MazakMOTORBmotor rdf:about="&data;Mazak-br-Bmotor">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-br-Bmotor-name"/>
+	</vendor:MazakMOTORBmotor>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-br-Bmotor-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Bmotor</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Angle rdf:about="&data;Mazak-br-angle-actual">
+	</qp:Angle>
+	
+	<ex:RevoluteMotionCapability rdf:about="&data;Mazak-br-function">
+	</ex:RevoluteMotionCapability>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-br-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">B</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<core:DesignSpecification rdf:about="&data;Mazak-br-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-br-spec-ANGLE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-br-spec-ANGLE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-br-spec-TORQUE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-br-spec-TORQUE-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-br-spec-ANGLE-Maximum">
+		<units:hasUnit rdf:resource="&units;DEG"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">120.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-br-spec-ANGLE-Minimum">
+		<units:hasUnit rdf:resource="&units;DEG"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">-30.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-br-spec-TORQUE-Maximum">
+		<units:hasUnit rdf:resource="&units;N-M"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">400.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-br-spec-TORQUE-Minimum">
+		<units:hasUnit rdf:resource="&units;N-M"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<vendor:MazakRotaryC1 rdf:about="&data;Mazak-c">
+		<ex:joinedTo rdf:resource="&data;Mazak-zaxis"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-c-Cmotor"/>
+		<core:hasFunction rdf:resource="&data;Mazak-c-function"/>
+		<core:measuresAtSomeTime rdf:resource="&data;Mazak-c-rotary_velocity-actual"/>
+		<core:prescribedBy rdf:resource="&data;Mazak-c-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c-name"/>
+	</vendor:MazakRotaryC1>
+	
+	<vendor:MazakMOTORCmotor rdf:about="&data;Mazak-c-Cmotor">
+		<core:hasQuality rdf:resource="&data;Mazak-c-Cmotor-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c-Cmotor-name"/>
+	</vendor:MazakMOTORCmotor>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-c-Cmotor-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Cmotor</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Temperature rdf:about="&data;Mazak-c-Cmotor-temperature">
+	</qp:Temperature>
+	
+	<ex:ContinuousMotionCapability rdf:about="&data;Mazak-c-function">
+	</ex:ContinuousMotionCapability>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-c-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C1</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<ex:RevoluteVelocity rdf:about="&data;Mazak-c-rotary_velocity-actual">
+	</ex:RevoluteVelocity>
+	
+	<core:DesignSpecification rdf:about="&data;Mazak-c-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c-spec-VELOCITY-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c-spec-VELOCITY-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-c-spec-VELOCITY-Maximum">
+		<units:hasUnit rdf:resource="&units;REV-PER-MIN"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">12000.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-c-spec-VELOCITY-Minimum">
+		<units:hasUnit rdf:resource="&units;REV-PER-MIN"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<vendor:MazakRotaryC2 rdf:about="&data;Mazak-c2">
+		<ex:joinedTo rdf:resource="&data;Mazak-table"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-trundle"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-c2-C2motor"/>
+		<core:hasFunction rdf:resource="&data;Mazak-c2-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-c2-angle-actual"/>
+		<core:prescribedBy rdf:resource="&data;Mazak-c2-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c2-name"/>
+	</vendor:MazakRotaryC2>
+	
+	<vendor:MazakMOTORC2motor rdf:about="&data;Mazak-c2-C2motor">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-c2-C2motor-name"/>
+	</vendor:MazakMOTORC2motor>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-c2-C2motor-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C2motor</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Angle rdf:about="&data;Mazak-c2-angle-actual">
+	</qp:Angle>
+	
+	<ex:RevoluteMotionCapability rdf:about="&data;Mazak-c2-function">
+	</ex:RevoluteMotionCapability>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-c2-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">C2</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<core:DesignSpecification rdf:about="&data;Mazak-c2-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c2-spec-ANGLE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c2-spec-ANGLE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c2-spec-TORQUE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-c2-spec-TORQUE-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-c2-spec-ANGLE-Maximum">
+		<units:hasUnit rdf:resource="&units;DEG"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">360.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-c2-spec-ANGLE-Minimum">
+		<units:hasUnit rdf:resource="&units;DEG"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">-360.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-c2-spec-TORQUE-Maximum">
+		<units:hasUnit rdf:resource="&units;N-M"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">400.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-c2-spec-TORQUE-Minimum">
+		<units:hasUnit rdf:resource="&units;N-M"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<ex:TurningCapability rdf:about="&data;Mazak-capability">
+	</ex:TurningCapability>
+	
+	<vendor:MazakControllercontroller rdf:about="&data;Mazak-cont">
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-cont-path1"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-cont-name"/>
+	</vendor:MazakControllercontroller>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-cont-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">controller</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakPathpath rdf:about="&data;Mazak-cont-path1">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-cont-path1-name"/>
+	</vendor:MazakPathpath>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-cont-path1-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">path</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakCoolantcoolant rdf:about="&data;Mazak-coolant">
+		<core:hasQuality rdf:resource="&data;Mazak-coolant-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-coolant-name"/>
+	</vendor:MazakCoolantcoolant>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-coolant-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">coolant</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Temperature rdf:about="&data;Mazak-coolant-temperature">
+	</qp:Temperature>
+	
+	<vendor:MazakDoordoor rdf:about="&data;Mazak-door1">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-door1-name"/>
+	</vendor:MazakDoordoor>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-door1-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">door</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakElectricelectric rdf:about="&data;Mazak-elec">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-elec-name"/>
+	</vendor:MazakElectricelectric>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-elec-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">electric</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakEnclosureenclosure rdf:about="&data;Mazak-enclosurem">
+		<core:hasQuality rdf:resource="&data;Mazak-enclosurem-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-enclosurem-name"/>
+	</vendor:MazakEnclosureenclosure>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-enclosurem-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">enclosure</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Temperature rdf:about="&data;Mazak-enclosurem-temperature">
+	</qp:Temperature>
+	
+	<ex:MillingCapability rdf:about="&data;Mazak-function">
+	</ex:MillingCapability>
+	
+	<vendor:MazakHydraulichydraulic rdf:about="&data;Mazak-hydraulic">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-hydraulic-name"/>
+	</vendor:MazakHydraulichydraulic>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-hydraulic-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">hydraulic</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakLubricationlubrication rdf:about="&data;Mazak-lubrication">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-lubrication-name"/>
+	</vendor:MazakLubricationlubrication>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-lubrication-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">lubrication</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Mazak</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakPartOccurrencepartocc rdf:about="&data;Mazak-partocc">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-partocc-name"/>
+	</vendor:MazakPartOccurrencepartocc>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-partocc-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">partocc</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakPersonnelpersonnel rdf:about="&data;Mazak-personnelm">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-personnelm-name"/>
+	</vendor:MazakPersonnelpersonnel>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-personnelm-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">personnel</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakPneumaticpneumatic rdf:about="&data;Mazak-pneumatic">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-pneumatic-name"/>
+	</vendor:MazakPneumaticpneumatic>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-pneumatic-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">pneumatic</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakStockstock rdf:about="&data;Mazak-procstock">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-procstock-name"/>
+	</vendor:MazakStockstock>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-procstock-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">stock</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<core:EquipmentRole rdf:about="&data;Mazak-role">
+	</core:EquipmentRole>
+	
+	<vendor:MazakEnvironmentalenvironmental rdf:about="&data;Mazak-room">
+		<core:hasQuality rdf:resource="&data;Mazak-room-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-room-name"/>
+	</vendor:MazakEnvironmentalenvironmental>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-room-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">environmental</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Temperature rdf:about="&data;Mazak-room-temperature">
+	</qp:Temperature>
+	
+	<vendor:MazakLinkTABLE rdf:about="&data;Mazak-table">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-table-name"/>
+	</vendor:MazakLinkTABLE>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-table-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">TABLE</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakLinkTRUNDLE rdf:about="&data;Mazak-trundle">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-trundle-name"/>
+	</vendor:MazakLinkTRUNDLE>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-trundle-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">TRUNDLE</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakLinearX rdf:about="&data;Mazak-x">
+		<ex:joinedTo rdf:resource="&data;Mazak-enclosurem"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-xaxism"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xballscrew"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-x-Xmotor"/>
+		<core:hasFunction rdf:resource="&data;Mazak-x-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-x-position-actual"/>
+		<core:prescribedBy rdf:resource="&data;Mazak-x-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-x-name"/>
+	</vendor:MazakLinearX>
+	
+	<vendor:MazakBALLSCREWXballscrew rdf:about="&data;Mazak-x-Xballscrew">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-x-Xballscrew-name"/>
+	</vendor:MazakBALLSCREWXballscrew>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-x-Xballscrew-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Xballscrew</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakMOTORXmotor rdf:about="&data;Mazak-x-Xmotor">
+		<core:hasQuality rdf:resource="&data;Mazak-x-Xmotor-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-x-Xmotor-name"/>
+	</vendor:MazakMOTORXmotor>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-x-Xmotor-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Xmotor</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Temperature rdf:about="&data;Mazak-x-Xmotor-temperature">
+	</qp:Temperature>
+	
+	<ex:PrismaticMotionCapability rdf:about="&data;Mazak-x-function">
+	</ex:PrismaticMotionCapability>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-x-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">X</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Displacement rdf:about="&data;Mazak-x-position-actual">
+	</qp:Displacement>
+	
+	<core:DesignSpecification rdf:about="&data;Mazak-x-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-x-spec-LENGTH-Nominal"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-x-spec-LINEAR_FORCE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-x-spec-LINEAR_FORCE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-x-spec-VELOCITY-RAPID-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-x-spec-VELOCITY-RAPID-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-x-spec-LENGTH-Nominal">
+		<units:hasUnit rdf:resource="&units;MilliM"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">650.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-x-spec-LINEAR_FORCE-Maximum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-x-spec-LINEAR_FORCE-Minimum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-x-spec-VELOCITY-RAPID-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-x-spec-VELOCITY-RAPID-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<vendor:MazakLinkX_AXIS rdf:about="&data;Mazak-xaxism">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-xaxism-name"/>
+	</vendor:MazakLinkX_AXIS>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-xaxism-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">X_AXIS</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakLinearY rdf:about="&data;Mazak-y">
+		<ex:joinedTo rdf:resource="&data;Mazak-xaxism"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-yaxism"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-y-Yballscrew"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-y-Ymotor"/>
+		<core:hasFunction rdf:resource="&data;Mazak-y-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-y-position-actual"/>
+		<core:prescribedBy rdf:resource="&data;Mazak-y-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-y-name"/>
+	</vendor:MazakLinearY>
+	
+	<vendor:MazakBALLSCREWYballscrew rdf:about="&data;Mazak-y-Yballscrew">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-y-Yballscrew-name"/>
+	</vendor:MazakBALLSCREWYballscrew>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-y-Yballscrew-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Yballscrew</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakMOTORYmotor rdf:about="&data;Mazak-y-Ymotor">
+		<core:hasQuality rdf:resource="&data;Mazak-y-Ymotor-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-y-Ymotor-name"/>
+	</vendor:MazakMOTORYmotor>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-y-Ymotor-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Ymotor</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Temperature rdf:about="&data;Mazak-y-Ymotor-temperature">
+	</qp:Temperature>
+	
+	<ex:PrismaticMotionCapability rdf:about="&data;Mazak-y-function">
+	</ex:PrismaticMotionCapability>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-y-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Y</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Displacement rdf:about="&data;Mazak-y-position-actual">
+	</qp:Displacement>
+	
+	<core:DesignSpecification rdf:about="&data;Mazak-y-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-y-spec-LENGTH-Nominal"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-y-spec-LINEAR_FORCE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-y-spec-LINEAR_FORCE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-y-spec-VELOCITY-RAPID-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-y-spec-VELOCITY-RAPID-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-y-spec-LENGTH-Nominal">
+		<units:hasUnit rdf:resource="&units;MilliM"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">550.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-y-spec-LINEAR_FORCE-Maximum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">5200.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-y-spec-LINEAR_FORCE-Minimum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-y-spec-VELOCITY-RAPID-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-y-spec-VELOCITY-RAPID-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<vendor:MazakLinkY_AXIS rdf:about="&data;Mazak-yaxism">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-yaxism-name"/>
+	</vendor:MazakLinkY_AXIS>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-yaxism-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Y_AXIS</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakLinearZ rdf:about="&data;Mazak-z">
+		<ex:joinedTo rdf:resource="&data;Mazak-yaxism"/>
+		<ex:joinedTo rdf:resource="&data;Mazak-zaxis"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zballscrew"/>
+		<obo:BFO_0000115 rdf:resource="&data;Mazak-z-Zmotor"/>
+		<core:hasFunction rdf:resource="&data;Mazak-z-function"/>
+		<core:hasQuality rdf:resource="&data;Mazak-z-position-actual"/>
+		<core:hasQuality rdf:resource="&data;Mazak-z-temperature"/>
+		<core:prescribedBy rdf:resource="&data;Mazak-z-spec"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-z-name"/>
+	</vendor:MazakLinearZ>
+	
+	<vendor:MazakBALLSCREWZballscrew rdf:about="&data;Mazak-z-Zballscrew">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-z-Zballscrew-name"/>
+	</vendor:MazakBALLSCREWZballscrew>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-z-Zballscrew-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Zballscrew</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<vendor:MazakMOTORZmotor rdf:about="&data;Mazak-z-Zmotor">
+		<core:hasQuality rdf:resource="&data;Mazak-z-Zmotor-temperature"/>
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-z-Zmotor-name"/>
+	</vendor:MazakMOTORZmotor>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-z-Zmotor-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Zmotor</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Temperature rdf:about="&data;Mazak-z-Zmotor-temperature">
+	</qp:Temperature>
+	
+	<ex:PrismaticMotionCapability rdf:about="&data;Mazak-z-function">
+	</ex:PrismaticMotionCapability>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-z-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Z</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+	
+	<qp:Displacement rdf:about="&data;Mazak-z-position-actual">
+	</qp:Displacement>
+	
+	<core:DesignSpecification rdf:about="&data;Mazak-z-spec">
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-z-spec-LENGTH-Nominal"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-z-spec-LINEAR_FORCE-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-z-spec-LINEAR_FORCE-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-z-spec-VELOCITY-RAPID-Maximum"/>
+		<core:hasValueExpressionAtAllTimes rdf:resource="&data;Mazak-z-spec-VELOCITY-RAPID-Minimum"/>
+	</core:DesignSpecification>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-z-spec-LENGTH-Nominal">
+		<units:hasUnit rdf:resource="&units;MilliM"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">530.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-z-spec-LINEAR_FORCE-Maximum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">9600.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-z-spec-LINEAR_FORCE-Minimum">
+		<units:hasUnit rdf:resource="&units;N"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">0.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-z-spec-VELOCITY-RAPID-Maximum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">7000.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<core:ValueExpression rdf:about="&data;Mazak-z-spec-VELOCITY-RAPID-Minimum">
+		<units:hasUnit rdf:resource="&units;MilliM-PER-SEC"/>
+		<core:hasSimpleExpressionValue rdf:datatype="&xs;double">1.0</core:hasSimpleExpressionValue>
+	</core:ValueExpression>
+	
+	<qp:Temperature rdf:about="&data;Mazak-z-temperature">
+	</qp:Temperature>
+	
+	<vendor:MazakLinkZ_AXIS rdf:about="&data;Mazak-zaxis">
+		<cmns-dsg:hasName rdf:resource="&data;Mazak-zaxis-name"/>
+	</vendor:MazakLinkZ_AXIS>
+	
+	<cmns-dsg:Name rdf:about="&data;Mazak-zaxis-name">
+		<cmns-dsg:hasTextualName rdf:datatype="&xs;string">Z_AXIS</cmns-dsg:hasTextualName>
+	</cmns-dsg:Name>
+
+</rdf:RDF>

@@ -1,0 +1,1307 @@
+# imports: http://example.com/ontology/
+
+@prefix cmns-dsg: <https://www.omg.org/spec/Commons/Designators/> .
+@prefix core: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix data: <http://example.com/data/> .
+@prefix ex: <http://example.com/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qp: <https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfv: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix units: <http://qudt.org/vocab/unit/> .
+@prefix vendor: <http://example.com/Mazak/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.com//>
+	a owl:Ontology ;
+	.
+
+<http://example.com/data/>
+	a owl:Ontology ;
+	rdfs:label "Machine Ontology"@en-US ;
+	owl:imports <http://example.com/ontology/> ;
+	.
+
+vendor:Mazak-br-Constr
+	a owl:Class ;
+	rdfs:subClassOf qp:Angle ;
+	owl:equivalentClass [
+		a owl:Class ;
+		owl:intersectionOf (
+			qp:Angle
+			[
+				a owl:Restriction ;
+				owl:onProperty core:hasMeasuredValueAtSomeTime ;
+				owl:someValuesFrom [
+					a owl:Class ;
+					owl:intersectionOf (
+						core:MeasuredValueExpression
+						[
+							a owl:Restriction ;
+							owl:onProperty core:hasSimpleExpressionValue ;
+							owl:someValuesFrom [
+								a rdfs:Datatype ;
+								owl:onDatatype xs:float ;
+								owl:withRestrictions (
+									[
+										xs:maxInclusive "120.0"^^xs:float ;
+									]
+									[
+										xs:minInclusive "-30.0"^^xs:float ;
+									]
+								) ;
+							] ;
+						]
+					) ;
+				] ;
+			]
+		) ;
+	] ;
+	.
+
+vendor:Mazak-c-Constr
+	a owl:Class ;
+	rdfs:subClassOf ex:PrismaticVelocity ;
+	owl:equivalentClass [
+		a owl:Class ;
+		owl:intersectionOf (
+			ex:PrismaticVelocity
+			[
+				a owl:Restriction ;
+				owl:onProperty core:hasMeasuredValueAtSomeTime ;
+				owl:someValuesFrom [
+					a owl:Class ;
+					owl:intersectionOf (
+						core:MeasuredValueExpression
+						[
+							a owl:Restriction ;
+							owl:onProperty core:hasSimpleExpressionValue ;
+							owl:someValuesFrom [
+								a rdfs:Datatype ;
+								owl:onDatatype xs:float ;
+								owl:withRestrictions (
+									[
+										xs:maxInclusive "12000.0"^^xs:float ;
+									]
+									[
+										xs:minInclusive "0.0"^^xs:float ;
+									]
+								) ;
+							] ;
+						]
+					) ;
+				] ;
+			]
+		) ;
+	] ;
+	.
+
+vendor:Mazak-c2-Constr
+	a owl:Class ;
+	rdfs:subClassOf qp:Angle ;
+	owl:equivalentClass [
+		a owl:Class ;
+		owl:intersectionOf (
+			qp:Angle
+			[
+				a owl:Restriction ;
+				owl:onProperty core:hasMeasuredValueAtSomeTime ;
+				owl:someValuesFrom [
+					a owl:Class ;
+					owl:intersectionOf (
+						core:MeasuredValueExpression
+						[
+							a owl:Restriction ;
+							owl:onProperty core:hasSimpleExpressionValue ;
+							owl:someValuesFrom [
+								a rdfs:Datatype ;
+								owl:onDatatype xs:float ;
+								owl:withRestrictions (
+									[
+										xs:maxInclusive "360.0"^^xs:float ;
+									]
+									[
+										xs:minInclusive "-360.0"^^xs:float ;
+									]
+								) ;
+							] ;
+						]
+					) ;
+				] ;
+			]
+		) ;
+	] ;
+	.
+
+vendor:Mazak-x-Constr
+	a owl:Class ;
+	rdfs:subClassOf ex:PrismaticVelocity ;
+	owl:equivalentClass
+		[
+			a owl:Class ;
+			owl:intersectionOf (
+				ex:PrismaticVelocity
+				[
+					a owl:Restriction ;
+					owl:onProperty core:hasMeasuredValueAtSomeTime ;
+					owl:someValuesFrom [
+						a owl:Class ;
+						owl:intersectionOf (
+							core:MeasuredValueExpression
+							[
+								a owl:Restriction ;
+								owl:onProperty core:hasSimpleExpressionValue ;
+								owl:someValuesFrom [
+									a rdfs:Datatype ;
+									owl:onDatatype xs:float ;
+									owl:withRestrictions (
+										[
+											xs:maxInclusive "7000.0"^^xs:float ;
+										]
+										[
+											xs:minInclusive "1.0"^^xs:float ;
+										]
+									) ;
+								] ;
+							]
+						) ;
+					] ;
+				]
+			) ;
+		] ,
+		[
+			a owl:Class ;
+			owl:intersectionOf (
+				ex:PrismaticVelocity
+				[
+					a owl:Restriction ;
+					owl:onProperty core:hasMeasuredValueAtSomeTime ;
+					owl:someValuesFrom [
+						a owl:Class ;
+						owl:intersectionOf (
+							core:MeasuredValueExpression
+							[
+								a owl:Restriction ;
+								owl:onProperty core:hasSimpleExpressionValue ;
+								owl:someValuesFrom [
+									a rdfs:Datatype ;
+									owl:onDatatype xs:float ;
+									owl:withRestrictions (
+										[
+											xs:maxInclusive "7000.0"^^xs:float ;
+										]
+										[
+											xs:minInclusive "1.0"^^xs:float ;
+										]
+									) ;
+								] ;
+							]
+						) ;
+					] ;
+				]
+			) ;
+		]
+		;
+	.
+
+vendor:Mazak-y-Constr
+	a owl:Class ;
+	rdfs:subClassOf ex:PrismaticVelocity ;
+	owl:equivalentClass
+		[
+			a owl:Class ;
+			owl:intersectionOf (
+				ex:PrismaticVelocity
+				[
+					a owl:Restriction ;
+					owl:onProperty core:hasMeasuredValueAtSomeTime ;
+					owl:someValuesFrom [
+						a owl:Class ;
+						owl:intersectionOf (
+							core:MeasuredValueExpression
+							[
+								a owl:Restriction ;
+								owl:onProperty core:hasSimpleExpressionValue ;
+								owl:someValuesFrom [
+									a rdfs:Datatype ;
+									owl:onDatatype xs:float ;
+									owl:withRestrictions (
+										[
+											xs:maxInclusive "7000.0"^^xs:float ;
+										]
+										[
+											xs:minInclusive "1.0"^^xs:float ;
+										]
+									) ;
+								] ;
+							]
+						) ;
+					] ;
+				]
+			) ;
+		] ,
+		[
+			a owl:Class ;
+			owl:intersectionOf (
+				ex:PrismaticVelocity
+				[
+					a owl:Restriction ;
+					owl:onProperty core:hasMeasuredValueAtSomeTime ;
+					owl:someValuesFrom [
+						a owl:Class ;
+						owl:intersectionOf (
+							core:MeasuredValueExpression
+							[
+								a owl:Restriction ;
+								owl:onProperty core:hasSimpleExpressionValue ;
+								owl:someValuesFrom [
+									a rdfs:Datatype ;
+									owl:onDatatype xs:float ;
+									owl:withRestrictions (
+										[
+											xs:maxInclusive "7000.0"^^xs:float ;
+										]
+										[
+											xs:minInclusive "1.0"^^xs:float ;
+										]
+									) ;
+								] ;
+							]
+						) ;
+					] ;
+				]
+			) ;
+		]
+		;
+	.
+
+vendor:Mazak-z-Constr
+	a owl:Class ;
+	rdfs:subClassOf ex:PrismaticVelocity ;
+	owl:equivalentClass
+		[
+			a owl:Class ;
+			owl:intersectionOf (
+				ex:PrismaticVelocity
+				[
+					a owl:Restriction ;
+					owl:onProperty core:hasMeasuredValueAtSomeTime ;
+					owl:someValuesFrom [
+						a owl:Class ;
+						owl:intersectionOf (
+							core:MeasuredValueExpression
+							[
+								a owl:Restriction ;
+								owl:onProperty core:hasSimpleExpressionValue ;
+								owl:someValuesFrom [
+									a rdfs:Datatype ;
+									owl:onDatatype xs:float ;
+									owl:withRestrictions (
+										[
+											xs:maxInclusive "7000.0"^^xs:float ;
+										]
+										[
+											xs:minInclusive "1.0"^^xs:float ;
+										]
+									) ;
+								] ;
+							]
+						) ;
+					] ;
+				]
+			) ;
+		] ,
+		[
+			a owl:Class ;
+			owl:intersectionOf (
+				ex:PrismaticVelocity
+				[
+					a owl:Restriction ;
+					owl:onProperty core:hasMeasuredValueAtSomeTime ;
+					owl:someValuesFrom [
+						a owl:Class ;
+						owl:intersectionOf (
+							core:MeasuredValueExpression
+							[
+								a owl:Restriction ;
+								owl:onProperty core:hasSimpleExpressionValue ;
+								owl:someValuesFrom [
+									a rdfs:Datatype ;
+									owl:onDatatype xs:float ;
+									owl:withRestrictions (
+										[
+											xs:maxInclusive "7000.0"^^xs:float ;
+										]
+										[
+											xs:minInclusive "1.0"^^xs:float ;
+										]
+									) ;
+								] ;
+							]
+						) ;
+					] ;
+				]
+			) ;
+		]
+		;
+	.
+
+vendor:MazakBALLSCREWXballscrew
+	a owl:Class ;
+	rdfs:subClassOf ex:Ballscrew ;
+	.
+
+vendor:MazakBALLSCREWYballscrew
+	a owl:Class ;
+	rdfs:subClassOf ex:Ballscrew ;
+	.
+
+vendor:MazakBALLSCREWZballscrew
+	a owl:Class ;
+	rdfs:subClassOf ex:Ballscrew ;
+	.
+
+vendor:MazakControllercontroller
+	a owl:Class ;
+	rdfs:subClassOf ex:ControlSystem ;
+	.
+
+vendor:MazakCoolantcoolant
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+vendor:MazakDeviceMazak
+	a owl:Class ;
+	rdfs:subClassOf ex:Machine ;
+	.
+
+vendor:MazakDoordoor
+	a owl:Class ;
+	rdfs:subClassOf obo:BFO_0000030 ;
+	.
+
+vendor:MazakElectricelectric
+	a owl:Class ;
+	rdfs:subClassOf ex:ElectricalSystem ;
+	.
+
+vendor:MazakEnclosureenclosure
+	a owl:Class ;
+	rdfs:subClassOf ex:Structure ;
+	.
+
+vendor:MazakEnvironmentalenvironmental
+	a owl:Class ;
+	rdfs:subClassOf ex:Room ;
+	.
+
+vendor:MazakHydraulichydraulic
+	a owl:Class ;
+	rdfs:subClassOf ex:HydraulicSystem ;
+	.
+
+vendor:MazakLinearX
+	a owl:Class ;
+	rdfs:subClassOf ex:LinearMotionSystem ;
+	.
+
+vendor:MazakLinearY
+	a owl:Class ;
+	rdfs:subClassOf ex:LinearMotionSystem ;
+	.
+
+vendor:MazakLinearZ
+	a owl:Class ;
+	rdfs:subClassOf ex:LinearMotionSystem ;
+	.
+
+vendor:MazakLinkTABLE
+	a owl:Class ;
+	rdfs:subClassOf ex:Structure ;
+	.
+
+vendor:MazakLinkTRUNDLE
+	a owl:Class ;
+	rdfs:subClassOf ex:Structure ;
+	.
+
+vendor:MazakLinkX_AXIS
+	a owl:Class ;
+	rdfs:subClassOf ex:Structure ;
+	.
+
+vendor:MazakLinkY_AXIS
+	a owl:Class ;
+	rdfs:subClassOf ex:Structure ;
+	.
+
+vendor:MazakLinkZ_AXIS
+	a owl:Class ;
+	rdfs:subClassOf ex:Structure ;
+	.
+
+vendor:MazakLubricationlubrication
+	a owl:Class ;
+	rdfs:subClassOf ex:LubricationSystem ;
+	.
+
+vendor:MazakMOTORBmotor
+	a owl:Class ;
+	rdfs:subClassOf ex:Motor ;
+	.
+
+vendor:MazakMOTORC2motor
+	a owl:Class ;
+	rdfs:subClassOf ex:Motor ;
+	.
+
+vendor:MazakMOTORCmotor
+	a owl:Class ;
+	rdfs:subClassOf ex:Motor ;
+	.
+
+vendor:MazakMOTORXmotor
+	a owl:Class ;
+	rdfs:subClassOf ex:Motor ;
+	.
+
+vendor:MazakMOTORYmotor
+	a owl:Class ;
+	rdfs:subClassOf ex:Motor ;
+	.
+
+vendor:MazakMOTORZmotor
+	a owl:Class ;
+	rdfs:subClassOf ex:Motor ;
+	.
+
+vendor:MazakPartOccurrencepartocc
+	a owl:Class ;
+	rdfs:subClassOf ex:Part ;
+	.
+
+vendor:MazakPathpath
+	a owl:Class ;
+	rdfs:subClassOf ex:ControlSystemPath ;
+	.
+
+vendor:MazakPersonnelpersonnel
+	a owl:Class ;
+	rdfs:subClassOf core:Person ;
+	.
+
+vendor:MazakPneumaticpneumatic
+	a owl:Class ;
+	rdfs:subClassOf ex:PneumaticSystem ;
+	.
+
+vendor:MazakRotaryB
+	a owl:Class ;
+	rdfs:subClassOf ex:RotaryMotionSystem ;
+	.
+
+vendor:MazakRotaryC1
+	a owl:Class ;
+	rdfs:subClassOf ex:RotaryMotionSystem ;
+	.
+
+vendor:MazakRotaryC2
+	a owl:Class ;
+	rdfs:subClassOf ex:RotaryMotionSystem ;
+	.
+
+vendor:MazakStockstock
+	a owl:Class ;
+	rdfs:subClassOf ex:Stock ;
+	.
+
+data:Mazak
+	a vendor:MazakDeviceMazak ;
+	obo:BFO_0000115
+		data:Mazak-br ,
+		data:Mazak-c ,
+		data:Mazak-c2 ,
+		data:Mazak-cont ,
+		data:Mazak-coolant ,
+		data:Mazak-door1 ,
+		data:Mazak-elec ,
+		data:Mazak-enclosurem ,
+		data:Mazak-hydraulic ,
+		data:Mazak-lubrication ,
+		data:Mazak-partocc ,
+		data:Mazak-pneumatic ,
+		data:Mazak-procstock ,
+		data:Mazak-table ,
+		data:Mazak-trundle ,
+		data:Mazak-x ,
+		data:Mazak-xaxism ,
+		data:Mazak-y ,
+		data:Mazak-yaxism ,
+		data:Mazak-z ,
+		data:Mazak-zaxis
+		;
+	core:hasCapability data:Mazak-capability ;
+	core:hasFunction data:Mazak-function ;
+	core:hasRole data:Mazak-role ;
+	cmns-dsg:hasName data:Mazak-name ;
+	.
+
+data:Mazak-br
+	a vendor:MazakRotaryB ;
+	ex:joinedTo
+		data:Mazak-enclosurem ,
+		data:Mazak-trundle
+		;
+	obo:BFO_0000115 data:Mazak-br-Bmotor ;
+	core:hasFunction data:Mazak-br-function ;
+	core:hasQuality data:Mazak-br-angle-actual ;
+	core:prescribedBy data:Mazak-br-spec ;
+	cmns-dsg:hasName data:Mazak-br-name ;
+	.
+
+data:Mazak-br-Bmotor
+	a vendor:MazakMOTORBmotor ;
+	cmns-dsg:hasName data:Mazak-br-Bmotor-name ;
+	.
+
+data:Mazak-br-Bmotor-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Bmotor"^^xs:string ;
+	.
+
+data:Mazak-br-angle-actual
+	a qp:Angle ;
+	.
+
+data:Mazak-br-function
+	a ex:RevoluteMotionCapability ;
+	.
+
+data:Mazak-br-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "B"^^xs:string ;
+	.
+
+data:Mazak-br-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-br-spec-ANGLE-Maximum ,
+		data:Mazak-br-spec-ANGLE-Minimum ,
+		data:Mazak-br-spec-TORQUE-Maximum ,
+		data:Mazak-br-spec-TORQUE-Minimum
+		;
+	.
+
+data:Mazak-br-spec-ANGLE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:DEG ;
+	core:hasSimpleExpressionValue "1.2e2"^^xs:double ;
+	.
+
+data:Mazak-br-spec-ANGLE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:DEG ;
+	core:hasSimpleExpressionValue "-3.0e1"^^xs:double ;
+	.
+
+data:Mazak-br-spec-TORQUE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N-M ;
+	core:hasSimpleExpressionValue "4.0e2"^^xs:double ;
+	.
+
+data:Mazak-br-spec-TORQUE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N-M ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
+	.
+
+data:Mazak-c
+	a vendor:MazakRotaryC1 ;
+	ex:joinedTo data:Mazak-zaxis ;
+	obo:BFO_0000115 data:Mazak-c-Cmotor ;
+	core:hasFunction data:Mazak-c-function ;
+	core:measuresAtSomeTime data:Mazak-c-rotary_velocity-actual ;
+	core:prescribedBy data:Mazak-c-spec ;
+	cmns-dsg:hasName data:Mazak-c-name ;
+	.
+
+data:Mazak-c-Cmotor
+	a vendor:MazakMOTORCmotor ;
+	core:hasQuality data:Mazak-c-Cmotor-temperature ;
+	cmns-dsg:hasName data:Mazak-c-Cmotor-name ;
+	.
+
+data:Mazak-c-Cmotor-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Cmotor"^^xs:string ;
+	.
+
+data:Mazak-c-Cmotor-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-c-function
+	a ex:ContinuousMotionCapability ;
+	.
+
+data:Mazak-c-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "C1"^^xs:string ;
+	.
+
+data:Mazak-c-rotary_velocity-actual
+	a ex:RevoluteVelocity ;
+	.
+
+data:Mazak-c-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-c-spec-VELOCITY-Maximum ,
+		data:Mazak-c-spec-VELOCITY-Minimum
+		;
+	.
+
+data:Mazak-c-spec-VELOCITY-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:REV-PER-MIN ;
+	core:hasSimpleExpressionValue "1.2e4"^^xs:double ;
+	.
+
+data:Mazak-c-spec-VELOCITY-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:REV-PER-MIN ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
+	.
+
+data:Mazak-c2
+	a vendor:MazakRotaryC2 ;
+	ex:joinedTo
+		data:Mazak-table ,
+		data:Mazak-trundle
+		;
+	obo:BFO_0000115 data:Mazak-c2-C2motor ;
+	core:hasFunction data:Mazak-c2-function ;
+	core:hasQuality data:Mazak-c2-angle-actual ;
+	core:prescribedBy data:Mazak-c2-spec ;
+	cmns-dsg:hasName data:Mazak-c2-name ;
+	.
+
+data:Mazak-c2-C2motor
+	a vendor:MazakMOTORC2motor ;
+	cmns-dsg:hasName data:Mazak-c2-C2motor-name ;
+	.
+
+data:Mazak-c2-C2motor-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "C2motor"^^xs:string ;
+	.
+
+data:Mazak-c2-angle-actual
+	a qp:Angle ;
+	.
+
+data:Mazak-c2-function
+	a ex:RevoluteMotionCapability ;
+	.
+
+data:Mazak-c2-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "C2"^^xs:string ;
+	.
+
+data:Mazak-c2-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-c2-spec-ANGLE-Maximum ,
+		data:Mazak-c2-spec-ANGLE-Minimum ,
+		data:Mazak-c2-spec-TORQUE-Maximum ,
+		data:Mazak-c2-spec-TORQUE-Minimum
+		;
+	.
+
+data:Mazak-c2-spec-ANGLE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:DEG ;
+	core:hasSimpleExpressionValue "3.6e2"^^xs:double ;
+	.
+
+data:Mazak-c2-spec-ANGLE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:DEG ;
+	core:hasSimpleExpressionValue "-3.6e2"^^xs:double ;
+	.
+
+data:Mazak-c2-spec-TORQUE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N-M ;
+	core:hasSimpleExpressionValue "4.0e2"^^xs:double ;
+	.
+
+data:Mazak-c2-spec-TORQUE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N-M ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
+	.
+
+data:Mazak-capability
+	a ex:TurningCapability ;
+	.
+
+data:Mazak-cont
+	a vendor:MazakControllercontroller ;
+	obo:BFO_0000115 data:Mazak-cont-path1 ;
+	cmns-dsg:hasName data:Mazak-cont-name ;
+	.
+
+data:Mazak-cont-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "controller"^^xs:string ;
+	.
+
+data:Mazak-cont-path1
+	a vendor:MazakPathpath ;
+	cmns-dsg:hasName data:Mazak-cont-path1-name ;
+	.
+
+data:Mazak-cont-path1-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "path"^^xs:string ;
+	.
+
+data:Mazak-coolant
+	a vendor:MazakCoolantcoolant ;
+	core:hasQuality data:Mazak-coolant-temperature ;
+	cmns-dsg:hasName data:Mazak-coolant-name ;
+	.
+
+data:Mazak-coolant-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "coolant"^^xs:string ;
+	.
+
+data:Mazak-coolant-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-door1
+	a vendor:MazakDoordoor ;
+	cmns-dsg:hasName data:Mazak-door1-name ;
+	.
+
+data:Mazak-door1-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "door"^^xs:string ;
+	.
+
+data:Mazak-elec
+	a vendor:MazakElectricelectric ;
+	cmns-dsg:hasName data:Mazak-elec-name ;
+	.
+
+data:Mazak-elec-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "electric"^^xs:string ;
+	.
+
+data:Mazak-enclosurem
+	a vendor:MazakEnclosureenclosure ;
+	core:hasQuality data:Mazak-enclosurem-temperature ;
+	cmns-dsg:hasName data:Mazak-enclosurem-name ;
+	.
+
+data:Mazak-enclosurem-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "enclosure"^^xs:string ;
+	.
+
+data:Mazak-enclosurem-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-function
+	a ex:MillingCapability ;
+	.
+
+data:Mazak-hydraulic
+	a vendor:MazakHydraulichydraulic ;
+	cmns-dsg:hasName data:Mazak-hydraulic-name ;
+	.
+
+data:Mazak-hydraulic-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "hydraulic"^^xs:string ;
+	.
+
+data:Mazak-lubrication
+	a vendor:MazakLubricationlubrication ;
+	cmns-dsg:hasName data:Mazak-lubrication-name ;
+	.
+
+data:Mazak-lubrication-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "lubrication"^^xs:string ;
+	.
+
+data:Mazak-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Mazak"^^xs:string ;
+	.
+
+data:Mazak-partocc
+	a vendor:MazakPartOccurrencepartocc ;
+	cmns-dsg:hasName data:Mazak-partocc-name ;
+	.
+
+data:Mazak-partocc-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "partocc"^^xs:string ;
+	.
+
+data:Mazak-personnelm
+	a vendor:MazakPersonnelpersonnel ;
+	cmns-dsg:hasName data:Mazak-personnelm-name ;
+	.
+
+data:Mazak-personnelm-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "personnel"^^xs:string ;
+	.
+
+data:Mazak-pneumatic
+	a vendor:MazakPneumaticpneumatic ;
+	cmns-dsg:hasName data:Mazak-pneumatic-name ;
+	.
+
+data:Mazak-pneumatic-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "pneumatic"^^xs:string ;
+	.
+
+data:Mazak-procstock
+	a vendor:MazakStockstock ;
+	cmns-dsg:hasName data:Mazak-procstock-name ;
+	.
+
+data:Mazak-procstock-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "stock"^^xs:string ;
+	.
+
+data:Mazak-role
+	a core:EquipmentRole ;
+	.
+
+data:Mazak-room
+	a vendor:MazakEnvironmentalenvironmental ;
+	core:hasQuality data:Mazak-room-temperature ;
+	cmns-dsg:hasName data:Mazak-room-name ;
+	.
+
+data:Mazak-room-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "environmental"^^xs:string ;
+	.
+
+data:Mazak-room-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-table
+	a vendor:MazakLinkTABLE ;
+	cmns-dsg:hasName data:Mazak-table-name ;
+	.
+
+data:Mazak-table-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "TABLE"^^xs:string ;
+	.
+
+data:Mazak-trundle
+	a vendor:MazakLinkTRUNDLE ;
+	cmns-dsg:hasName data:Mazak-trundle-name ;
+	.
+
+data:Mazak-trundle-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "TRUNDLE"^^xs:string ;
+	.
+
+data:Mazak-x
+	a vendor:MazakLinearX ;
+	ex:joinedTo
+		data:Mazak-enclosurem ,
+		data:Mazak-xaxism
+		;
+	obo:BFO_0000115
+		data:Mazak-x-Xballscrew ,
+		data:Mazak-x-Xmotor
+		;
+	core:hasFunction data:Mazak-x-function ;
+	core:hasQuality data:Mazak-x-position-actual ;
+	core:prescribedBy data:Mazak-x-spec ;
+	cmns-dsg:hasName data:Mazak-x-name ;
+	.
+
+data:Mazak-x-Xballscrew
+	a vendor:MazakBALLSCREWXballscrew ;
+	cmns-dsg:hasName data:Mazak-x-Xballscrew-name ;
+	.
+
+data:Mazak-x-Xballscrew-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Xballscrew"^^xs:string ;
+	.
+
+data:Mazak-x-Xmotor
+	a vendor:MazakMOTORXmotor ;
+	core:hasQuality data:Mazak-x-Xmotor-temperature ;
+	cmns-dsg:hasName data:Mazak-x-Xmotor-name ;
+	.
+
+data:Mazak-x-Xmotor-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Xmotor"^^xs:string ;
+	.
+
+data:Mazak-x-Xmotor-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-x-function
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:Mazak-x-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "X"^^xs:string ;
+	.
+
+data:Mazak-x-position-actual
+	a qp:Displacement ;
+	.
+
+data:Mazak-x-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-x-spec-LENGTH-Nominal ,
+		data:Mazak-x-spec-LINEAR_FORCE-Maximum ,
+		data:Mazak-x-spec-LINEAR_FORCE-Minimum ,
+		data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:Mazak-x-spec-VELOCITY-RAPID-Maximum ,
+		data:Mazak-x-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:Mazak-x-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "6.5e2"^^xs:double ;
+	.
+
+data:Mazak-x-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "5.2e3"^^xs:double ;
+	.
+
+data:Mazak-x-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
+	.
+
+data:Mazak-x-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
+	.
+
+data:Mazak-x-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
+	.
+
+data:Mazak-x-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
+	.
+
+data:Mazak-x-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
+	.
+
+data:Mazak-xaxism
+	a vendor:MazakLinkX_AXIS ;
+	cmns-dsg:hasName data:Mazak-xaxism-name ;
+	.
+
+data:Mazak-xaxism-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "X_AXIS"^^xs:string ;
+	.
+
+data:Mazak-y
+	a vendor:MazakLinearY ;
+	ex:joinedTo
+		data:Mazak-xaxism ,
+		data:Mazak-yaxism
+		;
+	obo:BFO_0000115
+		data:Mazak-y-Yballscrew ,
+		data:Mazak-y-Ymotor
+		;
+	core:hasFunction data:Mazak-y-function ;
+	core:hasQuality data:Mazak-y-position-actual ;
+	core:prescribedBy data:Mazak-y-spec ;
+	cmns-dsg:hasName data:Mazak-y-name ;
+	.
+
+data:Mazak-y-Yballscrew
+	a vendor:MazakBALLSCREWYballscrew ;
+	cmns-dsg:hasName data:Mazak-y-Yballscrew-name ;
+	.
+
+data:Mazak-y-Yballscrew-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Yballscrew"^^xs:string ;
+	.
+
+data:Mazak-y-Ymotor
+	a vendor:MazakMOTORYmotor ;
+	core:hasQuality data:Mazak-y-Ymotor-temperature ;
+	cmns-dsg:hasName data:Mazak-y-Ymotor-name ;
+	.
+
+data:Mazak-y-Ymotor-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Ymotor"^^xs:string ;
+	.
+
+data:Mazak-y-Ymotor-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-y-function
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:Mazak-y-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Y"^^xs:string ;
+	.
+
+data:Mazak-y-position-actual
+	a qp:Displacement ;
+	.
+
+data:Mazak-y-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-y-spec-LENGTH-Nominal ,
+		data:Mazak-y-spec-LINEAR_FORCE-Maximum ,
+		data:Mazak-y-spec-LINEAR_FORCE-Minimum ,
+		data:Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:Mazak-y-spec-VELOCITY-RAPID-Maximum ,
+		data:Mazak-y-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:Mazak-y-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "5.5e2"^^xs:double ;
+	.
+
+data:Mazak-y-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "5.2e3"^^xs:double ;
+	.
+
+data:Mazak-y-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
+	.
+
+data:Mazak-y-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
+	.
+
+data:Mazak-y-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
+	.
+
+data:Mazak-y-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
+	.
+
+data:Mazak-y-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
+	.
+
+data:Mazak-yaxism
+	a vendor:MazakLinkY_AXIS ;
+	cmns-dsg:hasName data:Mazak-yaxism-name ;
+	.
+
+data:Mazak-yaxism-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Y_AXIS"^^xs:string ;
+	.
+
+data:Mazak-z
+	a vendor:MazakLinearZ ;
+	ex:joinedTo
+		data:Mazak-yaxism ,
+		data:Mazak-zaxis
+		;
+	obo:BFO_0000115
+		data:Mazak-z-Zballscrew ,
+		data:Mazak-z-Zmotor
+		;
+	core:hasFunction data:Mazak-z-function ;
+	core:hasQuality
+		data:Mazak-z-position-actual ,
+		data:Mazak-z-temperature
+		;
+	core:prescribedBy data:Mazak-z-spec ;
+	cmns-dsg:hasName data:Mazak-z-name ;
+	.
+
+data:Mazak-z-Zballscrew
+	a vendor:MazakBALLSCREWZballscrew ;
+	cmns-dsg:hasName data:Mazak-z-Zballscrew-name ;
+	.
+
+data:Mazak-z-Zballscrew-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Zballscrew"^^xs:string ;
+	.
+
+data:Mazak-z-Zmotor
+	a vendor:MazakMOTORZmotor ;
+	core:hasQuality data:Mazak-z-Zmotor-temperature ;
+	cmns-dsg:hasName data:Mazak-z-Zmotor-name ;
+	.
+
+data:Mazak-z-Zmotor-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Zmotor"^^xs:string ;
+	.
+
+data:Mazak-z-Zmotor-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-z-function
+	a ex:PrismaticMotionCapability ;
+	.
+
+data:Mazak-z-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Z"^^xs:string ;
+	.
+
+data:Mazak-z-position-actual
+	a qp:Displacement ;
+	.
+
+data:Mazak-z-spec
+	a core:DesignSpecification ;
+	core:hasValueExpressionAtAllTimes
+		data:Mazak-z-spec-LENGTH-Nominal ,
+		data:Mazak-z-spec-LINEAR_FORCE-Maximum ,
+		data:Mazak-z-spec-LINEAR_FORCE-Minimum ,
+		data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum ,
+		data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum ,
+		data:Mazak-z-spec-VELOCITY-RAPID-Maximum ,
+		data:Mazak-z-spec-VELOCITY-RAPID-Minimum
+		;
+	.
+
+data:Mazak-z-spec-LENGTH-Nominal
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM ;
+	core:hasSimpleExpressionValue "5.3e2"^^xs:double ;
+	.
+
+data:Mazak-z-spec-LINEAR_FORCE-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "9.6e3"^^xs:double ;
+	.
+
+data:Mazak-z-spec-LINEAR_FORCE-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:N ;
+	core:hasSimpleExpressionValue "0.0e0"^^xs:double ;
+	.
+
+data:Mazak-z-spec-VELOCITY-PROGRAMMED-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
+	.
+
+data:Mazak-z-spec-VELOCITY-PROGRAMMED-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
+	.
+
+data:Mazak-z-spec-VELOCITY-RAPID-Maximum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "7.0e3"^^xs:double ;
+	.
+
+data:Mazak-z-spec-VELOCITY-RAPID-Minimum
+	a core:ValueExpression ;
+	units:hasUnit units:MilliM-PER-SEC ;
+	core:hasSimpleExpressionValue "1.0e0"^^xs:double ;
+	.
+
+data:Mazak-z-temperature
+	a qp:Temperature ;
+	.
+
+data:Mazak-zaxis
+	a vendor:MazakLinkZ_AXIS ;
+	cmns-dsg:hasName data:Mazak-zaxis-name ;
+	.
+
+data:Mazak-zaxis-name
+	a cmns-dsg:Name ;
+	cmns-dsg:hasTextualName "Z_AXIS"^^xs:string ;
+	.
+
+ex:PrismaticVelocity
+	a rdfv:Description ;
+	.
+
+core:MeasuredValueExpression
+	a rdfv:Description ;
+	.
+
+qp:Angle
+	a rdfv:Description ;
+	.
+

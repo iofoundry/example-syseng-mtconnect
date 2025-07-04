@@ -1,0 +1,32 @@
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak-hydraulic
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
+}
+individual(o1, vendor:MazakHydraulichydraulic, owl:Class)
+individual(o2, ex:HydraulicSystem)
+individual(o3, data:[[./Mazak-hydraulic.html Mazak-hydraulic]], vendor:MazakHydraulichydraulic)
+individual(o4, data:Mazak-hydraulic-name, cmns-dsg:Name)
+individual(o5, data:[[./Mazak.html Mazak]], vendor:MazakDeviceMazak)
+property(o1, rdfs:subClassOf, o2)
+property(o3, cmns-dsg:hasName, o4)
+data(o4, cmns-dsg:hasTextualName, hydraulic)
+property(o5, "bfo:has member part at some time", o3)
+@enduml

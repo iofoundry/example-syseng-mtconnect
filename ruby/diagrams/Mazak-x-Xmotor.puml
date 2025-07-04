@@ -1,0 +1,34 @@
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak-x-Xmotor
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+"ex":"Green","data":"76608A","core":"000000","units":"8A2D3B","qp":"641B2E","cmns-dsg":"3A0519"
+}
+individual(o1, data:[[./Mazak-x-Xmotor.html Mazak-x-Xmotor]], vendor:MazakMOTORXmotor)
+individual(o2, data:Mazak-x-Xmotor-temperature, qp:Temperature)
+individual(o3, vendor:MazakMOTORXmotor, owl:Class)
+individual(o4, ex:Motor)
+individual(o5, data:Mazak-x-Xmotor-name, cmns-dsg:Name)
+individual(o6, data:[[./Mazak-x.html Mazak-x]], vendor:MazakLinearX)
+property(o1, core:[[https://spec.industrialontologies.org/ontology/core/Core/hasQuality hasQuality]], o2)
+property(o3, rdfs:subClassOf, o4)
+property(o1, cmns-dsg:hasName, o5)
+data(o5, cmns-dsg:hasTextualName, Xmotor)
+property(o6, "bfo:has member part at some time", o1)
+@enduml
