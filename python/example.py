@@ -2,7 +2,7 @@ import owlready2 as owl
 import os
 import re
 
-from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example
+from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example, QUDT
 
 Example.imported_ontologies = [Core, Des, Qual, QualPhysical]
 Example.label = [owl.locstr("Machine Ontology", "en")]
@@ -143,5 +143,8 @@ with Example:
     """An object property for linking a system to a designator."""
     inverse_of = satisfiedBy
     label = owl.locstr("conforms to", "en")
+    
+  class hasUnit(Core.ValueExpression >> QUDT.Unit):
+      label = owl.locstr("has unit", "en")
     
 Example.save(file = "example.rdf", format = "rdfxml")

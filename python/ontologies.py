@@ -16,7 +16,7 @@ BFO.base_iri = "http://purl.obolibrary.org/obo/bfo.owl"
 Core = owl.get_ontology(f"file:///{cache}/Core.rdf").load(only_local = True)
 Core.base_iri = "https://spec.industrialontologies.org/ontology/core/Core/"
 AnnVocab = owl.get_ontology(f"file:///{cache}/AnnotationVocabulary.rdf").load(only_local = True)
-AnnVocab.base_iri = "https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/"
+AnnVocab.base_iri = "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
 Des = owl.get_ontology(f"file:///{cache}/Designators.rdf").load(only_local = True)
 Des.base_iri = "https://www.omg.org/spec/Commons/Designators/"
 Qual = owl.get_ontology(f"file:///{cache}/IOF_Qualities.rdf").load(only_local = True)
@@ -45,14 +45,25 @@ Data = owl.get_ontology("http://example.org/data/")
 Data.base_iri = "http://example.org/data/"
 
 
-QUDT = owl.get_ontology("http://qudt.org/vocab/unit/")
+QUDT = owl.get_ontology(f"http://qudt.org/vocab/unit/")
+QUDT.base_iri = 'http://qudt.org/vocab/unit/'
+with QUDT:
+  class Unit(owl.Thing):
+    pass
+  
+  QUDT.N = Unit('N')
+  QUDT.N_M = Unit('N-M')
+  QUDT.MilliM = Unit('MilliM')
+  QUDT.MilliM_PER_SEC = Unit('MilliM-PER-SEC')
+  QUDT.RPM = Unit('REV-PER-MIN')
+
 Units = {
-  'NEWTON': QUDT['N'],
-  'NEWTON_METER': QUDT['N-M'],
-  'MILLIMETER': QUDT['MilliM'],
-  'DEGREE': QUDT['DEG'],
-  'MILLIMETER/SECOND': QUDT['MilliM-PER-SEC'],
-  'REVOLUTION/MINUTE': QUDT['REV-PER-MIN']
+  'NEWTON': QUDT.N,
+  'NEWTON_METER': QUDT.N_M,
+  'MILLIMETER': QUDT.MilliM,
+  'DEGREE': QUDT.DEG,
+  'MILLIMETER/SECOND': QUDT.MilliM_PER_SEC,
+  'REVOLUTION/MINUTE': QUDT.RPM
 }
 
 Components = {

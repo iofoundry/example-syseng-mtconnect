@@ -2,6 +2,7 @@ from ontologies import *
 import os
 import owlready2 as owl
 import owlready2.base as ob
+import subprocess
 
 class GenerateDiagram:
   linked_terms = None
@@ -13,25 +14,57 @@ class GenerateDiagram:
   def _obj(self, obj):
     return self.objects.get(obj, None)
   
-  def __init__(self, filename, statements):
+  def __init__(self, filename, statements, vendor):
     self.filename = filename
     self.statements = statements
     self.objects = dict()
+    
+    self.namespaces = {
+      'https://spec.industrialontologies.org/ontology/core/Core/': 'core',
+      'http://purl.obolibrary.org/obo/': 'bfo',
+      'http://qudt.org/vocab/unit/': 'units',
+      'https://www.omg.org/spec/Commons/Designators/': 'des',
+      'https://spec.industrialontologies.org/ontology/qualities/Qualities/': 'qual',
+      'https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/': 'qualphys',
+      'http://example.org/data/': 'data',
+      f"http://example.org/{vendor}/": 'vendor',
+      "http://example.org/ontology/": 'ex'
+    }
     
     for s, p, o in statements:
       if p != ob.rdf_type:
         self._add_object(s)
         if not isinstance(o, (str, int, float, owl.locstr)): self._add_object(o)
+        
+  def _name(self, o):
+    name = None
+    ns = None
+    if isinstance(o, (int)):
+      iri = owl.default_world._unabbreviate(o)
+      if '#' in iri:
+        ns, name = iri.split('#')
+      else:
+        parts = iri.split('/')
+        ns = '/'.join(parts[:-1]) + '/'
+        name = parts[-1]
+    else:
+      ns = o.namespace.base_iri
+      name = o.name
+
+    pre = self.namespaces.get(ns, "uns")
+        
+    return f"{pre}:{name}"
   
   def _print_object(self, f, o):
     if o == ob.rdf_nil: return
     
     if o in self.linked_terms:
-      title = o.name # "#{iri.qname.first}:[[./#{iri.qname.last}.html #{iri.qname.last}]]"
+      ns, name = self._name(o).split(':')
+      title = f"{ns}:[[./{name}.html {name}]]"
     else:
-      title = o.name
+      title = self._name(o)
 
-    f.write(f"individual({self._obj(o)}, {title}, {o.is_a[0]})\n")    
+    f.write(f"individual({self._obj(o)}, {title}, {self._name(o.is_a[0])})\n")    
     #if t = @@types[iri]
     #  f.puts "individual(#{obj(iri)}, #{title}, #{self.class.uml_name(t)})"
     #else
@@ -41,12 +74,12 @@ class GenerateDiagram:
   def _print_statement(self, f, s, p, o):
     if p != ob.rdf_type and o != ob.rdf_nil:
       if isinstance(o, (int, str, float)):
-        f.write(f"data({self._obj(s)}, {p}, {o})\n")
+        f.write(f"data({self._obj(s)}, \"{p}\", \"{o}\")\n")
       else:
-        f.write(f"property({self._obj(s)}, {p}, {self._obj(o)})\n")
+        f.write(f"property({self._obj(s)}, \"{p}\", {self._obj(o)})\n")
   
-  def generate(self):
-    with open(f"{self.filename}.html", 'w') as f:
+  def _generate_html(self):
+    with open(f"diagrams/{self.filename}.html", 'w') as f:
       f.write(f"""
 <!doctype html>
 <html>
@@ -59,8 +92,9 @@ class GenerateDiagram:
   </body>
 </html>
 """)
-      
-    with open(f"{self.filename}.puml", 'w') as f:
+  
+  def _generate_diagram(self):
+    with open(f"diagrams/{self.filename}.puml", 'w') as f:
       f.write(f"""
 @startuml
 ' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
@@ -81,16 +115,16 @@ title {os.path.basename(self.filename)}
 !$namespace_colors = {{ "bfo":"DFA702", 
                       "iof":"1E90FF", 
                       "ns":"Green", 
-                      "ns1":"76608A" }}
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }}
 """)
-      color = {
-        "core": "000000",
-        "ex": "Green",
-        "data": "76608A",
-        "units": "8A2D3B",
-        "cmns-dsg": "3A0519",
-        "qp": "641B2E"
-      }
       
       for o in self.objects:
         self._print_object(f, o)
@@ -99,4 +133,13 @@ title {os.path.basename(self.filename)}
         self._print_statement(f, s, p, o)
         
       f.write("@enduml\n")
+  
+  def generate(self):
+    self._generate_html()
+    self._generate_diagram()
+    
+    subprocess.run(['plantuml', '-tsvg', f"diagrams/{self.filename}.puml"])
+        
+      
+  
       

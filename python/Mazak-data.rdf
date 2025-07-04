@@ -113,11 +113,13 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BTORQUEMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">400.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BTORQUEMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -143,11 +145,13 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1ROTARY_VELOCITYMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">12000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1ROTARY_VELOCITYMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -197,11 +201,13 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2TORQUEMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">400.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2TORQUEMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -224,16 +230,19 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XLENGTHNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">650.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XLINEAR_FORCEMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">5200.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XLINEAR_FORCEMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -251,21 +260,25 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XVELOCITY_PROGRAMMEDMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XVELOCITY_PROGRAMMEDMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XVELOCITY_RAPIDMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XVELOCITY_RAPIDMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -295,16 +308,19 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YLENGTHNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">550.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YLINEAR_FORCEMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">5200.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YLINEAR_FORCEMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -322,21 +338,25 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YVELOCITY_PROGRAMMEDMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YVELOCITY_PROGRAMMEDMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YVELOCITY_RAPIDMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YVELOCITY_RAPIDMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -366,16 +386,19 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZLENGTHNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">530.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZLINEAR_FORCEMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">9600.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZLINEAR_FORCEMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -393,21 +416,25 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZVELOCITY_PROGRAMMEDMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZVELOCITY_PROGRAMMEDMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZVELOCITY_RAPIDMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZVELOCITY_RAPIDMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	

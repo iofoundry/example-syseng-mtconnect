@@ -6,14 +6,21 @@
 	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF
-	xmlns="file:////Users/will/projects/IOF/systemeng/mtconnect/python/example.rdf#"
+	xmlns="http://example.org/ontology/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
+	<owl:Ontology rdf:about="http://example.org/ontology">
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical"/>
+		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators"/>
+	</owl:Ontology>
+	
 	<owl:Ontology rdf:about="http://example.org/ontology/">
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/"/>
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"/>
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/"/>
@@ -172,6 +179,12 @@
 	
 	<owl:ObjectProperty rdf:about="http://example.org/ontology/conformsTo">
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">conforms to</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="http://example.org/ontology/hasUnit">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">has unit</rdfs:label>
+		<rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+		<rdfs:range rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="http://example.org/ontology/joinedTo">
