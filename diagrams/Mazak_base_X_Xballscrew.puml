@@ -28,8 +28,8 @@ title Mazak_base_X_Xballscrew
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak_base_X_Xballscrew.html Mazak_base_X_Xballscrew]], vendor:[[../Mazak.html#MazakbaseXXballscrew MazakbaseXXballscrew]])
-individual(o1, data:name7, des:Name)
-individual(o2, data:[[./Mazak.html Mazak]], vendor:[[../Mazak.html#Mazak Mazak]])
+individual(o1, data:name8, des:Name)
+individual(o2, data:[[./Mazak_base_X.html Mazak_base_X]], vendor:[[../Mazak.html#MazakbaseX MazakbaseX]])
 property(o0, "des:hasName", o1)
 data(o1, "des:hasTextualName", "Xballscrew")
 property(o2, "bfo:has_member_part_at_some_time", o0)

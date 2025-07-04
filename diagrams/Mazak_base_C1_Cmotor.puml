@@ -29,8 +29,8 @@ title Mazak_base_C1_Cmotor
       }
 individual(o0, data:[[./Mazak_base_C1_Cmotor.html Mazak_base_C1_Cmotor]], vendor:[[../Mazak.html#MazakbaseC1Cmotor MazakbaseC1Cmotor]])
 individual(o1, data:Mazak_base_C1TEMPERATURE, qualphys:Temperature)
-individual(o2, data:name16, des:Name)
-individual(o3, data:[[./Mazak.html Mazak]], vendor:[[../Mazak.html#Mazak Mazak]])
+individual(o2, data:name17, des:Name)
+individual(o3, data:[[./Mazak_base_C1.html Mazak_base_C1]], vendor:[[../Mazak.html#MazakbaseC1 MazakbaseC1]])
 property(o0, "core:hasQuality", o1)
 property(o0, "des:hasName", o2)
 data(o2, "des:hasTextualName", "Cmotor")

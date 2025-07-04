@@ -199,9 +199,7 @@ class MTConnectToIOF:
       if motion:
         key = motion[0].get("type", type)
         
-      self._add_capability(partic, key)
-      self._add_data_items(element, partic)
-      
+      self._add_capability(partic, key)      
       #if type in Roles:
       #  partic.hasRole.append(Roles[type]())
       
@@ -246,12 +244,11 @@ class MTConnectToIOF:
       
       logger.info(f"Created {type_name} {type_cls.iri}")
 
-      for composition in element.findall("./m:Compositions/*", self.ns):
-        parts.extend(self._add_component(composition, names.copy(), parent))
-          
-      # Checking for specifications
       self._translate_class_specifications(element, type_cls, cls)      
       parent = self._create_particular(element, type_cls, type, names, parent)
+      for composition in element.findall("./m:Compositions/*", self.ns):
+        parts.extend(self._add_component(composition, names.copy(), parent))
+      self._add_data_items(element, parent)
     
     for component in element.findall("./m:Components/*", self.ns):
       parts.extend(self._add_component(component, names.copy(), parent))
