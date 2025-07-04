@@ -24,5 +24,6 @@ Some liberty was taken in the mapping and needs a lot of work.
 
 There is a hosted version of these diagrams:
 
-* [Mazak](http://165.232.136.177/Mazak.html)
-* [Okuma](http://165.232.136.177/OKUMA.html)
+* [Index](http://onto.wvsobel.llc/index.html)
+* [Mazak](http://onto.wvsobel.llc/Mazak.html)
+* [Okuma](http://onto.wvsobel.llc/OKUMA.html)
