@@ -1,0 +1,69 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak_base_X
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak_base_X.html Mazak_base_X]], vendor:[[../Mazak.html#MazakbaseX MazakbaseX]])
+individual(o1, data:mazakbasexdesign1, vendor:[[../Mazak.html#MazakbaseXDesign MazakbaseXDesign]])
+individual(o2, data:Mazak_base_XLENGTHNominal, core:ValueExpression)
+individual(o3, data:Mazak_base_XLINEAR_FORCEMaximum, core:ValueExpression)
+individual(o4, data:Mazak_base_XLINEAR_FORCEMinimum, core:ValueExpression)
+individual(o5, data:Mazak_base_XVELOCITY_RAPIDMaximum, core:ValueExpression)
+individual(o6, data:Mazak_base_XVELOCITY_RAPIDMinimum, core:ValueExpression)
+individual(o7, data:Mazak_base_XVELOCITY_PROGRAMMEDMaximum, core:ValueExpression)
+individual(o8, data:Mazak_base_XVELOCITY_PROGRAMMEDMinimum, core:ValueExpression)
+individual(o9, data:Mazak_base_XPrismaticMotionCapability, ex:PrismaticMotionCapability)
+individual(o10, data:Mazak_base_XPOSITION_ACTUAL, qualphys:Displacement)
+individual(o11, data:name9, des:Name)
+individual(o12, data:[[./Mazak_enclosure.html Mazak_enclosure]], vendor:[[../Mazak.html#Mazakenclosure Mazakenclosure]])
+individual(o13, data:Mazak_enclosureTEMPERATURE, qualphys:Temperature)
+individual(o14, data:name33, des:Name)
+individual(o15, data:[[./Mazak_mstruct_X_AXIS.html Mazak_mstruct_X_AXIS]], vendor:[[../Mazak.html#MazakmstructX_AXIS MazakmstructX_AXIS]])
+individual(o16, data:name2, des:Name)
+individual(o17, data:[[./Mazak.html Mazak]], vendor:[[../Mazak.html#Mazak Mazak]])
+property(o0, "core:prescribedBy", o1)
+data(o1, "rdfs:label", "MazakbaseXDesign particular")
+property(o1, "core:hasValueExpressionAtAllTimes", o2)
+property(o1, "core:hasValueExpressionAtAllTimes", o3)
+property(o1, "core:hasValueExpressionAtAllTimes", o4)
+property(o1, "core:hasValueExpressionAtAllTimes", o5)
+property(o1, "core:hasValueExpressionAtAllTimes", o6)
+property(o1, "core:hasValueExpressionAtAllTimes", o7)
+property(o1, "core:hasValueExpressionAtAllTimes", o8)
+property(o0, "core:hasFunction", o9)
+property(o0, "core:hasQuality", o10)
+property(o0, "des:hasName", o11)
+data(o11, "des:hasTextualName", "X")
+property(o0, "ex:joinedTo", o12)
+data(o12, "rdfs:label", "Mazak enclosure particular")
+property(o12, "core:hasQuality", o13)
+property(o12, "des:hasName", o14)
+property(o0, "ex:joinedTo", o15)
+data(o15, "rdfs:label", "Mazak mstruct X_AXIS particular")
+property(o15, "des:hasName", o16)
+property(o17, "bfo:has_member_part_at_some_time", o0)
+@enduml

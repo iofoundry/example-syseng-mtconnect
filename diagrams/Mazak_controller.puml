@@ -1,0 +1,41 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak_controller
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak_controller.html Mazak_controller]], vendor:[[../Mazak.html#Mazakcontroller Mazakcontroller]])
+individual(o1, data:[[./Mazak_controller_path.html Mazak_controller_path]], vendor:[[../Mazak.html#Mazakcontrollerpath Mazakcontrollerpath]])
+individual(o2, data:name23, des:Name)
+individual(o3, data:name22, des:Name)
+individual(o4, data:[[./Mazak.html Mazak]], vendor:[[../Mazak.html#Mazak Mazak]])
+property(o0, "bfo:has_member_part_at_some_time", o1)
+data(o1, "rdfs:label", "Mazak controller path particular")
+property(o1, "des:hasName", o2)
+property(o0, "des:hasName", o3)
+data(o3, "des:hasTextualName", "controller")
+property(o4, "bfo:has_member_part_at_some_time", o0)
+@enduml

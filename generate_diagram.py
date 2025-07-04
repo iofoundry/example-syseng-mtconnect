@@ -18,6 +18,7 @@ class GenerateDiagram:
     self.filename = filename
     self.statements = statements
     self.objects = dict()
+    self.vendor = vendor
     
     self.namespaces = {
       'https://spec.industrialontologies.org/ontology/core/Core/': 'core',
@@ -27,7 +28,7 @@ class GenerateDiagram:
       'https://spec.industrialontologies.org/ontology/qualities/Qualities/': 'qual',
       'https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/': 'qualphys',
       'http://example.org/data/': 'data',
-      f"http://example.org/{vendor}/": 'vendor',
+      f"http://example.org/{vendor.name}/": 'vendor',
       "http://example.org/ontology/": 'ex',
       "http://www.w3.org/2002/07/owl#": 'owl',
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#": 'rdf',
@@ -64,8 +65,7 @@ class GenerateDiagram:
       else:
         name = o.name
 
-    pre = self.namespaces.get(ns, "uns")
-        
+    pre = self.namespaces.get(ns, "uns")        
     return f"{pre}:{name}"
   
   def _print_object(self, f, o):
@@ -77,13 +77,13 @@ class GenerateDiagram:
     else:
       title = self._name(o)
 
-    f.write(f"individual({self._obj(o)}, {title}, {self._name(o.is_a[0])})\n")    
-    #if t = @@types[iri]
-    #  f.puts "individual(#{obj(iri)}, #{title}, #{self.class.uml_name(t)})"
-    #else
-    #  f.puts "individual(#{obj(iri)}, #{title})"
-    #end
-  
+    if o.is_a[0].namespace == self.vendor:
+      ns, name = self._name(o.is_a[0]).split(':')
+      cls = f"{ns}:[[../{self.vendor.name}.html#{name} {name}]]"
+      f.write(f"individual({self._obj(o)}, {title}, {cls})\n")      
+    else:
+      f.write(f"individual({self._obj(o)}, {title}, {self._name(o.is_a[0])})\n")    
+
   def _print_statement(self, f, s, p, o):
     if p != ob.rdf_type and o != ob.rdf_nil:
       if isinstance(o, (int, str, float)):
@@ -101,7 +101,7 @@ class GenerateDiagram:
     <title>{os.path.basename(self.filename)}</title>
   </head>
   <body>
-    <object data="./#{os.path.basename(self.filename)}.svg"/>
+    <object data="./{os.path.basename(self.filename)}.svg"/>
   </body>
 </html>
 """)

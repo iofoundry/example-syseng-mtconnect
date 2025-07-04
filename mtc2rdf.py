@@ -38,9 +38,23 @@ entities = [x[0] for x in owl.default_world.sparql("""select ?p { ?p a ?c . ?c r
 GenerateDiagram.linked_terms = set(entities)
 
 all_data = list(owl.default_world.sparql(f"""select ?s ?p ?o {{ ?s ?p ?o . FILTER(LIKE(STR(?s), "{Data.base_iri}%")) }}"""))
-full = GenerateDiagram(f"{Vendor.name}Full", all_data, Vendor.name)
+full = GenerateDiagram(f"{Vendor.name}Full", all_data, Vendor)
 logger.info("Generating full diagram")
 full.generate()
+
+logger.info("Generating topology")
+statements = [[x[0], Example.joinedTo, x[1]] \
+  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Example.joinedTo])]
+
+gen = GenerateDiagram(f"{Vendor.name}Topo", statements, Vendor)
+gen.generate()
+
+logger.info("Generating mereology")
+statements = [[x[0], BFO.has_member_part_at_some_time, x[1]] \
+  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [BFO.has_member_part_at_some_time])]
+
+gen = GenerateDiagram(f"{Vendor.name}Mere", statements, Vendor)
+gen.generate()
 
 for part in entities:
   logger.info(f"Generating diagram for {part}")  
@@ -57,11 +71,10 @@ for part in entities:
   pre = owl.default_world.sparql("select distinct ?s ?p { ?s ?p ?? .}", [part])
   for x in pre:
     statements.append([x[0], x[1], part])
-  gen = GenerateDiagram(f"{part.name}", statements, part.name)
+  gen = GenerateDiagram(f"{part.name}", statements, Vendor)
   gen.generate()
-  
 
-with open("index.html", 'w') as f:
+with open(f"{Vendor.name}.html", 'w') as f:
     f.write(f"""
 <!doctype html>
 <html>
@@ -80,7 +93,8 @@ h1 {{
 .section-divider {{
   border: none;
   border-top: 2px solid #bbb;
-  margin: 2.5em 0 1.5em 0;
+  margin: 1em 0 0em 0;
+  padding-top: 0.25em;
 }}
 
 h2 {{
@@ -99,8 +113,12 @@ h2 {{
   </head>
   <body>
 """)
-    f.write("<h1 class='section-divider'>Complete Diagrams</h1>\n")
+    f.write("<h1 class='section-divider'>Complete Diagram</h1>\n")
     f.write(f"<ul><li><a href='diagrams/{Vendor.name}Full.html'>{Vendor.name}</a></li></ul>")
+    f.write("<h1 class='section-divider'>Topology Diagram</h1>\n")
+    f.write(f"<ul><li><a href='diagrams/{Vendor.name}Topo.html'>{Vendor.name} Topology</a></li></ul>")
+    f.write("<h1 class='section-divider'>Mereology Diagram</h1>\n")
+    f.write(f"<ul><li><a href='diagrams/{Vendor.name}Mere.html'>{Vendor.name} Mereology</a></li></ul>")
     f.write("<h1 class='section-divider'>Part Diagrams</h1>\n<ul>")
     for e in entities:
         f.write(f"<li><a href='diagrams/{e.name}.html'>{e.name}</a></li>\n")
