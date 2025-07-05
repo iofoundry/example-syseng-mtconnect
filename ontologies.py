@@ -112,7 +112,7 @@ DataItems = {
   'LENGTH': QualPhysical.Length,
   'ANGLE': QualPhysical.Angle,
   'VELOCITY': Example.PrismaticVelocity,
-  'VELOCITY_PROGERAMMED': Example.PrismaticVelocity,
+  'VELOCITY_PROGRAMMED': Example.PrismaticVelocity,
   'VELOCITY_RAPID': Example.PrismaticRapidVelocity,
   'ROTARY_VELOCITY': Example.RevoluteVelocity,
   'PATH_FEED_RATE': Example.TranslationalVelocity

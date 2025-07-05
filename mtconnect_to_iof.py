@@ -84,15 +84,18 @@ class MTConnectToIOF:
               
               const = owl.ConstrainedDatatype(float, **args)
                               
+              spec_name = ''.join([r.capitalize() for r in [spec_name, spec.get('subType', None)] if r])
               if issubclass(di_cls, BFO.quality):
-                type_cls.is_a.append(parent & Core.hasQuality.some(di_cls & \
-                  Core.hasMeasuredValueAtSomeTime.only(Core.MeasuredValueExpression & \
-                    Core.hasSimpleExpressionValue.some(const))))
+                quality = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
+                quality.is_a.append(Core.hasMeasuredValueAtSomeTime.only(Core.MeasuredValueExpression & \
+                    Core.hasSimpleExpressionValue.some(const)))
+                type_cls.is_a.append(parent & Core.hasQuality.some(quality))
               else:
+                profile = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
+                profile.is_a.append(Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
+                        Core.hasSimpleExpressionValue.some(const)))
                 type_cls.is_a.append(parent & \
-                  BFO.participates_in_at_some_time.only(di_cls & \
-                      Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
-                        Core.hasSimpleExpressionValue.some(const))))
+                        BFO.participates_in_at_some_time.only(profile))
   
   @log_indent
   def _create_particular_specifications(self, element, partic, name):
@@ -110,7 +113,7 @@ class MTConnectToIOF:
 
         for spec in specifications:
           spec_name = spec.get("type")
-          spec_name = name + '_'.join([r for r in [spec_name, spec.get('subType', None)] if r])
+          spec_name = name + ''.join([r.capitalize() for r in [spec_name, spec.get('subType', None)] if r])
 
           for des in spec:
             logger.info(f"Creating class particular specifications for {spec_name} value {spec.text}")

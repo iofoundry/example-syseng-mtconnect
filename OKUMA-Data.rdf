@@ -173,19 +173,19 @@
 		<Desi:hasName rdf:resource="http://example.org/data/name9"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XLENGTHNominal">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XLengthNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">650.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XLINEAR_FORCEMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XLinear_forceMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">5200.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XLINEAR_FORCEMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XLinear_forceMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
@@ -199,25 +199,25 @@
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XVELOCITY_PROGRAMMEDMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XVelocityProgrammedMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XVELOCITY_PROGRAMMEDMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XVelocityProgrammedMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XVELOCITY_RAPIDMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XVelocityRapidMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XVELOCITY_RAPIDMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_XVelocityRapidMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
@@ -234,19 +234,19 @@
 		<Desi:hasName rdf:resource="http://example.org/data/name10"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YLENGTHNominal">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YLengthNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">650.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YLINEAR_FORCEMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YLinear_forceMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">5200.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YLINEAR_FORCEMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YLinear_forceMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
@@ -260,25 +260,25 @@
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YVELOCITY_PROGRAMMEDMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YVelocityProgrammedMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YVELOCITY_PROGRAMMEDMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YVelocityProgrammedMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YVELOCITY_RAPIDMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YVelocityRapidMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YVELOCITY_RAPIDMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_YVelocityRapidMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
@@ -295,19 +295,19 @@
 		<Desi:hasName rdf:resource="http://example.org/data/name11"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1LENGTHNominal">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1LengthNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">650.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1LINEAR_FORCEMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1Linear_forceMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">5200.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1LINEAR_FORCEMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1Linear_forceMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
@@ -321,25 +321,25 @@
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1VELOCITY_PROGRAMMEDMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1VelocityProgrammedMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1VELOCITY_PROGRAMMEDMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1VelocityProgrammedMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1VELOCITY_RAPIDMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1VelocityRapidMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1VELOCITY_RAPIDMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z1VelocityRapidMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
@@ -356,19 +356,19 @@
 		<Desi:hasName rdf:resource="http://example.org/data/name14"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4LENGTHNominal">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4LengthNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">650.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4LINEAR_FORCEMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4Linear_forceMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">5200.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4LINEAR_FORCEMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4Linear_forceMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
@@ -382,25 +382,25 @@
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4VELOCITY_PROGRAMMEDMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4VelocityProgrammedMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4VELOCITY_PROGRAMMEDMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4VelocityProgrammedMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4VELOCITY_RAPIDMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4VelocityRapidMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4VELOCITY_RAPIDMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA.123456_Axes_Z4VelocityRapidMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
@@ -674,49 +674,49 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/okuma.123456axesxdesign1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesXDesign"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456AxesXDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XLENGTHNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XLINEAR_FORCEMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XLINEAR_FORCEMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XVELOCITY_PROGRAMMEDMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XVELOCITY_PROGRAMMEDMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XVELOCITY_RAPIDMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XVELOCITY_RAPIDMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XLengthNominal"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_XVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/okuma.123456axesydesign1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesYDesign"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456AxesYDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YLENGTHNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YLINEAR_FORCEMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YLINEAR_FORCEMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YVELOCITY_PROGRAMMEDMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YVELOCITY_PROGRAMMEDMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YVELOCITY_RAPIDMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YVELOCITY_RAPIDMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YLengthNominal"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_YVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/okuma.123456axesz1design1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ1Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456AxesZ1Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1LENGTHNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1LINEAR_FORCEMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1LINEAR_FORCEMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1VELOCITY_PROGRAMMEDMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1VELOCITY_PROGRAMMEDMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1VELOCITY_RAPIDMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1VELOCITY_RAPIDMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1LengthNominal"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1Linear_forceMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1Linear_forceMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1VelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1VelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1VelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z1VelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/okuma.123456axesz4design1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ4Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456AxesZ4Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4LENGTHNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4LINEAR_FORCEMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4LINEAR_FORCEMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4VELOCITY_PROGRAMMEDMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4VELOCITY_PROGRAMMEDMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4VELOCITY_RAPIDMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4VELOCITY_RAPIDMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4LengthNominal"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4Linear_forceMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4Linear_forceMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4VelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4VelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4VelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA.123456_Axes_Z4VelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 
 </rdf:RDF>
