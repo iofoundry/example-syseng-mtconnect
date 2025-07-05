@@ -430,99 +430,117 @@
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesXLength">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesXVelocityProgrammed">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticVelocity"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesXVelocityRapid">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticRapidVelocity"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/PrismaticRapidVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
@@ -586,99 +604,117 @@
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesYLength">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesYVelocityProgrammed">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticVelocity"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesYVelocityRapid">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticRapidVelocity"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/PrismaticRapidVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
@@ -742,99 +778,117 @@
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ1Length">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ1VelocityProgrammed">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticVelocity"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ1VelocityRapid">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticRapidVelocity"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/PrismaticRapidVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
@@ -898,99 +952,117 @@
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ4Length">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">650.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ4VelocityProgrammed">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticVelocity"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/PrismaticVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMA.123456AxesZ4VelocityRapid">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticRapidVelocity"/>
 		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
-								<owl:someValuesFrom>
-									<rdfs:Datatype>
-										<owl:onDatatype rdf:resource="&xsd;decimal"/>
-										<owl:withRestrictions rdf:parseType="Collection">
-											<rdf:Description>
-												<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
-											</rdf:Description>
-											<rdf:Description>
-												<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
-											</rdf:Description>
-										</owl:withRestrictions>
-									</rdfs:Datatype>
-								</owl:someValuesFrom>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/PrismaticRapidVelocity">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">7000.0</xsd:maxInclusive>
+													</rdf:Description>
+													<rdf:Description>
+														<xsd:minInclusive rdf:datatype="&xsd;decimal">1.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
