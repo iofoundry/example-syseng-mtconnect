@@ -378,6 +378,18 @@
 					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
 					</rdf:Description>
 					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesXLength"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesXVelocityProgrammed"/>
 					</owl:Restriction>
@@ -408,18 +420,6 @@
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesXLength"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes X</rdfs:label>
 	</owl:Class>
 	
@@ -432,7 +432,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
-				<owl:allValuesFrom>
+				<owl:someValuesFrom>
 					<owl:Class>
 						<owl:intersectionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
@@ -455,7 +455,7 @@
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
-				</owl:allValuesFrom>
+				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 	</owl:Class>
@@ -534,6 +534,18 @@
 					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
 					</rdf:Description>
 					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesYLength"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesYVelocityProgrammed"/>
 					</owl:Restriction>
@@ -564,18 +576,6 @@
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesYLength"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes Y</rdfs:label>
 	</owl:Class>
 	
@@ -588,7 +588,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
-				<owl:allValuesFrom>
+				<owl:someValuesFrom>
 					<owl:Class>
 						<owl:intersectionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
@@ -611,7 +611,7 @@
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
-				</owl:allValuesFrom>
+				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 	</owl:Class>
@@ -690,6 +690,18 @@
 					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
 					</rdf:Description>
 					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ1Length"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ1VelocityProgrammed"/>
 					</owl:Restriction>
@@ -720,18 +732,6 @@
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ1Length"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes Z1</rdfs:label>
 	</owl:Class>
 	
@@ -744,7 +744,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
-				<owl:allValuesFrom>
+				<owl:someValuesFrom>
 					<owl:Class>
 						<owl:intersectionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
@@ -767,7 +767,7 @@
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
-				</owl:allValuesFrom>
+				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 	</owl:Class>
@@ -846,6 +846,18 @@
 					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
 					</rdf:Description>
 					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ4Length"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ4VelocityProgrammed"/>
 					</owl:Restriction>
@@ -876,18 +888,6 @@
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMA.123456AxesZ4Length"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA.123456 Axes Z4</rdfs:label>
 	</owl:Class>
 	
@@ -900,7 +900,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
-				<owl:allValuesFrom>
+				<owl:someValuesFrom>
 					<owl:Class>
 						<owl:intersectionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
@@ -923,7 +923,7 @@
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
-				</owl:allValuesFrom>
+				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 	</owl:Class>
