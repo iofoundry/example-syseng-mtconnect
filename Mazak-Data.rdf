@@ -22,599 +22,599 @@
 		<owl:imports rdf:resource="http://example.org/Mazak/"/>
 	</owl:Ontology>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazak"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak particular</rdfs:label>
-		<Core:hasCapability rdf:resource="http://example.org/data/MazakTurningCapability"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_auxiliaries_environmental"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_B"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_X"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Y"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Z"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_controller"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_door"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_enclosure"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_TABLE"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_parts_partocc"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_resources_materials_stock"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_coolant"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_electric"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_hydraulic"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_lubrication"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_systems_pneumatic"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/MazakMillingCapability"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800i"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 particular</rdfs:label>
+		<Core:hasCapability rdf:resource="http://example.org/data/Mazak317641TurningCapability"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641auxiliariesenvironmental"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseB"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseX"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseY"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZ"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641controller"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641door"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641enclosure"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructTABLE"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641partspartocc"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641resourcesmaterialsstock"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemscoolant"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemselectric"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemshydraulic"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemslubrication"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemspneumatic"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641MillingCapability"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name1"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/MazakMillingCapability">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641MillingCapability">
 		<rdf:type rdf:resource="&onto;MillingCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/MazakTurningCapability">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641TurningCapability">
 		<rdf:type rdf:resource="&onto;TurningCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_auxiliaries_environmental">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazakauxiliariesenvironmental"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak auxiliaries environmental particular</rdfs:label>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_auxiliaries_environmentalTEMPERATURE"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641auxiliariesenvironmental">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iauxiliariesenvironmental"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 auxiliaries environmental particular</rdfs:label>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641auxiliariesenvironmentalTEMPERATURE"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name31"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_auxiliaries_environmentalTEMPERATURE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641auxiliariesenvironmentalTEMPERATURE">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_B">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseB"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base B particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_enclosure"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_B_Bmotor"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_BRevoluteMotionCapability"/>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_BANGLE_ACTUAL"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasebdesign1"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseB">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base B particular</rdfs:label>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641enclosure"/>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBBmotor"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseBRevoluteMotionCapability"/>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseBANGLE_ACTUAL"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasebdesign1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name18"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BANGLE_ACTUAL">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBANGLE_ACTUAL">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BAngleMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBAngleMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">120.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BAngleMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBAngleMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">-30.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BRevoluteMotionCapability">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBBmotor">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseBBmotor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base B Bmotor particular</rdfs:label>
+		<Desi:hasName rdf:resource="http://example.org/data/name19"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBRevoluteMotionCapability">
 		<rdf:type rdf:resource="&onto;RevoluteMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BTorqueMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBTorqueMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">400.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_BTorqueMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBTorqueMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_B_Bmotor">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseBBmotor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base B Bmotor particular</rdfs:label>
-		<Desi:hasName rdf:resource="http://example.org/data/name19"/>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseC1"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C1 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C1_Cmotor"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_C1ContinuousMotionCapability"/>
-		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/Mazak_base_C1ROTARY_VELOCITY_ACTUAL"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasec1design1"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC1"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base C1 particular</rdfs:label>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1Cmotor"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseC1ContinuousMotionCapability"/>
+		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC1ROTARY_VELOCITY_ACTUAL"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasec1design1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name16"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1ContinuousMotionCapability">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1Cmotor">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Cmotor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base C1 Cmotor particular</rdfs:label>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseC1TEMPERATURE"/>
+		<Desi:hasName rdf:resource="http://example.org/data/name17"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1ContinuousMotionCapability">
 		<rdf:type rdf:resource="&onto;ContinuousMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1ROTARY_VELOCITY_ACTUAL">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1ROTARY_VELOCITY_ACTUAL">
 		<rdf:type rdf:resource="&onto;RevoluteVelocity"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1Rotary_velocityMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1Rotary_velocityMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">12000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1Rotary_velocityMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1Rotary_velocityMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/REV-PER-MIN"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1TEMPERATURE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1TEMPERATURE">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C1_Cmotor">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseC1Cmotor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C1 Cmotor particular</rdfs:label>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_C1TEMPERATURE"/>
-		<Desi:hasName rdf:resource="http://example.org/data/name17"/>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseC2"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C2 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TABLE"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_TRUNDLE"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2_C2motor"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_C2RevoluteMotionCapability"/>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_C2ANGLE_ACTUAL"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasec2design1"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC2"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base C2 particular</rdfs:label>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructTABLE"/>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2C2motor"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseC2RevoluteMotionCapability"/>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseC2ANGLE_ACTUAL"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasec2design1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name20"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2ANGLE_ACTUAL">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2ANGLE_ACTUAL">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2AngleMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2AngleMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">360.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2AngleMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2AngleMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">-360.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2RevoluteMotionCapability">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2C2motor">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC2C2motor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base C2 C2motor particular</rdfs:label>
+		<Desi:hasName rdf:resource="http://example.org/data/name21"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2RevoluteMotionCapability">
 		<rdf:type rdf:resource="&onto;RevoluteMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2TorqueMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2TorqueMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">400.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2TorqueMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2TorqueMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N-M"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_C2_C2motor">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseC2C2motor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C2 C2motor particular</rdfs:label>
-		<Desi:hasName rdf:resource="http://example.org/data/name21"/>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_X">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseX"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base X particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_enclosure"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_X_Xballscrew"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_X_Xmotor"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_XPrismaticMotionCapability"/>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_XPOSITION_ACTUAL"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasexdesign1"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseX">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base X particular</rdfs:label>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641enclosure"/>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXballscrew"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXmotor"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseXPrismaticMotionCapability"/>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseXPOSITION_ACTUAL"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasexdesign1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name7"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XLengthNominal">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXLengthNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">650.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XLinear_forceMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXLinear_forceMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">5200.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XLinear_forceMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXLinear_forceMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XPOSITION_ACTUAL">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXPOSITION_ACTUAL">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XPrismaticMotionCapability">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XTEMPERATURE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXTEMPERATURE">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XVelocityProgrammedMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXVelocityProgrammedMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XVelocityProgrammedMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXVelocityProgrammedMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XVelocityRapidMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXVelocityRapidMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_XVelocityRapidMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXVelocityRapidMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_X_Xballscrew">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseXXballscrew"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base X Xballscrew particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXXballscrew">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseXXballscrew"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base X Xballscrew particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name8"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_X_Xmotor">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseXXmotor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base X Xmotor particular</rdfs:label>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_XTEMPERATURE"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXXmotor">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseXXmotor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base X Xmotor particular</rdfs:label>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseXTEMPERATURE"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name9"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_Y">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseY"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Y particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_X_AXIS"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Y_Yballscrew"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Y_Ymotor"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_YPrismaticMotionCapability"/>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_YPOSITION_ACTUAL"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbaseydesign1"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseY">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Y particular</rdfs:label>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYballscrew"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYmotor"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseYPrismaticMotionCapability"/>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseYPOSITION_ACTUAL"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibaseydesign1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name10"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YLengthNominal">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYLengthNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">550.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YLinear_forceMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYLinear_forceMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">5200.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YLinear_forceMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYLinear_forceMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YPOSITION_ACTUAL">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYPOSITION_ACTUAL">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YPrismaticMotionCapability">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YTEMPERATURE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYTEMPERATURE">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YVelocityProgrammedMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYVelocityProgrammedMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YVelocityProgrammedMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYVelocityProgrammedMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YVelocityRapidMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYVelocityRapidMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_YVelocityRapidMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYVelocityRapidMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_Y_Yballscrew">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseYYballscrew"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Y Yballscrew particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYYballscrew">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseYYballscrew"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Y Yballscrew particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name11"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_Y_Ymotor">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseYYmotor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Y Ymotor particular</rdfs:label>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_YTEMPERATURE"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYYmotor">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseYYmotor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Y Ymotor particular</rdfs:label>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseYTEMPERATURE"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name12"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_Z">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseZ"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Z particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Y_AXIS"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak_mstruct_Z_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Z_Zballscrew"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_base_Z_Zmotor"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak_base_ZPrismaticMotionCapability"/>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_ZPOSITION_ACTUAL"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazakbasezdesign1"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZ">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Z particular</rdfs:label>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
+		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZballscrew"/>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZmotor"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseZPrismaticMotionCapability"/>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseZPOSITION_ACTUAL"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasezdesign1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name13"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZLengthNominal">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZLengthNominal">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">530.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZLinear_forceMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZLinear_forceMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">9600.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZLinear_forceMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZLinear_forceMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/N"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">0.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZPOSITION_ACTUAL">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZPOSITION_ACTUAL">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZPrismaticMotionCapability">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZTEMPERATURE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZTEMPERATURE">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZVelocityProgrammedMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZVelocityProgrammedMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZVelocityProgrammedMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZVelocityProgrammedMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZVelocityRapidMaximum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZVelocityRapidMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">7000.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_ZVelocityRapidMinimum">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZVelocityRapidMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
 		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/MilliM-PER-SEC"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_Z_Zballscrew">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseZZballscrew"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Z Zballscrew particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZZballscrew">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseZZballscrew"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Z Zballscrew particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name14"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_base_Z_Zmotor">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseZZmotor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Z Zmotor particular</rdfs:label>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_base_ZTEMPERATURE"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZZmotor">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseZZmotor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Z Zmotor particular</rdfs:label>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseZTEMPERATURE"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name15"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_controller">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazakcontroller"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak controller particular</rdfs:label>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak_controller_path"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641controller">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800icontroller"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 controller particular</rdfs:label>
+		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641controllerpath"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name22"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_controller_path">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazakcontrollerpath"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak controller path particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641controllerpath">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800icontrollerpath"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 controller path particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name23"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_door">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazakdoor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak door particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641door">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800idoor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 door particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name24"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_enclosure">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazakenclosure"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak enclosure particular</rdfs:label>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_enclosureTEMPERATURE"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641enclosure">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 enclosure particular</rdfs:label>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641enclosureTEMPERATURE"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name33"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_enclosureTEMPERATURE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641enclosureTEMPERATURE">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_mstruct_TABLE">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakmstructTABLE"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct TABLE particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641mstructTABLE">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800imstructTABLE"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 mstruct TABLE particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name5"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_mstruct_TRUNDLE">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakmstructTRUNDLE"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct TRUNDLE particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641mstructTRUNDLE">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 mstruct TRUNDLE particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name6"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_mstruct_X_AXIS">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakmstructX_AXIS"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct X_AXIS particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641mstructX_AXIS">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 mstruct X_AXIS particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name2"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_mstruct_Y_AXIS">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakmstructY_AXIS"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct Y_AXIS particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641mstructY_AXIS">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 mstruct Y_AXIS particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name3"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_mstruct_Z_AXIS">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakmstructZ_AXIS"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct Z_AXIS particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641mstructZ_AXIS">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 mstruct Z_AXIS particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name4"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_parts_partocc">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazakpartspartocc"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak parts partocc particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641partspartocc">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ipartspartocc"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 parts partocc particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name25"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_resources_materials_stock">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazakresourcesmaterialsstock"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak resources materials stock particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641resourcesmaterialsstock">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iresourcesmaterialsstock"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 resources materials stock particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name32"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_systems_coolant">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazaksystemscoolant"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems coolant particular</rdfs:label>
-		<Core:hasQuality rdf:resource="http://example.org/data/Mazak_systems_coolantTEMPERATURE"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641systemscoolant">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800isystemscoolant"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 systems coolant particular</rdfs:label>
+		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641systemscoolantTEMPERATURE"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name28"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_systems_coolantTEMPERATURE">
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641systemscoolantTEMPERATURE">
 		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_systems_electric">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazaksystemselectric"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems electric particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641systemselectric">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800isystemselectric"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 systems electric particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name26"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_systems_hydraulic">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazaksystemshydraulic"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems hydraulic particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641systemshydraulic">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800isystemshydraulic"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 systems hydraulic particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name27"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_systems_lubrication">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazaksystemslubrication"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems lubrication particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641systemslubrication">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800isystemslubrication"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 systems lubrication particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name30"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak_systems_pneumatic">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazaksystemspneumatic"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems pneumatic particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641systemspneumatic">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800isystemspneumatic"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 systems pneumatic particular</rdfs:label>
 		<Desi:hasName rdf:resource="http://example.org/data/name29"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazakbasebdesign1">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseBDesign"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MazakbaseBDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_BAngleMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_BAngleMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_BTorqueMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_BTorqueMinimum"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasebdesign1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseBDesign"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseBDesign particular</rdfs:label>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBAngleMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBAngleMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBTorqueMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBTorqueMinimum"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazakbasec1design1">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseC1Design"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MazakbaseC1Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C1Rotary_velocityMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C1Rotary_velocityMinimum"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasec1design1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Design"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseC1Design particular</rdfs:label>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1Rotary_velocityMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1Rotary_velocityMinimum"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazakbasec2design1">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseC2Design"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MazakbaseC2Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2AngleMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2AngleMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2TorqueMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_C2TorqueMinimum"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasec2design1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC2Design"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseC2Design particular</rdfs:label>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2AngleMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2AngleMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2TorqueMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2TorqueMinimum"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazakbasexdesign1">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseXDesign"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MazakbaseXDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_XLengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_XLinear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_XLinear_forceMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_XVelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_XVelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_XVelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_XVelocityRapidMinimum"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasexdesign1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseXDesign"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseXDesign particular</rdfs:label>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXLengthNominal"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazakbaseydesign1">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseYDesign"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MazakbaseYDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_YLengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_YLinear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_YLinear_forceMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_YVelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_YVelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_YVelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_YVelocityRapidMinimum"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibaseydesign1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseYDesign"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseYDesign particular</rdfs:label>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYLengthNominal"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazakbasezdesign1">
-		<rdf:type rdf:resource="http://example.org/Mazak/MazakbaseZDesign"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MazakbaseZDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_ZLengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_ZLinear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_ZLinear_forceMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_ZVelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_ZVelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_ZVelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak_base_ZVelocityRapidMinimum"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasezdesign1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseZDesign"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseZDesign particular</rdfs:label>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZLengthNominal"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/name1">

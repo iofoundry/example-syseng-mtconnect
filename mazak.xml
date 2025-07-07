@@ -4,7 +4,7 @@
   <Header creationTime="2025-05-02T18:42:08Z" sender="IntelAgent" instanceId="1745950442" version="2.2.0.502" deviceModelChangeTime="2025-04-29T18:14:02.126456Z" assetBufferSize="1024" assetCount="67" bufferSize="131072"/>
   <Devices>
     <Device id="d1" name="Mazak" uuid="Mazak">
-      <Description manufacturer="Mazak_Corporation" serialNumber="317641">Variaxis w/SMooth-AI</Description>
+      <Description manufacturer="Mazak" model="800i" serialNumber="317641">Variaxis w/SMooth-AI</Description>
       <Configuration>
         <CoordinateSystems>
           <CoordinateSystem id="mbase" type="BASE">

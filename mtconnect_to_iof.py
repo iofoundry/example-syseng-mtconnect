@@ -25,15 +25,21 @@ class MTConnectToIOF:
   def convert(self):
     """Convert the MTConnect XML to IOF OWL format.""" 
     for device in self.root.findall(".//m:Device", self.ns):
-      self.VendorName = device.get('name')
-      self.VendorFileName = f"{device.get('name')}.rdf"
+      desc = device.find("./m:Description", self.ns)
+      name = device.get('name')
+      self.manufacturer = desc.get('manufacturer', name)
+      self.serial = desc.get('serialNumber')
+      self.model = desc.get('model')
+      
+      self.VendorName = self.manufacturer
+      self.VendorFileName = f"{self.VendorName}.rdf"
       self.Vendor = owl.get_ontology(f"http://example.org/{self.VendorName}/")
       self.Vendor.base_iri = f"http://example.org/{self.VendorName}/"
       self.Vendor.imported_ontologies = [Example]
       Data.imported_ontologies.append(self.Vendor)
 
-      logger.info(f"Converting device: {device.get('name')} creating ontology {self.Vendor.base_iri}")
-      self._add_component(device)      
+      logger.info(f"Converting device: {self.VendorName} creating ontology {self.Vendor.base_iri}")
+      self._add_component(device)
       self._add_relationships(device)      
 
             
@@ -182,10 +188,12 @@ class MTConnectToIOF:
     
     with Data:
       id = element.get("id")
-      name = "_".join(names)
+      pnames = names.copy()
+      pnames[1] = self.serial
+      name = "".join(pnames)
       partic = type_cls(name)
       self.particulars[id] = partic
-      partic.label = owl.locstr(' '.join(names) + ' particular', "en")
+      partic.label = owl.locstr(' '.join(pnames) + ' particular', "en")
       
       if parent:
         parent.hasComponentPartAtAllTimes.append(partic)
@@ -231,9 +239,12 @@ class MTConnectToIOF:
     name = element.get("name", id)
     uuid = element.get("uuid")
     type = element.get("type", element.tag.split('}')[-1])
-    path_part = uuid or name or id
-    
-    names.append(path_part)
+    if parent:
+      path_part = uuid or name or id
+      names.append(path_part)
+    else:
+      names.append(self.manufacturer)
+      names.append(self.model)
     
     type_cls = None
     cls = Components.get(type, BFO.object)

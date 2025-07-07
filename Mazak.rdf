@@ -16,7 +16,7 @@
 		<owl:imports rdf:resource="http://example.org/ontology/"/>
 	</owl:Ontology>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazak">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800i">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Machine"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -25,7 +25,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazakauxiliariesenvironmental"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iauxiliariesenvironmental"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -37,7 +37,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseB"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -49,7 +49,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseC1"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -61,7 +61,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseC2"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -73,7 +73,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseX"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -85,7 +85,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseY"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -97,7 +97,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseZ"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -109,7 +109,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazakcontroller"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800icontroller"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -121,7 +121,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazakdoor"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800idoor"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -133,7 +133,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazakenclosure"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -145,7 +145,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakmstructTABLE"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTABLE"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -157,7 +157,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakmstructTRUNDLE"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -169,7 +169,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakmstructX_AXIS"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -181,7 +181,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakmstructY_AXIS"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -193,7 +193,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakmstructZ_AXIS"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -205,7 +205,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazakpartspartocc"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ipartspartocc"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -217,7 +217,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazakresourcesmaterialsstock"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iresourcesmaterialsstock"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -229,7 +229,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazaksystemscoolant"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemscoolant"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -241,7 +241,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazaksystemselectric"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemselectric"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -253,7 +253,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazaksystemshydraulic"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemshydraulic"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -265,7 +265,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazaksystemslubrication"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemslubrication"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -277,20 +277,20 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazaksystemspneumatic"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemspneumatic"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazakauxiliariesenvironmental">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800iauxiliariesenvironmental">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Room"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak auxiliaries environmental</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i auxiliaries environmental</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseB">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseB">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -299,7 +299,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseBAngle"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBAngle"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -311,7 +311,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseBDesign"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBDesign"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -323,15 +323,15 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseBBmotor"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBBmotor"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base B</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base B</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseBAngle">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseBAngle">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -370,16 +370,16 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseBBmotor">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseBBmotor">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Motor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base B Bmotor</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base B Bmotor</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseBDesign">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseBDesign">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseC1">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC1">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -388,7 +388,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseC1Rotary_velocity"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Rotary_velocity"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -400,7 +400,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseC1Design"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Design"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -412,24 +412,24 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseC1Cmotor"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Cmotor"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C1</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base C1</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseC1Cmotor">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC1Cmotor">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Motor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C1 Cmotor</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base C1 Cmotor</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseC1Design">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC1Design">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseC1Rotary_velocity">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC1Rotary_velocity">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RevoluteVelocity"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -465,7 +465,7 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseC2">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC2">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -474,7 +474,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseC2Angle"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2Angle"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -486,7 +486,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseC2Design"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2Design"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -498,15 +498,15 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseC2C2motor"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2C2motor"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C2</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base C2</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseC2Angle">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC2Angle">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -545,16 +545,16 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseC2C2motor">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC2C2motor">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Motor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base C2 C2motor</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base C2 C2motor</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseC2Design">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC2Design">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseX">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseX">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -563,7 +563,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseXLength"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXLength"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -575,7 +575,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseXVelocityProgrammed"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXVelocityProgrammed"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -587,7 +587,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseXVelocityRapid"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXVelocityRapid"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -599,7 +599,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseXDesign"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXDesign"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -611,7 +611,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseXXballscrew"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXXballscrew"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -623,19 +623,19 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseXXmotor"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXXmotor"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base X</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base X</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseXDesign">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseXDesign">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseXLength">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseXLength">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -674,7 +674,7 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseXVelocityProgrammed">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseXVelocityProgrammed">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticVelocity"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -713,7 +713,7 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseXVelocityRapid">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseXVelocityRapid">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticRapidVelocity"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -752,17 +752,17 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseXXballscrew">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseXXballscrew">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Ballscrew"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base X Xballscrew</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base X Xballscrew</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseXXmotor">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseXXmotor">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Motor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base X Xmotor</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base X Xmotor</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseY">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseY">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -771,7 +771,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseYLength"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYLength"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -783,7 +783,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseYVelocityProgrammed"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYVelocityProgrammed"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -795,7 +795,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseYVelocityRapid"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYVelocityRapid"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -807,7 +807,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseYDesign"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYDesign"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -819,7 +819,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseYYballscrew"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYYballscrew"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -831,19 +831,19 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseYYmotor"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYYmotor"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Y</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Y</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseYDesign">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseYDesign">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseYLength">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseYLength">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -882,7 +882,7 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseYVelocityProgrammed">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseYVelocityProgrammed">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticVelocity"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -921,7 +921,7 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseYVelocityRapid">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseYVelocityRapid">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticRapidVelocity"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -960,17 +960,17 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseYYballscrew">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseYYballscrew">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Ballscrew"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Y Yballscrew</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Y Yballscrew</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseYYmotor">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseYYmotor">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Motor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Y Ymotor</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Y Ymotor</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseZ">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZ">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -979,7 +979,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseZLength"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZLength"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -991,7 +991,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseZVelocityProgrammed"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZVelocityProgrammed"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -1003,7 +1003,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseZVelocityRapid"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZVelocityRapid"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -1015,7 +1015,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseZDesign"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZDesign"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -1027,7 +1027,7 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseZZballscrew"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZZballscrew"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -1039,19 +1039,19 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/MazakbaseZZmotor"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZZmotor"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Z</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Z</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseZDesign">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZDesign">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification"/>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseZLength">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZLength">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -1090,7 +1090,7 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseZVelocityProgrammed">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZVelocityProgrammed">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticVelocity"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -1129,7 +1129,7 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseZVelocityRapid">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZVelocityRapid">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PrismaticRapidVelocity"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -1168,17 +1168,17 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseZZballscrew">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZZballscrew">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Ballscrew"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Z Zballscrew</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Z Zballscrew</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakbaseZZmotor">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZZmotor">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Motor"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak base Z Zmotor</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Z Zmotor</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazakcontroller">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800icontroller">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -1187,87 +1187,87 @@
 					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazakcontrollerpath"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800icontrollerpath"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak controller</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i controller</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazakcontrollerpath">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800icontrollerpath">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystemPath"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak controller path</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i controller path</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazakdoor">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800idoor">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak door</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i door</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazakenclosure">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ienclosure">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak enclosure</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i enclosure</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakmstructTABLE">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800imstructTABLE">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct TABLE</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i mstruct TABLE</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakmstructTRUNDLE">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800imstructTRUNDLE">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct TRUNDLE</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i mstruct TRUNDLE</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakmstructX_AXIS">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800imstructX_AXIS">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct X_AXIS</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i mstruct X_AXIS</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakmstructY_AXIS">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800imstructY_AXIS">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct Y_AXIS</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i mstruct Y_AXIS</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/MazakmstructZ_AXIS">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800imstructZ_AXIS">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak mstruct Z_AXIS</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i mstruct Z_AXIS</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazakpartspartocc">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ipartspartocc">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Part"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak parts partocc</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i parts partocc</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazakresourcesmaterialsstock">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800iresourcesmaterialsstock">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Stock"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak resources materials stock</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i resources materials stock</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazaksystemscoolant">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800isystemscoolant">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems coolant</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i systems coolant</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazaksystemselectric">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800isystemselectric">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ElectricalSystem"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems electric</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i systems electric</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazaksystemshydraulic">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800isystemshydraulic">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/HydraulicSystem"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems hydraulic</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i systems hydraulic</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazaksystemslubrication">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800isystemslubrication">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LubricationSystem"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems lubrication</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i systems lubrication</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="http://example.org/Mazak/Mazaksystemspneumatic">
+	<owl:Class rdf:about="http://example.org/Mazak/Mazak800isystemspneumatic">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/PneumaticSystem"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak systems pneumatic</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i systems pneumatic</rdfs:label>
 	</owl:Class>
 
 </rdf:RDF>
