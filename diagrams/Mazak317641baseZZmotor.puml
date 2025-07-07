@@ -1,0 +1,38 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak317641baseZZmotor
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak317641baseZZmotor.html Mazak317641baseZZmotor]], vendor:[[../Mazak.html#Mazak800ibaseZZmotor Mazak800ibaseZZmotor]])
+individual(o1, data:Mazak317641baseZTEMPERATURE, qualphys:Temperature)
+individual(o2, data:name15, des:Name)
+individual(o3, data:[[./Mazak317641baseZ.html Mazak317641baseZ]], vendor:[[../Mazak.html#Mazak800ibaseZ Mazak800ibaseZ]])
+property(o0, "core:hasQuality", o1)
+property(o0, "des:hasName", o2)
+data(o2, "des:hasTextualName", "Zmotor")
+property(o3, "core:hasComponentPartAtAllTimes", o0)
+@enduml

@@ -1,0 +1,59 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak317641baseC1
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak317641baseC1.html Mazak317641baseC1]], vendor:[[../Mazak.html#Mazak800ibaseC1 Mazak800ibaseC1]])
+individual(o1, data:[[./Mazak317641baseC1Cmotor.html Mazak317641baseC1Cmotor]], vendor:[[../Mazak.html#Mazak800ibaseC1Cmotor Mazak800ibaseC1Cmotor]])
+individual(o2, data:Mazak317641baseC1TEMPERATURE, qualphys:Temperature)
+individual(o3, data:name17, des:Name)
+individual(o4, data:mazak800ibasec1design1, vendor:[[../Mazak.html#Mazak800ibaseC1Design Mazak800ibaseC1Design]])
+individual(o5, data:Mazak317641baseC1Rotary_velocityMaximum, core:ValueExpression)
+individual(o6, data:Mazak317641baseC1Rotary_velocityMinimum, core:ValueExpression)
+individual(o7, data:Mazak317641baseC1ROTARY_VELOCITY_ACTUAL, ex:RevoluteVelocity)
+individual(o8, data:Mazak317641baseC1ContinuousMotionCapability, ex:ContinuousMotionCapability)
+individual(o9, data:name16, des:Name)
+individual(o10, data:[[./Mazak317641mstructZ_AXIS.html Mazak317641mstructZ_AXIS]], vendor:[[../Mazak.html#Mazak800imstructZ_AXIS Mazak800imstructZ_AXIS]])
+individual(o11, data:name4, des:Name)
+individual(o12, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+property(o0, "core:hasComponentPartAtAllTimes", o1)
+data(o1, "rdfs:label", "Mazak 317641 base C1 Cmotor particular")
+property(o1, "core:hasQuality", o2)
+property(o1, "des:hasName", o3)
+property(o0, "core:prescribedBy", o4)
+data(o4, "rdfs:label", "Mazak800ibaseC1Design particular")
+property(o4, "core:hasValueExpressionAtAllTimes", o5)
+property(o4, "core:hasValueExpressionAtAllTimes", o6)
+property(o0, "core:measuresAtSomeTime", o7)
+property(o0, "core:hasFunction", o8)
+property(o0, "des:hasName", o9)
+data(o9, "des:hasTextualName", "C1")
+property(o0, "ex:joinedTo", o10)
+data(o10, "rdfs:label", "Mazak 317641 mstruct Z_AXIS particular")
+property(o10, "des:hasName", o11)
+property(o12, "core:hasComponentPartAtAllTimes", o0)
+@enduml

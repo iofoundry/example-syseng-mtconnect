@@ -1,0 +1,40 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak317641mstructZ_AXIS
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak317641mstructZ_AXIS.html Mazak317641mstructZ_AXIS]], vendor:[[../Mazak.html#Mazak800imstructZ_AXIS Mazak800imstructZ_AXIS]])
+individual(o1, data:name4, des:Name)
+individual(o2, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+individual(o3, data:[[./Mazak317641baseZ.html Mazak317641baseZ]], vendor:[[../Mazak.html#Mazak800ibaseZ Mazak800ibaseZ]])
+individual(o4, data:[[./Mazak317641baseC1.html Mazak317641baseC1]], vendor:[[../Mazak.html#Mazak800ibaseC1 Mazak800ibaseC1]])
+property(o0, "des:hasName", o1)
+data(o1, "des:hasTextualName", "Z_AXIS")
+property(o2, "core:hasComponentPartAtAllTimes", o0)
+property(o3, "ex:joinedTo", o0)
+property(o4, "ex:joinedTo", o0)
+@enduml

@@ -1,0 +1,52 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title OKUMA123456AxesC2
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./OKUMA123456AxesC2.html OKUMA123456AxesC2]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesC2 OKUMAMULT_U3000AxesC2]])
+individual(o1, data:OKUMA123456AxesC2ROTARY_VELOCITY_ACTUAL, ex:RevoluteVelocity)
+individual(o2, data:OKUMA123456AxesC2ROTARY_VELOCITY_PROGRAMMED, ex:RevoluteVelocity)
+individual(o3, data:OKUMA123456AxesC2RevoluteMotionCapability, ex:RevoluteMotionCapability)
+individual(o4, data:name15, des:Name)
+individual(o5, data:[[./OKUMA123456structz4_axis.html OKUMA123456structz4_axis]], vendor:[[../OKUMA.html#OKUMAMULT_U3000structz4_axis OKUMAMULT_U3000structz4_axis]])
+individual(o6, data:name5, des:Name)
+individual(o7, data:[[./OKUMA123456structc2_axis.html OKUMA123456structc2_axis]], vendor:[[../OKUMA.html#OKUMAMULT_U3000structc2_axis OKUMAMULT_U3000structc2_axis]])
+individual(o8, data:name8, des:Name)
+individual(o9, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
+property(o0, "core:measuresAtSomeTime", o1)
+property(o0, "core:measuresAtSomeTime", o2)
+property(o0, "core:hasFunction", o3)
+property(o0, "des:hasName", o4)
+data(o4, "des:hasTextualName", "C2")
+property(o0, "ex:joinedTo", o5)
+data(o5, "rdfs:label", "OKUMA 123456 struct z4_axis particular")
+property(o5, "des:hasName", o6)
+property(o0, "ex:joinedTo", o7)
+data(o7, "rdfs:label", "OKUMA 123456 struct c2_axis particular")
+property(o7, "des:hasName", o8)
+property(o9, "core:hasComponentPartAtAllTimes", o0)
+@enduml

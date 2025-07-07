@@ -1,0 +1,41 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title OKUMA123456Controller
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./OKUMA123456Controller.html OKUMA123456Controller]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Controller OKUMAMULT_U3000Controller]])
+individual(o1, data:[[./OKUMA123456Controllerpath.html OKUMA123456Controllerpath]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Controllerpath OKUMAMULT_U3000Controllerpath]])
+individual(o2, data:name19, des:Name)
+individual(o3, data:name18, des:Name)
+individual(o4, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
+property(o0, "core:hasComponentPartAtAllTimes", o1)
+data(o1, "rdfs:label", "OKUMA 123456 Controller path particular")
+property(o1, "des:hasName", o2)
+property(o0, "des:hasName", o3)
+data(o3, "des:hasTextualName", "Controller")
+property(o4, "core:hasComponentPartAtAllTimes", o0)
+@enduml

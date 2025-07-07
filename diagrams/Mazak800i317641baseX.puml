@@ -1,0 +1,81 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak800i317641baseX
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak800i317641baseX.html Mazak800i317641baseX]], vendor:[[../Mazak.html#Mazak800ibaseX Mazak800ibaseX]])
+individual(o1, data:[[./Mazak800i317641baseXXballscrew.html Mazak800i317641baseXXballscrew]], vendor:[[../Mazak.html#Mazak800ibaseXXballscrew Mazak800ibaseXXballscrew]])
+individual(o2, data:name8, des:Name)
+individual(o3, data:[[./Mazak800i317641baseXXmotor.html Mazak800i317641baseXXmotor]], vendor:[[../Mazak.html#Mazak800ibaseXXmotor Mazak800ibaseXXmotor]])
+individual(o4, data:Mazak800i317641baseXTEMPERATURE, qualphys:Temperature)
+individual(o5, data:name9, des:Name)
+individual(o6, data:mazak800ibasexdesign1, vendor:[[../Mazak.html#Mazak800ibaseXDesign Mazak800ibaseXDesign]])
+individual(o7, data:Mazak800i317641baseXLengthNominal, core:ValueExpression)
+individual(o8, data:Mazak800i317641baseXLinear_forceMaximum, core:ValueExpression)
+individual(o9, data:Mazak800i317641baseXLinear_forceMinimum, core:ValueExpression)
+individual(o10, data:Mazak800i317641baseXVelocityRapidMaximum, core:ValueExpression)
+individual(o11, data:Mazak800i317641baseXVelocityRapidMinimum, core:ValueExpression)
+individual(o12, data:Mazak800i317641baseXVelocityProgrammedMaximum, core:ValueExpression)
+individual(o13, data:Mazak800i317641baseXVelocityProgrammedMinimum, core:ValueExpression)
+individual(o14, data:Mazak800i317641baseXPrismaticMotionCapability, ex:PrismaticMotionCapability)
+individual(o15, data:Mazak800i317641baseXPOSITION_ACTUAL, qualphys:Displacement)
+individual(o16, data:name7, des:Name)
+individual(o17, data:[[./Mazak800i317641enclosure.html Mazak800i317641enclosure]], vendor:[[../Mazak.html#Mazak800ienclosure Mazak800ienclosure]])
+individual(o18, data:Mazak800i317641enclosureTEMPERATURE, qualphys:Temperature)
+individual(o19, data:name33, des:Name)
+individual(o20, data:[[./Mazak800i317641mstructX_AXIS.html Mazak800i317641mstructX_AXIS]], vendor:[[../Mazak.html#Mazak800imstructX_AXIS Mazak800imstructX_AXIS]])
+individual(o21, data:name2, des:Name)
+individual(o22, data:[[./Mazak800i317641.html Mazak800i317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+property(o0, "core:hasComponentPartAtAllTimes", o1)
+data(o1, "rdfs:label", "Mazak800i 317641 base X Xballscrew particular")
+property(o1, "des:hasName", o2)
+property(o0, "core:hasComponentPartAtAllTimes", o3)
+data(o3, "rdfs:label", "Mazak800i 317641 base X Xmotor particular")
+property(o3, "core:hasQuality", o4)
+property(o3, "des:hasName", o5)
+property(o0, "core:prescribedBy", o6)
+data(o6, "rdfs:label", "Mazak800ibaseXDesign particular")
+property(o6, "core:hasValueExpressionAtAllTimes", o7)
+property(o6, "core:hasValueExpressionAtAllTimes", o8)
+property(o6, "core:hasValueExpressionAtAllTimes", o9)
+property(o6, "core:hasValueExpressionAtAllTimes", o10)
+property(o6, "core:hasValueExpressionAtAllTimes", o11)
+property(o6, "core:hasValueExpressionAtAllTimes", o12)
+property(o6, "core:hasValueExpressionAtAllTimes", o13)
+property(o0, "core:hasFunction", o14)
+property(o0, "core:hasQuality", o15)
+property(o0, "des:hasName", o16)
+data(o16, "des:hasTextualName", "X")
+property(o0, "ex:joinedTo", o17)
+data(o17, "rdfs:label", "Mazak800i 317641 enclosure particular")
+property(o17, "core:hasQuality", o18)
+property(o17, "des:hasName", o19)
+property(o0, "ex:joinedTo", o20)
+data(o20, "rdfs:label", "Mazak800i 317641 mstruct X_AXIS particular")
+property(o20, "des:hasName", o21)
+property(o22, "core:hasComponentPartAtAllTimes", o0)
+@enduml

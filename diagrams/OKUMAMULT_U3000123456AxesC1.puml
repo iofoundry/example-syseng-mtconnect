@@ -1,0 +1,49 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title OKUMAMULT_U3000123456AxesC1
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./OKUMAMULT_U3000123456AxesC1.html OKUMAMULT_U3000123456AxesC1]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesC1 OKUMAMULT_U3000AxesC1]])
+individual(o1, data:OKUMAMULT_U3000123456AxesC1ROTARY_VELOCITY_ACTUAL, ex:RevoluteVelocity)
+individual(o2, data:OKUMAMULT_U3000123456AxesC1ROTARY_VELOCITY_PROGRAMMED, ex:RevoluteVelocity)
+individual(o3, data:OKUMAMULT_U3000123456AxesC1ContinuousMotionCapability, ex:ContinuousMotionCapability)
+individual(o4, data:name13, des:Name)
+individual(o5, data:[[./OKUMAMULT_U3000123456enclosure.html OKUMAMULT_U3000123456enclosure]], vendor:[[../OKUMA.html#OKUMAMULT_U3000enclosure OKUMAMULT_U3000enclosure]])
+individual(o6, data:OKUMAMULT_U3000123456enclosureTEMPERATURE, qualphys:Temperature)
+individual(o7, data:name29, des:Name)
+individual(o8, data:[[./OKUMAMULT_U3000123456.html OKUMAMULT_U3000123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
+property(o0, "core:measuresAtSomeTime", o1)
+property(o0, "core:measuresAtSomeTime", o2)
+property(o0, "core:hasFunction", o3)
+property(o0, "des:hasName", o4)
+data(o4, "des:hasTextualName", "C1")
+property(o0, "ex:joinedTo", o5)
+data(o5, "rdfs:label", "OKUMAMULT_U3000 123456 enclosure particular")
+property(o5, "core:hasQuality", o6)
+property(o5, "des:hasName", o7)
+property(o8, "core:hasComponentPartAtAllTimes", o0)
+@enduml

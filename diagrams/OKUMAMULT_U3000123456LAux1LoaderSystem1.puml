@@ -1,0 +1,36 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title OKUMAMULT_U3000123456LAux1LoaderSystem1
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./OKUMAMULT_U3000123456LAux1LoaderSystem1.html OKUMAMULT_U3000123456LAux1LoaderSystem1]], vendor:[[../OKUMA.html#OKUMAMULT_U3000LAux1LoaderSystem1 OKUMAMULT_U3000LAux1LoaderSystem1]])
+individual(o1, data:name25, des:Name)
+individual(o2, data:[[./OKUMAMULT_U3000123456.html OKUMAMULT_U3000123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
+property(o0, "des:hasName", o1)
+data(o1, "des:hasTextualName", "LoaderSystem1")
+property(o2, "core:hasComponentPartAtAllTimes", o0)
+@enduml

@@ -1,0 +1,36 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak800i317641baseXXballscrew
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak800i317641baseXXballscrew.html Mazak800i317641baseXXballscrew]], vendor:[[../Mazak.html#Mazak800ibaseXXballscrew Mazak800ibaseXXballscrew]])
+individual(o1, data:name8, des:Name)
+individual(o2, data:[[./Mazak800i317641baseX.html Mazak800i317641baseX]], vendor:[[../Mazak.html#Mazak800ibaseX Mazak800ibaseX]])
+property(o0, "des:hasName", o1)
+data(o1, "des:hasTextualName", "Xballscrew")
+property(o2, "core:hasComponentPartAtAllTimes", o0)
+@enduml

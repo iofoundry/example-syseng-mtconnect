@@ -1,0 +1,38 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak800i317641systemscoolant
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak800i317641systemscoolant.html Mazak800i317641systemscoolant]], vendor:[[../Mazak.html#Mazak800isystemscoolant Mazak800isystemscoolant]])
+individual(o1, data:Mazak800i317641systemscoolantTEMPERATURE, qualphys:Temperature)
+individual(o2, data:name28, des:Name)
+individual(o3, data:[[./Mazak800i317641.html Mazak800i317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+property(o0, "core:hasQuality", o1)
+property(o0, "des:hasName", o2)
+data(o2, "des:hasTextualName", "coolant")
+property(o3, "core:hasComponentPartAtAllTimes", o0)
+@enduml

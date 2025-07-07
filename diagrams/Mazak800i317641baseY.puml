@@ -1,0 +1,79 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak800i317641baseY
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak800i317641baseY.html Mazak800i317641baseY]], vendor:[[../Mazak.html#Mazak800ibaseY Mazak800ibaseY]])
+individual(o1, data:[[./Mazak800i317641baseYYballscrew.html Mazak800i317641baseYYballscrew]], vendor:[[../Mazak.html#Mazak800ibaseYYballscrew Mazak800ibaseYYballscrew]])
+individual(o2, data:name11, des:Name)
+individual(o3, data:[[./Mazak800i317641baseYYmotor.html Mazak800i317641baseYYmotor]], vendor:[[../Mazak.html#Mazak800ibaseYYmotor Mazak800ibaseYYmotor]])
+individual(o4, data:Mazak800i317641baseYTEMPERATURE, qualphys:Temperature)
+individual(o5, data:name12, des:Name)
+individual(o6, data:mazak800ibaseydesign1, vendor:[[../Mazak.html#Mazak800ibaseYDesign Mazak800ibaseYDesign]])
+individual(o7, data:Mazak800i317641baseYLengthNominal, core:ValueExpression)
+individual(o8, data:Mazak800i317641baseYLinear_forceMaximum, core:ValueExpression)
+individual(o9, data:Mazak800i317641baseYLinear_forceMinimum, core:ValueExpression)
+individual(o10, data:Mazak800i317641baseYVelocityRapidMaximum, core:ValueExpression)
+individual(o11, data:Mazak800i317641baseYVelocityRapidMinimum, core:ValueExpression)
+individual(o12, data:Mazak800i317641baseYVelocityProgrammedMaximum, core:ValueExpression)
+individual(o13, data:Mazak800i317641baseYVelocityProgrammedMinimum, core:ValueExpression)
+individual(o14, data:Mazak800i317641baseYPrismaticMotionCapability, ex:PrismaticMotionCapability)
+individual(o15, data:Mazak800i317641baseYPOSITION_ACTUAL, qualphys:Displacement)
+individual(o16, data:name10, des:Name)
+individual(o17, data:[[./Mazak800i317641mstructX_AXIS.html Mazak800i317641mstructX_AXIS]], vendor:[[../Mazak.html#Mazak800imstructX_AXIS Mazak800imstructX_AXIS]])
+individual(o18, data:name2, des:Name)
+individual(o19, data:[[./Mazak800i317641mstructY_AXIS.html Mazak800i317641mstructY_AXIS]], vendor:[[../Mazak.html#Mazak800imstructY_AXIS Mazak800imstructY_AXIS]])
+individual(o20, data:name3, des:Name)
+individual(o21, data:[[./Mazak800i317641.html Mazak800i317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+property(o0, "core:hasComponentPartAtAllTimes", o1)
+data(o1, "rdfs:label", "Mazak800i 317641 base Y Yballscrew particular")
+property(o1, "des:hasName", o2)
+property(o0, "core:hasComponentPartAtAllTimes", o3)
+data(o3, "rdfs:label", "Mazak800i 317641 base Y Ymotor particular")
+property(o3, "core:hasQuality", o4)
+property(o3, "des:hasName", o5)
+property(o0, "core:prescribedBy", o6)
+data(o6, "rdfs:label", "Mazak800ibaseYDesign particular")
+property(o6, "core:hasValueExpressionAtAllTimes", o7)
+property(o6, "core:hasValueExpressionAtAllTimes", o8)
+property(o6, "core:hasValueExpressionAtAllTimes", o9)
+property(o6, "core:hasValueExpressionAtAllTimes", o10)
+property(o6, "core:hasValueExpressionAtAllTimes", o11)
+property(o6, "core:hasValueExpressionAtAllTimes", o12)
+property(o6, "core:hasValueExpressionAtAllTimes", o13)
+property(o0, "core:hasFunction", o14)
+property(o0, "core:hasQuality", o15)
+property(o0, "des:hasName", o16)
+data(o16, "des:hasTextualName", "Y")
+property(o0, "ex:joinedTo", o17)
+data(o17, "rdfs:label", "Mazak800i 317641 mstruct X_AXIS particular")
+property(o17, "des:hasName", o18)
+property(o0, "ex:joinedTo", o19)
+data(o19, "rdfs:label", "Mazak800i 317641 mstruct Y_AXIS particular")
+property(o19, "des:hasName", o20)
+property(o21, "core:hasComponentPartAtAllTimes", o0)
+@enduml

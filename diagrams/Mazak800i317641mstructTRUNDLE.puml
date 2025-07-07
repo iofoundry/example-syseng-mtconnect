@@ -1,0 +1,40 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak800i317641mstructTRUNDLE
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak800i317641mstructTRUNDLE.html Mazak800i317641mstructTRUNDLE]], vendor:[[../Mazak.html#Mazak800imstructTRUNDLE Mazak800imstructTRUNDLE]])
+individual(o1, data:name6, des:Name)
+individual(o2, data:[[./Mazak800i317641.html Mazak800i317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+individual(o3, data:[[./Mazak800i317641baseB.html Mazak800i317641baseB]], vendor:[[../Mazak.html#Mazak800ibaseB Mazak800ibaseB]])
+individual(o4, data:[[./Mazak800i317641baseC2.html Mazak800i317641baseC2]], vendor:[[../Mazak.html#Mazak800ibaseC2 Mazak800ibaseC2]])
+property(o0, "des:hasName", o1)
+data(o1, "des:hasTextualName", "TRUNDLE")
+property(o2, "core:hasComponentPartAtAllTimes", o0)
+property(o3, "ex:joinedTo", o0)
+property(o4, "ex:joinedTo", o0)
+@enduml

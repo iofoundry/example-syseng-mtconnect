@@ -1,0 +1,67 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title OKUMA123456AxesY
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./OKUMA123456AxesY.html OKUMA123456AxesY]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesY OKUMAMULT_U3000AxesY]])
+individual(o1, data:okumamult_u3000axesydesign1, vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesYDesign OKUMAMULT_U3000AxesYDesign]])
+individual(o2, data:OKUMA123456AxesYLengthNominal, core:ValueExpression)
+individual(o3, data:OKUMA123456AxesYLinear_forceMaximum, core:ValueExpression)
+individual(o4, data:OKUMA123456AxesYLinear_forceMinimum, core:ValueExpression)
+individual(o5, data:OKUMA123456AxesYVelocityRapidMaximum, core:ValueExpression)
+individual(o6, data:OKUMA123456AxesYVelocityRapidMinimum, core:ValueExpression)
+individual(o7, data:OKUMA123456AxesYVelocityProgrammedMaximum, core:ValueExpression)
+individual(o8, data:OKUMA123456AxesYVelocityProgrammedMinimum, core:ValueExpression)
+individual(o9, data:OKUMA123456AxesYPrismaticMotionCapability, ex:PrismaticMotionCapability)
+individual(o10, data:OKUMA123456AxesYPOSITION_ACTUAL, qualphys:Displacement)
+individual(o11, data:name10, des:Name)
+individual(o12, data:[[./OKUMA123456structx_axis.html OKUMA123456structx_axis]], vendor:[[../OKUMA.html#OKUMAMULT_U3000structx_axis OKUMAMULT_U3000structx_axis]])
+individual(o13, data:name2, des:Name)
+individual(o14, data:[[./OKUMA123456structy_axis.html OKUMA123456structy_axis]], vendor:[[../OKUMA.html#OKUMAMULT_U3000structy_axis OKUMAMULT_U3000structy_axis]])
+individual(o15, data:name3, des:Name)
+individual(o16, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
+property(o0, "core:prescribedBy", o1)
+data(o1, "rdfs:label", "OKUMAMULT_U3000AxesYDesign particular")
+property(o1, "core:hasValueExpressionAtAllTimes", o2)
+property(o1, "core:hasValueExpressionAtAllTimes", o3)
+property(o1, "core:hasValueExpressionAtAllTimes", o4)
+property(o1, "core:hasValueExpressionAtAllTimes", o5)
+property(o1, "core:hasValueExpressionAtAllTimes", o6)
+property(o1, "core:hasValueExpressionAtAllTimes", o7)
+property(o1, "core:hasValueExpressionAtAllTimes", o8)
+property(o0, "core:hasFunction", o9)
+property(o0, "core:hasQuality", o10)
+property(o0, "des:hasName", o11)
+data(o11, "des:hasTextualName", "Y")
+property(o0, "ex:joinedTo", o12)
+data(o12, "rdfs:label", "OKUMA 123456 struct x_axis particular")
+property(o12, "des:hasName", o13)
+property(o0, "ex:joinedTo", o14)
+data(o14, "rdfs:label", "OKUMA 123456 struct y_axis particular")
+property(o14, "des:hasName", o15)
+property(o16, "core:hasComponentPartAtAllTimes", o0)
+@enduml

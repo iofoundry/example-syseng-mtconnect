@@ -1,0 +1,68 @@
+
+@startuml
+' !include https://raw.githubusercontent.com/iofoundry/ontopuml/refs/heads/Development/iof.iuml
+!include ../iof.iuml
+
+<style>
+object {
+  HyperlinkColor #C4E1E6
+}
+</style>
+
+left to right direction
+skinparam linetype polyline
+title Mazak317641baseB
+
+!$default_direction = down
+
+!$namespace_colors = { "bfo":"DFA702", 
+                      "iof":"1E90FF", 
+                      "ns":"Green", 
+                      "ns1":"76608A",
+                      "core":"000000",
+                      "ex":"Green",
+                      "data":"76608A",
+                      "vendor":"76608A",
+                      "units":"8A2D3B",
+                      "cmns-dsg":"3A0519",
+                      "qp":"641B2E"
+      }
+individual(o0, data:[[./Mazak317641baseB.html Mazak317641baseB]], vendor:[[../Mazak.html#Mazak800ibaseB Mazak800ibaseB]])
+individual(o1, data:[[./Mazak317641baseBBmotor.html Mazak317641baseBBmotor]], vendor:[[../Mazak.html#Mazak800ibaseBBmotor Mazak800ibaseBBmotor]])
+individual(o2, data:name19, des:Name)
+individual(o3, data:mazak800ibasebdesign1, vendor:[[../Mazak.html#Mazak800ibaseBDesign Mazak800ibaseBDesign]])
+individual(o4, data:Mazak317641baseBAngleMaximum, core:ValueExpression)
+individual(o5, data:Mazak317641baseBAngleMinimum, core:ValueExpression)
+individual(o6, data:Mazak317641baseBTorqueMaximum, core:ValueExpression)
+individual(o7, data:Mazak317641baseBTorqueMinimum, core:ValueExpression)
+individual(o8, data:Mazak317641baseBRevoluteMotionCapability, ex:RevoluteMotionCapability)
+individual(o9, data:Mazak317641baseBANGLE_ACTUAL, qualphys:Angle)
+individual(o10, data:name18, des:Name)
+individual(o11, data:[[./Mazak317641enclosure.html Mazak317641enclosure]], vendor:[[../Mazak.html#Mazak800ienclosure Mazak800ienclosure]])
+individual(o12, data:Mazak317641enclosureTEMPERATURE, qualphys:Temperature)
+individual(o13, data:name33, des:Name)
+individual(o14, data:[[./Mazak317641mstructTRUNDLE.html Mazak317641mstructTRUNDLE]], vendor:[[../Mazak.html#Mazak800imstructTRUNDLE Mazak800imstructTRUNDLE]])
+individual(o15, data:name6, des:Name)
+individual(o16, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+property(o0, "core:hasComponentPartAtAllTimes", o1)
+data(o1, "rdfs:label", "Mazak 317641 base B Bmotor particular")
+property(o1, "des:hasName", o2)
+property(o0, "core:prescribedBy", o3)
+data(o3, "rdfs:label", "Mazak800ibaseBDesign particular")
+property(o3, "core:hasValueExpressionAtAllTimes", o4)
+property(o3, "core:hasValueExpressionAtAllTimes", o5)
+property(o3, "core:hasValueExpressionAtAllTimes", o6)
+property(o3, "core:hasValueExpressionAtAllTimes", o7)
+property(o0, "core:hasFunction", o8)
+property(o0, "core:hasQuality", o9)
+property(o0, "des:hasName", o10)
+data(o10, "des:hasTextualName", "B")
+property(o0, "ex:joinedTo", o11)
+data(o11, "rdfs:label", "Mazak 317641 enclosure particular")
+property(o11, "core:hasQuality", o12)
+property(o11, "des:hasName", o13)
+property(o0, "ex:joinedTo", o14)
+data(o14, "rdfs:label", "Mazak 317641 mstruct TRUNDLE particular")
+property(o14, "des:hasName", o15)
+property(o16, "core:hasComponentPartAtAllTimes", o0)
+@enduml
