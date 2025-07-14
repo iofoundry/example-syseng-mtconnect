@@ -28,8 +28,8 @@ title OKUMA123456AxesC6
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456AxesC6.html OKUMA123456AxesC6]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesC6 OKUMAMULT_U3000AxesC6]])
-individual(o1, data:OKUMA123456AxesC6ROTARY_VELOCITY_ACTUAL, ex:RevoluteVelocity)
-individual(o2, data:OKUMA123456AxesC6ROTARY_VELOCITY_PROGRAMMED, ex:RevoluteVelocity)
+individual(o1, data:OKUMA123456AxesC6ROTARY_VELOCITY_ACTUAL, ex:[[../Example.html#RevoluteVelocity RevoluteVelocity]])
+individual(o2, data:OKUMA123456AxesC6ROTARY_VELOCITY_PROGRAMMED, ex:[[../Example.html#RevoluteVelocity RevoluteVelocity]])
 individual(o3, data:name17, des:Name)
 individual(o4, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
 property(o0, "core:measuresAtSomeTime", o1)

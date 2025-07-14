@@ -69,7 +69,7 @@ Units = {
 Components = {
   'Linear': Example.LinearMotionSystem,
   'Rotary': Example.RotaryMotionSystem,
-  'Device': Example.Machine,
+  'Device': Example.NumericallyControlledMachine,
   'Controller': Example.ControlSystem,
   'Path': Example.ControlSystemPath,
   'Composition': BFO.object,
@@ -81,7 +81,7 @@ Components = {
   'Lubrication': Example.LubricationSystem,
   'Stock': Example.Stock,
   'Personnel': Example.Personnel,
-  'PartOccurrence': Example.Part,
+  'PartOccurrence': Example.ProductPart,
   'Link': Example.Structure,
   'Enclosure': Example.Structure,
   'Environmental': Example.Room,
@@ -99,7 +99,7 @@ Functions = {
   'Device': Example.MillingCapability,
   'PRISMATIC': Example.PrismaticMotionCapability,
   'REVOLUTE': Example.RevoluteMotionCapability,
-  'CONTINUOUS': Example.ContinuousMotionCapability
+  'CONTINUOUS': Example.ContinuousRevoluteCapability
 }
 
 Capabilities = {
@@ -120,4 +120,8 @@ DataItems = {
 
 Roles = {
   'Device': Core.EquipmentRole
+}
+
+Separate = {
+  'Room'
 }

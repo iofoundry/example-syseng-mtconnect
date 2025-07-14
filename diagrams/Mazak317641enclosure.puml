@@ -37,6 +37,6 @@ property(o0, "core:hasQuality", o1)
 property(o0, "des:hasName", o2)
 data(o2, "des:hasTextualName", "enclosure")
 property(o3, "core:hasComponentPartAtAllTimes", o0)
-property(o4, "ex:joinedTo", o0)
-property(o5, "ex:joinedTo", o0)
+property(o4, "ex:connectedTo", o0)
+property(o5, "ex:connectedTo", o0)
 @enduml

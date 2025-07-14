@@ -60,8 +60,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesB">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesB"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes B particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structb_axis"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structy_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structb_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structy_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesBRevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesBANGLE_ACTUAL"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name12"/>
@@ -78,15 +78,15 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes C1 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesC1ContinuousMotionCapability"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesC1ContinuousRevoluteCapability"/>
 		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC1ROTARY_VELOCITY_ACTUAL"/>
 		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC1ROTARY_VELOCITY_PROGRAMMED"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name13"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC1ContinuousMotionCapability">
-		<rdf:type rdf:resource="&onto;ContinuousMotionCapability"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC1ContinuousRevoluteCapability">
+		<rdf:type rdf:resource="&onto;ContinuousRevoluteCapability"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC1ROTARY_VELOCITY_ACTUAL">
@@ -100,8 +100,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC2">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC2"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes C2 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structc2_axis"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structc2_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesC2RevoluteMotionCapability"/>
 		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC2ROTARY_VELOCITY_ACTUAL"/>
 		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC2ROTARY_VELOCITY_PROGRAMMED"/>
@@ -123,8 +123,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC3">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC3"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes C3 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structc2_axis"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structc2_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesC3RevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesC3ANGLE_ACTUAL"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name16"/>
@@ -157,8 +157,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesX">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesX"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes X particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structx_axis"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structx_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesXPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesXPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesxdesign1"/>
@@ -189,6 +189,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesxdesign1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXVelocityProgrammedMaximum">
@@ -218,8 +219,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesY">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesY"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes Y particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structx_axis"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structy_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structx_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structy_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesYPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesYPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesydesign1"/>
@@ -250,6 +251,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesydesign1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYVelocityProgrammedMaximum">
@@ -279,8 +281,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes Z1 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesZ1PrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesZ1POSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesz1design1"/>
@@ -311,6 +313,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1PrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesz1design1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1VelocityProgrammedMaximum">
@@ -340,8 +343,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes Z4 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesZ4PrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesZ4POSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesz4design1"/>
@@ -372,6 +375,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4PrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesz4design1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4VelocityProgrammedMaximum">

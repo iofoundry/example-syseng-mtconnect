@@ -9,39 +9,66 @@ Example.label = [owl.locstr("Machine Ontology", "en")]
 
 with Example:
   """The IOF ontology for engineered systems and their components."""  
-  class Machine(Core.EngineeredSystem):
-      """A machine in the IOF ontology."""
-      label = owl.locstr("Machine", "en")
+  class Actuator(Core.MaterialArtifact):
+      label = owl.locstr("Actuator", "en")
+      
+  class MotionCapability(Core.Capability):
+      """A motion capability in the IOF ontology."""
+      label = owl.locstr("Motion Capability", "en")
     
+  class PrismaticMotionCapability(MotionCapability):
+      """A prismatic motion capability in the IOF ontology."""
+      label = owl.locstr("Prismatic Motion Capability", "en")
+    
+  class RevoluteMotionCapability(MotionCapability):
+      """A revoluted motion capability in the IOF ontology."""
+      label = owl.locstr("Revolute Motion Capability", "en")
+    
+  class ContinuousRevoluteCapability(RevoluteMotionCapability):
+      """A continuous motion capability in the IOF ontology."""
+      label = owl.locstr("Continuous Motion Capability", "en")
+          
   class MotionSystem(Core.EngineeredSystem):
       """A motion system in the IOF ontology."""
       label = owl.locstr("Motion System", "en")
+      is_a = [Core.EngineeredSystem & Core.hasComponentPartAtAllTimes.some(Actuator)]
     
   class LinearMotionSystem(MotionSystem):
       """A linear motion system in the IOF ontology."""
       label = owl.locstr("Linear Motion System", "en")
+      is_a = [MotionSystem & Core.hasCapability.some(PrismaticMotionCapability)]
     
   class RotaryMotionSystem(MotionSystem):
       """A rotary motion system in the IOF ontology."""
       label = owl.locstr("Rotary Motion System", "en")
-    
+      is_a = [MotionSystem & Core.hasCapability.some(RevoluteMotionCapability)]
+      
   class ControlSystem(Core.EngineeredSystem):
       """A control system in the IOF ontology."""
       label = owl.locstr("Control System", "en")
+
+  class Machine(Core.EngineeredSystem):
+      """A machine in the IOF ontology."""
+      label = owl.locstr("Machine", "en")
+      is_a = [Core.EngineeredSystem & Core.hasComponentPartAtAllTimes.some(MotionSystem)]
+
+  class NumericallyControlledMachine(Machine):
+      label = owl.locstr("Numerically Controlled Machine", "en")
+      is_a = [Machine & Core.hasComponentPartAtAllTimes.some(ControlSystem)]
     
   class ControlSystemPath(ControlSystem):
       """A control system path in the IOF ontology."""
       label = owl.locstr("Control System Path", "en")
-    
-  class Motor(BFO.object):
+      
+  class Motor(Actuator):
       """A motor in the IOF ontology."""
       label = owl.locstr("Motor", "en")
 
-  class Ballscrew(BFO.object):
+  class Ballscrew(Core.MaterialArtifact):
       """A ballscrew in the IOF ontology."""
       label = owl.locstr("Ballscrew", "en")
     
-  class Door(BFO.object):
+  class Door(Core.MaterialArtifact):
       """A door in the IOF ontology."""
       label = owl.locstr("Door", "en")
 
@@ -65,26 +92,10 @@ with Example:
       """A stock in the IOF ontology."""
       label = owl.locstr("Stock", "en")
     
-  class Part(BFO.object):
+  class ProductPart(Core.MaterialArtifact):
       """A part in the IOF ontology."""
-      label = owl.locstr("Part", "en")
-    
-  class MotionCapability(Core.Capability):
-      """A motion capability in the IOF ontology."""
-      label = owl.locstr("Motion Capability", "en")
-    
-  class PrismaticMotionCapability(MotionCapability):
-      """A prismatic motion capability in the IOF ontology."""
-      label = owl.locstr("Prismatic Motion Capability", "en")
-    
-  class RevoluteMotionCapability(MotionCapability):
-      """A revoluted motion capability in the IOF ontology."""
-      label = owl.locstr("Revoluted Motion Capability", "en")
-    
-  class ContinuousMotionCapability(MotionCapability):
-      """A continuous motion capability in the IOF ontology."""
-      label = owl.locstr("Continuous Motion Capability", "en")
-    
+      label = owl.locstr("Product Part", "en")
+        
   class MillingCapability(Core.Capability):
       """A milling capability in the IOF ontology."""
       label = owl.locstr("Milling Capability", "en")
@@ -97,7 +108,7 @@ with Example:
       """An enclosure in the IOF ontology."""
       label = owl.locstr("Enclosure", "en")
     
-  class Structure(BFO.object):
+  class Structure(Core.MaterialArtifact):
       """A structure in the IOF ontology."""
       label = owl.locstr("Structure", "en")
     
@@ -105,7 +116,7 @@ with Example:
     """A room in the IOF ontology."""
     label = owl.locstr("Room", "en")
     
-  class Sensor(BFO.object):
+  class Sensor(Core.MaterialArtifact):
     """A sensor in the IOF ontology."""
     label = owl.locstr("Sensor", "en")
     
@@ -133,11 +144,11 @@ with Example:
     """A translational velocity in the IOF ontology."""
     label = owl.locstr("Translational Velocity", "en")
     
-  class joinedTo(owl.ObjectProperty, owl.SymmetricProperty):
+  class connectedTo(owl.ObjectProperty, owl.SymmetricProperty):
       """An object property for joining two entities."""    
       domain = [BFO.material_entity]
       range = [BFO.material_entity]
-      label = owl.locstr("joined to", "en")
+      label = owl.locstr("connected to", "en")
 
   class satisfiedBy(owl.ObjectProperty):
     """An object property for linking a capability to a system that satisfies it."""

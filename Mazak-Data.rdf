@@ -74,8 +74,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseB">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base B particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641enclosure"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641enclosure"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBBmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseBRevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseBANGLE_ACTUAL"/>
@@ -105,6 +105,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBRevoluteMotionCapability">
 		<rdf:type rdf:resource="&onto;RevoluteMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasebdesign1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBTorqueMaximum">
@@ -122,9 +123,9 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base C1 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1Cmotor"/>
-		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseC1ContinuousMotionCapability"/>
+		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseC1ContinuousRevoluteCapability"/>
 		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC1ROTARY_VELOCITY_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasec1design1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name16"/>
@@ -137,8 +138,9 @@
 		<Desi:hasName rdf:resource="http://example.org/data/name17"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1ContinuousMotionCapability">
-		<rdf:type rdf:resource="&onto;ContinuousMotionCapability"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1ContinuousRevoluteCapability">
+		<rdf:type rdf:resource="&onto;ContinuousRevoluteCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasec1design1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1ROTARY_VELOCITY_ACTUAL">
@@ -164,8 +166,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC2"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base C2 particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructTABLE"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructTABLE"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2C2motor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseC2RevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseC2ANGLE_ACTUAL"/>
@@ -195,6 +197,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2RevoluteMotionCapability">
 		<rdf:type rdf:resource="&onto;RevoluteMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasec2design1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2TorqueMaximum">
@@ -212,8 +215,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseX">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base X particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641enclosure"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641enclosure"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXballscrew"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseXPrismaticMotionCapability"/>
@@ -246,6 +249,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasexdesign1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXTEMPERATURE">
@@ -292,8 +296,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseY">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Y particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYballscrew"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseYPrismaticMotionCapability"/>
@@ -326,6 +330,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibaseydesign1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYTEMPERATURE">
@@ -372,8 +377,8 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZ">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Z particular</rdfs:label>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
-		<onto:joinedTo rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
+		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZballscrew"/>
 		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseZPrismaticMotionCapability"/>
@@ -406,6 +411,7 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZPrismaticMotionCapability">
 		<rdf:type rdf:resource="&onto;PrismaticMotionCapability"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasezdesign1"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZTEMPERATURE">

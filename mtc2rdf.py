@@ -4,7 +4,7 @@ import owlready2 as owl
 from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example, Data
 from mtconnect_to_iof import MTConnectToIOF
 from generate_diagram import GenerateDiagram
-from owlready2.dl_render import dl_render_terminology_str, dl_render_class_str
+from iof_render import dl_render_terminology, dl_render_class, Namespaces
 import re
 from indented_logger import setup_logging, increase_indent, decrease_indent
 from indented_logger.decorator import log_indent
@@ -14,6 +14,62 @@ setup_logging(level = logging.DEBUG, indent_spaces=2, include_func=True, no_date
 logger = logging.getLogger(__name__)
 
 Example.load(only_local=True)
+
+def render_ontology(items, level = 1) -> str:
+  s = ''
+  if isinstance(items, dict):
+    s = "\n".join([f"<h{level} id=\"{k}\">" + k + f"</h{level}>" + render_ontology(v, level + 1) for k, v in items.items()])
+  elif isinstance(items, list):
+    s = '<ul><li class="axiom">' + \
+      "</li>\n<li class=\"axiom\">".join(items) +  \
+      '</li></ul>'
+  else:
+    s = items
+  return s
+
+with open(f"Example.html", 'w') as f:
+    f.write(f"""
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Types</title>
+    <style>
+body {{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}}
+
+h1 {{
+  font-size: 1.35em;
+  border: none;
+  border-top: 2px solid #bbb;
+  margin: 1em 0 0em 0;
+  padding-top: 0.25em;
+}}
+
+h2 {{
+  font-size: 1.25em;
+}}
+
+.axiom {{
+  font-family: 'Fira Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  font-size: 1em;
+}}
+
+.indent {{
+  margin-left: 3em;
+}}
+    </style>
+  </head>
+  <body>
+    <ul>
+""")
+    f.write(render_ontology(dl_render_terminology(Example)))
+    f.write("""
+    </ul>
+  </body>
+</html>
+""")
 
 if len(sys.argv) < 2:
     print("Usage: python script.py <file>")
@@ -31,6 +87,7 @@ with open(file_name, 'r') as file:
     trans.write()
 
 Vendor = trans.Vendor
+Namespaces[Vendor.base_iri] = Vendor.name
 
 entities = [x[0] for x in owl.default_world.sparql("""select ?p { ?p a ?c . ?c rdfs:subClassOf* ?? . }""", \
                                                     [BFO.material_entity]) if x[0].namespace == Data]
@@ -43,8 +100,8 @@ logger.info("Generating full diagram")
 full.generate()
 
 logger.info("Generating topology")
-statements = [[x[0], Example.joinedTo, x[1]] \
-  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Example.joinedTo])]
+statements = [[x[0], Example.connectedTo, x[1]] \
+  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Example.connectedTo])]
 
 gen = GenerateDiagram(f"{Vendor.name}Topo", statements, Vendor)
 gen.generate()
@@ -130,12 +187,10 @@ h2 {{
     for cls in Vendor.classes():
         f.write(f"      <h2 id={cls.name}>{cls.name}</h2>\n")
         f.write("      <ul>\n        <li class='axiom'>")
-        axioms = dl_render_class_str(cls)
-        f.write("</li>\n        <li class='axiom'>".join([x for x in axioms.splitlines()]))
+        f.write("</li>\n        <li class='axiom'>".join(dl_render_class(cls)))
         f.write("</li>\n      </ul>\n")
     f.write("""
     </div>
   </body>
 </html>
 """)
-

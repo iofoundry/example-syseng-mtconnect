@@ -105,7 +105,8 @@ class MTConnectToIOF:
   
   @log_indent
   def _create_particular_specifications(self, element, partic, name):
-    """Create particular component specifications."""    
+    """Create particular component specifications."""
+    ds = None
     specifications = element.findall("./m:Configuration/m:Specifications/*", self.ns)
     if specifications:
       logger.info(f"Creating particular specifications")
@@ -130,9 +131,10 @@ class MTConnectToIOF:
             units = Units.get(spec.get("units", None), None)
             if units:
               exp.hasUnit.append(units)
+    return ds
   
   @log_indent
-  def _add_capability(self, partic, type):
+  def _add_capability(self, partic, type, design_spec):
     """Add capability to the component."""
     
     with Data:
@@ -142,6 +144,7 @@ class MTConnectToIOF:
         logger.info(f"Creating capbility {name} for {cap_cls}")
         cap = cap_cls(name)
         partic.hasCapability.append(cap)
+        if design_spec: cap.prescribedBy.append(design_spec)
         
       if type in Functions:
         func_cls = Functions[type]
@@ -149,6 +152,7 @@ class MTConnectToIOF:
         logger.info(f"Creating function {name} for {func_cls}")
         func = func_cls(name)
         partic.hasFunction.append(func)
+        if design_spec: func.prescribedBy.append(design_spec)
         
   @log_indent
   def _add_data_items(self, element, partic):
@@ -195,7 +199,7 @@ class MTConnectToIOF:
       self.particulars[id] = partic
       partic.label = owl.locstr(' '.join(pnames) + ' particular', "en")
       
-      if parent:
+      if parent and not type_cls.name in Separate:
         parent.hasComponentPartAtAllTimes.append(partic)
         
       text_name = element.get("name", id)
@@ -204,13 +208,13 @@ class MTConnectToIOF:
       node.hasTextualName.append(text_name)
       partic.hasName.append(node)      
 
-      self._create_particular_specifications(element, partic, name)
+      ds = self._create_particular_specifications(element, partic, name)
       key = type
       motion = list(element.findall("./m:Configuration/m:Motion", self.ns))
       if motion:
         key = motion[0].get("type", type)
         
-      self._add_capability(partic, key)      
+      self._add_capability(partic, key, ds)      
       #if type in Roles:
       #  partic.hasRole.append(Roles[type]())
       
@@ -226,7 +230,7 @@ class MTConnectToIOF:
         rels = element.findall("./m:Configuration/m:Relationships/m:ComponentRelationship", self.ns)
         for rel in rels:
           target = self.particulars[rel.get('idRef')]
-          partic.joinedTo.append(target)
+          partic.connectedTo.append(target)
         
     for component in element.findall("./m:Components/*", self.ns):
       self._add_relationships(component)
@@ -271,7 +275,8 @@ class MTConnectToIOF:
       with self.Vendor:
         for part in parts:
           logger.info(f"{type_cls}: Adding subclass axiom for #{part}")
-          type_cls.is_a.append(cls & Core.hasComponentPartAtAllTimes.some(part))
+          if not part.name in Separate:
+            type_cls.is_a.append(cls & Core.hasComponentPartAtAllTimes.some(part))
 
     if type_cls:
       return [type_cls]

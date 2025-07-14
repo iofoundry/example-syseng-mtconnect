@@ -65,7 +65,7 @@ class GenerateDiagram:
       else:
         name = o.name
 
-    pre = self.namespaces.get(ns, "uns")        
+    pre = self.namespaces.get(ns, "_")        
     return f"{pre}:{name}"
   
   def _print_object(self, f, o):
@@ -80,6 +80,14 @@ class GenerateDiagram:
     if o.is_a[0].namespace == self.vendor:
       ns, name = self._name(o.is_a[0]).split(':')
       cls = f"{ns}:[[../{self.vendor.name}.html#{name} {name}]]"
+      f.write(f"individual({self._obj(o)}, {title}, {cls})\n")      
+    elif o.is_a[0].namespace == Example:
+      ns, name = self._name(o.is_a[0]).split(':')
+      cls = f"{ns}:[[../Example.html#{name} {name}]]"
+      f.write(f"individual({self._obj(o)}, {title}, {cls})\n")      
+    elif o.is_a[0].namespace == Core:
+      ns, name = self._name(o.is_a[0]).split(':')
+      cls = f"{ns}:[[{o.is_a[0].iri} {name}]]"
       f.write(f"individual({self._obj(o)}, {title}, {cls})\n")      
     else:
       f.write(f"individual({self._obj(o)}, {title}, {self._name(o.is_a[0])})\n")    
