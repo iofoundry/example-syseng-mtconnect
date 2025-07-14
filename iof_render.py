@@ -73,24 +73,24 @@ def _render_short_name(concept) -> str:
 
 def dl_render_terminology(onto: Ontology, show_disjoint: bool = True, show_domain: bool = True, show_range: bool = True, show_inverse: bool = True, show_characteristics: bool = False) -> dict:
     s = dict()
-    if onto.annotation_properties():
+    if onto.annotation_properties() and (props := list(onto.annotation_properties())):
         s['Annotation properties'] = { prop.name : dl_render_prop(prop)
-            for prop in onto.annotation_properties() }
+            for prop in props }
         
-    if onto.data_properties():
+    if onto.data_properties() and (props := list(onto.data_properties())):
         s['Data properties'] = { prop.name : 
             dl_render_prop(prop, show_domain=show_domain, show_range=show_range, show_inverse=show_inverse, show_characteristics=show_characteristics)
-                for prop in onto.data_properties() }
+                for prop in props }
         
-    if onto.object_properties():
+    if onto.object_properties() and (props := list(onto.object_properties())):
         s['Object properties'] = { prop.name : 
             dl_render_prop(prop, show_domain=show_domain, show_range=show_range, show_inverse=show_inverse, show_characteristics=show_characteristics)
-                for prop in onto.object_properties() }
+                for prop in props }
 
-    if onto.classes():
+    if onto.classes() and (classes := list(onto.classes())):
         s['Classes'] = { klass.name : 
             dl_render_class(klass, show_disjoint=show_disjoint)
-                for klass in onto.classes() }
+                for klass in classes }
     return s
 
 
@@ -152,7 +152,7 @@ def _render_name(concept) -> str:
         formatted = f"<a href='Example.html#{concept.name}'>{formatted}</a>"
     elif concept.namespace.name == 'Core':
         formatted = f"<a href='{concept.iri}'>{formatted}</a>"        
-    return formatted
+    return formatted 
     
 
 def dl_render_concept_str(concept: Union[Construct, EntityClass]) -> str:
