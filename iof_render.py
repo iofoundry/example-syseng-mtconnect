@@ -16,7 +16,7 @@ import re
 from ontologies import Example, Core
 
 _DL_SYNTAX = types.SimpleNamespace(
-    SUBCLASS="⊑",
+    SUBCLASS="→",
     EQUIVALENT_TO="↔",
     NOT="¬",
     DISJOINT_WITH="⊑" + " " + "¬",
@@ -34,6 +34,7 @@ _DL_SYNTAX = types.SimpleNamespace(
     OR="∨",
     COMP="∘",
     WEDGE="⋀",
+    CONDITIONAL="→",
     IMPLIES="←",
     COMMA=",",
     SELF="self",
@@ -103,6 +104,12 @@ def dl_render_class(klass: ThingClass, show_disjoint: bool = True) -> list:
     if klass.is_a:
         s.extend([("%s %s %s" % (dl_render_concept_str(klass), _DL_SYNTAX.SUBCLASS, dl_render_concept_str(_))) for _ in
                   klass.is_a])
+        
+    # Pick up general class axioms
+    axioms = [_[0] for _ in klass.namespace.world.sparql("SELECT * { ?x rdfs:subClassOf ?? }", [klass]) if not isinstance(_[0], ThingClass) ]
+    if axioms:
+        s.extend([("%s %s %s" % (dl_render_concept_str(_), _DL_SYNTAX.CONDITIONAL, dl_render_concept_str(klass))) for _ in axioms])
+    
     if not s:
         s.append("%s %s %s" % (dl_render_concept_str(klass), _DL_SYNTAX.SUBCLASS, _DL_SYNTAX.TOP))
     if show_disjoint:
@@ -116,26 +123,24 @@ def dl_render_prop(prop: PropertyClass, show_domain: bool = True, show_range: bo
         s.extend([("%s %s %s" % (dl_render_concept_str(prop), _DL_SYNTAX.SUBCLASS, dl_render_concept_str(_))) for _ in
               prop.is_a if _.namespace is not owl])
     if prop.domain and show_domain:
-        s.extend([("%s %s .%s %s %s" % (_DL_SYNTAX.EXISTS, prop.name, _DL_SYNTAX.TOP, _DL_SYNTAX.SUBCLASS, dl_render_concept_str(_))) for _ in prop.domain])
+        s.extend([("domain: %s" % (dl_render_concept_str(_))) for _ in prop.domain])
     if prop.range and show_range:
-        s.extend([("%s %s %s %s .%s" % (_DL_SYNTAX.TOP, _DL_SYNTAX.SUBCLASS, _DL_SYNTAX.FORALL, prop.name, dl_render_concept_str(_))) for _ in prop.range])
+        s.extend([("range: %s" % (dl_render_concept_str(_))) for _ in prop.range])
     if prop.inverse_property and show_inverse:
-        s.append("%s %s %s%s" % (prop.name, _DL_SYNTAX.EQUIVALENT_TO, dl_render_concept_str(prop.inverse_property), _DL_SYNTAX.INVERSE))
+        s.append("inverse: %s" % (dl_render_concept_str(prop.inverse_property)))
     if show_characteristics:
         if SymmetricProperty in prop.is_a:
-            s.append("%s %s %s%s" % (
-                prop.name, _DL_SYNTAX.SUBCLASS, prop.name, _DL_SYNTAX.INVERSE))
+            s.append('Symmetric')
         if AsymmetricProperty in prop.is_a:
-            s.append("%s %s %s%s%s" % (
-                prop.name, _DL_SYNTAX.SUBCLASS, _DL_SYNTAX.NOT, prop.name, _DL_SYNTAX.INVERSE))
+            s.append('Asymmetric')
         if TransitiveProperty in prop.is_a:
-            s.append("%s %s %s" % (dl_render_concept_str(PropertyChain([prop, prop])), _DL_SYNTAX.SUBCLASS, prop.name))
+            s.append('Transitive')
         if FunctionalProperty in prop.is_a:
-            s.append("%s %s %s" % (_DL_SYNTAX.TOP, _DL_SYNTAX.SUBCLASS, dl_render_concept_str(prop.max(1))))
+            s.append('Functional')
         if ReflexiveProperty in prop.is_a:
-            s.append("%s %s %s" % (_DL_SYNTAX.TOP, _DL_SYNTAX.SUBCLASS, dl_render_concept_str(prop.has_self())))
+            s.append('Reflexive')
         if IrreflexiveProperty in prop.is_a:
-            s.append("%s %s %s" % (dl_render_concept_str(prop.has_self()), _DL_SYNTAX.SUBCLASS, _DL_SYNTAX.BOTTOM))
+            s.append('Irreflexive')
 
     return s
 

@@ -58,7 +58,7 @@ def render_footer(file):
 def render_terminology(name, ontology):
   with open(f"{name}.html", 'w') as f:
     render_header(f, f"{ontology.name} Ontology")
-    f.write(_render_ontology(dl_render_terminology(ontology)))
+    f.write(_render_ontology(dl_render_terminology(ontology, show_characteristics = True)))
     render_footer(f)
 
 

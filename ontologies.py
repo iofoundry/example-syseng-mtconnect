@@ -7,22 +7,27 @@ import re
 path = os.path.dirname(os.path.abspath(__file__))
 cache = f"{path}/cache"
 
+# owl.set_log_level(10)
+
 print("Loading ontologies")
 owl.onto_path.append(f"file:///{cache}")
 owl.onto_path.append(f"file:///{path}")
 
-BFO = owl.get_ontology(f"file:///{cache}/bfo.rdf").load(only_local = True)
-BFO.base_iri = "http://purl.obolibrary.org/obo/"
-Core = owl.get_ontology(f"file:///{cache}/Core.rdf").load(only_local = True)
-Core.base_iri = "https://spec.industrialontologies.org/ontology/core/Core/"
-AnnVocab = owl.get_ontology(f"file:///{cache}/AnnotationVocabulary.rdf").load(only_local = True)
-AnnVocab.base_iri = "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
-Des = owl.get_ontology(f"file:///{cache}/Designators.rdf").load(only_local = True)
-Des.base_iri = "https://www.omg.org/spec/Commons/Designators/"
-Qual = owl.get_ontology(f"file:///{cache}/IOF_Qualities.rdf").load(only_local = True)
-Qual.base_iri = "https://spec.industrialontologies.org/ontology/qualities/Qualities/"
-QualPhysical = owl.get_ontology(f"file:///{cache}/IOF_Qualities-Physical.rdf").load(only_local = True)
-QualPhysical.base_iri = "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"
+with open(f"{cache}/bfo.rdf", "rb") as f:
+  BFO = owl.get_ontology(f"http://purl.obolibrary.org/obo/bfo/2020/bfo.owl").load(only_local = True, fileobj=f)
+BFO.world.ontologies["http://purl.obolibrary.org/obo/"] = BFO
+with open(f"{cache}/AnnotationVocabulary.rdf", "rb") as f:
+  AnnVocab = owl.get_ontology("https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/").load(only_local = True, fileobj=f)
+AnnVocab.world.ontologies["https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/"] = AnnVocab
+with open(f"{cache}/Core.rdf", "rb") as f:
+  Core = owl.get_ontology("https://spec.industrialontologies.org/ontology/core/Core/").load(only_local = True, fileobj=f)
+Core.world.ontologies["https://spec.industrialontologies.org/ontology/202401/core/Core/"] = Core
+with open(f"{cache}/IOF_Qualities.rdf", "rb") as f:
+  Qual = owl.get_ontology("https://spec.industrialontologies.org/ontology/qualities/Qualities/").load(only_local = True, fileobj=f)
+with open(f"{cache}/IOF_Qualities-Physical.rdf", "rb") as f:
+  QualPhysical = owl.get_ontology("https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/").load(only_local = True, fileobj=f)
+with open(f"{cache}/Designators.rdf", "rb") as f:
+  Des = owl.get_ontology(f"https://www.omg.org/spec/Commons/Designators/").load(only_local = True, fileobj=f)
 print("done")
 
 for cls in BFO.classes():
