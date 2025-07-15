@@ -16,7 +16,7 @@ import re
 from ontologies import Example, Core
 
 _DL_SYNTAX = types.SimpleNamespace(
-    SUBCLASS="→",
+    SUBCLASS="⊑",
     EQUIVALENT_TO="↔",
     NOT="¬",
     DISJOINT_WITH="⊑" + " " + "¬",
@@ -28,13 +28,13 @@ _DL_SYNTAX = types.SimpleNamespace(
     NOT_EQUAL="≠",
     MAX="≤",
     INVERSE="⁻",
-    AND="∧",
+    AND="⊓",
     TOP="⊤",
     BOTTOM="⊥",
-    OR="∨",
+    OR="⊔",
     COMP="∘",
     WEDGE="⋀",
-    CONDITIONAL="→",
+    CONDITIONAL="⊑",
     IMPLIES="←",
     COMMA=",",
     SELF="self",
@@ -197,19 +197,19 @@ def dl_render_concept_str(concept: Union[Construct, EntityClass]) -> str:
         # MIN:
         # MAX:
         if concept.type == owlready2.base.SOME:
-            return "%s (%s %s)" % (_DL_SYNTAX.EXISTS, this(concept.property), this(concept.value))
+            return "%s (%s .%s)" % (_DL_SYNTAX.EXISTS, this(concept.property), this(concept.value))
         if concept.type == owlready2.base.ONLY:
-            return "%s (%s %s)" % (_DL_SYNTAX.FORALL, this(concept.property), this(concept.value))
+            return "%s (%s .%s)" % (_DL_SYNTAX.FORALL, this(concept.property), this(concept.value))
         if concept.type == owlready2.base.VALUE:
-            return "%s %s {%s}" % (_DL_SYNTAX.EXISTS, this(concept.property), concept.value.name if isinstance(concept.value, owl.Thing) else concept.value)
+            return "%s %s .{%s}" % (_DL_SYNTAX.EXISTS, this(concept.property), concept.value.name if isinstance(concept.value, owl.Thing) else concept.value)
         if concept.type == owlready2.base.HAS_SELF:
-            return "%s (%s %s)" % (_DL_SYNTAX.EXISTS, this(concept.property), _DL_SYNTAX.SELF)
+            return "%s (%s .%s)" % (_DL_SYNTAX.EXISTS, this(concept.property), _DL_SYNTAX.SELF)
         if concept.type == owlready2.base.EXACTLY:
-            return "%s %s %s %s" % (_DL_SYNTAX.EQUAL, concept.cardinality, this(concept.property), this(concept.value))
+            return "%s %s %s .%s" % (_DL_SYNTAX.EQUAL, concept.cardinality, this(concept.property), this(concept.value))
         if concept.type == owlready2.base.MIN:
-            return "%s %s %s %s" % (_DL_SYNTAX.MIN, concept.cardinality, this(concept.property), this(concept.value))
+            return "%s %s %s .%s" % (_DL_SYNTAX.MIN, concept.cardinality, this(concept.property), this(concept.value))
         if concept.type == owlready2.base.MAX:
-            return "%s %s %s %s" % (_DL_SYNTAX.MAX, concept.cardinality, this(concept.property), this(concept.value))
+            return "%s %s %s .%s" % (_DL_SYNTAX.MAX, concept.cardinality, this(concept.property), this(concept.value))
     if isinstance(concept, OneOf):
         return "{%s}" % (" %s " % _DL_SYNTAX.OR).join("%s" % (_.name if isinstance(_, owl.Thing) else _) for _ in concept.instances)
     if isinstance(concept, ConstrainedDatatype):

@@ -22,6 +22,26 @@ def render_header(f, title):
     <style>
 body {{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: white;
+  color: black;
+}}
+
+:root {{
+  --link-color: #1a0dab; /* light mode */
+}}
+
+@media (prefers-color-scheme: dark) {{
+  :root {{
+    --link-color: #bb86fc; /* soft purple for dark mode */
+  }}
+  body {{
+    background: black;
+    color: white;
+  }}
+}}
+
+a {{
+  color: var(--link-color);
 }}
 
 h1 {{
