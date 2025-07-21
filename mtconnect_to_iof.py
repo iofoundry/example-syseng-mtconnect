@@ -60,7 +60,7 @@ class MTConnectToIOF:
       with self.Vendor:
         design_type = f"{type_cls.name}Design"
         design = owl.types.new_class(design_type, (Core.DesignSpecification,))
-        type_cls.is_a.append(parent & Example.conformsTo.some(design))
+        type_cls.is_a.append(Example.conformsTo.some(design))
         
         for spec in specifications:
           spec_name = spec.get("type")
@@ -96,12 +96,12 @@ class MTConnectToIOF:
                 quality = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 quality.is_a.append(di_cls & Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
                     Core.hasSimpleExpressionValue.some(const)))
-                type_cls.is_a.append(parent & Core.hasQuality.only(quality))
+                type_cls.is_a.append(Core.hasQuality.only(quality))
               else:
                 profile = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 profile.is_a.append(di_cls & Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
                         Core.hasSimpleExpressionValue.some(const)))
-                type_cls.is_a.append(parent & \
+                type_cls.is_a.append( \
                         BFO.participates_in_at_some_time.only(profile))
   
   @log_indent
@@ -247,7 +247,7 @@ class MTConnectToIOF:
       with self.Vendor:
         fc = type(partic).is_a[0]
         if expr:
-          type(partic).is_a.append(fc & expr)
+          type(partic).is_a.append(expr)
           
         motion = element.find("./m:Configuration/m:Motion", self.ns)
         if motion:
@@ -255,7 +255,7 @@ class MTConnectToIOF:
           if pid:
             parent = self.motion[motion.get('parentIdRef')]
             if parent:
-              type(partic).is_a.append(fc & Example.hasKinematicParent.only(parent))
+              type(partic).is_a.append(Example.hasKinematicParent.only(parent))
           
 
         
@@ -304,7 +304,7 @@ class MTConnectToIOF:
         for part in parts:
           logger.info(f"{type_cls}: Adding subclass axiom for #{part}")
           if not part.name in Separate:
-            type_cls.is_a.append(cls & Core.hasComponentPartAtAllTimes.some(part))
+            type_cls.is_a.append(Core.hasComponentPartAtAllTimes.some(part))
 
     if type_cls:
       return [type_cls]

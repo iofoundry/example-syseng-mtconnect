@@ -52,55 +52,55 @@ h2 {
     </style>
   </head>
   <body>
-<h1 id="Object properties">Object properties</h1><h2 id="connectedTo">connectedTo</h2><ul><li class="axiom">domain: bfo:material_entity</li>
+<h1 id="Object properties">Object properties</h1><h2 id="conformsTo">conformsTo</h2><ul><li class="axiom"></li></ul>
+<h2 id="connectedTo">connectedTo</h2><ul><li class="axiom">domain: bfo:material_entity</li>
 <li class="axiom">range: bfo:material_entity</li>
 <li class="axiom">inverse: <a href='Example.html#connectedTo'>ex:connectedTo</a></li>
 <li class="axiom">Symmetric</li></ul>
-<h2 id="hasKinematicParent">hasKinematicParent</h2><ul><li class="axiom">domain: bfo:material_entity</li>
-<li class="axiom">range: bfo:material_entity</li></ul>
 <h2 id="hasKinematicChild">hasKinematicChild</h2><ul><li class="axiom">domain: bfo:material_entity</li>
 <li class="axiom">range: bfo:material_entity</li></ul>
-<h2 id="satisfiedBy">satisfiedBy</h2><ul><li class="axiom"></li></ul>
-<h2 id="conformsTo">conformsTo</h2><ul><li class="axiom"></li></ul>
+<h2 id="hasKinematicParent">hasKinematicParent</h2><ul><li class="axiom">domain: bfo:material_entity</li>
+<li class="axiom">range: bfo:material_entity</li></ul>
 <h2 id="hasUnit">hasUnit</h2><ul><li class="axiom">domain: <a href='https://spec.industrialontologies.org/ontology/core/Core/ValueExpression'>core:ValueExpression</a></li>
 <li class="axiom">range: unit:Unit</li></ul>
+<h2 id="satisfiedBy">satisfiedBy</h2><ul><li class="axiom"></li></ul>
 <h1 id="Classes">Classes</h1><h2 id="Actuator">Actuator</h2><ul><li class="axiom"><a href='Example.html#Actuator'>ex:Actuator</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
-<h2 id="MotionCapability">MotionCapability</h2><ul><li class="axiom"><a href='Example.html#MotionCapability'>ex:MotionCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul>
-<h2 id="PrismaticMotionCapability">PrismaticMotionCapability</h2><ul><li class="axiom"><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul>
-<h2 id="RevoluteMotionCapability">RevoluteMotionCapability</h2><ul><li class="axiom"><a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul>
-<h2 id="ContinuousRevoluteCapability">ContinuousRevoluteCapability</h2><ul><li class="axiom"><a href='Example.html#ContinuousRevoluteCapability'>ex:ContinuousRevoluteCapability</a> ⊑ <a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a></li></ul>
-<h2 id="MotionSystem">MotionSystem</h2><ul><li class="axiom"><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li>
-<li class="axiom"><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#Actuator'>ex:Actuator</a>)</li></ul>
-<h2 id="LinearMotionSystem">LinearMotionSystem</h2><ul><li class="axiom"><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a></li>
-<li class="axiom"><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasCapability'>core:hasCapability</a> .<a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a>)</li></ul>
-<h2 id="RotaryMotionSystem">RotaryMotionSystem</h2><ul><li class="axiom"><a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a></li>
-<li class="axiom"><a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasCapability'>core:hasCapability</a> .<a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a>)</li></ul>
-<h2 id="ControlSystem">ControlSystem</h2><ul><li class="axiom"><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
-<h2 id="Machine">Machine</h2><ul><li class="axiom"><a href='Example.html#Machine'>ex:Machine</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li>
-<li class="axiom"><a href='Example.html#Machine'>ex:Machine</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#MotionSystem'>ex:MotionSystem</a>)</li></ul>
-<h2 id="NumericallyControlledMachine">NumericallyControlledMachine</h2><ul><li class="axiom"><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ <a href='Example.html#Machine'>ex:Machine</a></li>
-<li class="axiom"><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ <a href='Example.html#Machine'>ex:Machine</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#ControlSystem'>ex:ControlSystem</a>)</li></ul>
-<h2 id="ControlSystemPath">ControlSystemPath</h2><ul><li class="axiom"><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a> ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul>
-<h2 id="Motor">Motor</h2><ul><li class="axiom"><a href='Example.html#Motor'>ex:Motor</a> ⊑ <a href='Example.html#Actuator'>ex:Actuator</a></li></ul>
 <h2 id="Ballscrew">Ballscrew</h2><ul><li class="axiom"><a href='Example.html#Ballscrew'>ex:Ballscrew</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
+<h2 id="ContinuousRevoluteCapability">ContinuousRevoluteCapability</h2><ul><li class="axiom"><a href='Example.html#ContinuousRevoluteCapability'>ex:ContinuousRevoluteCapability</a> ⊑ <a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a></li></ul>
+<h2 id="RevoluteMotionCapability">RevoluteMotionCapability</h2><ul><li class="axiom"><a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul>
+<h2 id="ControlSystem">ControlSystem</h2><ul><li class="axiom"><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
+<h2 id="ControlSystemPath">ControlSystemPath</h2><ul><li class="axiom"><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a> ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul>
 <h2 id="Door">Door</h2><ul><li class="axiom"><a href='Example.html#Door'>ex:Door</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
 <h2 id="ElectricalSystem">ElectricalSystem</h2><ul><li class="axiom"><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
-<h2 id="HydraulicSystem">HydraulicSystem</h2><ul><li class="axiom"><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
-<h2 id="PneumaticSystem">PneumaticSystem</h2><ul><li class="axiom"><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
-<h2 id="LubricationSystem">LubricationSystem</h2><ul><li class="axiom"><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
-<h2 id="Stock">Stock</h2><ul><li class="axiom"><a href='Example.html#Stock'>ex:Stock</a> ⊑ bfo:object</li></ul>
-<h2 id="ProductPart">ProductPart</h2><ul><li class="axiom"><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
-<h2 id="MillingCapability">MillingCapability</h2><ul><li class="axiom"><a href='Example.html#MillingCapability'>ex:MillingCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul>
-<h2 id="TurningCapability">TurningCapability</h2><ul><li class="axiom"><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul>
 <h2 id="Enclosure">Enclosure</h2><ul><li class="axiom"><a href='Example.html#Enclosure'>ex:Enclosure</a> ⊑ bfo:site</li></ul>
-<h2 id="Structure">Structure</h2><ul><li class="axiom"><a href='Example.html#Structure'>ex:Structure</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
-<h2 id="Room">Room</h2><ul><li class="axiom"><a href='Example.html#Room'>ex:Room</a> ⊑ bfo:object</li></ul>
-<h2 id="Sensor">Sensor</h2><ul><li class="axiom"><a href='Example.html#Sensor'>ex:Sensor</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
-<h2 id="ProcessProfile">ProcessProfile</h2><ul><li class="axiom"><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a> ⊑ bfo:process</li></ul>
-<h2 id="Velocity">Velocity</h2><ul><li class="axiom"><a href='Example.html#Velocity'>ex:Velocity</a> ⊑ <a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></li></ul>
-<h2 id="RevoluteVelocity">RevoluteVelocity</h2><ul><li class="axiom"><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul>
-<h2 id="PrismaticVelocity">PrismaticVelocity</h2><ul><li class="axiom"><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul>
+<h2 id="HydraulicSystem">HydraulicSystem</h2><ul><li class="axiom"><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
+<h2 id="LinearMotionSystem">LinearMotionSystem</h2><ul><li class="axiom"><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a></li>
+<li class="axiom"><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasCapability'>core:hasCapability</a> .<a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a>)</li></ul>
+<h2 id="MotionSystem">MotionSystem</h2><ul><li class="axiom"><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li>
+<li class="axiom"><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#Actuator'>ex:Actuator</a>)</li></ul>
+<h2 id="PrismaticMotionCapability">PrismaticMotionCapability</h2><ul><li class="axiom"><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul>
+<h2 id="LubricationSystem">LubricationSystem</h2><ul><li class="axiom"><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
+<h2 id="Machine">Machine</h2><ul><li class="axiom"><a href='Example.html#Machine'>ex:Machine</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li>
+<li class="axiom"><a href='Example.html#Machine'>ex:Machine</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#MotionSystem'>ex:MotionSystem</a>)</li></ul>
+<h2 id="MillingCapability">MillingCapability</h2><ul><li class="axiom"><a href='Example.html#MillingCapability'>ex:MillingCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul>
+<h2 id="MotionCapability">MotionCapability</h2><ul><li class="axiom"><a href='Example.html#MotionCapability'>ex:MotionCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul>
+<h2 id="Motor">Motor</h2><ul><li class="axiom"><a href='Example.html#Motor'>ex:Motor</a> ⊑ <a href='Example.html#Actuator'>ex:Actuator</a></li></ul>
+<h2 id="NumericallyControlledMachine">NumericallyControlledMachine</h2><ul><li class="axiom"><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ <a href='Example.html#Machine'>ex:Machine</a></li>
+<li class="axiom"><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ <a href='Example.html#Machine'>ex:Machine</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#ControlSystem'>ex:ControlSystem</a>)</li></ul>
+<h2 id="PneumaticSystem">PneumaticSystem</h2><ul><li class="axiom"><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul>
 <h2 id="PrismaticRapidVelocity">PrismaticRapidVelocity</h2><ul><li class="axiom"><a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li></ul>
+<h2 id="PrismaticVelocity">PrismaticVelocity</h2><ul><li class="axiom"><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul>
+<h2 id="Velocity">Velocity</h2><ul><li class="axiom"><a href='Example.html#Velocity'>ex:Velocity</a> ⊑ <a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></li></ul>
+<h2 id="ProcessProfile">ProcessProfile</h2><ul><li class="axiom"><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a> ⊑ bfo:process</li></ul>
+<h2 id="ProductPart">ProductPart</h2><ul><li class="axiom"><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
+<h2 id="RevoluteVelocity">RevoluteVelocity</h2><ul><li class="axiom"><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul>
+<h2 id="Room">Room</h2><ul><li class="axiom"><a href='Example.html#Room'>ex:Room</a> ⊑ bfo:object</li></ul>
+<h2 id="RotaryMotionSystem">RotaryMotionSystem</h2><ul><li class="axiom"><a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a></li>
+<li class="axiom"><a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasCapability'>core:hasCapability</a> .<a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a>)</li></ul>
+<h2 id="Sensor">Sensor</h2><ul><li class="axiom"><a href='Example.html#Sensor'>ex:Sensor</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
+<h2 id="Stock">Stock</h2><ul><li class="axiom"><a href='Example.html#Stock'>ex:Stock</a> ⊑ bfo:object</li></ul>
+<h2 id="Structure">Structure</h2><ul><li class="axiom"><a href='Example.html#Structure'>ex:Structure</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul>
 <h2 id="TranslationalVelocity">TranslationalVelocity</h2><ul><li class="axiom"><a href='Example.html#TranslationalVelocity'>ex:TranslationalVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul>
+<h2 id="TurningCapability">TurningCapability</h2><ul><li class="axiom"><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul>
   </body>
 </html>

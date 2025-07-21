@@ -19,268 +19,136 @@
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800i">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/NumericallyControlledMachine"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iauxiliariesenvironmental"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iauxiliariesenvironmental"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800icontroller"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800icontroller"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800idoor"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800idoor"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTABLE"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTABLE"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ipartspartocc"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ipartspartocc"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iresourcesmaterialsstock"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iresourcesmaterialsstock"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemscoolant"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemscoolant"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemselectric"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemselectric"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemshydraulic"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemshydraulic"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemslubrication"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemslubrication"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemspneumatic"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemspneumatic"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i</rdfs:label>
 	</owl:Class>
@@ -295,58 +163,34 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
-							</owl:Restriction>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBAngle"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBDesign"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBAngle"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBBmotor"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBDesign"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBBmotor"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base B</rdfs:label>
 	</owl:Class>
@@ -402,64 +246,34 @@
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC1">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Rotary_velocity"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Rotary_velocity"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Design"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Design"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Cmotor"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Cmotor"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base C1</rdfs:label>
 	</owl:Class>
@@ -514,70 +328,40 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
-							</owl:Restriction>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTABLE"/>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTABLE"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2Angle"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2Design"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2Angle"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2C2motor"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2Design"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2C2motor"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base C2</rdfs:label>
 	</owl:Class>
@@ -635,94 +419,52 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
-							</owl:Restriction>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXLength"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXVelocityProgrammed"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXLength"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXVelocityRapid"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXVelocityProgrammed"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXDesign"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXVelocityRapid"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXXballscrew"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXDesign"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXXmotor"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXXballscrew"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXXmotor"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base X</rdfs:label>
 	</owl:Class>
@@ -863,106 +605,58 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
-							</owl:Restriction>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYLength"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYVelocityProgrammed"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYLength"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYVelocityRapid"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYVelocityProgrammed"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYDesign"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYVelocityRapid"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYYballscrew"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYDesign"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYYmotor"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYYballscrew"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYYmotor"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Y</rdfs:label>
 	</owl:Class>
@@ -1103,106 +797,58 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
-							</owl:Restriction>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
-								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZLength"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZVelocityProgrammed"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZLength"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZVelocityRapid"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZVelocityProgrammed"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZDesign"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZVelocityRapid"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZZballscrew"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZDesign"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZZmotor"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZZballscrew"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZZmotor"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Z</rdfs:label>
 	</owl:Class>
@@ -1341,16 +987,10 @@
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800icontroller">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystem"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/ControlSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800icontrollerpath"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800icontrollerpath"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i controller</rdfs:label>
 	</owl:Class>
