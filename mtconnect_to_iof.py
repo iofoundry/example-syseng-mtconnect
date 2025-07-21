@@ -20,6 +20,7 @@ class MTConnectToIOF:
     ns = self.root.tag[1:].split('}')[0]
     self.ns = {'m': ns }
     self.particulars = dict()
+    self.motion = dict()
     
   @log_indent
   def convert(self):
@@ -210,9 +211,10 @@ class MTConnectToIOF:
 
       ds = self._create_particular_specifications(element, partic, name)
       key = type
-      motion = list(element.findall("./m:Configuration/m:Motion", self.ns))
+      motion = element.find("./m:Configuration/m:Motion", self.ns)
       if motion:
-        key = motion[0].get("type", type)
+        key = motion.get("type", type)
+        self.motion[motion.get('id')] = type_cls
         
       self._add_capability(partic, key, ds)      
       #if type in Roles:
@@ -225,12 +227,38 @@ class MTConnectToIOF:
     partic = self.particulars.get(element.get('id'))
     
     if partic:
-      with Data:
-        logger.info(f"Adding relationships for {partic}")
-        rels = element.findall("./m:Configuration/m:Relationships/m:ComponentRelationship", self.ns)
-        for rel in rels:
-          target = self.particulars[rel.get('idRef')]
+      expr = None        
+      logger.info(f"Adding relationships for {partic}")
+      rels = element.findall("./m:Configuration/m:Relationships/m:ComponentRelationship", self.ns)
+      for rel in rels:
+        rel_type = rel.get("type", "PEER")
+        target = self.particulars[rel.get('idRef')]
+        logger.info(f"  Adding {rel_type} relationship to {target}")
+        with Data:
           partic.connectedTo.append(target)
+        
+        with self.Vendor:
+          e = Example.connectedTo.some(type(target))
+          if expr:
+            expr = expr & e
+          else:
+            expr = e
+      
+      with self.Vendor:
+        fc = type(partic).is_a[0]
+        if expr:
+          type(partic).is_a.append(fc & expr)
+          
+        motion = element.find("./m:Configuration/m:Motion", self.ns)
+        if motion:
+          pid = motion.get('parentIdRef')
+          if pid:
+            parent = self.motion[motion.get('parentIdRef')]
+            if parent:
+              type(partic).is_a.append(fc & Example.hasKinematicParent.only(parent))
+          
+
+        
         
     for component in element.findall("./m:Components/*", self.ns):
       self._add_relationships(component)

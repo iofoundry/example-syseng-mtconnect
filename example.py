@@ -149,6 +149,17 @@ with Example:
       domain = [BFO.material_entity]
       range = [BFO.material_entity]
       label = owl.locstr("connected to", "en")
+      
+  class hasKinematicParent(owl.ObjectProperty):
+      domain = [BFO.material_entity]
+      range = [BFO.material_entity]
+      label = owl.locstr("has kinematic parent", "en")
+
+  class hasKinematicChild(owl.ObjectProperty):
+      domain = [BFO.material_entity]
+      range = [BFO.material_entity]
+      label = owl.locstr("has kinematic child", "en")
+      inverse_of = hasKinematicParent
 
   class satisfiedBy(owl.ObjectProperty):
     """An object property for linking a capability to a system that satisfies it."""

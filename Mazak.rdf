@@ -297,6 +297,26 @@
 				<owl:intersectionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
 					</rdf:Description>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
+					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
 						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBAngle"/>
@@ -399,8 +419,32 @@
 					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
 					</rdf:Description>
 					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
 						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
 						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Design"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -467,6 +511,38 @@
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC2">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
+					</rdf:Description>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTABLE"/>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -556,6 +632,26 @@
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseX">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -769,6 +865,38 @@
 				<owl:intersectionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
 					</rdf:Description>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
 						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYLength"/>
@@ -972,6 +1100,38 @@
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZ">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+								<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
+							</owl:Restriction>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+						<owl:allValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">

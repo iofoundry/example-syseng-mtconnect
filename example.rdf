@@ -16,7 +16,7 @@
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"/>
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/"/>
-		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators/"/>
+		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators"/>
 	</owl:Ontology>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Actuator">
@@ -251,6 +251,18 @@
 	<owl:ObjectProperty rdf:about="http://example.org/ontology/connectedTo">
 		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">connected to</rdfs:label>
+		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+		<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="http://example.org/ontology/hasKinematicChild">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">has kinematic child</rdfs:label>
+		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+		<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="http://example.org/ontology/hasKinematicParent">
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">has kinematic parent</rdfs:label>
 		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 	</owl:ObjectProperty>
