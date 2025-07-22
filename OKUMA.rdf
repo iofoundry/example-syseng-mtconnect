@@ -19,349 +19,235 @@
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/NumericallyControlledMachine"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesB"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesB"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC2"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC2"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC3"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC3"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC6"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC6"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesX"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesX"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesY"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesY"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Controller"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Controller"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000LAux1BarFeederSystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000LAux1BarFeederSystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000LAux1LoaderSystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000LAux1LoaderSystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000LAux1ToolingDeliverySystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000LAux1ToolingDeliverySystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000LAux1WasteDisposalSystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000LAux1WasteDisposalSystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1CoolantSystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1CoolantSystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1ElectricSystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1ElectricSystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1HydraulicSystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1HydraulicSystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1LubricationSystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1LubricationSystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1PneumaticSystem1"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1PneumaticSystem1"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000enclosure"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000enclosure"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structb_axis"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structb_axis"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structc1_axis"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structc1_axis"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structc2_axis"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structc2_axis"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structx_axis"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structx_axis"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structy_axis"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structy_axis"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz1_axis"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz1_axis"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/NumericallyControlledMachine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz4_axis"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz4_axis"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesB">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structy_axis"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structb_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes B</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesC1">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000enclosure"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes C1</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesC2">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz4_axis"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structc2_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes C2</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesC3">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz4_axis"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structc2_axis"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes C3</rdfs:label>
 	</owl:Class>
 	
@@ -375,50 +261,46 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLength"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz1_axis"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structx_axis"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXVelocityProgrammed"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLength"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXVelocityRapid"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLinear_force"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXDesign"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXVelocityProgrammed"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXVelocityRapid"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXDesign"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes X</rdfs:label>
 	</owl:Class>
@@ -452,6 +334,42 @@
 													</rdf:Description>
 													<rdf:Description>
 														<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLinear_force">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">5200.0</xsd:maxInclusive>
 													</rdf:Description>
 												</owl:withRestrictions>
 											</rdfs:Datatype>
@@ -549,50 +467,46 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLength"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structx_axis"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structy_axis"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYVelocityProgrammed"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLength"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYVelocityRapid"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLinear_force"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYDesign"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYVelocityProgrammed"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYVelocityRapid"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYDesign"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Y</rdfs:label>
 	</owl:Class>
@@ -626,6 +540,42 @@
 													</rdf:Description>
 													<rdf:Description>
 														<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLinear_force">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">5200.0</xsd:maxInclusive>
 													</rdf:Description>
 												</owl:withRestrictions>
 											</rdfs:Datatype>
@@ -723,50 +673,46 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Length"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000enclosure"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz1_axis"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1VelocityProgrammed"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Length"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1VelocityRapid"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Linear_force"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Design"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1VelocityProgrammed"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1VelocityRapid"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Design"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Z1</rdfs:label>
 	</owl:Class>
@@ -800,6 +746,42 @@
 													</rdf:Description>
 													<rdf:Description>
 														<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Linear_force">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">5200.0</xsd:maxInclusive>
 													</rdf:Description>
 												</owl:withRestrictions>
 											</rdfs:Datatype>
@@ -897,50 +879,46 @@
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Length"/>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000enclosure"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz4_axis"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4VelocityProgrammed"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Length"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-						<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4VelocityRapid"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Linear_force"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/LinearMotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Design"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4VelocityProgrammed"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4VelocityRapid"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Design"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Z4</rdfs:label>
 	</owl:Class>
@@ -974,6 +952,42 @@
 													</rdf:Description>
 													<rdf:Description>
 														<xsd:minInclusive rdf:datatype="&xsd;decimal">650.0</xsd:minInclusive>
+													</rdf:Description>
+												</owl:withRestrictions>
+											</rdfs:Datatype>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Linear_force">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue"/>
+										<owl:someValuesFrom>
+											<rdfs:Datatype>
+												<owl:onDatatype rdf:resource="&xsd;decimal"/>
+												<owl:withRestrictions rdf:parseType="Collection">
+													<rdf:Description>
+														<xsd:maxInclusive rdf:datatype="&xsd;decimal">5200.0</xsd:maxInclusive>
 													</rdf:Description>
 												</owl:withRestrictions>
 											</rdfs:Datatype>
@@ -1069,16 +1083,10 @@
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000Controller">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystem"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/ControlSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Controllerpath"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Controllerpath"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Controller</rdfs:label>
 	</owl:Class>
