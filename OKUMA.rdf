@@ -274,32 +274,32 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLength"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLinear_force"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXVelocityProgrammed"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXVelocityRapid"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXDesign"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXDesign"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXVelocityProgrammed"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXVelocityRapid"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLength"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLinear_force"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes X</rdfs:label>
@@ -480,32 +480,32 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLength"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLinear_force"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYVelocityProgrammed"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYVelocityRapid"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYDesign"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYDesign"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYVelocityProgrammed"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYVelocityRapid"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLength"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLinear_force"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Y</rdfs:label>
@@ -686,32 +686,32 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Length"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Linear_force"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1VelocityProgrammed"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1VelocityRapid"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Design"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Design"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1VelocityProgrammed"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1VelocityRapid"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Length"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Linear_force"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Z1</rdfs:label>
@@ -892,32 +892,32 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Length"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Linear_force"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4VelocityProgrammed"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
-				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4VelocityRapid"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://example.org/ontology/conformsTo"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Design"/>
+				<owl:allValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Design"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4VelocityProgrammed"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4VelocityRapid"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Length"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Linear_force"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Z4</rdfs:label>

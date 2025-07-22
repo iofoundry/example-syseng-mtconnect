@@ -132,7 +132,7 @@ class MTConnectToIOF:
       with self.Vendor:
         design_type = f"{type_cls.name}Design"
         design = owl.types.new_class(design_type, (Core.DesignSpecification,))
-        type_cls.is_a.append(Example.conformsTo.some(design))
+        type_cls.is_a.append(Example.conformsTo.only(design))
         
         for spec in specifications:
           spec_name = spec.get("type")
@@ -168,12 +168,12 @@ class MTConnectToIOF:
                 quality = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 quality.is_a.append(di_cls & Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
                     Core.hasSimpleExpressionValue.some(const)))
-                type_cls.is_a.append(Core.hasQuality.only(quality))
+                type_cls.is_a.append(Core.hasQuality.some(quality))
               else:
                 profile = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 profile.is_a.append(di_cls & Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
                         Core.hasSimpleExpressionValue.some(const)))
-                type_cls.is_a.append(BFO.participates_in_at_some_time.only(profile))
+                type_cls.is_a.append(BFO.participates_in_at_some_time.some(profile))
   
   @log_indent
   def _create_particular_specifications(self, element, partic, name):
@@ -326,7 +326,7 @@ class MTConnectToIOF:
           if pid:
             parent = self.motion[motion.get('parentIdRef')]
             if parent:
-              type(partic).is_a.append(Example.hasKinematicParent.only(parent))
+              type(partic).is_a.append(Example.hasKinematicParent.some(parent))
 
     for component in element.findall("./m:Components/*", self.ns):
       self._add_relationships(component)
