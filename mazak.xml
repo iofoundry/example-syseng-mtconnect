@@ -103,17 +103,13 @@
                   <Specification id="spec001" type="LENGTH" units="MILLIMETER">
                     <Nominal>650</Nominal>
                   </Specification>
-                  <Specification id="spec002" type="LINEAR_FORCE" units="NEWTON">
-                    <Maximum>5200</Maximum>
-                    <Minimum>0</Minimum>
-                  </Specification>
                   <Specification id="spec003" subType="RAPID" type="VELOCITY" units="MILLIMETER/SECOND">
                     <Maximum>7000</Maximum>
-                    <Minimum>1</Minimum>
+                    <Minimum>0</Minimum>
                   </Specification>
                   <Specification id="spec004" subType="PROGRAMMED" type="VELOCITY" units="MILLIMETER/SECOND">
                     <Maximum>7000</Maximum>
-                    <Minimum>1</Minimum>
+                    <Minimum>0</Minimum>
                   </Specification>
                 </Specifications>
               </Configuration>
@@ -136,7 +132,16 @@
               </DataItems>
               <Compositions>
                 <Composition id="Xballscrew" type="BALLSCREW"/>
-                <Composition id="Xmotor" type="MOTOR"/>
+                <Composition id="Xmotor" type="MOTOR">
+                  <Configuration>
+                      <Specifications>
+                        <Specification id="XlinearForce" type="LINEAR_FORCE" units="NEWTON">
+                          <Maximum>5200</Maximum>
+                          <Minimum>0</Minimum>
+                        </Specification>
+                    </Specifications>
+                  </Configuration>
+                </Composition>
               </Compositions>
             </Linear>
             <Linear id="y" name="Y" nativeName="Y">
@@ -156,17 +161,13 @@
                   <Specification id="spec007" type="LENGTH" units="MILLIMETER">
                     <Nominal>550</Nominal>
                   </Specification>
-                  <Specification id="spec008" type="LINEAR_FORCE" units="NEWTON">
-                    <Maximum>5200</Maximum>
-                    <Minimum>0</Minimum>
-                  </Specification>
                   <Specification id="spec009" subType="RAPID" type="VELOCITY" units="MILLIMETER/SECOND">
                     <Maximum>7000</Maximum>
-                    <Minimum>1</Minimum>
+                    <Minimum>0</Minimum>
                   </Specification>
                   <Specification id="spec010" subType="PROGRAMMED" type="VELOCITY" units="MILLIMETER/SECOND">
                     <Maximum>7000</Maximum>
-                    <Minimum>1</Minimum>
+                    <Minimum>0</Minimum>
                   </Specification>
                 </Specifications>
               </Configuration>
@@ -189,7 +190,16 @@
               </DataItems>
               <Compositions>
                 <Composition id="Yballscrew" type="BALLSCREW"/>
-                <Composition id="Ymotor" type="MOTOR"/>
+                <Composition id="Ymotor" type="MOTOR">
+                  <Configuration>
+                    <Specifications>
+                      <Specification id="XlinearForce" type="LINEAR_FORCE" units="NEWTON">
+                        <Maximum>5200</Maximum>
+                        <Minimum>0</Minimum>
+                      </Specification>
+                    </Specifications>
+                  </Configuration>
+                </Composition>
               </Compositions>
             </Linear>
             <Linear id="z" name="Z" nativeName="Z">
@@ -209,17 +219,13 @@
                   <Specification id="spec013" type="LENGTH" units="MILLIMETER">
                     <Nominal>530</Nominal>
                   </Specification>
-                  <Specification id="spec014" type="LINEAR_FORCE" units="NEWTON">
-                    <Maximum>9600</Maximum>
-                    <Minimum>0</Minimum>
-                  </Specification>
                   <Specification id="spec015" subType="RAPID" type="VELOCITY" units="MILLIMETER/SECOND">
                     <Maximum>7000</Maximum>
-                    <Minimum>1</Minimum>
+                    <Minimum>0</Minimum>
                   </Specification>
                   <Specification id="spec016" subType="PROGRAMMED" type="VELOCITY" units="MILLIMETER/SECOND">
                     <Maximum>7000</Maximum>
-                    <Minimum>1</Minimum>
+                    <Minimum>0</Minimum>
                   </Specification>
                 </Specifications>
               </Configuration>
@@ -242,7 +248,16 @@
               </DataItems>
               <Compositions>
                 <Composition id="Zballscrew" type="BALLSCREW"/>
-                <Composition id="Zmotor" type="MOTOR"/>
+                <Composition id="Zmotor" type="MOTOR">
+                  <Configuration>
+                    <Specifications>
+                      <Specification id="XlinearForce" type="LINEAR_FORCE" units="NEWTON">
+                        <Maximum>9600</Maximum>
+                        <Minimum>0</Minimum>
+                      </Specification>
+                    </Specifications>
+                  </Configuration>
+                </Composition>                
               </Compositions>
             </Linear>
             <Rotary id="c" name="C1" nativeName="S">

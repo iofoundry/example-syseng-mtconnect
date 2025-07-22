@@ -7,6 +7,77 @@ from indented_logger import setup_logging, increase_indent, decrease_indent
 from indented_logger.decorator import log_indent
 import logging
 from ontologies import *
+import builtins
+
+Units = {
+  'NEWTON': QUDT.N,
+  'NEWTON_METER': QUDT.N_M,
+  'MILLIMETER': QUDT.MilliM,
+  'DEGREE': QUDT.DEG,
+  'MILLIMETER/SECOND': QUDT.MilliM_PER_SEC,
+  'REVOLUTION/MINUTE': QUDT.RPM
+}
+
+Components = {
+  'Linear': Example.LinearMotionSystem,
+  'Rotary': Example.RotaryMotionSystem,
+  'Device': Example.NumericallyControlledMachine,
+  'Controller': Example.ControlSystem,
+  'Path': Example.ControlSystemPath,
+  'Composition': BFO.object,
+  'MOTOR': Example.Motor,
+  'BALLSCREW': Example.Ballscrew,
+  'Electric': Example.ElectricalSystem,
+  'Hydraulic': Example.HydraulicSystem,
+  'Pneumatic': Example.PneumaticSystem,
+  'Lubrication': Example.LubricationSystem,
+  'Stock': Example.Stock,
+  'Personnel': Example.Personnel,
+  'PartOccurrence': Example.ProductPart,
+  'Link': Example.Structure,
+  'Enclosure': Example.Structure,
+  'Environmental': Example.Room,
+  
+  'Axes': False,
+  'Systems': False,
+  'Parts': False,
+  'Auxiliaries': False,
+  'Resources': False,
+  'Structures': False,
+  'Materials': False
+}
+
+Functions = {
+  'Device': Example.MillingCapability,
+  'PRISMATIC': Example.PrismaticMotionCapability,
+  'REVOLUTE': Example.RevoluteMotionCapability,
+  'CONTINUOUS': Example.ContinuousRevoluteCapability
+}
+
+Capabilities = {
+  'Device': Example.TurningCapability
+}
+
+DataItems = {
+  'TEMPERATURE': QualPhysical.Temperature,
+  'POSITION': QualPhysical.Displacement,
+  'LENGTH': QualPhysical.Length,
+  'ANGLE': QualPhysical.Angle,
+  'VELOCITY': Example.PrismaticVelocity,
+  'VELOCITY_PROGRAMMED': Example.PrismaticVelocity,
+  'VELOCITY_RAPID': Example.PrismaticRapidVelocity,
+  'ROTARY_VELOCITY': Example.RevoluteVelocity,
+  'PATH_FEED_RATE': Example.TranslationalVelocity,
+  'LINEAR_FORCE': QualPhysical.Force
+}
+
+Roles = {
+  'Device': Core.EquipmentRole
+}
+
+Separate = {
+  'Room'
+}
 
 setup_logging(level = logging.DEBUG, indent_spaces=2, include_func=True, no_datetime=True)
 logger = logging.getLogger(__name__)
@@ -21,6 +92,7 @@ class MTConnectToIOF:
     self.ns = {'m': ns }
     self.particulars = dict()
     self.motion = dict()
+    self.types = dict()
     
   @log_indent
   def convert(self):
@@ -101,8 +173,7 @@ class MTConnectToIOF:
                 profile = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 profile.is_a.append(di_cls & Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
                         Core.hasSimpleExpressionValue.some(const)))
-                type_cls.is_a.append( \
-                        BFO.participates_in_at_some_time.only(profile))
+                type_cls.is_a.append(BFO.participates_in_at_some_time.only(profile))
   
   @log_indent
   def _create_particular_specifications(self, element, partic, name):
@@ -256,13 +327,19 @@ class MTConnectToIOF:
             parent = self.motion[motion.get('parentIdRef')]
             if parent:
               type(partic).is_a.append(Example.hasKinematicParent.only(parent))
-          
 
-        
-        
     for component in element.findall("./m:Components/*", self.ns):
       self._add_relationships(component)
     
+  @log_indent
+  def _specification_name(self, element):
+    specifications = element.findall("./m:Configuration/m:Specifications/*", self.ns)
+    np = []
+    if specifications:
+      for spec in specifications:
+        np.append(spec.get('type'))
+        np.extend([_.text for _ in spec if _.text != '0'])
+    return '_'.join(np)
               
   @log_indent
   def _add_component(self, element, names = [], parent = None):
@@ -283,14 +360,27 @@ class MTConnectToIOF:
     parts = []
     logger.info(f"{type} {id} {name} {uuid}: {cls}")
     if cls:
-      type_name = "".join(names)      
+      # Special handling for linear motors
+      save = False
+      if cls == Example.Motor and issubclass(builtins.type(parent), Example.LinearMotionSystem):
+        type_name = "".join(names[0:2]) + 'LinearMotor' + self._specification_name(element)
+      else:
+        type_name = "".join(names)      
+        
+      created = False
       with self.Vendor:
-        type_cls = owl.types.new_class(type_name, (cls,))
-        type_cls.label = owl.locstr(' '.join(names), "en")
-      
-      logger.info(f"Created {type_name} {type_cls.iri}")
+        type_cls = self.types.get(type_name)
+        if not type_cls:
+          type_cls = owl.types.new_class(type_name, (cls,))
+          type_cls.label = owl.locstr(' '.join(names), "en")
+          self.types[type_name] = type_cls
+          created = True
+          logger.info(f"Created {type_name} {type_cls.iri}")
+        else:
+          logger.info(f"Using existing {type_name} {type_cls.iri}")          
 
-      self._translate_class_specifications(element, type_cls, cls)      
+      if created:
+        self._translate_class_specifications(element, type_cls, cls)      
       parent = self._create_particular(element, type_cls, type, names, parent)
       for composition in element.findall("./m:Compositions/*", self.ns):
         parts.extend(self._add_component(composition, names.copy(), parent))

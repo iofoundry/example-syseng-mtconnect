@@ -27,12 +27,19 @@ title Mazak317641baseYYmotor
                       "cmns-dsg":"3A0519",
                       "qp":"641B2E"
       }
-individual(o0, data:[[./Mazak317641baseYYmotor.html Mazak317641baseYYmotor]], vendor:[[../Mazak.html#Mazak800ibaseYYmotor Mazak800ibaseYYmotor]])
-individual(o1, data:Mazak317641baseYTEMPERATURE, qualphys:Temperature)
-individual(o2, data:name12, des:Name)
-individual(o3, data:[[./Mazak317641baseY.html Mazak317641baseY]], vendor:[[../Mazak.html#Mazak800ibaseY Mazak800ibaseY]])
-property(o0, "core:hasQuality", o1)
-property(o0, "des:hasName", o2)
-data(o2, "des:hasTextualName", "Ymotor")
-property(o3, "core:hasComponentPartAtAllTimes", o0)
+individual(o0, data:[[./Mazak317641baseYYmotor.html Mazak317641baseYYmotor]], vendor:[[../Mazak.html#Mazak800iLinearMotorLINEAR_FORCE_5200 Mazak800iLinearMotorLINEAR_FORCE_5200]])
+individual(o1, data:mazak800ilinearmotorlinear_force_5200design2, vendor:[[../Mazak.html#Mazak800iLinearMotorLINEAR_FORCE_5200Design Mazak800iLinearMotorLINEAR_FORCE_5200Design]])
+individual(o2, data:Mazak317641baseYYmotorLinear_forceMaximum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
+individual(o3, data:Mazak317641baseYYmotorLinear_forceMinimum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
+individual(o4, data:Mazak317641baseYTEMPERATURE, qualphys:Temperature)
+individual(o5, data:name12, des:Name)
+individual(o6, data:[[./Mazak317641baseY.html Mazak317641baseY]], vendor:[[../Mazak.html#Mazak800ibaseY Mazak800ibaseY]])
+property(o0, "core:prescribedBy", o1)
+data(o1, "rdfs:label", "Mazak800iLinearMotorLINEAR_FORCE_5200Design particular")
+property(o1, "core:hasValueExpressionAtAllTimes", o2)
+property(o1, "core:hasValueExpressionAtAllTimes", o3)
+property(o0, "core:hasQuality", o4)
+property(o0, "des:hasName", o5)
+data(o5, "des:hasTextualName", "Ymotor")
+property(o6, "core:hasComponentPartAtAllTimes", o0)
 @enduml
