@@ -275,10 +275,10 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXXmotor">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iLinearMotorLINEAR_FORCE_5200"/>
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base X Xmotor particular</rdfs:label>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseXTEMPERATURE"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ilinearmotorlinear_force_5200design1"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800imotorlinear_force5200design1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name9"/>
 	</owl:NamedIndividual>
 	
@@ -357,10 +357,10 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYYmotor">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iLinearMotorLINEAR_FORCE_5200"/>
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Y Ymotor particular</rdfs:label>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseYTEMPERATURE"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ilinearmotorlinear_force_5200design2"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800imotorlinear_force5200design2"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name12"/>
 	</owl:NamedIndividual>
 	
@@ -439,10 +439,10 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZZmotor">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iLinearMotorLINEAR_FORCE_9600"/>
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE9600"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Z Zmotor particular</rdfs:label>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseZTEMPERATURE"/>
-		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ilinearmotorlinear_force_9600design1"/>
+		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800imotorlinear_force9600design1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name15"/>
 	</owl:NamedIndividual>
 	
@@ -620,23 +620,23 @@
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ilinearmotorlinear_force_5200design1">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iLinearMotorLINEAR_FORCE_5200Design"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iLinearMotorLINEAR_FORCE_5200Design particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800imotorlinear_force5200design1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200Design"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iMotorLINEAR_FORCE5200Design particular</rdfs:label>
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXmotorLinear_forceMaximum"/>
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXmotorLinear_forceMinimum"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ilinearmotorlinear_force_5200design2">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iLinearMotorLINEAR_FORCE_5200Design"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iLinearMotorLINEAR_FORCE_5200Design particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800imotorlinear_force5200design2">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200Design"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iMotorLINEAR_FORCE5200Design particular</rdfs:label>
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYmotorLinear_forceMaximum"/>
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYmotorLinear_forceMinimum"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ilinearmotorlinear_force_9600design1">
-		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iLinearMotorLINEAR_FORCE_9600Design"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iLinearMotorLINEAR_FORCE_9600Design particular</rdfs:label>
+	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800imotorlinear_force9600design1">
+		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE9600Design"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iMotorLINEAR_FORCE9600Design particular</rdfs:label>
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZmotorLinear_forceMaximum"/>
 		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZmotorLinear_forceMinimum"/>
 	</owl:NamedIndividual>

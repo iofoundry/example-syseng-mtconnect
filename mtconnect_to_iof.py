@@ -339,7 +339,7 @@ class MTConnectToIOF:
       for spec in specifications:
         np.append(spec.get('type'))
         np.extend([_.text for _ in spec if _.text != '0'])
-    return '_'.join(np)
+    return np
               
   @log_indent
   def _add_component(self, element, names = [], parent = None):
@@ -362,8 +362,12 @@ class MTConnectToIOF:
     if cls:
       # Special handling for linear motors
       save = False
+      label_names = names
       if cls == Example.Motor and issubclass(builtins.type(parent), Example.LinearMotionSystem):
-        type_name = "".join(names[0:2]) + 'LinearMotor' + self._specification_name(element)
+        label_names = names[0:2]
+        label_names.append('Motor')
+        label_names.extend(self._specification_name(element))
+        type_name = "".join(label_names)
       else:
         type_name = "".join(names)      
         
@@ -372,7 +376,7 @@ class MTConnectToIOF:
         type_cls = self.types.get(type_name)
         if not type_cls:
           type_cls = owl.types.new_class(type_name, (cls,))
-          type_cls.label = owl.locstr(' '.join(names), "en")
+          type_cls.label = owl.locstr(' '.join(label_names), "en")
           self.types[type_name] = type_cls
           created = True
           logger.info(f"Created {type_name} {type_cls.iri}")
