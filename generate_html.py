@@ -1,13 +1,31 @@
 from iof_render import dl_render_class, dl_render_terminology
+import treelib as tl
+
+
+def _render_tree(tree, node = None, level = 0):
+  s = []
+  node = tree[tree.root] if (node is None) else node
+  div = f"""<div id="{node.identifier.split('.')[1]}">"""
+  indent = '  ' * level
+  s.append(f"{indent}{div}\n{indent}  <details open><summary>{node.tag}</summary>\n")
+  if node.data:
+    axioms = "".join([f"""<li>{_}</li>""" for _ in node.data])
+    s.append(f"""{indent}    <div class="axiom"><details><summary>Axioms</summary><ul>{axioms}</ul></details></div>\n""")
+  for child in tree.children(node.identifier):
+    s.extend(_render_tree(tree, child, level + 2))
+  s.append(f"{indent}  </details>\n{indent}</div>\n")
+  return s
 
 def _render_ontology(items, level = 1) -> str:
   s = ''
   if isinstance(items, dict):
-    s = "\n".join([f"<h{level} id=\"{k}\">" + k + f"</h{level}>" + _render_ontology(v, level + 1) for k, v in items.items()])
+    s = "\n".join([f"<h{level} id=\"{k}\">" + k + f"</h{level}>\n" + _render_ontology(v, level + 1) for k, v in items.items()])
   elif isinstance(items, list):
     s = '<ul><li class="axiom">' + \
       "</li>\n<li class=\"axiom\">".join(items) +  \
       '</li></ul>'
+  elif isinstance(items, tl.Tree):
+    s = f"""<div class="tree">{''.join(_render_tree(items))}</div>"""
   else:
     s = items
   return s
@@ -32,7 +50,7 @@ body {{
 
 @media (prefers-color-scheme: dark) {{
   :root {{
-    --link-color: #bb86fc; /* soft purple for dark mode */
+    --link-color: #d8b8ff; /* soft purple for dark mode */
   }}
   body {{
     background: black;
@@ -56,7 +74,19 @@ h2 {{
   font-size: 1.25em;
 }}
 
-.axiom {{
+div.tree div {{
+  margin-left: 1.5em;
+}}
+
+div.tree div.axiom {{
+  margin-left: 2.5em;
+}}
+
+div.axiom ul {{
+  margin: 0;
+}}
+
+div.axiom ul li {{
   font-family: 'Fira Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
   font-size: 1em;
 }}
@@ -98,14 +128,9 @@ def render_vendor(name, ontology, entities):
     for e in entities:
         f.write(f"      <li><a href='diagrams/{e.name}.html'>{e.name}</a></li>\n")
     f.write("""    </ul>
-    <h1 class='section-divider'>Classes</h1>
     <div class='indent'>
 """)
-    for cls in ontology.classes():
-        f.write(f"      <h2 id={cls.name}>{cls.name}</h2>\n")
-        f.write("      <ul>\n        <li class='axiom'>")
-        f.write("</li>\n        <li class='axiom'>".join(dl_render_class(cls)))
-        f.write("</li>\n      </ul>\n")
+    f.write(_render_ontology(dl_render_terminology(ontology, show_characteristics = True)))
     f.write("\n    </div>")
     render_footer(f)
   

@@ -17,7 +17,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --link-color: #bb86fc; /* soft purple for dark mode */
+    --link-color: #d8b8ff; /* soft purple for dark mode */
   }
   body {
     background: black;
@@ -41,7 +41,19 @@ h2 {
   font-size: 1.25em;
 }
 
-.axiom {
+div.tree div {
+  margin-left: 1.5em;
+}
+
+div.tree div.axiom {
+  margin-left: 2.5em;
+}
+
+div.axiom ul {
+  margin: 0;
+}
+
+div.axiom ul li {
   font-family: 'Fira Mono', 'Menlo', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
   font-size: 1em;
 }
@@ -91,277 +103,443 @@ h2 {
       <li><a href='diagrams/OKUMA123456LAux1BarFeederSystem1.html'>OKUMA123456LAux1BarFeederSystem1</a></li>
       <li><a href='diagrams/OKUMA123456enclosure.html'>OKUMA123456enclosure</a></li>
     </ul>
-    <h1 class='section-divider'>Classes</h1>
     <div class='indent'>
-      <h2 id=OKUMAMULT_U3000>OKUMAMULT_U3000</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ <a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000structx_axis)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000structy_axis)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000structz1_axis)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000structz4_axis)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000structb_axis)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000structc1_axis)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000structc2_axis)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesX)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesY)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesZ1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesB)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesC1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesZ4)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesC2)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesC3)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000AxesC6)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000Controller)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000Systems1CoolantSystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000Systems1ElectricSystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000Systems1HydraulicSystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000Systems1LubricationSystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000Systems1PneumaticSystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000LAux1LoaderSystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000LAux1WasteDisposalSystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000LAux1ToolingDeliverySystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000LAux1BarFeederSystem1)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000enclosure)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000structx_axis>OKUMAMULT_U3000structx_axis</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000structx_axis ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000structy_axis>OKUMAMULT_U3000structy_axis</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000structy_axis ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000structz1_axis>OKUMAMULT_U3000structz1_axis</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000structz1_axis ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000structz4_axis>OKUMAMULT_U3000structz4_axis</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000structz4_axis ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000structb_axis>OKUMAMULT_U3000structb_axis</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000structb_axis ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000structc1_axis>OKUMAMULT_U3000structc1_axis</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000structc1_axis ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000structc2_axis>OKUMAMULT_U3000structc2_axis</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000structc2_axis ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesX>OKUMAMULT_U3000AxesX</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesX ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesX ⊑ ∀ (<a href='Example.html#conformsTo'>ex:conformsTo</a> .OKUMA:OKUMAMULT_U3000AxesXDesign)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesX ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .OKUMA:OKUMAMULT_U3000AxesXLength)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesX ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .OKUMA:OKUMAMULT_U3000AxesXLinear_force)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesX ⊑ ∃ (bfo:participates_in_at_some_time .OKUMA:OKUMAMULT_U3000AxesXVelocityRapid)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesX ⊑ ∃ (bfo:participates_in_at_some_time .OKUMA:OKUMAMULT_U3000AxesXVelocityProgrammed)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesX ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structz1_axis) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structx_axis)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesXDesign>OKUMAMULT_U3000AxesXDesign</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXDesign ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesXLength>OKUMAMULT_U3000AxesXLength</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXLength ⊑ qp:Length</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXLength ⊑ qp:Length ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 650.0 , ≥ 650.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesXLinear_force>OKUMAMULT_U3000AxesXLinear_force</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXLinear_force ⊑ qp:Force</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXLinear_force ⊑ qp:Force ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 5200.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesXVelocityRapid>OKUMAMULT_U3000AxesXVelocityRapid</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXVelocityRapid ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXVelocityRapid ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesXVelocityProgrammed>OKUMAMULT_U3000AxesXVelocityProgrammed</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXVelocityProgrammed ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesXVelocityProgrammed ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesY>OKUMAMULT_U3000AxesY</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesY ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesY ⊑ ∀ (<a href='Example.html#conformsTo'>ex:conformsTo</a> .OKUMA:OKUMAMULT_U3000AxesYDesign)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesY ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .OKUMA:OKUMAMULT_U3000AxesYLength)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesY ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .OKUMA:OKUMAMULT_U3000AxesYLinear_force)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesY ⊑ ∃ (bfo:participates_in_at_some_time .OKUMA:OKUMAMULT_U3000AxesYVelocityRapid)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesY ⊑ ∃ (bfo:participates_in_at_some_time .OKUMA:OKUMAMULT_U3000AxesYVelocityProgrammed)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesY ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structx_axis) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structy_axis)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesYDesign>OKUMAMULT_U3000AxesYDesign</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYDesign ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesYLength>OKUMAMULT_U3000AxesYLength</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYLength ⊑ qp:Length</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYLength ⊑ qp:Length ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 650.0 , ≥ 650.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesYLinear_force>OKUMAMULT_U3000AxesYLinear_force</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYLinear_force ⊑ qp:Force</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYLinear_force ⊑ qp:Force ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 5200.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesYVelocityRapid>OKUMAMULT_U3000AxesYVelocityRapid</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYVelocityRapid ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYVelocityRapid ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesYVelocityProgrammed>OKUMAMULT_U3000AxesYVelocityProgrammed</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYVelocityProgrammed ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesYVelocityProgrammed ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ1>OKUMAMULT_U3000AxesZ1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1 ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1 ⊑ ∀ (<a href='Example.html#conformsTo'>ex:conformsTo</a> .OKUMA:OKUMAMULT_U3000AxesZ1Design)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .OKUMA:OKUMAMULT_U3000AxesZ1Length)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .OKUMA:OKUMAMULT_U3000AxesZ1Linear_force)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1 ⊑ ∃ (bfo:participates_in_at_some_time .OKUMA:OKUMAMULT_U3000AxesZ1VelocityRapid)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1 ⊑ ∃ (bfo:participates_in_at_some_time .OKUMA:OKUMAMULT_U3000AxesZ1VelocityProgrammed)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1 ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000enclosure) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structz1_axis)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ1Design>OKUMAMULT_U3000AxesZ1Design</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1Design ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ1Length>OKUMAMULT_U3000AxesZ1Length</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1Length ⊑ qp:Length</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1Length ⊑ qp:Length ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 650.0 , ≥ 650.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ1Linear_force>OKUMAMULT_U3000AxesZ1Linear_force</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1Linear_force ⊑ qp:Force</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1Linear_force ⊑ qp:Force ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 5200.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ1VelocityRapid>OKUMAMULT_U3000AxesZ1VelocityRapid</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityRapid ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityRapid ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ1VelocityProgrammed>OKUMAMULT_U3000AxesZ1VelocityProgrammed</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityProgrammed ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityProgrammed ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesB>OKUMAMULT_U3000AxesB</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesB ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesB ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structy_axis) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structb_axis)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesC1>OKUMAMULT_U3000AxesC1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesC1 ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesC1 ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000enclosure)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ4>OKUMAMULT_U3000AxesZ4</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4 ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4 ⊑ ∀ (<a href='Example.html#conformsTo'>ex:conformsTo</a> .OKUMA:OKUMAMULT_U3000AxesZ4Design)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .OKUMA:OKUMAMULT_U3000AxesZ4Length)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4 ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .OKUMA:OKUMAMULT_U3000AxesZ4Linear_force)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4 ⊑ ∃ (bfo:participates_in_at_some_time .OKUMA:OKUMAMULT_U3000AxesZ4VelocityRapid)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4 ⊑ ∃ (bfo:participates_in_at_some_time .OKUMA:OKUMAMULT_U3000AxesZ4VelocityProgrammed)</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4 ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000enclosure) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structz4_axis)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ4Design>OKUMAMULT_U3000AxesZ4Design</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4Design ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ4Length>OKUMAMULT_U3000AxesZ4Length</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4Length ⊑ qp:Length</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4Length ⊑ qp:Length ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 650.0 , ≥ 650.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ4Linear_force>OKUMAMULT_U3000AxesZ4Linear_force</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4Linear_force ⊑ qp:Force</li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4Linear_force ⊑ qp:Force ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 5200.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ4VelocityRapid>OKUMAMULT_U3000AxesZ4VelocityRapid</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityRapid ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityRapid ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesZ4VelocityProgrammed>OKUMAMULT_U3000AxesZ4VelocityProgrammed</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityProgrammed ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityProgrammed ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesC2>OKUMAMULT_U3000AxesC2</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesC2 ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesC2 ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structz4_axis) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structc2_axis)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesC3>OKUMAMULT_U3000AxesC3</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesC3 ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesC3 ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structz4_axis) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .OKUMA:OKUMAMULT_U3000structc2_axis)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000AxesC6>OKUMAMULT_U3000AxesC6</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000AxesC6 ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000Controller>OKUMAMULT_U3000Controller</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000Controller ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000Controller ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .OKUMA:OKUMAMULT_U3000Controllerpath)</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000Controllerpath>OKUMAMULT_U3000Controllerpath</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000Controllerpath ⊑ <a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000Systems1CoolantSystem1>OKUMAMULT_U3000Systems1CoolantSystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000Systems1CoolantSystem1 ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000Systems1ElectricSystem1>OKUMAMULT_U3000Systems1ElectricSystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000Systems1ElectricSystem1 ⊑ <a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000Systems1HydraulicSystem1>OKUMAMULT_U3000Systems1HydraulicSystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000Systems1HydraulicSystem1 ⊑ <a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000Systems1LubricationSystem1>OKUMAMULT_U3000Systems1LubricationSystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000Systems1LubricationSystem1 ⊑ <a href='Example.html#LubricationSystem'>ex:LubricationSystem</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000Systems1PneumaticSystem1>OKUMAMULT_U3000Systems1PneumaticSystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000Systems1PneumaticSystem1 ⊑ <a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a></li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000LAux1LoaderSystem1>OKUMAMULT_U3000LAux1LoaderSystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000LAux1LoaderSystem1 ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000LAux1WasteDisposalSystem1>OKUMAMULT_U3000LAux1WasteDisposalSystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000LAux1WasteDisposalSystem1 ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000LAux1ToolingDeliverySystem1>OKUMAMULT_U3000LAux1ToolingDeliverySystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000LAux1ToolingDeliverySystem1 ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000LAux1BarFeederSystem1>OKUMAMULT_U3000LAux1BarFeederSystem1</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000LAux1BarFeederSystem1 ⊑ bfo:object</li>
-      </ul>
-      <h2 id=OKUMAMULT_U3000enclosure>OKUMAMULT_U3000enclosure</h2>
-      <ul>
-        <li class='axiom'>OKUMA:OKUMAMULT_U3000enclosure ⊑ <a href='Example.html#Structure'>ex:Structure</a></li>
-      </ul>
-
+<h1 id="Classes">Classes</h1>
+<div class="tree"><div id="Thing">
+  <details open><summary>_:Thing</summary>
+    <div id="BFO_0000001">
+      <details open><summary>bfo:entity</summary>
+        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:entity ⊑ ⊤</li></ul></details></div>
+        <div id="BFO_0000002">
+          <details open><summary>bfo:continuant</summary>
+            <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:continuant ⊑ bfo:entity</li><li>bfo:continuant ⊑ ∀ (bfo:continuant_part_of_at_some_time .bfo:continuant)</li><li>bfo:continuant ⊓ bfo:occurrent ⊑ ⊥</li></ul></details></div>
+            <div id="BFO_0000004">
+              <details open><summary>bfo:independent_continuant</summary>
+                <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:independent_continuant ⊑ bfo:continuant</li><li>bfo:independent_continuant ⊑ ∀ (bfo:continuant_part_of_at_some_time .bfo:independent_continuant)</li><li>bfo:independent_continuant ⊓ bfo:generically_dependent_continuant ⊑ ⊥</li><li>bfo:independent_continuant ⊓ bfo:specifically_dependent_continuant ⊑ ⊥</li></ul></details></div>
+                <div id="BFO_0000040">
+                  <details open><summary>bfo:material_entity</summary>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:material_entity ⊑ bfo:independent_continuant</li><li>bfo:material_entity ⊑ ∀ (bfo:continuant_part_of_at_some_time .bfo:material_entity)</li><li>bfo:material_entity ⊑ ∀ (bfo:has_continuant_part_at_some_time .bfo:site ⊔ bfo:continuant_fiat_boundary ⊔ bfo:material_entity)</li><li>bfo:material_entity ⊓ bfo:immaterial_entity ⊑ ⊥</li></ul></details></div>
+                    <div id="BFO_0000027">
+                      <details open><summary>bfo:object_aggregate</summary>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:object_aggregate ⊑ bfo:material_entity</li></ul></details></div>
+                        <div id="System">
+                          <details open><summary><a href='https://spec.industrialontologies.org/ontology/core/Core/System'>core:System</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='https://spec.industrialontologies.org/ontology/core/Core/System'>core:System</a> ⊑ bfo:object_aggregate</li></ul></details></div>
+                            <div id="EngineeredSystem">
+                              <details open><summary><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ↔ <a href='https://spec.industrialontologies.org/ontology/core/Core/System'>core:System</a> ⊓ ∃ (bfo:bearer_of .<a href='https://spec.industrialontologies.org/ontology/core/Core/DesignedFunction'>core:DesignedFunction</a>)</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/System'>core:System</a></li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ⊑ ⊥</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ <a href='https://spec.industrialontologies.org/ontology/core/Core/Organization'>core:Organization</a> ⊑ ⊥</li></ul></details></div>
+                                <div id="Machine">
+                                  <details open><summary><a href='Example.html#Machine'>ex:Machine</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#MotionSystem'>ex:MotionSystem</a>)</li></ul></details></div>
+                                    <div id="NumericallyControlledMachine">
+                                      <details open><summary><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ <a href='Example.html#Machine'>ex:Machine</a></li><li><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ <a href='Example.html#Machine'>ex:Machine</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#ControlSystem'>ex:ControlSystem</a>)</li></ul></details></div>
+                                        <div id="OKUMAMULT_U3000">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ <a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000structx_axis'>OKUMA:OKUMAMULT_U3000structx_axis</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000structy_axis'>OKUMA:OKUMAMULT_U3000structy_axis</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000structz1_axis'>OKUMA:OKUMAMULT_U3000structz1_axis</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000structz4_axis'>OKUMA:OKUMAMULT_U3000structz4_axis</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000structb_axis'>OKUMA:OKUMAMULT_U3000structb_axis</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000structc1_axis'>OKUMA:OKUMAMULT_U3000structc1_axis</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000structc2_axis'>OKUMA:OKUMAMULT_U3000structc2_axis</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesB'>OKUMA:OKUMAMULT_U3000AxesB</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesC1'>OKUMA:OKUMAMULT_U3000AxesC1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesC2'>OKUMA:OKUMAMULT_U3000AxesC2</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesC3'>OKUMA:OKUMAMULT_U3000AxesC3</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesC6'>OKUMA:OKUMAMULT_U3000AxesC6</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000Controller'>OKUMA:OKUMAMULT_U3000Controller</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000Systems1CoolantSystem1'>OKUMA:OKUMAMULT_U3000Systems1CoolantSystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000Systems1ElectricSystem1'>OKUMA:OKUMAMULT_U3000Systems1ElectricSystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000Systems1HydraulicSystem1'>OKUMA:OKUMAMULT_U3000Systems1HydraulicSystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000Systems1LubricationSystem1'>OKUMA:OKUMAMULT_U3000Systems1LubricationSystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000Systems1PneumaticSystem1'>OKUMA:OKUMAMULT_U3000Systems1PneumaticSystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000LAux1LoaderSystem1'>OKUMA:OKUMAMULT_U3000LAux1LoaderSystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000LAux1WasteDisposalSystem1'>OKUMA:OKUMAMULT_U3000LAux1WasteDisposalSystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000LAux1ToolingDeliverySystem1'>OKUMA:OKUMAMULT_U3000LAux1ToolingDeliverySystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000LAux1BarFeederSystem1'>OKUMA:OKUMAMULT_U3000LAux1BarFeederSystem1</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000'>OKUMA:OKUMAMULT_U3000</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000enclosure'>OKUMA:OKUMAMULT_U3000enclosure</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="MotionSystem">
+                                  <details open><summary><a href='Example.html#MotionSystem'>ex:MotionSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li><li><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#Actuator'>ex:Actuator</a>)</li></ul></details></div>
+                                    <div id="LinearMotionSystem">
+                                      <details open><summary><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a></li><li><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasCapability'>core:hasCapability</a> .<a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a>)</li></ul></details></div>
+                                        <div id="OKUMAMULT_U3000AxesX">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a> ⊑ ∀ (<a href='Example.html#conformsTo'>ex:conformsTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesXDesign'>OKUMA:OKUMAMULT_U3000AxesXDesign</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesXLength'>OKUMA:OKUMAMULT_U3000AxesXLength</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesXLinear_force'>OKUMA:OKUMAMULT_U3000AxesXLinear_force</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a> ⊑ ∃ (bfo:participates_in_at_some_time .<a href='OKUMA.html#OKUMAMULT_U3000AxesXVelocityRapid'>OKUMA:OKUMAMULT_U3000AxesXVelocityRapid</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a> ⊑ ∃ (bfo:participates_in_at_some_time .<a href='OKUMA.html#OKUMAMULT_U3000AxesXVelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesXVelocityProgrammed</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesX'>OKUMA:OKUMAMULT_U3000AxesX</a> ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structz1_axis'>OKUMA:OKUMAMULT_U3000structz1_axis</a>) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structx_axis'>OKUMA:OKUMAMULT_U3000structx_axis</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                        <div id="OKUMAMULT_U3000AxesY">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a> ⊑ ∀ (<a href='Example.html#conformsTo'>ex:conformsTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesYDesign'>OKUMA:OKUMAMULT_U3000AxesYDesign</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesYLength'>OKUMA:OKUMAMULT_U3000AxesYLength</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesYLinear_force'>OKUMA:OKUMAMULT_U3000AxesYLinear_force</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a> ⊑ ∃ (bfo:participates_in_at_some_time .<a href='OKUMA.html#OKUMAMULT_U3000AxesYVelocityRapid'>OKUMA:OKUMAMULT_U3000AxesYVelocityRapid</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a> ⊑ ∃ (bfo:participates_in_at_some_time .<a href='OKUMA.html#OKUMAMULT_U3000AxesYVelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesYVelocityProgrammed</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesY'>OKUMA:OKUMAMULT_U3000AxesY</a> ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structx_axis'>OKUMA:OKUMAMULT_U3000structx_axis</a>) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structy_axis'>OKUMA:OKUMAMULT_U3000structy_axis</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                        <div id="OKUMAMULT_U3000AxesZ1">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a> ⊑ ∀ (<a href='Example.html#conformsTo'>ex:conformsTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Design'>OKUMA:OKUMAMULT_U3000AxesZ1Design</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Length'>OKUMA:OKUMAMULT_U3000AxesZ1Length</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Linear_force'>OKUMA:OKUMAMULT_U3000AxesZ1Linear_force</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a> ⊑ ∃ (bfo:participates_in_at_some_time .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ1VelocityRapid'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityRapid</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a> ⊑ ∃ (bfo:participates_in_at_some_time .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ1VelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityProgrammed</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1'>OKUMA:OKUMAMULT_U3000AxesZ1</a> ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000enclosure'>OKUMA:OKUMAMULT_U3000enclosure</a>) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structz1_axis'>OKUMA:OKUMAMULT_U3000structz1_axis</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                        <div id="OKUMAMULT_U3000AxesZ4">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a> ⊑ ∀ (<a href='Example.html#conformsTo'>ex:conformsTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Design'>OKUMA:OKUMAMULT_U3000AxesZ4Design</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Length'>OKUMA:OKUMAMULT_U3000AxesZ4Length</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasQuality'>core:hasQuality</a> .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Linear_force'>OKUMA:OKUMAMULT_U3000AxesZ4Linear_force</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a> ⊑ ∃ (bfo:participates_in_at_some_time .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ4VelocityRapid'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityRapid</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a> ⊑ ∃ (bfo:participates_in_at_some_time .<a href='OKUMA.html#OKUMAMULT_U3000AxesZ4VelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityProgrammed</a>)</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4'>OKUMA:OKUMAMULT_U3000AxesZ4</a> ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000enclosure'>OKUMA:OKUMAMULT_U3000enclosure</a>) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structz4_axis'>OKUMA:OKUMAMULT_U3000structz4_axis</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                      </details>
+                                    </div>
+                                    <div id="RotaryMotionSystem">
+                                      <details open><summary><a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a></li><li><a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasCapability'>core:hasCapability</a> .<a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a>)</li></ul></details></div>
+                                        <div id="OKUMAMULT_U3000AxesB">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesB'>OKUMA:OKUMAMULT_U3000AxesB</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesB'>OKUMA:OKUMAMULT_U3000AxesB</a> ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesB'>OKUMA:OKUMAMULT_U3000AxesB</a> ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structy_axis'>OKUMA:OKUMAMULT_U3000structy_axis</a>) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structb_axis'>OKUMA:OKUMAMULT_U3000structb_axis</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                        <div id="OKUMAMULT_U3000AxesC1">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesC1'>OKUMA:OKUMAMULT_U3000AxesC1</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesC1'>OKUMA:OKUMAMULT_U3000AxesC1</a> ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesC1'>OKUMA:OKUMAMULT_U3000AxesC1</a> ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000enclosure'>OKUMA:OKUMAMULT_U3000enclosure</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                        <div id="OKUMAMULT_U3000AxesC2">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesC2'>OKUMA:OKUMAMULT_U3000AxesC2</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesC2'>OKUMA:OKUMAMULT_U3000AxesC2</a> ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesC2'>OKUMA:OKUMAMULT_U3000AxesC2</a> ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structz4_axis'>OKUMA:OKUMAMULT_U3000structz4_axis</a>) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structc2_axis'>OKUMA:OKUMAMULT_U3000structc2_axis</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                        <div id="OKUMAMULT_U3000AxesC3">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesC3'>OKUMA:OKUMAMULT_U3000AxesC3</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesC3'>OKUMA:OKUMAMULT_U3000AxesC3</a> ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesC3'>OKUMA:OKUMAMULT_U3000AxesC3</a> ⊑ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structz4_axis'>OKUMA:OKUMAMULT_U3000structz4_axis</a>) ⊓ ∃ (<a href='Example.html#connectedTo'>ex:connectedTo</a> .<a href='OKUMA.html#OKUMAMULT_U3000structc2_axis'>OKUMA:OKUMAMULT_U3000structc2_axis</a>)</li></ul></details></div>
+                                          </details>
+                                        </div>
+                                        <div id="OKUMAMULT_U3000AxesC6">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesC6'>OKUMA:OKUMAMULT_U3000AxesC6</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesC6'>OKUMA:OKUMAMULT_U3000AxesC6</a> ⊑ <a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></li></ul></details></div>
+                                          </details>
+                                        </div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="ControlSystem">
+                                  <details open><summary><a href='Example.html#ControlSystem'>ex:ControlSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
+                                    <div id="OKUMAMULT_U3000Controller">
+                                      <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000Controller'>OKUMA:OKUMAMULT_U3000Controller</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000Controller'>OKUMA:OKUMAMULT_U3000Controller</a> ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000Controller'>OKUMA:OKUMAMULT_U3000Controller</a> ⊑ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='OKUMA.html#OKUMAMULT_U3000Controllerpath'>OKUMA:OKUMAMULT_U3000Controllerpath</a>)</li></ul></details></div>
+                                      </details>
+                                    </div>
+                                    <div id="ControlSystemPath">
+                                      <details open><summary><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a> ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul></details></div>
+                                        <div id="OKUMAMULT_U3000Controllerpath">
+                                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000Controllerpath'>OKUMA:OKUMAMULT_U3000Controllerpath</a></summary>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000Controllerpath'>OKUMA:OKUMAMULT_U3000Controllerpath</a> ⊑ <a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a></li></ul></details></div>
+                                          </details>
+                                        </div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="ElectricalSystem">
+                                  <details open><summary><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
+                                    <div id="OKUMAMULT_U3000Systems1ElectricSystem1">
+                                      <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000Systems1ElectricSystem1'>OKUMA:OKUMAMULT_U3000Systems1ElectricSystem1</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000Systems1ElectricSystem1'>OKUMA:OKUMAMULT_U3000Systems1ElectricSystem1</a> ⊑ <a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a></li></ul></details></div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="HydraulicSystem">
+                                  <details open><summary><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
+                                    <div id="OKUMAMULT_U3000Systems1HydraulicSystem1">
+                                      <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000Systems1HydraulicSystem1'>OKUMA:OKUMAMULT_U3000Systems1HydraulicSystem1</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000Systems1HydraulicSystem1'>OKUMA:OKUMAMULT_U3000Systems1HydraulicSystem1</a> ⊑ <a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a></li></ul></details></div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="LubricationSystem">
+                                  <details open><summary><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
+                                    <div id="OKUMAMULT_U3000Systems1LubricationSystem1">
+                                      <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000Systems1LubricationSystem1'>OKUMA:OKUMAMULT_U3000Systems1LubricationSystem1</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000Systems1LubricationSystem1'>OKUMA:OKUMAMULT_U3000Systems1LubricationSystem1</a> ⊑ <a href='Example.html#LubricationSystem'>ex:LubricationSystem</a></li></ul></details></div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="PneumaticSystem">
+                                  <details open><summary><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
+                                    <div id="OKUMAMULT_U3000Systems1PneumaticSystem1">
+                                      <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000Systems1PneumaticSystem1'>OKUMA:OKUMAMULT_U3000Systems1PneumaticSystem1</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000Systems1PneumaticSystem1'>OKUMA:OKUMAMULT_U3000Systems1PneumaticSystem1</a> ⊑ <a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a></li></ul></details></div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                    <div id="BFO_0000030">
+                      <details open><summary>bfo:object</summary>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:object ⊑ bfo:material_entity</li></ul></details></div>
+                        <div id="OKUMAMULT_U3000structx_axis">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000structx_axis'>OKUMA:OKUMAMULT_U3000structx_axis</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000structx_axis'>OKUMA:OKUMAMULT_U3000structx_axis</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000structy_axis">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000structy_axis'>OKUMA:OKUMAMULT_U3000structy_axis</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000structy_axis'>OKUMA:OKUMAMULT_U3000structy_axis</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000structz1_axis">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000structz1_axis'>OKUMA:OKUMAMULT_U3000structz1_axis</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000structz1_axis'>OKUMA:OKUMAMULT_U3000structz1_axis</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000structz4_axis">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000structz4_axis'>OKUMA:OKUMAMULT_U3000structz4_axis</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000structz4_axis'>OKUMA:OKUMAMULT_U3000structz4_axis</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000structb_axis">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000structb_axis'>OKUMA:OKUMAMULT_U3000structb_axis</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000structb_axis'>OKUMA:OKUMAMULT_U3000structb_axis</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000structc1_axis">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000structc1_axis'>OKUMA:OKUMAMULT_U3000structc1_axis</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000structc1_axis'>OKUMA:OKUMAMULT_U3000structc1_axis</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000structc2_axis">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000structc2_axis'>OKUMA:OKUMAMULT_U3000structc2_axis</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000structc2_axis'>OKUMA:OKUMAMULT_U3000structc2_axis</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000Systems1CoolantSystem1">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000Systems1CoolantSystem1'>OKUMA:OKUMAMULT_U3000Systems1CoolantSystem1</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000Systems1CoolantSystem1'>OKUMA:OKUMAMULT_U3000Systems1CoolantSystem1</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000LAux1LoaderSystem1">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000LAux1LoaderSystem1'>OKUMA:OKUMAMULT_U3000LAux1LoaderSystem1</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000LAux1LoaderSystem1'>OKUMA:OKUMAMULT_U3000LAux1LoaderSystem1</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000LAux1WasteDisposalSystem1">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000LAux1WasteDisposalSystem1'>OKUMA:OKUMAMULT_U3000LAux1WasteDisposalSystem1</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000LAux1WasteDisposalSystem1'>OKUMA:OKUMAMULT_U3000LAux1WasteDisposalSystem1</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000LAux1ToolingDeliverySystem1">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000LAux1ToolingDeliverySystem1'>OKUMA:OKUMAMULT_U3000LAux1ToolingDeliverySystem1</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000LAux1ToolingDeliverySystem1'>OKUMA:OKUMAMULT_U3000LAux1ToolingDeliverySystem1</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000LAux1BarFeederSystem1">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000LAux1BarFeederSystem1'>OKUMA:OKUMAMULT_U3000LAux1BarFeederSystem1</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000LAux1BarFeederSystem1'>OKUMA:OKUMAMULT_U3000LAux1BarFeederSystem1</a> ⊑ bfo:object</li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="MaterialArtifact">
+                          <details open><summary><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ↔ bfo:object ⊓ ∃ (bfo:bearer_of .<a href='https://spec.industrialontologies.org/ontology/core/Core/DesignedFunction'>core:DesignedFunction</a>)</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ⊑ bfo:object</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ⊓ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊑ ⊥</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ⊓ <a href='https://spec.industrialontologies.org/ontology/core/Core/Organization'>core:Organization</a> ⊑ ⊥</li></ul></details></div>
+                            <div id="Structure">
+                              <details open><summary><a href='Example.html#Structure'>ex:Structure</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Structure'>ex:Structure</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
+                                <div id="OKUMAMULT_U3000enclosure">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000enclosure'>OKUMA:OKUMAMULT_U3000enclosure</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000enclosure'>OKUMA:OKUMAMULT_U3000enclosure</a> ⊑ <a href='Example.html#Structure'>ex:Structure</a></li></ul></details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                  </details>
+                </div>
+              </details>
+            </div>
+            <div id="BFO_0000031">
+              <details open><summary>bfo:generically_dependent_continuant</summary>
+                <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:generically_dependent_continuant ⊑ bfo:continuant</li><li>bfo:generically_dependent_continuant ⊓ bfo:independent_continuant ⊑ ⊥</li><li>bfo:generically_dependent_continuant ⊓ bfo:specifically_dependent_continuant ⊑ ⊥</li></ul></details></div>
+                <div id="InformationContentEntity">
+                  <details open><summary><a href='https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity'>core:InformationContentEntity</a></summary>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity'>core:InformationContentEntity</a> ⊑ bfo:generically_dependent_continuant</li><li>bfo:generically_dependent_continuant ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/isAbout'>core:isAbout</a> .bfo:entity) ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity'>core:InformationContentEntity</a></li></ul></details></div>
+                    <div id="DesignSpecification">
+                      <details open><summary><a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></summary>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity'>core:InformationContentEntity</a></li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a> ⊑ ∀ (<a href='https://spec.industrialontologies.org/ontology/core/Core/prescribes'>core:prescribes</a> .bfo:continuant)</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity'>core:InformationContentEntity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/prescribes'>core:prescribes</a> .bfo:continuant) ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/satisfiesRequirement'>core:satisfiesRequirement</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/RequirementSpecification'>core:RequirementSpecification</a>) ⊓ ∀ (<a href='https://spec.industrialontologies.org/ontology/core/Core/prescribes'>core:prescribes</a> .bfo:continuant) ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li></ul></details></div>
+                        <div id="OKUMAMULT_U3000AxesXDesign">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesXDesign'>OKUMA:OKUMAMULT_U3000AxesXDesign</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXDesign'>OKUMA:OKUMAMULT_U3000AxesXDesign</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000AxesYDesign">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesYDesign'>OKUMA:OKUMAMULT_U3000AxesYDesign</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYDesign'>OKUMA:OKUMAMULT_U3000AxesYDesign</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000AxesZ1Design">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Design'>OKUMA:OKUMAMULT_U3000AxesZ1Design</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Design'>OKUMA:OKUMAMULT_U3000AxesZ1Design</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li></ul></details></div>
+                          </details>
+                        </div>
+                        <div id="OKUMAMULT_U3000AxesZ4Design">
+                          <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Design'>OKUMA:OKUMAMULT_U3000AxesZ4Design</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Design'>OKUMA:OKUMAMULT_U3000AxesZ4Design</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/DesignSpecification'>core:DesignSpecification</a></li></ul></details></div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                  </details>
+                </div>
+              </details>
+            </div>
+            <div id="BFO_0000020">
+              <details open><summary>bfo:specifically_dependent_continuant</summary>
+                <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:specifically_dependent_continuant ⊑ bfo:continuant</li><li>bfo:specifically_dependent_continuant ⊓ bfo:generically_dependent_continuant ⊑ ⊥</li><li>bfo:specifically_dependent_continuant ⊓ bfo:independent_continuant ⊑ ⊥</li></ul></details></div>
+                <div id="BFO_0000019">
+                  <details open><summary>bfo:quality</summary>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:quality ⊑ bfo:specifically_dependent_continuant</li><li>bfo:quality ⊓ bfo:realizable_entity ⊑ ⊥</li></ul></details></div>
+                    <div id="DimensionQuality">
+                      <details open><summary>qual:DimensionQuality</summary>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li>qual:DimensionQuality ⊑ bfo:quality</li></ul></details></div>
+                        <div id="Length">
+                          <details open><summary>qp:Length</summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li>qp:Length ⊑ qual:DimensionQuality</li></ul></details></div>
+                            <div id="OKUMAMULT_U3000AxesXLength">
+                              <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesXLength'>OKUMA:OKUMAMULT_U3000AxesXLength</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXLength'>OKUMA:OKUMAMULT_U3000AxesXLength</a> ⊑ qp:Length</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXLength'>OKUMA:OKUMAMULT_U3000AxesXLength</a> ⊑ qp:Length ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 650.0 , ≥ 650.0]))</li></ul></details></div>
+                              </details>
+                            </div>
+                            <div id="OKUMAMULT_U3000AxesYLength">
+                              <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesYLength'>OKUMA:OKUMAMULT_U3000AxesYLength</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYLength'>OKUMA:OKUMAMULT_U3000AxesYLength</a> ⊑ qp:Length</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYLength'>OKUMA:OKUMAMULT_U3000AxesYLength</a> ⊑ qp:Length ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 650.0 , ≥ 650.0]))</li></ul></details></div>
+                              </details>
+                            </div>
+                            <div id="OKUMAMULT_U3000AxesZ1Length">
+                              <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Length'>OKUMA:OKUMAMULT_U3000AxesZ1Length</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Length'>OKUMA:OKUMAMULT_U3000AxesZ1Length</a> ⊑ qp:Length</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Length'>OKUMA:OKUMAMULT_U3000AxesZ1Length</a> ⊑ qp:Length ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 650.0 , ≥ 650.0]))</li></ul></details></div>
+                              </details>
+                            </div>
+                            <div id="OKUMAMULT_U3000AxesZ4Length">
+                              <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Length'>OKUMA:OKUMAMULT_U3000AxesZ4Length</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Length'>OKUMA:OKUMAMULT_U3000AxesZ4Length</a> ⊑ qp:Length</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Length'>OKUMA:OKUMAMULT_U3000AxesZ4Length</a> ⊑ qp:Length ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 650.0 , ≥ 650.0]))</li></ul></details></div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                    <div id="BFO_0000145">
+                      <details open><summary>bfo:relational_quality</summary>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:relational_quality ⊑ bfo:quality</li></ul></details></div>
+                        <div id="PhysicalRelationalQuality">
+                          <details open><summary>qp:PhysicalRelationalQuality</summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li>qp:PhysicalRelationalQuality ⊑ bfo:relational_quality</li></ul></details></div>
+                            <div id="Force">
+                              <details open><summary>qp:Force</summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li>qp:Force ⊑ qp:PhysicalRelationalQuality</li></ul></details></div>
+                                <div id="OKUMAMULT_U3000AxesXLinear_force">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesXLinear_force'>OKUMA:OKUMAMULT_U3000AxesXLinear_force</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXLinear_force'>OKUMA:OKUMAMULT_U3000AxesXLinear_force</a> ⊑ qp:Force</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXLinear_force'>OKUMA:OKUMAMULT_U3000AxesXLinear_force</a> ⊑ qp:Force ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 5200.0]))</li></ul></details></div>
+                                  </details>
+                                </div>
+                                <div id="OKUMAMULT_U3000AxesYLinear_force">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesYLinear_force'>OKUMA:OKUMAMULT_U3000AxesYLinear_force</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYLinear_force'>OKUMA:OKUMAMULT_U3000AxesYLinear_force</a> ⊑ qp:Force</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYLinear_force'>OKUMA:OKUMAMULT_U3000AxesYLinear_force</a> ⊑ qp:Force ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 5200.0]))</li></ul></details></div>
+                                  </details>
+                                </div>
+                                <div id="OKUMAMULT_U3000AxesZ1Linear_force">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Linear_force'>OKUMA:OKUMAMULT_U3000AxesZ1Linear_force</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Linear_force'>OKUMA:OKUMAMULT_U3000AxesZ1Linear_force</a> ⊑ qp:Force</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1Linear_force'>OKUMA:OKUMAMULT_U3000AxesZ1Linear_force</a> ⊑ qp:Force ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 5200.0]))</li></ul></details></div>
+                                  </details>
+                                </div>
+                                <div id="OKUMAMULT_U3000AxesZ4Linear_force">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Linear_force'>OKUMA:OKUMAMULT_U3000AxesZ4Linear_force</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Linear_force'>OKUMA:OKUMAMULT_U3000AxesZ4Linear_force</a> ⊑ qp:Force</li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4Linear_force'>OKUMA:OKUMAMULT_U3000AxesZ4Linear_force</a> ⊑ qp:Force ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime'>core:hasMeasuredValueAtSomeTime</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 5200.0]))</li></ul></details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                  </details>
+                </div>
+              </details>
+            </div>
+          </details>
+        </div>
+        <div id="BFO_0000003">
+          <details open><summary>bfo:occurrent</summary>
+            <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:occurrent ⊑ bfo:entity</li><li>bfo:occurrent ⊓ bfo:continuant ⊑ ⊥</li></ul></details></div>
+            <div id="BFO_0000015">
+              <details open><summary>bfo:process</summary>
+                <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:process ⊑ bfo:occurrent</li><li>bfo:process ⊑ ∀ (bfo:occurrent_part_of .bfo:process)</li><li>bfo:process ⊑ ∀ (bfo:temporal_part_of .bfo:process)</li><li>bfo:process ⊑ ∀ (bfo:has_occurrent_part .bfo:process ⊔ bfo:process_boundary)</li><li>bfo:process ⊓ bfo:temporal_region ⊑ ⊥</li><li>bfo:process ⊓ bfo:process_boundary ⊑ ⊥</li><li>bfo:process ⊓ bfo:spatiotemporal_region ⊑ ⊥</li></ul></details></div>
+                <div id="ProcessProfile">
+                  <details open><summary><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></summary>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a> ⊑ bfo:process</li></ul></details></div>
+                    <div id="Velocity">
+                      <details open><summary><a href='Example.html#Velocity'>ex:Velocity</a></summary>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Velocity'>ex:Velocity</a> ⊑ <a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></li></ul></details></div>
+                        <div id="PrismaticVelocity">
+                          <details open><summary><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
+                            <div id="PrismaticRapidVelocity">
+                              <details open><summary><a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li></ul></details></div>
+                                <div id="OKUMAMULT_U3000AxesXVelocityRapid">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesXVelocityRapid'>OKUMA:OKUMAMULT_U3000AxesXVelocityRapid</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXVelocityRapid'>OKUMA:OKUMAMULT_U3000AxesXVelocityRapid</a> ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXVelocityRapid'>OKUMA:OKUMAMULT_U3000AxesXVelocityRapid</a> ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li></ul></details></div>
+                                  </details>
+                                </div>
+                                <div id="OKUMAMULT_U3000AxesYVelocityRapid">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesYVelocityRapid'>OKUMA:OKUMAMULT_U3000AxesYVelocityRapid</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYVelocityRapid'>OKUMA:OKUMAMULT_U3000AxesYVelocityRapid</a> ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYVelocityRapid'>OKUMA:OKUMAMULT_U3000AxesYVelocityRapid</a> ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li></ul></details></div>
+                                  </details>
+                                </div>
+                                <div id="OKUMAMULT_U3000AxesZ1VelocityRapid">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1VelocityRapid'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityRapid</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1VelocityRapid'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityRapid</a> ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1VelocityRapid'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityRapid</a> ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li></ul></details></div>
+                                  </details>
+                                </div>
+                                <div id="OKUMAMULT_U3000AxesZ4VelocityRapid">
+                                  <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4VelocityRapid'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityRapid</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4VelocityRapid'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityRapid</a> ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4VelocityRapid'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityRapid</a> ⊑ <a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li></ul></details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                            <div id="OKUMAMULT_U3000AxesXVelocityProgrammed">
+                              <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesXVelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesXVelocityProgrammed</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXVelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesXVelocityProgrammed</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesXVelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesXVelocityProgrammed</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li></ul></details></div>
+                              </details>
+                            </div>
+                            <div id="OKUMAMULT_U3000AxesYVelocityProgrammed">
+                              <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesYVelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesYVelocityProgrammed</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYVelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesYVelocityProgrammed</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesYVelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesYVelocityProgrammed</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li></ul></details></div>
+                              </details>
+                            </div>
+                            <div id="OKUMAMULT_U3000AxesZ1VelocityProgrammed">
+                              <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1VelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityProgrammed</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1VelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityProgrammed</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ1VelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesZ1VelocityProgrammed</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li></ul></details></div>
+                              </details>
+                            </div>
+                            <div id="OKUMAMULT_U3000AxesZ4VelocityProgrammed">
+                              <details open><summary><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4VelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityProgrammed</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4VelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityProgrammed</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li><li><a href='OKUMA.html#OKUMAMULT_U3000AxesZ4VelocityProgrammed'>OKUMA:OKUMAMULT_U3000AxesZ4VelocityProgrammed</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSpecifiedOutput'>core:hasSpecifiedOutput</a> .<a href='https://spec.industrialontologies.org/ontology/core/Core/MeasuredValueExpression'>core:MeasuredValueExpression</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasSimpleExpressionValue'>core:hasSimpleExpressionValue</a> .float[≤ 7000.0 , ≥ 1.0]))</li></ul></details></div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                  </details>
+                </div>
+              </details>
+            </div>
+          </details>
+        </div>
+      </details>
+    </div>
+  </details>
+</div>
+</div>
     </div>
   </body>
 </html>

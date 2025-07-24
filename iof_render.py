@@ -13,6 +13,7 @@ from owlready2.prop import PropertyClass, ObjectPropertyClass, DataPropertyClass
 from owlready2.namespace import owl, Ontology
 import owlready2.base
 import re
+import treelib as tl
 from ontologies import Example, Core
 
 _DL_SYNTAX = types.SimpleNamespace(
@@ -89,14 +90,28 @@ def dl_render_terminology(onto: Ontology, show_disjoint: bool = True, show_domai
                 for prop in props }
 
     if onto.classes() and (classes := list(onto.classes())):
-        s['Classes'] = { klass.name : 
-            dl_render_class(klass, show_disjoint=show_disjoint)
-                for klass in classes }
+        tree = tl.Tree()
+        for klass in classes:
+            dl_render_class(klass, show_disjoint=show_disjoint, tree = tree)
+        s['Classes'] = tree            
     return s
 
 
-def dl_render_class(klass: ThingClass, show_disjoint: bool = True) -> list:
+def dl_render_class(klass: ThingClass, show_disjoint: bool = True, tree: tl.Tree = None) -> list:
+    def add_class(klass, tree, data = None):
+        if str(klass) in tree: return
+        
+        parent = klass.__base__
+        if str(parent) not in tree:
+            if parent == owl.Thing:
+                tree.create_node(_render_name(parent), str(parent))
+            else:
+                dl_render_class(parent, show_disjoint=show_disjoint, tree=tree)
+            
+        tree.create_node(_render_name(klass), str(klass), parent = str(parent), data=data)
+    
     s = []
+    parent = None
     if klass.equivalent_to:
         s.extend(
             [("%s %s %s" % (dl_render_concept_str(klass), _DL_SYNTAX.EQUIVALENT_TO, dl_render_concept_str(_))) for _ in
@@ -104,7 +119,7 @@ def dl_render_class(klass: ThingClass, show_disjoint: bool = True) -> list:
     if klass.is_a:
         s.extend([("%s %s %s" % (dl_render_concept_str(klass), _DL_SYNTAX.SUBCLASS, dl_render_concept_str(_))) for _ in
                   klass.is_a])
-        
+    
     # Pick up general class axioms
     axioms = [_[0] for _ in klass.namespace.world.sparql("SELECT * { ?x rdfs:subClassOf ?? }", [klass]) if not isinstance(_[0], ThingClass) ]
     if axioms:
@@ -115,6 +130,9 @@ def dl_render_class(klass: ThingClass, show_disjoint: bool = True) -> list:
     if show_disjoint:
         for disjoint in klass.disjoints():
             s.extend(dl_render_disjoint(disjoint, klass))
+
+    if tree is not None: add_class(klass, tree, s)
+
     return s
 
 def dl_render_prop(prop: PropertyClass, show_domain: bool = True, show_range: bool = True, show_inverse: bool = True, show_characteristics: bool = False) -> list:
@@ -153,7 +171,9 @@ def dl_render_disjoint(disjoint: AllDisjoint, klass: Optional[ThingClass] = None
 
 def _render_name(concept) -> str:
     formatted = _render_short_name(concept)
-    if concept.namespace == Example:
+    if concept.iri.startswith('http://example.org') and concept.iri.split('/')[3] != 'ontology':
+        formatted = f"<a href='{concept.iri.split('/')[3]}.html#{concept.name}'>{formatted}</a>"        
+    elif concept.namespace == Example:
         formatted = f"<a href='Example.html#{concept.name}'>{formatted}</a>"
     elif concept.namespace.name == 'Core':
         formatted = f"<a href='{concept.iri}'>{formatted}</a>"        

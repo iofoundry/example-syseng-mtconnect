@@ -79,6 +79,18 @@ Separate = {
   'Room'
 }
 
+Namespaces = {
+    "http://purl.obolibrary.org/obo/": "bfo",
+    "https://spec.industrialontologies.org/ontology/core/Core/": "core",
+    "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/": "av",
+    "https://www.omg.org/spec/Commons/Designators/": "des",
+    "https://spec.industrialontologies.org/ontology/qualities/Qualities/": "qual",
+    "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/": "qp",
+    "http://example.org/ontology/": "ex",
+    "http://example.org/data/": "data",
+    "http://qudt.org/vocab/unit/": "unit"
+}
+
 setup_logging(level = logging.DEBUG, indent_spaces=2, include_func=True, no_datetime=True)
 logger = logging.getLogger(__name__)
 

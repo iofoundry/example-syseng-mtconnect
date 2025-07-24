@@ -1,0 +1,4 @@
+# Project dependencies for IOF/MTConnect ontology tools
+owlready2
+requests
+treelib
