@@ -13,9 +13,9 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="http://example.org/ontology/">
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical"/>
 		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators"/>
 	</owl:Ontology>
 	
@@ -55,7 +55,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Enclosure">
-		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Enclosure</rdfs:label>
 	</owl:Class>
 	
@@ -193,7 +193,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Room">
-		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Room</rdfs:label>
 	</owl:Class>
 	

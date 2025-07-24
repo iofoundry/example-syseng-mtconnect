@@ -153,7 +153,7 @@ individual(o122, data:[[./Mazak317641systemspneumatic.html Mazak317641systemspne
 individual(o123, data:name29, des:Name)
 individual(o124, data:[[./Mazak317641systemslubrication.html Mazak317641systemslubrication]], vendor:[[../Mazak.html#Mazak800isystemslubrication Mazak800isystemslubrication]])
 individual(o125, data:name30, des:Name)
-individual(o126, data:[[./Mazak317641auxiliariesenvironmental.html Mazak317641auxiliariesenvironmental]], vendor:[[../Mazak.html#Mazak800iauxiliariesenvironmental Mazak800iauxiliariesenvironmental]])
+individual(o126, data:Mazak317641auxiliariesenvironmental, vendor:[[../Mazak.html#Mazak800iauxiliariesenvironmental Mazak800iauxiliariesenvironmental]])
 individual(o127, data:name31, des:Name)
 individual(o128, data:Mazak317641auxiliariesenvironmentalTEMPERATURE, qualphys:Temperature)
 individual(o129, data:[[./Mazak317641resourcesmaterialsstock.html Mazak317641resourcesmaterialsstock]], vendor:[[../Mazak.html#Mazak800iresourcesmaterialsstock Mazak800iresourcesmaterialsstock]])

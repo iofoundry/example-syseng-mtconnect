@@ -57,7 +57,7 @@ individual(o26, data:[[./Mazak317641systemshydraulic.html Mazak317641systemshydr
 individual(o27, data:[[./Mazak317641systemscoolant.html Mazak317641systemscoolant]], vendor:[[../Mazak.html#Mazak800isystemscoolant Mazak800isystemscoolant]])
 individual(o28, data:[[./Mazak317641systemspneumatic.html Mazak317641systemspneumatic]], vendor:[[../Mazak.html#Mazak800isystemspneumatic Mazak800isystemspneumatic]])
 individual(o29, data:[[./Mazak317641systemslubrication.html Mazak317641systemslubrication]], vendor:[[../Mazak.html#Mazak800isystemslubrication Mazak800isystemslubrication]])
-individual(o30, data:[[./Mazak317641auxiliariesenvironmental.html Mazak317641auxiliariesenvironmental]], vendor:[[../Mazak.html#Mazak800iauxiliariesenvironmental Mazak800iauxiliariesenvironmental]])
+individual(o30, data:Mazak317641auxiliariesenvironmental, vendor:[[../Mazak.html#Mazak800iauxiliariesenvironmental Mazak800iauxiliariesenvironmental]])
 individual(o31, data:[[./Mazak317641resourcesmaterialsstock.html Mazak317641resourcesmaterialsstock]], vendor:[[../Mazak.html#Mazak800iresourcesmaterialsstock Mazak800iresourcesmaterialsstock]])
 individual(o32, data:[[./Mazak317641enclosure.html Mazak317641enclosure]], vendor:[[../Mazak.html#Mazak800ienclosure Mazak800ienclosure]])
 property(o0, "core:hasComponentPartAtAllTimes", o1)
