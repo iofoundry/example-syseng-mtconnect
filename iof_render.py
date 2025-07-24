@@ -108,7 +108,7 @@ def dl_render_class(klass: ThingClass, show_disjoint: bool = True, tree: tl.Tree
             else:
                 dl_render_class(parent, show_disjoint=show_disjoint, tree=tree)
             
-        tree.create_node(_render_name(klass), str(klass), parent = str(parent), data=data)
+        tree.create_node(_render_name(klass), str(klass), parent = str(parent), data={ 'axioms': data, 'class': klass })
     
     s = []
     parent = None

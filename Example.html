@@ -89,21 +89,27 @@ div.axiom ul li {
     <div id="BFO_0000001">
       <details open><summary>bfo:entity</summary>
         <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:entity ⊑ ⊤</li></ul></details></div>
+        <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.ElasticResponse1</li><li>Qualities-Physical.LightReflexion1</li><li>Qualities-Physical.SunExposureProcess1</li><li>Qualities-Physical.Pull1</li><li>Qualities-Physical.Pull2</li><li>Qualities-Physical.SunLigthingProcess1</li><li>Qualities-Physical.Sun</li><li>Qualities-Physical.Specimen1</li><li>Qualities-Physical.UniversalTestingMachine1</li><li>Qualities-Physical.TensionForceMeasurementCapability1</li><li>Qualities-Physical.TensionRate1</li><li>Qualities-Physical.EModulus1</li><li>Qualities-Physical.TensionForce1</li><li>Qualities-Physical.reflectance1</li><li>Qualities-Physical.RelaxtionCap1</li></ul></details></div>
         <div id="BFO_0000002">
           <details open><summary>bfo:continuant</summary>
             <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:continuant ⊑ bfo:entity</li><li>bfo:continuant ⊑ ∀ (bfo:continuant_part_of_at_some_time .bfo:continuant)</li><li>bfo:continuant ⊓ bfo:occurrent ⊑ ⊥</li></ul></details></div>
+            <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.Sun</li><li>Qualities-Physical.Specimen1</li><li>Qualities-Physical.UniversalTestingMachine1</li><li>Qualities-Physical.TensionForceMeasurementCapability1</li><li>Qualities-Physical.EModulus1</li><li>Qualities-Physical.TensionForce1</li><li>Qualities-Physical.reflectance1</li><li>Qualities-Physical.RelaxtionCap1</li></ul></details></div>
             <div id="BFO_0000004">
               <details open><summary>bfo:independent_continuant</summary>
                 <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:independent_continuant ⊑ bfo:continuant</li><li>bfo:independent_continuant ⊑ ∀ (bfo:continuant_part_of_at_some_time .bfo:independent_continuant)</li><li>bfo:independent_continuant ⊓ bfo:generically_dependent_continuant ⊑ ⊥</li><li>bfo:independent_continuant ⊓ bfo:specifically_dependent_continuant ⊑ ⊥</li></ul></details></div>
+                <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.Sun</li><li>Qualities-Physical.Specimen1</li><li>Qualities-Physical.UniversalTestingMachine1</li></ul></details></div>
                 <div id="BFO_0000040">
                   <details open><summary>bfo:material_entity</summary>
                     <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:material_entity ⊑ bfo:independent_continuant</li><li>bfo:material_entity ⊑ ∀ (bfo:continuant_part_of_at_some_time .bfo:material_entity)</li><li>bfo:material_entity ⊑ ∀ (bfo:has_continuant_part_at_some_time .bfo:site ⊔ bfo:continuant_fiat_boundary ⊔ bfo:material_entity)</li><li>bfo:material_entity ⊓ bfo:immaterial_entity ⊑ ⊥</li></ul></details></div>
+                    <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.Sun</li><li>Qualities-Physical.Specimen1</li><li>Qualities-Physical.UniversalTestingMachine1</li></ul></details></div>
                     <div id="BFO_0000030">
                       <details open><summary>bfo:object</summary>
                         <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:object ⊑ bfo:material_entity</li></ul></details></div>
+                        <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.Specimen1</li><li>Qualities-Physical.UniversalTestingMachine1</li></ul></details></div>
                         <div id="MaterialArtifact">
                           <details open><summary><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></summary>
                             <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ↔ bfo:object ⊓ ∃ (bfo:bearer_of .<a href='https://spec.industrialontologies.org/ontology/core/Core/DesignedFunction'>core:DesignedFunction</a>)</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ⊑ bfo:object</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ⊓ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊑ ⊥</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ⊓ <a href='https://spec.industrialontologies.org/ontology/core/Core/Organization'>core:Organization</a> ⊑ ⊥</li></ul></details></div>
+                            <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.UniversalTestingMachine1</li></ul></details></div>
                             <div id="Actuator">
                               <details open><summary><a href='Example.html#Actuator'>ex:Actuator</a></summary>
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Actuator'>ex:Actuator</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
@@ -245,15 +251,19 @@ div.axiom ul li {
             <div id="BFO_0000020">
               <details open><summary>bfo:specifically_dependent_continuant</summary>
                 <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:specifically_dependent_continuant ⊑ bfo:continuant</li><li>bfo:specifically_dependent_continuant ⊓ bfo:generically_dependent_continuant ⊑ ⊥</li><li>bfo:specifically_dependent_continuant ⊓ bfo:independent_continuant ⊑ ⊥</li></ul></details></div>
+                <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.TensionForceMeasurementCapability1</li><li>Qualities-Physical.EModulus1</li><li>Qualities-Physical.TensionForce1</li><li>Qualities-Physical.reflectance1</li><li>Qualities-Physical.RelaxtionCap1</li></ul></details></div>
                 <div id="BFO_0000017">
                   <details open><summary>bfo:realizable_entity</summary>
                     <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:realizable_entity ⊑ bfo:specifically_dependent_continuant</li><li>bfo:realizable_entity ⊓ bfo:quality ⊑ ⊥</li></ul></details></div>
+                    <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.TensionForceMeasurementCapability1</li><li>Qualities-Physical.EModulus1</li><li>Qualities-Physical.RelaxtionCap1</li></ul></details></div>
                     <div id="BFO_0000016">
                       <details open><summary>bfo:disposition</summary>
                         <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:disposition ⊑ bfo:realizable_entity</li><li>bfo:disposition ⊓ bfo:role ⊑ ⊥</li></ul></details></div>
+                        <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.TensionForceMeasurementCapability1</li><li>Qualities-Physical.EModulus1</li><li>Qualities-Physical.RelaxtionCap1</li></ul></details></div>
                         <div id="Capability">
                           <details open><summary><a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></summary>
                             <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a> ⊑ bfo:disposition</li></ul></details></div>
+                            <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.TensionForceMeasurementCapability1</li><li>Qualities-Physical.EModulus1</li><li>Qualities-Physical.RelaxtionCap1</li></ul></details></div>
                             <div id="MotionCapability">
                               <details open><summary><a href='Example.html#MotionCapability'>ex:MotionCapability</a></summary>
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MotionCapability'>ex:MotionCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul></details></div>
@@ -297,9 +307,11 @@ div.axiom ul li {
         <div id="BFO_0000003">
           <details open><summary>bfo:occurrent</summary>
             <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:occurrent ⊑ bfo:entity</li><li>bfo:occurrent ⊓ bfo:continuant ⊑ ⊥</li></ul></details></div>
+            <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.ElasticResponse1</li><li>Qualities-Physical.LightReflexion1</li><li>Qualities-Physical.SunExposureProcess1</li><li>Qualities-Physical.Pull1</li><li>Qualities-Physical.Pull2</li><li>Qualities-Physical.SunLigthingProcess1</li><li>Qualities-Physical.TensionRate1</li></ul></details></div>
             <div id="BFO_0000015">
               <details open><summary>bfo:process</summary>
                 <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:process ⊑ bfo:occurrent</li><li>bfo:process ⊑ ∀ (bfo:occurrent_part_of .bfo:process)</li><li>bfo:process ⊑ ∀ (bfo:temporal_part_of .bfo:process)</li><li>bfo:process ⊑ ∀ (bfo:has_occurrent_part .bfo:process ⊔ bfo:process_boundary)</li><li>bfo:process ⊓ bfo:temporal_region ⊑ ⊥</li><li>bfo:process ⊓ bfo:process_boundary ⊑ ⊥</li><li>bfo:process ⊓ bfo:spatiotemporal_region ⊑ ⊥</li></ul></details></div>
+                <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.ElasticResponse1</li><li>Qualities-Physical.LightReflexion1</li><li>Qualities-Physical.SunExposureProcess1</li><li>Qualities-Physical.Pull1</li><li>Qualities-Physical.Pull2</li><li>Qualities-Physical.SunLigthingProcess1</li></ul></details></div>
                 <div id="ProcessProfile">
                   <details open><summary><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></summary>
                     <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a> ⊑ bfo:process</li></ul></details></div>

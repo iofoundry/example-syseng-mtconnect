@@ -2,30 +2,41 @@ from iof_render import dl_render_class, dl_render_terminology
 import treelib as tl
 
 
-def _render_tree(tree, node = None, level = 0):
+def _render_tree(tree, entities, node = None, level = 0):
   s = []
   node = tree[tree.root] if (node is None) else node
   div = f"""<div id="{node.identifier.split('.')[1]}">"""
   indent = '  ' * level
   s.append(f"{indent}{div}\n{indent}  <details open><summary>{node.tag}</summary>\n")
   if node.data:
-    axioms = "".join([f"""<li>{_}</li>""" for _ in node.data])
+    axioms = "".join([f"""<li>{_}</li>""" for _ in node.data['axioms']])
     s.append(f"""{indent}    <div class="axiom"><details><summary>Axioms</summary><ul>{axioms}</ul></details></div>\n""")
+    klass = node.data['class']
+    instances = klass.instances()
+    if instances:
+      values = []
+      for i in instances:
+        if entities and i in entities:
+          values.append(f"""<li><a href='diagrams/{i.name}.html'>{i.name}</a></li>""")
+        else:
+          values.append(f"""<li>{i}</li>""")
+      s.append(f"""{indent}    <div class="axiom"><details><summary>Instances</summary><ul>{''.join(values)}</ul></details></div>\n""")
+      
   for child in tree.children(node.identifier):
-    s.extend(_render_tree(tree, child, level + 2))
+    s.extend(_render_tree(tree, entities, child, level + 2))
   s.append(f"{indent}  </details>\n{indent}</div>\n")
   return s
 
-def _render_ontology(items, level = 1) -> str:
+def _render_ontology(items, entities, level = 1) -> str:
   s = ''
   if isinstance(items, dict):
-    s = "\n".join([f"<h{level} id=\"{k}\">" + k + f"</h{level}>\n" + _render_ontology(v, level + 1) for k, v in items.items()])
+    s = "\n".join([f"<h{level} id=\"{k}\">" + k + f"</h{level}>\n" + _render_ontology(v, entities, level + 1) for k, v in items.items()])
   elif isinstance(items, list):
     s = '<ul><li class="axiom">' + \
       "</li>\n<li class=\"axiom\">".join(items) +  \
       '</li></ul>'
   elif isinstance(items, tl.Tree):
-    s = f"""<div class="tree">{''.join(_render_tree(items))}</div>"""
+    s = f"""<div class="tree">{''.join(_render_tree(items, entities))}</div>"""
   else:
     s = items
   return s
@@ -108,7 +119,7 @@ def render_footer(file):
 def render_terminology(name, ontology):
   with open(f"{name}.html", 'w') as f:
     render_header(f, f"{ontology.name} Ontology")
-    f.write(_render_ontology(dl_render_terminology(ontology, show_characteristics = True)))
+    f.write(_render_ontology(dl_render_terminology(ontology, show_characteristics = True), None))
     render_footer(f)
 
 
@@ -130,7 +141,7 @@ def render_vendor(name, ontology, entities):
     f.write("""    </ul>
     <div class='indent'>
 """)
-    f.write(_render_ontology(dl_render_terminology(ontology, show_characteristics = True)))
+    f.write(_render_ontology(dl_render_terminology(ontology, show_characteristics = True), entities))
     f.write("\n    </div>")
     render_footer(f)
   
