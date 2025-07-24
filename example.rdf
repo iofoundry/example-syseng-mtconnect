@@ -55,7 +55,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Enclosure">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Enclosure</rdfs:label>
 	</owl:Class>
 	

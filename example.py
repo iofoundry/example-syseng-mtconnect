@@ -104,13 +104,13 @@ with Example:
       """A turning capability in the IOF ontology."""
       label = owl.locstr("Turning Capability", "en")
 
-  class Enclosure(Core.MaterialArtifact):
-      """An enclosure in the IOF ontology."""
-      label = owl.locstr("Enclosure", "en")
-    
   class Structure(Core.MaterialArtifact):
       """A structure in the IOF ontology."""
       label = owl.locstr("Structure", "en")
+    
+  class Enclosure(Structure):
+      """An enclosure in the IOF ontology."""
+      label = owl.locstr("Enclosure", "en")
     
   class Room(BFO.site):
     """A room in the IOF ontology."""
