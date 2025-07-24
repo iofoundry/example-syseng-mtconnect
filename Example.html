@@ -65,24 +65,24 @@ div.axiom ul li {
   </head>
   <body>
 <h1 id="Object properties">Object properties</h1>
+<h2 id="conformsTo">conformsTo</h2>
+<ul><li class="axiom"></li></ul>
 <h2 id="connectedTo">connectedTo</h2>
 <ul><li class="axiom">domain: bfo:material_entity</li>
 <li class="axiom">range: bfo:material_entity</li>
 <li class="axiom">inverse: <a href='Example.html#connectedTo'>ex:connectedTo</a></li>
 <li class="axiom">Symmetric</li></ul>
-<h2 id="hasKinematicParent">hasKinematicParent</h2>
-<ul><li class="axiom">domain: bfo:material_entity</li>
-<li class="axiom">range: bfo:material_entity</li></ul>
 <h2 id="hasKinematicChild">hasKinematicChild</h2>
 <ul><li class="axiom">domain: bfo:material_entity</li>
 <li class="axiom">range: bfo:material_entity</li></ul>
-<h2 id="satisfiedBy">satisfiedBy</h2>
-<ul><li class="axiom"></li></ul>
-<h2 id="conformsTo">conformsTo</h2>
-<ul><li class="axiom"></li></ul>
+<h2 id="hasKinematicParent">hasKinematicParent</h2>
+<ul><li class="axiom">domain: bfo:material_entity</li>
+<li class="axiom">range: bfo:material_entity</li></ul>
 <h2 id="hasUnit">hasUnit</h2>
 <ul><li class="axiom">domain: <a href='https://spec.industrialontologies.org/ontology/core/Core/ValueExpression'>core:ValueExpression</a></li>
 <li class="axiom">range: unit:Unit</li></ul>
+<h2 id="satisfiedBy">satisfiedBy</h2>
+<ul><li class="axiom"></li></ul>
 <h1 id="Classes">Classes</h1>
 <div class="tree"><div id="Thing">
   <details open><summary>_:Thing</summary>
@@ -130,24 +130,24 @@ div.axiom ul li {
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Door'>ex:Door</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
                               </details>
                             </div>
-                            <div id="ProductPart">
-                              <details open><summary><a href='Example.html#ProductPart'>ex:ProductPart</a></summary>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
-                              </details>
-                            </div>
                             <div id="Enclosure">
                               <details open><summary><a href='Example.html#Enclosure'>ex:Enclosure</a></summary>
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Enclosure'>ex:Enclosure</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
                               </details>
                             </div>
-                            <div id="Structure">
-                              <details open><summary><a href='Example.html#Structure'>ex:Structure</a></summary>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Structure'>ex:Structure</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
+                            <div id="ProductPart">
+                              <details open><summary><a href='Example.html#ProductPart'>ex:ProductPart</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
                               </details>
                             </div>
                             <div id="Sensor">
                               <details open><summary><a href='Example.html#Sensor'>ex:Sensor</a></summary>
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Sensor'>ex:Sensor</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
+                              </details>
+                            </div>
+                            <div id="Structure">
+                              <details open><summary><a href='Example.html#Structure'>ex:Structure</a></summary>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Structure'>ex:Structure</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a></li></ul></details></div>
                               </details>
                             </div>
                           </details>
@@ -168,6 +168,26 @@ div.axiom ul li {
                             <div id="EngineeredSystem">
                               <details open><summary><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></summary>
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ↔ <a href='https://spec.industrialontologies.org/ontology/core/Core/System'>core:System</a> ⊓ ∃ (bfo:bearer_of .<a href='https://spec.industrialontologies.org/ontology/core/Core/DesignedFunction'>core:DesignedFunction</a>)</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/System'>core:System</a></li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ <a href='https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact'>core:MaterialArtifact</a> ⊑ ⊥</li><li><a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ <a href='https://spec.industrialontologies.org/ontology/core/Core/Organization'>core:Organization</a> ⊑ ⊥</li></ul></details></div>
+                                <div id="ControlSystem">
+                                  <details open><summary><a href='Example.html#ControlSystem'>ex:ControlSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
+                                    <div id="ControlSystemPath">
+                                      <details open><summary><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a></summary>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a> ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul></details></div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="ElectricalSystem">
+                                  <details open><summary><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
+                                  </details>
+                                </div>
+                                <div id="HydraulicSystem">
+                                  <details open><summary><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
+                                  </details>
+                                </div>
                                 <div id="MotionSystem">
                                   <details open><summary><a href='Example.html#MotionSystem'>ex:MotionSystem</a></summary>
                                     <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li><li><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a> ⊓ ∃ (<a href='https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes'>core:hasComponentPartAtAllTimes</a> .<a href='Example.html#Actuator'>ex:Actuator</a>)</li></ul></details></div>
@@ -183,14 +203,9 @@ div.axiom ul li {
                                     </div>
                                   </details>
                                 </div>
-                                <div id="ControlSystem">
-                                  <details open><summary><a href='Example.html#ControlSystem'>ex:ControlSystem</a></summary>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
-                                    <div id="ControlSystemPath">
-                                      <details open><summary><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a></summary>
-                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a> ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul></details></div>
-                                      </details>
-                                    </div>
+                                <div id="LubricationSystem">
+                                  <details open><summary><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
                                   </details>
                                 </div>
                                 <div id="Machine">
@@ -203,24 +218,9 @@ div.axiom ul li {
                                     </div>
                                   </details>
                                 </div>
-                                <div id="ElectricalSystem">
-                                  <details open><summary><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a></summary>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
-                                  </details>
-                                </div>
-                                <div id="HydraulicSystem">
-                                  <details open><summary><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a></summary>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
-                                  </details>
-                                </div>
                                 <div id="PneumaticSystem">
                                   <details open><summary><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a></summary>
                                     <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
-                                  </details>
-                                </div>
-                                <div id="LubricationSystem">
-                                  <details open><summary><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a></summary>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem'>core:EngineeredSystem</a></li></ul></details></div>
                                   </details>
                                 </div>
                               </details>
@@ -267,11 +267,6 @@ div.axiom ul li {
                             <div id="MotionCapability">
                               <details open><summary><a href='Example.html#MotionCapability'>ex:MotionCapability</a></summary>
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MotionCapability'>ex:MotionCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul></details></div>
-                                <div id="PrismaticMotionCapability">
-                                  <details open><summary><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a></summary>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul></details></div>
-                                  </details>
-                                </div>
                                 <div id="RevoluteMotionCapability">
                                   <details open><summary><a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a></summary>
                                     <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul></details></div>
@@ -280,6 +275,11 @@ div.axiom ul li {
                                         <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ContinuousRevoluteCapability'>ex:ContinuousRevoluteCapability</a> ⊑ <a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a></li></ul></details></div>
                                       </details>
                                     </div>
+                                  </details>
+                                </div>
+                                <div id="PrismaticMotionCapability">
+                                  <details open><summary><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a></summary>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul></details></div>
                                   </details>
                                 </div>
                               </details>
@@ -318,11 +318,6 @@ div.axiom ul li {
                     <div id="Velocity">
                       <details open><summary><a href='Example.html#Velocity'>ex:Velocity</a></summary>
                         <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Velocity'>ex:Velocity</a> ⊑ <a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></li></ul></details></div>
-                        <div id="RevoluteVelocity">
-                          <details open><summary><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a></summary>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
-                          </details>
-                        </div>
                         <div id="PrismaticVelocity">
                           <details open><summary><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></summary>
                             <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
@@ -331,6 +326,11 @@ div.axiom ul li {
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li></ul></details></div>
                               </details>
                             </div>
+                          </details>
+                        </div>
+                        <div id="RevoluteVelocity">
+                          <details open><summary><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a></summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
                           </details>
                         </div>
                         <div id="TranslationalVelocity">
