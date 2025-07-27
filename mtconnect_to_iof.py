@@ -178,12 +178,12 @@ class MTConnectToIOF:
               spec_name = ''.join([r.capitalize() for r in [spec_name, spec.get('subType', None)] if r])
               if issubclass(di_cls, BFO.quality):
                 quality = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
-                quality.is_a.append(di_cls & Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
+                quality.is_a.append(Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
                     Core.hasSimpleExpressionValue.some(const)))
                 type_cls.is_a.append(Core.hasQuality.some(quality))
               else:
                 profile = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
-                profile.is_a.append(di_cls & Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
+                profile.is_a.append(Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
                         Core.hasSimpleExpressionValue.some(const)))
                 type_cls.is_a.append(BFO.participates_in_at_some_time.some(profile))
   
