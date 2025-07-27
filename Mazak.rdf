@@ -191,6 +191,10 @@
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
 							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -241,6 +245,10 @@
 										</owl:withRestrictions>
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -316,6 +324,10 @@
 										</owl:withRestrictions>
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -400,6 +412,10 @@
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
 							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -475,6 +491,10 @@
 										</owl:withRestrictions>
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -577,6 +597,10 @@
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
 							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -607,6 +631,10 @@
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
 							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -636,6 +664,10 @@
 										</owl:withRestrictions>
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -740,6 +772,10 @@
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
 							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -770,6 +806,10 @@
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
 							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -799,6 +839,10 @@
 										</owl:withRestrictions>
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -903,6 +947,10 @@
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
 							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -933,6 +981,10 @@
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
 							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -962,6 +1014,10 @@
 										</owl:withRestrictions>
 									</rdfs:Datatype>
 								</owl:someValuesFrom>
+							</owl:Restriction>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
+								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>

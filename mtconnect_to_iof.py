@@ -15,7 +15,8 @@ Units = {
   'MILLIMETER': QUDT.MilliM,
   'DEGREE': QUDT.DEG,
   'MILLIMETER/SECOND': QUDT.MilliM_PER_SEC,
-  'REVOLUTION/MINUTE': QUDT.RPM
+  'REVOLUTION/MINUTE': QUDT.RPM,
+  'CELSIUS': QUDT.DEG_C
 }
 
 Components = {
@@ -179,12 +180,12 @@ class MTConnectToIOF:
               if issubclass(di_cls, BFO.quality):
                 quality = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 quality.is_a.append(Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
-                    Core.hasSimpleExpressionValue.some(const)))
+                    Core.hasSimpleExpressionValue.some(const) & Example.hasUnit.some(QUDT.Unit)))
                 type_cls.is_a.append(Core.hasQuality.some(quality))
               else:
                 profile = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 profile.is_a.append(Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
-                        Core.hasSimpleExpressionValue.some(const)))
+                        Core.hasSimpleExpressionValue.some(const) & Example.hasUnit.some(QUDT.Unit)))
                 type_cls.is_a.append(BFO.participates_in_at_some_time.some(profile))
   
   @log_indent
