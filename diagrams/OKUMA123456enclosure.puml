@@ -37,7 +37,7 @@ individual(o6, data:[[./OKUMA123456AxesZ4.html OKUMA123456AxesZ4]], vendor:[[../
 property(o0, "core:hasQuality", o1)
 property(o0, "des:hasName", o2)
 data(o2, "des:hasTextualName", "enclosure")
-property(o3, "core:hasComponentPartAtAllTimes", o0)
+property(o3, "core:hasComponentPartAtSomeTime", o0)
 property(o4, "ex:connectedTo", o0)
 property(o5, "ex:connectedTo", o0)
 property(o6, "ex:connectedTo", o0)

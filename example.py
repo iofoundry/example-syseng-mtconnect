@@ -2,6 +2,9 @@ import owlready2 as owl
 import os
 import re
 
+if os.path.exists("example.rdf"):
+    os.remove("example.rdf")
+
 from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example, QUDT
 
 Example.imported_ontologies = [Core, Des, Qual, QualPhysical]
@@ -50,12 +53,12 @@ with Example:
   class Machine(Core.EngineeredSystem):
       """A machine in the IOF ontology."""
       label = owl.locstr("Machine", "en")
-      is_a = [Core.EngineeredSystem & Core.hasComponentPartAtAllTimes.some(MotionSystem)]
+      is_a = [Core.EngineeredSystem & Core.hasComponentPartAtSomeTime.some(MotionSystem)]
 
   class NumericallyControlledMachine(Machine):
       label = owl.locstr("Numerically Controlled Machine", "en")
-      is_a = [Machine & Core.hasComponentPartAtAllTimes.some(ControlSystem)]
-    
+      is_a = [Machine & Core.hasComponentPartAtSomeTime.some(ControlSystem)]
+
   class ControlSystemPath(ControlSystem):
       """A control system path in the IOF ontology."""
       label = owl.locstr("Control System Path", "en")

@@ -26,33 +26,33 @@
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 particular</rdfs:label>
 		<Core:hasCapability rdf:resource="http://example.org/data/OKUMA123456TurningCapability"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesB"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesC1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesC2"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesC3"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesC6"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesX"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesY"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ4"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456Controller"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456LAux1BarFeederSystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456LAux1LoaderSystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456LAux1ToolingDeliverySystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456LAux1WasteDisposalSystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456Systems1CoolantSystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456Systems1ElectricSystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456Systems1HydraulicSystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456Systems1LubricationSystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456Systems1PneumaticSystem1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456structb_axis"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456structc1_axis"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456structc2_axis"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456structx_axis"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456structy_axis"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesB"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC2"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC3"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC6"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesX"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesY"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ4"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456Controller"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456LAux1BarFeederSystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456LAux1LoaderSystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456LAux1ToolingDeliverySystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456LAux1WasteDisposalSystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456Systems1CoolantSystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456Systems1ElectricSystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456Systems1HydraulicSystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456Systems1LubricationSystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456Systems1PneumaticSystem1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456structb_axis"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456structc1_axis"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456structc2_axis"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456structx_axis"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456structy_axis"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/OKUMA123456MillingCapability"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name1"/>
 	</owl:NamedIndividual>
@@ -405,7 +405,7 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Controller">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Controller"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Controller particular</rdfs:label>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/OKUMA123456Controllerpath"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/OKUMA123456Controllerpath"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name18"/>
 	</owl:NamedIndividual>
 	
@@ -678,49 +678,49 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/okumamult_u3000axesxdesign1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXDesign"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMAMULT_U3000AxesXDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesXLengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesXLinear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesXLinear_forceMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesXVelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesXVelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesXVelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesXVelocityRapidMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesXLengthNominal"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesXLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesXLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesXVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesXVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesXVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesXVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/okumamult_u3000axesydesign1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYDesign"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMAMULT_U3000AxesYDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesYLengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesYLinear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesYLinear_forceMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesYVelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesYVelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesYVelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesYVelocityRapidMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesYLengthNominal"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesYLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesYLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesYVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesYVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesYVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesYVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/okumamult_u3000axesz1design1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMAMULT_U3000AxesZ1Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ1LengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ1Linear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ1Linear_forceMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ1VelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ1VelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ1VelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ1VelocityRapidMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ1LengthNominal"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ1Linear_forceMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ1Linear_forceMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ1VelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ1VelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ1VelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ1VelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/okumamult_u3000axesz4design1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMAMULT_U3000AxesZ4Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ4LengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ4Linear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ4Linear_forceMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ4VelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ4VelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ4VelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/OKUMA123456AxesZ4VelocityRapidMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ4LengthNominal"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ4Linear_forceMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ4Linear_forceMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ4VelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ4VelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ4VelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesZ4VelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 
 </rdf:RDF>

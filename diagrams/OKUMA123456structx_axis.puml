@@ -34,7 +34,7 @@ individual(o3, data:[[./OKUMA123456AxesX.html OKUMA123456AxesX]], vendor:[[../OK
 individual(o4, data:[[./OKUMA123456AxesY.html OKUMA123456AxesY]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesY OKUMAMULT_U3000AxesY]])
 property(o0, "des:hasName", o1)
 data(o1, "des:hasTextualName", "x_axis")
-property(o2, "core:hasComponentPartAtAllTimes", o0)
+property(o2, "core:hasComponentPartAtSomeTime", o0)
 property(o3, "ex:connectedTo", o0)
 property(o4, "ex:connectedTo", o0)
 @enduml

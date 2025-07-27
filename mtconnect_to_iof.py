@@ -76,7 +76,7 @@ Roles = {
 }
 
 Separate = {
-  'Room'
+  Example.Room
 }
 
 Namespaces = {
@@ -209,7 +209,7 @@ class MTConnectToIOF:
           for des in spec:
             logger.info(f"Creating class particular specifications for {spec_name} value {spec.text}")
             exp = Core.ValueExpression(spec_name + des.tag.split('}')[-1])
-            ds.hasValueExpressionAtAllTimes.append(exp)
+            ds.hasValueExpressionAtSomeTime.append(exp)
             exp.hasSimpleExpressionValue.append(float(des.text))
             
             units = Units.get(spec.get("units", None), None)
@@ -283,8 +283,10 @@ class MTConnectToIOF:
       self.particulars[id] = partic
       partic.label = owl.locstr(' '.join(pnames) + ' particular', "en")
       
-      if parent and not type_cls.name in Separate:
-        parent.hasComponentPartAtAllTimes.append(partic)
+      if parent and not any([issubclass(type_cls, _) for _ in Separate]):
+        parent.hasComponentPartAtSomeTime.append(partic)
+      else:
+        logger.info(f"{partic} is not a component of {parent} as it is in Separate")
         
       text_name = element.get("name", id)
 
@@ -409,8 +411,10 @@ class MTConnectToIOF:
       with self.Vendor:
         for part in parts:
           logger.info(f"{type_cls}: Adding subclass axiom for #{part}")
-          if not part.name in Separate:
-            type_cls.is_a.append(Core.hasComponentPartAtAllTimes.some(part))
+          if not any([issubclass(part, _) for _ in Separate]):
+            type_cls.is_a.append(Core.hasComponentPartAtSomeTime.some(part))
+          else:
+            logger.info(f"  {part} is a not component of {parent} since it is in Separate")
 
     if type_cls:
       return [type_cls]

@@ -34,5 +34,5 @@ individual(o3, data:[[./Mazak317641baseC1.html Mazak317641baseC1]], vendor:[[../
 property(o0, "core:hasQuality", o1)
 property(o0, "des:hasName", o2)
 data(o2, "des:hasTextualName", "Cmotor")
-property(o3, "core:hasComponentPartAtAllTimes", o0)
+property(o3, "core:hasComponentPartAtSomeTime", o0)
 @enduml

@@ -62,6 +62,9 @@ statements = [[x[0], Core.hasComponentPartAtAllTimes, x[1]] \
 gen = GenerateDiagram(f"{Vendor.name}Mere", statements, Vendor)
 gen.generate()
 
+#owl.sync_reasoner_pellet(infer_property_values = True, infer_data_property_values = True, debug = 10)
+#print(Vendor.classes)
+
 for part in entities:
   logger.info(f"Generating diagram for {part}")  
   raw = owl.default_world.sparql("""select distinct ?p ?o ?p2 ?o2 { ?? ?p ?o . ?o ?p2 ?o2 . }""", [part])
@@ -79,3 +82,4 @@ for part in entities:
     statements.append([x[0], x[1], part])
   gen = GenerateDiagram(f"{part.name}", statements, Vendor)
   gen.generate()
+  

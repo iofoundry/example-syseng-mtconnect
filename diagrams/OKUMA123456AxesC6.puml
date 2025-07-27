@@ -36,5 +36,5 @@ property(o0, "core:measuresAtSomeTime", o1)
 property(o0, "core:measuresAtSomeTime", o2)
 property(o0, "des:hasName", o3)
 data(o3, "des:hasTextualName", "C6")
-property(o4, "core:hasComponentPartAtAllTimes", o0)
+property(o4, "core:hasComponentPartAtSomeTime", o0)
 @enduml

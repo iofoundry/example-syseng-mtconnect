@@ -48,5 +48,5 @@ property(o5, "des:hasName", o6)
 property(o0, "ex:connectedTo", o7)
 data(o7, "rdfs:label", "OKUMA 123456 struct c2_axis particular")
 property(o7, "des:hasName", o8)
-property(o9, "core:hasComponentPartAtAllTimes", o0)
+property(o9, "core:hasComponentPartAtSomeTime", o0)
 @enduml

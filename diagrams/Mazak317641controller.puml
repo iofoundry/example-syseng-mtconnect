@@ -32,10 +32,10 @@ individual(o1, data:[[./Mazak317641controllerpath.html Mazak317641controllerpath
 individual(o2, data:name23, des:Name)
 individual(o3, data:name22, des:Name)
 individual(o4, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
-property(o0, "core:hasComponentPartAtAllTimes", o1)
+property(o0, "core:hasComponentPartAtSomeTime", o1)
 data(o1, "rdfs:label", "Mazak 317641 controller path particular")
 property(o1, "des:hasName", o2)
 property(o0, "des:hasName", o3)
 data(o3, "des:hasTextualName", "controller")
-property(o4, "core:hasComponentPartAtAllTimes", o0)
+property(o4, "core:hasComponentPartAtSomeTime", o0)
 @enduml

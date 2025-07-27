@@ -32,5 +32,5 @@ individual(o1, data:name26, des:Name)
 individual(o2, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
 property(o0, "des:hasName", o1)
 data(o1, "des:hasTextualName", "electric")
-property(o2, "core:hasComponentPartAtAllTimes", o0)
+property(o2, "core:hasComponentPartAtSomeTime", o0)
 @enduml

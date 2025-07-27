@@ -26,28 +26,27 @@
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800i"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 particular</rdfs:label>
 		<Core:hasCapability rdf:resource="http://example.org/data/Mazak317641TurningCapability"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641auxiliariesenvironmental"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseB"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseX"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseY"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZ"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641controller"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641door"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641enclosure"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructTABLE"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641partspartocc"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641resourcesmaterialsstock"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemscoolant"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemselectric"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemshydraulic"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemslubrication"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641systemspneumatic"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseB"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC1"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC2"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseX"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseY"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZ"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641controller"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641door"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641enclosure"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641mstructTABLE"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641partspartocc"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641resourcesmaterialsstock"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641systemscoolant"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641systemselectric"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641systemshydraulic"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641systemslubrication"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641systemspneumatic"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641MillingCapability"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name1"/>
 	</owl:NamedIndividual>
@@ -76,7 +75,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base B particular</rdfs:label>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641enclosure"/>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBBmotor"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseBBmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseBRevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseBANGLE_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasebdesign1"/>
@@ -124,7 +123,7 @@
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base C1 particular</rdfs:label>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1Cmotor"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC1Cmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseC1ContinuousRevoluteCapability"/>
 		<Core:measuresAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC1ROTARY_VELOCITY_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasec1design1"/>
@@ -168,7 +167,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base C2 particular</rdfs:label>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructTABLE"/>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructTRUNDLE"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2C2motor"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC2C2motor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseC2RevoluteMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseC2ANGLE_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasec2design1"/>
@@ -217,8 +216,8 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base X particular</rdfs:label>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641enclosure"/>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXballscrew"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXmotor"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXXballscrew"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXXmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseXPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseXPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasexdesign1"/>
@@ -299,8 +298,8 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Y particular</rdfs:label>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructX_AXIS"/>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYballscrew"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYmotor"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYYballscrew"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYYmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseYPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseYPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibaseydesign1"/>
@@ -381,8 +380,8 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 base Z particular</rdfs:label>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructY_AXIS"/>
 		<onto:connectedTo rdf:resource="http://example.org/data/Mazak317641mstructZ_AXIS"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZballscrew"/>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZmotor"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZZballscrew"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZZmotor"/>
 		<Core:hasFunction rdf:resource="http://example.org/data/Mazak317641baseZPrismaticMotionCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641baseZPOSITION_ACTUAL"/>
 		<Core:prescribedBy rdf:resource="http://example.org/data/mazak800ibasezdesign1"/>
@@ -461,7 +460,7 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641controller">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800icontroller"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 317641 controller particular</rdfs:label>
-		<Core:hasComponentPartAtAllTimes rdf:resource="http://example.org/data/Mazak317641controllerpath"/>
+		<Core:hasComponentPartAtSomeTime rdf:resource="http://example.org/data/Mazak317641controllerpath"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name22"/>
 	</owl:NamedIndividual>
 	
@@ -568,77 +567,77 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasebdesign1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseBDesign"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseBDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBAngleMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBAngleMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBTorqueMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseBTorqueMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseBAngleMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseBAngleMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseBTorqueMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseBTorqueMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasec1design1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseC1Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1Rotary_velocityMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC1Rotary_velocityMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC1Rotary_velocityMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC1Rotary_velocityMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasec2design1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseC2Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseC2Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2AngleMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2AngleMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2TorqueMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseC2TorqueMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC2AngleMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC2AngleMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC2TorqueMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseC2TorqueMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasexdesign1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseXDesign"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseXDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXLengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXVelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXVelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXVelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXVelocityRapidMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXLengthNominal"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibaseydesign1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseYDesign"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseYDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYLengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYVelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYVelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYVelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYVelocityRapidMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYLengthNominal"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800ibasezdesign1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800ibaseZDesign"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800ibaseZDesign particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZLengthNominal"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityProgrammedMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityProgrammedMinimum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityRapidMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZVelocityRapidMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZLengthNominal"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZVelocityProgrammedMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZVelocityProgrammedMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZVelocityRapidMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZVelocityRapidMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800imotorlinear_force5200design1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iMotorLINEAR_FORCE5200Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXmotorLinear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseXXmotorLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXXmotorLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseXXmotorLinear_forceMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800imotorlinear_force5200design2">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iMotorLINEAR_FORCE5200Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYmotorLinear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseYYmotorLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYYmotorLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseYYmotorLinear_forceMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/mazak800imotorlinear_force9600design1">
 		<rdf:type rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE9600Design"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak800iMotorLINEAR_FORCE9600Design particular</rdfs:label>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZmotorLinear_forceMaximum"/>
-		<Core:hasValueExpressionAtAllTimes rdf:resource="http://example.org/data/Mazak317641baseZZmotorLinear_forceMinimum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZZmotorLinear_forceMaximum"/>
+		<Core:hasValueExpressionAtSomeTime rdf:resource="http://example.org/data/Mazak317641baseZZmotorLinear_forceMinimum"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/name1">
