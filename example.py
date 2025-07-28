@@ -34,17 +34,17 @@ with Example:
   class MotionSystem(Core.EngineeredSystem):
       """A motion system in the IOF ontology."""
       label = owl.locstr("Motion System", "en")
-      is_a = [Core.EngineeredSystem & Core.hasComponentPartAtAllTimes.some(Actuator)]
+      is_a = [Core.hasComponentPartAtAllTimes.some(Actuator)]
     
   class LinearMotionSystem(MotionSystem):
       """A linear motion system in the IOF ontology."""
       label = owl.locstr("Linear Motion System", "en")
-      is_a = [MotionSystem & Core.hasCapability.some(PrismaticMotionCapability)]
+      is_a = [Core.hasCapability.some(PrismaticMotionCapability)]
     
   class RotaryMotionSystem(MotionSystem):
       """A rotary motion system in the IOF ontology."""
       label = owl.locstr("Rotary Motion System", "en")
-      is_a = [MotionSystem & Core.hasCapability.some(RevoluteMotionCapability)]
+      is_a = [Core.hasCapability.some(RevoluteMotionCapability)]
       
   class ControlSystem(Core.EngineeredSystem):
       """A control system in the IOF ontology."""
@@ -53,11 +53,11 @@ with Example:
   class Machine(Core.EngineeredSystem):
       """A machine in the IOF ontology."""
       label = owl.locstr("Machine", "en")
-      is_a = [Core.EngineeredSystem & Core.hasComponentPartAtSomeTime.some(MotionSystem)]
+      is_a = [Core.hasComponentPartAtSomeTime.some(MotionSystem)]
 
   class NumericallyControlledMachine(Machine):
       label = owl.locstr("Numerically Controlled Machine", "en")
-      is_a = [Machine & Core.hasComponentPartAtSomeTime.some(ControlSystem)]
+      is_a = [Core.hasComponentPartAtSomeTime.some(ControlSystem)]
 
   class ControlSystemPath(ControlSystem):
       """A control system path in the IOF ontology."""

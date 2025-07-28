@@ -67,16 +67,10 @@
 	<owl:Class rdf:about="http://example.org/ontology/LinearMotionSystem">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/MotionSystem"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/MotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasCapability"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/ontology/PrismaticMotionCapability"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasCapability"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/PrismaticMotionCapability"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Linear Motion System</rdfs:label>
 	</owl:Class>
@@ -89,16 +83,10 @@
 	<owl:Class rdf:about="http://example.org/ontology/Machine">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/ontology/MotionSystem"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MotionSystem"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Machine</rdfs:label>
 	</owl:Class>
@@ -116,16 +104,10 @@
 	<owl:Class rdf:about="http://example.org/ontology/MotionSystem">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/EngineeredSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/ontology/Actuator"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Actuator"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Motion System</rdfs:label>
 	</owl:Class>
@@ -138,16 +120,10 @@
 	<owl:Class rdf:about="http://example.org/ontology/NumericallyControlledMachine">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Machine"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/Machine">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/ontology/ControlSystem"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ControlSystem"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Numerically Controlled Machine</rdfs:label>
 	</owl:Class>
@@ -200,16 +176,10 @@
 	<owl:Class rdf:about="http://example.org/ontology/RotaryMotionSystem">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/MotionSystem"/>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="http://example.org/ontology/MotionSystem">
-					</rdf:Description>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasCapability"/>
-						<owl:someValuesFrom rdf:resource="http://example.org/ontology/RevoluteMotionCapability"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasCapability"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/RevoluteMotionCapability"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Rotary Motion System</rdfs:label>
 	</owl:Class>

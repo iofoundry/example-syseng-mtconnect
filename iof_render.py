@@ -217,13 +217,15 @@ def dl_render_concept_str(concept: Union[Construct, EntityClass]) -> str:
         # MIN:
         # MAX:
         if concept.type == owlready2.base.SOME:
-            return "%s (%s .%s)" % (_DL_SYNTAX.EXISTS, this(concept.property), this(concept.value))
+            oparan, cparen = ["(", ")"] if isinstance(concept.value, LogicalClassConstruct) else ["", ""]
+            return "%s %s .%s%s%s" % (_DL_SYNTAX.EXISTS, this(concept.property), oparan, this(concept.value), cparen)
         if concept.type == owlready2.base.ONLY:
-            return "%s (%s .%s)" % (_DL_SYNTAX.FORALL, this(concept.property), this(concept.value))
+            oparan, cparen = ["(", ")"] if isinstance(concept.value, LogicalClassConstruct) else ["", ""]
+            return "%s %s .%s%s%s" % (_DL_SYNTAX.FORALL, this(concept.property), oparan, this(concept.value), cparen)
         if concept.type == owlready2.base.VALUE:
             return "%s %s .{%s}" % (_DL_SYNTAX.EXISTS, this(concept.property), concept.value.name if isinstance(concept.value, owl.Thing) else concept.value)
         if concept.type == owlready2.base.HAS_SELF:
-            return "%s (%s .%s)" % (_DL_SYNTAX.EXISTS, this(concept.property), _DL_SYNTAX.SELF)
+            return "%s %s .%s" % (_DL_SYNTAX.EXISTS, this(concept.property), _DL_SYNTAX.SELF)
         if concept.type == owlready2.base.EXACTLY:
             return "%s %s %s .%s" % (_DL_SYNTAX.EQUAL, concept.cardinality, this(concept.property), this(concept.value))
         if concept.type == owlready2.base.MIN:
