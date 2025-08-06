@@ -1,3 +1,4 @@
+from owlready2 import owl, annotation
 from iof_render import dl_render_class, dl_render_terminology
 import treelib as tl
 
@@ -9,9 +10,19 @@ def _render_tree(tree, entities, node = None, level = 0):
   indent = '  ' * level
   s.append(f"{indent}{div}\n{indent}  <details open><summary>{node.tag}</summary>\n")
   if node.data:
+    s.append(f"""{indent}    <div><details><summary>Details</summary>\n""") 
+    klass = node.data['class']
+    properties = klass.get_properties(klass)
+    if properties:
+      s.append(f"""{indent}    <div class="axiom"><details><summary>Annotations</summary><ul>""")
+      values = sorted([(_1, str(_2[0])) for _1, _2 in 
+                       [(_.name, getattr(klass, _.name, None)) 
+                        for _ in properties if isinstance(_, annotation.AnnotationPropertyClass)] if _2])
+      for a, v in values: 
+        s.append(f"""{indent}      <li>{a}: {v}</li>""")
+      s.append(f"{indent}    </ul></details></div>\n")
     axioms = "".join([f"""<li>{_}</li>""" for _ in node.data['axioms']])
     s.append(f"""{indent}    <div class="axiom"><details><summary>Axioms</summary><ul>{axioms}</ul></details></div>\n""")
-    klass = node.data['class']
     instances = klass.instances()
     if instances:
       values = []
@@ -21,7 +32,7 @@ def _render_tree(tree, entities, node = None, level = 0):
         else:
           values.append(f"""<li>{i}</li>""")
       s.append(f"""{indent}    <div class="axiom"><details><summary>Instances</summary><ul>{''.join(values)}</ul></details></div>\n""")
-      
+    s.append(f"{indent}    </details></div>\n")      
   for child in tree.children(node.identifier):
     s.extend(_render_tree(tree, entities, child, level + 2))
   s.append(f"{indent}  </details>\n{indent}</div>\n")
