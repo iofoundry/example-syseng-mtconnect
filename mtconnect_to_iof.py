@@ -38,7 +38,9 @@ Components = {
   'Link': Example.Structure,
   'Enclosure': Example.Structure,
   'Environmental': Example.Room,
-  
+  'Door': Example.Door,
+  'Coolant': Example.CoolantSystem,
+
   'Axes': False,
   'Systems': False,
   'Parts': False,

@@ -47,10 +47,10 @@ for prop in BFO.object_properties():
     setattr(BFO, name, prop)
     
 
-Example = owl.get_ontology(f"file:///{path}/example.rdf")
-Example.base_iri = "http://example.org/ontology/"
 if os.path.exists(f"{path}/example.rdf"):
-  Example.load(only_local= True)
+  with open(f"{path}/example.rdf", "rb") as f:
+    Example = owl.get_ontology("http://example.org/ontology/").load(only_local = True, fileobj=f)
+  Example.base_iri = "http://example.org/ontology/"
 
 Data = owl.get_ontology("http://example.org/data/")
 Data.base_iri = "http://example.org/data/"

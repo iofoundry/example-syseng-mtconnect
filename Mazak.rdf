@@ -1048,7 +1048,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800idoor">
-		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Door"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i door</rdfs:label>
 	</owl:Class>
 	
@@ -1093,7 +1093,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800isystemscoolant">
-		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/CoolantSystem"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i systems coolant</rdfs:label>
 	</owl:Class>
 	

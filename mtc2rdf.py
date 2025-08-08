@@ -1,5 +1,4 @@
 import sys
-import requests
 import owlready2 as owl
 from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example, Data
 from mtconnect_to_iof import MTConnectToIOF

@@ -1085,7 +1085,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000Systems1CoolantSystem1">
-		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/CoolantSystem"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Systems1 CoolantSystem1</rdfs:label>
 	</owl:Class>
 	

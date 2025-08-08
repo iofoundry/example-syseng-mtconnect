@@ -5,14 +5,16 @@ import re
 if os.path.exists("example.rdf"):
     os.remove("example.rdf")
 
-from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example, QUDT
+from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, QUDT
 
+Example = owl.get_ontology("http://example.org/ontology/")
 Example.imported_ontologies = [Core, Des, Qual, QualPhysical]
 Example.label = [owl.locstr("Machine Ontology", "en")]
+Example.base_iri = "http://example.org/ontology/"
 
 with Example:
   """The IOF ontology for engineered systems and their components."""  
-  class Actuator(Core.MaterialArtifact):
+  class Actuator(BFO.object):
       label = owl.locstr("Actuator", "en")
       
   class MotionCapability(Core.Capability):
@@ -30,8 +32,8 @@ with Example:
   class ContinuousRevoluteCapability(RevoluteMotionCapability):
       """A continuous motion capability in the IOF ontology."""
       label = owl.locstr("Continuous Motion Capability", "en")
-          
-  class MotionSystem(Core.EngineeredSystem):
+
+  class MotionSystem(BFO.object):
       """A motion system in the IOF ontology."""
       label = owl.locstr("Motion System", "en")
       is_a = [Core.hasComponentPartAtAllTimes.some(Actuator)]
@@ -46,11 +48,11 @@ with Example:
       label = owl.locstr("Rotary Motion System", "en")
       is_a = [Core.hasCapability.some(RevoluteMotionCapability)]
       
-  class ControlSystem(Core.EngineeredSystem):
+  class ControlSystem(BFO.material_entity):
       """A control system in the IOF ontology."""
       label = owl.locstr("Control System", "en")
 
-  class Machine(Core.EngineeredSystem):
+  class Machine(BFO.object):
       """A machine in the IOF ontology."""
       label = owl.locstr("Machine", "en")
       is_a = [Core.hasComponentPartAtSomeTime.some(MotionSystem)]
@@ -67,35 +69,39 @@ with Example:
       """A motor in the IOF ontology."""
       label = owl.locstr("Motor", "en")
 
-  class Ballscrew(Core.MaterialArtifact):
+  class Ballscrew(BFO.object):
       """A ballscrew in the IOF ontology."""
       label = owl.locstr("Ballscrew", "en")
     
-  class Door(Core.MaterialArtifact):
+  class Door(BFO.object):
       """A door in the IOF ontology."""
       label = owl.locstr("Door", "en")
 
-  class ElectricalSystem(Core.EngineeredSystem):
+  class ElectricalSystem(BFO.material_entity):
       """An electrical system in the IOF ontology."""
       label = owl.locstr("Electrical System", "en")
     
-  class HydraulicSystem(Core.EngineeredSystem):
+  class HydraulicSystem(BFO.material_entity):
       """A hydraulic system in the IOF ontology."""
       label = owl.locstr("Hydraulic System", "en")
     
-  class PneumaticSystem(Core.EngineeredSystem):
+  class PneumaticSystem(BFO.material_entity):
       """A pneumatic system in the IOF ontology."""
       label = owl.locstr("Pneumatic System", "en")
     
-  class LubricationSystem(Core.EngineeredSystem):
+  class LubricationSystem(BFO.material_entity):
       """A lubrication system in the IOF ontology."""
       label = owl.locstr("Lubrication System", "en")
+      
+  class CoolantSystem(BFO.material_entity):
+    """A coolant system in the IOF ontology."""
+    label = owl.locstr("Coolant System", "en")
 
   class Stock(BFO.object):
       """A stock in the IOF ontology."""
       label = owl.locstr("Stock", "en")
     
-  class ProductPart(Core.MaterialArtifact):
+  class ProductPart(BFO.object):
       """A part in the IOF ontology."""
       label = owl.locstr("Product Part", "en")
         
@@ -107,7 +113,7 @@ with Example:
       """A turning capability in the IOF ontology."""
       label = owl.locstr("Turning Capability", "en")
 
-  class Structure(Core.MaterialArtifact):
+  class Structure(BFO.object):
       """A structure in the IOF ontology."""
       label = owl.locstr("Structure", "en")
     
@@ -119,7 +125,7 @@ with Example:
     """A room in the IOF ontology."""
     label = owl.locstr("Room", "en")
     
-  class Sensor(Core.MaterialArtifact):
+  class Sensor(BFO.object):
     """A sensor in the IOF ontology."""
     label = owl.locstr("Sensor", "en")
     
@@ -175,5 +181,14 @@ with Example:
     
   class hasUnit(Core.ValueExpression >> QUDT.Unit):
       label = owl.locstr("has unit", "en")
+      
+  class SystemRole(BFO.role):
+      """A system role in the IOF ontology."""
+      label = owl.locstr("System Role", "en")
+      
+  class EngineeredSystemRole(SystemRole):
+      """An engineered system role in the IOF ontology."""
+      label = owl.locstr("Engineered System Role", "en")
+      
     
 Example.save(file = "example.rdf", format = "rdfxml")
