@@ -28,9 +28,11 @@ title Mazak317641systemspneumatic
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641systemspneumatic.html Mazak317641systemspneumatic]], vendor:[[../Mazak.html#Mazak800isystemspneumatic Mazak800isystemspneumatic]])
-individual(o1, data:name29, des:Name)
-individual(o2, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
-property(o0, "des:hasName", o1)
-data(o1, "des:hasTextualName", "pneumatic")
-property(o2, "core:hasComponentPartAtSomeTime", o0)
+individual(o1, data:Mazak317641systemspneumaticEngineeredSystemRole, ex:[[../Example.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o2, data:name29, des:Name)
+individual(o3, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+property(o0, "core:hasRole", o1)
+property(o0, "des:hasName", o2)
+data(o2, "des:hasTextualName", "pneumatic")
+property(o3, "core:hasComponentPartAtSomeTime", o0)
 @enduml

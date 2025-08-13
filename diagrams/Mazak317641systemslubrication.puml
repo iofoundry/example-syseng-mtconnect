@@ -28,9 +28,11 @@ title Mazak317641systemslubrication
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641systemslubrication.html Mazak317641systemslubrication]], vendor:[[../Mazak.html#Mazak800isystemslubrication Mazak800isystemslubrication]])
-individual(o1, data:name30, des:Name)
-individual(o2, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
-property(o0, "des:hasName", o1)
-data(o1, "des:hasTextualName", "lubrication")
-property(o2, "core:hasComponentPartAtSomeTime", o0)
+individual(o1, data:Mazak317641systemslubricationEngineeredSystemRole, ex:[[../Example.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o2, data:name30, des:Name)
+individual(o3, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+property(o0, "core:hasRole", o1)
+property(o0, "des:hasName", o2)
+data(o2, "des:hasTextualName", "lubrication")
+property(o3, "core:hasComponentPartAtSomeTime", o0)
 @enduml

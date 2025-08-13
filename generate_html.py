@@ -10,7 +10,7 @@ def _render_tree(tree, entities, node = None, level = 0):
   indent = '  ' * level
   s.append(f"{indent}{div}\n{indent}  <details open><summary>{node.tag}</summary>\n")
   if node.data:
-    s.append(f"""{indent}    <div><details><summary>Details</summary>\n""") 
+    s.append(f"""{indent}    <div class="details"><details><summary>Details</summary>\n""")
     klass = node.data['class']
     properties = klass.get_properties(klass)
     if properties:
@@ -101,6 +101,10 @@ div.tree div {{
 }}
 
 div.tree div.axiom {{
+  margin-left: 1.5em;
+}}
+
+div.tree div.details {{
   margin-left: 2.5em;
 }}
 

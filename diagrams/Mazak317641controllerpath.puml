@@ -28,9 +28,17 @@ title Mazak317641controllerpath
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641controllerpath.html Mazak317641controllerpath]], vendor:[[../Mazak.html#Mazak800icontrollerpath Mazak800icontrollerpath]])
-individual(o1, data:name23, des:Name)
-individual(o2, data:[[./Mazak317641controller.html Mazak317641controller]], vendor:[[../Mazak.html#Mazak800icontroller Mazak800icontroller]])
-property(o0, "des:hasName", o1)
-data(o1, "des:hasTextualName", "path")
-property(o2, "core:hasComponentPartAtSomeTime", o0)
+individual(o1, data:Mazak317641controllerpathEngineeredSystemRole, ex:[[../Example.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o2, data:Mazak317641controllerpathPATH_POSITION, ex:[[../Example.html#ThreeSpaceDisplacement ThreeSpaceDisplacement]])
+individual(o3, data:Mazak317641controllerpathEXECUTION, ex:[[../Example.html#ExecutionState ExecutionState]])
+individual(o4, data:Mazak317641controllerpathCONTROLLER_MODE, ex:[[../Example.html#ControllerMode ControllerMode]])
+individual(o5, data:name23, des:Name)
+individual(o6, data:[[./Mazak317641controller.html Mazak317641controller]], vendor:[[../Mazak.html#Mazak800icontroller Mazak800icontroller]])
+property(o0, "core:hasRole", o1)
+property(o0, "core:hasQuality", o2)
+property(o0, "core:observesAtSomeTime", o3)
+property(o0, "core:observesAtSomeTime", o4)
+property(o0, "des:hasName", o5)
+data(o5, "des:hasTextualName", "path")
+property(o6, "core:hasComponentPartAtSomeTime", o0)
 @enduml

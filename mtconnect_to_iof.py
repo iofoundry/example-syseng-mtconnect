@@ -71,11 +71,31 @@ DataItems = {
   'VELOCITY_RAPID': Example.PrismaticRapidVelocity,
   'ROTARY_VELOCITY': Example.RevoluteVelocity,
   'PATH_FEED_RATE': Example.TranslationalVelocity,
-  'LINEAR_FORCE': QualPhysical.Force
+  'LINEAR_FORCE': QualPhysical.Force,
+  'PATH_POSITION': Example.ThreeSpaceDisplacement,
+  'CONTROLLER_MODE': Example.ControllerMode,
+  'EXECUTION': Example.ExecutionState
 }
 
 Roles = {
-  'Device': Core.EquipmentRole
+  'Device': [Core.EquipmentRole, Example.EngineeredSystemRole],
+  'Linear': [Example.EngineeredSystemRole],
+  'Rotary': [Example.EngineeredSystemRole],
+  'Controller': [Example.EngineeredSystemRole],
+  'Path': [Example.EngineeredSystemRole],
+  'Composition': [Example.MaterialArtifactRole],
+  'MOTOR': [Example.MaterialArtifactRole],
+  'BALLSCREW': [Example.MaterialArtifactRole],
+  'Electric': [Example.EngineeredSystemRole],
+  'Hydraulic': [Example.EngineeredSystemRole],
+  'Pneumatic': [Example.EngineeredSystemRole],
+  'Lubrication': [Example.EngineeredSystemRole],
+  'Stock': [Example.MaterialArtifactRole],
+  'PartOccurrence': [Example.MaterialArtifactRole],
+  'Link': [Example.MaterialArtifactRole],
+  'Enclosure': [Example.MaterialArtifactRole],
+  'Door': [Example.MaterialArtifactRole],
+  'Coolant': [Example.EngineeredSystemRole]
 }
 
 Separate = {
@@ -189,6 +209,38 @@ class MTConnectToIOF:
                 profile.is_a.append(Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
                         Core.hasSimpleExpressionValue.some(const) & Example.hasUnit.some(QUDT.Unit)))
                 type_cls.is_a.append(BFO.participates_in_at_some_time.some(profile))
+
+  @log_indent
+  def _add_class_data_items(self, element, klass, compositions):
+    """Add data items to the component class."""
+    logger.info(f"Adding data items for {klass}")
+    
+    with self.Vendor:
+      for di in element.findall("./m:DataItems/m:DataItem", self.ns):
+        if di.get("category") == "CONDITION":
+          continue
+        
+        base_type = di.get("type")
+        type = '_'.join([r for r in [base_type, di.get('subType', None)] if r])        
+        di_cls = DataItems.get(type, DataItems.get(base_type, None))
+        
+        if di_cls:
+          logger.info(f"Adding observation {type}")
+          
+          node = None
+          comp_id = di.get("compositionId", None)
+          if comp_id:
+            node = compositions[comp_id]
+          else:
+            node = klass
+                      
+          if issubclass(di_cls, BFO.quality):
+            node.is_a.append(Core.hasQuality.some(di_cls))
+          elif issubclass(di_cls, Example.State):
+            node.is_a.append(Core.observesAtSomeTime.some(di_cls))
+          else:
+            node.is_a.append(Core.measuresAtSomeTime.some(di_cls))
+
   
   @log_indent
   def _create_particular_specifications(self, element, partic, name):
@@ -268,6 +320,8 @@ class MTConnectToIOF:
             
           if issubclass(di_cls, BFO.quality):
             node.hasQuality.append(data_item)
+          elif issubclass(di_cls, Example.State):
+            node.observesAtSomeTime.append(data_item)
           else:
             node.measuresAtSomeTime.append(data_item)
           
@@ -305,9 +359,11 @@ class MTConnectToIOF:
         self.motion[motion.get('id')] = type_cls
         
       self._add_capability(partic, key, ds)      
-      #if type in Roles:
-      #  partic.hasRole.append(Roles[type]())
-      
+      if type in Roles:
+        for role in Roles[type]:
+          role_partic = role(name + role.name)
+          partic.hasRole.append(role_partic)
+    
     return partic
 
   @log_indent
@@ -387,7 +443,7 @@ class MTConnectToIOF:
         type_name = "".join(label_names)
       else:
         type_name = "".join(names)      
-        
+      
       created = False
       with self.Vendor:
         type_cls = self.types.get(type_name)
@@ -395,17 +451,32 @@ class MTConnectToIOF:
           type_cls = owl.types.new_class(type_name, (cls,))
           type_cls.label = owl.locstr(' '.join(label_names), "en")
           self.types[type_name] = type_cls
+          self._translate_class_specifications(element, type_cls, cls)
+          
+          # Check roles
+          #if type in Roles:
+          #  for role in Roles[type]:              
+          #    type_cls.is_a.append(Core.hasRole.some(role))
+
+          
           created = True
           logger.info(f"Created {type_name} {type_cls.iri}")
         else:
           logger.info(f"Using existing {type_name} {type_cls.iri}")          
 
-      if created:
-        self._translate_class_specifications(element, type_cls, cls)      
       parent = self._create_particular(element, type_cls, type, names, parent)
+      compositions = {}
       for composition in element.findall("./m:Compositions/*", self.ns):
-        parts.extend(self._add_component(composition, names.copy(), parent))
+        comp_id = composition.get("id", None)
+        if comp_id:
+          comp = self._add_component(composition, names.copy(), parent)
+          parts.extend(comp)
+          compositions[comp_id] = comp[0]
+        else:
+          logger.error(f"Composition {composition} has no id")
       self._add_data_items(element, parent)
+      if created:
+        self._add_class_data_items(element, type_cls, compositions)
     
     for component in element.findall("./m:Components/*", self.ns):
       parts.extend(self._add_component(component, names.copy(), parent))

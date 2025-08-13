@@ -28,11 +28,13 @@ title Mazak317641systemscoolant
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641systemscoolant.html Mazak317641systemscoolant]], vendor:[[../Mazak.html#Mazak800isystemscoolant Mazak800isystemscoolant]])
-individual(o1, data:Mazak317641systemscoolantTEMPERATURE, qualphys:Temperature)
-individual(o2, data:name28, des:Name)
-individual(o3, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
-property(o0, "core:hasQuality", o1)
-property(o0, "des:hasName", o2)
-data(o2, "des:hasTextualName", "coolant")
-property(o3, "core:hasComponentPartAtSomeTime", o0)
+individual(o1, data:Mazak317641systemscoolantEngineeredSystemRole, ex:[[../Example.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o2, data:Mazak317641systemscoolantTEMPERATURE, qualphys:Temperature)
+individual(o3, data:name28, des:Name)
+individual(o4, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+property(o0, "core:hasRole", o1)
+property(o0, "core:hasQuality", o2)
+property(o0, "des:hasName", o3)
+data(o3, "des:hasTextualName", "coolant")
+property(o4, "core:hasComponentPartAtSomeTime", o0)
 @enduml

@@ -28,9 +28,11 @@ title Mazak317641baseC2C2motor
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641baseC2C2motor.html Mazak317641baseC2C2motor]], vendor:[[../Mazak.html#Mazak800ibaseC2C2motor Mazak800ibaseC2C2motor]])
-individual(o1, data:name21, des:Name)
-individual(o2, data:[[./Mazak317641baseC2.html Mazak317641baseC2]], vendor:[[../Mazak.html#Mazak800ibaseC2 Mazak800ibaseC2]])
-property(o0, "des:hasName", o1)
-data(o1, "des:hasTextualName", "C2motor")
-property(o2, "core:hasComponentPartAtSomeTime", o0)
+individual(o1, data:Mazak317641baseC2C2motorMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o2, data:name21, des:Name)
+individual(o3, data:[[./Mazak317641baseC2.html Mazak317641baseC2]], vendor:[[../Mazak.html#Mazak800ibaseC2 Mazak800ibaseC2]])
+property(o0, "core:hasRole", o1)
+property(o0, "des:hasName", o2)
+data(o2, "des:hasTextualName", "C2motor")
+property(o3, "core:hasComponentPartAtSomeTime", o0)
 @enduml

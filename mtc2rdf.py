@@ -56,7 +56,7 @@ gen.generate()
 
 logger.info("Generating mereology")
 statements = [[x[0], Core.hasComponentPartAtAllTimes, x[1]] \
-  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Core.hasComponentPartAtAllTimes])]
+  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Core.hasComponentPartAtSomeTime])]
 
 gen = GenerateDiagram(f"{Vendor.name}Mere", statements, Vendor)
 gen.generate()

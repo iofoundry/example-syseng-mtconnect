@@ -199,6 +199,12 @@
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes B</rdfs:label>
 	</owl:Class>
 	
@@ -208,6 +214,12 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://example.org/ontology/connectedTo"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000enclosure"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/RevoluteVelocity"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes C1</rdfs:label>
@@ -229,6 +241,12 @@
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/RevoluteVelocity"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes C2</rdfs:label>
 	</owl:Class>
 	
@@ -248,11 +266,23 @@
 				</owl:intersectionOf>
 			</owl:Class>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes C3</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesC6">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/measuresAtSomeTime"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/RevoluteVelocity"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes C6</rdfs:label>
 	</owl:Class>
 	
@@ -300,6 +330,12 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLinear_force"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes X</rdfs:label>
@@ -500,6 +536,12 @@
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLinear_force"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Y</rdfs:label>
 	</owl:Class>
 	
@@ -696,6 +738,12 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Linear_force"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Z1</rdfs:label>
@@ -896,6 +944,12 @@
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Linear_force"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Z4</rdfs:label>
 	</owl:Class>
 	
@@ -1056,11 +1110,29 @@
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Controllerpath"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/observesAtSomeTime"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ControllerMode"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/observesAtSomeTime"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ExecutionState"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Controller</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000Controllerpath">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystemPath"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ThreeSpaceDisplacement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Controller path</rdfs:label>
 	</owl:Class>
 	
@@ -1111,6 +1183,12 @@
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000enclosure">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 enclosure</rdfs:label>
 	</owl:Class>
 	

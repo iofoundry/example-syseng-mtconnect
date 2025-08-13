@@ -28,13 +28,15 @@ title Mazak317641mstructTRUNDLE
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641mstructTRUNDLE.html Mazak317641mstructTRUNDLE]], vendor:[[../Mazak.html#Mazak800imstructTRUNDLE Mazak800imstructTRUNDLE]])
-individual(o1, data:name6, des:Name)
-individual(o2, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
-individual(o3, data:[[./Mazak317641baseB.html Mazak317641baseB]], vendor:[[../Mazak.html#Mazak800ibaseB Mazak800ibaseB]])
-individual(o4, data:[[./Mazak317641baseC2.html Mazak317641baseC2]], vendor:[[../Mazak.html#Mazak800ibaseC2 Mazak800ibaseC2]])
-property(o0, "des:hasName", o1)
-data(o1, "des:hasTextualName", "TRUNDLE")
-property(o2, "core:hasComponentPartAtSomeTime", o0)
-property(o3, "ex:connectedTo", o0)
+individual(o1, data:Mazak317641mstructTRUNDLEMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o2, data:name6, des:Name)
+individual(o3, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+individual(o4, data:[[./Mazak317641baseB.html Mazak317641baseB]], vendor:[[../Mazak.html#Mazak800ibaseB Mazak800ibaseB]])
+individual(o5, data:[[./Mazak317641baseC2.html Mazak317641baseC2]], vendor:[[../Mazak.html#Mazak800ibaseC2 Mazak800ibaseC2]])
+property(o0, "core:hasRole", o1)
+property(o0, "des:hasName", o2)
+data(o2, "des:hasTextualName", "TRUNDLE")
+property(o3, "core:hasComponentPartAtSomeTime", o0)
 property(o4, "ex:connectedTo", o0)
+property(o5, "ex:connectedTo", o0)
 @enduml
