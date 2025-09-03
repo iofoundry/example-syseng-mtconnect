@@ -33,17 +33,17 @@ with Example:
     """A system in the IOF ontology."""
     label = owl.locstr("System", "en")
     is_a = [Core.hasComponentPartAtSomeTime.some(BFO.material_entity)]
-    equivalent_to = [Core.hasRole.some(SystemRole)]
+    equivalent_to = [BFO.material_entity & Core.hasRole.some(SystemRole)]
 
   class _EngineeredSystem(_System):
     """A system in the IOF ontology."""
     label = owl.locstr("Engineered System", "en")
-    equivalent_to = [Core.hasRole.some(EngineeredSystemRole)]
+    equivalent_to = [_System & Core.hasRole.some(EngineeredSystemRole)]
 
   class _MaterialArtifact(BFO.material_entity):
     """A material artifact in the IOF ontology."""
     label = owl.locstr("Material Artifact", "en")
-    equivalent_to = [Core.hasRole.some(MaterialArtifactRole)]
+    equivalent_to = [BFO.material_entity & Core.hasRole.some(MaterialArtifactRole)]
       
   class MotionCapability(Core.Capability):
     """A motion capability in the IOF ontology."""

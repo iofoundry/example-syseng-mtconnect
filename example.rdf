@@ -398,10 +398,16 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Material Artifact</rdfs:label>
 		<owl:equivalentClass>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
+						<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</owl:equivalentClass>
 	</owl:Class>
 	
