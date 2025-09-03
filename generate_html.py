@@ -19,7 +19,7 @@ def _render_tree(tree, entities, node = None, level = 0):
                        [(_.name, getattr(klass, _.name, None)) 
                         for _ in properties if isinstance(_, annotation.AnnotationPropertyClass)] if _2])
       for a, v in values: 
-        s.append(f"""{indent}      <li>{a}: {v}</li>""")
+        s.append(f"<li>{a}: {v}</li>")
       s.append(f"{indent}    </ul></details></div>\n")
     axioms = "".join([f"""<li>{_}</li>""" for _ in node.data['axioms']])
     s.append(f"""{indent}    <div class="axiom"><details><summary>Axioms</summary><ul>{axioms}</ul></details></div>\n""")

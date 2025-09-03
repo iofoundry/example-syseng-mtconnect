@@ -28,11 +28,11 @@ title Mazak317641auxiliariesenvironmental
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641auxiliariesenvironmental.html Mazak317641auxiliariesenvironmental]], vendor:[[../Mazak.html#Mazak800iauxiliariesenvironmental Mazak800iauxiliariesenvironmental]])
-individual(o1, data:Mazak317641auxiliariesenvironmentalTEMPERATURE, qualphys:Temperature)
+individual(o1, data:Mazak317641auxiliariesenvironmentalTEMPERATURE, ex:[[../Example.html#Temperature Temperature]])
 individual(o2, data:name31, des:Name)
 individual(o3, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
 property(o0, "core:hasQuality", o1)
 property(o0, "des:hasName", o2)
 data(o2, "des:hasTextualName", "environmental")
-property(o3, "core:hasComponentPartAtAllTimes", o0)
+property(o3, "core:hasComponentPartAtSomeTime", o0)
 @enduml

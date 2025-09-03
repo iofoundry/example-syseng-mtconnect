@@ -32,7 +32,7 @@ individual(o1, data:Mazak317641baseYYmotorMaterialArtifactRole, ex:[[../Example.
 individual(o2, data:mazak800imotorlinear_force5200design2, vendor:[[../Mazak.html#Mazak800iMotorLINEAR_FORCE5200Design Mazak800iMotorLINEAR_FORCE5200Design]])
 individual(o3, data:Mazak317641baseYYmotorLinear_forceMaximum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
 individual(o4, data:Mazak317641baseYYmotorLinear_forceMinimum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
-individual(o5, data:Mazak317641baseYTEMPERATURE, qualphys:Temperature)
+individual(o5, data:Mazak317641baseYTEMPERATURE, ex:[[../Example.html#Temperature Temperature]])
 individual(o6, data:name12, des:Name)
 individual(o7, data:[[./Mazak317641baseY.html Mazak317641baseY]], vendor:[[../Mazak.html#Mazak800ibaseY Mazak800ibaseY]])
 property(o0, "core:hasRole", o1)

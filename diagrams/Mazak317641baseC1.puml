@@ -35,7 +35,7 @@ individual(o4, data:Mazak317641baseC1Rotary_velocityMinimum, core:[[https://spec
 individual(o5, data:Mazak317641baseC1ROTARY_VELOCITY_ACTUAL, ex:[[../Example.html#RevoluteVelocity RevoluteVelocity]])
 individual(o6, data:[[./Mazak317641baseC1Cmotor.html Mazak317641baseC1Cmotor]], vendor:[[../Mazak.html#Mazak800ibaseC1Cmotor Mazak800ibaseC1Cmotor]])
 individual(o7, data:Mazak317641baseC1CmotorMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
-individual(o8, data:Mazak317641baseC1TEMPERATURE, qualphys:Temperature)
+individual(o8, data:Mazak317641baseC1TEMPERATURE, ex:[[../Example.html#Temperature Temperature]])
 individual(o9, data:name17, des:Name)
 individual(o10, data:Mazak317641baseC1ContinuousRevoluteCapability, ex:[[../Example.html#ContinuousRevoluteCapability ContinuousRevoluteCapability]])
 individual(o11, data:name16, des:Name)

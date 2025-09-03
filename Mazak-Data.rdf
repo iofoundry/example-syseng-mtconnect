@@ -77,7 +77,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641auxiliariesenvironmentalTEMPERATURE">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+		<rdf:type rdf:resource="&onto;Temperature"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseB">
@@ -94,16 +94,18 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBANGLE_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+		<rdf:type rdf:resource="&onto;Angle"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBAngleMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/DEG"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">120.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseBAngleMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/DEG"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">-30.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -189,7 +191,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC1TEMPERATURE">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+		<rdf:type rdf:resource="&onto;Temperature"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2">
@@ -206,16 +208,18 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2ANGLE_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+		<rdf:type rdf:resource="&onto;Angle"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2AngleMaximum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/DEG"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">360.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseC2AngleMinimum">
 		<rdf:type rdf:resource="&Core;ValueExpression"/>
+		<onto:hasUnit rdf:resource="http://qudt.org/vocab/unit/DEG"/>
 		<Core:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">-360.0</Core:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
@@ -276,7 +280,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXPOSITION_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+		<rdf:type rdf:resource="&onto;Displacement"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXPrismaticMotionCapability">
@@ -285,7 +289,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXTEMPERATURE">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+		<rdf:type rdf:resource="&onto;Temperature"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseXVelocityProgrammedMaximum">
@@ -373,7 +377,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYPOSITION_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+		<rdf:type rdf:resource="&onto;Displacement"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYPrismaticMotionCapability">
@@ -382,7 +386,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYTEMPERATURE">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+		<rdf:type rdf:resource="&onto;Temperature"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseYVelocityProgrammedMaximum">
@@ -470,7 +474,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZPOSITION_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+		<rdf:type rdf:resource="&onto;Displacement"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZPrismaticMotionCapability">
@@ -479,7 +483,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZTEMPERATURE">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+		<rdf:type rdf:resource="&onto;Temperature"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641baseZVelocityProgrammedMaximum">
@@ -604,7 +608,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641enclosureTEMPERATURE">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+		<rdf:type rdf:resource="&onto;Temperature"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641mstructTABLE">
@@ -697,7 +701,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641systemscoolantTEMPERATURE">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+		<rdf:type rdf:resource="&onto;Temperature"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641systemselectric">

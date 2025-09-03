@@ -62,16 +62,16 @@ Capabilities = {
 }
 
 DataItems = {
-  'TEMPERATURE': QualPhysical.Temperature,
-  'POSITION': QualPhysical.Displacement,
-  'LENGTH': QualPhysical.Length,
-  'ANGLE': QualPhysical.Angle,
+  'TEMPERATURE': Example.Temperature,
+  'POSITION': Example.Displacement,
+  'LENGTH': Example.Length,
+  'ANGLE': Example.Angle,
   'VELOCITY': Example.PrismaticVelocity,
   'VELOCITY_PROGRAMMED': Example.PrismaticVelocity,
   'VELOCITY_RAPID': Example.PrismaticRapidVelocity,
   'ROTARY_VELOCITY': Example.RevoluteVelocity,
   'PATH_FEED_RATE': Example.TranslationalVelocity,
-  'LINEAR_FORCE': QualPhysical.Force,
+  'LINEAR_FORCE': Example.Force,
   'PATH_POSITION': Example.ThreeSpaceDisplacement,
   'CONTROLLER_MODE': Example.ControllerMode,
   'EXECUTION': Example.ExecutionState
@@ -199,15 +199,21 @@ class MTConnectToIOF:
               const = owl.ConstrainedDatatype(float, **args)
                               
               spec_name = ''.join([r.capitalize() for r in [spec_name, spec.get('subType', None)] if r])
+              units = None # Units.get(spec.get("units", None), None)
+              if units:
+                unit_const = Example.hasUnit.value(units)
+              else:
+                unit_const = Example.hasUnit.only(QUDT.Unit)
+
               if issubclass(di_cls, BFO.quality):
                 quality = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 quality.is_a.append(Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
-                    Core.hasSimpleExpressionValue.some(const) & Example.hasUnit.some(QUDT.Unit)))
+                    Core.hasSimpleExpressionValue.some(const) & unit_const))
                 type_cls.is_a.append(Core.hasQuality.some(quality))
               else:
                 profile = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
                 profile.is_a.append(Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
-                        Core.hasSimpleExpressionValue.some(const) & Example.hasUnit.some(QUDT.Unit)))
+                        Core.hasSimpleExpressionValue.some(const) & unit_const))
                 type_cls.is_a.append(BFO.participates_in_at_some_time.some(profile))
 
   @log_indent
@@ -237,7 +243,7 @@ class MTConnectToIOF:
           if issubclass(di_cls, BFO.quality):
             node.is_a.append(Core.hasQuality.some(di_cls))
           elif issubclass(di_cls, Example.State):
-            node.is_a.append(Core.observesAtSomeTime.some(di_cls))
+            node.is_a.append(BFO.participates_in_at_some_time.some(di_cls))
           else:
             node.is_a.append(Core.measuresAtSomeTime.some(di_cls))
 

@@ -5,10 +5,10 @@ import re
 if os.path.exists("example.rdf"):
     os.remove("example.rdf")
 
-from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, QUDT
+from ontologies import BFO, Core, AnnVocab, Des, QUDT
 
 Example = owl.get_ontology("http://example.org/ontology/")
-Example.imported_ontologies = [Core, Des, Qual, QualPhysical]
+Example.imported_ontologies = [Core, Des]
 Example.label = [owl.locstr("Machine Ontology", "en")]
 Example.base_iri = "http://example.org/ontology/"
 
@@ -193,10 +193,6 @@ with Example:
     """A prismatic rapid velocity in the IOF ontology."""
     label = owl.locstr("Prismatic Rapid Velocity", "en")
 
-  class ThreeSpaceDisplacement(QualPhysical.Displacement):
-    """A three-dimensional displacement in the IOF ontology."""
-    label = owl.locstr("Three Space Displacement", "en")
-
   class TranslationalVelocity(Velocity):
     """A translational velocity in the IOF ontology."""
     label = owl.locstr("Translational Velocity", "en")
@@ -243,5 +239,31 @@ with Example:
   class ExecutionState(State):
     """An execution state in the IOF ontology."""
     label = owl.locstr("Execution State", "en")
+
+  class Temperature(BFO.quality):
+    """A temperature in the IOF ontology."""
+    label = owl.locstr("Temperature", "en")
+
+  class Displacement(BFO.quality):
+    """A displacement in the IOF ontology."""
+    label = owl.locstr("Displacement", "en")
+
+  class Length(BFO.quality):
+    """A length in the IOF ontology."""
+    label = owl.locstr("Length", "en")
+
+  class Angle(BFO.quality):
+    """An angle in the IOF ontology."""
+    label = owl.locstr("Angle", "en")
+
+  class Force(BFO.quality):
+    """A force in the IOF ontology."""
+    label = owl.locstr("Force", "en")
+    
+  class ThreeSpaceDisplacement(Displacement):
+    """A three-dimensional displacement in the IOF ontology."""
+    label = owl.locstr("Three Space Displacement", "en")
+
+
 
 Example.save(file = "example.rdf", format = "rdfxml")

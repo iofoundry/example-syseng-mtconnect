@@ -63,6 +63,7 @@ with QUDT:
     pass
   
   QUDT.N = Unit('N')
+  QUDT.DEG = Unit('DEG')
   QUDT.N_M = Unit('N-M')
   QUDT.MilliM = Unit('MilliM')
   QUDT.MilliM_PER_SEC = Unit('MilliM-PER-SEC')

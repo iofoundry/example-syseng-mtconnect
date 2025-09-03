@@ -164,7 +164,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Temperature"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i Motor LINEAR_FORCE 5200</rdfs:label>
@@ -175,7 +175,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200Linear_force">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Force"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
@@ -199,7 +199,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -225,7 +225,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Temperature"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i Motor LINEAR_FORCE 9600</rdfs:label>
@@ -236,7 +236,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE9600Linear_force">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Force"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Force"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
@@ -260,7 +260,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -274,7 +274,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Temperature"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i auxiliaries environmental</rdfs:label>
@@ -317,14 +317,14 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Angle"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base B</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseBAngle">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Angle"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
@@ -351,7 +351,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -415,7 +415,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Temperature"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base C1 Cmotor</rdfs:label>
@@ -450,7 +450,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -502,14 +502,14 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Angle"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base C2</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseC2Angle">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Angle"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
@@ -536,7 +536,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -609,7 +609,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Displacement"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base X</rdfs:label>
@@ -620,7 +620,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseXLength">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Length"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
@@ -647,7 +647,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -681,7 +681,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -715,7 +715,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -790,7 +790,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Displacement"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Y</rdfs:label>
@@ -801,7 +801,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseYLength">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Length"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
@@ -828,7 +828,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -862,7 +862,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -896,7 +896,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -971,7 +971,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Displacement"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i base Z</rdfs:label>
@@ -982,7 +982,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/Mazak/Mazak800ibaseZLength">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Length"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Length"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasMeasuredValueAtSomeTime"/>
@@ -1009,7 +1009,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1043,7 +1043,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1077,7 +1077,7 @@
 							</owl:Restriction>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="http://example.org/ontology/hasUnit"/>
-								<owl:someValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
+								<owl:allValuesFrom rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1106,20 +1106,20 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystemPath"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ThreeSpaceDisplacement"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/observesAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ControllerMode"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/observesAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ExecutionState"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ThreeSpaceDisplacement"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i controller path</rdfs:label>
@@ -1135,7 +1135,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Temperature"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i enclosure</rdfs:label>
@@ -1181,7 +1181,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasQuality"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Temperature"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak 800i systems coolant</rdfs:label>

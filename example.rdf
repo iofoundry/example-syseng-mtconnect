@@ -16,14 +16,17 @@
 	
 	<owl:Ontology rdf:about="http://example.org/ontology/">
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"/>
-		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities/"/>
 		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators/"/>
 	</owl:Ontology>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Actuator">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Actuator</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/Angle">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Angle</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Ballscrew">
@@ -74,6 +77,11 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Coolant System</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="http://example.org/ontology/Displacement">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Displacement</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/Door">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
@@ -117,6 +125,11 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Execution State</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="http://example.org/ontology/Force">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Force</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/HydraulicSystem">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
@@ -126,6 +139,11 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Hydraulic System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/Length">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Length</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/LinearMotionSystem">
@@ -363,8 +381,13 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">System Role</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="http://example.org/ontology/Temperature">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Temperature</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/ThreeSpaceDisplacement">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Displacement"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Three Space Displacement</rdfs:label>
 	</owl:Class>
 	
@@ -387,10 +410,16 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/_System"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Engineered System</rdfs:label>
 		<owl:equivalentClass>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/_System">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</owl:equivalentClass>
 	</owl:Class>
 	
@@ -403,8 +432,8 @@
 					<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
-						<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -421,10 +450,16 @@
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">System</rdfs:label>
 		<owl:equivalentClass>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/ontology/SystemRole"/>
-			</owl:Restriction>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+						<owl:someValuesFrom rdf:resource="http://example.org/ontology/SystemRole"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
 		</owl:equivalentClass>
 	</owl:Class>
 	

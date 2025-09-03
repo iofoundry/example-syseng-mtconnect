@@ -35,6 +35,9 @@ with open(file_name, 'r') as file:
 Vendor = trans.Vendor
 Namespaces[Vendor.base_iri] = Vendor.name
 
+#owl.sync_reasoner_pellet(infer_property_values = True, infer_data_property_values = True, debug = 10)
+#print(Vendor.classes)
+
 entities = [x[0] for x in owl.default_world.sparql("""select ?p { ?p a ?c . ?c rdfs:subClassOf* ?? . }""", \
                                                     [BFO.material_entity]) if x[0].namespace == Data]
 
@@ -60,9 +63,6 @@ statements = [[x[0], Core.hasComponentPartAtAllTimes, x[1]] \
 
 gen = GenerateDiagram(f"{Vendor.name}Mere", statements, Vendor)
 gen.generate()
-
-#owl.sync_reasoner_pellet(infer_property_values = True, infer_data_property_values = True, debug = 10)
-#print(Vendor.classes)
 
 for part in entities:
   logger.info(f"Generating diagram for {part}")  
