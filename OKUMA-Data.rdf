@@ -71,7 +71,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesBANGLE_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+		<rdf:type rdf:resource="&onto;Angle"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesBEngineeredSystemRole">
@@ -149,7 +149,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC3ANGLE_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Angle"/>
+		<rdf:type rdf:resource="&onto;Angle"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC3EngineeredSystemRole">
@@ -216,7 +216,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXPOSITION_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+		<rdf:type rdf:resource="&onto;Displacement"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXPrismaticMotionCapability">
@@ -283,7 +283,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYPOSITION_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+		<rdf:type rdf:resource="&onto;Displacement"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYPrismaticMotionCapability">
@@ -350,7 +350,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1POSITION_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+		<rdf:type rdf:resource="&onto;Displacement"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1PrismaticMotionCapability">
@@ -417,7 +417,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4POSITION_ACTUAL">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Displacement"/>
+		<rdf:type rdf:resource="&onto;Displacement"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4PrismaticMotionCapability">
@@ -595,7 +595,7 @@
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456enclosureTEMPERATURE">
-		<rdf:type rdf:resource="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/Temperature"/>
+		<rdf:type rdf:resource="&onto;Temperature"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456structb_axis">

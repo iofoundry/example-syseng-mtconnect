@@ -29,7 +29,7 @@ title OKUMA123456enclosure
       }
 individual(o0, data:[[./OKUMA123456enclosure.html OKUMA123456enclosure]], vendor:[[../OKUMA.html#OKUMAMULT_U3000enclosure OKUMAMULT_U3000enclosure]])
 individual(o1, data:OKUMA123456enclosureMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
-individual(o2, data:OKUMA123456enclosureTEMPERATURE, qualphys:Temperature)
+individual(o2, data:OKUMA123456enclosureTEMPERATURE, ex:[[../Example.html#Temperature Temperature]])
 individual(o3, data:name29, des:Name)
 individual(o4, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
 individual(o5, data:[[./OKUMA123456AxesZ1.html OKUMA123456AxesZ1]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesZ1 OKUMAMULT_U3000AxesZ1]])

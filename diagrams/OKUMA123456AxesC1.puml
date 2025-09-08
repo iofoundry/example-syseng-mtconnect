@@ -35,7 +35,7 @@ individual(o4, data:OKUMA123456AxesC1ContinuousRevoluteCapability, ex:[[../Examp
 individual(o5, data:name13, des:Name)
 individual(o6, data:[[./OKUMA123456enclosure.html OKUMA123456enclosure]], vendor:[[../OKUMA.html#OKUMAMULT_U3000enclosure OKUMAMULT_U3000enclosure]])
 individual(o7, data:OKUMA123456enclosureMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
-individual(o8, data:OKUMA123456enclosureTEMPERATURE, qualphys:Temperature)
+individual(o8, data:OKUMA123456enclosureTEMPERATURE, ex:[[../Example.html#Temperature Temperature]])
 individual(o9, data:name29, des:Name)
 individual(o10, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
 property(o0, "core:hasRole", o1)

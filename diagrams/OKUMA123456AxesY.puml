@@ -38,7 +38,7 @@ individual(o7, data:OKUMA123456AxesYVelocityRapidMinimum, core:[[https://spec.in
 individual(o8, data:OKUMA123456AxesYVelocityProgrammedMaximum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
 individual(o9, data:OKUMA123456AxesYVelocityProgrammedMinimum, core:[[https://spec.industrialontologies.org/ontology/core/Core/ValueExpression ValueExpression]])
 individual(o10, data:OKUMA123456AxesYPrismaticMotionCapability, ex:[[../Example.html#PrismaticMotionCapability PrismaticMotionCapability]])
-individual(o11, data:OKUMA123456AxesYPOSITION_ACTUAL, qualphys:Displacement)
+individual(o11, data:OKUMA123456AxesYPOSITION_ACTUAL, ex:[[../Example.html#Displacement Displacement]])
 individual(o12, data:name10, des:Name)
 individual(o13, data:[[./OKUMA123456structx_axis.html OKUMA123456structx_axis]], vendor:[[../OKUMA.html#OKUMAMULT_U3000structx_axis OKUMAMULT_U3000structx_axis]])
 individual(o14, data:name2, des:Name)
