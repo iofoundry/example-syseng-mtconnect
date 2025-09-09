@@ -19,6 +19,11 @@
 		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators/"/>
 	</owl:Ontology>
 	
+	<owl:Class rdf:about="http://example.org/ontology/ARotaryMotionSystem">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">A Rotary Motion System</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/Actuator">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Actuator</rdfs:label>
@@ -27,6 +32,11 @@
 	<owl:Class rdf:about="http://example.org/ontology/Angle">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Angle</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/BRotaryMotionSystem">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">B Rotary Motion System</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Ballscrew">
@@ -40,9 +50,14 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Ballscrew</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="http://example.org/ontology/CRotaryMotionSystem">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">C Rotary Motion System</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/ContinuousRevoluteCapability">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RevoluteMotionCapability"/>
-		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Continuous Motion Capability</rdfs:label>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Continuous Revolute Capability</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/ControlSystem">
@@ -125,9 +140,99 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Execution State</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="http://example.org/ontology/FiveAxisMotionCapability">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/FourAxisMotionCapability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Five Axis Motion Capability</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/FourAxisMotionCapability">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="http://example.org/ontology/Machine">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+										<owl:someValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
+														<owl:someValuesFrom rdf:resource="http://example.org/ontology/IndexedRevoluteCapability"/>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/Force">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Force</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/FourAxisMotionCapability">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Four Axis Motion Capability</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/Capability">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="http://example.org/ontology/Machine">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+										<owl:someValuesFrom rdf:resource="http://example.org/ontology/XLinearMotionSystem"/>
+									</owl:Restriction>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+										<owl:someValuesFrom rdf:resource="http://example.org/ontology/YLinearMotionSystem"/>
+									</owl:Restriction>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+										<owl:someValuesFrom rdf:resource="http://example.org/ontology/ZLinearMotionSystem"/>
+									</owl:Restriction>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+										<owl:someValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="http://example.org/ontology/CRotaryMotionSystem">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
+														<owl:someValuesFrom rdf:resource="http://example.org/ontology/ContinuousRevoluteCapability"/>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/HydraulicSystem">
@@ -139,6 +244,11 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Hydraulic System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/IndexedRevoluteCapability">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RevoluteMotionCapability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Indexed Revolute Capability</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Length">
@@ -170,6 +280,12 @@
 	
 	<owl:Class rdf:about="http://example.org/ontology/Machine">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasCapability"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
@@ -404,6 +520,21 @@
 	<owl:Class rdf:about="http://example.org/ontology/Velocity">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ProcessProfile"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Velocity</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/XLinearMotionSystem">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">X Linear Motion System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/YLinearMotionSystem">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Y Linear Motion System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/ZLinearMotionSystem">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/LinearMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Z Linear Motion System</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/_EngineeredSystem">

@@ -29,10 +29,12 @@ title Mazak317641resourcesmaterialsstock
       }
 individual(o0, data:[[./Mazak317641resourcesmaterialsstock.html Mazak317641resourcesmaterialsstock]], vendor:[[../Mazak.html#Mazak800iresourcesmaterialsstock Mazak800iresourcesmaterialsstock]])
 individual(o1, data:Mazak317641resourcesmaterialsstockMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
-individual(o2, data:name32, des:Name)
-individual(o3, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+individual(o2, data:Mazak317641resourcesmaterialsstockCapability, core:Capability)
+individual(o3, data:name32, des:Name)
+individual(o4, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
 property(o0, "core:hasRole", o1)
-property(o0, "des:hasName", o2)
-data(o2, "des:hasTextualName", "stock")
-property(o3, "core:hasComponentPartAtSomeTime", o0)
+property(o0, "core:hasCapability", o2)
+property(o0, "des:hasName", o3)
+data(o3, "des:hasTextualName", "stock")
+property(o4, "core:hasComponentPartAtSomeTime", o0)
 @enduml

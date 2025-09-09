@@ -29,10 +29,12 @@ title Mazak317641baseYYballscrew
       }
 individual(o0, data:[[./Mazak317641baseYYballscrew.html Mazak317641baseYYballscrew]], vendor:[[../Mazak.html#Mazak800ibaseYYballscrew Mazak800ibaseYYballscrew]])
 individual(o1, data:Mazak317641baseYYballscrewMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
-individual(o2, data:name11, des:Name)
-individual(o3, data:[[./Mazak317641baseY.html Mazak317641baseY]], vendor:[[../Mazak.html#Mazak800ibaseY Mazak800ibaseY]])
+individual(o2, data:Mazak317641baseYYballscrewCapability, core:Capability)
+individual(o3, data:name11, des:Name)
+individual(o4, data:[[./Mazak317641baseY.html Mazak317641baseY]], vendor:[[../Mazak.html#Mazak800ibaseY Mazak800ibaseY]])
 property(o0, "core:hasRole", o1)
-property(o0, "des:hasName", o2)
-data(o2, "des:hasTextualName", "Yballscrew")
-property(o3, "core:hasComponentPartAtSomeTime", o0)
+property(o0, "core:hasCapability", o2)
+property(o0, "des:hasName", o3)
+data(o3, "des:hasTextualName", "Yballscrew")
+property(o4, "core:hasComponentPartAtSomeTime", o0)
 @enduml

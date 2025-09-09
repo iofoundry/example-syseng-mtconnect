@@ -56,10 +56,14 @@ with Example:
   class RevoluteMotionCapability(MotionCapability):
     """A revoluted motion capability in the IOF ontology."""
     label = owl.locstr("Revolute Motion Capability", "en")
+    
+  class IndexedRevoluteCapability(RevoluteMotionCapability):
+    """An indexed revolute motion capability in the IOF ontology."""
+    label = owl.locstr("Indexed Revolute Capability", "en")
 
   class ContinuousRevoluteCapability(RevoluteMotionCapability):
     """A continuous motion capability in the IOF ontology."""
-    label = owl.locstr("Continuous Motion Capability", "en")
+    label = owl.locstr("Continuous Revolute Capability", "en")
 
   class MotionSystem(BFO.object):
     """A motion system in the IOF ontology."""
@@ -70,12 +74,36 @@ with Example:
     """A linear motion system in the IOF ontology."""
     label = owl.locstr("Linear Motion System", "en")
     is_a = [Core.hasCapability.some(PrismaticMotionCapability)]
+
+  class XLinearMotionSystem(LinearMotionSystem):
+    """An X linear motion system in the IOF ontology."""
+    label = owl.locstr("X Linear Motion System", "en")
+
+  class YLinearMotionSystem(LinearMotionSystem):
+    """A Y linear motion system in the IOF ontology."""
+    label = owl.locstr("Y Linear Motion System", "en")
     
+  class ZLinearMotionSystem(LinearMotionSystem):
+    """A Z linear motion system in the IOF ontology."""
+    label = owl.locstr("Z Linear Motion System", "en")
+
   class RotaryMotionSystem(MotionSystem):
     """A rotary motion system in the IOF ontology."""
     label = owl.locstr("Rotary Motion System", "en")
     is_a = [Core.hasCapability.some(RevoluteMotionCapability)]
-      
+
+  class ARotaryMotionSystem(RotaryMotionSystem):
+    """An A rotary motion system in the IOF ontology."""
+    label = owl.locstr("A Rotary Motion System", "en")
+
+  class BRotaryMotionSystem(RotaryMotionSystem):
+    """A B rotary motion system in the IOF ontology."""
+    label = owl.locstr("B Rotary Motion System", "en")
+
+  class CRotaryMotionSystem(RotaryMotionSystem):
+    """A C rotary motion system in the IOF ontology."""
+    label = owl.locstr("C Rotary Motion System", "en")
+
   class ControlSystem(BFO.material_entity):
     """A control system in the IOF ontology."""
     label = owl.locstr("Control System", "en")
@@ -85,7 +113,8 @@ with Example:
     """A machine in the IOF ontology."""
     label = owl.locstr("Machine", "en")
     is_a = [Core.hasComponentPartAtSomeTime.some(MotionSystem), 
-            Core.hasRole.some(EngineeredSystemRole), 
+            Core.hasRole.some(EngineeredSystemRole),
+            Core.hasCapability.some(Core.Capability),
             Core.hasRole.some(Core.EquipmentRole)]
 
   class NumericallyControlledMachine(Machine):
@@ -264,6 +293,29 @@ with Example:
     """A three-dimensional displacement in the IOF ontology."""
     label = owl.locstr("Three Space Displacement", "en")
 
+
+  class FourAxisMotionCapability(Core.Capability):
+    """A four-axis motion capability in the IOF ontology."""
+    label = owl.locstr("Four Axis Motion Capability", "en")
+    equivalent_to = [Core.Capability & 
+                     Core.capabilityOf.some(
+                       Machine & 
+                       Core.hasComponentPartAtSomeTime.some(XLinearMotionSystem) & 
+                       Core.hasComponentPartAtSomeTime.some(YLinearMotionSystem) & 
+                       Core.hasComponentPartAtSomeTime.some(ZLinearMotionSystem) & 
+                       Core.hasComponentPartAtSomeTime.some(
+                         CRotaryMotionSystem & 
+                         Core.hasFunction.some(ContinuousRevoluteCapability)))]
+
+  class FiveAxisMotionCapability(FourAxisMotionCapability):
+    """A five-axis motion capability in the IOF ontology."""
+    label = owl.locstr("Five Axis Motion Capability", "en")
+    equivalent_to = [FourAxisMotionCapability & 
+                     Core.capabilityOf.some(
+                       Machine & 
+                       Core.hasComponentPartAtSomeTime.some(
+                         RotaryMotionSystem & 
+                         Core.hasFunction.some(IndexedRevoluteCapability)))]
 
 
 Example.save(file = "example.rdf", format = "rdfxml")

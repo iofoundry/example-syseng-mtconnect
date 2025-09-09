@@ -29,10 +29,12 @@ title Mazak317641systemselectric
       }
 individual(o0, data:[[./Mazak317641systemselectric.html Mazak317641systemselectric]], vendor:[[../Mazak.html#Mazak800isystemselectric Mazak800isystemselectric]])
 individual(o1, data:Mazak317641systemselectricEngineeredSystemRole, ex:[[../Example.html#EngineeredSystemRole EngineeredSystemRole]])
-individual(o2, data:name26, des:Name)
-individual(o3, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
+individual(o2, data:Mazak317641systemselectricCapability, core:Capability)
+individual(o3, data:name26, des:Name)
+individual(o4, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
 property(o0, "core:hasRole", o1)
-property(o0, "des:hasName", o2)
-data(o2, "des:hasTextualName", "electric")
-property(o3, "core:hasComponentPartAtSomeTime", o0)
+property(o0, "core:hasCapability", o2)
+property(o0, "des:hasName", o3)
+data(o3, "des:hasTextualName", "electric")
+property(o4, "core:hasComponentPartAtSomeTime", o0)
 @enduml

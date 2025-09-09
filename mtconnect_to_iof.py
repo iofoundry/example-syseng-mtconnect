@@ -21,7 +21,13 @@ Units = {
 
 Components = {
   'Linear': Example.LinearMotionSystem,
+  'LinearX': Example.XLinearMotionSystem,
+  'LinearY': Example.YLinearMotionSystem,
+  'LinearZ': Example.ZLinearMotionSystem,
   'Rotary': Example.RotaryMotionSystem,
+  'RotaryA': Example.ARotaryMotionSystem,
+  'RotaryB': Example.BRotaryMotionSystem,
+  'RotaryC': Example.CRotaryMotionSystem,
   'Device': Example.NumericallyControlledMachine,
   'Controller': Example.ControlSystem,
   'Path': Example.ControlSystemPath,
@@ -53,7 +59,7 @@ Components = {
 Functions = {
   'Device': Example.MillingCapability,
   'PRISMATIC': Example.PrismaticMotionCapability,
-  'REVOLUTE': Example.RevoluteMotionCapability,
+  'REVOLUTE': Example.IndexedRevoluteCapability,
   'CONTINUOUS': Example.ContinuousRevoluteCapability
 }
 
@@ -283,6 +289,12 @@ class MTConnectToIOF:
     """Add capability to the component."""
     
     with Data:
+      # Create a generic capability to state that all components have a capability.
+      # The capability will allow for the inference of the capabililities of the component.
+      cap = Core.Capability(partic.name + 'Capability')
+      partic.hasCapability.append(cap)
+      
+      # Asserted capability
       if type in Capabilities:
         cap_cls = Capabilities[type]
         name = partic.name + cap_cls.name
@@ -291,6 +303,7 @@ class MTConnectToIOF:
         partic.hasCapability.append(cap)
         if design_spec: cap.prescribedBy.append(design_spec)
         
+      # Asserted function
       if type in Functions:
         func_cls = Functions[type]
         name = partic.name + func_cls.name
@@ -434,8 +447,14 @@ class MTConnectToIOF:
       names.append(self.manufacturer)
       names.append(self.model)
     
+    if type == 'Rotary' or type == 'Linear':
+      type = f"{type}{name[0].upper()}"
+    
+    
     type_cls = None
     cls = Components.get(type, BFO.object)
+    logger.info(f"** Adding component: {type} with class {cls}")
+    
     parts = []
     logger.info(f"{type} {id} {name} {uuid}: {cls}")
     if cls:
