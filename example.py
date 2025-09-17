@@ -135,6 +135,11 @@ with Example:
     label = owl.locstr("Ballscrew", "en")
     is_a = [Core.hasRole.some(MaterialArtifactRole)]
     
+  class Chuck(BFO.object):
+    """A chuck in the IOF ontology."""
+    label = owl.locstr("Chuck", "en")
+    is_a = [Core.hasRole.some(MaterialArtifactRole)]
+
   class Door(BFO.object):
     """A door in the IOF ontology."""
     label = owl.locstr("Door", "en")
@@ -276,6 +281,10 @@ with Example:
     """An execution state in the IOF ontology."""
     label = owl.locstr("Execution State", "en")
 
+  class ChuckState(State):
+    """An chuck state in the IOF ontology."""
+    label = owl.locstr("Chuck State", "en")
+
   class Temperature(BFO.quality):
     """A temperature in the IOF ontology."""
     label = owl.locstr("Temperature", "en")
@@ -333,5 +342,25 @@ with Example:
                        hasComponent.min(2,
                          RotaryMotionSystem & 
                          Core.hasFunction.some(IndexedRevoluteCapability)))]
+
+  class SixAxisMotionCapability(FourAxisMotionCapability):
+    """A six-axis motion capability in the IOF ontology."""
+    label = owl.locstr("Six Axis Motion Capability", "en")
+    equivalent_to = [FiveAxisMotionCapability & 
+                     Core.capabilityOf.some(
+                       Machine & 
+                       hasComponent.min(3,
+                         RotaryMotionSystem & 
+                         Core.hasFunction.some(IndexedRevoluteCapability)))]
+    
+  class TurningCapability(Core.Capability):
+    label = owl.locstr("Turning Capability", "en")
+    equivalent_to = [Core.Capability & 
+                  Core.capabilityOf.some(
+                    Machine & hasComponent.some(CRotaryMotionSystem & 
+                      hasComponent.some(Chuck)))]
+  
+  
+      
 
 Example.save(file = "example.rdf", format = "rdfxml")

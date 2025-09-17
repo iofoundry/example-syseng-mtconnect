@@ -127,7 +127,7 @@ div.axiom ul li {
                         <div class="details"><details><summary>Details</summary>
                         <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) an object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested</li><li>example: An organism, a fish tank, a planet, a laptop, a valve, a block of marble, an ice cube.</li><li>label: object</li><li>prefLabel: object</li><li>scopeNote: A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User’s Guide</li>                        </ul></details></div>
                         <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:object ⊑ bfo:material_entity</li></ul></details></div>
-                        <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.Specimen1</li><li>Qualities-Physical.UniversalTestingMachine1</li></ul></details></div>
+                        <div class="axiom"><details><summary>Instances</summary><ul><li>Qualities-Physical.Specimen1</li></ul></details></div>
                         </details></div>
                         <div id="Actuator">
                           <details open><summary><a href='Example.html#Actuator'>ex:Actuator</a></summary>
@@ -238,6 +238,14 @@ div.axiom ul li {
                             <div class="details"><details><summary>Details</summary>
                             <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Ballscrew</li>                            </ul></details></div>
                             <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Ballscrew'>ex:Ballscrew</a> ⊑ bfo:object</li><li><a href='Example.html#Ballscrew'>ex:Ballscrew</a> ⊑ ∃ <a href='https://spec.industrialontologies.org/ontology/core/Core/hasRole'>core:hasRole</a> .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                        <div id="Chuck">
+                          <details open><summary><a href='Example.html#Chuck'>ex:Chuck</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Chuck</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Chuck'>ex:Chuck</a> ⊑ bfo:object</li><li><a href='Example.html#Chuck'>ex:Chuck</a> ⊑ ∃ <a href='https://spec.industrialontologies.org/ontology/core/Core/hasRole'>core:hasRole</a> .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li></ul></details></div>
                             </details></div>
                           </details>
                         </div>
@@ -511,7 +519,7 @@ div.axiom ul li {
                               <details open><summary><a href='Example.html#TurningCapability'>ex:TurningCapability</a></summary>
                                 <div class="details"><details><summary>Details</summary>
                                 <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Turning Capability</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ↔ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a> ⊓ ∃ <a href='https://spec.industrialontologies.org/ontology/core/Core/capabilityOf'>core:capabilityOf</a> .(<a href='Example.html#Machine'>ex:Machine</a> ⊓ ∃ <a href='Example.html#hasComponent'>ex:hasComponent</a> .(<a href='Example.html#CRotaryMotionSystem'>ex:CRotaryMotionSystem</a> ⊓ ∃ <a href='Example.html#hasComponent'>ex:hasComponent</a> .<a href='Example.html#Chuck'>ex:Chuck</a>))</li><li><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ⊑ <a href='https://spec.industrialontologies.org/ontology/core/Core/Capability'>core:Capability</a></li></ul></details></div>
                                 </details></div>
                               </details>
                             </div>
@@ -532,6 +540,14 @@ div.axiom ul li {
                                         <div class="details"><details><summary>Details</summary>
                                         <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Five Axis Motion Capability</li>                                        </ul></details></div>
                                         <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#FiveAxisMotionCapability'>ex:FiveAxisMotionCapability</a> ↔ <a href='Example.html#FourAxisMotionCapability'>ex:FourAxisMotionCapability</a> ⊓ ∃ <a href='https://spec.industrialontologies.org/ontology/core/Core/capabilityOf'>core:capabilityOf</a> .(<a href='Example.html#Machine'>ex:Machine</a> ⊓ ≥ 2 <a href='Example.html#hasComponent'>ex:hasComponent</a> .<a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a> ⊓ ∃ <a href='https://spec.industrialontologies.org/ontology/core/Core/hasFunction'>core:hasFunction</a> .<a href='Example.html#IndexedRevoluteCapability'>ex:IndexedRevoluteCapability</a>)</li><li><a href='Example.html#FiveAxisMotionCapability'>ex:FiveAxisMotionCapability</a> ⊑ <a href='Example.html#FourAxisMotionCapability'>ex:FourAxisMotionCapability</a></li></ul></details></div>
+                                        </details></div>
+                                      </details>
+                                    </div>
+                                    <div id="SixAxisMotionCapability">
+                                      <details open><summary><a href='Example.html#SixAxisMotionCapability'>ex:SixAxisMotionCapability</a></summary>
+                                        <div class="details"><details><summary>Details</summary>
+                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Six Axis Motion Capability</li>                                        </ul></details></div>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#SixAxisMotionCapability'>ex:SixAxisMotionCapability</a> ↔ <a href='Example.html#FiveAxisMotionCapability'>ex:FiveAxisMotionCapability</a> ⊓ ∃ <a href='https://spec.industrialontologies.org/ontology/core/Core/capabilityOf'>core:capabilityOf</a> .(<a href='Example.html#Machine'>ex:Machine</a> ⊓ ≥ 3 <a href='Example.html#hasComponent'>ex:hasComponent</a> .<a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a> ⊓ ∃ <a href='https://spec.industrialontologies.org/ontology/core/Core/hasFunction'>core:hasFunction</a> .<a href='Example.html#IndexedRevoluteCapability'>ex:IndexedRevoluteCapability</a>)</li><li><a href='Example.html#SixAxisMotionCapability'>ex:SixAxisMotionCapability</a> ⊑ <a href='Example.html#FourAxisMotionCapability'>ex:FourAxisMotionCapability</a></li></ul></details></div>
                                         </details></div>
                                       </details>
                                     </div>
@@ -687,6 +703,14 @@ div.axiom ul li {
                         <div class="details"><details><summary>Details</summary>
                         <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Execution State</li>                        </ul></details></div>
                         <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ExecutionState'>ex:ExecutionState</a> ⊑ <a href='Example.html#State'>ex:State</a></li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="ChuckState">
+                      <details open><summary><a href='Example.html#ChuckState'>ex:ChuckState</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Chuck State</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ChuckState'>ex:ChuckState</a> ⊑ <a href='Example.html#State'>ex:State</a></li></ul></details></div>
                         </details></div>
                       </details>
                     </div>

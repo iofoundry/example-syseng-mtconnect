@@ -1107,6 +1107,12 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ChuckState"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ControllerMode"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>

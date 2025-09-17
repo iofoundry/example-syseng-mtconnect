@@ -260,9 +260,15 @@
                     <Value>SPINDLE</Value>
                   </Constraints>
                 </DataItem>
-                <DataItem category="EVENT" id="LS1ChuckState" name="S1ChuckState" type="CHUCK_STATE"/>
                 <DataItem category="SAMPLE" id="LS1SurfaceSpeedA" name="S1SurfaceSpeedA" subType="x:PATH_1" type="e:SURFACE_SPEED" units="MILLIMETER/SECOND"/>
               </DataItems>
+              <Components>
+                <Chuck id="lc1chuck">
+                  <DataItems>
+                    <DataItem category="EVENT" id="LS1ChuckState" name="S1ChuckState" type="CHUCK_STATE"/>
+                  </DataItems>
+                </Chuck>
+              </Components>
             </Rotary>
             <Linear id="Lz4" name="Z4" nativeName="WA">
               <Configuration>
@@ -301,7 +307,7 @@
                 <DataItem category="SAMPLE" id="LZ4load" name="Z4load" nativeUnits="PERCENT" type="LOAD" units="PERCENT"/>
               </DataItems>
             </Linear>
-            <Rotary id="Lc2" name="C2" nativeName="S">
+            <Rotary id="Lc2" name="C2" nativeName="S2">
               <Configuration>
                 <Motion actuation="DIRECT" coordinateSystemIdRef="machine_r" id="c2motion" type="REVOLUTE">
                   <Axis>0 0 1</Axis>
@@ -325,9 +331,15 @@
                     <Value>SPINDLE</Value>
                   </Constraints>
                 </DataItem>
-                <DataItem category="EVENT" id="LS2ChuckState" name="S2ChuckState" type="CHUCK_STATE"/>
                 <DataItem category="SAMPLE" id="LS2SurfaceSpeedA" name="S2SurfaceSpeedA" subType="x:PATH_1" type="e:SURFACE_SPEED" units="MILLIMETER/SECOND"/>
               </DataItems>
+              <Components>
+                <Chuck id="lc2chuck">
+                  <DataItems>
+                    <DataItem category="EVENT" id="LS2ChuckState" name="S2ChuckState" type="CHUCK_STATE"/>
+                  </DataItems>
+                </Chuck>
+              </Components>
             </Rotary>
             <Rotary id="Lc3" name="C3" nativeName="CA">
               <Configuration>

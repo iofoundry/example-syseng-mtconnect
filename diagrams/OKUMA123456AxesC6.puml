@@ -28,15 +28,17 @@ title OKUMA123456AxesC6
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456AxesC6.html OKUMA123456AxesC6]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesC6 OKUMAMULT_U3000AxesC6]])
-individual(o1, data:OKUMA123456AxesC6EngineeredSystemRole, ex:[[../Example.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:OKUMA123456AxesC6Capability, core:Capability)
 individual(o2, data:OKUMA123456AxesC6ROTARY_VELOCITY_ACTUAL, ex:[[../Example.html#RevoluteVelocity RevoluteVelocity]])
 individual(o3, data:OKUMA123456AxesC6ROTARY_VELOCITY_PROGRAMMED, ex:[[../Example.html#RevoluteVelocity RevoluteVelocity]])
-individual(o4, data:name17, des:Name)
-individual(o5, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
-property(o0, "core:hasRole", o1)
+individual(o4, data:name19, des:Name)
+individual(o5, data:, owl:Thing)
+individual(o6, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
+property(o0, "core:hasCapability", o1)
 property(o0, "core:measuresAtSomeTime", o2)
 property(o0, "core:measuresAtSomeTime", o3)
 property(o0, "des:hasName", o4)
 data(o4, "des:hasTextualName", "C6")
-property(o5, "core:hasComponentPartAtSomeTime", o0)
+property(o5, "rdf:first", o0)
+property(o6, "ex:hasComponent", o0)
 @enduml

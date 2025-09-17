@@ -614,9 +614,14 @@
 		<Core:hasCapability rdf:resource="http://example.org/data/Mazak317641controllerpathCapability"/>
 		<Core:hasQuality rdf:resource="http://example.org/data/Mazak317641controllerpathPATH_POSITION"/>
 		<Core:hasRole rdf:resource="http://example.org/data/Mazak317641controllerpathEngineeredSystemRole"/>
+		<Core:observesAtSomeTime rdf:resource="http://example.org/data/Mazak317641controllerpathCHUCK_STATE"/>
 		<Core:observesAtSomeTime rdf:resource="http://example.org/data/Mazak317641controllerpathCONTROLLER_MODE"/>
 		<Core:observesAtSomeTime rdf:resource="http://example.org/data/Mazak317641controllerpathEXECUTION"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name23"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641controllerpathCHUCK_STATE">
+		<rdf:type rdf:resource="&onto;ChuckState"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641controllerpathCONTROLLER_MODE">
@@ -1113,5 +1118,83 @@
 		<rdf:type rdf:resource="&Desi;Name"/>
 		<Desi:hasTextualName rdf:datatype="&xsd;string">Xmotor</Desi:hasTextualName>
 	</owl:NamedIndividual>
-
+	
+	<owl:AllDifferent>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseX">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseY">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseZ">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseC1">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseB">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseC2">
+			</rdf:Description>
+		</owl:distinctMembers>
+	</owl:AllDifferent>
+	<owl:AllDifferent>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseXXballscrew">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseXXmotor">
+			</rdf:Description>
+		</owl:distinctMembers>
+	</owl:AllDifferent>
+	<owl:AllDifferent>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseYYballscrew">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseYYmotor">
+			</rdf:Description>
+		</owl:distinctMembers>
+	</owl:AllDifferent>
+	<owl:AllDifferent>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseZZballscrew">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641baseZZmotor">
+			</rdf:Description>
+		</owl:distinctMembers>
+	</owl:AllDifferent>
+	<owl:AllDifferent>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641controller">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641door">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641enclosure">
+			</rdf:Description>
+		</owl:distinctMembers>
+	</owl:AllDifferent>
+	<owl:AllDifferent>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641mstructX_AXIS">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641mstructY_AXIS">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641mstructZ_AXIS">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641mstructTABLE">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641mstructTRUNDLE">
+			</rdf:Description>
+		</owl:distinctMembers>
+	</owl:AllDifferent>
+	<owl:AllDifferent>
+		<owl:distinctMembers rdf:parseType="Collection">
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641systemselectric">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641systemshydraulic">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641systemscoolant">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641systemspneumatic">
+			</rdf:Description>
+			<rdf:Description rdf:about="http://example.org/data/Mazak317641systemslubrication">
+			</rdf:Description>
+		</owl:distinctMembers>
+	</owl:AllDifferent>
 </rdf:RDF>

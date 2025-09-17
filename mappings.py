@@ -37,6 +37,7 @@ Components = {
   'Environmental': Example.Room,
   'Door': Example.Door,
   'Coolant': Example.CoolantSystem,
+  'Chuck': Example.Chuck,
 
   'Axes': False,
   'Systems': False,
@@ -71,7 +72,8 @@ DataItems = {
   'LINEAR_FORCE': Example.Force,
   'PATH_POSITION': Example.ThreeSpaceDisplacement,
   'CONTROLLER_MODE': Example.ControllerMode,
-  'EXECUTION': Example.ExecutionState
+  'EXECUTION': Example.ExecutionState,
+  'CHUCK_STATE': Example.ChuckState
 }
 
 Roles = {

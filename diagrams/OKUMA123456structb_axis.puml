@@ -28,11 +28,15 @@ title OKUMA123456structb_axis
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456structb_axis.html OKUMA123456structb_axis]], vendor:[[../OKUMA.html#OKUMAMULT_U3000structb_axis OKUMAMULT_U3000structb_axis]])
-individual(o1, data:name6, des:Name)
-individual(o2, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
-individual(o3, data:[[./OKUMA123456AxesB.html OKUMA123456AxesB]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesB OKUMAMULT_U3000AxesB]])
-property(o0, "des:hasName", o1)
-data(o1, "des:hasTextualName", "b_axis")
-property(o2, "core:hasComponentPartAtSomeTime", o0)
-property(o3, "ex:connectedTo", o0)
+individual(o1, data:OKUMA123456structb_axisCapability, core:Capability)
+individual(o2, data:name6, des:Name)
+individual(o3, data:, owl:Thing)
+individual(o4, data:[[./OKUMA123456AxesB.html OKUMA123456AxesB]], vendor:[[../OKUMA.html#OKUMAMULT_U3000AxesB OKUMAMULT_U3000AxesB]])
+individual(o5, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
+property(o0, "core:hasCapability", o1)
+property(o0, "des:hasName", o2)
+data(o2, "des:hasTextualName", "b_axis")
+property(o3, "rdf:first", o0)
+property(o4, "ex:connectedTo", o0)
+property(o5, "ex:hasComponent", o0)
 @enduml

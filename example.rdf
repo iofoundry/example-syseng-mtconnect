@@ -55,6 +55,22 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">C Rotary Motion System</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="http://example.org/ontology/Chuck">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Chuck</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="http://example.org/ontology/ChuckState">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/State"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Chuck State</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/ContinuousRevoluteCapability">
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/RevoluteMotionCapability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Continuous Revolute Capability</rdfs:label>
@@ -435,6 +451,46 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Sensor</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="http://example.org/ontology/SixAxisMotionCapability">
+		<rdfs:subClassOf rdf:resource="http://example.org/ontology/FourAxisMotionCapability"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Six Axis Motion Capability</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="http://example.org/ontology/FiveAxisMotionCapability">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="http://example.org/ontology/Machine">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+										<owl:onClass>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
+														<owl:someValuesFrom rdf:resource="http://example.org/ontology/IndexedRevoluteCapability"/>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:onClass>
+										<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:minQualifiedCardinality>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
 	<owl:Class rdf:about="http://example.org/ontology/State">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
 		<rdfs:subClassOf>
@@ -555,6 +611,40 @@
 	<owl:Class rdf:about="http://example.org/ontology/TurningCapability">
 		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Turning Capability</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/Capability">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="http://example.org/ontology/Machine">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+										<owl:someValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="http://example.org/ontology/CRotaryMotionSystem">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+														<owl:someValuesFrom rdf:resource="http://example.org/ontology/Chuck"/>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Velocity">

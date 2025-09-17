@@ -31,21 +31,26 @@ class MTConnectToParticulars:
     type = self.device.type_name(element, names, parent)
     type_cls = self.types.type_by_id(element.get("id"))
     partic = None
+    children = []
     if type_cls:
       partic = self._create_particular(element, type_cls, type, names, parent)
     
       for composition in element.findall("./m:Compositions/*", self.ns):
         comp_id = composition.get("id", None)
         if comp_id:
-          self._add_component(composition, names.copy(), partic)
+          children.append(self._add_component(composition, names.copy(), partic))
         else:
           logger.error(f"Composition {composition} has no id")
           
       self._add_data_items(element, partic)
 
     for component in element.findall("./m:Components/*", self.ns):
-      self._add_component(component, names.copy(), partic or parent)
-      
+      children.append(self._add_component(component, names.copy(), partic or parent))
+    
+    children = list(filter(lambda _: _ is not None, children))
+    if len(children) > 1:
+      owl.AllDifferent(children)  
+    
     return partic
 
   @log_indent
