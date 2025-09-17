@@ -38,5 +38,5 @@ property(o0, "core:hasCapability", o2)
 property(o0, "core:hasQuality", o3)
 property(o0, "des:hasName", o4)
 data(o4, "des:hasTextualName", "coolant")
-property(o5, "core:hasComponentPartAtSomeTime", o0)
+property(o5, "ex:hasComponent", o0)
 @enduml

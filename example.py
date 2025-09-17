@@ -255,6 +255,13 @@ with Example:
   class hasUnit(Core.ValueExpression >> QUDT.Unit):
     label = owl.locstr("has unit", "en")
 
+  class hasComponent(Core.hasComponentPartAtSomeTime):
+    label = owl.locstr("has component", "en")
+
+  class componentOf(Core.componentPartOfAtSomeTime):
+    label = owl.locstr("component of", "en")
+    inverse_of = hasComponent
+
   class State(BFO.process):
     """A state in the IOF ontology."""
     label = owl.locstr("State", "en")
@@ -294,18 +301,28 @@ with Example:
     label = owl.locstr("Three Space Displacement", "en")
 
 
-  class FourAxisMotionCapability(Core.Capability):
-    """A four-axis motion capability in the IOF ontology."""
-    label = owl.locstr("Four Axis Motion Capability", "en")
+  class ThreeAxisMotionCapability(Core.Capability):
+    """A three-axis motion capability in the IOF ontology."""
+    label = owl.locstr("Three Axis Motion Capability", "en")
     equivalent_to = [Core.Capability & 
                      Core.capabilityOf.some(
                        Machine & 
-                       Core.hasComponentPartAtSomeTime.some(XLinearMotionSystem) & 
-                       Core.hasComponentPartAtSomeTime.some(YLinearMotionSystem) & 
-                       Core.hasComponentPartAtSomeTime.some(ZLinearMotionSystem) & 
-                       Core.hasComponentPartAtSomeTime.some(
+                       hasComponent.some(XLinearMotionSystem) & 
+                       hasComponent.some(YLinearMotionSystem) & 
+                       hasComponent.some(ZLinearMotionSystem) & 
+                       hasComponent.some(
                          CRotaryMotionSystem & 
                          Core.hasFunction.some(ContinuousRevoluteCapability)))]
+
+  class FourAxisMotionCapability(ThreeAxisMotionCapability):
+    """A four-axis motion capability in the IOF ontology."""
+    label = owl.locstr("Four Axis Motion Capability", "en")
+    equivalent_to = [ThreeAxisMotionCapability & 
+                     Core.capabilityOf.some(
+                       Machine & 
+                       hasComponent.some(
+                         RotaryMotionSystem & 
+                         Core.hasFunction.some(IndexedRevoluteCapability)))]
 
   class FiveAxisMotionCapability(FourAxisMotionCapability):
     """A five-axis motion capability in the IOF ontology."""
@@ -313,9 +330,8 @@ with Example:
     equivalent_to = [FourAxisMotionCapability & 
                      Core.capabilityOf.some(
                        Machine & 
-                       Core.hasComponentPartAtSomeTime.some(
+                       hasComponent.min(2,
                          RotaryMotionSystem & 
                          Core.hasFunction.some(IndexedRevoluteCapability)))]
-
 
 Example.save(file = "example.rdf", format = "rdfxml")

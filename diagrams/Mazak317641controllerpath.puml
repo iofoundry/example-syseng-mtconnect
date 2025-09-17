@@ -42,5 +42,5 @@ property(o0, "core:observesAtSomeTime", o4)
 property(o0, "core:observesAtSomeTime", o5)
 property(o0, "des:hasName", o6)
 data(o6, "des:hasTextualName", "path")
-property(o7, "core:hasComponentPartAtSomeTime", o0)
+property(o7, "ex:hasComponent", o0)
 @enduml

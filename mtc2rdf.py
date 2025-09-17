@@ -1,6 +1,6 @@
 import sys
 import owlready2 as owl
-from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example, Data
+from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example
 from mtconnect_to_iof import MTConnectToIOF
 from generate_diagram import GenerateDiagram
 from iof_render import dl_render_terminology, dl_render_class, Namespaces
@@ -8,9 +8,9 @@ import re
 from indented_logger import setup_logging, increase_indent, decrease_indent
 from indented_logger.decorator import log_indent
 import logging
+import logger
 from generate_html import render_vendor, render_terminology
 
-setup_logging(level = logging.DEBUG, indent_spaces=2, include_func=True, no_datetime=True)
 logger = logging.getLogger(__name__)
 
 Example.load(only_local=True)
@@ -39,13 +39,13 @@ Namespaces[Vendor.base_iri] = Vendor.name
 #print(Vendor.classes)
 
 entities = [x[0] for x in owl.default_world.sparql("""select ?p { ?p a ?c . ?c rdfs:subClassOf* ?? . }""", \
-                                                    [BFO.material_entity]) if x[0].namespace == Data]
+                                                    [BFO.material_entity]) if x[0].namespace == trans.Data]
 
 GenerateDiagram.linked_terms = set(entities)
 
 render_vendor(Vendor.name, Vendor, entities)
 
-all_data = list(owl.default_world.sparql(f"""select ?s ?p ?o {{ ?s ?p ?o . FILTER(LIKE(STR(?s), "{Data.base_iri}%")) }}"""))
+all_data = list(owl.default_world.sparql(f"""select ?s ?p ?o {{ ?s ?p ?o . FILTER(LIKE(STR(?s), "{trans.Data.base_iri}%")) }}"""))
 full = GenerateDiagram(f"{Vendor.name}Full", all_data, Vendor)
 logger.info("Generating full diagram")
 full.generate()

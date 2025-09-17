@@ -1,6 +1,7 @@
 import owlready2 as owl
 import os
 import re
+import logger
 
 # owl.default_world.set_backend(filename = "./ontologies.sqlite3")
 
@@ -51,10 +52,6 @@ if os.path.exists(f"{path}/example.rdf"):
   with open(f"{path}/example.rdf", "rb") as f:
     Example = owl.get_ontology("http://example.org/ontology/").load(only_local = True, fileobj=f)
   Example.base_iri = "http://example.org/ontology/"
-
-Data = owl.get_ontology("http://example.org/data/")
-Data.base_iri = "http://example.org/data/"
-
 
 QUDT = owl.get_ontology(f"http://qudt.org/vocab/unit/")
 QUDT.base_iri = 'http://qudt.org/vocab/unit/'

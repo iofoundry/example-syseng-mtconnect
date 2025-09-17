@@ -45,5 +45,5 @@ property(o0, "core:hasCapability", o5)
 property(o0, "core:hasQuality", o6)
 property(o0, "des:hasName", o7)
 data(o7, "des:hasTextualName", "Xmotor")
-property(o8, "core:hasComponentPartAtSomeTime", o0)
+property(o8, "ex:hasComponent", o0)
 @enduml

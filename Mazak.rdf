@@ -20,127 +20,127 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/NumericallyControlledMachine"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800icontroller"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800idoor"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ienclosure"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTABLE"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructTRUNDLE"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructX_AXIS"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructY_AXIS"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800imstructZ_AXIS"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ipartspartocc"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iresourcesmaterialsstock"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemscoolant"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemselectric"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemshydraulic"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemslubrication"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800isystemspneumatic"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -304,7 +304,7 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseBBmotor"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -385,6 +385,12 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Cmotor"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZ"/>
 			</owl:Restriction>
@@ -393,12 +399,6 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Rotary_velocity"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC1Cmotor"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -483,14 +483,14 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2C2motor"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseC2C2motor"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseB"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -578,6 +578,18 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXXballscrew"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXVelocityProgrammed"/>
 			</owl:Restriction>
@@ -586,18 +598,6 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXVelocityRapid"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseXXballscrew"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -753,6 +753,18 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYYballscrew"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseX"/>
 			</owl:Restriction>
@@ -767,18 +779,6 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYVelocityRapid"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE5200"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseYYballscrew"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -934,6 +934,18 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE9600"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
+				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZZballscrew"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://example.org/ontology/hasKinematicParent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseY"/>
 			</owl:Restriction>
@@ -948,18 +960,6 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000056"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZVelocityRapid"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800iMotorLINEAR_FORCE9600"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
-				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800ibaseZZballscrew"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -1095,7 +1095,7 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/ControlSystem"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="http://example.org/ontology/hasComponent"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/Mazak/Mazak800icontrollerpath"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
