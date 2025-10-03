@@ -81,4 +81,4 @@ for part in entities:
     statements.append([x[0], x[1], part])
   gen = GenerateDiagram(f"{part.name}", statements, Vendor)
   gen.generate()
-  
+
