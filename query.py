@@ -21,6 +21,8 @@ Data.base_iri = "http://example.org/data/"
 
 owl.sync_reasoner(infer_property_values=True, ignore_unsupported_datatypes=True)
 
+print("Classes and subclasses axioms")
+
 for x in owl.default_world.sparql("""
   SELECT ?class ?property ?target WHERE {
   ?class rdfs:subClassOf+ [ a owl:Restriction ;
@@ -32,3 +34,49 @@ for x in owl.default_world.sparql("""
 ORDER BY ?class
 """):
   print(x)
+
+print("\n\nClasses and equivalent axioms\n\n")
+
+for x in owl.default_world.sparql("""
+  SELECT ?class ?property WHERE {
+  ?class owl:equivalentClass [ a owl:Class ;
+    owl:intersectionOf ?list ] .
+  ?list rdf:rest*/rdf:first ?property .
+  
+  FILTER (LIKE(str(?class), "http://example.org/%"))
+}
+ORDER BY ?class
+"""):
+  print(x)
+  
+  
+'''
+  SELECT ?class ?property ?target WHERE {
+  ?class rdfs:subClassOf+ [ a owl:Restriction ;
+    owl:onProperty ?property ;
+    owl:someValuesFrom ?target ] .
+
+  FILTER regex(str(?class), "^http://example.org/Mazak/")
+}
+ORDER BY ?class
+'''
+
+'''
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX mt: <http://example.org/ontology/>
+PREFIX data: <http://example.org/data/>
+PREFIX mazak: <http://example.org/Mazak/>
+
+
+SELECT ?class ?property WHERE {
+  ?class owl:equivalentClass [ a owl:Class ;
+    owl:intersectionOf ?list ] .
+  ?list rdf:rest*/rdf:first ?property .
+  
+  FILTER regex(str(?class), "^http://example.org/")
+
+}
+ORDER BY ?class
+'''
