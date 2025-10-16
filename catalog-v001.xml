@@ -3,8 +3,10 @@
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl" uri="./cache/bfo.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/" uri="./cache/AnnotationVocabulary.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/" uri="./cache/AnnotationVocabulary.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/migration/202502/AnnotationVocabularyReplacements/" uri="./cache/AnnotationVocabularyReplacements.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/" uri="./cache/AnnotationVocabulary.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/Core/" uri="./cache/Core.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/migration/202502/CoreReplacements/" uri="./cache/CoreReplacements.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/202401/core/Core/" uri="./cache/Core.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/qualities/Qualities/" uri="./cache/IOF_Qualities.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/" uri="./cache/IOF_Qualities-Physical.rdf"/>

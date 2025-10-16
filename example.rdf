@@ -15,6 +15,8 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="http://example.org/ontology/">
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/migration/202502/AnnotationVocabularyReplacements/"/>
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/migration/202502/CoreReplacements/"/>
 		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
 		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators/"/>
 	</owl:Ontology>
