@@ -28,13 +28,13 @@ title OKUMA123456LAux1LoaderSystem1
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456LAux1LoaderSystem1.html OKUMA123456LAux1LoaderSystem1]], vendor:[[../OKUMA.html#OKUMAMULT_U3000LAux1LoaderSystem1 OKUMAMULT_U3000LAux1LoaderSystem1]])
-individual(o1, data:OKUMA123456LAux1LoaderSystem1Capability, core:Capability)
+individual(o1, data:OKUMA123456LAux1LoaderSystem1Capability, _:Capability)
 individual(o2, data:name27, des:Name)
 individual(o3, data:, owl:Thing)
 individual(o4, data:[[./OKUMA123456.html OKUMA123456]], vendor:[[../OKUMA.html#OKUMAMULT_U3000 OKUMAMULT_U3000]])
-property(o0, "core:hasCapability", o1)
+property(o0, "_:hasCapability", o1)
 property(o0, "des:hasName", o2)
 data(o2, "des:hasTextualName", "LoaderSystem1")
 property(o3, "rdf:first", o0)
-property(o4, "ex:hasComponent", o0)
+property(o4, "_:hasComponent", o0)
 @enduml
