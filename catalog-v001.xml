@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/migration/202502/CoreReplacements/" uri="file:/Users/will/projects/IOF/Ontologies/ontology/migration/202502/CoreReplacements.rdf"/>
     <uri id="User Entered Import Resolution" name="http://purl.obolibrary.org/obo/bfo/2020/bfo.owl" uri="./cache/bfo.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/202401/core/meta/AnnotationVocabulary/" uri="./cache/AnnotationVocabulary.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/" uri="./cache/AnnotationVocabulary.rdf"/>
