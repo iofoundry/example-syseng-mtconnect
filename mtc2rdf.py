@@ -58,8 +58,8 @@ gen = GenerateDiagram(f"{Vendor.name}Topo", statements, Vendor)
 gen.generate()
 
 logger.info("Generating mereology")
-statements = [[x[0], Core.hasComponentPartAtAllTimes, x[1]] \
-  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Construct.hasComponentPartAtSomeTime])]
+statements = [[x[0], Example.hasComponent, x[1]] \
+  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Example.hasComponent])]
 
 gen = GenerateDiagram(f"{Vendor.name}Mere", statements, Vendor)
 gen.generate()

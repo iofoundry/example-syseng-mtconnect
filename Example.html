@@ -69,28 +69,28 @@ div.axiom ul li {
   </head>
   <body>
 <h1 id="Object properties">Object properties</h1>
+<h2 id="hasComponent">hasComponent</h2>
+<ul><li class="axiom"><a href='Example.html#hasComponent'>ex:hasComponent</a> ⊑ constr:hasComponentPartAtSomeTime</li></ul>
+<h2 id="componentOf">componentOf</h2>
+<ul><li class="axiom"><a href='Example.html#componentOf'>ex:componentOf</a> ⊑ constr:componentPartOfAtSomeTime</li></ul>
+<h2 id="conformsTo">conformsTo</h2>
+<ul><li class="axiom"></li></ul>
 <h2 id="connectedTo">connectedTo</h2>
 <ul><li class="axiom">domain: bfo:material_entity</li>
 <li class="axiom">range: bfo:material_entity</li>
 <li class="axiom">inverse: <a href='Example.html#connectedTo'>ex:connectedTo</a></li>
 <li class="axiom">Symmetric</li></ul>
-<h2 id="hasKinematicParent">hasKinematicParent</h2>
-<ul><li class="axiom">domain: bfo:material_entity</li>
-<li class="axiom">range: bfo:material_entity</li></ul>
 <h2 id="hasKinematicChild">hasKinematicChild</h2>
 <ul><li class="axiom">domain: bfo:material_entity</li>
 <li class="axiom">range: bfo:material_entity</li></ul>
-<h2 id="satisfiedBy">satisfiedBy</h2>
-<ul><li class="axiom"></li></ul>
-<h2 id="conformsTo">conformsTo</h2>
-<ul><li class="axiom"></li></ul>
+<h2 id="hasKinematicParent">hasKinematicParent</h2>
+<ul><li class="axiom">domain: bfo:material_entity</li>
+<li class="axiom">range: bfo:material_entity</li></ul>
 <h2 id="hasUnit">hasUnit</h2>
 <ul><li class="axiom">domain: constr:ValueExpression</li>
 <li class="axiom">range: unit:Unit</li></ul>
-<h2 id="hasComponent">hasComponent</h2>
-<ul><li class="axiom"><a href='Example.html#hasComponent'>ex:hasComponent</a> ⊑ constr:hasComponentPartAtSomeTime</li></ul>
-<h2 id="componentOf">componentOf</h2>
-<ul><li class="axiom"><a href='Example.html#componentOf'>ex:componentOf</a> ⊑ constr:componentPartOfAtSomeTime</li></ul>
+<h2 id="satisfiedBy">satisfiedBy</h2>
+<ul><li class="axiom"></li></ul>
 <h1 id="Classes">Classes</h1>
 <div class="tree"><div id="Thing">
   <details open><summary>_:Thing</summary>
@@ -124,60 +124,12 @@ div.axiom ul li {
                         <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) an object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested</li><li>example: An organism, a fish tank, a planet, a laptop, a valve, a block of marble, an ice cube.</li><li>label: object</li><li>prefLabel: object</li><li>scopeNote: A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User’s Guide</li>                        </ul></details></div>
                         <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:object ⊑ bfo:material_entity</li></ul></details></div>
                         </details></div>
-                        <div id="Actuator">
-                          <details open><summary><a href='Example.html#Actuator'>ex:Actuator</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Actuator</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Actuator'>ex:Actuator</a> ⊑ bfo:object</li></ul></details></div>
-                            </details></div>
-                            <div id="Motor">
-                              <details open><summary><a href='Example.html#Motor'>ex:Motor</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motor</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Motor'>ex:Motor</a> ⊑ <a href='Example.html#Actuator'>ex:Actuator</a></li><li><a href='Example.html#Motor'>ex:Motor</a> ⊑ ∃ constr:hasRole .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li></ul></details></div>
-                                </details></div>
-                              </details>
-                            </div>
-                          </details>
-                        </div>
                         <div id="MotionSystem">
                           <details open><summary><a href='Example.html#MotionSystem'>ex:MotionSystem</a></summary>
                             <div class="details"><details><summary>Details</summary>
                             <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motion System</li>                            </ul></details></div>
                             <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ bfo:object</li><li><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ ∃ constr:hasComponentPartAtAllTimes .<a href='Example.html#Actuator'>ex:Actuator</a></li><li><a href='Example.html#MotionSystem'>ex:MotionSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
                             </details></div>
-                            <div id="LinearMotionSystem">
-                              <details open><summary><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Linear Motion System</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a></li><li><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ ∃ constr:hasCapability .<a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a></li></ul></details></div>
-                                </details></div>
-                                <div id="XLinearMotionSystem">
-                                  <details open><summary><a href='Example.html#XLinearMotionSystem'>ex:XLinearMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: X Linear Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#XLinearMotionSystem'>ex:XLinearMotionSystem</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                                <div id="YLinearMotionSystem">
-                                  <details open><summary><a href='Example.html#YLinearMotionSystem'>ex:YLinearMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Y Linear Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#YLinearMotionSystem'>ex:YLinearMotionSystem</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                                <div id="ZLinearMotionSystem">
-                                  <details open><summary><a href='Example.html#ZLinearMotionSystem'>ex:ZLinearMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Z Linear Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ZLinearMotionSystem'>ex:ZLinearMotionSystem</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                              </details>
-                            </div>
                             <div id="RotaryMotionSystem">
                               <details open><summary><a href='Example.html#RotaryMotionSystem'>ex:RotaryMotionSystem</a></summary>
                                 <div class="details"><details><summary>Details</summary>
@@ -210,19 +162,51 @@ div.axiom ul li {
                                 </div>
                               </details>
                             </div>
+                            <div id="LinearMotionSystem">
+                              <details open><summary><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Linear Motion System</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ <a href='Example.html#MotionSystem'>ex:MotionSystem</a></li><li><a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a> ⊑ ∃ constr:hasCapability .<a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a></li></ul></details></div>
+                                </details></div>
+                                <div id="XLinearMotionSystem">
+                                  <details open><summary><a href='Example.html#XLinearMotionSystem'>ex:XLinearMotionSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: X Linear Motion System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#XLinearMotionSystem'>ex:XLinearMotionSystem</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="YLinearMotionSystem">
+                                  <details open><summary><a href='Example.html#YLinearMotionSystem'>ex:YLinearMotionSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Y Linear Motion System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#YLinearMotionSystem'>ex:YLinearMotionSystem</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="ZLinearMotionSystem">
+                                  <details open><summary><a href='Example.html#ZLinearMotionSystem'>ex:ZLinearMotionSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Z Linear Motion System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ZLinearMotionSystem'>ex:ZLinearMotionSystem</a> ⊑ <a href='Example.html#LinearMotionSystem'>ex:LinearMotionSystem</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
                           </details>
                         </div>
-                        <div id="Machine">
-                          <details open><summary><a href='Example.html#Machine'>ex:Machine</a></summary>
+                        <div id="Actuator">
+                          <details open><summary><a href='Example.html#Actuator'>ex:Actuator</a></summary>
                             <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Machine</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ bfo:object</li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ ∃ constr:hasComponentPartAtSomeTime .<a href='Example.html#MotionSystem'>ex:MotionSystem</a></li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ ∃ constr:hasCapability .constr:Capability</li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Actuator</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Actuator'>ex:Actuator</a> ⊑ bfo:object</li></ul></details></div>
                             </details></div>
-                            <div id="NumericallyControlledMachine">
-                              <details open><summary><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a></summary>
+                            <div id="Motor">
+                              <details open><summary><a href='Example.html#Motor'>ex:Motor</a></summary>
                                 <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Numerically Controlled Machine</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ <a href='Example.html#Machine'>ex:Machine</a></li><li><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ ∃ constr:hasComponentPartAtSomeTime .<a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul></details></div>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motor</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Motor'>ex:Motor</a> ⊑ <a href='Example.html#Actuator'>ex:Actuator</a></li><li><a href='Example.html#Motor'>ex:Motor</a> ⊑ ∃ constr:hasRole .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li></ul></details></div>
                                 </details></div>
                               </details>
                             </div>
@@ -252,22 +236,6 @@ div.axiom ul li {
                             </details></div>
                           </details>
                         </div>
-                        <div id="Stock">
-                          <details open><summary><a href='Example.html#Stock'>ex:Stock</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Stock</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Stock'>ex:Stock</a> ⊑ bfo:object</li><li><a href='Example.html#Stock'>ex:Stock</a> ⊑ ∃ constr:hasRole .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li><li><a href='Example.html#Stock'>ex:Stock</a> ⊑ ∃ constr:hasRole .constr:RawMaterialRole</li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                        <div id="ProductPart">
-                          <details open><summary><a href='Example.html#ProductPart'>ex:ProductPart</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Product Part</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ bfo:object</li><li><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ ∃ constr:hasRole .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li><li><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ ∃ constr:hasRole .constr:MaterialProductRole</li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
                         <div id="Structure">
                           <details open><summary><a href='Example.html#Structure'>ex:Structure</a></summary>
                             <div class="details"><details><summary>Details</summary>
@@ -284,6 +252,30 @@ div.axiom ul li {
                             </div>
                           </details>
                         </div>
+                        <div id="Machine">
+                          <details open><summary><a href='Example.html#Machine'>ex:Machine</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Machine</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ bfo:object</li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ ∃ constr:hasCapability .constr:Capability</li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ ∃ constr:hasComponentPartAtSomeTime .<a href='Example.html#MotionSystem'>ex:MotionSystem</a></li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li><li><a href='Example.html#Machine'>ex:Machine</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
+                            </details></div>
+                            <div id="NumericallyControlledMachine">
+                              <details open><summary><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Numerically Controlled Machine</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ <a href='Example.html#Machine'>ex:Machine</a></li><li><a href='Example.html#NumericallyControlledMachine'>ex:NumericallyControlledMachine</a> ⊑ ∃ constr:hasComponentPartAtSomeTime .<a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul></details></div>
+                                </details></div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                        <div id="ProductPart">
+                          <details open><summary><a href='Example.html#ProductPart'>ex:ProductPart</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Product Part</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ bfo:object</li><li><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ ∃ constr:hasRole .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li><li><a href='Example.html#ProductPart'>ex:ProductPart</a> ⊑ ∃ constr:hasRole .constr:MaterialProductRole</li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
                         <div id="Sensor">
                           <details open><summary><a href='Example.html#Sensor'>ex:Sensor</a></summary>
                             <div class="details"><details><summary>Details</summary>
@@ -292,6 +284,70 @@ div.axiom ul li {
                             </details></div>
                           </details>
                         </div>
+                        <div id="Stock">
+                          <details open><summary><a href='Example.html#Stock'>ex:Stock</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Stock</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Stock'>ex:Stock</a> ⊑ bfo:object</li><li><a href='Example.html#Stock'>ex:Stock</a> ⊑ ∃ constr:hasRole .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li><li><a href='Example.html#Stock'>ex:Stock</a> ⊑ ∃ constr:hasRole .constr:RawMaterialRole</li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                    <div id="ControlSystem">
+                      <details open><summary><a href='Example.html#ControlSystem'>ex:ControlSystem</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Control System</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
+                        </details></div>
+                        <div id="ControlSystemPath">
+                          <details open><summary><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Control System Path</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a> ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                    <div id="CoolantSystem">
+                      <details open><summary><a href='Example.html#CoolantSystem'>ex:CoolantSystem</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Coolant System</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#CoolantSystem'>ex:CoolantSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#CoolantSystem'>ex:CoolantSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="ElectricalSystem">
+                      <details open><summary><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Electrical System</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="HydraulicSystem">
+                      <details open><summary><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Hydraulic System</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="LubricationSystem">
+                      <details open><summary><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Lubrication System</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="PneumaticSystem">
+                      <details open><summary><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Pneumatic System</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
+                        </details></div>
                       </details>
                     </div>
                     <div id="_System">
@@ -315,62 +371,6 @@ div.axiom ul li {
                         <div class="details"><details><summary>Details</summary>
                         <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Material Artifact</li>                        </ul></details></div>
                         <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#_MaterialArtifact'>ex:_MaterialArtifact</a> ↔ bfo:material_entity ⊓ ∃ constr:hasRole .<a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></li><li><a href='Example.html#_MaterialArtifact'>ex:_MaterialArtifact</a> ⊑ bfo:material_entity</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="ControlSystem">
-                      <details open><summary><a href='Example.html#ControlSystem'>ex:ControlSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Control System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#ControlSystem'>ex:ControlSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                        <div id="ControlSystemPath">
-                          <details open><summary><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Control System Path</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ControlSystemPath'>ex:ControlSystemPath</a> ⊑ <a href='Example.html#ControlSystem'>ex:ControlSystem</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                    <div id="ElectricalSystem">
-                      <details open><summary><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Electrical System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#ElectricalSystem'>ex:ElectricalSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="HydraulicSystem">
-                      <details open><summary><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Hydraulic System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#HydraulicSystem'>ex:HydraulicSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="PneumaticSystem">
-                      <details open><summary><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Pneumatic System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#PneumaticSystem'>ex:PneumaticSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="LubricationSystem">
-                      <details open><summary><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Lubrication System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#LubricationSystem'>ex:LubricationSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="CoolantSystem">
-                      <details open><summary><a href='Example.html#CoolantSystem'>ex:CoolantSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Coolant System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#CoolantSystem'>ex:CoolantSystem</a> ⊑ bfo:material_entity</li><li><a href='Example.html#CoolantSystem'>ex:CoolantSystem</a> ⊑ ∃ constr:hasRole .<a href='Example.html#EngineeredSystemRole'>ex:EngineeredSystemRole</a></li></ul></details></div>
                         </details></div>
                       </details>
                     </div>
@@ -408,6 +408,62 @@ div.axiom ul li {
                 <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b s-depends on c</li><li>example: (with one bearer) The mass of this tomato, the pink colour of a medium rare piece of grilled filet mignon at its centre, the smell of this portion of mozzarella, the disposition of this fish to decay, the role of being a doctor, the function of this heart: to pump blood, the shape of this hole; (with multiple bearers:) John's love for Mary, the ownership relation between John and this statue, the relation of authority between John and his subordinates.</li><li>label: specifically dependent continuant</li><li>prefLabel: specifically dependent continuant</li><li>scopeNote: On the multiple bearers case, see relational quality.</li>                </ul></details></div>
                 <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:specifically_dependent_continuant ⊑ bfo:continuant</li><li>bfo:specifically_dependent_continuant ⊓ bfo:generically_dependent_continuant ⊑ ⊥</li><li>bfo:specifically_dependent_continuant ⊓ bfo:independent_continuant ⊑ ⊥</li></ul></details></div>
                 </details></div>
+                <div id="BFO_0000019">
+                  <details open><summary>bfo:quality</summary>
+                    <div class="details"><details><summary>Details</summary>
+                    <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized</li><li>example: The colour of a tomato, the ambient temperature of this portion of air, the length of the circumference of your waist, the shape of your nose, the shape of your nostril, the mass of this piece of gold.</li><li>label: quality</li><li>prefLabel: quality</li>                    </ul></details></div>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:quality ⊑ bfo:specifically_dependent_continuant</li><li>bfo:quality ⊓ bfo:realizable_entity ⊑ ⊥</li></ul></details></div>
+                    </details></div>
+                    <div id="Angle">
+                      <details open><summary><a href='Example.html#Angle'>ex:Angle</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Angle</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Angle'>ex:Angle</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="Displacement">
+                      <details open><summary><a href='Example.html#Displacement'>ex:Displacement</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Displacement</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Displacement'>ex:Displacement</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                        <div id="ThreeSpaceDisplacement">
+                          <details open><summary><a href='Example.html#ThreeSpaceDisplacement'>ex:ThreeSpaceDisplacement</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Three Space Displacement</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ThreeSpaceDisplacement'>ex:ThreeSpaceDisplacement</a> ⊑ <a href='Example.html#Displacement'>ex:Displacement</a></li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                    <div id="Force">
+                      <details open><summary><a href='Example.html#Force'>ex:Force</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Force</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Force'>ex:Force</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="Length">
+                      <details open><summary><a href='Example.html#Length'>ex:Length</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Length</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Length'>ex:Length</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="Temperature">
+                      <details open><summary><a href='Example.html#Temperature'>ex:Temperature</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Temperature</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Temperature'>ex:Temperature</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                  </details>
+                </div>
                 <div id="BFO_0000017">
                   <details open><summary>bfo:realizable_entity</summary>
                     <div class="details"><details><summary>Details</summary>
@@ -420,6 +476,14 @@ div.axiom ul li {
                         <div class="axiom"><details><summary>Annotations</summary><ul><li>altLabel: externally-grounded realizable entity</li><li>definition: (Elucidation) b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed</li><li>example: The priest role, the student role, the role of subject in a clinical trial, the role of a stone in marking a property boundary, the role of a boundary to demarcate two neighbouring administrative territories, the role of a building in serving as a military target.</li><li>label: role</li><li>prefLabel: role</li>                        </ul></details></div>
                         <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:role ⊑ bfo:realizable_entity</li><li>bfo:role ⊓ bfo:disposition ⊑ ⊥</li></ul></details></div>
                         </details></div>
+                        <div id="MaterialArtifactRole">
+                          <details open><summary><a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Material Artifact Role</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a> ⊑ bfo:role</li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
                         <div id="SystemRole">
                           <details open><summary><a href='Example.html#SystemRole'>ex:SystemRole</a></summary>
                             <div class="details"><details><summary>Details</summary>
@@ -434,14 +498,6 @@ div.axiom ul li {
                                 </details></div>
                               </details>
                             </div>
-                          </details>
-                        </div>
-                        <div id="MaterialArtifactRole">
-                          <details open><summary><a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Material Artifact Role</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MaterialArtifactRole'>ex:MaterialArtifactRole</a> ⊑ bfo:role</li></ul></details></div>
-                            </details></div>
                           </details>
                         </div>
                       </details>
@@ -464,28 +520,12 @@ div.axiom ul li {
                                 <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motion Capability</li>                                </ul></details></div>
                                 <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MotionCapability'>ex:MotionCapability</a> ⊑ constr:Capability</li></ul></details></div>
                                 </details></div>
-                                <div id="PrismaticMotionCapability">
-                                  <details open><summary><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Motion Capability</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
                                 <div id="RevoluteMotionCapability">
                                   <details open><summary><a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a></summary>
                                     <div class="details"><details><summary>Details</summary>
                                     <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Revolute Motion Capability</li>                                    </ul></details></div>
                                     <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul></details></div>
                                     </details></div>
-                                    <div id="IndexedRevoluteCapability">
-                                      <details open><summary><a href='Example.html#IndexedRevoluteCapability'>ex:IndexedRevoluteCapability</a></summary>
-                                        <div class="details"><details><summary>Details</summary>
-                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Indexed Revolute Capability</li>                                        </ul></details></div>
-                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#IndexedRevoluteCapability'>ex:IndexedRevoluteCapability</a> ⊑ <a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a></li></ul></details></div>
-                                        </details></div>
-                                      </details>
-                                    </div>
                                     <div id="ContinuousRevoluteCapability">
                                       <details open><summary><a href='Example.html#ContinuousRevoluteCapability'>ex:ContinuousRevoluteCapability</a></summary>
                                         <div class="details"><details><summary>Details</summary>
@@ -494,24 +534,24 @@ div.axiom ul li {
                                         </details></div>
                                       </details>
                                     </div>
+                                    <div id="IndexedRevoluteCapability">
+                                      <details open><summary><a href='Example.html#IndexedRevoluteCapability'>ex:IndexedRevoluteCapability</a></summary>
+                                        <div class="details"><details><summary>Details</summary>
+                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Indexed Revolute Capability</li>                                        </ul></details></div>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#IndexedRevoluteCapability'>ex:IndexedRevoluteCapability</a> ⊑ <a href='Example.html#RevoluteMotionCapability'>ex:RevoluteMotionCapability</a></li></ul></details></div>
+                                        </details></div>
+                                      </details>
+                                    </div>
                                   </details>
                                 </div>
-                              </details>
-                            </div>
-                            <div id="MillingCapability">
-                              <details open><summary><a href='Example.html#MillingCapability'>ex:MillingCapability</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Milling Capability</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MillingCapability'>ex:MillingCapability</a> ⊑ constr:Capability</li></ul></details></div>
-                                </details></div>
-                              </details>
-                            </div>
-                            <div id="TurningCapability">
-                              <details open><summary><a href='Example.html#TurningCapability'>ex:TurningCapability</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Turning Capability</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ↔ constr:Capability ⊓ ∃ constr:capabilityOf .(<a href='Example.html#Machine'>ex:Machine</a> ⊓ ∃ <a href='Example.html#hasComponent'>ex:hasComponent</a> .(<a href='Example.html#CRotaryMotionSystem'>ex:CRotaryMotionSystem</a> ⊓ ∃ <a href='Example.html#hasComponent'>ex:hasComponent</a> .<a href='Example.html#Chuck'>ex:Chuck</a>))</li><li><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ⊑ constr:Capability</li></ul></details></div>
-                                </details></div>
+                                <div id="PrismaticMotionCapability">
+                                  <details open><summary><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Motion Capability</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticMotionCapability'>ex:PrismaticMotionCapability</a> ⊑ <a href='Example.html#MotionCapability'>ex:MotionCapability</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
                               </details>
                             </div>
                             <div id="ThreeAxisMotionCapability">
@@ -546,64 +586,24 @@ div.axiom ul li {
                                 </div>
                               </details>
                             </div>
+                            <div id="MillingCapability">
+                              <details open><summary><a href='Example.html#MillingCapability'>ex:MillingCapability</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Milling Capability</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#MillingCapability'>ex:MillingCapability</a> ⊑ constr:Capability</li></ul></details></div>
+                                </details></div>
+                              </details>
+                            </div>
+                            <div id="TurningCapability">
+                              <details open><summary><a href='Example.html#TurningCapability'>ex:TurningCapability</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Turning Capability</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ↔ constr:Capability ⊓ ∃ constr:capabilityOf .(<a href='Example.html#Machine'>ex:Machine</a> ⊓ ∃ <a href='Example.html#hasComponent'>ex:hasComponent</a> .(<a href='Example.html#CRotaryMotionSystem'>ex:CRotaryMotionSystem</a> ⊓ ∃ <a href='Example.html#hasComponent'>ex:hasComponent</a> .<a href='Example.html#Chuck'>ex:Chuck</a>))</li><li><a href='Example.html#TurningCapability'>ex:TurningCapability</a> ⊑ constr:Capability</li></ul></details></div>
+                                </details></div>
+                              </details>
+                            </div>
                           </details>
                         </div>
-                      </details>
-                    </div>
-                  </details>
-                </div>
-                <div id="BFO_0000019">
-                  <details open><summary>bfo:quality</summary>
-                    <div class="details"><details><summary>Details</summary>
-                    <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized</li><li>example: The colour of a tomato, the ambient temperature of this portion of air, the length of the circumference of your waist, the shape of your nose, the shape of your nostril, the mass of this piece of gold.</li><li>label: quality</li><li>prefLabel: quality</li>                    </ul></details></div>
-                    <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:quality ⊑ bfo:specifically_dependent_continuant</li><li>bfo:quality ⊓ bfo:realizable_entity ⊑ ⊥</li></ul></details></div>
-                    </details></div>
-                    <div id="Temperature">
-                      <details open><summary><a href='Example.html#Temperature'>ex:Temperature</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Temperature</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Temperature'>ex:Temperature</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="Displacement">
-                      <details open><summary><a href='Example.html#Displacement'>ex:Displacement</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Displacement</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Displacement'>ex:Displacement</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                        <div id="ThreeSpaceDisplacement">
-                          <details open><summary><a href='Example.html#ThreeSpaceDisplacement'>ex:ThreeSpaceDisplacement</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Three Space Displacement</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ThreeSpaceDisplacement'>ex:ThreeSpaceDisplacement</a> ⊑ <a href='Example.html#Displacement'>ex:Displacement</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                    <div id="Length">
-                      <details open><summary><a href='Example.html#Length'>ex:Length</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Length</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Length'>ex:Length</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="Angle">
-                      <details open><summary><a href='Example.html#Angle'>ex:Angle</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Angle</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Angle'>ex:Angle</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="Force">
-                      <details open><summary><a href='Example.html#Force'>ex:Force</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Force</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Force'>ex:Force</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
                       </details>
                     </div>
                   </details>
@@ -624,60 +624,20 @@ div.axiom ul li {
                 <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant at t</li><li>example: An act of selling, the life of an organism, a process of sleeping, a process of cell-division, a beating of the heart, a process of meiosis, the taxiing of an aircraft, the programming of a computer.</li><li>label: process</li><li>prefLabel: process</li>                </ul></details></div>
                 <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:process ⊑ bfo:occurrent</li><li>bfo:process ⊑ ∀ bfo:occurrent_part_of .bfo:process</li><li>bfo:process ⊑ ∀ bfo:temporal_part_of .bfo:process</li><li>bfo:process ⊑ ∀ bfo:has_occurrent_part .(bfo:process ⊔ bfo:process_boundary)</li><li>bfo:process ⊓ bfo:temporal_region ⊑ ⊥</li><li>bfo:process ⊓ bfo:process_boundary ⊑ ⊥</li><li>bfo:process ⊓ bfo:spatiotemporal_region ⊑ ⊥</li></ul></details></div>
                 </details></div>
-                <div id="ProcessProfile">
-                  <details open><summary><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></summary>
-                    <div class="details"><details><summary>Details</summary>
-                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Process Profile</li>                    </ul></details></div>
-                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a> ⊑ bfo:process</li></ul></details></div>
-                    </details></div>
-                    <div id="Velocity">
-                      <details open><summary><a href='Example.html#Velocity'>ex:Velocity</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Velocity</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Velocity'>ex:Velocity</a> ⊑ <a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></li></ul></details></div>
-                        </details></div>
-                        <div id="RevoluteVelocity">
-                          <details open><summary><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Revolute Velocity</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                        <div id="PrismaticVelocity">
-                          <details open><summary><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Velocity</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
-                            </details></div>
-                            <div id="PrismaticRapidVelocity">
-                              <details open><summary><a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Rapid Velocity</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li></ul></details></div>
-                                </details></div>
-                              </details>
-                            </div>
-                          </details>
-                        </div>
-                        <div id="TranslationalVelocity">
-                          <details open><summary><a href='Example.html#TranslationalVelocity'>ex:TranslationalVelocity</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Translational Velocity</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#TranslationalVelocity'>ex:TranslationalVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                  </details>
-                </div>
                 <div id="State">
                   <details open><summary><a href='Example.html#State'>ex:State</a></summary>
                     <div class="details"><details><summary>Details</summary>
                     <div class="axiom"><details><summary>Annotations</summary><ul><li>label: State</li><li>naturalLanguageDefinition: process that is homeomeric</li>                    </ul></details></div>
-                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#State'>ex:State</a> ⊑ bfo:process</li><li><a href='Example.html#State'>ex:State</a> ⊑ ∃ constr:temporallyStartedBy .constr:Event</li><li><a href='Example.html#State'>ex:State</a> ⊑ ∃ constr:temporallyFinishedBy .constr:Event</li></ul></details></div>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#State'>ex:State</a> ⊑ bfo:process</li><li><a href='Example.html#State'>ex:State</a> ⊑ ∃ constr:temporallyFinishedBy .constr:Event</li><li><a href='Example.html#State'>ex:State</a> ⊑ ∃ constr:temporallyStartedBy .constr:Event</li></ul></details></div>
                     </details></div>
+                    <div id="ChuckState">
+                      <details open><summary><a href='Example.html#ChuckState'>ex:ChuckState</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Chuck State</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ChuckState'>ex:ChuckState</a> ⊑ <a href='Example.html#State'>ex:State</a></li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
                     <div id="ControllerMode">
                       <details open><summary><a href='Example.html#ControllerMode'>ex:ControllerMode</a></summary>
                         <div class="details"><details><summary>Details</summary>
@@ -694,12 +654,52 @@ div.axiom ul li {
                         </details></div>
                       </details>
                     </div>
-                    <div id="ChuckState">
-                      <details open><summary><a href='Example.html#ChuckState'>ex:ChuckState</a></summary>
+                  </details>
+                </div>
+                <div id="ProcessProfile">
+                  <details open><summary><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></summary>
+                    <div class="details"><details><summary>Details</summary>
+                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Process Profile</li>                    </ul></details></div>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ProcessProfile'>ex:ProcessProfile</a> ⊑ bfo:process</li></ul></details></div>
+                    </details></div>
+                    <div id="Velocity">
+                      <details open><summary><a href='Example.html#Velocity'>ex:Velocity</a></summary>
                         <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Chuck State</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#ChuckState'>ex:ChuckState</a> ⊑ <a href='Example.html#State'>ex:State</a></li></ul></details></div>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Velocity</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#Velocity'>ex:Velocity</a> ⊑ <a href='Example.html#ProcessProfile'>ex:ProcessProfile</a></li></ul></details></div>
                         </details></div>
+                        <div id="PrismaticVelocity">
+                          <details open><summary><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Velocity</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
+                            </details></div>
+                            <div id="PrismaticRapidVelocity">
+                              <details open><summary><a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Rapid Velocity</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#PrismaticRapidVelocity'>ex:PrismaticRapidVelocity</a> ⊑ <a href='Example.html#PrismaticVelocity'>ex:PrismaticVelocity</a></li></ul></details></div>
+                                </details></div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                        <div id="RevoluteVelocity">
+                          <details open><summary><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Revolute Velocity</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#RevoluteVelocity'>ex:RevoluteVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                        <div id="TranslationalVelocity">
+                          <details open><summary><a href='Example.html#TranslationalVelocity'>ex:TranslationalVelocity</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Translational Velocity</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='Example.html#TranslationalVelocity'>ex:TranslationalVelocity</a> ⊑ <a href='Example.html#Velocity'>ex:Velocity</a></li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
                       </details>
                     </div>
                   </details>
