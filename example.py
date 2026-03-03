@@ -5,7 +5,7 @@ import re
 if os.path.exists("example.rdf"):
     os.remove("example.rdf")
 
-from ontologies import BFO, Core, AnnVocab, Des, QUDT
+from ontologies import BFO, Core, Des, Construct, Annotation, QUDT
 
 Example = owl.get_ontology("http://example.org/ontology/")
 Example.imported_ontologies = [Core, Des]
@@ -32,20 +32,20 @@ with Example:
   class _System(BFO.material_entity):
     """A system in the IOF ontology."""
     label = owl.locstr("System", "en")
-    is_a = [Core.hasComponentPartAtSomeTime.some(BFO.material_entity)]
-    equivalent_to = [BFO.material_entity & Core.hasRole.some(SystemRole)]
+    is_a = [Construct.hasComponentPartAtSomeTime.some(BFO.material_entity)]
+    equivalent_to = [BFO.material_entity & Construct.hasRole.some(SystemRole)]
 
   class _EngineeredSystem(_System):
     """A system in the IOF ontology."""
     label = owl.locstr("Engineered System", "en")
-    equivalent_to = [_System & Core.hasRole.some(EngineeredSystemRole)]
+    equivalent_to = [_System & Construct.hasRole.some(EngineeredSystemRole)]
 
   class _MaterialArtifact(BFO.material_entity):
     """A material artifact in the IOF ontology."""
     label = owl.locstr("Material Artifact", "en")
-    equivalent_to = [BFO.material_entity & Core.hasRole.some(MaterialArtifactRole)]
+    equivalent_to = [BFO.material_entity & Construct.hasRole.some(MaterialArtifactRole)]
       
-  class MotionCapability(Core.Capability):
+  class MotionCapability(Construct.Capability):
     """A motion capability in the IOF ontology."""
     label = owl.locstr("Motion Capability", "en")
 
@@ -68,12 +68,12 @@ with Example:
   class MotionSystem(BFO.object):
     """A motion system in the IOF ontology."""
     label = owl.locstr("Motion System", "en")
-    is_a = [Core.hasComponentPartAtAllTimes.some(Actuator), Core.hasRole.some(EngineeredSystemRole)]
+    is_a = [Construct.hasComponentPartAtAllTimes.some(Actuator), Construct.hasRole.some(EngineeredSystemRole)]
 
   class LinearMotionSystem(MotionSystem):
     """A linear motion system in the IOF ontology."""
     label = owl.locstr("Linear Motion System", "en")
-    is_a = [Core.hasCapability.some(PrismaticMotionCapability)]
+    is_a = [Construct.hasCapability.some(PrismaticMotionCapability)]
 
   class XLinearMotionSystem(LinearMotionSystem):
     """An X linear motion system in the IOF ontology."""
@@ -90,7 +90,7 @@ with Example:
   class RotaryMotionSystem(MotionSystem):
     """A rotary motion system in the IOF ontology."""
     label = owl.locstr("Rotary Motion System", "en")
-    is_a = [Core.hasCapability.some(RevoluteMotionCapability)]
+    is_a = [Construct.hasCapability.some(RevoluteMotionCapability)]
 
   class ARotaryMotionSystem(RotaryMotionSystem):
     """An A rotary motion system in the IOF ontology."""
@@ -107,19 +107,19 @@ with Example:
   class ControlSystem(BFO.material_entity):
     """A control system in the IOF ontology."""
     label = owl.locstr("Control System", "en")
-    is_a = [Core.hasRole.some(EngineeredSystemRole)]
+    is_a = [Construct.hasRole.some(EngineeredSystemRole)]
 
   class Machine(BFO.object):
     """A machine in the IOF ontology."""
     label = owl.locstr("Machine", "en")
-    is_a = [Core.hasComponentPartAtSomeTime.some(MotionSystem), 
-            Core.hasRole.some(EngineeredSystemRole),
-            Core.hasCapability.some(Core.Capability),
-            Core.hasRole.some(Core.EquipmentRole)]
+    is_a = [Construct.hasComponentPartAtSomeTime.some(MotionSystem), 
+            Construct.hasRole.some(EngineeredSystemRole),
+            Construct.hasCapability.some(Construct.Capability),
+            Construct.hasRole.some(Construct.EquipmentRole)]
 
   class NumericallyControlledMachine(Machine):
     label = owl.locstr("Numerically Controlled Machine", "en")
-    is_a = [Core.hasComponentPartAtSomeTime.some(ControlSystem)]
+    is_a = [Construct.hasComponentPartAtSomeTime.some(ControlSystem)]
 
   class ControlSystemPath(ControlSystem):
     """A control system path in the IOF ontology."""
@@ -128,75 +128,75 @@ with Example:
   class Motor(Actuator):
     """A motor in the IOF ontology."""
     label = owl.locstr("Motor", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole)]
 
   class Ballscrew(BFO.object):
     """A ballscrew in the IOF ontology."""
     label = owl.locstr("Ballscrew", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole)]
     
   class Chuck(BFO.object):
     """A chuck in the IOF ontology."""
     label = owl.locstr("Chuck", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole)]
 
   class Door(BFO.object):
     """A door in the IOF ontology."""
     label = owl.locstr("Door", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole)]
 
   class ElectricalSystem(BFO.material_entity):
     """An electrical system in the IOF ontology."""
     label = owl.locstr("Electrical System", "en")
-    is_a = [Core.hasRole.some(EngineeredSystemRole)]
+    is_a = [Construct.hasRole.some(EngineeredSystemRole)]
     
   class HydraulicSystem(BFO.material_entity):
     """A hydraulic system in the IOF ontology."""
     label = owl.locstr("Hydraulic System", "en")
-    is_a = [Core.hasRole.some(EngineeredSystemRole)]
+    is_a = [Construct.hasRole.some(EngineeredSystemRole)]
     
   class PneumaticSystem(BFO.material_entity):
     """A pneumatic system in the IOF ontology."""
     label = owl.locstr("Pneumatic System", "en")
-    is_a = [Core.hasRole.some(EngineeredSystemRole)]
+    is_a = [Construct.hasRole.some(EngineeredSystemRole)]
     
   class LubricationSystem(BFO.material_entity):
     """A lubrication system in the IOF ontology."""
     label = owl.locstr("Lubrication System", "en")
-    is_a = [Core.hasRole.some(EngineeredSystemRole)]
+    is_a = [Construct.hasRole.some(EngineeredSystemRole)]
       
   class CoolantSystem(BFO.material_entity):
     """A coolant system in the IOF ontology."""
     label = owl.locstr("Coolant System", "en")
-    is_a = [Core.hasRole.some(EngineeredSystemRole)]
+    is_a = [Construct.hasRole.some(EngineeredSystemRole)]
 
   class Stock(BFO.object):
     """A stock in the IOF ontology."""
     label = owl.locstr("Stock", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole), Core.hasRole.some(Core.RawMaterialRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole), Construct.hasRole.some(Construct.RawMaterialRole)]
     
   class ProductPart(BFO.object):
     """A part in the IOF ontology."""
     label = owl.locstr("Product Part", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole), Core.hasRole.some(Core.MaterialProductRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole), Construct.hasRole.some(Construct.MaterialProductRole)]
         
-  class MillingCapability(Core.Capability):
+  class MillingCapability(Construct.Capability):
     """A milling capability in the IOF ontology."""
     label = owl.locstr("Milling Capability", "en")
 
-  class TurningCapability(Core.Capability):
+  class TurningCapability(Construct.Capability):
     """A turning capability in the IOF ontology."""
     label = owl.locstr("Turning Capability", "en")
 
   class Structure(BFO.object):
     """A structure in the IOF ontology."""
     label = owl.locstr("Structure", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole)]
     
   class Enclosure(Structure):
     """An enclosure in the IOF ontology."""
     label = owl.locstr("Enclosure", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole)]
     
   class Room(BFO.site):
     """A room in the IOF ontology."""
@@ -205,7 +205,7 @@ with Example:
   class Sensor(BFO.object):
     """A sensor in the IOF ontology."""
     label = owl.locstr("Sensor", "en")
-    is_a = [Core.hasRole.some(MaterialArtifactRole)]
+    is_a = [Construct.hasRole.some(MaterialArtifactRole)]
     
   class ProcessProfile(BFO.process):
     """A process profile not currently in BFO or Core"""
@@ -257,13 +257,13 @@ with Example:
     inverse_of = satisfiedBy
     label = owl.locstr("conforms to", "en")
     
-  class hasUnit(Core.ValueExpression >> QUDT.Unit):
+  class hasUnit(Construct.ValueExpression >> QUDT.Unit):
     label = owl.locstr("has unit", "en")
 
-  class hasComponent(Core.hasComponentPartAtSomeTime):
+  class hasComponent(Construct.hasComponentPartAtSomeTime):
     label = owl.locstr("has component", "en")
 
-  class componentOf(Core.componentPartOfAtSomeTime):
+  class componentOf(Construct.componentPartOfAtSomeTime):
     label = owl.locstr("component of", "en")
     inverse_of = hasComponent
 
@@ -271,7 +271,7 @@ with Example:
     """A state in the IOF ontology."""
     label = owl.locstr("State", "en")
     naturalLanguageDefinition = owl.locstr("process that is homeomeric", 'en')
-    is_a = [Core.temporallyStartedBy.some(Core.Event), Core.temporallyFinishedBy.some(Core.Event)]
+    is_a = [Construct.temporallyStartedBy.some(Construct.Event), Construct.temporallyFinishedBy.some(Construct.Event)]
 
   class ControllerMode(State):
     """A controller mode in the IOF ontology."""
@@ -310,57 +310,54 @@ with Example:
     label = owl.locstr("Three Space Displacement", "en")
 
 
-  class ThreeAxisMotionCapability(Core.Capability):
+  class ThreeAxisMotionCapability(Construct.Capability):
     """A three-axis motion capability in the IOF ontology."""
     label = owl.locstr("Three Axis Motion Capability", "en")
-    equivalent_to = [Core.Capability & 
-                     Core.capabilityOf.some(
+    equivalent_to = [Construct.Capability & 
+                     Construct.capabilityOf.some(
                        Machine & 
                        hasComponent.some(XLinearMotionSystem) & 
                        hasComponent.some(YLinearMotionSystem) & 
                        hasComponent.some(ZLinearMotionSystem) & 
                        hasComponent.some(
                          CRotaryMotionSystem & 
-                         Core.hasFunction.some(ContinuousRevoluteCapability)))]
+                         Construct.hasFunction.some(ContinuousRevoluteCapability)))]
 
   class FourAxisMotionCapability(ThreeAxisMotionCapability):
     """A four-axis motion capability in the IOF ontology."""
     label = owl.locstr("Four Axis Motion Capability", "en")
     equivalent_to = [ThreeAxisMotionCapability & 
-                     Core.capabilityOf.some(
+                     Construct.capabilityOf.some(
                        Machine & 
                        hasComponent.some(
                          RotaryMotionSystem & 
-                         Core.hasFunction.some(IndexedRevoluteCapability)))]
+                         Construct.hasFunction.some(IndexedRevoluteCapability)))]
 
   class FiveAxisMotionCapability(FourAxisMotionCapability):
     """A five-axis motion capability in the IOF ontology."""
     label = owl.locstr("Five Axis Motion Capability", "en")
     equivalent_to = [FourAxisMotionCapability & 
-                     Core.capabilityOf.some(
+                     Construct.capabilityOf.some(
                        Machine & 
                        hasComponent.min(2,
                          RotaryMotionSystem & 
-                         Core.hasFunction.some(IndexedRevoluteCapability)))]
+                         Construct.hasFunction.some(IndexedRevoluteCapability)))]
 
   class SixAxisMotionCapability(FourAxisMotionCapability):
     """A six-axis motion capability in the IOF ontology."""
     label = owl.locstr("Six Axis Motion Capability", "en")
     equivalent_to = [FiveAxisMotionCapability & 
-                     Core.capabilityOf.some(
+                     Construct.capabilityOf.some(
                        Machine & 
                        hasComponent.min(3,
                          RotaryMotionSystem & 
-                         Core.hasFunction.some(IndexedRevoluteCapability)))]
+                         Construct.hasFunction.some(IndexedRevoluteCapability)))]
     
-  class TurningCapability(Core.Capability):
+  class TurningCapability(Construct.Capability):
     label = owl.locstr("Turning Capability", "en")
-    equivalent_to = [Core.Capability & 
-                  Core.capabilityOf.some(
+    equivalent_to = [Construct.Capability & 
+                  Construct.capabilityOf.some(
                     Machine & hasComponent.some(CRotaryMotionSystem & 
                       hasComponent.some(Chuck)))]
-  
-  
-      
 
 Example.save(file = "example.rdf", format = "rdfxml")

@@ -85,7 +85,7 @@ class MTConnectToTypes:
           # Check roles
           #if type in Roles:
           #  for role in Roles[type]:              
-          #    type_cls.is_a.append(Core.hasRole.some(role))          
+          #    type_cls.is_a.append(Construct.hasRole.some(role))          
           logger.info(f"Created {type_name} {type_cls.iri}")
           compositions = self._add_compositions(element, names.copy(), type_cls)
           self._add_data_items(element, type_cls, compositions)
@@ -145,11 +145,11 @@ class MTConnectToTypes:
             node = klass
                       
           if issubclass(di_cls, BFO.quality):
-            node.is_a.append(Core.hasQuality.some(di_cls))
+            node.is_a.append(Construct.hasQuality.some(di_cls))
           elif issubclass(di_cls, Example.State):
             node.is_a.append(BFO.participates_in_at_some_time.some(di_cls))
           else:
-            node.is_a.append(Core.measuresAtSomeTime.some(di_cls))
+            node.is_a.append(Construct.measuresAtSomeTime.some(di_cls))
 
   @log_indent
   def _translate_class_specifications(self, element, type_cls):
@@ -160,7 +160,7 @@ class MTConnectToTypes:
 
       with self.Vendor:
         design_type = f"{type_cls.name}Design"
-        design = owl.types.new_class(design_type, (Core.DesignSpecification,))
+        design = owl.types.new_class(design_type, (Construct.DesignSpecification,))
         type_cls.is_a.append(Example.conformsTo.only(design))
         
         for spec in specifications:
@@ -201,13 +201,13 @@ class MTConnectToTypes:
 
               if issubclass(di_cls, BFO.quality):
                 quality = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
-                quality.is_a.append(Core.hasMeasuredValueAtSomeTime.some(Core.MeasuredValueExpression & \
-                    Core.hasSimpleExpressionValue.some(const) & unit_const))
-                type_cls.is_a.append(Core.hasQuality.some(quality))
+                quality.is_a.append(Construct.hasMeasuredValueAtSomeTime.some(Construct.MeasuredValueExpression & \
+                    Construct.hasSimpleExpressionValue.some(const) & unit_const))
+                type_cls.is_a.append(Construct.hasQuality.some(quality))
               else:
                 profile = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
-                profile.is_a.append(Core.hasSpecifiedOutput.some(Core.MeasuredValueExpression & \
-                        Core.hasSimpleExpressionValue.some(const) & unit_const))
+                profile.is_a.append(Construct.hasSpecifiedOutput.some(Construct.MeasuredValueExpression & \
+                        Construct.hasSimpleExpressionValue.some(const) & unit_const))
                 type_cls.is_a.append(BFO.participates_in_at_some_time.some(profile))
 
 

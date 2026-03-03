@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
-	<!ENTITY Anno "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
+	<!ENTITY anno "https://spec.industrialontologies.org/ontology/annotation/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
@@ -8,7 +8,7 @@
 ]>
 <rdf:RDF
 	xmlns="http://example.org/ontology/"
-	xmlns:Anno="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+	xmlns:anno="https://spec.industrialontologies.org/ontology/annotation/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -43,7 +43,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -59,7 +59,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -80,7 +80,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -101,7 +101,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -117,7 +117,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -128,7 +128,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -139,7 +139,7 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Structure"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -165,7 +165,7 @@
 					<rdf:Description rdf:about="http://example.org/ontology/FourAxisMotionCapability">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/capabilityOf"/>
 						<owl:someValuesFrom>
 							<owl:Class>
 								<owl:intersectionOf rdf:parseType="Collection">
@@ -179,7 +179,7 @@
 													<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
 													</rdf:Description>
 													<owl:Restriction>
-														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasFunction"/>
 														<owl:someValuesFrom rdf:resource="http://example.org/ontology/IndexedRevoluteCapability"/>
 													</owl:Restriction>
 												</owl:intersectionOf>
@@ -210,7 +210,7 @@
 					<rdf:Description rdf:about="http://example.org/ontology/ThreeAxisMotionCapability">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/capabilityOf"/>
 						<owl:someValuesFrom>
 							<owl:Class>
 								<owl:intersectionOf rdf:parseType="Collection">
@@ -224,7 +224,7 @@
 													<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
 													</rdf:Description>
 													<owl:Restriction>
-														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasFunction"/>
 														<owl:someValuesFrom rdf:resource="http://example.org/ontology/IndexedRevoluteCapability"/>
 													</owl:Restriction>
 												</owl:intersectionOf>
@@ -244,7 +244,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -265,7 +265,7 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/MotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasCapability"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasCapability"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/PrismaticMotionCapability"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -276,7 +276,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -287,26 +287,26 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasCapability"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasCapability"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasComponentPartAtSomeTime"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MotionSystem"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/EquipmentRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Machine</rdfs:label>
@@ -318,12 +318,12 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/MillingCapability">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Milling Capability</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/MotionCapability">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Motion Capability</rdfs:label>
 	</owl:Class>
 	
@@ -331,13 +331,13 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtAllTimes"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasComponentPartAtAllTimes"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/Actuator"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -348,7 +348,7 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Actuator"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -359,7 +359,7 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/Machine"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasComponentPartAtSomeTime"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/ControlSystem"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -370,7 +370,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -401,14 +401,14 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialProductRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/MaterialProductRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Product Part</rdfs:label>
@@ -433,7 +433,7 @@
 		<rdfs:subClassOf rdf:resource="http://example.org/ontology/MotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasCapability"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasCapability"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/RevoluteMotionCapability"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -444,7 +444,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -460,7 +460,7 @@
 					<rdf:Description rdf:about="http://example.org/ontology/FiveAxisMotionCapability">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/capabilityOf"/>
 						<owl:someValuesFrom>
 							<owl:Class>
 								<owl:intersectionOf rdf:parseType="Collection">
@@ -474,7 +474,7 @@
 													<rdf:Description rdf:about="http://example.org/ontology/RotaryMotionSystem">
 													</rdf:Description>
 													<owl:Restriction>
-														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasFunction"/>
 														<owl:someValuesFrom rdf:resource="http://example.org/ontology/IndexedRevoluteCapability"/>
 													</owl:Restriction>
 												</owl:intersectionOf>
@@ -495,32 +495,32 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/temporallyFinishedBy"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Event"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/temporallyFinishedBy"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/Event"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/temporallyStartedBy"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Event"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/temporallyStartedBy"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/Event"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">State</rdfs:label>
-		<Anno:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">process that is homeomeric</Anno:naturalLanguageDefinition>
+		<anno:naturalLanguageDefinition rdf:datatype="&rdf;langString" xml:lang="en">process that is homeomeric</anno:naturalLanguageDefinition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/Stock">
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
-				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/RawMaterialRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/RawMaterialRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Stock</rdfs:label>
@@ -530,7 +530,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -548,15 +548,15 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/ThreeAxisMotionCapability">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Three Axis Motion Capability</rdfs:label>
 		<owl:equivalentClass>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/Capability">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/construct/Capability">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/capabilityOf"/>
 						<owl:someValuesFrom>
 							<owl:Class>
 								<owl:intersectionOf rdf:parseType="Collection">
@@ -582,7 +582,7 @@
 													<rdf:Description rdf:about="http://example.org/ontology/CRotaryMotionSystem">
 													</rdf:Description>
 													<owl:Restriction>
-														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasFunction"/>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasFunction"/>
 														<owl:someValuesFrom rdf:resource="http://example.org/ontology/ContinuousRevoluteCapability"/>
 													</owl:Restriction>
 												</owl:intersectionOf>
@@ -609,15 +609,15 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/ontology/TurningCapability">
-		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Turning Capability</rdfs:label>
 		<owl:equivalentClass>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/core/Core/Capability">
+					<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/construct/Capability">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/capabilityOf"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/capabilityOf"/>
 						<owl:someValuesFrom>
 							<owl:Class>
 								<owl:intersectionOf rdf:parseType="Collection">
@@ -676,7 +676,7 @@
 					<rdf:Description rdf:about="http://example.org/ontology/_System">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 						<owl:someValuesFrom rdf:resource="http://example.org/ontology/EngineeredSystemRole"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -693,7 +693,7 @@
 					<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 						<owl:someValuesFrom rdf:resource="http://example.org/ontology/MaterialArtifactRole"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -705,7 +705,7 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasComponentPartAtSomeTime"/>
 				<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -716,7 +716,7 @@
 					<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
 					</rdf:Description>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasRole"/>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
 						<owl:someValuesFrom rdf:resource="http://example.org/ontology/SystemRole"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -725,7 +725,7 @@
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="http://example.org/ontology/componentOf">
-		<rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/componentPartOfAtSomeTime"/>
+		<rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/componentPartOfAtSomeTime"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">component of</rdfs:label>
 	</owl:ObjectProperty>
 	
@@ -741,7 +741,7 @@
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="http://example.org/ontology/hasComponent">
-		<rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasComponentPartAtSomeTime"/>
+		<rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasComponentPartAtSomeTime"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">has component</rdfs:label>
 	</owl:ObjectProperty>
 	
@@ -759,7 +759,7 @@
 	
 	<owl:ObjectProperty rdf:about="http://example.org/ontology/hasUnit">
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">has unit</rdfs:label>
-		<rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ValueExpression"/>
+		<rdfs:domain rdf:resource="https://spec.industrialontologies.org/ontology/construct/ValueExpression"/>
 		<rdfs:range rdf:resource="http://qudt.org/vocab/unit/Unit"/>
 	</owl:ObjectProperty>
 	

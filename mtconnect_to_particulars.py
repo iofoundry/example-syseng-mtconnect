@@ -132,7 +132,7 @@ class MTConnectToParticulars:
     with self.Data:
       # Create a generic capability to state that all components have a capability.
       # The capability will allow for the inference of the capabililities of the component.
-      cap = Core.Capability(partic.name + 'Capability')
+      cap = Construct.Capability(partic.name + 'Capability')
       partic.hasCapability.append(cap)
       
       # Asserted capability
@@ -174,7 +174,7 @@ class MTConnectToParticulars:
 
           for des in spec:
             logger.info(f"Creating class particular specifications for {spec_name} value {spec.text}")
-            exp = Core.ValueExpression(spec_name + des.tag.split('}')[-1])
+            exp = Construct.ValueExpression(spec_name + des.tag.split('}')[-1])
             ds.hasValueExpressionAtSomeTime.append(exp)
             exp.hasSimpleExpressionValue.append(float(des.text))
             

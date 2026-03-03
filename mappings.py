@@ -77,7 +77,7 @@ DataItems = {
 }
 
 Roles = {
-  'Device': [Core.EquipmentRole, Example.EngineeredSystemRole],
+  'Device': [Construct.EquipmentRole, Example.EngineeredSystemRole],
   'Linear': [Example.EngineeredSystemRole],
   'Rotary': [Example.EngineeredSystemRole],
   'Controller': [Example.EngineeredSystemRole],

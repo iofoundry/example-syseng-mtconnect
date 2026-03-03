@@ -1,6 +1,6 @@
 import sys
 import owlready2 as owl
-from ontologies import BFO, Core, AnnVocab, Des, Qual, QualPhysical, Example
+from ontologies import BFO, Core, Example, Construct
 from mtconnect_to_iof import MTConnectToIOF
 from generate_diagram import GenerateDiagram
 from iof_render import dl_render_terminology, dl_render_class, Namespaces
@@ -18,7 +18,7 @@ Example.load(only_local=True)
 render_terminology("Example", Example)
 
 if len(sys.argv) < 2:
-    print("Usage: python script.py <file>")
+    print("Usage: python mtc2rdf.py <file>")
     sys.exit(1)
 
 file_name = sys.argv[1]
@@ -59,7 +59,7 @@ gen.generate()
 
 logger.info("Generating mereology")
 statements = [[x[0], Core.hasComponentPartAtAllTimes, x[1]] \
-  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Core.hasComponentPartAtSomeTime])]
+  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Construct.hasComponentPartAtSomeTime])]
 
 gen = GenerateDiagram(f"{Vendor.name}Mere", statements, Vendor)
 gen.generate()

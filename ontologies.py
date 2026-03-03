@@ -26,16 +26,13 @@ with open(f"{cache}/Core.rdf", "rb") as f:
   Core = owl.get_ontology("https://spec.industrialontologies.org/ontology/core/Core/").load(only_local = True, fileobj=f)
 Core.world.ontologies["https://spec.industrialontologies.org/ontology/202401/core/Core/"] = Core
 Core.base_iri = "https://spec.industrialontologies.org/ontology/core/Core/"
-with open(f"{cache}/IOF_Qualities.rdf", "rb") as f:
-  Qual = owl.get_ontology("https://spec.industrialontologies.org/ontology/qualities/Qualities/").load(only_local = True, fileobj=f)
-Qual.base_iri = "https://spec.industrialontologies.org/ontology/qualities/Qualities/"
-with open(f"{cache}/IOF_Qualities-Physical.rdf", "rb") as f:
-  QualPhysical = owl.get_ontology("https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/").load(only_local = True, fileobj=f)
-QualPhysical.base_iri = "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/"
 with open(f"{cache}/Designators.rdf", "rb") as f:
   Des = owl.get_ontology(f"https://www.omg.org/spec/Commons/Designators/").load(only_local = True, fileobj=f)
 Des.base_iri = "https://www.omg.org/spec/Commons/Designators/"
 print("done")
+
+Construct = owl.Namespace(base_iri="https://spec.industrialontologies.org/ontology/construct/", world_or_ontology=Core.world)
+Annotation = owl.Namespace(base_iri="https://spec.industrialontologies.org/ontology/annotation/", world_or_ontology=AnnVocab.world)
 
 for cls in BFO.classes():
   name = re.sub(r"[ \-]", "_", str(cls.label.first()))
@@ -47,7 +44,6 @@ for prop in BFO.object_properties():
     prop.python_name = name
     setattr(BFO, name, prop)
     
-
 if os.path.exists(f"{path}/example.rdf"):
   with open(f"{path}/example.rdf", "rb") as f:
     Example = owl.get_ontology("http://example.org/ontology/").load(only_local = True, fileobj=f)

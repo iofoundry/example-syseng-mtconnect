@@ -56,11 +56,9 @@ _FACETS = {
 
 Namespaces = {
     "http://purl.obolibrary.org/obo/": "bfo",
-    "https://spec.industrialontologies.org/ontology/core/Core/": "core",
-    "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/": "av",
+    "https://spec.industrialontologies.org/ontology/construct/": "constr",
+    "https://spec.industrialontologies.org/ontology/annotation/": "av",
     "https://www.omg.org/spec/Commons/Designators/": "des",
-    "https://spec.industrialontologies.org/ontology/qualities/Qualities/": "qual",
-    "https://spec.industrialontologies.org/ontology/qualities/Qualities-Physical/": "qp",
     "http://example.org/ontology/": "ex",
     "http://example.org/data/": "data",
     "http://qudt.org/vocab/unit/": "unit"
@@ -181,6 +179,7 @@ def _render_name(concept) -> str:
     
 
 def dl_render_concept_str(concept: Union[Construct, EntityClass]) -> str:
+    # print(f"Rendering {concept} {type(concept)}")
     this = dl_render_concept_str
     if concept is None:
         return _DL_SYNTAX.BOTTOM
