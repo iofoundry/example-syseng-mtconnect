@@ -11,33 +11,33 @@ Units = {
 }
 
 Components = {
-  'Linear': Example.LinearMotionSystem,
-  'LinearX': Example.XLinearMotionSystem,
-  'LinearY': Example.YLinearMotionSystem,
-  'LinearZ': Example.ZLinearMotionSystem,
-  'Rotary': Example.RotaryMotionSystem,
-  'RotaryA': Example.ARotaryMotionSystem,
-  'RotaryB': Example.BRotaryMotionSystem,
-  'RotaryC': Example.CRotaryMotionSystem,
-  'Device': Example.NumericallyControlledMachine,
-  'Controller': Example.ControlSystem,
-  'Path': Example.ControlSystemPath,
+  'Linear': MTConnect.LinearMotionSystem,
+  'LinearX': MTConnect.XLinearMotionSystem,
+  'LinearY': MTConnect.YLinearMotionSystem,
+  'LinearZ': MTConnect.ZLinearMotionSystem,
+  'Rotary': MTConnect.RotaryMotionSystem,
+  'RotaryA': MTConnect.ARotaryMotionSystem,
+  'RotaryB': MTConnect.BRotaryMotionSystem,
+  'RotaryC': MTConnect.CRotaryMotionSystem,
+  'Device': MTConnect.NumericallyControlledMachine,
+  'Controller': MTConnect.ControlSystem,
+  'Path': MTConnect.ControlSystemPath,
   'Composition': BFO.object,
-  'MOTOR': Example.Motor,
-  'BALLSCREW': Example.Ballscrew,
-  'Electric': Example.ElectricalSystem,
-  'Hydraulic': Example.HydraulicSystem,
-  'Pneumatic': Example.PneumaticSystem,
-  'Lubrication': Example.LubricationSystem,
-  'Stock': Example.Stock,
-  'Personnel': Example.Personnel,
-  'PartOccurrence': Example.ProductPart,
-  'Link': Example.Structure,
-  'Enclosure': Example.Structure,
-  'Environmental': Example.Room,
-  'Door': Example.Door,
-  'Coolant': Example.CoolantSystem,
-  'Chuck': Example.Chuck,
+  'MOTOR': MTConnect.Motor,
+  'BALLSCREW': MTConnect.Ballscrew,
+  'Electric': MTConnect.ElectricalSystem,
+  'Hydraulic': MTConnect.HydraulicSystem,
+  'Pneumatic': MTConnect.PneumaticSystem,
+  'Lubrication': MTConnect.LubricationSystem,
+  'Stock': MTConnect.Stock,
+  'Personnel': MTConnect.Personnel,
+  'PartOccurrence': MTConnect.ProductPart,
+  'Link': MTConnect.Structure,
+  'Enclosure': MTConnect.Structure,
+  'Environmental': MTConnect.Room,
+  'Door': MTConnect.Door,
+  'Coolant': MTConnect.CoolantSystem,
+  'Chuck': MTConnect.Chuck,
 
   'Axes': False,
   'Systems': False,
@@ -49,56 +49,56 @@ Components = {
 }
 
 Functions = {
-  'Device': Example.MillingCapability,
-  'PRISMATIC': Example.PrismaticMotionCapability,
-  'REVOLUTE': Example.IndexedRevoluteCapability,
-  'CONTINUOUS': Example.ContinuousRevoluteCapability
+  'Device': MTConnect.MillingCapability,
+  'PRISMATIC': MTConnect.PrismaticMotionCapability,
+  'REVOLUTE': MTConnect.IndexedRevoluteCapability,
+  'CONTINUOUS': MTConnect.ContinuousRevoluteCapability
 }
 
 Capabilities = {
-  'Device': Example.TurningCapability
+  'Device': MTConnect.TurningCapability
 }
 
 DataItems = {
-  'TEMPERATURE': Example.Temperature,
-  'POSITION': Example.Displacement,
-  'LENGTH': Example.Length,
-  'ANGLE': Example.Angle,
-  'VELOCITY': Example.PrismaticVelocity,
-  'VELOCITY_PROGRAMMED': Example.PrismaticVelocity,
-  'VELOCITY_RAPID': Example.PrismaticRapidVelocity,
-  'ROTARY_VELOCITY': Example.RevoluteVelocity,
-  'PATH_FEED_RATE': Example.TranslationalVelocity,
-  'LINEAR_FORCE': Example.Force,
-  'PATH_POSITION': Example.ThreeSpaceDisplacement,
-  'CONTROLLER_MODE': Example.ControllerMode,
-  'EXECUTION': Example.ExecutionState,
-  'CHUCK_STATE': Example.ChuckState
+  'TEMPERATURE': MTConnect.Temperature,
+  'POSITION': MTConnect.Displacement,
+  'LENGTH': MTConnect.Length,
+  'ANGLE': MTConnect.Angle,
+  'VELOCITY': MTConnect.PrismaticVelocity,
+  'VELOCITY_PROGRAMMED': MTConnect.PrismaticVelocity,
+  'VELOCITY_RAPID': MTConnect.PrismaticRapidVelocity,
+  'ROTARY_VELOCITY': MTConnect.RevoluteVelocity,
+  'PATH_FEED_RATE': MTConnect.TranslationalVelocity,
+  'LINEAR_FORCE': MTConnect.Force,
+  'PATH_POSITION': MTConnect.ThreeSpaceDisplacement,
+  'CONTROLLER_MODE': MTConnect.ControllerMode,
+  'EXECUTION': MTConnect.ExecutionState,
+  'CHUCK_STATE': MTConnect.ChuckState
 }
 
 Roles = {
-  'Device': [Construct.EquipmentRole, Example.EngineeredSystemRole],
-  'Linear': [Example.EngineeredSystemRole],
-  'Rotary': [Example.EngineeredSystemRole],
-  'Controller': [Example.EngineeredSystemRole],
-  'Path': [Example.EngineeredSystemRole],
-  'Composition': [Example.MaterialArtifactRole],
-  'MOTOR': [Example.MaterialArtifactRole],
-  'BALLSCREW': [Example.MaterialArtifactRole],
-  'Electric': [Example.EngineeredSystemRole],
-  'Hydraulic': [Example.EngineeredSystemRole],
-  'Pneumatic': [Example.EngineeredSystemRole],
-  'Lubrication': [Example.EngineeredSystemRole],
-  'Stock': [Example.MaterialArtifactRole],
-  'PartOccurrence': [Example.MaterialArtifactRole],
-  'Link': [Example.MaterialArtifactRole],
-  'Enclosure': [Example.MaterialArtifactRole],
-  'Door': [Example.MaterialArtifactRole],
-  'Coolant': [Example.EngineeredSystemRole]
+  'Device': [Construct.EquipmentRole, MTConnect.EngineeredSystemRole],
+  'Linear': [MTConnect.EngineeredSystemRole],
+  'Rotary': [MTConnect.EngineeredSystemRole],
+  'Controller': [MTConnect.EngineeredSystemRole],
+  'Path': [MTConnect.EngineeredSystemRole],
+  'Composition': [MTConnect.MaterialArtifactRole],
+  'MOTOR': [MTConnect.MaterialArtifactRole],
+  'BALLSCREW': [MTConnect.MaterialArtifactRole],
+  'Electric': [MTConnect.EngineeredSystemRole],
+  'Hydraulic': [MTConnect.EngineeredSystemRole],
+  'Pneumatic': [MTConnect.EngineeredSystemRole],
+  'Lubrication': [MTConnect.EngineeredSystemRole],
+  'Stock': [MTConnect.MaterialArtifactRole],
+  'PartOccurrence': [MTConnect.MaterialArtifactRole],
+  'Link': [MTConnect.MaterialArtifactRole],
+  'Enclosure': [MTConnect.MaterialArtifactRole],
+  'Door': [MTConnect.MaterialArtifactRole],
+  'Coolant': [MTConnect.EngineeredSystemRole]
 }
 
 Separate = {
-  Example.Room
+  MTConnect.Room
 }
 
 Namespaces = {

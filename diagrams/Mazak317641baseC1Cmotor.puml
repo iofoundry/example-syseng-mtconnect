@@ -28,9 +28,9 @@ title Mazak317641baseC1Cmotor
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641baseC1Cmotor.html Mazak317641baseC1Cmotor]], vendor:[[../Mazak.html#Mazak800ibaseC1Cmotor Mazak800ibaseC1Cmotor]])
-individual(o1, data:Mazak317641baseC1CmotorMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o1, data:Mazak317641baseC1CmotorMaterialArtifactRole, _:[[../MTConnect.html#MaterialArtifactRole MaterialArtifactRole]])
 individual(o2, data:Mazak317641baseC1CmotorCapability, _:Capability)
-individual(o3, data:Mazak317641baseC1TEMPERATURE, ex:[[../Example.html#Temperature Temperature]])
+individual(o3, data:Mazak317641baseC1TEMPERATURE, _:[[../MTConnect.html#Temperature Temperature]])
 individual(o4, data:name17, des:Name)
 individual(o5, data:[[./Mazak317641baseC1.html Mazak317641baseC1]], vendor:[[../Mazak.html#Mazak800ibaseC1 Mazak800ibaseC1]])
 property(o0, "_:hasRole", o1)
@@ -38,5 +38,5 @@ property(o0, "_:hasCapability", o2)
 property(o0, "_:hasQuality", o3)
 property(o0, "des:hasName", o4)
 data(o4, "des:hasTextualName", "Cmotor")
-property(o5, "ex:hasComponent", o0)
+property(o5, "_:hasComponent", o0)
 @enduml

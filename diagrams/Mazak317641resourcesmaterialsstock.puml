@@ -28,7 +28,7 @@ title Mazak317641resourcesmaterialsstock
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641resourcesmaterialsstock.html Mazak317641resourcesmaterialsstock]], vendor:[[../Mazak.html#Mazak800iresourcesmaterialsstock Mazak800iresourcesmaterialsstock]])
-individual(o1, data:Mazak317641resourcesmaterialsstockMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o1, data:Mazak317641resourcesmaterialsstockMaterialArtifactRole, _:[[../MTConnect.html#MaterialArtifactRole MaterialArtifactRole]])
 individual(o2, data:Mazak317641resourcesmaterialsstockCapability, _:Capability)
 individual(o3, data:name32, des:Name)
 individual(o4, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
@@ -36,5 +36,5 @@ property(o0, "_:hasRole", o1)
 property(o0, "_:hasCapability", o2)
 property(o0, "des:hasName", o3)
 data(o3, "des:hasTextualName", "stock")
-property(o4, "ex:hasComponent", o0)
+property(o4, "_:hasComponent", o0)
 @enduml

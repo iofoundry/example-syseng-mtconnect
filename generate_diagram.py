@@ -81,9 +81,9 @@ class GenerateDiagram:
       ns, name = self._name(o.is_a[0]).split(':')
       cls = f"{ns}:[[../{self.vendor.name}.html#{name} {name}]]"
       f.write(f"individual({self._obj(o)}, {title}, {cls})\n")      
-    elif o.is_a[0].namespace == Example:
+    elif o.is_a[0].namespace == MTConnect:
       ns, name = self._name(o.is_a[0]).split(':')
-      cls = f"{ns}:[[../Example.html#{name} {name}]]"
+      cls = f"{ns}:[[../MTConnect.html#{name} {name}]]"
       f.write(f"individual({self._obj(o)}, {title}, {cls})\n")      
     elif o.is_a[0].namespace == Core:
       ns, name = self._name(o.is_a[0]).split(':')

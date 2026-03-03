@@ -28,7 +28,7 @@ title Mazak317641partspartocc
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641partspartocc.html Mazak317641partspartocc]], vendor:[[../Mazak.html#Mazak800ipartspartocc Mazak800ipartspartocc]])
-individual(o1, data:Mazak317641partspartoccMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o1, data:Mazak317641partspartoccMaterialArtifactRole, _:[[../MTConnect.html#MaterialArtifactRole MaterialArtifactRole]])
 individual(o2, data:Mazak317641partspartoccCapability, _:Capability)
 individual(o3, data:name25, des:Name)
 individual(o4, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
@@ -36,5 +36,5 @@ property(o0, "_:hasRole", o1)
 property(o0, "_:hasCapability", o2)
 property(o0, "des:hasName", o3)
 data(o3, "des:hasTextualName", "partocc")
-property(o4, "ex:hasComponent", o0)
+property(o4, "_:hasComponent", o0)
 @enduml

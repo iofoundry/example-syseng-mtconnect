@@ -28,7 +28,7 @@ title Mazak317641baseZZballscrew
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641baseZZballscrew.html Mazak317641baseZZballscrew]], vendor:[[../Mazak.html#Mazak800ibaseZZballscrew Mazak800ibaseZZballscrew]])
-individual(o1, data:Mazak317641baseZZballscrewMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o1, data:Mazak317641baseZZballscrewMaterialArtifactRole, _:[[../MTConnect.html#MaterialArtifactRole MaterialArtifactRole]])
 individual(o2, data:Mazak317641baseZZballscrewCapability, _:Capability)
 individual(o3, data:name14, des:Name)
 individual(o4, data:, owl:Thing)
@@ -38,5 +38,5 @@ property(o0, "_:hasCapability", o2)
 property(o0, "des:hasName", o3)
 data(o3, "des:hasTextualName", "Zballscrew")
 property(o4, "rdf:first", o0)
-property(o5, "ex:hasComponent", o0)
+property(o5, "_:hasComponent", o0)
 @enduml

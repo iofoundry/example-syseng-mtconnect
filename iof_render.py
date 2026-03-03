@@ -14,7 +14,7 @@ from owlready2.namespace import owl, Ontology
 import owlready2.base
 import re
 import treelib as tl
-from ontologies import Example, Core
+from ontologies import MTConnect, Core
 
 _DL_SYNTAX = types.SimpleNamespace(
     SUBCLASS="⊑",
@@ -59,8 +59,7 @@ Namespaces = {
     "https://spec.industrialontologies.org/ontology/construct/": "constr",
     "https://spec.industrialontologies.org/ontology/annotation/": "av",
     "https://www.omg.org/spec/Commons/Designators/": "des",
-    "http://example.org/ontology/": "ex",
-    "http://example.org/data/": "data",
+    "https://onto.mtconnect.org/ontology/construct/": "mtc",
     "http://qudt.org/vocab/unit/": "unit"
 }
 
@@ -169,10 +168,10 @@ def dl_render_disjoint(disjoint: AllDisjoint, klass: Optional[ThingClass] = None
 
 def _render_name(concept) -> str:
     formatted = _render_short_name(concept)
-    if concept.iri.startswith('http://example.org') and concept.iri.split('/')[3] != 'ontology':
+    if concept.iri.startswith('https://onto.mtconnect.org') and concept.iri.split('/')[3] != 'ontology':
         formatted = f"<a href='{concept.iri.split('/')[3]}.html#{concept.name}'>{formatted}</a>"        
-    elif concept.namespace == Example:
-        formatted = f"<a href='Example.html#{concept.name}'>{formatted}</a>"
+    elif concept.namespace == MTConnect:
+        formatted = f"<a href='MTConnect.html#{concept.name}'>{formatted}</a>"
     elif concept.namespace.name == 'Core':
         formatted = f"<a href='{concept.iri}'>{formatted}</a>"        
     return formatted 

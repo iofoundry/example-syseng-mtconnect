@@ -28,7 +28,7 @@ title Mazak317641systemspneumatic
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641systemspneumatic.html Mazak317641systemspneumatic]], vendor:[[../Mazak.html#Mazak800isystemspneumatic Mazak800isystemspneumatic]])
-individual(o1, data:Mazak317641systemspneumaticEngineeredSystemRole, ex:[[../Example.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:Mazak317641systemspneumaticEngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
 individual(o2, data:Mazak317641systemspneumaticCapability, _:Capability)
 individual(o3, data:name29, des:Name)
 individual(o4, data:, owl:Thing)
@@ -38,5 +38,5 @@ property(o0, "_:hasCapability", o2)
 property(o0, "des:hasName", o3)
 data(o3, "des:hasTextualName", "pneumatic")
 property(o4, "rdf:first", o0)
-property(o5, "ex:hasComponent", o0)
+property(o5, "_:hasComponent", o0)
 @enduml

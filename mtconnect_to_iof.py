@@ -33,7 +33,7 @@ class MTConnectToIOF:
       self.VendorFileName = f"{self.VendorName}.rdf"
       self.Vendor = owl.get_ontology(f"http://example.org/{self.VendorName}/")
       self.Vendor.base_iri = f"http://example.org/{self.VendorName}/"
-      self.Vendor.imported_ontologies = [Example]
+      self.Vendor.imported_ontologies = [MTConnect]
       
       self.Data = owl.get_ontology("http://example.org/data/")
       self.Data.base_iri = "http://example.org/data/"

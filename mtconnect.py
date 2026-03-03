@@ -2,17 +2,17 @@ import owlready2 as owl
 import os
 import re
 
-if os.path.exists("example.rdf"):
-    os.remove("example.rdf")
+if os.path.exists("mtconnect.rdf"):
+    os.remove("mtconnect.rdf")
 
 from ontologies import BFO, Core, Des, Construct, Annotation, QUDT
 
-Example = owl.get_ontology("http://example.org/ontology/")
-Example.imported_ontologies = [Core, Des]
-Example.label = [owl.locstr("Machine Ontology", "en")]
-Example.base_iri = "http://example.org/ontology/"
+MTConnect = owl.get_ontology("https://onto.mtconnect.org/ontology/construct/")
+MTConnect.imported_ontologies = [Core, Des]
+MTConnect.label = [owl.locstr("Machine Ontology", "en")]
+MTConnect.base_iri = "https://onto.mtconnect.org/ontology/construct/"
 
-with Example:
+with MTConnect:
   """The IOF ontology for engineered systems and their components."""  
   class Actuator(BFO.object):
     label = owl.locstr("Actuator", "en")
@@ -360,4 +360,4 @@ with Example:
                     Machine & hasComponent.some(CRotaryMotionSystem & 
                       hasComponent.some(Chuck)))]
 
-Example.save(file = "example.rdf", format = "rdfxml")
+MTConnect.save(file = "mtconnect.rdf", format = "rdfxml")

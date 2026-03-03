@@ -1,6 +1,6 @@
 import sys
 import owlready2 as owl
-from ontologies import BFO, Core, Example, Construct
+from ontologies import BFO, Core, MTConnect, Construct
 from mtconnect_to_iof import MTConnectToIOF
 from generate_diagram import GenerateDiagram
 from iof_render import dl_render_terminology, dl_render_class, Namespaces
@@ -13,9 +13,9 @@ from generate_html import render_vendor, render_terminology
 
 logger = logging.getLogger(__name__)
 
-Example.load(only_local=True)
+MTConnect.load(only_local=True)
 
-render_terminology("Example", Example)
+render_terminology("MTConnect", MTConnect)
 
 if len(sys.argv) < 2:
     print("Usage: python mtc2rdf.py <file>")
@@ -51,15 +51,15 @@ logger.info("Generating full diagram")
 full.generate()
 
 logger.info("Generating topology")
-statements = [[x[0], Example.connectedTo, x[1]] \
-  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Example.connectedTo])]
+statements = [[x[0], MTConnect.connectedTo, x[1]] \
+  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [MTConnect.connectedTo])]
 
 gen = GenerateDiagram(f"{Vendor.name}Topo", statements, Vendor)
 gen.generate()
 
 logger.info("Generating mereology")
-statements = [[x[0], Example.hasComponent, x[1]] \
-  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [Example.hasComponent])]
+statements = [[x[0], MTConnect.hasComponent, x[1]] \
+  for x in owl.default_world.sparql("select distinct ?s ?o { ?s ?? ?o .}", [MTConnect.hasComponent])]
 
 gen = GenerateDiagram(f"{Vendor.name}Mere", statements, Vendor)
 gen.generate()

@@ -28,17 +28,17 @@ title Mazak317641mstructTABLE
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641mstructTABLE.html Mazak317641mstructTABLE]], vendor:[[../Mazak.html#Mazak800imstructTABLE Mazak800imstructTABLE]])
-individual(o1, data:Mazak317641mstructTABLEMaterialArtifactRole, ex:[[../Example.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o1, data:Mazak317641mstructTABLEMaterialArtifactRole, _:[[../MTConnect.html#MaterialArtifactRole MaterialArtifactRole]])
 individual(o2, data:Mazak317641mstructTABLECapability, _:Capability)
 individual(o3, data:name5, des:Name)
 individual(o4, data:, owl:Thing)
-individual(o5, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
-individual(o6, data:[[./Mazak317641baseC2.html Mazak317641baseC2]], vendor:[[../Mazak.html#Mazak800ibaseC2 Mazak800ibaseC2]])
+individual(o5, data:[[./Mazak317641baseC2.html Mazak317641baseC2]], vendor:[[../Mazak.html#Mazak800ibaseC2 Mazak800ibaseC2]])
+individual(o6, data:[[./Mazak317641.html Mazak317641]], vendor:[[../Mazak.html#Mazak800i Mazak800i]])
 property(o0, "_:hasRole", o1)
 property(o0, "_:hasCapability", o2)
 property(o0, "des:hasName", o3)
 data(o3, "des:hasTextualName", "TABLE")
 property(o4, "rdf:first", o0)
-property(o5, "ex:hasComponent", o0)
-property(o6, "ex:connectedTo", o0)
+property(o5, "_:connectedTo", o0)
+property(o6, "_:hasComponent", o0)
 @enduml

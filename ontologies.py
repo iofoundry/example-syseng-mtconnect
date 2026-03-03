@@ -44,10 +44,10 @@ for prop in BFO.object_properties():
     prop.python_name = name
     setattr(BFO, name, prop)
     
-if os.path.exists(f"{path}/example.rdf"):
-  with open(f"{path}/example.rdf", "rb") as f:
-    Example = owl.get_ontology("http://example.org/ontology/").load(only_local = True, fileobj=f)
-  Example.base_iri = "http://example.org/ontology/"
+if os.path.exists(f"{path}/mtconnect.rdf"):
+  with open(f"{path}/mtconnect.rdf", "rb") as f:
+    MTConnect = owl.get_ontology("https://onto.mtconnect.org/ontology/construct/").load(only_local = True, fileobj=f)
+  MTConnect.base_iri = "https://onto.mtconnect.org/ontology/construct/"
 
 QUDT = owl.get_ontology(f"http://qudt.org/vocab/unit/")
 QUDT.base_iri = 'http://qudt.org/vocab/unit/'

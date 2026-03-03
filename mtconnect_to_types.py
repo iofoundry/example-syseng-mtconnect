@@ -49,7 +49,7 @@ class MTConnectToTypes:
       if parent and not any([issubclass(type_cls, _) for _ in Separate]):
         with self.Vendor:
           logger.info(f"{parent}: Adding subclass axiom for #{type_cls}")
-          parent.is_a.append(Example.hasComponent.some(type_cls))
+          parent.is_a.append(MTConnect.hasComponent.some(type_cls))
       else:
         logger.info(f"  {type_cls} is a not component of {parent} since it is in Separate")
     
@@ -66,7 +66,7 @@ class MTConnectToTypes:
     if cls:
       # Special handling for linear motors
       label_names = names
-      if cls == Example.Motor and issubclass(parent, Example.LinearMotionSystem):
+      if cls == MTConnect.Motor and issubclass(parent, MTConnect.LinearMotionSystem):
         label_names = names[0:2]
         label_names.append('Motor')
         label_names.extend(self._specification_name(element))
@@ -146,7 +146,7 @@ class MTConnectToTypes:
                       
           if issubclass(di_cls, BFO.quality):
             node.is_a.append(Construct.hasQuality.some(di_cls))
-          elif issubclass(di_cls, Example.State):
+          elif issubclass(di_cls, MTConnect.State):
             node.is_a.append(BFO.participates_in_at_some_time.some(di_cls))
           else:
             node.is_a.append(Construct.measuresAtSomeTime.some(di_cls))
@@ -161,7 +161,7 @@ class MTConnectToTypes:
       with self.Vendor:
         design_type = f"{type_cls.name}Design"
         design = owl.types.new_class(design_type, (Construct.DesignSpecification,))
-        type_cls.is_a.append(Example.conformsTo.only(design))
+        type_cls.is_a.append(MTConnect.conformsTo.only(design))
         
         for spec in specifications:
           spec_name = spec.get("type")
@@ -195,9 +195,9 @@ class MTConnectToTypes:
               spec_name = ''.join([r.capitalize() for r in [spec_name, spec.get('subType', None)] if r])
               units = None # Units.get(spec.get("units", None), None)
               if units:
-                unit_const = Example.hasUnit.value(units)
+                unit_const = MTConnect.hasUnit.value(units)
               else:
-                unit_const = Example.hasUnit.only(QUDT.Unit)
+                unit_const = MTConnect.hasUnit.only(QUDT.Unit)
 
               if issubclass(di_cls, BFO.quality):
                 quality = owl.types.new_class(f"{type_cls.name}{spec_name}", (di_cls,))
@@ -229,7 +229,7 @@ class MTConnectToTypes:
         target = self.types_by_id[rel.get('idRef')]
         logger.info(f"  Adding {rel_type} relationship to {target}")       
         with self.Vendor:
-          e = Example.connectedTo.some(target)
+          e = MTConnect.connectedTo.some(target)
           if expr:
             expr = expr & e
           else:
@@ -245,7 +245,7 @@ class MTConnectToTypes:
           if pid:
             parent = self.motion[motion.get('parentIdRef')]
             if parent:
-              type.is_a.append(Example.hasKinematicParent.some(parent))
+              type.is_a.append(MTConnect.hasKinematicParent.some(parent))
 
     for component in element.findall("./m:Components/*", self.ns):
       self._add_relationships(component)

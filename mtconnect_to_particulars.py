@@ -120,7 +120,7 @@ class MTConnectToParticulars:
             
           if issubclass(di_cls, BFO.quality):
             node.hasQuality.append(data_item)
-          elif issubclass(di_cls, Example.State):
+          elif issubclass(di_cls, MTConnect.State):
             node.observesAtSomeTime.append(data_item)
           else:
             node.measuresAtSomeTime.append(data_item)
