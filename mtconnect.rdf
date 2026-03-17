@@ -452,7 +452,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/SixAxisMotionCapability">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/FourAxisMotionCapability"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/FiveAxisMotionCapability"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Six Axis Motion Capability</rdfs:label>
 		<owl:equivalentClass>
 			<owl:Class>

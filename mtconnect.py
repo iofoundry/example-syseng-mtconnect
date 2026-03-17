@@ -343,7 +343,7 @@ with MTConnect:
                          RotaryMotionSystem & 
                          Construct.hasFunction.some(IndexedRevoluteCapability)))]
 
-  class SixAxisMotionCapability(FourAxisMotionCapability):
+  class SixAxisMotionCapability(FiveAxisMotionCapability):
     """A six-axis motion capability in the IOF ontology."""
     label = owl.locstr("Six Axis Motion Capability", "en")
     equivalent_to = [FiveAxisMotionCapability & 
