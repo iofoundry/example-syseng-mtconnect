@@ -705,6 +705,12 @@
 		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasCapability"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasComponentPartAtSomeTime"/>
 				<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
 			</owl:Restriction>

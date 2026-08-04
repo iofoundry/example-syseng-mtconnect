@@ -32,7 +32,8 @@ with MTConnect:
   class _System(BFO.material_entity):
     """A system in the IOF ontology."""
     label = owl.locstr("System", "en")
-    is_a = [Construct.hasComponentPartAtSomeTime.some(BFO.material_entity)]
+    is_a = [Construct.hasComponentPartAtSomeTime.some(BFO.material_entity),
+            Construct.hasCapability.some(Construct.Capability)]
     equivalent_to = [BFO.material_entity & Construct.hasRole.some(SystemRole)]
 
   class _EngineeredSystem(_System):
