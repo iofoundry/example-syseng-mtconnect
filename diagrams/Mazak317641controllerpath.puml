@@ -28,7 +28,7 @@ title Mazak317641controllerpath
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641controllerpath.html Mazak317641controllerpath]], vendor:[[../Mazak.html#Mazak800icontrollerpath Mazak800icontrollerpath]])
-individual(o1, data:Mazak317641controllerpathEngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:Mazak317641controllerpathEquipmentRole, _:EquipmentRole)
 individual(o2, data:Mazak317641controllerpathCapability, _:Capability)
 individual(o3, data:Mazak317641controllerpathPATH_POSITION, _:[[../MTConnect.html#ThreeSpaceDisplacement ThreeSpaceDisplacement]])
 individual(o4, data:Mazak317641controllerpathCHUCK_STATE, _:[[../MTConnect.html#ChuckState ChuckState]])

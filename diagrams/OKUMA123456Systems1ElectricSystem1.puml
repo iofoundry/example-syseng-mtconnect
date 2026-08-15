@@ -28,7 +28,7 @@ title OKUMA123456Systems1ElectricSystem1
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456Systems1ElectricSystem1.html OKUMA123456Systems1ElectricSystem1]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Systems1ElectricSystem1 OKUMAMULT_U3000Systems1ElectricSystem1]])
-individual(o1, data:OKUMA123456Systems1ElectricSystem1EngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:OKUMA123456Systems1ElectricSystem1EquipmentRole, _:EquipmentRole)
 individual(o2, data:OKUMA123456Systems1ElectricSystem1Capability, _:Capability)
 individual(o3, data:name23, des:Name)
 individual(o4, data:, owl:Thing)

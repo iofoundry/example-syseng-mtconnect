@@ -76,7 +76,14 @@ class MTConnectToParticulars:
 
       node = Des.Name()
       node.hasTextualName.append(text_name)
-      partic.hasName.append(node)      
+      partic.hasName.append(node)
+      
+      function = parent.hasFunction[0] if parent and parent.hasFunction else None
+      if function:
+        logger.info(f"Parent has function {function}")
+        if issubclass(function.__class__, MTConnect.MotionCapability):
+          logger.info(f"** inhering in parent{function}")
+          partic.inheres_in.append(function)
 
       ds = self._create_particular_specifications(element, partic, name)
       key = None
@@ -85,12 +92,23 @@ class MTConnectToParticulars:
         key = motion.get("type", type)
         self.motion[motion.get('id')] = type_cls
         
-      self._add_capability(partic, key, ds)      
+      self._add_capability(partic, key, ds)
       if type in Roles:
         for role in Roles[type]:
+          logger.info(f"  Adding role {role}")
           role_partic = role(name + role.name)
           partic.hasRole.append(role_partic)
-    
+
+      if type in AxisRoles:
+        logger.info(f"  Adding axis role {AxisRoles[type]} targeting {parent}")
+        axis_role = AxisRoles[type](name + AxisRoles[type].name)
+        axis_role.targetOf.append(parent)
+        partic.hasRole.append(axis_role)
+
+        disposition = MTConnect.DispositionToBePartOfSystem(name + 'PartOfMachineDisposition')
+        disposition.targetOf.append(parent)
+        partic.hasDisposition.append(disposition)
+
     return partic
   
   @log_indent

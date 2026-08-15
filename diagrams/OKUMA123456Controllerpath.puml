@@ -28,7 +28,7 @@ title OKUMA123456Controllerpath
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456Controllerpath.html OKUMA123456Controllerpath]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Controllerpath OKUMAMULT_U3000Controllerpath]])
-individual(o1, data:OKUMA123456ControllerpathEngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:OKUMA123456ControllerpathEquipmentRole, _:EquipmentRole)
 individual(o2, data:OKUMA123456ControllerpathCapability, _:Capability)
 individual(o3, data:OKUMA123456ControllerpathPATH_POSITION_ACTUAL, _:[[../MTConnect.html#ThreeSpaceDisplacement ThreeSpaceDisplacement]])
 individual(o4, data:name21, des:Name)

@@ -3,6 +3,7 @@
 	<!ENTITY Desi "https://www.omg.org/spec/Commons/Designators/">
 	<!ENTITY cons "https://spec.industrialontologies.org/ontology/construct/">
 	<!ENTITY cons2 "https://onto.mtconnect.org/ontology/construct/">
+	<!ENTITY obo "http://purl.obolibrary.org/obo/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
@@ -13,6 +14,7 @@
 	xmlns:Desi="https://www.omg.org/spec/Commons/Designators/"
 	xmlns:cons="https://spec.industrialontologies.org/ontology/construct/"
 	xmlns:cons2="https://onto.mtconnect.org/ontology/construct/"
+	xmlns:obo="http://purl.obolibrary.org/obo/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -53,7 +55,6 @@
 		<cons2:hasComponent rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
 		<cons2:hasComponent rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456Capability"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456EngineeredSystemRole"/>
 		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456EquipmentRole"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name1"/>
 	</owl:NamedIndividual>
@@ -112,6 +113,7 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC1lc1chuck">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC1lc1chuck"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes C1 lc1chuck particular</rdfs:label>
+		<obo:BFO_0000197 rdf:resource="http://example.org/data/OKUMA123456AxesC1ContinuousRevoluteCapability"/>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456AxesC1lc1chuckCapability"/>
 		<cons:observesAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC1lc1chuckCHUCK_STATE"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name14"/>
@@ -157,6 +159,7 @@
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesC2lc2chuck">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesC2lc2chuck"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes C2 lc2chuck particular</rdfs:label>
+		<obo:BFO_0000197 rdf:resource="http://example.org/data/OKUMA123456AxesC2IndexedRevoluteCapability"/>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456AxesC2lc2chuckCapability"/>
 		<cons:observesAtSomeTime rdf:resource="http://example.org/data/OKUMA123456AxesC2lc2chuckCHUCK_STATE"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name17"/>
@@ -220,8 +223,11 @@
 		<cons2:connectedTo rdf:resource="http://example.org/data/OKUMA123456structx_axis"/>
 		<cons2:connectedTo rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456AxesXCapability"/>
+		<cons:hasDisposition rdf:resource="http://example.org/data/OKUMA123456AxesXPartOfMachineDisposition"/>
 		<cons:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesXPrismaticMotionCapability"/>
 		<cons:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesXPOSITION_ACTUAL"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456AxesXXLinearAxisRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456AxesXXLinearMotionSystemRole"/>
 		<cons:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesxdesign1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name9"/>
 	</owl:NamedIndividual>
@@ -250,6 +256,11 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXPOSITION_ACTUAL">
 		<rdf:type rdf:resource="&cons2;Displacement"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXPartOfMachineDisposition">
+		<rdf:type rdf:resource="&cons2;DispositionToBePartOfSystem"/>
+		<cons2:targetOf rdf:resource="http://example.org/data/OKUMA123456"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXPrismaticMotionCapability">
@@ -281,14 +292,26 @@
 		<cons:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</cons:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXXLinearAxisRole">
+		<rdf:type rdf:resource="&cons2;XLinearAxisRole"/>
+		<cons2:targetOf rdf:resource="http://example.org/data/OKUMA123456"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesXXLinearMotionSystemRole">
+		<rdf:type rdf:resource="&cons2;XLinearMotionSystemRole"/>
+	</owl:NamedIndividual>
+	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesY">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesY"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes Y particular</rdfs:label>
 		<cons2:connectedTo rdf:resource="http://example.org/data/OKUMA123456structx_axis"/>
 		<cons2:connectedTo rdf:resource="http://example.org/data/OKUMA123456structy_axis"/>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456AxesYCapability"/>
+		<cons:hasDisposition rdf:resource="http://example.org/data/OKUMA123456AxesYPartOfMachineDisposition"/>
 		<cons:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesYPrismaticMotionCapability"/>
 		<cons:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesYPOSITION_ACTUAL"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456AxesYYLinearAxisRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456AxesYYLinearMotionSystemRole"/>
 		<cons:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesydesign1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name10"/>
 	</owl:NamedIndividual>
@@ -317,6 +340,11 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYPOSITION_ACTUAL">
 		<rdf:type rdf:resource="&cons2;Displacement"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYPartOfMachineDisposition">
+		<rdf:type rdf:resource="&cons2;DispositionToBePartOfSystem"/>
+		<cons2:targetOf rdf:resource="http://example.org/data/OKUMA123456"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYPrismaticMotionCapability">
@@ -348,14 +376,26 @@
 		<cons:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</cons:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYYLinearAxisRole">
+		<rdf:type rdf:resource="&cons2;YLinearAxisRole"/>
+		<cons2:targetOf rdf:resource="http://example.org/data/OKUMA123456"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesYYLinearMotionSystemRole">
+		<rdf:type rdf:resource="&cons2;YLinearMotionSystemRole"/>
+	</owl:NamedIndividual>
+	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes Z1 particular</rdfs:label>
 		<cons2:connectedTo rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
 		<cons2:connectedTo rdf:resource="http://example.org/data/OKUMA123456structz1_axis"/>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456AxesZ1Capability"/>
+		<cons:hasDisposition rdf:resource="http://example.org/data/OKUMA123456AxesZ1PartOfMachineDisposition"/>
 		<cons:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesZ1PrismaticMotionCapability"/>
 		<cons:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesZ1POSITION_ACTUAL"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456AxesZ1ZLinearAxisRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456AxesZ1ZLinearMotionSystemRole"/>
 		<cons:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesz1design1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name11"/>
 	</owl:NamedIndividual>
@@ -384,6 +424,11 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1POSITION_ACTUAL">
 		<rdf:type rdf:resource="&cons2;Displacement"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1PartOfMachineDisposition">
+		<rdf:type rdf:resource="&cons2;DispositionToBePartOfSystem"/>
+		<cons2:targetOf rdf:resource="http://example.org/data/OKUMA123456"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1PrismaticMotionCapability">
@@ -415,14 +460,26 @@
 		<cons:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</cons:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1ZLinearAxisRole">
+		<rdf:type rdf:resource="&cons2;ZLinearAxisRole"/>
+		<cons2:targetOf rdf:resource="http://example.org/data/OKUMA123456"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ1ZLinearMotionSystemRole">
+		<rdf:type rdf:resource="&cons2;ZLinearMotionSystemRole"/>
+	</owl:NamedIndividual>
+	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Axes Z4 particular</rdfs:label>
 		<cons2:connectedTo rdf:resource="http://example.org/data/OKUMA123456enclosure"/>
 		<cons2:connectedTo rdf:resource="http://example.org/data/OKUMA123456structz4_axis"/>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456AxesZ4Capability"/>
+		<cons:hasDisposition rdf:resource="http://example.org/data/OKUMA123456AxesZ4PartOfMachineDisposition"/>
 		<cons:hasFunction rdf:resource="http://example.org/data/OKUMA123456AxesZ4PrismaticMotionCapability"/>
 		<cons:hasQuality rdf:resource="http://example.org/data/OKUMA123456AxesZ4POSITION_ACTUAL"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456AxesZ4ZLinearAxisRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456AxesZ4ZLinearMotionSystemRole"/>
 		<cons:prescribedBy rdf:resource="http://example.org/data/okumamult_u3000axesz4design1"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name15"/>
 	</owl:NamedIndividual>
@@ -451,6 +508,11 @@
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4POSITION_ACTUAL">
 		<rdf:type rdf:resource="&cons2;Displacement"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4PartOfMachineDisposition">
+		<rdf:type rdf:resource="&cons2;DispositionToBePartOfSystem"/>
+		<cons2:targetOf rdf:resource="http://example.org/data/OKUMA123456"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4PrismaticMotionCapability">
@@ -482,6 +544,15 @@
 		<cons:hasSimpleExpressionValue rdf:datatype="&xsd;decimal">1.0</cons:hasSimpleExpressionValue>
 	</owl:NamedIndividual>
 	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4ZLinearAxisRole">
+		<rdf:type rdf:resource="&cons2;ZLinearAxisRole"/>
+		<cons2:targetOf rdf:resource="http://example.org/data/OKUMA123456"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456AxesZ4ZLinearMotionSystemRole">
+		<rdf:type rdf:resource="&cons2;ZLinearMotionSystemRole"/>
+	</owl:NamedIndividual>
+	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Capability">
 		<rdf:type rdf:resource="&cons;Capability"/>
 	</owl:NamedIndividual>
@@ -491,7 +562,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Controller particular</rdfs:label>
 		<cons2:hasComponent rdf:resource="http://example.org/data/OKUMA123456Controllerpath"/>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456ControllerCapability"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456ControllerEngineeredSystemRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456ControllerEquipmentRole"/>
 		<cons:observesAtSomeTime rdf:resource="http://example.org/data/OKUMA123456ControllerCONTROLLER_MODE"/>
 		<cons:observesAtSomeTime rdf:resource="http://example.org/data/OKUMA123456ControllerEXECUTION"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name20"/>
@@ -509,8 +580,8 @@
 		<rdf:type rdf:resource="&cons2;ExecutionState"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456ControllerEngineeredSystemRole">
-		<rdf:type rdf:resource="&cons2;EngineeredSystemRole"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456ControllerEquipmentRole">
+		<rdf:type rdf:resource="&cons;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Controllerpath">
@@ -518,7 +589,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Controller path particular</rdfs:label>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456ControllerpathCapability"/>
 		<cons:hasQuality rdf:resource="http://example.org/data/OKUMA123456ControllerpathPATH_POSITION_ACTUAL"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456ControllerpathEngineeredSystemRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456ControllerpathEquipmentRole"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name21"/>
 	</owl:NamedIndividual>
 	
@@ -526,16 +597,12 @@
 		<rdf:type rdf:resource="&cons;Capability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456ControllerpathEngineeredSystemRole">
-		<rdf:type rdf:resource="&cons2;EngineeredSystemRole"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456ControllerpathEquipmentRole">
+		<rdf:type rdf:resource="&cons;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456ControllerpathPATH_POSITION_ACTUAL">
 		<rdf:type rdf:resource="&cons2;ThreeSpaceDisplacement"/>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456EngineeredSystemRole">
-		<rdf:type rdf:resource="&cons2;EngineeredSystemRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456EquipmentRole">
@@ -590,7 +657,7 @@
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1CoolantSystem1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Systems1 CoolantSystem1 particular</rdfs:label>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456Systems1CoolantSystem1Capability"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1CoolantSystem1EngineeredSystemRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1CoolantSystem1EquipmentRole"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name22"/>
 	</owl:NamedIndividual>
 	
@@ -598,15 +665,15 @@
 		<rdf:type rdf:resource="&cons;Capability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1CoolantSystem1EngineeredSystemRole">
-		<rdf:type rdf:resource="&cons2;EngineeredSystemRole"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1CoolantSystem1EquipmentRole">
+		<rdf:type rdf:resource="&cons;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1ElectricSystem1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1ElectricSystem1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Systems1 ElectricSystem1 particular</rdfs:label>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456Systems1ElectricSystem1Capability"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1ElectricSystem1EngineeredSystemRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1ElectricSystem1EquipmentRole"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name23"/>
 	</owl:NamedIndividual>
 	
@@ -614,15 +681,15 @@
 		<rdf:type rdf:resource="&cons;Capability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1ElectricSystem1EngineeredSystemRole">
-		<rdf:type rdf:resource="&cons2;EngineeredSystemRole"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1ElectricSystem1EquipmentRole">
+		<rdf:type rdf:resource="&cons;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1HydraulicSystem1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1HydraulicSystem1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Systems1 HydraulicSystem1 particular</rdfs:label>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456Systems1HydraulicSystem1Capability"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1HydraulicSystem1EngineeredSystemRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1HydraulicSystem1EquipmentRole"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name24"/>
 	</owl:NamedIndividual>
 	
@@ -630,15 +697,15 @@
 		<rdf:type rdf:resource="&cons;Capability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1HydraulicSystem1EngineeredSystemRole">
-		<rdf:type rdf:resource="&cons2;EngineeredSystemRole"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1HydraulicSystem1EquipmentRole">
+		<rdf:type rdf:resource="&cons;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1LubricationSystem1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1LubricationSystem1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Systems1 LubricationSystem1 particular</rdfs:label>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456Systems1LubricationSystem1Capability"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1LubricationSystem1EngineeredSystemRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1LubricationSystem1EquipmentRole"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name25"/>
 	</owl:NamedIndividual>
 	
@@ -646,15 +713,15 @@
 		<rdf:type rdf:resource="&cons;Capability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1LubricationSystem1EngineeredSystemRole">
-		<rdf:type rdf:resource="&cons2;EngineeredSystemRole"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1LubricationSystem1EquipmentRole">
+		<rdf:type rdf:resource="&cons;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1PneumaticSystem1">
 		<rdf:type rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Systems1PneumaticSystem1"/>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 Systems1 PneumaticSystem1 particular</rdfs:label>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456Systems1PneumaticSystem1Capability"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1PneumaticSystem1EngineeredSystemRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456Systems1PneumaticSystem1EquipmentRole"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name26"/>
 	</owl:NamedIndividual>
 	
@@ -662,8 +729,8 @@
 		<rdf:type rdf:resource="&cons;Capability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1PneumaticSystem1EngineeredSystemRole">
-		<rdf:type rdf:resource="&cons2;EngineeredSystemRole"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456Systems1PneumaticSystem1EquipmentRole">
+		<rdf:type rdf:resource="&cons;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456enclosure">
@@ -671,7 +738,7 @@
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA 123456 enclosure particular</rdfs:label>
 		<cons:hasCapability rdf:resource="http://example.org/data/OKUMA123456enclosureCapability"/>
 		<cons:hasQuality rdf:resource="http://example.org/data/OKUMA123456enclosureTEMPERATURE"/>
-		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456enclosureMaterialArtifactRole"/>
+		<cons:hasRole rdf:resource="http://example.org/data/OKUMA123456enclosureEquipmentRole"/>
 		<Desi:hasName rdf:resource="http://example.org/data/name31"/>
 	</owl:NamedIndividual>
 	
@@ -679,8 +746,8 @@
 		<rdf:type rdf:resource="&cons;Capability"/>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456enclosureMaterialArtifactRole">
-		<rdf:type rdf:resource="&cons2;MaterialArtifactRole"/>
+	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456enclosureEquipmentRole">
+		<rdf:type rdf:resource="&cons;EquipmentRole"/>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="http://example.org/data/OKUMA123456enclosureTEMPERATURE">

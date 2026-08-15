@@ -33,6 +33,7 @@ print("done")
 
 Construct = owl.Namespace(base_iri="https://spec.industrialontologies.org/ontology/construct/", world_or_ontology=Core.world)
 Annotation = owl.Namespace(base_iri="https://spec.industrialontologies.org/ontology/annotation/", world_or_ontology=AnnVocab.world)
+IOF = Construct
 
 for cls in BFO.classes():
   name = re.sub(r"[ \-]", "_", str(cls.label.first()))
@@ -47,7 +48,7 @@ for prop in BFO.object_properties():
 if os.path.exists(f"{path}/mtconnect.rdf"):
   with open(f"{path}/mtconnect.rdf", "rb") as f:
     MTConnect = owl.get_ontology("https://onto.mtconnect.org/ontology/construct/").load(only_local = True, fileobj=f)
-  MTConnect.base_iri = "https://onto.mtconnect.org/ontology/construct/"
+  #MTConnect.base_iri = "https://onto.mtconnect.org/ontology/construct/"
 
 QUDT = owl.get_ontology(f"http://qudt.org/vocab/unit/")
 QUDT.base_iri = 'http://qudt.org/vocab/unit/'

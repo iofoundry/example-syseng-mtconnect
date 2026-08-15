@@ -28,7 +28,7 @@ title Mazak317641systemscoolant
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641systemscoolant.html Mazak317641systemscoolant]], vendor:[[../Mazak.html#Mazak800isystemscoolant Mazak800isystemscoolant]])
-individual(o1, data:Mazak317641systemscoolantEngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:Mazak317641systemscoolantEquipmentRole, _:EquipmentRole)
 individual(o2, data:Mazak317641systemscoolantCapability, _:Capability)
 individual(o3, data:Mazak317641systemscoolantTEMPERATURE, _:[[../MTConnect.html#Temperature Temperature]])
 individual(o4, data:name28, des:Name)

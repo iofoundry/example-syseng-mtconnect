@@ -28,7 +28,7 @@ title OKUMA123456Systems1LubricationSystem1
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456Systems1LubricationSystem1.html OKUMA123456Systems1LubricationSystem1]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Systems1LubricationSystem1 OKUMAMULT_U3000Systems1LubricationSystem1]])
-individual(o1, data:OKUMA123456Systems1LubricationSystem1EngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:OKUMA123456Systems1LubricationSystem1EquipmentRole, _:EquipmentRole)
 individual(o2, data:OKUMA123456Systems1LubricationSystem1Capability, _:Capability)
 individual(o3, data:name25, des:Name)
 individual(o4, data:, owl:Thing)

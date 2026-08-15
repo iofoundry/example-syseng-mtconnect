@@ -13,7 +13,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="http://example.org/OKUMA/">
-		<owl:imports rdf:resource="https://onto.mtconnect.org/ontology/construct/"/>
+		<owl:imports rdf:resource="https://onto.mtconnect.org/ontology/construct"/>
 	</owl:Ontology>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000">
@@ -180,11 +180,17 @@
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000structz4_axis"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesB">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/BRotaryMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -209,7 +215,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesC1">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/CRotaryMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://onto.mtconnect.org/ontology/construct/connectedTo"/>
@@ -243,7 +249,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesC2">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/CRotaryMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -285,7 +291,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesC3">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/CRotaryMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -310,7 +316,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesC6">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/CRotaryMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/measuresAtSomeTime"/>
@@ -321,7 +327,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesX">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/XLinearMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -356,6 +362,12 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasDisposition"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/DispositionToBePartOfSystem"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesXLength"/>
 			</owl:Restriction>
@@ -370,6 +382,18 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/Displacement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/XLinearAxisRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/XLinearMotionSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes X</rdfs:label>
@@ -525,7 +549,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesY">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/YLinearMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -560,6 +584,12 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasDisposition"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/DispositionToBePartOfSystem"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesYLength"/>
 			</owl:Restriction>
@@ -574,6 +604,18 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/Displacement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/YLinearAxisRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/YLinearMotionSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Y</rdfs:label>
@@ -729,7 +771,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/ZLinearMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -764,6 +806,12 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasDisposition"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/DispositionToBePartOfSystem"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ1Length"/>
 			</owl:Restriction>
@@ -778,6 +826,18 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/Displacement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/ZLinearAxisRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/ZLinearMotionSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Z1</rdfs:label>
@@ -933,7 +993,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4">
-		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/ZLinearMotionSystem"/>
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearMotionSystem"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -968,6 +1028,12 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasDisposition"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/DispositionToBePartOfSystem"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000AxesZ4Length"/>
 			</owl:Restriction>
@@ -982,6 +1048,18 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/Displacement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/ZLinearAxisRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/ZLinearMotionSystemRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Axes Z4</rdfs:label>
@@ -1156,6 +1234,12 @@
 				<owl:someValuesFrom rdf:resource="http://example.org/OKUMA/OKUMAMULT_U3000Controllerpath"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Controller</rdfs:label>
 	</owl:Class>
 	
@@ -1165,6 +1249,12 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/ThreeSpaceDisplacement"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Controller path</rdfs:label>
@@ -1192,26 +1282,56 @@
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000Systems1CoolantSystem1">
 		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/CoolantSystem"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Systems1 CoolantSystem1</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000Systems1ElectricSystem1">
 		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/ElectricalSystem"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Systems1 ElectricSystem1</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000Systems1HydraulicSystem1">
 		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/HydraulicSystem"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Systems1 HydraulicSystem1</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000Systems1LubricationSystem1">
 		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LubricationSystem"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Systems1 LubricationSystem1</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="http://example.org/OKUMA/OKUMAMULT_U3000Systems1PneumaticSystem1">
 		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/PneumaticSystem"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 Systems1 PneumaticSystem1</rdfs:label>
 	</owl:Class>
 	
@@ -1221,6 +1341,12 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasQuality"/>
 				<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/Temperature"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">OKUMA MULT_U3000 enclosure</rdfs:label>

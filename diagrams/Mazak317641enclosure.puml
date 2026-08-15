@@ -28,7 +28,7 @@ title Mazak317641enclosure
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641enclosure.html Mazak317641enclosure]], vendor:[[../Mazak.html#Mazak800ienclosure Mazak800ienclosure]])
-individual(o1, data:Mazak317641enclosureMaterialArtifactRole, _:[[../MTConnect.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o1, data:Mazak317641enclosureEquipmentRole, _:EquipmentRole)
 individual(o2, data:Mazak317641enclosureCapability, _:Capability)
 individual(o3, data:Mazak317641enclosureTEMPERATURE, _:[[../MTConnect.html#Temperature Temperature]])
 individual(o4, data:name33, des:Name)

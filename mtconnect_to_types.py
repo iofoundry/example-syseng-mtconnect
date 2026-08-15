@@ -83,9 +83,16 @@ class MTConnectToTypes:
           self._translate_class_specifications(element, type_cls)
           
           # Check roles
-          #if type in Roles:
-          #  for role in Roles[type]:              
-          #    type_cls.is_a.append(Construct.hasRole.some(role))          
+          if type in Roles:
+            for role in Roles[type]:
+              logger.info(f"  Adding role {role}")
+              type_cls.is_a.append(Construct.hasRole.some(role))
+
+          if type in AxisRoles:
+            logger.info(f"  Adding axis role {AxisRoles[type]}")
+            type_cls.is_a.append(Construct.hasRole.some(AxisRoles[type]))
+            type_cls.is_a.append(Construct.hasDisposition.some(MTConnect.DispositionToBePartOfSystem))
+
           logger.info(f"Created {type_name} {type_cls.iri}")
           compositions = self._add_compositions(element, names.copy(), type_cls)
           self._add_data_items(element, type_cls, compositions)

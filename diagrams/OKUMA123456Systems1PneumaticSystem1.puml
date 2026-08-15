@@ -28,7 +28,7 @@ title OKUMA123456Systems1PneumaticSystem1
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456Systems1PneumaticSystem1.html OKUMA123456Systems1PneumaticSystem1]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Systems1PneumaticSystem1 OKUMAMULT_U3000Systems1PneumaticSystem1]])
-individual(o1, data:OKUMA123456Systems1PneumaticSystem1EngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:OKUMA123456Systems1PneumaticSystem1EquipmentRole, _:EquipmentRole)
 individual(o2, data:OKUMA123456Systems1PneumaticSystem1Capability, _:Capability)
 individual(o3, data:name26, des:Name)
 individual(o4, data:, owl:Thing)

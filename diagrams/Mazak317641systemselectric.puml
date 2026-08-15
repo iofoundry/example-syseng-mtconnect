@@ -28,7 +28,7 @@ title Mazak317641systemselectric
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641systemselectric.html Mazak317641systemselectric]], vendor:[[../Mazak.html#Mazak800isystemselectric Mazak800isystemselectric]])
-individual(o1, data:Mazak317641systemselectricEngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:Mazak317641systemselectricEquipmentRole, _:EquipmentRole)
 individual(o2, data:Mazak317641systemselectricCapability, _:Capability)
 individual(o3, data:name26, des:Name)
 individual(o4, data:, owl:Thing)

@@ -69,31 +69,49 @@ div.axiom ul li {
   </head>
   <body>
 <h1 id="Object properties">Object properties</h1>
+<h2 id="componentOf">componentOf</h2>
+<ul><li class="axiom"><a href='MTConnect.html#componentOf'>mtc:componentOf</a> ⊑ constr:componentPartOfAtSomeTime</li></ul>
+<h2 id="conformsTo">conformsTo</h2>
+<ul><li class="axiom"></li></ul>
 <h2 id="connectedTo">connectedTo</h2>
 <ul><li class="axiom">domain: bfo:material_entity</li>
 <li class="axiom">range: bfo:material_entity</li>
 <li class="axiom">inverse: <a href='MTConnect.html#connectedTo'>mtc:connectedTo</a></li>
 <li class="axiom">Symmetric</li></ul>
-<h2 id="hasKinematicParent">hasKinematicParent</h2>
-<ul><li class="axiom">domain: bfo:material_entity</li>
-<li class="axiom">range: bfo:material_entity</li></ul>
+<h2 id="hasComponent">hasComponent</h2>
+<ul><li class="axiom"><a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> ⊑ constr:hasComponentPartAtSomeTime</li></ul>
 <h2 id="hasKinematicChild">hasKinematicChild</h2>
 <ul><li class="axiom">domain: bfo:material_entity</li>
 <li class="axiom">range: bfo:material_entity</li></ul>
-<h2 id="satisfiedBy">satisfiedBy</h2>
-<ul><li class="axiom"></li></ul>
-<h2 id="conformsTo">conformsTo</h2>
-<ul><li class="axiom"></li></ul>
+<h2 id="hasKinematicParent">hasKinematicParent</h2>
+<ul><li class="axiom">domain: bfo:material_entity</li>
+<li class="axiom">range: bfo:material_entity</li></ul>
+<h2 id="hasTarget">hasTarget</h2>
+<ul><li class="axiom"><a href='MTConnect.html#hasTarget'>mtc:hasTarget</a> ⊑ bfo:bearer_of</li>
+<li class="axiom">domain: constr:System</li>
+<li class="axiom">range: bfo:realizable_entity</li>
+<li class="axiom">inverse: <a href='MTConnect.html#targetOf'>mtc:targetOf</a></li></ul>
+<h2 id="targetOf">targetOf</h2>
+<ul><li class="axiom"><a href='MTConnect.html#targetOf'>mtc:targetOf</a> ⊑ bfo:inheres_in</li>
+<li class="axiom">domain: bfo:realizable_entity</li>
+<li class="axiom">range: constr:System</li>
+<li class="axiom">inverse: <a href='MTConnect.html#hasTarget'>mtc:hasTarget</a></li></ul>
 <h2 id="hasUnit">hasUnit</h2>
 <ul><li class="axiom">domain: constr:ValueExpression</li>
 <li class="axiom">range: unit:Unit</li></ul>
-<h2 id="hasComponent">hasComponent</h2>
-<ul><li class="axiom"><a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> ⊑ constr:hasComponentPartAtSomeTime</li></ul>
-<h2 id="componentOf">componentOf</h2>
-<ul><li class="axiom"><a href='MTConnect.html#componentOf'>mtc:componentOf</a> ⊑ constr:componentPartOfAtSomeTime</li></ul>
+<h2 id="satisfiedBy">satisfiedBy</h2>
+<ul><li class="axiom"></li></ul>
 <h1 id="Classes">Classes</h1>
 <div class="tree"><div id="Thing">
   <details open><summary>_:Thing</summary>
+    <div id="Unit">
+      <details open><summary>unit:Unit</summary>
+        <div class="details"><details><summary>Details</summary>
+        <div class="axiom"><details><summary>Axioms</summary><ul><li>unit:Unit ⊑ ⊤</li></ul></details></div>
+        <div class="axiom"><details><summary>Instances</summary><ul><li>unit.N</li><li>unit.DEG</li><li>unit.N-M</li><li>unit.MilliM</li><li>unit.MilliM-PER-SEC</li><li>unit.REV-PER-MIN</li></ul></details></div>
+        </details></div>
+      </details>
+    </div>
     <div id="BFO_0000001">
       <details open><summary>bfo:entity</summary>
         <div class="details"><details><summary>Details</summary>
@@ -106,6 +124,349 @@ div.axiom ul li {
             <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity</li><li>example: A human being, a tennis ball, a cave, a region of space, someone's temperature.</li><li>label: continuant</li><li>prefLabel: continuant</li>            </ul></details></div>
             <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:continuant ⊑ bfo:entity</li><li>bfo:continuant ⊑ ∀ bfo:continuant_part_of_at_some_time .bfo:continuant</li><li>bfo:continuant ⊓ bfo:occurrent ⊑ ⊥</li></ul></details></div>
             </details></div>
+            <div id="BFO_0000020">
+              <details open><summary>bfo:specifically_dependent_continuant</summary>
+                <div class="details"><details><summary>Details</summary>
+                <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b s-depends on c</li><li>example: (with one bearer) The mass of this tomato, the pink colour of a medium rare piece of grilled filet mignon at its centre, the smell of this portion of mozzarella, the disposition of this fish to decay, the role of being a doctor, the function of this heart: to pump blood, the shape of this hole; (with multiple bearers:) John's love for Mary, the ownership relation between John and this statue, the relation of authority between John and his subordinates.</li><li>label: specifically dependent continuant</li><li>prefLabel: specifically dependent continuant</li><li>scopeNote: On the multiple bearers case, see relational quality.</li>                </ul></details></div>
+                <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:specifically_dependent_continuant ⊑ bfo:continuant</li><li>bfo:specifically_dependent_continuant ⊓ bfo:generically_dependent_continuant ⊑ ⊥</li><li>bfo:specifically_dependent_continuant ⊓ bfo:independent_continuant ⊑ ⊥</li></ul></details></div>
+                </details></div>
+                <div id="BFO_0000017">
+                  <details open><summary>bfo:realizable_entity</summary>
+                    <div class="details"><details><summary>Details</summary>
+                    <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) b is a realizable entity means: b is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region and is of a type some instances of which are realized in processes of a correlated type</li><li>example: The role of being a doctor, the role of this boundary to delineate where Utah and Colorado meet, the function of your reproductive organs, the disposition of your blood to coagulate, the disposition of this piece of metal to conduct electricity.</li><li>label: realizable entity</li><li>prefLabel: realizable entity</li>                    </ul></details></div>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:realizable_entity ⊑ bfo:specifically_dependent_continuant</li><li>bfo:realizable_entity ⊓ bfo:quality ⊑ ⊥</li></ul></details></div>
+                    </details></div>
+                    <div id="BFO_0000023">
+                      <details open><summary>bfo:role</summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>altLabel: externally-grounded realizable entity</li><li>definition: (Elucidation) b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed</li><li>example: The priest role, the student role, the role of subject in a clinical trial, the role of a stone in marking a property boundary, the role of a boundary to demarcate two neighbouring administrative territories, the role of a building in serving as a military target.</li><li>label: role</li><li>prefLabel: role</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:role ⊑ bfo:realizable_entity</li><li>bfo:role ⊓ bfo:disposition ⊑ ⊥</li></ul></details></div>
+                        </details></div>
+                        <div id="RelationalRole">
+                          <details open><summary><a href='MTConnect.html#RelationalRole'>mtc:RelationalRole</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RelationalRole'>mtc:RelationalRole</a> ⊑ bfo:role</li></ul></details></div>
+                            </details></div>
+                            <div id="RotaryAxisRole">
+                              <details open><summary><a href='MTConnect.html#RotaryAxisRole'>mtc:RotaryAxisRole</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Rotary Axis Role</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RotaryAxisRole'>mtc:RotaryAxisRole</a> ⊑ <a href='MTConnect.html#RelationalRole'>mtc:RelationalRole</a></li><li><a href='MTConnect.html#RotaryAxisRole'>mtc:RotaryAxisRole</a> ⊓ <a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a> ⊑ ⊥</li></ul></details></div>
+                                </details></div>
+                                <div id="ARotaryAxisRole">
+                                  <details open><summary><a href='MTConnect.html#ARotaryAxisRole'>mtc:ARotaryAxisRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: A Rotary Axis Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ARotaryAxisRole'>mtc:ARotaryAxisRole</a> ⊑ <a href='MTConnect.html#RotaryAxisRole'>mtc:RotaryAxisRole</a></li><li><a href='MTConnect.html#ARotaryAxisRole'>mtc:ARotaryAxisRole</a> ⊓ <a href='MTConnect.html#BRotaryAxisRole'>mtc:BRotaryAxisRole</a> ⊑ ⊥</li><li><a href='MTConnect.html#ARotaryAxisRole'>mtc:ARotaryAxisRole</a> ⊓ <a href='MTConnect.html#CRotaryAxisRole'>mtc:CRotaryAxisRole</a> ⊑ ⊥</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="BRotaryAxisRole">
+                                  <details open><summary><a href='MTConnect.html#BRotaryAxisRole'>mtc:BRotaryAxisRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: B Rotary Axis Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#BRotaryAxisRole'>mtc:BRotaryAxisRole</a> ⊑ <a href='MTConnect.html#RotaryAxisRole'>mtc:RotaryAxisRole</a></li><li><a href='MTConnect.html#BRotaryAxisRole'>mtc:BRotaryAxisRole</a> ⊓ <a href='MTConnect.html#ARotaryAxisRole'>mtc:ARotaryAxisRole</a> ⊑ ⊥</li><li><a href='MTConnect.html#BRotaryAxisRole'>mtc:BRotaryAxisRole</a> ⊓ <a href='MTConnect.html#CRotaryAxisRole'>mtc:CRotaryAxisRole</a> ⊑ ⊥</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="CRotaryAxisRole">
+                                  <details open><summary><a href='MTConnect.html#CRotaryAxisRole'>mtc:CRotaryAxisRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: C Rotary Axis Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#CRotaryAxisRole'>mtc:CRotaryAxisRole</a> ⊑ <a href='MTConnect.html#RotaryAxisRole'>mtc:RotaryAxisRole</a></li><li><a href='MTConnect.html#CRotaryAxisRole'>mtc:CRotaryAxisRole</a> ⊓ <a href='MTConnect.html#ARotaryAxisRole'>mtc:ARotaryAxisRole</a> ⊑ ⊥</li><li><a href='MTConnect.html#CRotaryAxisRole'>mtc:CRotaryAxisRole</a> ⊓ <a href='MTConnect.html#BRotaryAxisRole'>mtc:BRotaryAxisRole</a> ⊑ ⊥</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                            <div id="LinearAxisRole">
+                              <details open><summary><a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Linear Axis Role</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a> ⊑ <a href='MTConnect.html#RelationalRole'>mtc:RelationalRole</a></li><li><a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a> ⊑ ∃ <a href='MTConnect.html#targetOf'>mtc:targetOf</a> .<a href='MTConnect.html#Machine'>mtc:Machine</a></li><li><a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a> ⊑ ∃ constr:roleOf .<a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a></li><li><a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a> ⊓ <a href='MTConnect.html#RotaryAxisRole'>mtc:RotaryAxisRole</a> ⊑ ⊥</li></ul></details></div>
+                                </details></div>
+                                <div id="XLinearAxisRole">
+                                  <details open><summary><a href='MTConnect.html#XLinearAxisRole'>mtc:XLinearAxisRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: X Linear Axis Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#XLinearAxisRole'>mtc:XLinearAxisRole</a> ⊑ <a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a></li><li><a href='MTConnect.html#XLinearAxisRole'>mtc:XLinearAxisRole</a> ⊓ <a href='MTConnect.html#YLinearAxisRole'>mtc:YLinearAxisRole</a> ⊑ ⊥</li><li><a href='MTConnect.html#XLinearAxisRole'>mtc:XLinearAxisRole</a> ⊓ <a href='MTConnect.html#ZLinearAxisRole'>mtc:ZLinearAxisRole</a> ⊑ ⊥</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="YLinearAxisRole">
+                                  <details open><summary><a href='MTConnect.html#YLinearAxisRole'>mtc:YLinearAxisRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Y Linear Axis Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#YLinearAxisRole'>mtc:YLinearAxisRole</a> ⊑ <a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a></li><li><a href='MTConnect.html#YLinearAxisRole'>mtc:YLinearAxisRole</a> ⊓ <a href='MTConnect.html#XLinearAxisRole'>mtc:XLinearAxisRole</a> ⊑ ⊥</li><li><a href='MTConnect.html#YLinearAxisRole'>mtc:YLinearAxisRole</a> ⊓ <a href='MTConnect.html#ZLinearAxisRole'>mtc:ZLinearAxisRole</a> ⊑ ⊥</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="ZLinearAxisRole">
+                                  <details open><summary><a href='MTConnect.html#ZLinearAxisRole'>mtc:ZLinearAxisRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Z Linear Axis Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ZLinearAxisRole'>mtc:ZLinearAxisRole</a> ⊑ <a href='MTConnect.html#LinearAxisRole'>mtc:LinearAxisRole</a></li><li><a href='MTConnect.html#ZLinearAxisRole'>mtc:ZLinearAxisRole</a> ⊓ <a href='MTConnect.html#XLinearAxisRole'>mtc:XLinearAxisRole</a> ⊑ ⊥</li><li><a href='MTConnect.html#ZLinearAxisRole'>mtc:ZLinearAxisRole</a> ⊓ <a href='MTConnect.html#YLinearAxisRole'>mtc:YLinearAxisRole</a> ⊑ ⊥</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                        <div id="MotionSystemRole">
+                          <details open><summary><a href='MTConnect.html#MotionSystemRole'>mtc:MotionSystemRole</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motion System Role</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#MotionSystemRole'>mtc:MotionSystemRole</a> ⊑ bfo:role</li></ul></details></div>
+                            </details></div>
+                            <div id="RotaryMotionSystemRole">
+                              <details open><summary><a href='MTConnect.html#RotaryMotionSystemRole'>mtc:RotaryMotionSystemRole</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Rotary Motion System Role</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RotaryMotionSystemRole'>mtc:RotaryMotionSystemRole</a> ↔ <a href='MTConnect.html#MotionSystemRole'>mtc:MotionSystemRole</a> ⊓ ∃ constr:roleOf .<a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a></li><li><a href='MTConnect.html#RotaryMotionSystemRole'>mtc:RotaryMotionSystemRole</a> ⊑ <a href='MTConnect.html#MotionSystemRole'>mtc:MotionSystemRole</a></li></ul></details></div>
+                                </details></div>
+                                <div id="ARotaryMotionSystemRole">
+                                  <details open><summary><a href='MTConnect.html#ARotaryMotionSystemRole'>mtc:ARotaryMotionSystemRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: A Rotary Motion System Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ARotaryMotionSystemRole'>mtc:ARotaryMotionSystemRole</a> ⊑ <a href='MTConnect.html#RotaryMotionSystemRole'>mtc:RotaryMotionSystemRole</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="BRotaryMotionSystemRole">
+                                  <details open><summary><a href='MTConnect.html#BRotaryMotionSystemRole'>mtc:BRotaryMotionSystemRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: B Rotary Motion System Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#BRotaryMotionSystemRole'>mtc:BRotaryMotionSystemRole</a> ⊑ <a href='MTConnect.html#RotaryMotionSystemRole'>mtc:RotaryMotionSystemRole</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="CRotaryMotionSystemRole">
+                                  <details open><summary><a href='MTConnect.html#CRotaryMotionSystemRole'>mtc:CRotaryMotionSystemRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: C Rotary Motion System Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#CRotaryMotionSystemRole'>mtc:CRotaryMotionSystemRole</a> ⊑ <a href='MTConnect.html#RotaryMotionSystemRole'>mtc:RotaryMotionSystemRole</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                            <div id="LinearMotionSystemRole">
+                              <details open><summary><a href='MTConnect.html#LinearMotionSystemRole'>mtc:LinearMotionSystemRole</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Linear Motion System Role</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#LinearMotionSystemRole'>mtc:LinearMotionSystemRole</a> ⊑ <a href='MTConnect.html#MotionSystemRole'>mtc:MotionSystemRole</a></li></ul></details></div>
+                                </details></div>
+                                <div id="XLinearMotionSystemRole">
+                                  <details open><summary><a href='MTConnect.html#XLinearMotionSystemRole'>mtc:XLinearMotionSystemRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: X Linear Motion System Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#XLinearMotionSystemRole'>mtc:XLinearMotionSystemRole</a> ⊑ <a href='MTConnect.html#LinearMotionSystemRole'>mtc:LinearMotionSystemRole</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="YLinearMotionSystemRole">
+                                  <details open><summary><a href='MTConnect.html#YLinearMotionSystemRole'>mtc:YLinearMotionSystemRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Y Linear Motion System Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#YLinearMotionSystemRole'>mtc:YLinearMotionSystemRole</a> ⊑ <a href='MTConnect.html#LinearMotionSystemRole'>mtc:LinearMotionSystemRole</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="ZLinearMotionSystemRole">
+                                  <details open><summary><a href='MTConnect.html#ZLinearMotionSystemRole'>mtc:ZLinearMotionSystemRole</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Z Linear Motion System Role</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ZLinearMotionSystemRole'>mtc:ZLinearMotionSystemRole</a> ⊑ <a href='MTConnect.html#LinearMotionSystemRole'>mtc:LinearMotionSystemRole</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                    <div id="BFO_0000016">
+                      <details open><summary>bfo:disposition</summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>altLabel: internally-grounded realizable entity</li><li>definition: (Elucidation) b is a disposition means: b is a realizable entity & b is such that if it ceases to exist, then its bearer is physically changed, & b's realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer's physical make-up</li><li>example: An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways.</li><li>label: disposition</li><li>prefLabel: disposition</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:disposition ⊑ bfo:realizable_entity</li><li>bfo:disposition ⊓ bfo:role ⊑ ⊥</li></ul></details></div>
+                        </details></div>
+                        <div id="Capability">
+                          <details open><summary>constr:Capability</summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>example: Capability of a person to play chess at the "master" level; of a team to play football in the professional league; of a lathe to turn at maximal speed of 4,000 RPM; or of your digestive system to digest tiramisu.</li><li>firstOrderLogicAxiom: Capability(x) → Disposition(x)</li><li>isDefinedBy: https://spec.industrialontologies.org/ontology/core/Core/</li><li>isPrimitive: True</li><li>label: capability</li><li>naturalLanguageDefinition: disposition in whose realization some agent has an interest</li><li>primitiveRationale: This concept will be further developed and formalized in a future release of BFO.</li><li>semiFormalNaturalLanguageAxiom: if x is a 'capability' then x is a 'disposition'</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li>constr:Capability ⊑ bfo:disposition</li></ul></details></div>
+                            </details></div>
+                            <div id="MotionCapability">
+                              <details open><summary><a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motion Capability</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a> ↔ constr:Capability ⊓ ∃ constr:capabilityOf .<a href='MTConnect.html#Actuator'>mtc:Actuator</a></li><li><a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a> ⊑ constr:Capability</li></ul></details></div>
+                                </details></div>
+                                <div id="RevoluteMotionCapability">
+                                  <details open><summary><a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Revolute Motion Capability</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a> ⊑ <a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a></li></ul></details></div>
+                                    </details></div>
+                                    <div id="ContinuousRevoluteCapability">
+                                      <details open><summary><a href='MTConnect.html#ContinuousRevoluteCapability'>mtc:ContinuousRevoluteCapability</a></summary>
+                                        <div class="details"><details><summary>Details</summary>
+                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Continuous Revolute Capability</li>                                        </ul></details></div>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ContinuousRevoluteCapability'>mtc:ContinuousRevoluteCapability</a> ⊑ <a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a></li></ul></details></div>
+                                        </details></div>
+                                      </details>
+                                    </div>
+                                    <div id="IndexedRevoluteCapability">
+                                      <details open><summary><a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a></summary>
+                                        <div class="details"><details><summary>Details</summary>
+                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Indexed Revolute Capability</li>                                        </ul></details></div>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a> ⊑ <a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a></li></ul></details></div>
+                                        </details></div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="PrismaticMotionCapability">
+                                  <details open><summary><a href='MTConnect.html#PrismaticMotionCapability'>mtc:PrismaticMotionCapability</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Motion Capability</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#PrismaticMotionCapability'>mtc:PrismaticMotionCapability</a> ↔ <a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a> ⊓ ∃ constr:capabilityOf .<a href='MTConnect.html#Ballscrew'>mtc:Ballscrew</a></li><li><a href='MTConnect.html#PrismaticMotionCapability'>mtc:PrismaticMotionCapability</a> ⊑ <a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a></li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                            <div id="ThreeAxisMotionCapability">
+                              <details open><summary><a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Three Axis Motion Capability</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a> ⊑ constr:Capability</li></ul></details></div>
+                                </details></div>
+                                <div id="FourAxisMotionCapability">
+                                  <details open><summary><a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Four Axis Motion Capability</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a> ↔ <a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a> ⊓ ∃ constr:capabilityOf .(<a href='MTConnect.html#Machine'>mtc:Machine</a> ⊓ ∃ <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .(<a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊓ ∃ constr:hasFunction .<a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a>))</li><li><a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a> ⊑ <a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a></li></ul></details></div>
+                                    </details></div>
+                                    <div id="FiveAxisMotionCapability">
+                                      <details open><summary><a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a></summary>
+                                        <div class="details"><details><summary>Details</summary>
+                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Five Axis Motion Capability</li>                                        </ul></details></div>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a> ↔ <a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a> ⊓ ∃ constr:capabilityOf .(<a href='MTConnect.html#Machine'>mtc:Machine</a> ⊓ ≥ 2 <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .<a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊓ ∃ constr:hasFunction .<a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a>)</li><li><a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a> ⊑ <a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a></li></ul></details></div>
+                                        </details></div>
+                                        <div id="SixAxisMotionCapability">
+                                          <details open><summary><a href='MTConnect.html#SixAxisMotionCapability'>mtc:SixAxisMotionCapability</a></summary>
+                                            <div class="details"><details><summary>Details</summary>
+                                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Six Axis Motion Capability</li>                                            </ul></details></div>
+                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#SixAxisMotionCapability'>mtc:SixAxisMotionCapability</a> ↔ <a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a> ⊓ ∃ constr:capabilityOf .(<a href='MTConnect.html#Machine'>mtc:Machine</a> ⊓ ≥ 3 <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .<a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊓ ∃ constr:hasFunction .<a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a>)</li><li><a href='MTConnect.html#SixAxisMotionCapability'>mtc:SixAxisMotionCapability</a> ⊑ <a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a></li></ul></details></div>
+                                            </details></div>
+                                          </details>
+                                        </div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                              </details>
+                            </div>
+                            <div id="MillingCapability">
+                              <details open><summary><a href='MTConnect.html#MillingCapability'>mtc:MillingCapability</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Milling Capability</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#MillingCapability'>mtc:MillingCapability</a> ⊑ constr:Capability</li></ul></details></div>
+                                </details></div>
+                              </details>
+                            </div>
+                            <div id="TurningCapability">
+                              <details open><summary><a href='MTConnect.html#TurningCapability'>mtc:TurningCapability</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Turning Capability</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#TurningCapability'>mtc:TurningCapability</a> ⊑ constr:Capability</li></ul></details></div>
+                                </details></div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                        <div id="RelationalDisposition">
+                          <details open><summary><a href='MTConnect.html#RelationalDisposition'>mtc:RelationalDisposition</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: relational disposition</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RelationalDisposition'>mtc:RelationalDisposition</a> ⊑ bfo:disposition</li></ul></details></div>
+                            </details></div>
+                            <div id="DispositionToBePartOfSystem">
+                              <details open><summary><a href='MTConnect.html#DispositionToBePartOfSystem'>mtc:DispositionToBePartOfSystem</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: disposition to be part of system</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#DispositionToBePartOfSystem'>mtc:DispositionToBePartOfSystem</a> ⊑ <a href='MTConnect.html#RelationalDisposition'>mtc:RelationalDisposition</a></li><li><a href='MTConnect.html#DispositionToBePartOfSystem'>mtc:DispositionToBePartOfSystem</a> ⊑ ∃ <a href='MTConnect.html#targetOf'>mtc:targetOf</a> .constr:System</li></ul></details></div>
+                                </details></div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                  </details>
+                </div>
+                <div id="BFO_0000019">
+                  <details open><summary>bfo:quality</summary>
+                    <div class="details"><details><summary>Details</summary>
+                    <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized</li><li>example: The colour of a tomato, the ambient temperature of this portion of air, the length of the circumference of your waist, the shape of your nose, the shape of your nostril, the mass of this piece of gold.</li><li>label: quality</li><li>prefLabel: quality</li>                    </ul></details></div>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:quality ⊑ bfo:specifically_dependent_continuant</li><li>bfo:quality ⊓ bfo:realizable_entity ⊑ ⊥</li></ul></details></div>
+                    </details></div>
+                    <div id="Angle">
+                      <details open><summary><a href='MTConnect.html#Angle'>mtc:Angle</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Angle</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Angle'>mtc:Angle</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="Displacement">
+                      <details open><summary><a href='MTConnect.html#Displacement'>mtc:Displacement</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Displacement</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Displacement'>mtc:Displacement</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                        <div id="ThreeSpaceDisplacement">
+                          <details open><summary><a href='MTConnect.html#ThreeSpaceDisplacement'>mtc:ThreeSpaceDisplacement</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Three Space Displacement</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ThreeSpaceDisplacement'>mtc:ThreeSpaceDisplacement</a> ⊑ <a href='MTConnect.html#Displacement'>mtc:Displacement</a></li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                      </details>
+                    </div>
+                    <div id="Force">
+                      <details open><summary><a href='MTConnect.html#Force'>mtc:Force</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Force</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Force'>mtc:Force</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="Length">
+                      <details open><summary><a href='MTConnect.html#Length'>mtc:Length</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Length</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Length'>mtc:Length</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                    <div id="Temperature">
+                      <details open><summary><a href='MTConnect.html#Temperature'>mtc:Temperature</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Temperature</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Temperature'>mtc:Temperature</a> ⊑ bfo:quality</li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
+                  </details>
+                </div>
+              </details>
+            </div>
             <div id="BFO_0000004">
               <details open><summary>bfo:independent_continuant</summary>
                 <div class="details"><details><summary>Details</summary>
@@ -134,80 +495,48 @@ div.axiom ul li {
                               <details open><summary><a href='MTConnect.html#Motor'>mtc:Motor</a></summary>
                                 <div class="details"><details><summary>Details</summary>
                                 <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motor</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Motor'>mtc:Motor</a> ⊑ <a href='MTConnect.html#Actuator'>mtc:Actuator</a></li><li><a href='MTConnect.html#Motor'>mtc:Motor</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li></ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Motor'>mtc:Motor</a> ⊑ <a href='MTConnect.html#Actuator'>mtc:Actuator</a></li><li><a href='MTConnect.html#Motor'>mtc:Motor</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
                                 </details></div>
                               </details>
                             </div>
                           </details>
                         </div>
-                        <div id="MotionSystem">
-                          <details open><summary><a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a></summary>
+                        <div id="Ballscrew">
+                          <details open><summary><a href='MTConnect.html#Ballscrew'>mtc:Ballscrew</a></summary>
                             <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motion System</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a> ⊑ bfo:object</li><li><a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a> ⊑ ∃ constr:hasComponentPartAtAllTimes .<a href='MTConnect.html#Actuator'>mtc:Actuator</a></li><li><a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li></ul></details></div>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Ballscrew</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Ballscrew'>mtc:Ballscrew</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Ballscrew'>mtc:Ballscrew</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
                             </details></div>
-                            <div id="LinearMotionSystem">
-                              <details open><summary><a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a></summary>
+                          </details>
+                        </div>
+                        <div id="Chuck">
+                          <details open><summary><a href='MTConnect.html#Chuck'>mtc:Chuck</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Chuck</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Chuck'>mtc:Chuck</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Chuck'>mtc:Chuck</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                        <div id="Door">
+                          <details open><summary><a href='MTConnect.html#Door'>mtc:Door</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Door</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Door'>mtc:Door</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Door'>mtc:Door</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                        <div id="Structure">
+                          <details open><summary><a href='MTConnect.html#Structure'>mtc:Structure</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Structure</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Structure'>mtc:Structure</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Structure'>mtc:Structure</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
+                            </details></div>
+                            <div id="Enclosure">
+                              <details open><summary><a href='MTConnect.html#Enclosure'>mtc:Enclosure</a></summary>
                                 <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Linear Motion System</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a> ⊑ <a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a></li><li><a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a> ⊑ ∃ constr:hasCapability .<a href='MTConnect.html#PrismaticMotionCapability'>mtc:PrismaticMotionCapability</a></li></ul></details></div>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Enclosure</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Enclosure'>mtc:Enclosure</a> ⊑ <a href='MTConnect.html#Structure'>mtc:Structure</a></li><li><a href='MTConnect.html#Enclosure'>mtc:Enclosure</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
                                 </details></div>
-                                <div id="XLinearMotionSystem">
-                                  <details open><summary><a href='MTConnect.html#XLinearMotionSystem'>mtc:XLinearMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: X Linear Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#XLinearMotionSystem'>mtc:XLinearMotionSystem</a> ⊑ <a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                                <div id="YLinearMotionSystem">
-                                  <details open><summary><a href='MTConnect.html#YLinearMotionSystem'>mtc:YLinearMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Y Linear Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#YLinearMotionSystem'>mtc:YLinearMotionSystem</a> ⊑ <a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                                <div id="ZLinearMotionSystem">
-                                  <details open><summary><a href='MTConnect.html#ZLinearMotionSystem'>mtc:ZLinearMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Z Linear Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ZLinearMotionSystem'>mtc:ZLinearMotionSystem</a> ⊑ <a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                              </details>
-                            </div>
-                            <div id="RotaryMotionSystem">
-                              <details open><summary><a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Rotary Motion System</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊑ <a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a></li><li><a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊑ ∃ constr:hasCapability .<a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a></li></ul></details></div>
-                                </details></div>
-                                <div id="ARotaryMotionSystem">
-                                  <details open><summary><a href='MTConnect.html#ARotaryMotionSystem'>mtc:ARotaryMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: A Rotary Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ARotaryMotionSystem'>mtc:ARotaryMotionSystem</a> ⊑ <a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                                <div id="BRotaryMotionSystem">
-                                  <details open><summary><a href='MTConnect.html#BRotaryMotionSystem'>mtc:BRotaryMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: B Rotary Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#BRotaryMotionSystem'>mtc:BRotaryMotionSystem</a> ⊑ <a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                                <div id="CRotaryMotionSystem">
-                                  <details open><summary><a href='MTConnect.html#CRotaryMotionSystem'>mtc:CRotaryMotionSystem</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: C Rotary Motion System</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#CRotaryMotionSystem'>mtc:CRotaryMotionSystem</a> ⊑ <a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
                               </details>
                             </div>
                           </details>
@@ -216,7 +545,7 @@ div.axiom ul li {
                           <details open><summary><a href='MTConnect.html#Machine'>mtc:Machine</a></summary>
                             <div class="details"><details><summary>Details</summary>
                             <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Machine</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ ∃ constr:hasComponentPartAtSomeTime .<a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a></li><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ ∃ constr:hasCapability .constr:Capability</li><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ ∃ constr:hasCapability .constr:Capability</li><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ ∃ constr:hasComponentPartAtSomeTime .<a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a></li><li><a href='MTConnect.html#Machine'>mtc:Machine</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
                             </details></div>
                             <div id="NumericallyControlledMachine">
                               <details open><summary><a href='MTConnect.html#NumericallyControlledMachine'>mtc:NumericallyControlledMachine</a></summary>
@@ -228,27 +557,19 @@ div.axiom ul li {
                             </div>
                           </details>
                         </div>
-                        <div id="Ballscrew">
-                          <details open><summary><a href='MTConnect.html#Ballscrew'>mtc:Ballscrew</a></summary>
+                        <div id="ProductPart">
+                          <details open><summary><a href='MTConnect.html#ProductPart'>mtc:ProductPart</a></summary>
                             <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Ballscrew</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Ballscrew'>mtc:Ballscrew</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Ballscrew'>mtc:Ballscrew</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li></ul></details></div>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Product Part</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ProductPart'>mtc:ProductPart</a> ⊑ bfo:object</li><li><a href='MTConnect.html#ProductPart'>mtc:ProductPart</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li><li><a href='MTConnect.html#ProductPart'>mtc:ProductPart</a> ⊑ ∃ constr:hasRole .constr:MaterialProductRole</li></ul></details></div>
                             </details></div>
                           </details>
                         </div>
-                        <div id="Chuck">
-                          <details open><summary><a href='MTConnect.html#Chuck'>mtc:Chuck</a></summary>
+                        <div id="Sensor">
+                          <details open><summary><a href='MTConnect.html#Sensor'>mtc:Sensor</a></summary>
                             <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Chuck</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Chuck'>mtc:Chuck</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Chuck'>mtc:Chuck</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                        <div id="Door">
-                          <details open><summary><a href='MTConnect.html#Door'>mtc:Door</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Door</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Door'>mtc:Door</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Door'>mtc:Door</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li></ul></details></div>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Sensor</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Sensor'>mtc:Sensor</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Sensor'>mtc:Sensor</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li></ul></details></div>
                             </details></div>
                           </details>
                         </div>
@@ -256,122 +577,114 @@ div.axiom ul li {
                           <details open><summary><a href='MTConnect.html#Stock'>mtc:Stock</a></summary>
                             <div class="details"><details><summary>Details</summary>
                             <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Stock</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Stock'>mtc:Stock</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Stock'>mtc:Stock</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li><li><a href='MTConnect.html#Stock'>mtc:Stock</a> ⊑ ∃ constr:hasRole .constr:RawMaterialRole</li></ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Stock'>mtc:Stock</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Stock'>mtc:Stock</a> ⊑ ∃ constr:hasRole .constr:EquipmentRole</li><li><a href='MTConnect.html#Stock'>mtc:Stock</a> ⊑ ∃ constr:hasRole .constr:RawMaterialRole</li></ul></details></div>
                             </details></div>
                           </details>
                         </div>
-                        <div id="ProductPart">
-                          <details open><summary><a href='MTConnect.html#ProductPart'>mtc:ProductPart</a></summary>
+                      </details>
+                    </div>
+                    <div id="BFO_0000027">
+                      <details open><summary>bfo:object_aggregate</summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) an object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit</li><li>example: The aggregate of the musicians in a symphony orchestra and their instruments, the aggregate of bearings in a constant velocity axle joint, the nitrogen atoms in the atmosphere, a collection of cells in a blood biobank. NOTE 1: 'Exactly' means that there are no parts of the object aggregate other than its member parts. NOTE 2: The unit can, at certain times, consist of exactly one object, for example, when a wolf litter loses all but one of its pups, but it must at some time have a plurality of member parts.</li><li>label: object aggregate</li><li>prefLabel: object aggregate</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:object_aggregate ⊑ bfo:material_entity</li></ul></details></div>
+                        </details></div>
+                        <div id="System">
+                          <details open><summary>constr:System</summary>
                             <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Product Part</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ProductPart'>mtc:ProductPart</a> ⊑ bfo:object</li><li><a href='MTConnect.html#ProductPart'>mtc:ProductPart</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li><li><a href='MTConnect.html#ProductPart'>mtc:ProductPart</a> ⊑ ∃ constr:hasRole .constr:MaterialProductRole</li></ul></details></div>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>example: solar system, digestive system, forest ecosystem, hydraulic system, subway system, social system, technical system, natural system</li><li>firstOrderLogicAxiom: System(x) → ObjectAggregate(x)</li><li>isDefinedBy: https://spec.industrialontologies.org/ontology/core/Core/</li><li>isPrimitive: True</li><li>label: system</li><li>naturalLanguageDefinition: collection of elements (object aggregate) that form a unified whole and interact</li><li>primitiveRationale: The term is introduced here as a general class to allow the introduction of specialized kinds of systems that appear in particular modalities. Furthermore, an effort remains to formalize what it means for two things to interact, or what it means to regularly interact.</li><li>semiFormalNaturalLanguageAxiom: if x is a 'system' then x is an 'object aggregate'</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li>constr:System ⊑ bfo:object_aggregate</li></ul></details></div>
                             </details></div>
-                          </details>
-                        </div>
-                        <div id="Structure">
-                          <details open><summary><a href='MTConnect.html#Structure'>mtc:Structure</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Structure</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Structure'>mtc:Structure</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Structure'>mtc:Structure</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li></ul></details></div>
-                            </details></div>
-                            <div id="Enclosure">
-                              <details open><summary><a href='MTConnect.html#Enclosure'>mtc:Enclosure</a></summary>
+                            <div id="EngineeredSystem">
+                              <details open><summary>constr:EngineeredSystem</summary>
                                 <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Enclosure</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Enclosure'>mtc:Enclosure</a> ⊑ <a href='MTConnect.html#Structure'>mtc:Structure</a></li><li><a href='MTConnect.html#Enclosure'>mtc:Enclosure</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li></ul></details></div>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>example: machine, laptop, traffic light system</li><li>firstOrderLogicDefinition: EngineeredSystem(x) ↔ System(x) ∧ ∃f(DesignedFunction(f) ∧ bearerOf(x,f))</li><li>isDefinedBy: https://spec.industrialontologies.org/ontology/core/Core/</li><li>label: engineered system</li><li>naturalLanguageDefinition: system that is deliberately created to have a certain function</li><li>semiFormalNaturalLanguageDefinition: every instance of 'engineered system' is defined as exactly an instance of 'system' that is the 'bearer of' some 'designed function'</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li>constr:EngineeredSystem ↔ constr:System ⊓ ∃ bfo:bearer_of .constr:DesignedFunction</li><li>constr:EngineeredSystem ⊑ constr:System</li><li>constr:EngineeredSystem ⊓ constr:MaterialArtifact ⊑ ⊥</li><li>constr:EngineeredSystem ⊓ constr:Organization ⊑ ⊥</li></ul></details></div>
                                 </details></div>
+                                <div id="ControlSystem">
+                                  <details open><summary><a href='MTConnect.html#ControlSystem'>mtc:ControlSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Control System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ControlSystem'>mtc:ControlSystem</a> ⊑ constr:EngineeredSystem</li></ul></details></div>
+                                    </details></div>
+                                    <div id="ControlSystemPath">
+                                      <details open><summary><a href='MTConnect.html#ControlSystemPath'>mtc:ControlSystemPath</a></summary>
+                                        <div class="details"><details><summary>Details</summary>
+                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Control System Path</li>                                        </ul></details></div>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ControlSystemPath'>mtc:ControlSystemPath</a> ⊑ <a href='MTConnect.html#ControlSystem'>mtc:ControlSystem</a></li></ul></details></div>
+                                        </details></div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="CoolantSystem">
+                                  <details open><summary><a href='MTConnect.html#CoolantSystem'>mtc:CoolantSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Coolant System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#CoolantSystem'>mtc:CoolantSystem</a> ⊑ constr:EngineeredSystem</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="ElectricalSystem">
+                                  <details open><summary><a href='MTConnect.html#ElectricalSystem'>mtc:ElectricalSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Electrical System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ElectricalSystem'>mtc:ElectricalSystem</a> ⊑ constr:EngineeredSystem</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="MotionSystem">
+                                  <details open><summary><a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motion System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a> ↔ ∃ constr:hasCapability .<a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a></li><li><a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a> ⊑ constr:EngineeredSystem</li></ul></details></div>
+                                    </details></div>
+                                    <div id="RotaryMotionSystem">
+                                      <details open><summary><a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a></summary>
+                                        <div class="details"><details><summary>Details</summary>
+                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Rotary Motion System</li>                                        </ul></details></div>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ↔ <a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a> ⊓ ∃ constr:hasCapability .<a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a></li><li><a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊑ <a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a></li></ul></details></div>
+                                        </details></div>
+                                      </details>
+                                    </div>
+                                    <div id="LinearMotionSystem">
+                                      <details open><summary><a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a></summary>
+                                        <div class="details"><details><summary>Details</summary>
+                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Linear Motion System</li>                                        </ul></details></div>
+                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a> ↔ ∃ constr:hasCapability .<a href='MTConnect.html#PrismaticMotionCapability'>mtc:PrismaticMotionCapability</a> ⊓ ∃ constr:hasComponentPartAtAllTimes .<a href='MTConnect.html#Ballscrew'>mtc:Ballscrew</a> ⊓ ∃ constr:hasRole .<a href='MTConnect.html#LinearMotionSystemRole'>mtc:LinearMotionSystemRole</a></li><li><a href='MTConnect.html#LinearMotionSystem'>mtc:LinearMotionSystem</a> ⊑ <a href='MTConnect.html#MotionSystem'>mtc:MotionSystem</a></li></ul></details></div>
+                                        </details></div>
+                                      </details>
+                                    </div>
+                                  </details>
+                                </div>
+                                <div id="HydraulicSystem">
+                                  <details open><summary><a href='MTConnect.html#HydraulicSystem'>mtc:HydraulicSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Hydraulic System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#HydraulicSystem'>mtc:HydraulicSystem</a> ⊑ constr:EngineeredSystem</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="LubricationSystem">
+                                  <details open><summary><a href='MTConnect.html#LubricationSystem'>mtc:LubricationSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Lubrication System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#LubricationSystem'>mtc:LubricationSystem</a> ⊑ constr:EngineeredSystem</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
+                                <div id="PneumaticSystem">
+                                  <details open><summary><a href='MTConnect.html#PneumaticSystem'>mtc:PneumaticSystem</a></summary>
+                                    <div class="details"><details><summary>Details</summary>
+                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Pneumatic System</li>                                    </ul></details></div>
+                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#PneumaticSystem'>mtc:PneumaticSystem</a> ⊑ constr:EngineeredSystem</li></ul></details></div>
+                                    </details></div>
+                                  </details>
+                                </div>
                               </details>
                             </div>
                           </details>
                         </div>
-                        <div id="Sensor">
-                          <details open><summary><a href='MTConnect.html#Sensor'>mtc:Sensor</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Sensor</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Sensor'>mtc:Sensor</a> ⊑ bfo:object</li><li><a href='MTConnect.html#Sensor'>mtc:Sensor</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                    <div id="_System">
-                      <details open><summary><a href='MTConnect.html#_System'>mtc:_System</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#_System'>mtc:_System</a> ↔ bfo:material_entity ⊓ ∃ constr:hasRole .<a href='MTConnect.html#SystemRole'>mtc:SystemRole</a></li><li><a href='MTConnect.html#_System'>mtc:_System</a> ⊑ bfo:material_entity</li><li><a href='MTConnect.html#_System'>mtc:_System</a> ⊑ ∃ constr:hasComponentPartAtSomeTime .bfo:material_entity</li><li><a href='MTConnect.html#_System'>mtc:_System</a> ⊑ ∃ constr:hasCapability .constr:Capability</li></ul></details></div>
-                        </details></div>
-                        <div id="_EngineeredSystem">
-                          <details open><summary><a href='MTConnect.html#_EngineeredSystem'>mtc:_EngineeredSystem</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Engineered System</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#_EngineeredSystem'>mtc:_EngineeredSystem</a> ↔ <a href='MTConnect.html#_System'>mtc:_System</a> ⊓ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li><li><a href='MTConnect.html#_EngineeredSystem'>mtc:_EngineeredSystem</a> ⊑ <a href='MTConnect.html#_System'>mtc:_System</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                    <div id="_MaterialArtifact">
-                      <details open><summary><a href='MTConnect.html#_MaterialArtifact'>mtc:_MaterialArtifact</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Material Artifact</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#_MaterialArtifact'>mtc:_MaterialArtifact</a> ↔ bfo:material_entity ⊓ ∃ constr:hasRole .<a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></li><li><a href='MTConnect.html#_MaterialArtifact'>mtc:_MaterialArtifact</a> ⊑ bfo:material_entity</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="ControlSystem">
-                      <details open><summary><a href='MTConnect.html#ControlSystem'>mtc:ControlSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Control System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ControlSystem'>mtc:ControlSystem</a> ⊑ bfo:material_entity</li><li><a href='MTConnect.html#ControlSystem'>mtc:ControlSystem</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                        <div id="ControlSystemPath">
-                          <details open><summary><a href='MTConnect.html#ControlSystemPath'>mtc:ControlSystemPath</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Control System Path</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ControlSystemPath'>mtc:ControlSystemPath</a> ⊑ <a href='MTConnect.html#ControlSystem'>mtc:ControlSystem</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                    <div id="ElectricalSystem">
-                      <details open><summary><a href='MTConnect.html#ElectricalSystem'>mtc:ElectricalSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Electrical System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ElectricalSystem'>mtc:ElectricalSystem</a> ⊑ bfo:material_entity</li><li><a href='MTConnect.html#ElectricalSystem'>mtc:ElectricalSystem</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="HydraulicSystem">
-                      <details open><summary><a href='MTConnect.html#HydraulicSystem'>mtc:HydraulicSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Hydraulic System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#HydraulicSystem'>mtc:HydraulicSystem</a> ⊑ bfo:material_entity</li><li><a href='MTConnect.html#HydraulicSystem'>mtc:HydraulicSystem</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="PneumaticSystem">
-                      <details open><summary><a href='MTConnect.html#PneumaticSystem'>mtc:PneumaticSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Pneumatic System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#PneumaticSystem'>mtc:PneumaticSystem</a> ⊑ bfo:material_entity</li><li><a href='MTConnect.html#PneumaticSystem'>mtc:PneumaticSystem</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="LubricationSystem">
-                      <details open><summary><a href='MTConnect.html#LubricationSystem'>mtc:LubricationSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Lubrication System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#LubricationSystem'>mtc:LubricationSystem</a> ⊑ bfo:material_entity</li><li><a href='MTConnect.html#LubricationSystem'>mtc:LubricationSystem</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="CoolantSystem">
-                      <details open><summary><a href='MTConnect.html#CoolantSystem'>mtc:CoolantSystem</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Coolant System</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#CoolantSystem'>mtc:CoolantSystem</a> ⊑ bfo:material_entity</li><li><a href='MTConnect.html#CoolantSystem'>mtc:CoolantSystem</a> ⊑ ∃ constr:hasRole .<a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></li></ul></details></div>
-                        </details></div>
                       </details>
                     </div>
                   </details>
@@ -402,214 +715,6 @@ div.axiom ul li {
                 </div>
               </details>
             </div>
-            <div id="BFO_0000020">
-              <details open><summary>bfo:specifically_dependent_continuant</summary>
-                <div class="details"><details><summary>Details</summary>
-                <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b s-depends on c</li><li>example: (with one bearer) The mass of this tomato, the pink colour of a medium rare piece of grilled filet mignon at its centre, the smell of this portion of mozzarella, the disposition of this fish to decay, the role of being a doctor, the function of this heart: to pump blood, the shape of this hole; (with multiple bearers:) John's love for Mary, the ownership relation between John and this statue, the relation of authority between John and his subordinates.</li><li>label: specifically dependent continuant</li><li>prefLabel: specifically dependent continuant</li><li>scopeNote: On the multiple bearers case, see relational quality.</li>                </ul></details></div>
-                <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:specifically_dependent_continuant ⊑ bfo:continuant</li><li>bfo:specifically_dependent_continuant ⊓ bfo:generically_dependent_continuant ⊑ ⊥</li><li>bfo:specifically_dependent_continuant ⊓ bfo:independent_continuant ⊑ ⊥</li></ul></details></div>
-                </details></div>
-                <div id="BFO_0000017">
-                  <details open><summary>bfo:realizable_entity</summary>
-                    <div class="details"><details><summary>Details</summary>
-                    <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) b is a realizable entity means: b is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region and is of a type some instances of which are realized in processes of a correlated type</li><li>example: The role of being a doctor, the role of this boundary to delineate where Utah and Colorado meet, the function of your reproductive organs, the disposition of your blood to coagulate, the disposition of this piece of metal to conduct electricity.</li><li>label: realizable entity</li><li>prefLabel: realizable entity</li>                    </ul></details></div>
-                    <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:realizable_entity ⊑ bfo:specifically_dependent_continuant</li><li>bfo:realizable_entity ⊓ bfo:quality ⊑ ⊥</li></ul></details></div>
-                    </details></div>
-                    <div id="BFO_0000023">
-                      <details open><summary>bfo:role</summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>altLabel: externally-grounded realizable entity</li><li>definition: (Elucidation) b is a role means: b is a realizable entity & b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed</li><li>example: The priest role, the student role, the role of subject in a clinical trial, the role of a stone in marking a property boundary, the role of a boundary to demarcate two neighbouring administrative territories, the role of a building in serving as a military target.</li><li>label: role</li><li>prefLabel: role</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:role ⊑ bfo:realizable_entity</li><li>bfo:role ⊓ bfo:disposition ⊑ ⊥</li></ul></details></div>
-                        </details></div>
-                        <div id="SystemRole">
-                          <details open><summary><a href='MTConnect.html#SystemRole'>mtc:SystemRole</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: System Role</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#SystemRole'>mtc:SystemRole</a> ⊑ bfo:role</li></ul></details></div>
-                            </details></div>
-                            <div id="EngineeredSystemRole">
-                              <details open><summary><a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Engineered System Role</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#EngineeredSystemRole'>mtc:EngineeredSystemRole</a> ⊑ <a href='MTConnect.html#SystemRole'>mtc:SystemRole</a></li></ul></details></div>
-                                </details></div>
-                              </details>
-                            </div>
-                          </details>
-                        </div>
-                        <div id="MaterialArtifactRole">
-                          <details open><summary><a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Material Artifact Role</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#MaterialArtifactRole'>mtc:MaterialArtifactRole</a> ⊑ bfo:role</li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                    <div id="BFO_0000016">
-                      <details open><summary>bfo:disposition</summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>altLabel: internally-grounded realizable entity</li><li>definition: (Elucidation) b is a disposition means: b is a realizable entity & b is such that if it ceases to exist, then its bearer is physically changed, & b's realization occurs when and because this bearer is in some special physical circumstances, & this realization occurs in virtue of the bearer's physical make-up</li><li>example: An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways.</li><li>label: disposition</li><li>prefLabel: disposition</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:disposition ⊑ bfo:realizable_entity</li><li>bfo:disposition ⊓ bfo:role ⊑ ⊥</li></ul></details></div>
-                        </details></div>
-                        <div id="Capability">
-                          <details open><summary>constr:Capability</summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>example: Capability of a person to play chess at the "master" level; of a team to play football in the professional league; of a lathe to turn at maximal speed of 4,000 RPM; or of your digestive system to digest tiramisu.</li><li>firstOrderLogicAxiom: Capability(x) → Disposition(x)</li><li>isDefinedBy: https://spec.industrialontologies.org/ontology/core/Core/</li><li>isPrimitive: True</li><li>label: capability</li><li>naturalLanguageDefinition: disposition in whose realization some agent has an interest</li><li>primitiveRationale: This concept will be further developed and formalized in a future release of BFO.</li><li>semiFormalNaturalLanguageAxiom: if x is a 'capability' then x is a 'disposition'</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li>constr:Capability ⊑ bfo:disposition</li></ul></details></div>
-                            </details></div>
-                            <div id="MotionCapability">
-                              <details open><summary><a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Motion Capability</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a> ⊑ constr:Capability</li></ul></details></div>
-                                </details></div>
-                                <div id="PrismaticMotionCapability">
-                                  <details open><summary><a href='MTConnect.html#PrismaticMotionCapability'>mtc:PrismaticMotionCapability</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Motion Capability</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#PrismaticMotionCapability'>mtc:PrismaticMotionCapability</a> ⊑ <a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a></li></ul></details></div>
-                                    </details></div>
-                                  </details>
-                                </div>
-                                <div id="RevoluteMotionCapability">
-                                  <details open><summary><a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Revolute Motion Capability</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a> ⊑ <a href='MTConnect.html#MotionCapability'>mtc:MotionCapability</a></li></ul></details></div>
-                                    </details></div>
-                                    <div id="IndexedRevoluteCapability">
-                                      <details open><summary><a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a></summary>
-                                        <div class="details"><details><summary>Details</summary>
-                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Indexed Revolute Capability</li>                                        </ul></details></div>
-                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a> ⊑ <a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a></li></ul></details></div>
-                                        </details></div>
-                                      </details>
-                                    </div>
-                                    <div id="ContinuousRevoluteCapability">
-                                      <details open><summary><a href='MTConnect.html#ContinuousRevoluteCapability'>mtc:ContinuousRevoluteCapability</a></summary>
-                                        <div class="details"><details><summary>Details</summary>
-                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Continuous Revolute Capability</li>                                        </ul></details></div>
-                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ContinuousRevoluteCapability'>mtc:ContinuousRevoluteCapability</a> ⊑ <a href='MTConnect.html#RevoluteMotionCapability'>mtc:RevoluteMotionCapability</a></li></ul></details></div>
-                                        </details></div>
-                                      </details>
-                                    </div>
-                                  </details>
-                                </div>
-                              </details>
-                            </div>
-                            <div id="MillingCapability">
-                              <details open><summary><a href='MTConnect.html#MillingCapability'>mtc:MillingCapability</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Milling Capability</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#MillingCapability'>mtc:MillingCapability</a> ⊑ constr:Capability</li></ul></details></div>
-                                </details></div>
-                              </details>
-                            </div>
-                            <div id="TurningCapability">
-                              <details open><summary><a href='MTConnect.html#TurningCapability'>mtc:TurningCapability</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Turning Capability</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#TurningCapability'>mtc:TurningCapability</a> ↔ constr:Capability ⊓ ∃ constr:capabilityOf .(<a href='MTConnect.html#Machine'>mtc:Machine</a> ⊓ ∃ <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .(<a href='MTConnect.html#CRotaryMotionSystem'>mtc:CRotaryMotionSystem</a> ⊓ ∃ <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .<a href='MTConnect.html#Chuck'>mtc:Chuck</a>))</li><li><a href='MTConnect.html#TurningCapability'>mtc:TurningCapability</a> ⊑ constr:Capability</li></ul></details></div>
-                                </details></div>
-                              </details>
-                            </div>
-                            <div id="ThreeAxisMotionCapability">
-                              <details open><summary><a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Three Axis Motion Capability</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a> ↔ constr:Capability ⊓ ∃ constr:capabilityOf .(<a href='MTConnect.html#Machine'>mtc:Machine</a> ⊓ ∃ <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .<a href='MTConnect.html#XLinearMotionSystem'>mtc:XLinearMotionSystem</a> ⊓ ∃ <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .<a href='MTConnect.html#YLinearMotionSystem'>mtc:YLinearMotionSystem</a> ⊓ ∃ <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .<a href='MTConnect.html#ZLinearMotionSystem'>mtc:ZLinearMotionSystem</a> ⊓ ∃ <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .(<a href='MTConnect.html#CRotaryMotionSystem'>mtc:CRotaryMotionSystem</a> ⊓ ∃ constr:hasFunction .<a href='MTConnect.html#ContinuousRevoluteCapability'>mtc:ContinuousRevoluteCapability</a>))</li><li><a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a> ⊑ constr:Capability</li></ul></details></div>
-                                </details></div>
-                                <div id="FourAxisMotionCapability">
-                                  <details open><summary><a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a></summary>
-                                    <div class="details"><details><summary>Details</summary>
-                                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Four Axis Motion Capability</li>                                    </ul></details></div>
-                                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a> ↔ <a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a> ⊓ ∃ constr:capabilityOf .(<a href='MTConnect.html#Machine'>mtc:Machine</a> ⊓ ∃ <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .(<a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊓ ∃ constr:hasFunction .<a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a>))</li><li><a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a> ⊑ <a href='MTConnect.html#ThreeAxisMotionCapability'>mtc:ThreeAxisMotionCapability</a></li></ul></details></div>
-                                    </details></div>
-                                    <div id="FiveAxisMotionCapability">
-                                      <details open><summary><a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a></summary>
-                                        <div class="details"><details><summary>Details</summary>
-                                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Five Axis Motion Capability</li>                                        </ul></details></div>
-                                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a> ↔ <a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a> ⊓ ∃ constr:capabilityOf .(<a href='MTConnect.html#Machine'>mtc:Machine</a> ⊓ ≥ 2 <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .<a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊓ ∃ constr:hasFunction .<a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a>)</li><li><a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a> ⊑ <a href='MTConnect.html#FourAxisMotionCapability'>mtc:FourAxisMotionCapability</a></li></ul></details></div>
-                                        </details></div>
-                                        <div id="SixAxisMotionCapability">
-                                          <details open><summary><a href='MTConnect.html#SixAxisMotionCapability'>mtc:SixAxisMotionCapability</a></summary>
-                                            <div class="details"><details><summary>Details</summary>
-                                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Six Axis Motion Capability</li>                                            </ul></details></div>
-                                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#SixAxisMotionCapability'>mtc:SixAxisMotionCapability</a> ↔ <a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a> ⊓ ∃ constr:capabilityOf .(<a href='MTConnect.html#Machine'>mtc:Machine</a> ⊓ ≥ 3 <a href='MTConnect.html#hasComponent'>mtc:hasComponent</a> .<a href='MTConnect.html#RotaryMotionSystem'>mtc:RotaryMotionSystem</a> ⊓ ∃ constr:hasFunction .<a href='MTConnect.html#IndexedRevoluteCapability'>mtc:IndexedRevoluteCapability</a>)</li><li><a href='MTConnect.html#SixAxisMotionCapability'>mtc:SixAxisMotionCapability</a> ⊑ <a href='MTConnect.html#FiveAxisMotionCapability'>mtc:FiveAxisMotionCapability</a></li></ul></details></div>
-                                            </details></div>
-                                          </details>
-                                        </div>
-                                      </details>
-                                    </div>
-                                  </details>
-                                </div>
-                              </details>
-                            </div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                  </details>
-                </div>
-                <div id="BFO_0000019">
-                  <details open><summary>bfo:quality</summary>
-                    <div class="details"><details><summary>Details</summary>
-                    <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) a quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized</li><li>example: The colour of a tomato, the ambient temperature of this portion of air, the length of the circumference of your waist, the shape of your nose, the shape of your nostril, the mass of this piece of gold.</li><li>label: quality</li><li>prefLabel: quality</li>                    </ul></details></div>
-                    <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:quality ⊑ bfo:specifically_dependent_continuant</li><li>bfo:quality ⊓ bfo:realizable_entity ⊑ ⊥</li></ul></details></div>
-                    </details></div>
-                    <div id="Temperature">
-                      <details open><summary><a href='MTConnect.html#Temperature'>mtc:Temperature</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Temperature</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Temperature'>mtc:Temperature</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="Displacement">
-                      <details open><summary><a href='MTConnect.html#Displacement'>mtc:Displacement</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Displacement</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Displacement'>mtc:Displacement</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                        <div id="ThreeSpaceDisplacement">
-                          <details open><summary><a href='MTConnect.html#ThreeSpaceDisplacement'>mtc:ThreeSpaceDisplacement</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Three Space Displacement</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ThreeSpaceDisplacement'>mtc:ThreeSpaceDisplacement</a> ⊑ <a href='MTConnect.html#Displacement'>mtc:Displacement</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                    <div id="Length">
-                      <details open><summary><a href='MTConnect.html#Length'>mtc:Length</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Length</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Length'>mtc:Length</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="Angle">
-                      <details open><summary><a href='MTConnect.html#Angle'>mtc:Angle</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Angle</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Angle'>mtc:Angle</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                    <div id="Force">
-                      <details open><summary><a href='MTConnect.html#Force'>mtc:Force</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Force</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Force'>mtc:Force</a> ⊑ bfo:quality</li></ul></details></div>
-                        </details></div>
-                      </details>
-                    </div>
-                  </details>
-                </div>
-              </details>
-            </div>
           </details>
         </div>
         <div id="BFO_0000003">
@@ -624,60 +729,20 @@ div.axiom ul li {
                 <div class="axiom"><details><summary>Annotations</summary><ul><li>definition: (Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant at t</li><li>example: An act of selling, the life of an organism, a process of sleeping, a process of cell-division, a beating of the heart, a process of meiosis, the taxiing of an aircraft, the programming of a computer.</li><li>label: process</li><li>prefLabel: process</li>                </ul></details></div>
                 <div class="axiom"><details><summary>Axioms</summary><ul><li>bfo:process ⊑ bfo:occurrent</li><li>bfo:process ⊑ ∀ bfo:occurrent_part_of .bfo:process</li><li>bfo:process ⊑ ∀ bfo:temporal_part_of .bfo:process</li><li>bfo:process ⊑ ∀ bfo:has_occurrent_part .(bfo:process ⊔ bfo:process_boundary)</li><li>bfo:process ⊓ bfo:temporal_region ⊑ ⊥</li><li>bfo:process ⊓ bfo:process_boundary ⊑ ⊥</li><li>bfo:process ⊓ bfo:spatiotemporal_region ⊑ ⊥</li></ul></details></div>
                 </details></div>
-                <div id="ProcessProfile">
-                  <details open><summary><a href='MTConnect.html#ProcessProfile'>mtc:ProcessProfile</a></summary>
-                    <div class="details"><details><summary>Details</summary>
-                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Process Profile</li>                    </ul></details></div>
-                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ProcessProfile'>mtc:ProcessProfile</a> ⊑ bfo:process</li></ul></details></div>
-                    </details></div>
-                    <div id="Velocity">
-                      <details open><summary><a href='MTConnect.html#Velocity'>mtc:Velocity</a></summary>
-                        <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Velocity</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Velocity'>mtc:Velocity</a> ⊑ <a href='MTConnect.html#ProcessProfile'>mtc:ProcessProfile</a></li></ul></details></div>
-                        </details></div>
-                        <div id="RevoluteVelocity">
-                          <details open><summary><a href='MTConnect.html#RevoluteVelocity'>mtc:RevoluteVelocity</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Revolute Velocity</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RevoluteVelocity'>mtc:RevoluteVelocity</a> ⊑ <a href='MTConnect.html#Velocity'>mtc:Velocity</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                        <div id="PrismaticVelocity">
-                          <details open><summary><a href='MTConnect.html#PrismaticVelocity'>mtc:PrismaticVelocity</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Velocity</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#PrismaticVelocity'>mtc:PrismaticVelocity</a> ⊑ <a href='MTConnect.html#Velocity'>mtc:Velocity</a></li></ul></details></div>
-                            </details></div>
-                            <div id="PrismaticRapidVelocity">
-                              <details open><summary><a href='MTConnect.html#PrismaticRapidVelocity'>mtc:PrismaticRapidVelocity</a></summary>
-                                <div class="details"><details><summary>Details</summary>
-                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Rapid Velocity</li>                                </ul></details></div>
-                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#PrismaticRapidVelocity'>mtc:PrismaticRapidVelocity</a> ⊑ <a href='MTConnect.html#PrismaticVelocity'>mtc:PrismaticVelocity</a></li></ul></details></div>
-                                </details></div>
-                              </details>
-                            </div>
-                          </details>
-                        </div>
-                        <div id="TranslationalVelocity">
-                          <details open><summary><a href='MTConnect.html#TranslationalVelocity'>mtc:TranslationalVelocity</a></summary>
-                            <div class="details"><details><summary>Details</summary>
-                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Translational Velocity</li>                            </ul></details></div>
-                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#TranslationalVelocity'>mtc:TranslationalVelocity</a> ⊑ <a href='MTConnect.html#Velocity'>mtc:Velocity</a></li></ul></details></div>
-                            </details></div>
-                          </details>
-                        </div>
-                      </details>
-                    </div>
-                  </details>
-                </div>
                 <div id="State">
                   <details open><summary><a href='MTConnect.html#State'>mtc:State</a></summary>
                     <div class="details"><details><summary>Details</summary>
                     <div class="axiom"><details><summary>Annotations</summary><ul><li>label: State</li><li>naturalLanguageDefinition: process that is homeomeric</li>                    </ul></details></div>
-                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#State'>mtc:State</a> ⊑ bfo:process</li><li><a href='MTConnect.html#State'>mtc:State</a> ⊑ ∃ constr:temporallyStartedBy .constr:Event</li><li><a href='MTConnect.html#State'>mtc:State</a> ⊑ ∃ constr:temporallyFinishedBy .constr:Event</li></ul></details></div>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#State'>mtc:State</a> ⊑ bfo:process</li><li><a href='MTConnect.html#State'>mtc:State</a> ⊑ ∃ constr:temporallyFinishedBy .constr:Event</li><li><a href='MTConnect.html#State'>mtc:State</a> ⊑ ∃ constr:temporallyStartedBy .constr:Event</li></ul></details></div>
                     </details></div>
+                    <div id="ChuckState">
+                      <details open><summary><a href='MTConnect.html#ChuckState'>mtc:ChuckState</a></summary>
+                        <div class="details"><details><summary>Details</summary>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Chuck State</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ChuckState'>mtc:ChuckState</a> ⊑ <a href='MTConnect.html#State'>mtc:State</a></li></ul></details></div>
+                        </details></div>
+                      </details>
+                    </div>
                     <div id="ControllerMode">
                       <details open><summary><a href='MTConnect.html#ControllerMode'>mtc:ControllerMode</a></summary>
                         <div class="details"><details><summary>Details</summary>
@@ -694,12 +759,52 @@ div.axiom ul li {
                         </details></div>
                       </details>
                     </div>
-                    <div id="ChuckState">
-                      <details open><summary><a href='MTConnect.html#ChuckState'>mtc:ChuckState</a></summary>
+                  </details>
+                </div>
+                <div id="ProcessProfile">
+                  <details open><summary><a href='MTConnect.html#ProcessProfile'>mtc:ProcessProfile</a></summary>
+                    <div class="details"><details><summary>Details</summary>
+                    <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Process Profile</li>                    </ul></details></div>
+                    <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ProcessProfile'>mtc:ProcessProfile</a> ⊑ bfo:process</li></ul></details></div>
+                    </details></div>
+                    <div id="Velocity">
+                      <details open><summary><a href='MTConnect.html#Velocity'>mtc:Velocity</a></summary>
                         <div class="details"><details><summary>Details</summary>
-                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Chuck State</li>                        </ul></details></div>
-                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#ChuckState'>mtc:ChuckState</a> ⊑ <a href='MTConnect.html#State'>mtc:State</a></li></ul></details></div>
+                        <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Velocity</li>                        </ul></details></div>
+                        <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#Velocity'>mtc:Velocity</a> ⊑ <a href='MTConnect.html#ProcessProfile'>mtc:ProcessProfile</a></li></ul></details></div>
                         </details></div>
+                        <div id="PrismaticVelocity">
+                          <details open><summary><a href='MTConnect.html#PrismaticVelocity'>mtc:PrismaticVelocity</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Velocity</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#PrismaticVelocity'>mtc:PrismaticVelocity</a> ⊑ <a href='MTConnect.html#Velocity'>mtc:Velocity</a></li></ul></details></div>
+                            </details></div>
+                            <div id="PrismaticRapidVelocity">
+                              <details open><summary><a href='MTConnect.html#PrismaticRapidVelocity'>mtc:PrismaticRapidVelocity</a></summary>
+                                <div class="details"><details><summary>Details</summary>
+                                <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Prismatic Rapid Velocity</li>                                </ul></details></div>
+                                <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#PrismaticRapidVelocity'>mtc:PrismaticRapidVelocity</a> ⊑ <a href='MTConnect.html#PrismaticVelocity'>mtc:PrismaticVelocity</a></li></ul></details></div>
+                                </details></div>
+                              </details>
+                            </div>
+                          </details>
+                        </div>
+                        <div id="RevoluteVelocity">
+                          <details open><summary><a href='MTConnect.html#RevoluteVelocity'>mtc:RevoluteVelocity</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Revolute Velocity</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#RevoluteVelocity'>mtc:RevoluteVelocity</a> ⊑ <a href='MTConnect.html#Velocity'>mtc:Velocity</a></li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
+                        <div id="TranslationalVelocity">
+                          <details open><summary><a href='MTConnect.html#TranslationalVelocity'>mtc:TranslationalVelocity</a></summary>
+                            <div class="details"><details><summary>Details</summary>
+                            <div class="axiom"><details><summary>Annotations</summary><ul><li>label: Translational Velocity</li>                            </ul></details></div>
+                            <div class="axiom"><details><summary>Axioms</summary><ul><li><a href='MTConnect.html#TranslationalVelocity'>mtc:TranslationalVelocity</a> ⊑ <a href='MTConnect.html#Velocity'>mtc:Velocity</a></li></ul></details></div>
+                            </details></div>
+                          </details>
+                        </div>
                       </details>
                     </div>
                   </details>

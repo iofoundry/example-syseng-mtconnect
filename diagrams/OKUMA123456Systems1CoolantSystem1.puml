@@ -28,7 +28,7 @@ title OKUMA123456Systems1CoolantSystem1
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456Systems1CoolantSystem1.html OKUMA123456Systems1CoolantSystem1]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Systems1CoolantSystem1 OKUMAMULT_U3000Systems1CoolantSystem1]])
-individual(o1, data:OKUMA123456Systems1CoolantSystem1EngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:OKUMA123456Systems1CoolantSystem1EquipmentRole, _:EquipmentRole)
 individual(o2, data:OKUMA123456Systems1CoolantSystem1Capability, _:Capability)
 individual(o3, data:name22, des:Name)
 individual(o4, data:, owl:Thing)

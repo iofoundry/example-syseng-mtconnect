@@ -28,13 +28,13 @@ title OKUMA123456Controller
                       "qp":"641B2E"
       }
 individual(o0, data:[[./OKUMA123456Controller.html OKUMA123456Controller]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Controller OKUMAMULT_U3000Controller]])
-individual(o1, data:OKUMA123456ControllerEngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o1, data:OKUMA123456ControllerEquipmentRole, _:EquipmentRole)
 individual(o2, data:OKUMA123456ControllerCapability, _:Capability)
 individual(o3, data:OKUMA123456ControllerCONTROLLER_MODE, _:[[../MTConnect.html#ControllerMode ControllerMode]])
 individual(o4, data:OKUMA123456ControllerEXECUTION, _:[[../MTConnect.html#ExecutionState ExecutionState]])
 individual(o5, data:name20, des:Name)
 individual(o6, data:[[./OKUMA123456Controllerpath.html OKUMA123456Controllerpath]], vendor:[[../OKUMA.html#OKUMAMULT_U3000Controllerpath OKUMAMULT_U3000Controllerpath]])
-individual(o7, data:OKUMA123456ControllerpathEngineeredSystemRole, _:[[../MTConnect.html#EngineeredSystemRole EngineeredSystemRole]])
+individual(o7, data:OKUMA123456ControllerpathEquipmentRole, _:EquipmentRole)
 individual(o8, data:OKUMA123456ControllerpathCapability, _:Capability)
 individual(o9, data:OKUMA123456ControllerpathPATH_POSITION_ACTUAL, _:[[../MTConnect.html#ThreeSpaceDisplacement ThreeSpaceDisplacement]])
 individual(o10, data:name21, des:Name)

@@ -12,13 +12,13 @@ Units = {
 
 Components = {
   'Linear': MTConnect.LinearMotionSystem,
-  'LinearX': MTConnect.XLinearMotionSystem,
-  'LinearY': MTConnect.YLinearMotionSystem,
-  'LinearZ': MTConnect.ZLinearMotionSystem,
+  'LinearX': MTConnect.LinearMotionSystem,
+  'LinearY': MTConnect.LinearMotionSystem,
+  'LinearZ': MTConnect.LinearMotionSystem,
   'Rotary': MTConnect.RotaryMotionSystem,
-  'RotaryA': MTConnect.ARotaryMotionSystem,
-  'RotaryB': MTConnect.BRotaryMotionSystem,
-  'RotaryC': MTConnect.CRotaryMotionSystem,
+  'RotaryA': MTConnect.RotaryMotionSystem,
+  'RotaryB': MTConnect.RotaryMotionSystem,
+  'RotaryC': MTConnect.RotaryMotionSystem,
   'Device': MTConnect.NumericallyControlledMachine,
   'Controller': MTConnect.ControlSystem,
   'Path': MTConnect.ControlSystemPath,
@@ -56,7 +56,14 @@ Functions = {
 }
 
 Capabilities = {
-  'Device': MTConnect.TurningCapability
+  'Device': MTConnect.TurningCapability,
+  'Linear': MTConnect.PrismaticMotionCapability,
+  'Rotary': MTConnect.RevoluteMotionCapability,
+}
+
+SystemCapabilities = {
+  'BALLSCREW': MTConnect.PrismaticMotionCapability,
+  'MOTOR': MTConnect.MotionCapability,
 }
 
 DataItems = {
@@ -77,24 +84,33 @@ DataItems = {
 }
 
 Roles = {
-  'Device': [Construct.EquipmentRole, MTConnect.EngineeredSystemRole],
-  'Linear': [MTConnect.EngineeredSystemRole],
-  'Rotary': [MTConnect.EngineeredSystemRole],
-  'Controller': [MTConnect.EngineeredSystemRole],
-  'Path': [MTConnect.EngineeredSystemRole],
-  'Composition': [MTConnect.MaterialArtifactRole],
-  'MOTOR': [MTConnect.MaterialArtifactRole],
-  'BALLSCREW': [MTConnect.MaterialArtifactRole],
-  'Electric': [MTConnect.EngineeredSystemRole],
-  'Hydraulic': [MTConnect.EngineeredSystemRole],
-  'Pneumatic': [MTConnect.EngineeredSystemRole],
-  'Lubrication': [MTConnect.EngineeredSystemRole],
-  'Stock': [MTConnect.MaterialArtifactRole],
-  'PartOccurrence': [MTConnect.MaterialArtifactRole],
-  'Link': [MTConnect.MaterialArtifactRole],
-  'Enclosure': [MTConnect.MaterialArtifactRole],
-  'Door': [MTConnect.MaterialArtifactRole],
-  'Coolant': [MTConnect.EngineeredSystemRole]
+  'Device': [Construct.EquipmentRole],
+  'Linear': [MTConnect.LinearMotionSystemRole],
+  'LinearX': [MTConnect.XLinearMotionSystemRole],
+  'LinearY': [MTConnect.YLinearMotionSystemRole],
+  'LinearZ': [MTConnect.ZLinearMotionSystemRole],
+  'Rotary': [MTConnect.RotaryMotionSystemRole],
+  'Controller': [Construct.EquipmentRole],
+  'Path': [Construct.EquipmentRole],
+  'Composition': [Construct.EquipmentRole],
+  'MOTOR': [Construct.EquipmentRole],
+  'BALLSCREW': [Construct.EquipmentRole],
+  'Electric': [Construct.EquipmentRole],
+  'Hydraulic': [Construct.EquipmentRole],
+  'Pneumatic': [Construct.EquipmentRole],
+  'Lubrication': [Construct.EquipmentRole],
+  'Stock': [Construct.RawMaterialRole],
+  'PartOccurrence': [Construct.MaterialResourceRole, Construct.MaterialProductRole],
+  'Link': [Construct.EquipmentRole],
+  'Enclosure': [Construct.EquipmentRole],
+  'Door': [Construct.EquipmentRole],
+  'Coolant': [Construct.EquipmentRole]
+}
+
+AxisRoles = {
+  'LinearX': MTConnect.XLinearAxisRole,
+  'LinearY': MTConnect.YLinearAxisRole,
+  'LinearZ': MTConnect.ZLinearAxisRole,
 }
 
 Separate = {

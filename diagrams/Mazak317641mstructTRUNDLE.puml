@@ -28,7 +28,7 @@ title Mazak317641mstructTRUNDLE
                       "qp":"641B2E"
       }
 individual(o0, data:[[./Mazak317641mstructTRUNDLE.html Mazak317641mstructTRUNDLE]], vendor:[[../Mazak.html#Mazak800imstructTRUNDLE Mazak800imstructTRUNDLE]])
-individual(o1, data:Mazak317641mstructTRUNDLEMaterialArtifactRole, _:[[../MTConnect.html#MaterialArtifactRole MaterialArtifactRole]])
+individual(o1, data:Mazak317641mstructTRUNDLEEquipmentRole, _:EquipmentRole)
 individual(o2, data:Mazak317641mstructTRUNDLECapability, _:Capability)
 individual(o3, data:name6, des:Name)
 individual(o4, data:, owl:Thing)
