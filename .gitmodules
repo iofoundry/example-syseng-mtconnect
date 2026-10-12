@@ -1,0 +1,6 @@
+[submodule "mtconnect"]
+	path = mtconnect
+	url = https://github.com/mtconnect/mtconnect_sysml_portal.git
+[submodule "ontology"]
+	path = ontology
+	url = https://github.com/iofoundry/ontology.git

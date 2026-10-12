@@ -1,0 +1,1003 @@
+# imports: http://example.org/mtconnect-ext
+# imports: https://model.mtconnect.org/ontology/machinetool/AboutMTConnect
+
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix data: <http://example.org/Mazak/data/> .
+@prefix ext: <http://example.org/mtconnect-ext/> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/construct/> .
+@prefix mtc: <https://model.mtconnect.org/ontology/construct/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/Mazak/data>
+	a owl:Ontology ;
+	owl:imports
+		<http://example.org/mtconnect-ext> ,
+		<https://model.mtconnect.org/ontology/machinetool/AboutMTConnect>
+		;
+	.
+
+data:Mazak_Aux
+	a
+		owl:NamedIndividual ,
+		mtc:Auxiliaries
+		;
+	rdfs:label "Auxiliaries auxiliaries"@en ;
+	bfo:BFO_0000110 data:Mazak_room ;
+	mtc:hasIdValue "Aux"^^xsd:string ;
+	mtc:hasNameValue "auxiliaries"^^xsd:string ;
+	iof:isAbout data:Mazak_AuxEntity ;
+	.
+
+data:Mazak_AuxEntity
+	a
+		owl:NamedIndividual ,
+		mtc:AuxiliariesEntity
+		;
+	rdfs:label "AuxiliariesEntity auxiliaries"@en ;
+	.
+
+data:Mazak_Bmotor
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "MOTOR Bmotor"@en ;
+	mtc:hasIdValue "Bmotor"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_MOTOR ;
+	mtc:isCompositionOf data:Mazak_br ;
+	iof:isAbout data:Mazak_BmotorEntity ;
+	.
+
+data:Mazak_BmotorEntity
+	a
+		owl:NamedIndividual ,
+		mtc:MotorEntity
+		;
+	rdfs:label "MotorEntity Bmotor"@en ;
+	ext:attachesTo data:Mazak_brEntity ;
+	.
+
+data:Mazak_C2motor
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "MOTOR C2motor"@en ;
+	mtc:hasIdValue "C2motor"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_MOTOR ;
+	mtc:isCompositionOf data:Mazak_c2 ;
+	iof:isAbout data:Mazak_C2motorEntity ;
+	.
+
+data:Mazak_C2motorEntity
+	a
+		owl:NamedIndividual ,
+		mtc:MotorEntity
+		;
+	rdfs:label "MotorEntity C2motor"@en ;
+	ext:attachesTo data:Mazak_c2Entity ;
+	.
+
+data:Mazak_Cmotor
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "MOTOR Cmotor"@en ;
+	mtc:hasIdValue "Cmotor"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_MOTOR ;
+	mtc:isCompositionOf data:Mazak_c ;
+	iof:isAbout data:Mazak_CmotorEntity ;
+	.
+
+data:Mazak_CmotorEntity
+	a
+		owl:NamedIndividual ,
+		mtc:MotorEntity
+		;
+	rdfs:label "MotorEntity Cmotor"@en ;
+	ext:attachesTo data:Mazak_cEntity ;
+	.
+
+data:Mazak_Xballscrew
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "BALLSCREW Xballscrew"@en ;
+	mtc:hasIdValue "Xballscrew"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_BALLSCREW ;
+	mtc:isCompositionOf data:Mazak_x ;
+	iof:isAbout data:Mazak_XballscrewEntity ;
+	.
+
+data:Mazak_XballscrewEntity
+	a
+		owl:NamedIndividual ,
+		mtc:BallscrewEntity
+		;
+	rdfs:label "BallscrewEntity Xballscrew"@en ;
+	ext:attachesTo data:Mazak_xEntity ;
+	.
+
+data:Mazak_Xmotor
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "MOTOR Xmotor"@en ;
+	mtc:hasIdValue "Xmotor"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_MOTOR ;
+	mtc:isCompositionOf data:Mazak_x ;
+	iof:isAbout data:Mazak_XmotorEntity ;
+	.
+
+data:Mazak_XmotorEntity
+	a
+		owl:NamedIndividual ,
+		mtc:MotorEntity
+		;
+	rdfs:label "MotorEntity Xmotor"@en ;
+	ext:attachesTo data:Mazak_xEntity ;
+	.
+
+data:Mazak_Yballscrew
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "BALLSCREW Yballscrew"@en ;
+	mtc:hasIdValue "Yballscrew"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_BALLSCREW ;
+	mtc:isCompositionOf data:Mazak_y ;
+	iof:isAbout data:Mazak_YballscrewEntity ;
+	.
+
+data:Mazak_YballscrewEntity
+	a
+		owl:NamedIndividual ,
+		mtc:BallscrewEntity
+		;
+	rdfs:label "BallscrewEntity Yballscrew"@en ;
+	ext:attachesTo data:Mazak_yEntity ;
+	.
+
+data:Mazak_Ymotor
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "MOTOR Ymotor"@en ;
+	mtc:hasIdValue "Ymotor"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_MOTOR ;
+	mtc:isCompositionOf data:Mazak_y ;
+	iof:isAbout data:Mazak_YmotorEntity ;
+	.
+
+data:Mazak_YmotorEntity
+	a
+		owl:NamedIndividual ,
+		mtc:MotorEntity
+		;
+	rdfs:label "MotorEntity Ymotor"@en ;
+	ext:attachesTo data:Mazak_yEntity ;
+	.
+
+data:Mazak_Zballscrew
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "BALLSCREW Zballscrew"@en ;
+	mtc:hasIdValue "Zballscrew"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_BALLSCREW ;
+	mtc:isCompositionOf data:Mazak_z ;
+	iof:isAbout data:Mazak_ZballscrewEntity ;
+	.
+
+data:Mazak_ZballscrewEntity
+	a
+		owl:NamedIndividual ,
+		mtc:BallscrewEntity
+		;
+	rdfs:label "BallscrewEntity Zballscrew"@en ;
+	ext:attachesTo data:Mazak_zEntity ;
+	.
+
+data:Mazak_Zmotor
+	a
+		owl:NamedIndividual ,
+		mtc:Composition
+		;
+	rdfs:label "MOTOR Zmotor"@en ;
+	mtc:hasIdValue "Zmotor"^^xsd:string ;
+	mtc:hasType mtc:CompositionTypeEnum_MOTOR ;
+	mtc:isCompositionOf data:Mazak_z ;
+	iof:isAbout data:Mazak_ZmotorEntity ;
+	.
+
+data:Mazak_ZmotorEntity
+	a
+		owl:NamedIndividual ,
+		mtc:MotorEntity
+		;
+	rdfs:label "MotorEntity Zmotor"@en ;
+	ext:attachesTo data:Mazak_zEntity ;
+	.
+
+data:Mazak_a
+	a
+		owl:NamedIndividual ,
+		mtc:Axes
+		;
+	rdfs:label "Axes base"@en ;
+	bfo:BFO_0000110
+		data:Mazak_br ,
+		data:Mazak_c ,
+		data:Mazak_c2 ,
+		data:Mazak_x ,
+		data:Mazak_y ,
+		data:Mazak_z
+		;
+	mtc:hasIdValue "a"^^xsd:string ;
+	mtc:hasNameValue "base"^^xsd:string ;
+	iof:isAbout data:Mazak_aEntity ;
+	.
+
+data:Mazak_aEntity
+	a
+		owl:NamedIndividual ,
+		mtc:AxesEntity
+		;
+	rdfs:label "AxesEntity base"@en ;
+	.
+
+data:Mazak_br
+	a
+		owl:NamedIndividual ,
+		mtc:Rotary
+		;
+	rdfs:label "Rotary B"@en ;
+	mtc:hasComposition data:Mazak_Bmotor ;
+	mtc:hasIdValue "br"^^xsd:string ;
+	mtc:hasNameValue "B"^^xsd:string ;
+	mtc:hasNativeNameValue "B"^^xsd:string ;
+	iof:isAbout data:Mazak_brEntity ;
+	.
+
+data:Mazak_brEntity
+	a
+		owl:NamedIndividual ,
+		mtc:RotaryMotionSystem
+		;
+	rdfs:label "RotaryMotionSystem B"@en ;
+	ext:attachesTo data:Mazak_enclosuremEntity ;
+	bfo:BFO_0000178 data:Mazak_BmotorEntity ;
+	.
+
+data:Mazak_c
+	a
+		owl:NamedIndividual ,
+		mtc:Rotary
+		;
+	rdfs:label "Rotary C1"@en ;
+	mtc:hasComposition data:Mazak_Cmotor ;
+	mtc:hasIdValue "c"^^xsd:string ;
+	mtc:hasNameValue "C1"^^xsd:string ;
+	mtc:hasNativeNameValue "S"^^xsd:string ;
+	iof:isAbout data:Mazak_cEntity ;
+	.
+
+data:Mazak_c2
+	a
+		owl:NamedIndividual ,
+		mtc:Rotary
+		;
+	rdfs:label "Rotary C2"@en ;
+	mtc:hasComposition data:Mazak_C2motor ;
+	mtc:hasIdValue "c2"^^xsd:string ;
+	mtc:hasNameValue "C2"^^xsd:string ;
+	mtc:hasNativeNameValue "C"^^xsd:string ;
+	iof:isAbout data:Mazak_c2Entity ;
+	.
+
+data:Mazak_c2Entity
+	a
+		owl:NamedIndividual ,
+		mtc:RotaryMotionSystem
+		;
+	rdfs:label "RotaryMotionSystem C2"@en ;
+	ext:attachesTo
+		data:Mazak_brEntity ,
+		data:Mazak_trundleEntity
+		;
+	bfo:BFO_0000178 data:Mazak_C2motorEntity ;
+	.
+
+data:Mazak_cEntity
+	a
+		owl:NamedIndividual ,
+		mtc:RotaryMotionSystem
+		;
+	rdfs:label "RotaryMotionSystem C1"@en ;
+	ext:attachesTo
+		data:Mazak_zEntity ,
+		data:Mazak_zaxisEntity
+		;
+	bfo:BFO_0000178 data:Mazak_CmotorEntity ;
+	.
+
+data:Mazak_cont
+	a
+		owl:NamedIndividual ,
+		mtc:Controller
+		;
+	rdfs:label "Controller controller"@en ;
+	bfo:BFO_0000110 data:Mazak_path1 ;
+	mtc:hasIdValue "cont"^^xsd:string ;
+	mtc:hasNameValue "controller"^^xsd:string ;
+	iof:isAbout data:Mazak_contEntity ;
+	.
+
+data:Mazak_contControlSystem
+	a
+		owl:NamedIndividual ,
+		ext:ControlSystem
+		;
+	rdfs:label "ControlSystem for Mazak_contEntity"@en ;
+	bfo:BFO_0000172
+		data:Mazak_brEntity ,
+		data:Mazak_c2Entity ,
+		data:Mazak_cEntity ,
+		data:Mazak_path1Entity ,
+		data:Mazak_xEntity ,
+		data:Mazak_yEntity ,
+		data:Mazak_zEntity
+		;
+	bfo:BFO_0000176 data:Mazak_contEntity ;
+	iof:hasCapability data:Mazak_contControlSystemCapability ;
+	.
+
+data:Mazak_contControlSystemCapability
+	a
+		owl:NamedIndividual ,
+		iof:Capability
+		;
+	rdfs:label "capability of Mazak_contControlSystem"@en ;
+	.
+
+data:Mazak_contEntity
+	a
+		owl:NamedIndividual ,
+		mtc:ControllerEntity
+		;
+	rdfs:label "ControllerEntity controller"@en ;
+	bfo:BFO_0000178 data:Mazak_path1Entity ;
+	.
+
+data:Mazak_coolant
+	a
+		owl:NamedIndividual ,
+		mtc:Coolant
+		;
+	rdfs:label "Coolant coolant"@en ;
+	mtc:hasIdValue "coolant"^^xsd:string ;
+	mtc:hasNameValue "coolant"^^xsd:string ;
+	iof:isAbout data:Mazak_coolantEntity ;
+	.
+
+data:Mazak_coolantEntity
+	a
+		owl:NamedIndividual ,
+		mtc:CoolantEntity
+		;
+	rdfs:label "CoolantEntity coolant"@en ;
+	.
+
+data:Mazak_d1
+	a
+		owl:NamedIndividual ,
+		mtc:Device
+		;
+	rdfs:label "Device Mazak"@en ;
+	bfo:BFO_0000110
+		data:Mazak_Aux ,
+		data:Mazak_a ,
+		data:Mazak_cont ,
+		data:Mazak_door1 ,
+		data:Mazak_enclosurem ,
+		data:Mazak_mstruct ,
+		data:Mazak_parts ,
+		data:Mazak_resourcesm ,
+		data:Mazak_systems
+		;
+	mtc:hasDescription data:Mazak_d1Description ;
+	mtc:hasIdValue "d1"^^xsd:string ;
+	mtc:hasNameValue "Mazak"^^xsd:string ;
+	mtc:hasUuidValue "Mazak"^^xsd:string ;
+	iof:isAbout data:Mazak_d1Entity ;
+	.
+
+data:Mazak_d1Description
+	a
+		owl:NamedIndividual ,
+		mtc:Description
+		;
+	mtc:hasManufacturerValue "Mazak"^^xsd:string ;
+	mtc:hasModelValue "800i"^^xsd:string ;
+	mtc:hasSerialNumberValue "317641"^^xsd:string ;
+	.
+
+data:Mazak_d1Entity
+	a
+		owl:NamedIndividual ,
+		mtc:DeviceEntity
+		;
+	rdfs:label "DeviceEntity Mazak"@en ;
+	bfo:BFO_0000178
+		data:Mazak_brEntity ,
+		data:Mazak_c2Entity ,
+		data:Mazak_cEntity ,
+		data:Mazak_contEntity ,
+		data:Mazak_coolantEntity ,
+		data:Mazak_door1Entity ,
+		data:Mazak_elecEntity ,
+		data:Mazak_enclosuremEntity ,
+		data:Mazak_hydraulicEntity ,
+		data:Mazak_lubricationEntity ,
+		data:Mazak_partoccEntity ,
+		data:Mazak_personnelmEntity ,
+		data:Mazak_pneumaticEntity ,
+		data:Mazak_procstockEntity ,
+		data:Mazak_roomEntity ,
+		data:Mazak_tableEntity ,
+		data:Mazak_trundleEntity ,
+		data:Mazak_xEntity ,
+		data:Mazak_xaxismEntity ,
+		data:Mazak_yEntity ,
+		data:Mazak_yaxismEntity ,
+		data:Mazak_zEntity ,
+		data:Mazak_zaxisEntity
+		;
+	.
+
+data:Mazak_d1ManufacturingSystem
+	a
+		owl:NamedIndividual ,
+		ext:ManufacturingSystem
+		;
+	rdfs:label "ManufacturingSystem for Mazak_d1Entity"@en ;
+	bfo:BFO_0000172
+		data:Mazak_brEntity ,
+		data:Mazak_c2Entity ,
+		data:Mazak_cEntity ,
+		data:Mazak_contControlSystem ,
+		data:Mazak_coolantEntity ,
+		data:Mazak_elecEntity ,
+		data:Mazak_hydraulicEntity ,
+		data:Mazak_lubricationEntity ,
+		data:Mazak_pneumaticEntity ,
+		data:Mazak_xEntity ,
+		data:Mazak_yEntity ,
+		data:Mazak_zEntity
+		;
+	bfo:BFO_0000176 data:Mazak_d1Entity ;
+	iof:hasCapability data:Mazak_d1ManufacturingSystemCapability ;
+	.
+
+data:Mazak_d1ManufacturingSystemCapability
+	a
+		owl:NamedIndividual ,
+		iof:Capability
+		;
+	rdfs:label "capability of Mazak_d1ManufacturingSystem"@en ;
+	.
+
+data:Mazak_door1
+	a
+		owl:NamedIndividual ,
+		mtc:Door
+		;
+	rdfs:label "Door door"@en ;
+	mtc:hasIdValue "door1"^^xsd:string ;
+	mtc:hasNameValue "door"^^xsd:string ;
+	iof:isAbout data:Mazak_door1Entity ;
+	.
+
+data:Mazak_door1Entity
+	a
+		owl:NamedIndividual ,
+		mtc:DoorEntity
+		;
+	rdfs:label "DoorEntity door"@en ;
+	.
+
+data:Mazak_elec
+	a
+		owl:NamedIndividual ,
+		mtc:Electric
+		;
+	rdfs:label "Electric electric"@en ;
+	mtc:hasIdValue "elec"^^xsd:string ;
+	mtc:hasNameValue "electric"^^xsd:string ;
+	iof:isAbout data:Mazak_elecEntity ;
+	.
+
+data:Mazak_elecEntity
+	a
+		owl:NamedIndividual ,
+		mtc:ElectricEntity
+		;
+	rdfs:label "ElectricEntity electric"@en ;
+	.
+
+data:Mazak_enclosurem
+	a
+		owl:NamedIndividual ,
+		mtc:Enclosure
+		;
+	rdfs:label "Enclosure enclosure"@en ;
+	mtc:hasIdValue "enclosurem"^^xsd:string ;
+	mtc:hasNameValue "enclosure"^^xsd:string ;
+	iof:isAbout data:Mazak_enclosuremEntity ;
+	.
+
+data:Mazak_enclosuremEntity
+	a
+		owl:NamedIndividual ,
+		mtc:EnclosureEntity
+		;
+	rdfs:label "EnclosureEntity enclosure"@en ;
+	.
+
+data:Mazak_hydraulic
+	a
+		owl:NamedIndividual ,
+		mtc:Hydraulic
+		;
+	rdfs:label "Hydraulic hydraulic"@en ;
+	mtc:hasIdValue "hydraulic"^^xsd:string ;
+	mtc:hasNameValue "hydraulic"^^xsd:string ;
+	iof:isAbout data:Mazak_hydraulicEntity ;
+	.
+
+data:Mazak_hydraulicEntity
+	a
+		owl:NamedIndividual ,
+		mtc:HydraulicEntity
+		;
+	rdfs:label "HydraulicEntity hydraulic"@en ;
+	.
+
+data:Mazak_lubrication
+	a
+		owl:NamedIndividual ,
+		mtc:Lubrication
+		;
+	rdfs:label "Lubrication lubrication"@en ;
+	mtc:hasIdValue "lubrication"^^xsd:string ;
+	mtc:hasNameValue "lubrication"^^xsd:string ;
+	iof:isAbout data:Mazak_lubricationEntity ;
+	.
+
+data:Mazak_lubricationEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LubricationEntity
+		;
+	rdfs:label "LubricationEntity lubrication"@en ;
+	.
+
+data:Mazak_materials
+	a
+		owl:NamedIndividual ,
+		mtc:Materials
+		;
+	rdfs:label "Materials materials"@en ;
+	bfo:BFO_0000110 data:Mazak_procstock ;
+	mtc:hasIdValue "materials"^^xsd:string ;
+	mtc:hasNameValue "materials"^^xsd:string ;
+	iof:isAbout data:Mazak_materialsEntity ;
+	.
+
+data:Mazak_materialsEntity
+	a
+		owl:NamedIndividual ,
+		mtc:MaterialsEntity
+		;
+	rdfs:label "MaterialsEntity materials"@en ;
+	.
+
+data:Mazak_mstruct
+	a
+		owl:NamedIndividual ,
+		mtc:Structures
+		;
+	rdfs:label "Structures mstruct"@en ;
+	bfo:BFO_0000110
+		data:Mazak_table ,
+		data:Mazak_trundle ,
+		data:Mazak_xaxism ,
+		data:Mazak_yaxism ,
+		data:Mazak_zaxis
+		;
+	mtc:hasIdValue "mstruct"^^xsd:string ;
+	iof:isAbout data:Mazak_mstructEntity ;
+	.
+
+data:Mazak_mstructEntity
+	a
+		owl:NamedIndividual ,
+		mtc:StructuresEntity
+		;
+	rdfs:label "StructuresEntity mstruct"@en ;
+	.
+
+data:Mazak_partocc
+	a
+		owl:NamedIndividual ,
+		mtc:PartOccurrence
+		;
+	rdfs:label "PartOccurrence partocc"@en ;
+	mtc:hasIdValue "partocc"^^xsd:string ;
+	iof:isAbout data:Mazak_partoccEntity ;
+	.
+
+data:Mazak_partoccEntity
+	a
+		owl:NamedIndividual ,
+		mtc:PartOccurrenceEntity
+		;
+	rdfs:label "PartOccurrenceEntity partocc"@en ;
+	.
+
+data:Mazak_parts
+	a
+		owl:NamedIndividual ,
+		mtc:Parts
+		;
+	rdfs:label "Parts parts"@en ;
+	bfo:BFO_0000110 data:Mazak_partocc ;
+	mtc:hasIdValue "parts"^^xsd:string ;
+	.
+
+data:Mazak_path1
+	a
+		owl:NamedIndividual ,
+		mtc:Path
+		;
+	rdfs:label "Path path"@en ;
+	mtc:hasIdValue "path1"^^xsd:string ;
+	mtc:hasNameValue "path"^^xsd:string ;
+	iof:isAbout data:Mazak_path1Entity ;
+	.
+
+data:Mazak_path1Entity
+	a
+		owl:NamedIndividual ,
+		mtc:PathEntity
+		;
+	rdfs:label "PathEntity path"@en ;
+	.
+
+data:Mazak_personnelm
+	a
+		owl:NamedIndividual ,
+		mtc:Personnel
+		;
+	rdfs:label "Personnel personnel"@en ;
+	mtc:hasIdValue "personnelm"^^xsd:string ;
+	mtc:hasNameValue "personnel"^^xsd:string ;
+	iof:isAbout data:Mazak_personnelmEntity ;
+	.
+
+data:Mazak_personnelmEntity
+	a
+		owl:NamedIndividual ,
+		mtc:PersonnelEntity
+		;
+	rdfs:label "PersonnelEntity personnel"@en ;
+	.
+
+data:Mazak_pneumatic
+	a
+		owl:NamedIndividual ,
+		mtc:Pneumatic
+		;
+	rdfs:label "Pneumatic pneumatic"@en ;
+	mtc:hasIdValue "pneumatic"^^xsd:string ;
+	mtc:hasNameValue "pneumatic"^^xsd:string ;
+	iof:isAbout data:Mazak_pneumaticEntity ;
+	.
+
+data:Mazak_pneumaticEntity
+	a
+		owl:NamedIndividual ,
+		mtc:PneumaticEntity
+		;
+	rdfs:label "PneumaticEntity pneumatic"@en ;
+	.
+
+data:Mazak_procstock
+	a
+		owl:NamedIndividual ,
+		mtc:Stock
+		;
+	rdfs:label "Stock stock"@en ;
+	mtc:hasIdValue "procstock"^^xsd:string ;
+	mtc:hasNameValue "stock"^^xsd:string ;
+	iof:isAbout data:Mazak_procstockEntity ;
+	.
+
+data:Mazak_procstockEntity
+	a
+		owl:NamedIndividual ,
+		mtc:StockEntity
+		;
+	rdfs:label "StockEntity stock"@en ;
+	.
+
+data:Mazak_resourcesm
+	a
+		owl:NamedIndividual ,
+		mtc:Resources
+		;
+	rdfs:label "Resources resources"@en ;
+	bfo:BFO_0000110
+		data:Mazak_materials ,
+		data:Mazak_personnelm
+		;
+	mtc:hasIdValue "resourcesm"^^xsd:string ;
+	mtc:hasNameValue "resources"^^xsd:string ;
+	iof:isAbout data:Mazak_resourcesmEntity ;
+	.
+
+data:Mazak_resourcesmEntity
+	a
+		owl:NamedIndividual ,
+		mtc:ResourcesEntity
+		;
+	rdfs:label "ResourcesEntity resources"@en ;
+	.
+
+data:Mazak_room
+	a
+		owl:NamedIndividual ,
+		mtc:Environmental
+		;
+	rdfs:label "Environmental environmental"@en ;
+	mtc:hasIdValue "room"^^xsd:string ;
+	mtc:hasNameValue "environmental"^^xsd:string ;
+	iof:isAbout data:Mazak_roomEntity ;
+	.
+
+data:Mazak_roomEntity
+	a
+		owl:NamedIndividual ,
+		mtc:EnvironmentalEntity
+		;
+	rdfs:label "EnvironmentalEntity environmental"@en ;
+	.
+
+data:Mazak_systems
+	a
+		owl:NamedIndividual ,
+		mtc:Systems
+		;
+	rdfs:label "Systems systems"@en ;
+	bfo:BFO_0000110
+		data:Mazak_coolant ,
+		data:Mazak_elec ,
+		data:Mazak_hydraulic ,
+		data:Mazak_lubrication ,
+		data:Mazak_pneumatic
+		;
+	mtc:hasIdValue "systems"^^xsd:string ;
+	mtc:hasNameValue "systems"^^xsd:string ;
+	iof:isAbout data:Mazak_systemsEntity ;
+	.
+
+data:Mazak_systemsEntity
+	a
+		owl:NamedIndividual ,
+		mtc:SystemsEntity
+		;
+	rdfs:label "SystemsEntity systems"@en ;
+	.
+
+data:Mazak_table
+	a
+		owl:NamedIndividual ,
+		mtc:Link
+		;
+	rdfs:label "Link TABLE"@en ;
+	mtc:hasIdValue "table"^^xsd:string ;
+	mtc:hasNameValue "TABLE"^^xsd:string ;
+	iof:isAbout data:Mazak_tableEntity ;
+	.
+
+data:Mazak_tableEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LinkEntity
+		;
+	rdfs:label "LinkEntity TABLE"@en ;
+	ext:attachesTo data:Mazak_c2Entity ;
+	.
+
+data:Mazak_trundle
+	a
+		owl:NamedIndividual ,
+		mtc:Link
+		;
+	rdfs:label "Link TRUNDLE"@en ;
+	mtc:hasIdValue "trundle"^^xsd:string ;
+	mtc:hasNameValue "TRUNDLE"^^xsd:string ;
+	iof:isAbout data:Mazak_trundleEntity ;
+	.
+
+data:Mazak_trundleEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LinkEntity
+		;
+	rdfs:label "LinkEntity TRUNDLE"@en ;
+	ext:attachesTo data:Mazak_brEntity ;
+	.
+
+data:Mazak_x
+	a
+		owl:NamedIndividual ,
+		mtc:Linear
+		;
+	rdfs:label "Linear X"@en ;
+	mtc:hasComposition
+		data:Mazak_Xballscrew ,
+		data:Mazak_Xmotor
+		;
+	mtc:hasIdValue "x"^^xsd:string ;
+	mtc:hasNameValue "X"^^xsd:string ;
+	mtc:hasNativeNameValue "X"^^xsd:string ;
+	iof:isAbout data:Mazak_xEntity ;
+	.
+
+data:Mazak_xEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LinearMotionSystem
+		;
+	rdfs:label "LinearMotionSystem X"@en ;
+	ext:attachesTo data:Mazak_enclosuremEntity ;
+	bfo:BFO_0000178
+		data:Mazak_XballscrewEntity ,
+		data:Mazak_XmotorEntity
+		;
+	.
+
+data:Mazak_xaxism
+	a
+		owl:NamedIndividual ,
+		mtc:Link
+		;
+	rdfs:label "Link X_AXIS"@en ;
+	mtc:hasIdValue "xaxism"^^xsd:string ;
+	mtc:hasNameValue "X_AXIS"^^xsd:string ;
+	iof:isAbout data:Mazak_xaxismEntity ;
+	.
+
+data:Mazak_xaxismEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LinkEntity
+		;
+	rdfs:label "LinkEntity X_AXIS"@en ;
+	ext:attachesTo data:Mazak_xEntity ;
+	.
+
+data:Mazak_y
+	a
+		owl:NamedIndividual ,
+		mtc:Linear
+		;
+	rdfs:label "Linear Y"@en ;
+	mtc:hasComposition
+		data:Mazak_Yballscrew ,
+		data:Mazak_Ymotor
+		;
+	mtc:hasIdValue "y"^^xsd:string ;
+	mtc:hasNameValue "Y"^^xsd:string ;
+	mtc:hasNativeNameValue "Y"^^xsd:string ;
+	iof:isAbout data:Mazak_yEntity ;
+	.
+
+data:Mazak_yEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LinearMotionSystem
+		;
+	rdfs:label "LinearMotionSystem Y"@en ;
+	ext:attachesTo
+		data:Mazak_xEntity ,
+		data:Mazak_xaxismEntity
+		;
+	bfo:BFO_0000178
+		data:Mazak_YballscrewEntity ,
+		data:Mazak_YmotorEntity
+		;
+	.
+
+data:Mazak_yaxism
+	a
+		owl:NamedIndividual ,
+		mtc:Link
+		;
+	rdfs:label "Link Y_AXIS"@en ;
+	mtc:hasIdValue "yaxism"^^xsd:string ;
+	mtc:hasNameValue "Y_AXIS"^^xsd:string ;
+	iof:isAbout data:Mazak_yaxismEntity ;
+	.
+
+data:Mazak_yaxismEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LinkEntity
+		;
+	rdfs:label "LinkEntity Y_AXIS"@en ;
+	ext:attachesTo data:Mazak_yEntity ;
+	.
+
+data:Mazak_z
+	a
+		owl:NamedIndividual ,
+		mtc:Linear
+		;
+	rdfs:label "Linear Z"@en ;
+	mtc:hasComposition
+		data:Mazak_Zballscrew ,
+		data:Mazak_Zmotor
+		;
+	mtc:hasIdValue "z"^^xsd:string ;
+	mtc:hasNameValue "Z"^^xsd:string ;
+	mtc:hasNativeNameValue "Z"^^xsd:string ;
+	iof:isAbout data:Mazak_zEntity ;
+	.
+
+data:Mazak_zEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LinearMotionSystem
+		;
+	rdfs:label "LinearMotionSystem Z"@en ;
+	ext:attachesTo
+		data:Mazak_yEntity ,
+		data:Mazak_yaxismEntity
+		;
+	bfo:BFO_0000178
+		data:Mazak_ZballscrewEntity ,
+		data:Mazak_ZmotorEntity
+		;
+	.
+
+data:Mazak_zaxis
+	a
+		owl:NamedIndividual ,
+		mtc:Link
+		;
+	rdfs:label "Link Z_AXIS"@en ;
+	mtc:hasIdValue "zaxis"^^xsd:string ;
+	mtc:hasNameValue "Z_AXIS"^^xsd:string ;
+	iof:isAbout data:Mazak_zaxisEntity ;
+	.
+
+data:Mazak_zaxisEntity
+	a
+		owl:NamedIndividual ,
+		mtc:LinkEntity
+		;
+	rdfs:label "LinkEntity Z_AXIS"@en ;
+	ext:attachesTo data:Mazak_zEntity ;
+	.
+

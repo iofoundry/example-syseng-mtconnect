@@ -1,0 +1,12 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix data: <http://example.org/data/> .
+@prefix core: <https://spec.indusrialontologies.org/ontology/core/Core/> .
+@prefix val: <http://example.org/shacl/> .
+@prefix ex: <http://example.org/ontology/> .
+
+val:CanObserveShape a sh:NodeShape ;
+  sh:targetClass ex:Machine ;
+  sh:property [ 
+    sh:path core:hasComponentPartAtSomeTime ;
+    sh:maxCount 1 ;
+  ] .

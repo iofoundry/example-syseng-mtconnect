@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY AnnotationVocabulary "https://www.omg.org/spec/Commons/AnnotationVocabulary/">
+	<!ENTITY anno "https://spec.industrialontologies.org/ontology/annotation/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY terms "http://purl.org/dc/terms/">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF
+	xmlns="https://onto.mtconnect.org/ontology/construct/"
+	xmlns:AnnotationVocabulary="https://www.omg.org/spec/Commons/AnnotationVocabulary/"
+	xmlns:anno="https://spec.industrialontologies.org/ontology/annotation/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:terms="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://onto.mtconnect.org/ontology/construct">
+		<owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core"/>
+		<owl:imports rdf:resource="https://www.omg.org/spec/Commons/Designators"/>
+	</owl:Ontology>
+	
+	<owl:Class rdf:about="http://qudt.org/vocab/unit/Unit">
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ARotaryAxisRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryAxisRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">A Rotary Axis Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ARotaryMotionSystemRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystemRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">A Rotary Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Actuator">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&xsd;string">Actuator</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Angle">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&xsd;string">Angle</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/BRotaryAxisRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryAxisRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">B Rotary Axis Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/BRotaryMotionSystemRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystemRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">B Rotary Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Ballscrew">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&xsd;string">Ballscrew</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/CRotaryAxisRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryAxisRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">C Rotary Axis Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/CRotaryMotionSystemRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystemRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">C Rotary Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Chuck">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&xsd;string">Chuck</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ChuckState">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/State"/>
+		<rdfs:label rdf:datatype="&xsd;string">Chuck State</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ComponentDisposition">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RelationalDisposition"/>
+		<rdfs:label rdf:datatype="&xsd;string">Component Disposition</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ContinuousRevoluteCapability">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RevoluteMotionCapability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Continuous Revolute Capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ControlSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/SystemDisposition"/>
+		<rdfs:label rdf:datatype="&xsd;string">Control System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ControlSystemPath">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/ControlSystem"/>
+		<rdfs:label rdf:datatype="&xsd;string">Control System Path</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ControllerMode">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/State"/>
+		<rdfs:label rdf:datatype="&xsd;string">Controller Mode</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/CoolantSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/SystemDisposition"/>
+		<rdfs:label rdf:datatype="&xsd;string">Coolant System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Displacement">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&xsd;string">Displacement</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Door">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&xsd;string">Door</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ElectricalSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/SystemDisposition"/>
+		<rdfs:label rdf:datatype="&xsd;string">Electrical System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Enclosure">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/Structure"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&xsd;string">Enclosure</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ExecutionState">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/State"/>
+		<rdfs:label rdf:datatype="&xsd;string">Execution State</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/FiveAxisMotionCapability">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/FourAxisMotionCapability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Five Axis Motion Capability</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/FourAxisMotionCapability">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/capabilityOf"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/Machine">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://onto.mtconnect.org/ontology/construct/hasComponent"/>
+										<owl:onClass>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasFunction"/>
+														<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/IndexedRevoluteCapability"/>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:onClass>
+										<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Force">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&xsd;string">Force</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/FourAxisMotionCapability">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/ThreeAxisMotionCapability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Four Axis Motion Capability</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/ThreeAxisMotionCapability">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/capabilityOf"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/Machine">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://onto.mtconnect.org/ontology/construct/hasComponent"/>
+										<owl:someValuesFrom>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasFunction"/>
+														<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/IndexedRevoluteCapability"/>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:someValuesFrom>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Frame">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/HydraulicSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/SystemDisposition"/>
+		<rdfs:label rdf:datatype="&xsd;string">Hydraulic System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/IndexedRevoluteCapability">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RevoluteMotionCapability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Indexed Revolute Capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Length">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&xsd;string">Length</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/LinearAxisRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RelationalRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">Linear Axis Role</rdfs:label>
+		<owl:disjointWith rdf:resource="https://onto.mtconnect.org/ontology/construct/RotaryAxisRole"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/LinearMotionSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/MotionSystem"/>
+		<rdfs:label rdf:datatype="&xsd;string">Linear Motion System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/LinearMotionSystemRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/MotionSystemRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">Linear Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/LubricationSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/SystemDisposition"/>
+		<rdfs:label rdf:datatype="&xsd;string">Lubrication System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Machine">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&xsd;string">Machine</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/MachiningSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RelationalDisposition"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/MaintainableMaterialItemSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/SystemDisposition"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/MillingCapability">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Milling Capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/MotionCapability">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Motion Capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/MotionSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/SystemDisposition"/>
+		<rdfs:label rdf:datatype="&xsd;string">Motion System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/MotionSystemRole">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+		<rdfs:label rdf:datatype="&xsd;string">Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Motor">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/Actuator"/>
+		<rdfs:label rdf:datatype="&xsd;string">Motor</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/NumericallyControlledMachine">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/Machine"/>
+		<rdfs:label rdf:datatype="&xsd;string">Numerically Controlled Machine</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/PneumaticSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/SystemDisposition"/>
+		<rdfs:label rdf:datatype="&xsd;string">Pneumatic System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/PrismaticMotionCapability">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/MotionCapability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Prismatic Motion Capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/PrismaticMotionDisposition">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/PrismaticRapidVelocity">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/PrismaticVelocity"/>
+		<rdfs:label rdf:datatype="&xsd;string">Prismatic Rapid Velocity</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/PrismaticVelocity">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/Velocity"/>
+		<rdfs:label rdf:datatype="&xsd;string">Prismatic Velocity</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ProcessProfile">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+		<rdfs:label rdf:datatype="&xsd;string">Process Profile</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ProductPart">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/MaterialProductRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&xsd;string">Product Part</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RelationalDisposition">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+		<rdfs:label rdf:datatype="&xsd;string">relational disposition</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RelationalRole">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RevoluteMotionCapability">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/MotionCapability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Revolute Motion Capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RevoluteVelocity">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/Velocity"/>
+		<rdfs:label rdf:datatype="&xsd;string">Revolute Velocity</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Room">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000029"/>
+		<rdfs:label rdf:datatype="&xsd;string">Room</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RotaryAxisRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RelationalRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">Rotary Axis Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RotaryMotionDisposition">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/MotionSystem"/>
+		<rdfs:label rdf:datatype="&xsd;string">Rotary Motion System</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystemRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/MotionSystemRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">Rotary Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/RotaryToLinearMotionDisposition">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Sensor">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&xsd;string">Sensor</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/SixAxisMotionCapability">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/FiveAxisMotionCapability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Six Axis Motion Capability</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/FiveAxisMotionCapability">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/capabilityOf"/>
+						<owl:someValuesFrom>
+							<owl:Class>
+								<owl:intersectionOf rdf:parseType="Collection">
+									<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/Machine">
+									</rdf:Description>
+									<owl:Restriction>
+										<owl:onProperty rdf:resource="https://onto.mtconnect.org/ontology/construct/hasComponent"/>
+										<owl:onClass>
+											<owl:Class>
+												<owl:intersectionOf rdf:parseType="Collection">
+													<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/RotaryMotionSystem">
+													</rdf:Description>
+													<owl:Restriction>
+														<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasFunction"/>
+														<owl:someValuesFrom rdf:resource="https://onto.mtconnect.org/ontology/construct/IndexedRevoluteCapability"/>
+													</owl:Restriction>
+												</owl:intersectionOf>
+											</owl:Class>
+										</owl:onClass>
+										<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">3</owl:minQualifiedCardinality>
+									</owl:Restriction>
+								</owl:intersectionOf>
+							</owl:Class>
+						</owl:someValuesFrom>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/State">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/temporallyFinishedBy"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/Event"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/temporallyStartedBy"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/Event"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&xsd;string">State</rdfs:label>
+		<anno:naturalLanguageDefinition rdf:datatype="&xsd;string">process that is homeomeric</anno:naturalLanguageDefinition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Stock">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/EquipmentRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasRole"/>
+				<owl:someValuesFrom rdf:resource="https://spec.industrialontologies.org/ontology/construct/RawMaterialRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label rdf:datatype="&xsd;string">Stock</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Structure">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+		<rdfs:label rdf:datatype="&xsd;string">Structure</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/SystemDisposition">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/RelationalDisposition"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Temperature">
+		<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+		<rdfs:label rdf:datatype="&xsd;string">Temperature</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ThreeAxisMotionCapability">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Three Axis Motion Capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ThreeSpaceDisplacement">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/Displacement"/>
+		<rdfs:label rdf:datatype="&xsd;string">Three Space Displacement</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/TranslationalVelocity">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/Velocity"/>
+		<rdfs:label rdf:datatype="&xsd;string">Translational Velocity</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/TurningCapability">
+		<rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/Capability"/>
+		<rdfs:label rdf:datatype="&xsd;string">Turning Capability</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/Velocity">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/ProcessProfile"/>
+		<rdfs:label rdf:datatype="&xsd;string">Velocity</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/XLinearAxisRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearAxisRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">X Linear Axis Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/XLinearMotionSystemRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearMotionSystemRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">X Linear Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/YLinearAxisRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearAxisRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">Y Linear Axis Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/YLinearMotionSystemRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearMotionSystemRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">Y Linear Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ZLinearAxisRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearAxisRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">Z Linear Axis Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://onto.mtconnect.org/ontology/construct/ZLinearMotionSystemRole">
+		<rdfs:subClassOf rdf:resource="https://onto.mtconnect.org/ontology/construct/LinearMotionSystemRole"/>
+		<rdfs:label rdf:datatype="&xsd;string">Z Linear Motion System Role</rdfs:label>
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/attachedTo">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
+		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+		<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/coBearerOf">
+		<owl:inverseOf rdf:resource="https://onto.mtconnect.org/ontology/construct/hasCoBearer"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/componentOf">
+		<rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/componentPartOfAtSomeTime"/>
+		<rdfs:label rdf:datatype="&xsd;string">component of</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/conformsTo">
+		<rdfs:label rdf:datatype="&xsd;string">conforms to</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/connectedTo">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
+		<rdfs:label rdf:datatype="&xsd;string">connected to</rdfs:label>
+		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+		<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/hasCoBearer">
+		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
+		<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/hasComponent">
+		<rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/construct/hasComponentPartAtSomeTime"/>
+		<rdfs:label rdf:datatype="&xsd;string">has component</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/hasKinematicChild">
+		<rdfs:subPropertyOf rdf:resource="https://onto.mtconnect.org/ontology/construct/attachedTo"/>
+		<rdfs:label rdf:datatype="&xsd;string">has kinematic child</rdfs:label>
+		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+		<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/hasKinematicParent">
+		<rdfs:subPropertyOf rdf:resource="https://onto.mtconnect.org/ontology/construct/attachedTo"/>
+		<rdfs:label rdf:datatype="&xsd;string">has kinematic parent</rdfs:label>
+		<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+		<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/hasTarget">
+		<rdfs:label rdf:datatype="&xsd;string">has target</rdfs:label>
+		<owl:inverseOf rdf:resource="https://onto.mtconnect.org/ontology/construct/targetOf"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/hasUnit">
+		<rdfs:label rdf:datatype="&xsd;string">has unit</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/satisfiedBy">
+		<rdfs:label rdf:datatype="&xsd;string">satisfied by</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://onto.mtconnect.org/ontology/construct/targetOf">
+		<rdfs:label rdf:datatype="&xsd;string">target of</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:AllDisjointClasses>
+		<owl:members rdf:parseType="Collection">
+			<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/ARotaryAxisRole">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/BRotaryAxisRole">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/CRotaryAxisRole">
+			</rdf:Description>
+		</owl:members>
+	</owl:AllDisjointClasses>
+	<owl:AllDisjointClasses>
+		<owl:members rdf:parseType="Collection">
+			<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/XLinearAxisRole">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/YLinearAxisRole">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://onto.mtconnect.org/ontology/construct/ZLinearAxisRole">
+			</rdf:Description>
+		</owl:members>
+	</owl:AllDisjointClasses>
+</rdf:RDF>

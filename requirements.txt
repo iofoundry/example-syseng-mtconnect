@@ -2,3 +2,7 @@
 owlready2
 requests
 treelib
+pydantic
+pydantic-xml
+xsdata
+xsdata-pydantic[cli,lxml]

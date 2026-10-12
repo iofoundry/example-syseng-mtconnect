@@ -1,0 +1,21 @@
+@startuml
+!include ../iof.iuml
+
+left to right direction
+skinparam linetype polyline
+title Mazak_coolantEntity
+
+!$default_direction = down
+!$namespace_colors = { "bfo":"DFA702", "iof":"1E90FF", "mtc":"76608A", "ext":"2E8B57", "data":"641B2E", "cmns-col":"3A0519", "cmns-dsg":"3A0519" }
+
+individual(o0, data:[[./Mazak_d1Entity.html Mazak_d1Entity]], mtc:DeviceEntity)
+individual(o1, data:[[./Mazak_coolantEntity.html Mazak_coolantEntity]], mtc:CoolantEntity)
+individual(o2, data:[[./Mazak_d1ManufacturingSystem.html Mazak_d1ManufacturingSystem]], ext:ManufacturingSystem)
+individual(o3, data:Mazak_coolant, mtc:Coolant)
+property(o0, "bfo:has continuant part at some time", o1)
+property(o2, "bfo:has member part at all times", o1)
+property(o3, "iof:is about", o1)
+property(o1, "iof:is subject of", o3)
+data(o1, "rdfs:label", "CoolantEntity coolant")
+property(o1, "bfo:continuant part of at some time", o0)
+@enduml

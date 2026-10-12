@@ -1,0 +1,43 @@
+@startuml
+!include ../iof.iuml
+
+left to right direction
+skinparam linetype polyline
+title Mazak_d1ManufacturingSystem
+
+!$default_direction = down
+!$namespace_colors = { "bfo":"DFA702", "iof":"1E90FF", "mtc":"76608A", "ext":"2E8B57", "data":"641B2E", "cmns-col":"3A0519", "cmns-dsg":"3A0519" }
+
+individual(o0, data:[[./Mazak_d1Entity.html Mazak_d1Entity]], mtc:DeviceEntity)
+individual(o1, data:[[./Mazak_d1ManufacturingSystem.html Mazak_d1ManufacturingSystem]], ext:ManufacturingSystem)
+individual(o2, data:[[./Mazak_contControlSystem.html Mazak_contControlSystem]], ext:ControlSystem)
+individual(o3, data:[[./Mazak_lubricationEntity.html Mazak_lubricationEntity]], mtc:LubricationEntity)
+individual(o4, data:[[./Mazak_elecEntity.html Mazak_elecEntity]], mtc:ElectricEntity)
+individual(o5, data:[[./Mazak_coolantEntity.html Mazak_coolantEntity]], mtc:CoolantEntity)
+individual(o6, data:[[./Mazak_pneumaticEntity.html Mazak_pneumaticEntity]], mtc:PneumaticEntity)
+individual(o7, data:[[./Mazak_hydraulicEntity.html Mazak_hydraulicEntity]], mtc:HydraulicEntity)
+individual(o8, data:[[./Mazak_cEntity.html Mazak_cEntity]], mtc:RotaryMotionSystem)
+individual(o9, data:[[./Mazak_brEntity.html Mazak_brEntity]], mtc:RotaryMotionSystem)
+individual(o10, data:[[./Mazak_c2Entity.html Mazak_c2Entity]], mtc:RotaryMotionSystem)
+individual(o11, data:[[./Mazak_xEntity.html Mazak_xEntity]], mtc:LinearMotionSystem)
+individual(o12, data:[[./Mazak_yEntity.html Mazak_yEntity]], mtc:LinearMotionSystem)
+individual(o13, data:[[./Mazak_zEntity.html Mazak_zEntity]], mtc:LinearMotionSystem)
+individual(o14, data:Mazak_d1ManufacturingSystemCapability, iof:Capability)
+property(o0, "bfo:has continuant part at some time", o1)
+property(o1, "bfo:has member part at all times", o2)
+property(o1, "bfo:has member part at all times", o3)
+property(o1, "bfo:has member part at all times", o4)
+property(o1, "bfo:has member part at all times", o5)
+property(o1, "bfo:has member part at all times", o6)
+property(o1, "bfo:has member part at all times", o7)
+property(o1, "bfo:has member part at all times", o8)
+property(o1, "bfo:has member part at all times", o9)
+property(o1, "bfo:has member part at all times", o10)
+property(o1, "bfo:has member part at all times", o11)
+property(o1, "bfo:has member part at all times", o12)
+property(o1, "bfo:has member part at all times", o13)
+property(o1, "bfo:continuant part of at some time", o0)
+property(o1, "iof:has capability", o14)
+data(o1, "rdfs:label", "ManufacturingSystem for Mazak_d1Entity")
+property(o14, "iof:capability of", o1)
+@enduml

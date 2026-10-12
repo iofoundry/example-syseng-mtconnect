@@ -1,0 +1,424 @@
+<http://example.org/Mazak/data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/Mazak/data/Mazak_d1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_d1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Device> .
+<http://example.org/Mazak/data/Mazak_d1Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_d1Description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Description> .
+<http://example.org/Mazak/data/Mazak_d1> <https://model.mtconnect.org/ontology/construct/hasDescription> <http://example.org/Mazak/data/Mazak_d1Description> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/DeviceEntity> .
+<http://example.org/Mazak/data/Mazak_d1> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_d1Entity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mtconnect-ext/ManufacturingSystem> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000176> <http://example.org/Mazak/data/Mazak_d1Entity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://spec.industrialontologies.org/ontology/construct/Capability> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <https://spec.industrialontologies.org/ontology/construct/hasCapability> <http://example.org/Mazak/data/Mazak_d1ManufacturingSystemCapability> .
+<http://example.org/Mazak/data/Mazak_parts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_parts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Parts> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_parts> .
+<http://example.org/Mazak/data/Mazak_partocc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_partocc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/PartOccurrence> .
+<http://example.org/Mazak/data/Mazak_parts> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_partocc> .
+<http://example.org/Mazak/data/Mazak_partoccEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_partoccEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/PartOccurrenceEntity> .
+<http://example.org/Mazak/data/Mazak_partocc> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_partoccEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_partoccEntity> .
+<http://example.org/Mazak/data/Mazak_a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Axes> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_a> .
+<http://example.org/Mazak/data/Mazak_c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Rotary> .
+<http://example.org/Mazak/data/Mazak_a> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_c> .
+<http://example.org/Mazak/data/Mazak_cEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_cEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/RotaryMotionSystem> .
+<http://example.org/Mazak/data/Mazak_c> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_cEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_cEntity> .
+<http://example.org/Mazak/data/Mazak_Cmotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Cmotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_Cmotor> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_MOTOR> .
+<http://example.org/Mazak/data/Mazak_c> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_Cmotor> .
+<http://example.org/Mazak/data/Mazak_Cmotor> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_c> .
+<http://example.org/Mazak/data/Mazak_br> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_br> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Rotary> .
+<http://example.org/Mazak/data/Mazak_a> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_br> .
+<http://example.org/Mazak/data/Mazak_brEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_brEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/RotaryMotionSystem> .
+<http://example.org/Mazak/data/Mazak_br> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_brEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_brEntity> .
+<http://example.org/Mazak/data/Mazak_Bmotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Bmotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_Bmotor> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_MOTOR> .
+<http://example.org/Mazak/data/Mazak_br> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_Bmotor> .
+<http://example.org/Mazak/data/Mazak_Bmotor> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_br> .
+<http://example.org/Mazak/data/Mazak_c2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_c2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Rotary> .
+<http://example.org/Mazak/data/Mazak_a> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_c2> .
+<http://example.org/Mazak/data/Mazak_c2Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_c2Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/RotaryMotionSystem> .
+<http://example.org/Mazak/data/Mazak_c2> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_c2Entity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_c2Entity> .
+<http://example.org/Mazak/data/Mazak_C2motor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_C2motor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_C2motor> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_MOTOR> .
+<http://example.org/Mazak/data/Mazak_c2> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_C2motor> .
+<http://example.org/Mazak/data/Mazak_C2motor> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_c2> .
+<http://example.org/Mazak/data/Mazak_x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Linear> .
+<http://example.org/Mazak/data/Mazak_a> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_x> .
+<http://example.org/Mazak/data/Mazak_xEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_xEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LinearMotionSystem> .
+<http://example.org/Mazak/data/Mazak_x> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_xEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_xEntity> .
+<http://example.org/Mazak/data/Mazak_Xballscrew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Xballscrew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_Xballscrew> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_BALLSCREW> .
+<http://example.org/Mazak/data/Mazak_x> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_Xballscrew> .
+<http://example.org/Mazak/data/Mazak_Xballscrew> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_x> .
+<http://example.org/Mazak/data/Mazak_Xmotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Xmotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_Xmotor> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_MOTOR> .
+<http://example.org/Mazak/data/Mazak_x> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_Xmotor> .
+<http://example.org/Mazak/data/Mazak_Xmotor> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_x> .
+<http://example.org/Mazak/data/Mazak_y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Linear> .
+<http://example.org/Mazak/data/Mazak_a> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_y> .
+<http://example.org/Mazak/data/Mazak_yEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_yEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LinearMotionSystem> .
+<http://example.org/Mazak/data/Mazak_y> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_yEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_yEntity> .
+<http://example.org/Mazak/data/Mazak_Yballscrew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Yballscrew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_Yballscrew> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_BALLSCREW> .
+<http://example.org/Mazak/data/Mazak_y> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_Yballscrew> .
+<http://example.org/Mazak/data/Mazak_Yballscrew> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_y> .
+<http://example.org/Mazak/data/Mazak_Ymotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Ymotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_Ymotor> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_MOTOR> .
+<http://example.org/Mazak/data/Mazak_y> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_Ymotor> .
+<http://example.org/Mazak/data/Mazak_Ymotor> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_y> .
+<http://example.org/Mazak/data/Mazak_z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Linear> .
+<http://example.org/Mazak/data/Mazak_a> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_z> .
+<http://example.org/Mazak/data/Mazak_zEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_zEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LinearMotionSystem> .
+<http://example.org/Mazak/data/Mazak_z> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_zEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_zEntity> .
+<http://example.org/Mazak/data/Mazak_Zballscrew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Zballscrew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_Zballscrew> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_BALLSCREW> .
+<http://example.org/Mazak/data/Mazak_z> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_Zballscrew> .
+<http://example.org/Mazak/data/Mazak_Zballscrew> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_z> .
+<http://example.org/Mazak/data/Mazak_Zmotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Zmotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Composition> .
+<http://example.org/Mazak/data/Mazak_Zmotor> <https://model.mtconnect.org/ontology/construct/hasType> <https://model.mtconnect.org/ontology/construct/CompositionTypeEnum_MOTOR> .
+<http://example.org/Mazak/data/Mazak_z> <https://model.mtconnect.org/ontology/construct/hasComposition> <http://example.org/Mazak/data/Mazak_Zmotor> .
+<http://example.org/Mazak/data/Mazak_Zmotor> <https://model.mtconnect.org/ontology/construct/isCompositionOf> <http://example.org/Mazak/data/Mazak_z> .
+<http://example.org/Mazak/data/Mazak_resourcesm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_resourcesm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Resources> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_resourcesm> .
+<http://example.org/Mazak/data/Mazak_materials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_materials> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Materials> .
+<http://example.org/Mazak/data/Mazak_resourcesm> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_materials> .
+<http://example.org/Mazak/data/Mazak_procstock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_procstock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Stock> .
+<http://example.org/Mazak/data/Mazak_materials> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_procstock> .
+<http://example.org/Mazak/data/Mazak_procstockEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_procstockEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/StockEntity> .
+<http://example.org/Mazak/data/Mazak_procstock> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_procstockEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_procstockEntity> .
+<http://example.org/Mazak/data/Mazak_personnelm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_personnelm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Personnel> .
+<http://example.org/Mazak/data/Mazak_resourcesm> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_personnelm> .
+<http://example.org/Mazak/data/Mazak_personnelmEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_personnelmEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/PersonnelEntity> .
+<http://example.org/Mazak/data/Mazak_personnelm> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_personnelmEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_personnelmEntity> .
+<http://example.org/Mazak/data/Mazak_systems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_systems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Systems> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_systems> .
+<http://example.org/Mazak/data/Mazak_lubrication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_lubrication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Lubrication> .
+<http://example.org/Mazak/data/Mazak_systems> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_lubrication> .
+<http://example.org/Mazak/data/Mazak_lubricationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_lubricationEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LubricationEntity> .
+<http://example.org/Mazak/data/Mazak_lubrication> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_lubricationEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_lubricationEntity> .
+<http://example.org/Mazak/data/Mazak_elec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_elec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Electric> .
+<http://example.org/Mazak/data/Mazak_systems> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_elec> .
+<http://example.org/Mazak/data/Mazak_elecEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_elecEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/ElectricEntity> .
+<http://example.org/Mazak/data/Mazak_elec> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_elecEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_elecEntity> .
+<http://example.org/Mazak/data/Mazak_coolant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_coolant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Coolant> .
+<http://example.org/Mazak/data/Mazak_systems> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_coolant> .
+<http://example.org/Mazak/data/Mazak_coolantEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_coolantEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/CoolantEntity> .
+<http://example.org/Mazak/data/Mazak_coolant> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_coolantEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_coolantEntity> .
+<http://example.org/Mazak/data/Mazak_pneumatic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_pneumatic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Pneumatic> .
+<http://example.org/Mazak/data/Mazak_systems> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_pneumatic> .
+<http://example.org/Mazak/data/Mazak_pneumaticEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_pneumaticEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/PneumaticEntity> .
+<http://example.org/Mazak/data/Mazak_pneumatic> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_pneumaticEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_pneumaticEntity> .
+<http://example.org/Mazak/data/Mazak_hydraulic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_hydraulic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Hydraulic> .
+<http://example.org/Mazak/data/Mazak_systems> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_hydraulic> .
+<http://example.org/Mazak/data/Mazak_hydraulicEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_hydraulicEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/HydraulicEntity> .
+<http://example.org/Mazak/data/Mazak_hydraulic> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_hydraulicEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_hydraulicEntity> .
+<http://example.org/Mazak/data/Mazak_Aux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_Aux> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Auxiliaries> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_Aux> .
+<http://example.org/Mazak/data/Mazak_room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Environmental> .
+<http://example.org/Mazak/data/Mazak_Aux> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_room> .
+<http://example.org/Mazak/data/Mazak_roomEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_roomEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/EnvironmentalEntity> .
+<http://example.org/Mazak/data/Mazak_room> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_roomEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_roomEntity> .
+<http://example.org/Mazak/data/Mazak_mstruct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_mstruct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Structures> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_mstruct> .
+<http://example.org/Mazak/data/Mazak_xaxism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_xaxism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Link> .
+<http://example.org/Mazak/data/Mazak_mstruct> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_xaxism> .
+<http://example.org/Mazak/data/Mazak_xaxismEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_xaxismEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LinkEntity> .
+<http://example.org/Mazak/data/Mazak_xaxism> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_xaxismEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_xaxismEntity> .
+<http://example.org/Mazak/data/Mazak_yaxism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_yaxism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Link> .
+<http://example.org/Mazak/data/Mazak_mstruct> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_yaxism> .
+<http://example.org/Mazak/data/Mazak_yaxismEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_yaxismEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LinkEntity> .
+<http://example.org/Mazak/data/Mazak_yaxism> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_yaxismEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_yaxismEntity> .
+<http://example.org/Mazak/data/Mazak_zaxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_zaxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Link> .
+<http://example.org/Mazak/data/Mazak_mstruct> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_zaxis> .
+<http://example.org/Mazak/data/Mazak_zaxisEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_zaxisEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LinkEntity> .
+<http://example.org/Mazak/data/Mazak_zaxis> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_zaxisEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_zaxisEntity> .
+<http://example.org/Mazak/data/Mazak_table> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_table> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Link> .
+<http://example.org/Mazak/data/Mazak_mstruct> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_table> .
+<http://example.org/Mazak/data/Mazak_tableEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_tableEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LinkEntity> .
+<http://example.org/Mazak/data/Mazak_table> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_tableEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_tableEntity> .
+<http://example.org/Mazak/data/Mazak_trundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_trundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Link> .
+<http://example.org/Mazak/data/Mazak_mstruct> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_trundle> .
+<http://example.org/Mazak/data/Mazak_trundleEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_trundleEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/LinkEntity> .
+<http://example.org/Mazak/data/Mazak_trundle> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_trundleEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_trundleEntity> .
+<http://example.org/Mazak/data/Mazak_enclosurem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_enclosurem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Enclosure> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_enclosurem> .
+<http://example.org/Mazak/data/Mazak_enclosuremEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_enclosuremEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/EnclosureEntity> .
+<http://example.org/Mazak/data/Mazak_enclosurem> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_enclosuremEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_enclosuremEntity> .
+<http://example.org/Mazak/data/Mazak_cont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_cont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Controller> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_cont> .
+<http://example.org/Mazak/data/Mazak_contEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_contEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/ControllerEntity> .
+<http://example.org/Mazak/data/Mazak_cont> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_contEntity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_contEntity> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/mtconnect-ext/ControlSystem> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://purl.obolibrary.org/obo/BFO_0000176> <http://example.org/Mazak/data/Mazak_contEntity> .
+<http://example.org/Mazak/data/Mazak_contControlSystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_contControlSystemCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://spec.industrialontologies.org/ontology/construct/Capability> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <https://spec.industrialontologies.org/ontology/construct/hasCapability> <http://example.org/Mazak/data/Mazak_contControlSystemCapability> .
+<http://example.org/Mazak/data/Mazak_path1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_path1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Path> .
+<http://example.org/Mazak/data/Mazak_cont> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_path1> .
+<http://example.org/Mazak/data/Mazak_path1Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_path1Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/PathEntity> .
+<http://example.org/Mazak/data/Mazak_path1> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_path1Entity> .
+<http://example.org/Mazak/data/Mazak_contEntity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_path1Entity> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_path1Entity> .
+<http://example.org/Mazak/data/Mazak_door1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_door1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/Door> .
+<http://example.org/Mazak/data/Mazak_d1> <http://purl.obolibrary.org/obo/BFO_0000110> <http://example.org/Mazak/data/Mazak_door1> .
+<http://example.org/Mazak/data/Mazak_door1Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/Mazak/data/Mazak_door1Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://model.mtconnect.org/ontology/construct/DoorEntity> .
+<http://example.org/Mazak/data/Mazak_door1> <https://spec.industrialontologies.org/ontology/construct/isAbout> <http://example.org/Mazak/data/Mazak_door1Entity> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/Mazak/data/Mazak_door1Entity> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_cEntity> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_brEntity> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_c2Entity> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_xEntity> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_yEntity> .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_zEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_contControlSystem> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_lubricationEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_elecEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_coolantEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_pneumaticEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_hydraulicEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_cEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_brEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_c2Entity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_xEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_yEntity> .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://purl.obolibrary.org/obo/BFO_0000172> <http://example.org/Mazak/data/Mazak_zEntity> .
+<http://example.org/Mazak/data/Mazak_d1> <http://www.w3.org/2000/01/rdf-schema#label> "Device Mazak"@en .
+<http://example.org/Mazak/data/Mazak_d1> <https://model.mtconnect.org/ontology/construct/hasIdValue> "d1"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_d1> <https://model.mtconnect.org/ontology/construct/hasNameValue> "Mazak"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_d1> <https://model.mtconnect.org/ontology/construct/hasUuidValue> "Mazak"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_d1Description> <https://model.mtconnect.org/ontology/construct/hasManufacturerValue> "Mazak"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_d1Description> <https://model.mtconnect.org/ontology/construct/hasModelValue> "800i"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_d1Description> <https://model.mtconnect.org/ontology/construct/hasSerialNumberValue> "317641"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_d1Entity> <http://www.w3.org/2000/01/rdf-schema#label> "DeviceEntity Mazak"@en .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "ManufacturingSystem for Mazak_d1Entity"@en .
+<http://example.org/Mazak/data/Mazak_d1ManufacturingSystemCapability> <http://www.w3.org/2000/01/rdf-schema#label> "capability of Mazak_d1ManufacturingSystem"@en .
+<http://example.org/Mazak/data/Mazak_parts> <http://www.w3.org/2000/01/rdf-schema#label> "Parts parts"@en .
+<http://example.org/Mazak/data/Mazak_parts> <https://model.mtconnect.org/ontology/construct/hasIdValue> "parts"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_partocc> <http://www.w3.org/2000/01/rdf-schema#label> "PartOccurrence partocc"@en .
+<http://example.org/Mazak/data/Mazak_partocc> <https://model.mtconnect.org/ontology/construct/hasIdValue> "partocc"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_partoccEntity> <http://www.w3.org/2000/01/rdf-schema#label> "PartOccurrenceEntity partocc"@en .
+<http://example.org/Mazak/data/Mazak_a> <http://www.w3.org/2000/01/rdf-schema#label> "Axes base"@en .
+<http://example.org/Mazak/data/Mazak_a> <https://model.mtconnect.org/ontology/construct/hasIdValue> "a"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_a> <https://model.mtconnect.org/ontology/construct/hasNameValue> "base"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_c> <http://www.w3.org/2000/01/rdf-schema#label> "Rotary C1"@en .
+<http://example.org/Mazak/data/Mazak_c> <https://model.mtconnect.org/ontology/construct/hasIdValue> "c"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_c> <https://model.mtconnect.org/ontology/construct/hasNameValue> "C1"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_c> <https://model.mtconnect.org/ontology/construct/hasNativeNameValue> "S"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_cEntity> <http://www.w3.org/2000/01/rdf-schema#label> "RotaryMotionSystem C1"@en .
+<http://example.org/Mazak/data/Mazak_Cmotor> <http://www.w3.org/2000/01/rdf-schema#label> "MOTOR Cmotor"@en .
+<http://example.org/Mazak/data/Mazak_Cmotor> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Cmotor"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_br> <http://www.w3.org/2000/01/rdf-schema#label> "Rotary B"@en .
+<http://example.org/Mazak/data/Mazak_br> <https://model.mtconnect.org/ontology/construct/hasIdValue> "br"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_br> <https://model.mtconnect.org/ontology/construct/hasNameValue> "B"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_br> <https://model.mtconnect.org/ontology/construct/hasNativeNameValue> "B"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_brEntity> <http://www.w3.org/2000/01/rdf-schema#label> "RotaryMotionSystem B"@en .
+<http://example.org/Mazak/data/Mazak_Bmotor> <http://www.w3.org/2000/01/rdf-schema#label> "MOTOR Bmotor"@en .
+<http://example.org/Mazak/data/Mazak_Bmotor> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Bmotor"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_c2> <http://www.w3.org/2000/01/rdf-schema#label> "Rotary C2"@en .
+<http://example.org/Mazak/data/Mazak_c2> <https://model.mtconnect.org/ontology/construct/hasIdValue> "c2"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_c2> <https://model.mtconnect.org/ontology/construct/hasNameValue> "C2"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_c2> <https://model.mtconnect.org/ontology/construct/hasNativeNameValue> "C"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_c2Entity> <http://www.w3.org/2000/01/rdf-schema#label> "RotaryMotionSystem C2"@en .
+<http://example.org/Mazak/data/Mazak_C2motor> <http://www.w3.org/2000/01/rdf-schema#label> "MOTOR C2motor"@en .
+<http://example.org/Mazak/data/Mazak_C2motor> <https://model.mtconnect.org/ontology/construct/hasIdValue> "C2motor"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_x> <http://www.w3.org/2000/01/rdf-schema#label> "Linear X"@en .
+<http://example.org/Mazak/data/Mazak_x> <https://model.mtconnect.org/ontology/construct/hasIdValue> "x"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_x> <https://model.mtconnect.org/ontology/construct/hasNameValue> "X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_x> <https://model.mtconnect.org/ontology/construct/hasNativeNameValue> "X"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_xEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LinearMotionSystem X"@en .
+<http://example.org/Mazak/data/Mazak_Xballscrew> <http://www.w3.org/2000/01/rdf-schema#label> "BALLSCREW Xballscrew"@en .
+<http://example.org/Mazak/data/Mazak_Xballscrew> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Xballscrew"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_Xmotor> <http://www.w3.org/2000/01/rdf-schema#label> "MOTOR Xmotor"@en .
+<http://example.org/Mazak/data/Mazak_Xmotor> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Xmotor"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_y> <http://www.w3.org/2000/01/rdf-schema#label> "Linear Y"@en .
+<http://example.org/Mazak/data/Mazak_y> <https://model.mtconnect.org/ontology/construct/hasIdValue> "y"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_y> <https://model.mtconnect.org/ontology/construct/hasNameValue> "Y"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_y> <https://model.mtconnect.org/ontology/construct/hasNativeNameValue> "Y"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_yEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LinearMotionSystem Y"@en .
+<http://example.org/Mazak/data/Mazak_Yballscrew> <http://www.w3.org/2000/01/rdf-schema#label> "BALLSCREW Yballscrew"@en .
+<http://example.org/Mazak/data/Mazak_Yballscrew> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Yballscrew"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_Ymotor> <http://www.w3.org/2000/01/rdf-schema#label> "MOTOR Ymotor"@en .
+<http://example.org/Mazak/data/Mazak_Ymotor> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Ymotor"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_z> <http://www.w3.org/2000/01/rdf-schema#label> "Linear Z"@en .
+<http://example.org/Mazak/data/Mazak_z> <https://model.mtconnect.org/ontology/construct/hasIdValue> "z"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_z> <https://model.mtconnect.org/ontology/construct/hasNameValue> "Z"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_z> <https://model.mtconnect.org/ontology/construct/hasNativeNameValue> "Z"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_zEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LinearMotionSystem Z"@en .
+<http://example.org/Mazak/data/Mazak_Zballscrew> <http://www.w3.org/2000/01/rdf-schema#label> "BALLSCREW Zballscrew"@en .
+<http://example.org/Mazak/data/Mazak_Zballscrew> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Zballscrew"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_Zmotor> <http://www.w3.org/2000/01/rdf-schema#label> "MOTOR Zmotor"@en .
+<http://example.org/Mazak/data/Mazak_Zmotor> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Zmotor"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_resourcesm> <http://www.w3.org/2000/01/rdf-schema#label> "Resources resources"@en .
+<http://example.org/Mazak/data/Mazak_resourcesm> <https://model.mtconnect.org/ontology/construct/hasIdValue> "resourcesm"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_resourcesm> <https://model.mtconnect.org/ontology/construct/hasNameValue> "resources"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_materials> <http://www.w3.org/2000/01/rdf-schema#label> "Materials materials"@en .
+<http://example.org/Mazak/data/Mazak_materials> <https://model.mtconnect.org/ontology/construct/hasIdValue> "materials"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_materials> <https://model.mtconnect.org/ontology/construct/hasNameValue> "materials"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_procstock> <http://www.w3.org/2000/01/rdf-schema#label> "Stock stock"@en .
+<http://example.org/Mazak/data/Mazak_procstock> <https://model.mtconnect.org/ontology/construct/hasIdValue> "procstock"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_procstock> <https://model.mtconnect.org/ontology/construct/hasNameValue> "stock"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_procstockEntity> <http://www.w3.org/2000/01/rdf-schema#label> "StockEntity stock"@en .
+<http://example.org/Mazak/data/Mazak_personnelm> <http://www.w3.org/2000/01/rdf-schema#label> "Personnel personnel"@en .
+<http://example.org/Mazak/data/Mazak_personnelm> <https://model.mtconnect.org/ontology/construct/hasIdValue> "personnelm"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_personnelm> <https://model.mtconnect.org/ontology/construct/hasNameValue> "personnel"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_personnelmEntity> <http://www.w3.org/2000/01/rdf-schema#label> "PersonnelEntity personnel"@en .
+<http://example.org/Mazak/data/Mazak_systems> <http://www.w3.org/2000/01/rdf-schema#label> "Systems systems"@en .
+<http://example.org/Mazak/data/Mazak_systems> <https://model.mtconnect.org/ontology/construct/hasIdValue> "systems"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_systems> <https://model.mtconnect.org/ontology/construct/hasNameValue> "systems"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_lubrication> <http://www.w3.org/2000/01/rdf-schema#label> "Lubrication lubrication"@en .
+<http://example.org/Mazak/data/Mazak_lubrication> <https://model.mtconnect.org/ontology/construct/hasIdValue> "lubrication"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_lubrication> <https://model.mtconnect.org/ontology/construct/hasNameValue> "lubrication"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_lubricationEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LubricationEntity lubrication"@en .
+<http://example.org/Mazak/data/Mazak_elec> <http://www.w3.org/2000/01/rdf-schema#label> "Electric electric"@en .
+<http://example.org/Mazak/data/Mazak_elec> <https://model.mtconnect.org/ontology/construct/hasIdValue> "elec"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_elec> <https://model.mtconnect.org/ontology/construct/hasNameValue> "electric"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_elecEntity> <http://www.w3.org/2000/01/rdf-schema#label> "ElectricEntity electric"@en .
+<http://example.org/Mazak/data/Mazak_coolant> <http://www.w3.org/2000/01/rdf-schema#label> "Coolant coolant"@en .
+<http://example.org/Mazak/data/Mazak_coolant> <https://model.mtconnect.org/ontology/construct/hasIdValue> "coolant"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_coolant> <https://model.mtconnect.org/ontology/construct/hasNameValue> "coolant"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_coolantEntity> <http://www.w3.org/2000/01/rdf-schema#label> "CoolantEntity coolant"@en .
+<http://example.org/Mazak/data/Mazak_pneumatic> <http://www.w3.org/2000/01/rdf-schema#label> "Pneumatic pneumatic"@en .
+<http://example.org/Mazak/data/Mazak_pneumatic> <https://model.mtconnect.org/ontology/construct/hasIdValue> "pneumatic"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_pneumatic> <https://model.mtconnect.org/ontology/construct/hasNameValue> "pneumatic"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_pneumaticEntity> <http://www.w3.org/2000/01/rdf-schema#label> "PneumaticEntity pneumatic"@en .
+<http://example.org/Mazak/data/Mazak_hydraulic> <http://www.w3.org/2000/01/rdf-schema#label> "Hydraulic hydraulic"@en .
+<http://example.org/Mazak/data/Mazak_hydraulic> <https://model.mtconnect.org/ontology/construct/hasIdValue> "hydraulic"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_hydraulic> <https://model.mtconnect.org/ontology/construct/hasNameValue> "hydraulic"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_hydraulicEntity> <http://www.w3.org/2000/01/rdf-schema#label> "HydraulicEntity hydraulic"@en .
+<http://example.org/Mazak/data/Mazak_Aux> <http://www.w3.org/2000/01/rdf-schema#label> "Auxiliaries auxiliaries"@en .
+<http://example.org/Mazak/data/Mazak_Aux> <https://model.mtconnect.org/ontology/construct/hasIdValue> "Aux"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_Aux> <https://model.mtconnect.org/ontology/construct/hasNameValue> "auxiliaries"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_room> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental environmental"@en .
+<http://example.org/Mazak/data/Mazak_room> <https://model.mtconnect.org/ontology/construct/hasIdValue> "room"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_room> <https://model.mtconnect.org/ontology/construct/hasNameValue> "environmental"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_roomEntity> <http://www.w3.org/2000/01/rdf-schema#label> "EnvironmentalEntity environmental"@en .
+<http://example.org/Mazak/data/Mazak_mstruct> <http://www.w3.org/2000/01/rdf-schema#label> "Structures mstruct"@en .
+<http://example.org/Mazak/data/Mazak_mstruct> <https://model.mtconnect.org/ontology/construct/hasIdValue> "mstruct"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_xaxism> <http://www.w3.org/2000/01/rdf-schema#label> "Link X_AXIS"@en .
+<http://example.org/Mazak/data/Mazak_xaxism> <https://model.mtconnect.org/ontology/construct/hasIdValue> "xaxism"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_xaxism> <https://model.mtconnect.org/ontology/construct/hasNameValue> "X_AXIS"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_xaxismEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LinkEntity X_AXIS"@en .
+<http://example.org/Mazak/data/Mazak_yaxism> <http://www.w3.org/2000/01/rdf-schema#label> "Link Y_AXIS"@en .
+<http://example.org/Mazak/data/Mazak_yaxism> <https://model.mtconnect.org/ontology/construct/hasIdValue> "yaxism"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_yaxism> <https://model.mtconnect.org/ontology/construct/hasNameValue> "Y_AXIS"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_yaxismEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LinkEntity Y_AXIS"@en .
+<http://example.org/Mazak/data/Mazak_zaxis> <http://www.w3.org/2000/01/rdf-schema#label> "Link Z_AXIS"@en .
+<http://example.org/Mazak/data/Mazak_zaxis> <https://model.mtconnect.org/ontology/construct/hasIdValue> "zaxis"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_zaxis> <https://model.mtconnect.org/ontology/construct/hasNameValue> "Z_AXIS"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_zaxisEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LinkEntity Z_AXIS"@en .
+<http://example.org/Mazak/data/Mazak_table> <http://www.w3.org/2000/01/rdf-schema#label> "Link TABLE"@en .
+<http://example.org/Mazak/data/Mazak_table> <https://model.mtconnect.org/ontology/construct/hasIdValue> "table"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_table> <https://model.mtconnect.org/ontology/construct/hasNameValue> "TABLE"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_tableEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LinkEntity TABLE"@en .
+<http://example.org/Mazak/data/Mazak_trundle> <http://www.w3.org/2000/01/rdf-schema#label> "Link TRUNDLE"@en .
+<http://example.org/Mazak/data/Mazak_trundle> <https://model.mtconnect.org/ontology/construct/hasIdValue> "trundle"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_trundle> <https://model.mtconnect.org/ontology/construct/hasNameValue> "TRUNDLE"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_trundleEntity> <http://www.w3.org/2000/01/rdf-schema#label> "LinkEntity TRUNDLE"@en .
+<http://example.org/Mazak/data/Mazak_enclosurem> <http://www.w3.org/2000/01/rdf-schema#label> "Enclosure enclosure"@en .
+<http://example.org/Mazak/data/Mazak_enclosurem> <https://model.mtconnect.org/ontology/construct/hasIdValue> "enclosurem"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_enclosurem> <https://model.mtconnect.org/ontology/construct/hasNameValue> "enclosure"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_enclosuremEntity> <http://www.w3.org/2000/01/rdf-schema#label> "EnclosureEntity enclosure"@en .
+<http://example.org/Mazak/data/Mazak_cont> <http://www.w3.org/2000/01/rdf-schema#label> "Controller controller"@en .
+<http://example.org/Mazak/data/Mazak_cont> <https://model.mtconnect.org/ontology/construct/hasIdValue> "cont"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_cont> <https://model.mtconnect.org/ontology/construct/hasNameValue> "controller"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_contEntity> <http://www.w3.org/2000/01/rdf-schema#label> "ControllerEntity controller"@en .
+<http://example.org/Mazak/data/Mazak_contControlSystem> <http://www.w3.org/2000/01/rdf-schema#label> "ControlSystem for Mazak_contEntity"@en .
+<http://example.org/Mazak/data/Mazak_contControlSystemCapability> <http://www.w3.org/2000/01/rdf-schema#label> "capability of Mazak_contControlSystem"@en .
+<http://example.org/Mazak/data/Mazak_path1> <http://www.w3.org/2000/01/rdf-schema#label> "Path path"@en .
+<http://example.org/Mazak/data/Mazak_path1> <https://model.mtconnect.org/ontology/construct/hasIdValue> "path1"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_path1> <https://model.mtconnect.org/ontology/construct/hasNameValue> "path"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_path1Entity> <http://www.w3.org/2000/01/rdf-schema#label> "PathEntity path"@en .
+<http://example.org/Mazak/data/Mazak_door1> <http://www.w3.org/2000/01/rdf-schema#label> "Door door"@en .
+<http://example.org/Mazak/data/Mazak_door1> <https://model.mtconnect.org/ontology/construct/hasIdValue> "door1"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_door1> <https://model.mtconnect.org/ontology/construct/hasNameValue> "door"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/Mazak/data/Mazak_door1Entity> <http://www.w3.org/2000/01/rdf-schema#label> "DoorEntity door"@en .

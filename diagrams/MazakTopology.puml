@@ -1,0 +1,56 @@
+@startuml
+!include ../iof.iuml
+
+left to right direction
+skinparam linetype polyline
+title MazakTopology
+
+!$default_direction = down
+!$namespace_colors = { "bfo":"DFA702", "iof":"1E90FF", "mtc":"76608A", "ext":"2E8B57", "data":"641B2E", "cmns-col":"3A0519", "cmns-dsg":"3A0519" }
+
+individual(o0, data:[[./Mazak_cEntity.html Mazak_cEntity]], mtc:RotaryMotionSystem)
+individual(o1, data:[[./Mazak_zaxisEntity.html Mazak_zaxisEntity]], mtc:LinkEntity)
+individual(o2, data:[[./Mazak_zEntity.html Mazak_zEntity]], mtc:LinearMotionSystem)
+individual(o3, data:[[./Mazak_CmotorEntity.html Mazak_CmotorEntity]], mtc:MotorEntity)
+individual(o4, data:[[./Mazak_brEntity.html Mazak_brEntity]], mtc:RotaryMotionSystem)
+individual(o5, data:[[./Mazak_enclosuremEntity.html Mazak_enclosuremEntity]], mtc:EnclosureEntity)
+individual(o6, data:[[./Mazak_BmotorEntity.html Mazak_BmotorEntity]], mtc:MotorEntity)
+individual(o7, data:[[./Mazak_c2Entity.html Mazak_c2Entity]], mtc:RotaryMotionSystem)
+individual(o8, data:[[./Mazak_trundleEntity.html Mazak_trundleEntity]], mtc:LinkEntity)
+individual(o9, data:[[./Mazak_C2motorEntity.html Mazak_C2motorEntity]], mtc:MotorEntity)
+individual(o10, data:[[./Mazak_xEntity.html Mazak_xEntity]], mtc:LinearMotionSystem)
+individual(o11, data:[[./Mazak_XballscrewEntity.html Mazak_XballscrewEntity]], mtc:BallscrewEntity)
+individual(o12, data:[[./Mazak_XmotorEntity.html Mazak_XmotorEntity]], mtc:MotorEntity)
+individual(o13, data:[[./Mazak_yEntity.html Mazak_yEntity]], mtc:LinearMotionSystem)
+individual(o14, data:[[./Mazak_xaxismEntity.html Mazak_xaxismEntity]], mtc:LinkEntity)
+individual(o15, data:[[./Mazak_YballscrewEntity.html Mazak_YballscrewEntity]], mtc:BallscrewEntity)
+individual(o16, data:[[./Mazak_YmotorEntity.html Mazak_YmotorEntity]], mtc:MotorEntity)
+individual(o17, data:[[./Mazak_yaxismEntity.html Mazak_yaxismEntity]], mtc:LinkEntity)
+individual(o18, data:[[./Mazak_ZballscrewEntity.html Mazak_ZballscrewEntity]], mtc:BallscrewEntity)
+individual(o19, data:[[./Mazak_ZmotorEntity.html Mazak_ZmotorEntity]], mtc:MotorEntity)
+individual(o20, data:[[./Mazak_tableEntity.html Mazak_tableEntity]], mtc:LinkEntity)
+property(o0, "ext:attaches to", o1)
+property(o0, "ext:attaches to", o2)
+property(o3, "ext:attaches to", o0)
+property(o4, "ext:attaches to", o5)
+property(o6, "ext:attaches to", o4)
+property(o7, "ext:attaches to", o8)
+property(o7, "ext:attaches to", o4)
+property(o9, "ext:attaches to", o7)
+property(o10, "ext:attaches to", o5)
+property(o11, "ext:attaches to", o10)
+property(o12, "ext:attaches to", o10)
+property(o13, "ext:attaches to", o14)
+property(o13, "ext:attaches to", o10)
+property(o15, "ext:attaches to", o13)
+property(o16, "ext:attaches to", o13)
+property(o2, "ext:attaches to", o17)
+property(o2, "ext:attaches to", o13)
+property(o18, "ext:attaches to", o2)
+property(o19, "ext:attaches to", o2)
+property(o14, "ext:attaches to", o10)
+property(o17, "ext:attaches to", o13)
+property(o1, "ext:attaches to", o2)
+property(o20, "ext:attaches to", o7)
+property(o8, "ext:attaches to", o4)
+@enduml

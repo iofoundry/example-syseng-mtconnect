@@ -1,0 +1,35 @@
+# imports: https://spec.industrialontologies.org/ontology/core/Core/
+
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix ext: <http://example.org/mtconnect-ext/> .
+@prefix iof-cnstr: <https://spec.industrialontologies.org/ontology/construct/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/mtconnect-ext/>
+	a owl:Ontology ;
+	rdfs:label "mtconnect extension"^^xs:string ;
+	owl:imports <https://spec.industrialontologies.org/ontology/core/Core/> ;
+	.
+
+ext:ControlSystem
+	a owl:Class ;
+	rdfs:subClassOf iof-cnstr:EngineeredSystem ;
+	rdfs:label "Control System"^^xs:string ;
+	.
+
+ext:ManufacturingSystem
+	a owl:Class ;
+	rdfs:subClassOf iof-cnstr:EngineeredSystem ;
+	rdfs:label "Manufacturing System"^^xs:string ;
+	.
+
+ext:attachesTo
+	a owl:ObjectProperty ;
+	rdfs:label "attaches to"^^xs:string ;
+	rdfs:domain bfo:BFO_0000004 ;
+	rdfs:range bfo:BFO_0000004 ;
+	.
+

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY cons "https://spec.industrialontologies.org/ontology/construct/">
+	<!ENTITY cons2 "https://onto.mtconnect.org/ontology/construct/">
+	<!ENTITY obo "http://purl.obolibrary.org/obo/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF
+	xmlns="http://example.org/data/"
+	xmlns:cons="https://spec.industrialontologies.org/ontology/construct/"
+	xmlns:cons2="https://onto.mtconnect.org/ontology/construct/"
+	xmlns:obo="http://purl.obolibrary.org/obo/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="http://example.org/data/">
+		<owl:imports rdf:resource="http://example.org/Mazak/"/>
+	</owl:Ontology>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_Bmotor">
+		<rdf:type rdf:resource="&cons2;Motor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MOTOR Bmotor particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_C2motor">
+		<rdf:type rdf:resource="&cons2;Motor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MOTOR C2motor particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_Cmotor">
+		<rdf:type rdf:resource="&cons2;Motor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MOTOR Cmotor particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_Xballscrew">
+		<rdf:type rdf:resource="&cons2;Ballscrew"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">BALLSCREW Xballscrew particular</rdfs:label>
+		<cons2:attachedTo rdf:resource="http://example.org/data/Mazak317641_Xmotor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_Xmotor">
+		<rdf:type rdf:resource="&cons2;Motor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MOTOR Xmotor particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_Yballscrew">
+		<rdf:type rdf:resource="&cons2;Ballscrew"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">BALLSCREW Yballscrew particular</rdfs:label>
+		<cons2:attachedTo rdf:resource="http://example.org/data/Mazak317641_Ymotor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_Ymotor">
+		<rdf:type rdf:resource="&cons2;Motor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MOTOR Ymotor particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_Zballscrew">
+		<rdf:type rdf:resource="&cons2;Ballscrew"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">BALLSCREW Zballscrew particular</rdfs:label>
+		<cons2:attachedTo rdf:resource="http://example.org/data/Mazak317641_Zmotor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_Zmotor">
+		<rdf:type rdf:resource="&cons2;Motor"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">MOTOR Zmotor particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_br">
+		<rdf:type rdf:resource="&cons2;RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">RotaryB B particular</rdfs:label>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_Bmotor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_c">
+		<rdf:type rdf:resource="&cons2;RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">RotaryC C1 particular</rdfs:label>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_Cmotor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_c2">
+		<rdf:type rdf:resource="&cons2;RotaryMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">RotaryC C2 particular</rdfs:label>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_C2motor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_cont">
+		<rdf:type rdf:resource="&cons2;ControlSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Controller controller particular</rdfs:label>
+		<obo:BFO_0000194 rdf:resource="http://example.org/data/Mazak317641_path1"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_coolant">
+		<rdf:type rdf:resource="&cons2;CoolantSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Coolant coolant particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_d1">
+		<rdf:type rdf:resource="&cons2;NumericallyControlledMachine"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Device Mazak particular</rdfs:label>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_door1"/>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_enclosurem"/>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_partocc"/>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_procstock"/>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_table"/>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_trundle"/>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_xaxism"/>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_yaxism"/>
+		<cons2:hasComponent rdf:resource="http://example.org/data/Mazak317641_zaxis"/>
+		<cons:hasDisposition rdf:resource="http://example.org/data/Mazak317641_d1MachineRelationalDisposition"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_d1MachineRelationalDisposition">
+		<rdf:type rdf:resource="&cons2;MachiningSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Mazak317641_d1 MachiningSystem</rdfs:label>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_br"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_c"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_c2"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_cont"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_coolant"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_elec"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_hydraulic"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_lubrication"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_path1"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_pneumatic"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_x"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_y"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_z"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_door1">
+		<rdf:type rdf:resource="&cons2;Door"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Door door particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_elec">
+		<rdf:type rdf:resource="&cons2;ElectricalSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Electric electric particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_enclosurem">
+		<rdf:type rdf:resource="&cons2;Frame"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Enclosure enclosure particular</rdfs:label>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_trundle"/>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_xaxism"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_hydraulic">
+		<rdf:type rdf:resource="&cons2;HydraulicSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Hydraulic hydraulic particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_lubrication">
+		<rdf:type rdf:resource="&cons2;LubricationSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Lubrication lubrication particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_partocc">
+		<rdf:type rdf:resource="&cons2;ProductPart"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">PartOccurrence partocc particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_path1">
+		<rdf:type rdf:resource="&cons2;ControlSystemPath"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Path path particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_pneumatic">
+		<rdf:type rdf:resource="&cons2;PneumaticSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Pneumatic pneumatic particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_procstock">
+		<rdf:type rdf:resource="&cons2;Stock"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Stock stock particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_room">
+		<rdf:type rdf:resource="&cons2;Room"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Environmental environmental particular</rdfs:label>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_table">
+		<rdf:type rdf:resource="&cons2;Structure"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Link TABLE particular</rdfs:label>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_C2motor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_trundle">
+		<rdf:type rdf:resource="&cons2;Structure"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Link TRUNDLE particular</rdfs:label>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_Bmotor"/>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_table"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_x">
+		<rdf:type rdf:resource="&cons2;LinearMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">LinearX X particular</rdfs:label>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_Xballscrew"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_Xmotor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_xaxism">
+		<rdf:type rdf:resource="&cons2;Structure"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Link X_AXIS particular</rdfs:label>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_Xballscrew"/>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_Xmotor"/>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_yaxism"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_y">
+		<rdf:type rdf:resource="&cons2;LinearMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">LinearY Y particular</rdfs:label>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_Yballscrew"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_Ymotor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_yaxism">
+		<rdf:type rdf:resource="&cons2;Structure"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Link Y_AXIS particular</rdfs:label>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_Yballscrew"/>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_Ymotor"/>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_zaxis"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_z">
+		<rdf:type rdf:resource="&cons2;LinearMotionSystem"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">LinearZ Z particular</rdfs:label>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_Zballscrew"/>
+		<cons2:hasCoBearer rdf:resource="http://example.org/data/Mazak317641_Zmotor"/>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://example.org/data/Mazak317641_zaxis">
+		<rdf:type rdf:resource="&cons2;Structure"/>
+		<rdfs:label rdf:datatype="&rdf;langString" xml:lang="en">Link Z_AXIS particular</rdfs:label>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_Zballscrew"/>
+		<cons2:hasKinematicChild rdf:resource="http://example.org/data/Mazak317641_Zmotor"/>
+	</owl:NamedIndividual>
+
+</rdf:RDF>
